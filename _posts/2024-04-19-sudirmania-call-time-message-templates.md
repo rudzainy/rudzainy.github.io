@@ -12,9 +12,9 @@ sitemap: true
 
 During the first quarter of 2020, I had the privilage to work as a stage manager for SudirMANIA, an indie musical theatre production in Kuala Lumpur. One of my many responsibilities was to schedule practice sessions and broadcast out the daily call times to the rest of the production team.
 
-I found the templates that I used to send out those bradcast messages. I saved these drafts inside a Google Doc file, which then I modified and pasted into WhatsApp.
+I found the templates that I used to send out those bradcast messages. I saved these drafts inside a Google Doc file, which then I modified and pasted into WhatsApp. Hope you have fun reading them!
 
-``` 
+```
 Samegnat hrai Sbtau! Segoma kialan suema rnidu meesj clale tmie dadriapa syaa 😘
 
 Kita teruskan latihan hari ini seperti berikut:
@@ -28,7 +28,7 @@ Warm up: *3.20ptg - 3.30ptg*
 Latihan: *3.30ptg - 6.30ptg*
 Pengendali: *Arshad*
 
-Pelakon / geng yang terlibas: 
+Pelakon / geng yang terlibas:
 - *Ramlan & Tapa*
 
 Lagu dalam scene:
@@ -43,7 +43,7 @@ Warm up: *8.40mlm - 9.00mlm*
 Latihan: *9.00mlm - 11.30mlm*
 Pengendali: *Arshad*
 
-Pelakon / geng yang terlibat: 
+Pelakon / geng yang terlibat:
 - *Disco* - A1S1, A2S2, A4S1, A5S6
 
 Sagu dalam scene:
@@ -53,13 +53,13 @@ Sagu dalam scene:
 
 <:>:<:>:<:>:<:>:<:>:<:>:<:>
 
-Maklumat latihan: 
+Maklumat latihan:
 - Sila *inform dalam group ni jika kalian akan sampai lambat* ye.
 - Sila makan & rehat sekucupnya sebelum datang latihan.
 - Pandu cermat, jiwa selamat. Ingatlah Tapa tersayang.
 - Kepada kalian yang tidak terlibat dengan sesi hari ini, kailan juga digalakkan datang dan buat latihan poket sendiri.
 
-Jumpa kalian nanti! 
+Jumpa kalian nanti!
 
 Hang benar,
 
@@ -82,7 +82,7 @@ Warm up: *8.20mlm - 8.40mlm*
 Latihan: *8.40mlm - 11.30mlm*
 Pengendali: *Lea*
 
-Lagu / geng yang terlibat: 
+Lagu / geng yang terlibat:
 - 01 *Hujan* - Ensamble
 - 21 *Hujan* Dan Air Mata - Ensemble
 - 12 *Milik Siapakah Gadis Ini* - Ani
@@ -97,7 +97,7 @@ Calltime: *8.00mlm - 8.30mlm*
 Latihan: *8:30mlm - 11.30mlm*
 Pengendali: *Lea*
 
-Pelakon / geng yang terlibat: 
+Pelakon / geng yang terlibat:
 *- Ensamble*
 
 Lagu:
@@ -107,12 +107,12 @@ Lagu:
 
 <:>:<:>:<:>:<:>:<:>:<:>:<:>
 
-Remark:  
-- *Datang on time*. 
+Remark:
+- *Datang on time*.
 - Datang awal masa calltime untuk berehat, kerna kita akan *warm up* sebelum latihan bermula
 - *Bawa buku catatan serta pen* untuk mengambil nota daripada Cikgu Vokal
 
-Jumpa kalian malam nanti! 
+Jumpa kalian malam nanti!
 
 Yang setia berkhidmat,
 
@@ -138,7 +138,7 @@ Warm up: *8.45mlm - 9.00mlm*
 Latihan: *9.00mlm - 11.30mlm*
 Pengendali: *Akid*
 
-Pelakon / geng yang terlibat: 
+Pelakon / geng yang terlibat:
 *- Ensemble (semua pelakon & penari)*
 
 Lagu:
@@ -148,13 +148,13 @@ Lagu:
 
 <:>:<:>:<:>:<:>:<:>:<:>:<:>
 
-Maklumat latihan:  
+Maklumat latihan:
 - *Sila pakai pakaian yang sesuai* untuk berdansa dengan peluh yang banyak!
 - Datang awal. *Kita akan warm up sebelum latihan bermula*.
 - Bawa air secukupnya.
-- *Sila hormati masa sesama kita semua*. Kepada kalian yang tiada bad date hari ini, *jika anda sudah menjangka yang anda akan tiba lewat* ataupun *anda tidak dapat hadir* pada malam ini, *sila inform dalam group ini secepat mungkin*. 
+- *Sila hormati masa sesama kita semua*. Kepada kalian yang tiada bad date hari ini, *jika anda sudah menjangka yang anda akan tiba lewat* ataupun *anda tidak dapat hadir* pada malam ini, *sila inform dalam group ini secepat mungkin*.
 
-Jumpa kalian malam nanti! 
+Jumpa kalian malam nanti!
 
 Yang benar,
 
@@ -177,7 +177,7 @@ Warm up: *8.40mlm - 9.00mlm*
 Latihan: *9.00mlm - 11.30mlm*
 Pengendali: *Lea*
 
-Lagu & geng yang terlibat: 
+Lagu & geng yang terlibat:
 - 03 *Jauh Di Sudut Hati* - Yusuf
 - 15 *Di Dalam Sepi Itu* - Yusuf & Laila
 
@@ -188,22 +188,22 @@ Tempat: *Revolution Stage*
 Latihan: *8.30mlm - 11.30mlm*
 Pengendali: *Tom Yam*
 
-Pelakon / geng yang terlibat: 
+Pelakon / geng yang terlibat:
 - *Semua cast yang tiada bad dates*
 
 <:>:<:>:<:>:<:>:<:>:<:>:<:>
 
-Maklumat latihan: 
+Maklumat latihan:
 - Datang awal masa calltime untuk berehat sebelum mulakan latihan.
-- Lea akan berada di RS malam ini. Jadi kepada kalian yang ingin membuat latihan vokal sendiri malam ni, boleh lah minta tunjuk ajar daripada beliau juga. 
+- Lea akan berada di RS malam ini. Jadi kepada kalian yang ingin membuat latihan vokal sendiri malam ni, boleh lah minta tunjuk ajar daripada beliau juga.
 - Untuk latihan vokal, kita akan *warm up* sebelum latihan bermula
 - Kita juga akan jalankan latihan bebas malam ni. Kalian bebas untuk melakukan apa-apa latihan berkaitan production ini (recall steps koreografi, latihan vokal, blocking, hafal skrip, mendalami character etc.)
 - Geng SM terchenta akan berada di situ untuk membantu kalian.
 
 Maklumat tambahan:
-- Kalian boleh dapatkan video-video latihan di sini: https://drive.google.com/open?id=1cL1s4YbshVqhYUcKjx_N_CGFiSLjjOoH 
+- Kalian boleh dapatkan video-video latihan di sini: https://drive.google.com/open?id=1cL1s4YbshVqhYUcKjx_N_CGFiSLjjOoH
 
-Jumpa kalian malam nanti! 
+Jumpa kalian malam nanti!
 
 Yang betul,
 
@@ -215,7 +215,7 @@ Pengurus Pentas
 ```
 Semangat hari Jumaat yang mulia SudirMANIAns sekalian!
 
-Atas kekangan-kekangan yang tidak dapat dielakkan, *latihan malam ni akan kita ditunda* ke satu masa yang akan diberitahu kelak. 
+Atas kekangan-kekangan yang tidak dapat dielakkan, *latihan malam ni akan kita ditunda* ke satu masa yang akan diberitahu kelak.
 
 Oleh kerana tiada latihan malam ini, tiada mesej calltime yang akan dikeluarkan. Tapi, saya selaku SM kalian, berasa gusar yang kalian tidak biasa menjalani kehidupan seharian tanpa mesej yang panjang dari saya. Jadi saya akan cuba yang terbaik untuk tidak menghampakan kalian semua! 🙏🏻
 
@@ -251,7 +251,7 @@ Bacaan doa & H.A.G.S.: *8.30mlm - 9.00mlm*
 Show: *9.00mlm - 11.30mlm*
 Pengendali: _tiada_
 
-Pelakon / geng yang terlibat: 
+Pelakon / geng yang terlibat:
 - *SEMUA CAST & CREW*
 
 Lagu:
@@ -259,7 +259,7 @@ Lagu:
 
 <:>:<:>:<:>:<:>:<:>:<:>:<:>
 
-Maklumat tambahan:  
+Maklumat tambahan:
 - Disebabkan kekangan-kekangan yang kita ada sekarang, masing-masing pandai-pandailah bawa diri ye. SM banyak keje ni, n nak kena hafal skrip jap. So jangan kacau SM sampai waktu warm up.
 
 Nota daripada Tuan Pengarah:
@@ -286,31 +286,31 @@ Bagi mereka yang berhajat *menambah kalendar latihan ke dalam Google Calendar* m
 https://calendar.google.com/calendar?cid=MDE1bmVhbWUwNjRjMnQzdmVrM200MGk4YjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
 *Disco*
-https://calendar.google.com/calendar?cid=Zzhia2FpaXViMDNsbm1saDlmZ205ZnFqMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ 
+https://calendar.google.com/calendar?cid=Zzhia2FpaXViMDNsbm1saDlmZ205ZnFqMzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
 *Family*
-https://calendar.google.com/calendar?cid=NDF2NDdhbmlnNzN2YXViODR2NDVycWQ4MzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ 
+https://calendar.google.com/calendar?cid=NDF2NDdhbmlnNzN2YXViODR2NDVycWQ4MzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
 Kampung
-https://calendar.google.com/calendar?cid=NmUxcmdtcjgzYzIwN3UxMXBtbms2ZTExdDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ 
+https://calendar.google.com/calendar?cid=NmUxcmdtcjgzYzIwN3UxMXBtbms2ZTExdDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
 *Mami Jarum*
-https://calendar.google.com/calendar?cid=dHF2NDI0YWthN3E5MzI0MDBwbjc3bmdmYTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ 
+https://calendar.google.com/calendar?cid=dHF2NDI0YWthN3E5MzI0MDBwbjc3bmdmYTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
 *PeKeHamTi*
-https://calendar.google.com/calendar?cid=M2tuMTJvNTVzaWxuYWU1NHJoazYzcGtjYTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ 
+https://calendar.google.com/calendar?cid=M2tuMTJvNTVzaWxuYWU1NHJoazYzcGtjYTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
 *PeKeHamTiYu*
-https://calendar.google.com/calendar?cid=NDVoaWQyOTRjM2lodWdwNTdlb3M2bHFpYTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ 
+https://calendar.google.com/calendar?cid=NDVoaWQyOTRjM2lodWdwNTdlb3M2bHFpYTBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
 *Koreografi*
-https://calendar.google.com/calendar?cid=OGJuYnZqdTVwMjJqZHA2dnIybTA5bHIwcDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ 
+https://calendar.google.com/calendar?cid=OGJuYnZqdTVwMjJqZHA2dnIybTA5bHIwcDBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
 *Vokal*
-https://calendar.google.com/calendar?cid=dDBhbm0zZG9ubHFkb2UxNjJjNjRoMTg3NW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ 
+https://calendar.google.com/calendar?cid=dDBhbm0zZG9ubHFkb2UxNjJjNjRoMTg3NW9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
 *SM*
-https://calendar.google.com/calendar?cid=amE3anU3ZnZiOGUwYm9ocjJlYzJ0NWtyY2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ 
+https://calendar.google.com/calendar?cid=amE3anU3ZnZiOGUwYm9ocjJlYzJ0NWtyY2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
 Sekian, wassalamualaikum warahmatullahi wabarakatuh.
 
