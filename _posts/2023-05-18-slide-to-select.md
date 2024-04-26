@@ -2,7 +2,7 @@
 layout: post
 title: Slide to Select
 date: 2023-05-18 11:20 +0800
-description: 
+description:
 image: /assets/img/posts/slide-to-select.png
 category: Work
 tags: [ux]
@@ -12,10 +12,10 @@ sitemap: false
 
 ## The Background
 
-- i was part of a team for a new project. 
+- i was part of a team for a new project.
 - objective was to improve quality of end product by optimizing quality control flow.
 - use ai to speed up checking ripeness of fresh fruit bunch.
-- 
+-
 
 ## The Problem
 
@@ -26,8 +26,7 @@ sitemap: false
 - question: can exclude tapping send?
   - just tap on an option to select + confirm
   - but how to prevent accidental tap?
-- 
-
+-
 
 ## Tinder Swipe!
 
