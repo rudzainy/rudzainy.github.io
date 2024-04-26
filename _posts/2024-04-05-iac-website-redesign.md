@@ -1,6 +1,6 @@
 ---
 layout: post
-title: iac-website-redesign.md
+title: IAC Website Redesign
 date: 2024-04-05 20:27 +0800
 description: UX case study for IAC website.
 image: /assets/img/portfolio/iac/Home-A.png
@@ -10,7 +10,7 @@ published: false
 sitemap: false
 ---
 
-A friend reached out to me for a quick job. I accepted also thinking it would be a quick job. Boy were we both on for a ride! 
+A friend reached out to me for a quick job. I accepted also thinking it would be a quick job. Boy were we both on for a ride!
 
 ## Backgound
 
@@ -29,7 +29,6 @@ The task was to do an entire design refresh for IAC's website. My friend had don
     - browsing around
     - ready to take action
 
-
 IAC encompasses a diverse array of programs and campaigns aimed at addressing global challenges and fostering positive change. These initiatives span various sectors such as humanitarian aid, sustainable development, education, healthcare, and environmental conservation.
 
 There are different user types engaging with the IAC website, each bringing their unique perspectives, needs, and levels of familiarity with the campaigns and programs. Among these users are newcomers, individuals who are discovering the breadth and depth of the IAC's initiatives for the first time. These newcomers may include students researching global issues, concerned citizens seeking ways to make a difference, or professionals interested in expanding their philanthropic involvement. For them, the website serves as a gateway to explore the various sectors addressed by the IAC, from humanitarian aid to environmental conservation, offering them insights into the pressing challenges facing communities worldwide and the innovative solutions being implemented.
@@ -44,7 +43,7 @@ New users represent individuals who are just beginning their journey with the ca
 
 Among new users, there are those who are tech-savvy and accustomed to digital platforms. For these individuals, offering user-friendly interfaces and interactive tools can enhance their experience and facilitate their exploration of the IAC's programs and campaigns.
 
-### 2. Returning Users 
+### 2. Returning Users
 
 In contrast, returning users are individuals who have already interacted with the IAC in some capacity. They may range from those casually browsing for updates to those actively seeking opportunities to contribute or take action. For returning users who are browsing around, providing easily accessible updates, highlights of recent activities, and suggestions for further engagement can keep them informed and involved.
 
@@ -67,7 +66,7 @@ User interface (UI) design plays a crucial role in enhancing the user experience
 - IAC has many types of campaigns
 - optimised process flow for different types of campaign, for different user types. ~~fml~~ challenge accepted!
 - introduce filters
-  - works for one module, need more thoughts on another 
+  - works for one module, need more thoughts on another
 
 The International Aid Campaign (IAC) is characterized by its diverse array of campaigns, each designed to tackle specific global issues and drive positive change in communities around the world. These campaigns span a wide range of focus areas, including humanitarian aid, disaster relief, sustainable development, education, healthcare, environmental conservation, and social justice initiatives.
 
@@ -95,10 +94,3 @@ By optimizing the process flow for different types of campaigns and user types, 
 ### Tech Stack
 
 ### Future Requiremants
-
-
-
-
-
-
-
