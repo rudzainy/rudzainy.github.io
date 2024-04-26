@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Of Maritime Academy
+title: of Maritime Academy
 date: 2023-12-04 07:15 +0800
 description: Building a Maritime Academy - A Journey of Growth and Development
 image: /assets/img/portfolio/Maritime/1.png
@@ -10,10 +10,9 @@ published: true
 sitemap: true
 ---
 
-
 ## Introduction
 
-From September 2009 to July 2012, I had the opportunity to be part of a dedicated team that embarked on an exciting mission to establish a new maritime academy in Malaysia. The objective of the new venture was to train and promote seaman as a good career prospect for Malaysians. 
+From September 2009 to July 2012, I had the opportunity to be part of a dedicated team that embarked on an exciting mission to establish a new maritime academy in Malaysia. The objective of the new venture was to train and promote seaman as a good career prospect for Malaysians.
 
 My official job title was as Human Resource & Administration Executive, however my day-to-day job scope includes:
 
@@ -52,6 +51,6 @@ One of the most innovative tools we employed to enhance the learning process was
 
 ## Conclusion
 
-After all the ups and downs, I consider the years spent as an HRA/ Business Development Executive/ Teaching Assistant/ IT Generalist at META and MARCO were transformative and enriching. Working in a dedicated team, we played a vital role in establishing a maritime academy that aimed to equip students with the necessary skills and knowledge to excel in the industry. From curriculum development and liaising with government officials to managing day-to-day operations and utilizing ship simulators, each responsibility contributed to the growth and success of the academy. 
+After all the ups and downs, I consider the years spent as an HRA/ Business Development Executive/ Teaching Assistant/ IT Generalist at META and MARCO were transformative and enriching. Working in a dedicated team, we played a vital role in establishing a maritime academy that aimed to equip students with the necessary skills and knowledge to excel in the industry. From curriculum development and liaising with government officials to managing day-to-day operations and utilizing ship simulators, each responsibility contributed to the growth and success of the academy.
 
 This experience not only shaped my professional journey but also highlighted the importance of collaboration, innovation, and dedication in the field of maritime education.
