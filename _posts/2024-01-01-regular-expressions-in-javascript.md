@@ -80,3 +80,11 @@ console.log(result);
 // index: -> Is where the regular expression starts.
 // input: -> Is the actual string passed.
 ```
+
+
+## Bonus: Regex for finding image file in VS Code
+
+```
+  /^!\[.*\]\(/
+```
+ will search for `![...](`
