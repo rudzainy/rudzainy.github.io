@@ -15,7 +15,7 @@ sitemap: false
 - i was part of a team for a new project.
 - objective was to improve quality of end product by optimizing quality control flow.
 - use ai to speed up checking ripeness of fresh fruit bunch.
--
+
 
 ## The Problem
 

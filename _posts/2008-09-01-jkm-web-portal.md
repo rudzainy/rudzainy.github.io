@@ -31,8 +31,8 @@ My task was to come up with a new design for the Social Welfare Department websi
 
 The goal was not just redesigning the site but also improving its usability so that users can easily find what they're looking for without having to go through multiple pages in search results or navigation menus.
 
-<image>
+
 The end design. This design has since been deprecated by JKMM.
 
-<image>
+
 New layout designed in 2017, based on gov.uk's design language.

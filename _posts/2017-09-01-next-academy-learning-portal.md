@@ -3,7 +3,7 @@ layout: post
 title: Next Academy Learning Portal
 date: 2017-09-01 11:22 +0800
 description: Student learning portal for Next Academy
-image: https://blog.rudzainy.my/blog/wp-content/uploads/2019/05/na-lp-wireframe_draft.png
+image: assets/img/portfolio/na-lp-wireframe_draft.png
 category: Work
 tags: [ui, ux, rails, reactjs]
 published: true
@@ -16,6 +16,8 @@ sitemap: true
 | Year | 2017 |
 | Note | The learning portal has since been revamped. |
 
-![Sitemap of the learning portal](https://blog.rudzainy.my/blog/wp-content/uploads/2019/05/na-lp-wireframe_draft.png)
+{% responsive_image path: assets/img/portfolio/na-lp-wireframe_draft.png alt: "Sitemap of the learning portal." %}
+*Sitemap of the learning portal.*
 
-![Finished UI of Next Academy Learning Portal](https://blog.rudzainy.my/blog/wp-content/uploads/2019/05/na-lp.png)
+{% responsive_image path: assets/img/portfolio/na-lp.png alt: "Finished UI of Next Academy Learning Portal." %}
+*Finished UI of Next Academy Learning Portal.*

@@ -23,7 +23,7 @@ sitemap: true
 A platform for Malaysians to engage in structured objective discussions online.
 
 
-<image>
+-- image --
 Home page showing timeline view of recently updated polls. Desktop users would be able to see additional information in the left and right sidebars.
 
 ### The Inefficiency of Online Discussion Platforms
@@ -37,7 +37,7 @@ Having high engagement in the topics doesn’t mean you’re getting a lot out o
 
 These platforms rarely filter out their users, so a user can register multiple accounts and manipulate the discussion.
 
-<image>
+-- image --
 
 User profile page showing all participated (and possibly trending or promoted) polls by the user.
 
@@ -50,7 +50,7 @@ User profile page showing all participated (and possibly trending or promoted) p
 3. Create a trustworthy space in the Internet for Malaysians by verifying user’s identity and eliminate the noises in online discussion environment.
 
 
-<image>
+-- image --
 A poll page, illustrating three main interactions a user can engage with a poll. Users can vote, add supporting arguments under each vote option independently of their personal vote, as well as engage in a one-on-one debate with another user.
 
 
@@ -66,18 +66,18 @@ Hoojah Pitch (Bahasa Malaysia)
 https://www.youtube.com/watch?v=xfG58Xcgmo4 
 
 
-<image>
+-- image --
 A one-on-one debate page (seems to be getting good traction, probably because of the two well known public figure debating... interesting stuff)
 
 
-<image>
+-- image --
 Analytic page for business tier users.
 
-<image>
+-- image --
 The log in and sign up feature is combined into a single page. Log in takes priority over sign up, therefore on mobile, the sign up form would be pushed down.
 
-<image>
+-- image --
 Registered users can create new polls with some options for customization.
 
-<image>
+-- image --
 Alternative design of user profile page with badges. The idea for badges came from the need to group user interests together, where a badge could be affiliated with user groups, active categories or user achievements.
