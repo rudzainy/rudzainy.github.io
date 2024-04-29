@@ -5,7 +5,7 @@ date: 2024-04-05 20:27 +0800
 description: UX case study for IAC website.
 image: /assets/img/portfolio/iac/Home-A.png
 category: Work
-tags: [web, design, figma, ui, ux]
+tags: [web, design, figma, ui, ux, portfolio]
 published: false
 sitemap: false
 ---

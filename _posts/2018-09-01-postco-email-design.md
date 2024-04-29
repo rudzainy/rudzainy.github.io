@@ -5,7 +5,7 @@ date: 2018-09-01 10:46 +0800
 description:
 image: assets/img/portfolio/postco/Screenshot-2022-01-27-at-2-43-02-PM-730x1024.jpeg
 category: Work
-tags: [design]
+tags: [design, portfolio]
 published: true
 sitemap: true
 ---

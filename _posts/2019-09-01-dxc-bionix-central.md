@@ -5,7 +5,7 @@ date: 2019-09-01 15:30 +0800
 description: Dashboard and sales page designs for DXC Bionix Central 
 image: https://blog.rudzainy.my/blog/wp-content/uploads/2023/2e2a0a175212223.64afa37f9c39d.png
 category: Work
-tags: [ui]
+tags: [ui, ux, portfolio]
 published: true
 sitemap: true
 ---

@@ -5,7 +5,7 @@ date: 2019-09-01 08:39 +0800
 description: Our team decided to build a design system for DXC Bionix Commercialization effort.
 image: https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-21-at-8.38.24-PM-2048x1124.png
 category: Work
-tags: [ui, ux]
+tags: [ui, ux, portfolio]
 published: true
 sitemap: true
 ---

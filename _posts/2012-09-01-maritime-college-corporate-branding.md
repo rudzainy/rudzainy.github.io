@@ -5,7 +5,7 @@ date: 2012-09-01 10:15 +0800
 description:
 image: assets/img/portfolio/Maritime/MARCO.jpg
 category: Work
-tags: [graphic design, logo, branding]
+tags: [graphic design, logo, branding, portfolio]
 published: true
 sitemap: true
 ---

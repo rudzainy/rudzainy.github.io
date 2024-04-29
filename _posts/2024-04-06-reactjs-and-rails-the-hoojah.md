@@ -5,7 +5,7 @@ date: 2024-04-06 13:35 +0800
 description: Code snippets from the Hoojah project. 
 image: https://res.cloudinary.com/rudzainy/image/upload/v1687145994/User-Show-Votes_kfjcf1.png
 category: Work
-tags: [hoojah, ruby on rails]
+tags: [hoojah, ruby on rails, portfolio]
 published: false
 sitemap: false
 ---

@@ -5,7 +5,7 @@ date: 2017-09-01 11:27 +0800
 description:
 image: https://res.cloudinary.com/rudzainy/image/upload/v1687147294/jkm-new_dukca5.png
 category: Work
-tags: [ui, ux, html, css]
+tags: [ui, ux, html, css, portfolio]
 published: true
 sitemap: true
 ---
