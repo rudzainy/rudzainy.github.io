@@ -5,7 +5,7 @@ date: 2017-09-01 11:22 +0800
 description: Student learning portal for Next Academy
 image: assets/img/portfolio/na-lp-wireframe_draft.png
 category: Work
-tags: [ui, ux, rails, reactjs]
+tags: [ui, ux, rails, reactjs, portfolio]
 published: true
 sitemap: true
 ---

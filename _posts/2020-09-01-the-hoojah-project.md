@@ -5,7 +5,7 @@ date: 2020-09-01 14:35 +0800
 description: Hoojah is an online poll & debating site. It’s a pet project that I have been working on since 2013. People can go to the platform, create polls and vote for other polls. They can also engage with other users through one-on-one debate.
 image: https://res.cloudinary.com/rudzainy/image/upload/v1687145994/User-Show-Votes_kfjcf1.png
 category: Work
-tags: [hoojah, ruby on rails]
+tags: [hoojah, ruby on rails, portfolio, reactjs]
 published: true
 sitemap: true
 ---

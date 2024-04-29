@@ -5,7 +5,7 @@ date: 2016-09-01 10:22 +0800
 description:
 image: assets/img/portfolio/kontact-app-1.png
 category: Work
-tags: [web]
+tags: [web, html, css, javascript, reactjs, ruby on rails]
 published: true
 sitemap: true
 ---

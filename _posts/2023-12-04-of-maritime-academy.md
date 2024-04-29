@@ -5,7 +5,7 @@ date: 2023-12-04 07:15 +0800
 description: Building a Maritime Academy - A Journey of Growth and Development
 image: /assets/img/portfolio/Maritime/1.png
 category: Balance
-tags: [writing, project management, ai, maritime]
+tags: [writing, project management, ai, maritime, portfolio]
 published: true
 sitemap: true
 ---
