@@ -50,8 +50,13 @@ sips -s format gif ./pngs/*.png --out ./gifs
 Finally, combine those individual GIF files into a single animated GIF:
 
 cd ./gifs
-gifsicle --optimize=3 --resize=1072x444 --delay=10 --loopcount *.gif > animation.gif
+gifsicle --optimize=3 --resize=720x450 --delay=10 --loopcount *.gif > animation.gif
 In the example above, I passed in several command line arguments which generated an animated GIF with:
+
+gifsicle: warning: huge GIF, conserving memory (processing may take a while)
+gifsicle: warning: too many colors, using local colormaps
+  (You may want to try '--colors 256'.)
+
 
 An infinite loop
 Set it to a resolution of 1072px x 444px

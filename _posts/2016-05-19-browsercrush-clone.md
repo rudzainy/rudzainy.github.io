@@ -22,12 +22,16 @@ This is a clone of http://www.browsercrush.com/
 
 Built using Ruby, HTML, CSS and Javascript.
 
+{% responsive_image path: assets/img/posts/browsercrush_clone.gif alt: "A gameplay of my Browser Crush Clone game." %}
+*A gameplay of my Browser Crush Clone game.*
+
 ## Setup
 1. Download the source files.
-2. Run `$ ruby app.rb`.
-3. Open a web browser and type in `localhost:4567` in the address bar.
-4. Enjoy the game!
+2. Run `$ bundle install`.
+3. Run `$ ruby app.rb`.
+4. Open a web browser and type in `localhost:4567` in the address bar.
+5. Enjoy the game!
 
-## Lazy?
+<!-- ## Lazy?
 
-You can also play it on https://browsercrush-clone.onrender.com 🎉
+You can also play it on https://browsercrush-clone.onrender.com 🎉 -->
