@@ -6,8 +6,8 @@ description: My learings from working in agriculture indusrty.
 image: /assets/img/posts/p2p-syncing.png
 category: Work
 tags: [ui, ux, learning, portfolio]
-published: true
-sitemap: true
+published: false
+sitemap: false
 ---
 
 In the year 2023, I had the amazing opportunity to work as a platform designer in the agriculture industry. This meant diving deep into the world of plantations, processing, and manufacturing, with a mission to bring digital solutions to traditional practices. Our goal was to digitize everything – from managing plantations to processing crops, all with the power of digital technologies. Let me tell you, it was quite the adventure!
