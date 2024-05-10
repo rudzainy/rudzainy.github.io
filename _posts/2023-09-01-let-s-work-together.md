@@ -8,7 +8,6 @@ category: Work
 tags: [collaboration]
 published: true
 sitemap: true
-pin: true
 ---
 
 Hey there 👋 I'm a passionate UI/UX designer with a multifaceted background and a thirst for adventure and process optimization!
