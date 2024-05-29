@@ -23,19 +23,17 @@ The assignment was to re-design and build WordPress mockups for two websites.
 {% responsive_image path: assets/img/portfolio/assignments/CarpentersShipping.png alt: "My take on the UI design for Carpenters Shipping website." %}
 _My take on the UI design for Carpenters Shipping website._
 
-## International Maritime and Engineering Limited (IMEL)
+## Industrial and Maritime Engineering Limited (IMEL)
 
 [Website of IMEL](https://imel.com.fj/)
 
 {% responsive_image path: assets/img/portfolio/assignments/IMEL.png alt: "My take on the UI design for International Maritime and Engineering Limited website." %}
-_My take on the UI design for International Maritime and Engineering Limited website._
+_My take on the UI design for Industrial and Maritime Engineering Limited website._
 
 ## Retrospective
 
 I did not get the job.
 
 Both websites still has not updated their UIs on the date of this blog post.
-
-I think my design is _nicer_.
 
 Good learning.
