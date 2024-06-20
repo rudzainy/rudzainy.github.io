@@ -6,14 +6,14 @@ description: Evaluating Windows vs MacOS as my main OS
 image:
 category: Work
 tags: [windows, macos]
-published: false
-sitemap: false
+published: true
+sitemap: true
 mermaid: true
 ---
 
 ## Opening Statement
 
-I rely on destop oerating system for work and my day-to-day tasks.
+I rely on destop operating system for work and my day-to-day tasks.
 
 ## Windows and Apple Desktop Operating System Versions I Have Used
 
@@ -43,19 +43,26 @@ In the order of which I was introduced:
 | 20. | Windows 11 | Sun Valley 2 | <1y (2024)
 
 ```mermaid
-pie title Years using Microsoft vs Apple desktop OS
-    "Microsoft" : 19/(19+17)*360=190
-    "Apple" : 17/(19+17)*360=170
+  pie 
+    title Years using Microsoft vs Apple desktop OS
+    "Microsoft" : 190
+    "Apple" : 170
 ```
 
-## 
+The table and chart above shows that I am desktop OS agnostic. However, there are notable pros and cons of each OS that I want to highlight.
 
-1990 - tadika tawau
-1991 - tadika labuan
-1992-93 - 1,2 sk pekan 2 labuan
-1994-95 - 3,4 srk sacred heart kk
-1996 - 5 sk taman sri pulai, skudai
-1997 - 6 sk simpang empat, sitiawan
-1998-2000 - 1, 2, 3 smk ahmad boestamam, sitiawan
-2000-04 - 3, 4, 5, 6 - smk mahmud, raub
-2005-09 - ukm, bangi
+## Other Notable Mentions
+
+### Linux
+
+I first stumbled upon Linux sometime around the year 2000. I have tried various flavours of Linux distros, however none seems to fit my overall needs. That being said, if I have to switch to Linux for my daily driver, I bet I can survive! Tho I would prefer to use stable distros such as Ubuntu or Fedora, I am also keen to try the likes of [ElementaryOS](https://elementary.io) or [Pop!_OS](https://pop.system76.com).
+
+## ChromeOS
+
+This is actually the dream, minus the bloat codes from Google.
+
+## Which One Should I Choose?
+
+![Choosing an OS](https://qph.cf2.quoracdn.net/main-qimg-0d61f724390b263557ac9590afd90576-lq)
+
+If you still can't decide from the flowchart above, ring me up!
