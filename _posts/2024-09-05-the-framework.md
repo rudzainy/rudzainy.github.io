@@ -56,7 +56,7 @@ graph TD
     BINA --> BUFFET
     BINA --> BANTU
     BINA --> BALAI RAYA
-    BINA --> External API[External APIs (IoT, eGov, etc.)]
+    BINA --> External_APIs
 ```
 
 #### **BORAK (Messaging Service)**
