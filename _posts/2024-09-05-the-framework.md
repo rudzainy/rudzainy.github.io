@@ -1,8 +1,8 @@
 ---
 layout: post
 title: The Framework
-date: 2024-09-05 23:54 +2117
-description: The framework Ranting is a link-in-bio platform that allows any Malaysian creators to showcase their work and social media profiles in a single, easy-to-share link.
+date: 2024-09-01 23:54 +2117
+description: A modular, privacy-focused digital framework built on open-source tools, designed to support secure messaging, analytics, and community interactions. Emphasizing flexibility, scalability, and empowering community-driven growth and innovation.
 image: /assets/img/posts/ranting/sketch.png
 category: Work
 tags: [rails, framework, open source, malaysia, ranting, gugel, portfolio]
@@ -85,6 +85,62 @@ Let’s take a closer look at how these modules work together:
 4. **Plausible/Matomo**: Open-source, privacy-focused analytics platforms used in BUFFET ensure that while data is collected and analyzed, user privacy remains intact.
 
 5. **Single Sign-On (SSO)**: Integrated into BIODATA or using Discourse's SSO, allowing users to sign in across multiple services with a single login, improving the user experience and streamlining security.
+
+Pricing Model: Affordable Yearly Subscription + Community Contributions
+
+To maintain a balance between affordability and operational sustainability, the pricing model focuses on offering an inexpensive yearly subscription complemented by community contributions. This approach ensures users have access to essential services while enabling the platform to grow and maintain service uptime. Here’s how the pricing model can be structured:
+
+1. Basic Yearly Subscription: $10/year
+
+	•	What’s included:
+	•	Access to core services (messaging, community forums, basic analytics)
+	•	Limited data storage (e.g., 5GB)
+	•	Basic customer support (email and community-based)
+	•	Regular updates and maintenance
+	•	Who it’s for: Individuals, small community groups, or startups that need a budget-friendly solution to access essential digital tools for communication and community engagement.
+
+2. Pro Yearly Subscription: $50/year
+
+	•	What’s included:
+	•	Everything in the Basic plan
+	•	Expanded data storage (e.g., 50GB)
+	•	Advanced analytics and reporting tools
+	•	Access to priority customer support
+	•	Early access to new features and beta testing
+	•	Integration with more third-party tools (e.g., social media, custom integrations)
+	•	Who it’s for: Businesses, non-profits, and larger communities that require additional resources, advanced analytics, and higher-tier support to scale their digital presence.
+
+3. Enterprise Custom Pricing
+
+	•	What’s included:
+	•	Tailored services and solutions for large-scale organizations
+	•	Custom storage and server requirements
+	•	Dedicated support team
+	•	Custom integrations and white-label options
+	•	SLA-backed uptime guarantees
+	•	Who it’s for: Large organizations or corporations requiring highly customized solutions, dedicated support, and enhanced performance guarantees.
+
+4. Community Contributions
+
+To keep the platform sustainable and inclusive, additional voluntary contributions from the community are encouraged. These contributions help fund new features, service improvements, and keeping operations running smoothly. Contribution options include:
+
+	•	Pay-What-You-Want Donations: Users can voluntarily contribute any amount to support platform maintenance and development.
+	•	Crowdfunding Initiatives: Periodic crowdfunding campaigns to fund new features, server upgrades, or innovative projects.
+	•	Open Source Contributions: Developers and technical users can contribute code, documentation, or bug fixes to help improve the platform.
+
+5. Sponsorship and Grants
+
+	•	Corporate Sponsorships: Organizations can sponsor specific features or services in exchange for brand recognition or access to tailored services.
+	•	Government and NGO Grants: Applications for grants to maintain the open-source nature and support public-interest features, such as privacy enhancements or community-driven features for non-profits.
+
+Operational and Maintenance Costs Covered:
+
+	•	Server Infrastructure: Hosting and maintaining uptime for messaging, forums, and analytics.
+	•	Security and Privacy Measures: Keeping user data safe with encryption, regular security updates, and privacy-first practices.
+	•	Customer Support: Providing support channels for both free-tier and premium-tier users.
+	•	Development and Innovation: Regular feature updates, bug fixes, and adapting to new technologies and user needs.
+
+This pricing model ensures users from all backgrounds can access and benefit from the platform, while community contributions and flexible pricing tiers help maintain services and support growth over time.
 
 ## Why This Architecture Works
 
