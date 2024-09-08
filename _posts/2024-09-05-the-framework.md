@@ -55,7 +55,7 @@ graph TD
     BINA --> BIODATA
     BINA --> BUFFET
     BINA --> BANTU
-    BINA --> BALAI RAYA
+    BINA --> BALAI_RAYA
     BINA --> External_APIs
 ```
 
