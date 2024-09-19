@@ -14,9 +14,9 @@ mermaid: true
 
 ## Executive Summary
 
-This white paper outlines a modular and privacy-first digital communication framework specifically designed for Malaysia. As concerns over data privacy, digital sovereignty, and the inefficiencies of monolithic communication platforms grow, there is a clear need for a system that can cater to Malaysia's unique digital landscape. Our framework offers modularity, privacy protection, and flexibility through services such as **BINA** (API Service), **BORAK** (Messaging), **BIODATA** (Identity), **BUFFET** (Analytics), **BANTU** (Support Documentation), and **BALAI RAYA** (Community Platform). These services prioritize privacy, promote local sovereignty, and are cost-effective for individuals, businesses, and government sectors alike.
+This proposal outlines a modular and privacy-first digital communication framework specifically designed for Malaysia. As concerns over data privacy, digital sovereignty, and the inefficiencies of monolithic communication platforms grow (think of Google's parent company Alphabet and Facebook, Instagram and WhatsApp's parent company Meta), there is a clear need for a system that can cater to Malaysia's unique digital landscape. This framework offers modularity, privacy protection, and flexibility through services such as API Service, Messaging, Digital Identity, Analytics, Support Documentation, and Community Platforms. These services prioritize privacy, promote local sovereignty, and are cost-effective for individuals, businesses, and government sectors alike.
 
-The framework also aligns with the goals of **Malaysia Digital Economy Blueprint (MyDIGITAL)** by promoting inclusivity, ensuring security, and fostering digital growth. Our modular approach allows for scalability and customization, empowering users to build the services they need while keeping control over their data.
+The framework also aligns with the goals of **Malaysia Digital Economy Blueprint (MyDIGITAL)** by promoting inclusivity, ensuring security, and fostering digital growth. This modular approach allows for scalability and customization, empowering users to build the services they need while keeping control over their data.
 
 ---
 
@@ -28,8 +28,8 @@ Malaysia is experiencing rapid growth in its digital economy. However, with this
 
 Many existing communication solutions either lack the flexibility needed for diverse users or pose risks in terms of data security. A solution that prioritizes privacy, modularity, and localization is needed to meet Malaysia’s specific requirements while contributing to the goals of the **MyDIGITAL** initiative.
 
-This white paper proposes a comprehensive digital communication framework that emphasizes:
-- **Data sovereignty** through locally hosted solutions.
+This proposal presents a comprehensive digital communication framework that emphasizes:
+- **Data sovereignty** through locally hosted and managed solutions.
 - **Privacy-first principles** embedded in the architecture.
 - **Modularity** to allow organizations and individuals to customize their communication tools.
 
@@ -88,7 +88,7 @@ graph TD
 **BUFFET** offers privacy-centric analytics powered by **Plausible** and **Matomo**. Unlike traditional services like Google Analytics, **BUFFET** prioritizes anonymity by not tracking users via invasive cookies or IP addresses. This makes it an excellent solution for organizations that want data-driven insights without compromising user privacy.
 
 Potential applications include:
-- **Online education**, where educators can track user engagement without violating students' privacy.
+- **Online education**, where educators can track student's engagement without violating their privacy.
 - **Healthcare**, where hospitals can monitor user interactions on digital platforms without collecting sensitive patient information.
 
 ```mermaid
@@ -99,7 +99,7 @@ graph TD
 
 #### **BANTU (Support Documentation)** and **BALAI RAYA (Community Platform)**
 
-**BANTU** provides an easy-to-use documentation platform for support, enabling users to troubleshoot issues or learn how to use various services. **BALAI RAYA** acts as a community platform, fostering interaction between local businesses, government agencies, and end users.
+**BANTU** provides an easy-to-use documentation platform for support, enabling users to troubleshoot issues or learn how to use various services. **BALAI RAYA** acts as a community platform, fostering interaction between local businesses, government agencies, and general Malaysians.
 
 Example use cases:
 - A small business can use **BALAI RAYA** to create a forum for customer engagement.
@@ -145,7 +145,7 @@ We propose three pricing tiers:
 3. **Enterprise Subscription**: For large organizations with a need for custom solutions and dedicated SLAs.
 
 ### Comparison with Other Services
-When compared to alternatives such as Slack or Google Workspace, our pricing model offers a **more affordable and privacy-focused alternative**. Additionally, our community-driven approach allows users to contribute financially or through open-source development, ensuring a sustainable ecosystem.
+When compared to alternatives such as Slack or Google Workspace, this pricing model offers a **more affordable and privacy-focused alternative**. Additionally, our community-driven approach allows users to contribute financially or through open-source development, ensuring a sustainable ecosystem.
 
 ---
 
@@ -161,20 +161,20 @@ This design offers flexibility to organizations of all sizes, ensuring it can gr
 
 ### Localization Capabilities
 
-Our framework supports Malaysia’s multilingual environment by providing localized language support for Malay, Mandarin, and Tamil. This localization enables the platform to cater to diverse communities and ensures inclusivity.
+Our framework supports Malaysia’s multilingual environment by providing localized language support for Malay, Mandarin, and Tamil. This localization enables the platform to cater to diverse communities and ensures inclusivity. More local languages and dialects can be progressively added in the future. 
 
-For instance, **BALAI RAYA** could be used by community groups to provide localized support and discussions in their native languages.
+For instance, **BALAI RAYA** could be used by community groups to provide localized support and discussions in their native languages, while a translation feature can help bridge the language barrier and allow other Malaysians to offer aid when necessary.  
 
 ---
 
 ## Conclusion and Future Roadmap
 
-The framework laid out in this paper addresses Malaysia’s growing need for a privacy-first, locally-hosted digital communication system. As digital needs evolve, our roadmap includes:
+The framework laid out in this proposal addresses Malaysia’s growing need for a privacy-first, locally-hosted digital communication system. As digital needs evolve, our roadmap includes:
 - Incorporating **AI-driven insights** into **BUFFET** for smarter analytics.
 - Expanding **BIODATA** into a national identity management platform.
 - Collaborating with universities and businesses to continuously improve and add new features.
 
-Our vision is for Malaysia to lead Southeast Asia in digital sovereignty and privacy-first technology development.
+Our vision is for Malaysia to lead Southeast Asia in digital sovereignty and privacy-first technology development. This framework can easily be replicated and assimilated into any community of any size, as proven by Meta's business model. If Meta boleh, Malaysia pun boleh!
 
 ---
 
