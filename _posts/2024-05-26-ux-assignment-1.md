@@ -14,7 +14,19 @@ sitemap: true
 
 Sometime in July 2022, I got an interview invitation for a UIUX Designer position. After the first Zoom interview, I was given an assignment to be completed within a few days.
 
-The assignment was to re-design and build WordPress mockups for two websites.
+The assignment was to re-design and build a WordPress mockups for two websites. 
+
+## Unpacking the Problem
+
+I broke down the process into two parts – design and code.
+
+### Design
+
+I didn't have much time wo work with, therefore I chose to not focus on UI too much, as both websites have a distinct branding theme. I focused instead on solving UX problems such as information hierarchy and basic UIUX housecleaning.
+
+### Code
+
+I had to re-build the current theme and faced some challanges getting myself accustomed to how the WordPress theme author manages their codebase. I managed to convert the design from Figma into code utilizing plugins in Figma to optimize my process flow.
 
 ## Carenters Shipping
 
@@ -22,6 +34,8 @@ The assignment was to re-design and build WordPress mockups for two websites.
 
 {% responsive_image path: assets/img/portfolio/assignments/CarpentersShipping.png alt: "My take on the UI design for Carpenters Shipping website." %}
 _My take on the UI design for Carpenters Shipping website._
+
+
 
 ## Industrial and Maritime Engineering Limited (IMEL)
 
