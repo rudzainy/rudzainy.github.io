@@ -23,8 +23,10 @@ sitemap: true
 A platform for Malaysians to engage in structured objective discussions online.
 
 
--- image --
-Home page showing timeline view of recently updated polls. Desktop users would be able to see additional information in the left and right sidebars.
+
+{% responsive_image path: assets/img/posts/hoojah/Home-User.png alt: "Home page showing timeline view of recently updated polls. Desktop users would be able to see additional information in the left and right sidebars." %}
+_Home page showing timeline view of recently updated polls. Desktop users would be able to see additional information in the left and right sidebars._
+
 
 ### The Inefficiency of Online Discussion Platforms
 
