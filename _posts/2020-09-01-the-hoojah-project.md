@@ -3,7 +3,7 @@ layout: post
 title: The Hoojah Project
 date: 2020-09-01 14:35 +0800
 description: Hoojah is an online poll & debating site. It’s a pet project that I have been working on since 2013. People can go to the platform, create polls and vote for other polls. They can also engage with other users through one-on-one debate.
-image: https://res.cloudinary.com/rudzainy/image/upload/v1687145994/User-Show-Votes_kfjcf1.png
+image: /assets/img/posts/hoojah/thumbnail-hoojah.jpg
 category: Work
 tags: [hoojah, ruby on rails, portfolio, reactjs]
 published: true
@@ -23,8 +23,10 @@ sitemap: true
 A platform for Malaysians to engage in structured objective discussions online.
 
 
--- image --
-Home page showing timeline view of recently updated polls. Desktop users would be able to see additional information in the left and right sidebars.
+
+{% responsive_image path: assets/img/posts/hoojah/Home-User.png alt: "Home page showing timeline view of recently updated polls. Desktop users would be able to see additional information in the left and right sidebars." %}
+_Home page showing timeline view of recently updated polls. Desktop users would be able to see additional information in the left and right sidebars._
+
 
 ### The Inefficiency of Online Discussion Platforms
 
