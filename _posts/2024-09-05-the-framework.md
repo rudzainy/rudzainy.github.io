@@ -8,7 +8,7 @@ category: Work
 tags: [rails, framework, open source, malaysia, ranting, gugel, portfolio]
 published: true
 sitemap: true
-pin: true
+pin: false
 mermaid: true
 ---
 
