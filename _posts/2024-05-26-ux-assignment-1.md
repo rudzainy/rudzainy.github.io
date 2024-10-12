@@ -22,7 +22,7 @@ I broke down the process into two parts – design and code.
 
 ### Design
 
-I didn't have much time wo work with, therefore I chose to not focus on UI too much, as both websites have a distinct branding theme. I focused instead on solving UX problems such as information hierarchy and basic UIUX housecleaning.
+I didn't have much time to work with, therefore I chose to not focus on UI too much, as both websites have a distinct branding theme. I focused instead on solving UX problems such as information hierarchy and basic UIUX housecleaning.
 
 ### Code
 
