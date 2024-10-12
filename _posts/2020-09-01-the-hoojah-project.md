@@ -66,7 +66,7 @@ Hoojah Pitch (Bahasa Malaysia)
 https://www.youtube.com/watch?v=xfG58Xcgmo4 
 
 
-{% responsive_image path: assets/img/posts/hoojah/Debate-SHow-Ended.png alt: "A one-on-one debate page (seems to be getting good traction, probably because of the two well known public figure debating... interesting stuff)." %}
+{% responsive_image path: assets/img/posts/hoojah/Debate-Show-Ended.png alt: "A one-on-one debate page (seems to be getting good traction, probably because of the two well known public figure debating... interesting stuff)." %}
 _A one-on-one debate page (seems to be getting good traction, probably because of the two well known public figure debating... interesting stuff)._
 
 {% responsive_image path: assets/img/posts/hoojah/Business-Search.png alt: "Analytic page for business tier users." %}
