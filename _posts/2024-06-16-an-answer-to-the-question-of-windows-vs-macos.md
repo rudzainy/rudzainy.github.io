@@ -56,66 +56,39 @@ Comparing the pros and cons of Windows OS and macOS over the past 20 years revea
 ## Windows OS
 
 ### Pros
-1. Widespread Use and Compatibility
-   - Hardware Compatibility: Windows OS has historically supported a wide range of hardware configurations from numerous manufacturers, offering users flexibility in choosing or building their own systems.
-   - Software Availability: Most software, especially enterprise and gaming applications, are designed with Windows compatibility in mind.
-
-2. Customization and Flexibility
-   - Customization Options: Windows allows extensive customization of both software and hardware, appealing to power users and gamers.
-   - Backward Compatibility: Windows has maintained backward compatibility, ensuring that older software can still run on newer versions of the OS.
-
-3. Enterprise Integration
-   - Enterprise Features: Windows offers robust features for enterprise environments, including Active Directory integration, group policy management, and enterprise-level security solutions.
-   - Office Suite: Microsoft Office is deeply integrated and optimized for Windows, which is crucial for business users.
-
-4. Gaming
-   - Gaming Support: Windows is the preferred OS for gamers due to its compatibility with a vast array of games and support for the latest gaming hardware and software innovations.
+1. Hardware Compatibility
+2. Software Availability
+3. Customization Options
+4. Backward Compatibility
+5. Gaming
 
 ### Cons
 1. Security Vulnerabilities
-   - Target for Malware: Due to its widespread use, Windows is a common target for viruses and malware, necessitating robust security measures.
-   
 2. System Stability
-   - Bloatware: OEM versions of Windows often come with pre-installed bloatware, which can affect system performance.
-   - Fragmentation: The broad hardware support can sometimes lead to driver conflicts and system instability.
-
-3. Cost
-   - License Costs: Windows licenses can be expensive, particularly for enterprise users who require volume licensing.
+3. License Costs
 
 ## macOS
 
 ### Pros
 1. User Experience
-   - User Interface: macOS is known for its sleek, user-friendly interface and seamless user experience, which is consistent across Apple devices.
-   - Quality of Applications: Many creative and professional software applications (e.g., Final Cut Pro, Logic Pro) are optimized for macOS.
-
-2. Security
-   - Built-in Security: macOS is generally considered more secure against malware and viruses due to its Unix-based architecture and Apple's rigorous security protocols.
-
-3. Integration with Apple Ecosystem
-   - Ecosystem Synergy: macOS offers excellent integration with other Apple devices, such as iPhones, iPads, and Apple Watches, enhancing productivity and convenience through features like Handoff, AirDrop, and Continuity.
-
-4. Stability and Performance
-   - Optimized Hardware and Software: Apple’s control over both hardware and software results in a highly optimized and stable system, with less risk of driver conflicts and system crashes.
+2. User Interface
+3. Quality of Applications optimized for macOS
+4. Security
+5. Integration with Apple Ecosystem
+6. Stability and Performance
 
 ### Cons
-1. Cost
-   - High Initial Cost: Macs tend to be more expensive than their Windows counterparts, which can be a barrier for many users.
-   - Limited Customization: Hardware customization options are limited, often requiring users to pay a premium for upgrades.
+1. High Initial Cost
+2. Limited Customization
 
-2. Software Compatibility
-   - Limited Software Availability: Some software, especially specialized enterprise and gaming applications, may not be available or optimized for macOS.
-   - Gaming: macOS is not a primary choice for gamers due to limited game availability and less robust gaming hardware support.
-
-3. Hardware Choices:
-   - Limited Hardware Options: Users have fewer choices in terms of hardware specifications and models compared to the vast array of Windows-compatible devices.
+Limited software availability and gaming used to be an issue. However as more people develop softwares on macOS, open source support also increqsed. The Hackintosh project also open doors for hardware options.
 
 
 ## Other Notable Mentions
 
 ### Linux
 
-I first stumbled upon Linux sometime around the year 2000. I have tried various flavours of Linux distros, however none seems to fit my overall needs. That being said, if I have to switch to Linux for my daily driver, I bet I can survive! Tho I would prefer to use stable distros such as Ubuntu or Fedora, I am also keen to try the likes of [ElementaryOS](https://elementary.io) or [Pop!_OS](https://pop.system76.com).
+I first stumbled upon Linux sometime around the year 2000. I have tried various flavours of Linux distros, however none seems to fit my overall needs. That being said, if I have to switch to Linux for my daily driver, I bet I can survive! Tho I would prefer to use stable distros such as Ubuntu or Fedora, I am also keen to try the likes of [ElementaryOS](https://elementary.io) or [Pop!_OS](https://pop.system76.com). Or settle with Arch. 
 
 ## ChromeOS
 
@@ -125,8 +98,10 @@ This is actually the dream, minus the bloat codes from Google.
 
 ![Choosing an OS](https://qph.cf2.quoracdn.net/main-qimg-0d61f724390b263557ac9590afd90576-lq)
 
+According to ChatGPT:
+
 **Windows OS** has evolved to offer extensive hardware and software compatibility, making it ideal for a wide range of users, from gamers to enterprise professionals. However, it is more susceptible to security threats and system instability due to its open nature.
 
 **macOS** provides a premium, stable, and secure user experience with deep integration into the Apple ecosystem, making it a preferred choice for creative professionals and users who value seamless device interoperability. The main drawbacks are its high cost and limited hardware and software customization options.
 
-If you still can't decide from the flowchart above, ring me up!
+If you still can't decide, ring me up!
