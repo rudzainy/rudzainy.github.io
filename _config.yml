@@ -48,7 +48,7 @@ social:
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id: # fill in your Google Analytics ID
+  id: G-FTQNJ379ZF # fill in your Google Analytics ID
 
 goatcounter:
   id: # fill in your Goatcounter ID
