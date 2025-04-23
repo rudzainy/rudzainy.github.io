@@ -1,10 +1,7 @@
 ---
 ---
 
-@use 'main
-{%- if jekyll.environment == 'production' -%}
-  .bundle
-{%- endif -%}
-';
+@use 'vendors/bootstrap/bootstrap';
+@use 'main';
 
 /* append your custom style below */
