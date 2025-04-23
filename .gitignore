@@ -1,6 +1,7 @@
 # Bundler cache
 .bundle
 vendor
+!_sass/vendors/bootstrap/vendor/
 Gemfile.lock
 
 # Jekyll cache
