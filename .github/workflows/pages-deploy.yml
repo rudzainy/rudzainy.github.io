@@ -45,7 +45,7 @@ jobs:
           bundler-cache: true
 
       - name: Install ImageMagick
-        run: sudo apt-get update && sudo apt-get install -y imagemagick libmagickwand-dev
+        run: sudo apt-get update && sudo apt-get install -y imagemagick libmagickcore-dev libmagickwand-dev
 
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
