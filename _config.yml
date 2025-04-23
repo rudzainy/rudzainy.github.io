@@ -170,12 +170,6 @@ jekyll_compose:
 plugins:
   - jekyll_picture_tag
 
-picture:
-  sources:
-    - "(min-width: 1280px) 1280px"
-    - "(min-width: 640px) 640px"
-    - "640px"
-
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
