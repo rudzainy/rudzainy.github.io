@@ -23,7 +23,7 @@ package-lock.json
 !.vscode/tasks.json
 
 # Misc
-_sass/vendors
+# _sass/vendors
 assets/js/dist
 
 # See https://help.github.com/articles/ignoring-files for more about ignoring files.
