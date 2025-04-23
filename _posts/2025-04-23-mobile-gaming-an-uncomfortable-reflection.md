@@ -6,8 +6,8 @@ description: Reflecting how mobile gaming is bad for society.
 image:
 category: Balance
 tags: [writing, mobile, gaming, ai]
-published: false
-sitemap: false
+published: true
+sitemap: true
 ---
 
 Like most people, I carry around a small slab of glass and metal that doubles as a camera, a wallet, a map, a library, and — of course — a console.
