@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Malaysia Maritime Association Logo & Website
+title: 'Malaysia Maritime Association Logo & Website'
 date: 2011-09-01 10:08 +0800
 description:
 image: assets/img/portfolio/Maritime/PEMM.jpg
