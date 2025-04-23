@@ -3,7 +3,7 @@ layout: post
 title: Slide to Select
 date: 2023-05-18 11:20 +0800
 description:
-image: /assets/img/posts/slide-to-select.png
+image: assets/img/posts/slide-to-select.png
 category: Work
 tags: [ux]
 published: false
@@ -19,7 +19,7 @@ sitemap: false
 
 ## The Problem
 
-{% picture /assets/img/posts/tap-to-select.png alt="Slide to select" %}
+{% picture assets/img/posts/tap-to-select.png alt="Slide to select" %}
 *Slide to select*
 
 - objects moving too fast
@@ -31,7 +31,7 @@ sitemap: false
 
 ## Tinder Swipe!
 
-{% picture /assets/img/posts/slide-to-select.gif alt="Slide to select" %}
+{% picture assets/img/posts/slide-to-select.gif alt="Slide to select" %}
 *Slide to select*
 
 - can remove send button

@@ -3,7 +3,7 @@ layout: post
 title: IAC Website Redesign
 date: 2024-04-05 20:27 +0800
 description: UX case study for IAC website.
-image: /assets/img/portfolio/iac/Home-A.png
+image: assets/img/portfolio/iac/Home-A.png
 category: Work
 tags: [web, design, figma, ui, ux, portfolio]
 published: false
@@ -87,7 +87,7 @@ By optimizing the process flow for different types of campaigns and user types, 
 - reduse information fatigue
 - redesign IA
 
-{% picture /assets/img/portfolio/iac/Home-A.png alt="IAC home page" %}
+{% picture assets/img/portfolio/iac/Home-A.png alt="IAC home page" %}
 *"IAC home page"*
 
 ## Other Related Concerns
@@ -96,5 +96,5 @@ By optimizing the process flow for different types of campaigns and user types, 
 
 ### Future Requiremants
 
-{% picture /assets/img/portfolio/iac/About-Us.png alt="IAC about page" %}
+{% picture assets/img/portfolio/iac/About-Us.png alt="IAC about page" %}
 *IAC about page*

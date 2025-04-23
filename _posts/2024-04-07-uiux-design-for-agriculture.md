@@ -3,7 +3,7 @@ layout: post
 title: UIUX Design for Agriculture
 date: 2024-04-07 10:13 +0800
 description: My learings from working in agriculture indusrty.
-image: /assets/img/posts/p2p-syncing.png
+image: assets/img/posts/p2p-syncing.png
 category: Work
 tags: [ui, ux, learning, portfolio]
 published: false

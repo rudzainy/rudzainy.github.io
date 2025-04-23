@@ -3,7 +3,7 @@ layout: post
 title: SudirMANIA Call Time Message Templates
 date: 2024-04-19 05:30 +0800
 description: The templates that I used to broadcast out the daily call times to the rest of the production team.
-image: /assets/img/posts/poster-sudirmania.jpg
+image: assets/img/posts/poster-sudirmania.jpg
 category: Work
 tags: [theatre, writing]
 published: true

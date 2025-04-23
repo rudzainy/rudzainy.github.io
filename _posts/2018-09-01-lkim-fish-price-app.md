@@ -3,7 +3,7 @@ layout: post
 title: LKIM Fish Price App
 date: 2018-09-01 08:30 +0800
 description: Mobile app for Lembaga Kemajuan Ikan Malaysia
-image: https://blog.rudzainy.my/blog/wp-content/uploads/2022/01/Screenshot-2022-01-27-at-3.11.13-PM-1-2048x890.jpg
+image: assets/img/portfolio/lkim/Screenshot-2022-01-27-at-3-14-21-PM-1024x668.jpeg
 category: Work
 tags: [react native, ui, ux, collaboration, portfolio]
 published: true

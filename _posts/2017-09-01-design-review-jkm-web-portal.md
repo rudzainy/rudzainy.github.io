@@ -3,7 +3,7 @@ layout: post
 title: 'Design Review: JKM Web Portal'
 date: 2017-09-01 11:27 +0800
 description:
-image: https://res.cloudinary.com/rudzainy/image/upload/v1687147294/jkm-new_dukca5.png
+image: assets/img/portfolio/Web-1280-1.png
 category: Work
 tags: [ui, ux, html, css, portfolio]
 published: true

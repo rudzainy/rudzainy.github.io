@@ -3,7 +3,7 @@ layout: post
 title: Not The Stage Manager For Sudirmania
 date: 2020-02-04 04:20 +0800
 description:
-image: /assets/img/posts/sudirmania-table.png
+image: assets/img/posts/sudirmania-table.png
 category: Work
 tags: [project management, notion, writing]
 published: false

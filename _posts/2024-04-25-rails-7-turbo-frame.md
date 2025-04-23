@@ -3,7 +3,7 @@ layout: post
 title: Rails 7 Turbo Frame
 date: 2024-04-25 13:27 +0800
 description: The templates that I used to broadcast out the daily call times to the rest of the production team.
-image: /assets/img/posts/poster-sudirmania.jpg
+image: assets/img/posts/poster-sudirmania.jpg
 category: Work
 tags: [rails, turbo, tutorial, gugel]
 published: false

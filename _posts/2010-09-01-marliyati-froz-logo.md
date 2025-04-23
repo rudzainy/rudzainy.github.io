@@ -3,7 +3,7 @@ layout: post
 title: Marliyati Froz Logo
 date: 2010-09-01 10:04 +0800
 description:
-image: https://blog.rudzainy.my/blog/wp-content/uploads/2019/05/mf.jpg
+image: assets/img/portfolio/mf.jpg
 category: Work
 tags: [graphic design, logo, portfolio]
 published: true

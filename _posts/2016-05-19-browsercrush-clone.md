@@ -3,7 +3,7 @@ layout: post
 title: Browser Crush Clone
 date: 2016-05-19 23:59 +0800
 description: This is a clone of Browser Crush built using Ruby, HTML, CSS and Javascript.
-image: /assets/img/posts/browsercrush_clone.png
+image: assets/img/posts/browsercrush_clone.png
 category: [Work]
 tags: [ruby, sinatra, javascript, portfolio]
 published: true

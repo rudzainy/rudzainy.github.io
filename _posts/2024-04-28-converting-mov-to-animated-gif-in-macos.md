@@ -3,7 +3,7 @@ layout: post
 title: Converting MOV to Animated GIF in MacOS
 date: 2024-04-28 18:38 +0800
 description: How to convert a .mov file to an animated .gif file.
-image: /assets/img/posts/poster-sudirmania.jpg
+image: assets/img/posts/poster-sudirmania.jpg
 category: Work
 tags: [rails, turbo, tutorial, gugel]
 published: false

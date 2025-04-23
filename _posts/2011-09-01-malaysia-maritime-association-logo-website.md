@@ -3,7 +3,7 @@ layout: post
 title: Malaysia Maritime Association Logo & Website
 date: 2011-09-01 10:08 +0800
 description:
-image: https://blog.rudzainy.my/blog/wp-content/uploads/2019/05/pemm-web-1.jpg
+image: assets/img/portfolio/Maritime/PEMM.jpg
 category: Work
 tags: [joomla, web design, logo, ai, fullstack, portfolio]
 published: true

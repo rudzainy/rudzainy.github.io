@@ -3,7 +3,7 @@ layout: post
 title: The Framework
 date: 2024-09-01 23:54 +2117
 description: A modular, privacy-focused digital framework built on open-source tools, designed to support secure messaging, analytics, and community interactions. Emphasizing flexibility, scalability, and empowering community-driven growth and innovation.
-image: /assets/img/posts/ranting/sketch.png
+image: assets/img/posts/ranting/sketch.png
 category: Work
 tags: [rails, framework, open source, malaysia, ranting, gugel, portfolio]
 published: true

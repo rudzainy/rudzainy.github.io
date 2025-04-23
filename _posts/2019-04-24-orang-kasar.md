@@ -3,12 +3,12 @@ layout: post
 title: Orang Kasar
 date: 2019-09-24 16:06 +0800
 description:
-image: https://blog.rudzainy.my/blog/wp-content/uploads/2023/70749792_10156914013949545_8267946219578327040_n.jpg
+image: assets/img/posts/70749792_10156914013949545_8267946219578327040_n.jpeg
 category: Life
 tags: [theatre, collaboration]
 published: true
 sitemap: true
----
+--- 
 
 | Project | Orang Kasar Theatre Production |
 | Responsibilities | Director, Producer |
