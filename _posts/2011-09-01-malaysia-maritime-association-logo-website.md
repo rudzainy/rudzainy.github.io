@@ -16,7 +16,7 @@ sitemap: true
 | Year | 2011 |
 | Remark | The website has been discontinued. It was built on top of another Joomla template. |
 
-{% picture path: assets/img/portfolio/Maritime/MMA-logo.png alt: "Logo of Malaysian Maritime Association" %}
+{% picture path: assets/img/portfolio/Maritime/MMA-logo.png alt:"Logo of Malaysian Maritime Association" %}
 *Logo of Malaysian Maritime Association*
 
 The logo encapsulates various maritime symbols, underscoring its seafaring essence.
