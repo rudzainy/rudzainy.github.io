@@ -19,7 +19,8 @@ sitemap: false
 
 ## The Problem
 
-![Slide to select](/assets/img/posts/tap-to-select.png)
+{% picture /assets/img/posts/tap-to-select.png alt="Slide to select" %}
+*Slide to select*
 
 - objects moving too fast
 - too may taps
@@ -30,7 +31,8 @@ sitemap: false
 
 ## Tinder Swipe!
 
-![Slide to select](/assets/img/posts/slide-to-select.gif)
+{% picture /assets/img/posts/slide-to-select.gif alt="Slide to select" %}
+*Slide to select*
 
 - can remove send button
 - slider control to allow unselect

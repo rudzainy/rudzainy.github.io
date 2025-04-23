@@ -20,7 +20,7 @@ This isn’t a confession piece. If anything, it’s a reflection born out of co
 
 These days, I mostly play *Mobile Legends: Bang Bang*. It’s quick, tactical, and strangely satisfying — especially when the team is coordinated and everyone plays their role. There’s something engaging about the structure of a 10-minute match: it demands focus, rewards strategy, and offers instant feedback.
 
-{% responsive_image path: assets/img/posts/gaming/IMG_2558.PNG alt: "My current status in Mobile Legends: Bang Bang." %}
+{% picture assets/img/posts/gaming/IMG_2558.PNG alt="My current status in Mobile Legends: Bang Bang." %}
 *My current status in Mobile Legends: Bang Bang.*
 
 I also keep *Crystal Caliburn II* installed — not for competitiveness, but for nostalgia. It’s a pinball game I remember from the Windows 95 era, and revisiting it feels like flipping through an old photo album. The game hasn’t changed, but I have, and that contrast is quietly comforting.
@@ -57,7 +57,7 @@ You’ll find:
 
 It’s subtle, but effective. And if you’ve never known a world without these mechanics — if this is how you grew up learning to play — it changes what “fun” even means.
 
-{% responsive_image path: assets/img/posts/gaming/IMG_2561.PNG alt: "Also the amount of data gathered and preserved in-game PER USER ACCOUNT is insane!" %}
+{% picture assets/img/posts/gaming/IMG_2561.PNG alt="Also the amount of data gathered and preserved in-game PER USER ACCOUNT is insane!" %}
 *Also the amount of data gathered and preserved in-game PER USER ACCOUNT is insane!.*
 
 ## The Bigger Picture
