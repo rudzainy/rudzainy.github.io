@@ -41,14 +41,14 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3
+          ruby-version: 3.2
           bundler-cache: true
 
       - name: Install ImageMagick
         run: sudo apt-get update && sudo apt-get install -y imagemagick libmagickcore-dev libmagickwand-dev
 
       - name: Build site
-        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
+        run: PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
 
