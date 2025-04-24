@@ -170,6 +170,9 @@ jekyll_compose:
 plugins:
   - jekyll_picture_tag
 
+jekyll_picture_tag:
+  ignore_missing_images: production
+
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
