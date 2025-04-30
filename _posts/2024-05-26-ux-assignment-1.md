@@ -32,7 +32,7 @@ I had to re-build the current theme and faced some challanges getting myself acc
 
 [Website of Carenters Shipping](https://www.carpentersshipping.com/)
 
-{% picture assets/img/portfolio/assignments/CarpentersShipping.png --alt My take on the UI design for Carpenters Shipping website. %}
+![My take on the UI design for Carpenters Shipping website. ](assets/img/portfolio/assignments/CarpentersShipping.png)
 _My take on the UI design for Carpenters Shipping website._
 
 
@@ -41,7 +41,7 @@ _My take on the UI design for Carpenters Shipping website._
 
 [Website of IMEL](https://imel.com.fj/)
 
-{% picture assets/img/portfolio/assignments/IMEL.png --alt My take on the UI design for International Maritime and Engineering Limited website. %}
+![My take on the UI design for International Maritime and Engineering Limited website. ](assets/img/portfolio/assignments/IMEL.png)
 _My take on the UI design for Industrial and Maritime Engineering Limited website._
 
 ## Retrospective

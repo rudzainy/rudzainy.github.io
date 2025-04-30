@@ -60,35 +60,35 @@ Responsible for ensuring that all elements of the production come together seaml
 
 ### Different Dashboard Views
 
-{% picture /assets/img/posts/sudirmania-gallery.png --alt Gallery View %}
+![Gallery View ](/assets/img/posts/sudirmania-gallery.png)
 *Gallery View*
 
-{% picture /assets/img/posts/sudirmania-table.png --alt Table View %}
+![Table View ](/assets/img/posts/sudirmania-table.png)
 *Table View*
 
-{% picture /assets/img/posts/sudirmania-gang.png --alt View by Gang %}
+![View by Gang ](/assets/img/posts/sudirmania-gang.png)
 *View by Gang*
 
 ### Colour Coding
 
-{% picture /assets/img/posts/sudirmania-scene.png --alt Scenes selection %}
+![Scenes selection ](/assets/img/posts/sudirmania-scene.png)
 *Scenes selection*
 
-{% picture /assets/img/posts/sudirmania-songs.png --alt Songs selection %}
+![Songs selection ](/assets/img/posts/sudirmania-songs.png)
 *Songs selection*
 
 ### Scheduling
 
-{% picture /assets/img/posts/sudirmania-practice-checklist.png --alt Scene checklist %}
+![Scene checklist ](/assets/img/posts/sudirmania-practice-checklist.png)
 *Scene checklist*
 
-{% picture /assets/img/posts/sudirmania-feb.png --alt Scene checklist %}
+![Scene checklist ](/assets/img/posts/sudirmania-feb.png)
 *Scene checklist*
 
-{% picture /assets/img/posts/sudirmania-mar.png --alt Scene checklist %}
+![Scene checklist ](/assets/img/posts/sudirmania-mar.png)
 *Scene checklist*
 
-{% picture /assets/img/posts/sudirmania-apr.png --alt Scene checklist %}
+![Scene checklist ](/assets/img/posts/sudirmania-apr.png)
 *Scene checklist*
 
 ### Recordings

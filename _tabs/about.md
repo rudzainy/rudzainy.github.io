@@ -11,7 +11,7 @@ Also into photography, climbing, riding, gliding & shield surfing 😉
 
 ## Writing
 
-{% picture assets/img/posts/ducky_one_cherry_switches_mechanical_keyboard_1557538238_e5110e57_progressive.jpeg --alt Some people type to talk" %}
+![Some people type to talk" ](assets/img/posts/ducky_one_cherry_switches_mechanical_keyboard_1557538238_e5110e57_progressive.jpeg)
 *Some people type to talk*
 
 _This is a draft. Content will evolve over time._

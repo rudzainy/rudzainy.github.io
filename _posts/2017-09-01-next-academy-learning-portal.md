@@ -16,8 +16,8 @@ sitemap: true
 | Year | 2017 |
 | Note | The learning portal has since been revamped. |
 
-{% picture assets/img/portfolio/na-lp-wireframe_draft.png --alt Sitemap of the learning portal. %}
+![Sitemap of the learning portal. ](assets/img/portfolio/na-lp-wireframe_draft.png)
 *Sitemap of the learning portal.*
 
-{% picture assets/img/portfolio/na-lp.png --alt Finished UI of Next Academy Learning Portal. %}
+![Finished UI of Next Academy Learning Portal. ](assets/img/portfolio/na-lp.png)
 *Finished UI of Next Academy Learning Portal.*

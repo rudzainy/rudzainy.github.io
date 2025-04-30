@@ -87,7 +87,7 @@ By optimizing the process flow for different types of campaigns and user types, 
 - reduse information fatigue
 - redesign IA
 
-{% picture assets/img/portfolio/iac/Home-A.png --alt IAC home page %}
+![IAC home page ](assets/img/portfolio/iac/Home-A.png)
 *"IAC home page"*
 
 ## Other Related Concerns
@@ -96,5 +96,5 @@ By optimizing the process flow for different types of campaigns and user types, 
 
 ### Future Requiremants
 
-{% picture assets/img/portfolio/iac/About-Us.png --alt IAC about page %}
+![IAC about page ](assets/img/portfolio/iac/About-Us.png)
 *IAC about page*

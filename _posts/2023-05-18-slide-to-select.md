@@ -19,7 +19,7 @@ sitemap: false
 
 ## The Problem
 
-{% picture assets/img/posts/tap-to-select.png --alt Slide to select %}
+![Slide to select ](assets/img/posts/tap-to-select.png)
 *Slide to select*
 
 - objects moving too fast
@@ -31,7 +31,7 @@ sitemap: false
 
 ## Tinder Swipe!
 
-{% picture assets/img/posts/slide-to-select.gif --alt Slide to select %}
+![Slide to select ](assets/img/posts/slide-to-select.gif)
 *Slide to select*
 
 - can remove send button

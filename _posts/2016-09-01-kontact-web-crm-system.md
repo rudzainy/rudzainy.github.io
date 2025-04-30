@@ -19,9 +19,9 @@ A hobby project to build an online Customer Relationship Management System using
 
 I built this heat level indicator for each contact. It was supposed to indicate to the CRM users how *"hot"* is that particular contact by means of profiling.
 
-{% picture assets/img/portfolio/kontact-app-1.png --alt A contact page expanded to show contacts history and details. %}
+![A contact page expanded to show contacts history and details. ](assets/img/portfolio/kontact-app-1.png)
 *A contact page expanded to show contacts history and details.*
 
-{% picture assets/img/posts/Screenshot_2023-12-25_at_8-48-43_PM.png --alt The heat map uses an algorithm to help users make decisions on when to get in touch with their contacts. %}
+![The heat map uses an algorithm to help users make decisions on when to get in touch with their contacts. ](assets/img/posts/Screenshot_2023-12-25_at_8-48-43_PM.png)
 *The heat map uses an algorithm to help users make decisions on when to get in touch with their contacts.*
 
