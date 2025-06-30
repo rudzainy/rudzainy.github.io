@@ -16,6 +16,8 @@ I've spent the past 15 years traversing the digital landscape, working across di
 
 Whether you're looking for a collaborator who can breathe life into your digital vision, or simply someone who'll bring a spark of creativity to your team, here are 7 reasons why working with me might just be the perfect fit:
 
+<a href="#" target="_blank">Let's find out whether we are a match!</a>
+
 ## 1. UI/UX Expertise 📐
 
 My core expertise lies in UI/UX design and HCI, with a proven track record of crafting user-centered experiences that are both beautiful and functional.
