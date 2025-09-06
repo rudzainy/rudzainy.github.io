@@ -1,0 +1,60 @@
+h1, h2 {
+  text-shadow: 2px 2px 0px #333; /* 2px horizontal, 2px vertical, 0 blur, dark gray color */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar,
+section > article.card > .card-body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar,
+section > article.card > .card-body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Box Cards */
+section > article.card {
+  overflow: hidden;
+  width: 43vw !important;
+  height: 43vw !important;
+  flex-shrink: 0;
+}
+
+section > article.card > .card-body {
+  overflow-y: scroll;
+}
+
+section > article.card.button > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  section > article.card {
+    width: 32vw !important;;
+    height: 32vw !important;;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  section > article.card {
+    width: 196px !important;;
+    height: 196px !important;;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  section > article.card {
+    width: 256px !important;;
+    height: 256px !important;;
+  }
+}
+/* end Box Cards */
