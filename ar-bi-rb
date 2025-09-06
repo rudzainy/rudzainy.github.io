@@ -1,0 +1,42 @@
+require "js"
+
+const quotesWork = [
+	"And that there is not for man except that (good) for which he strives— Surah Al-Najm:39",
+	"I'm a great believer in luck, and I find the harder I work, the more I have of it — Thomas Jefferson ",
+	"Success is not final; failure is not fatal: It is the courage to continue that counts — Winston Churchill",
+	"The reward of a thing well done is to have done it — Ralph Waldo Emerson",
+	"Quality means doing it right when no one is looking — Mark Twain",
+	"If you get tired, learn to rest, not to quit — Banksy",
+	"In the name of God, stop a moment, cease your work, look around you ― Leo Tolstoy",
+	"Action may not always bring happiness, but there is no happiness without action ― William James",
+	"When he worked, he really worked. But when he played, he really PLAYED ― Dr. Seuss",
+	"Work without love is slavery ― Mother Teresa"
+]
+
+const quotesLife =[
+	"And whether ye hide your word or publish it, He certainly has (full) knowledge, of the secrets of (all) hearts — Surah Al-Mulk:13",
+	"Life is what happens to us while we are making other plans — John Lennon",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+]
+
+document = JS.global[:document]
+
+quoteWorkCard = document.getElementById("quote-work")
+
+loop do
+	quoteWorkCard.innerText = quotesWork[rand(quotesWork.length)]
+	sleep rand(4..6)
+end
+
+  # quoteWorkCard.innerText = quotesWork[rand(quotesWork.length)]
+
