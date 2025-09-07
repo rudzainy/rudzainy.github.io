@@ -26,6 +26,12 @@ section > article.card > .card-body {
   scrollbar-width: none;  /* Firefox */
 }
 
+section > article.card > figure,
+section > article.card > figure > img {
+  width: 100%;
+  height: 100%;
+}
+
 /* Box Cards */
 section > article.card {
   overflow: hidden;
@@ -38,7 +44,8 @@ section > article.card > .card-body {
   overflow-y: scroll;
 }
 
-section > article.card.button > a {
+section > article.card.button > a,
+.bullseye {
   display: flex;
   justify-content: center;
   align-items: center;
