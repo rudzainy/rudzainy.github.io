@@ -18,5 +18,5 @@ sitemap: true
 
 Old design of rudzainy.com built with HTML, CSS and JavaScript.
 
-{% responsive_image path: assets/img/posts/rudzainy_dot_com_old.gif alt: "Old design of rudzainy.com built with HTML, CSS and JavaScript." %}
+{ % responsive_image path: assets/img/posts/rudzainy_dot_com_old.gif alt: "Old design of rudzainy.com built with HTML, CSS and JavaScript." %}
 *Old design of rudzainy.com built with HTML, CSS and JavaScript.*

@@ -17,7 +17,7 @@ sitemap: true
 | Facebook | [View in Facebook](https://www.facebook.com/photo/?fbid=10156914013944545&set=a.107964264544) |
 | YouTube | [Watch on YouTube](https://youtu.be/kdGhbNLymY4?si=EpteGSsv9SMeq9jj) |
 
-{% responsive_image path: assets/img/posts/70749792_10156914013949545_8267946219578327040_n.jpeg alt: "Poster Orang Kasar." %}
+{ % responsive_image path: assets/img/posts/70749792_10156914013949545_8267946219578327040_n.jpeg alt: "Poster Orang Kasar." %}
 *Poster Orang Kasar.*
 
 ## Retrospective: 

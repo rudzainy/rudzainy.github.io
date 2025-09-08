@@ -16,7 +16,7 @@ sitemap: true
 | Year | 2011 |
 | Remark | The website has been discontinued. It was built on top of another Joomla template. |
 
-{% responsive_image path: assets/img/portfolio/Maritime/MMA-logo.png alt: "Logo of Malaysian Maritime Association" %}
+{ % responsive_image path: assets/img/portfolio/Maritime/MMA-logo.png alt: "Logo of Malaysian Maritime Association" %}
 *Logo of Malaysian Maritime Association*
 
 The logo encapsulates various maritime symbols, underscoring its seafaring essence.
@@ -27,7 +27,7 @@ The lifebuoy bearing the Persatuan Maritim Malaysia name signifies the associati
 
 At the heart of the logo, the North Star serves as a poignant reminder of the association's mission—a guiding light for members navigating uncertain waters.
 
-{% responsive_image path: assets/img/portfolio/Maritime/PEMM.jpg alt: "Website of Malaysian Maritime Association" %}
+{ % responsive_image path: assets/img/portfolio/Maritime/PEMM.jpg alt: "Website of Malaysian Maritime Association" %}
 *Website of Malaysian Maritime Association*
 
 The website was built on Joomla. I used a political theme template and did all end-to-end development for the website. My tasks includes, but not limited to, producing graphics and copywriting, developing the sitemap and information architecture, funneling leads to MMA's Facebook page, managing deployment as well as setting up analytic tools. 

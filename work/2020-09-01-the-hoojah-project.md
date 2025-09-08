@@ -22,7 +22,7 @@ sitemap: true
 
 A platform for Malaysians to engage in structured objective discussions online.
 
-{% responsive_image path: assets/img/posts/hoojah/Home-User.png alt: "Home page showing timeline view of recently updated polls. Desktop users would be able to see additional information in the left and right sidebars." %}
+{ % responsive_image path: assets/img/posts/hoojah/Home-User.png alt: "Home page showing timeline view of recently updated polls. Desktop users would be able to see additional information in the left and right sidebars." %}
 _Home page showing timeline view of recently updated polls. Desktop users would be able to see additional information in the left and right sidebars._
 
 ### The Inefficiency of Online Discussion Platforms
@@ -36,7 +36,7 @@ Having high engagement in the topics doesn’t mean you’re getting a lot out o
 
 These platforms rarely filter out their users, so a user can register multiple accounts and manipulate the discussion.
 
-{% responsive_image path: assets/img/posts/hoojah/User-Show-Votes.png alt: "User profile page showing all participated (and possibly trending or promoted) polls by the user." %}
+{ % responsive_image path: assets/img/posts/hoojah/User-Show-Votes.png alt: "User profile page showing all participated (and possibly trending or promoted) polls by the user." %}
 _User profile page showing all participated (and possibly trending or promoted) polls by the user._
 
 ### Hoojah's Objective
@@ -47,7 +47,7 @@ _User profile page showing all participated (and possibly trending or promoted) 
 
 3. Create a trustworthy space in the Internet for Malaysians by verifying user’s identity and eliminate the noises in online discussion environment.
 
-{% responsive_image path: assets/img/posts/hoojah/Poll-Show-User.png alt: "A poll page, illustrating three main interactions a user can engage with a poll. Users can vote, add supporting arguments under each vote option independently of their personal vote, as well as engage in a one-on-one debate with another user." %}
+{ % responsive_image path: assets/img/posts/hoojah/Poll-Show-User.png alt: "A poll page, illustrating three main interactions a user can engage with a poll. Users can vote, add supporting arguments under each vote option independently of their personal vote, as well as engage in a one-on-one debate with another user." %}
 _A poll page, illustrating three main interactions a user can engage with a poll. Users can vote, add supporting arguments under each vote option independently of their personal vote, as well as engage in a one-on-one debate with another user._
 
 ### Moving Forward
@@ -66,18 +66,18 @@ Hoojah Pitch (Bahasa Malaysia)
 https://www.youtube.com/watch?v=xfG58Xcgmo4 
 
 
-{% responsive_image path: assets/img/posts/hoojah/Debate-Show-Ended.png alt: "A one-on-one debate page (seems to be getting good traction, probably because of the two well known public figure debating... interesting stuff)." %}
+{ % responsive_image path: assets/img/posts/hoojah/Debate-Show-Ended.png alt: "A one-on-one debate page (seems to be getting good traction, probably because of the two well known public figure debating... interesting stuff)." %}
 _A one-on-one debate page (seems to be getting good traction, probably because of the two well known public figure debating... interesting stuff)._
 
-{% responsive_image path: assets/img/posts/hoojah/Business-Search.png alt: "Analytic page for business tier users." %}
+{ % responsive_image path: assets/img/posts/hoojah/Business-Search.png alt: "Analytic page for business tier users." %}
 _Analytic page for business tier users._
 
-{% responsive_image path: assets/img/posts/hoojah/Log-In.png alt: "The log in and sign up feature is combined into a single page. Log in takes priority over sign up, therefore on mobile, the sign up form would be pushed down." %}
+{ % responsive_image path: assets/img/posts/hoojah/Log-In.png alt: "The log in and sign up feature is combined into a single page. Log in takes priority over sign up, therefore on mobile, the sign up form would be pushed down." %}
 _The log in and sign up feature is combined into a single page. Log in takes priority over sign up, therefore on mobile, the sign up form would be pushed down._
 
-{% responsive_image path: assets/img/posts/hoojah/Poll-New.png alt: "Registered users can create new polls with some options for customization." %}
+{ % responsive_image path: assets/img/posts/hoojah/Poll-New.png alt: "Registered users can create new polls with some options for customization." %}
 _Registered users can create new polls with some options for customization._
 
-{% responsive_image path: assets/img/posts/hoojah/User-Show-Polls.png alt: "Alternative design of user profile page with badges. The idea for badges came from the need to group user interests together, where a badge could be affiliated with user groups, active categories or user achievements." %}
+{ % responsive_image path: assets/img/posts/hoojah/User-Show-Polls.png alt: "Alternative design of user profile page with badges. The idea for badges came from the need to group user interests together, where a badge could be affiliated with user groups, active categories or user achievements." %}
 _Alternative design of user profile page with badges. The idea for badges came from the need to group user interests together, where a badge could be affiliated with user groups, active categories or user achievements._
 

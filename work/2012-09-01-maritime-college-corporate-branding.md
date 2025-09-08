@@ -15,5 +15,5 @@ sitemap: true
 | Technology Stack | Adobe Illustrator |
 | Year | 2012 |
 
-{% responsive_image path: assets/img/portfolio/Maritime/MARCO.jpg alt: "Maritime College Corporate Branding" %}
+{ % responsive_image path: assets/img/portfolio/Maritime/MARCO.jpg alt: "Maritime College Corporate Branding" %}
 *Maritime College Corporate Branding*

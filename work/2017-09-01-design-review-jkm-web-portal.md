@@ -10,7 +10,7 @@ published: true
 sitemap: true
 ---
 
-{% responsive_image path: assets/img/portfolio/jkm.jpg alt: "An old version of JKM's web portal." %}
+{ % responsive_image path: assets/img/portfolio/jkm.jpg alt: "An old version of JKM's web portal." %}
 *An old version of JKM's web portal.*
 
 In 2008, a younger me joined a local web development company as a web designer. He was just starting out in his career and had only just begun to explore the world of web design and development. His general role was to design UI and convert it to HTML & CSS. At that time, web development using open source CMS was on the rise in Malaysia. PHP and WAMP/LAMP stacks were popular backend solutions, and Joomla! 1.5 was the most commonly used content management system (CMS). The company did not have any other designers on staff, so he worked closely with the developers and other stakeholders to design and build the web portal.
@@ -43,7 +43,7 @@ The new design of the JKM website is a significant improvement over the previous
 
 ## Recommendations
 
-{% responsive_image path: assets/img/portfolio/Screenshot-2022-01-27-at-2-47-23-PM-1024x774.jpeg alt: "Sketch of proposed solution for JKM web portal review." %}
+{ % responsive_image path: assets/img/portfolio/Screenshot-2022-01-27-at-2-47-23-PM-1024x774.jpeg alt: "Sketch of proposed solution for JKM web portal review." %}
 *Sketch of proposed solution for JKM web portal review.*
 
 I recommend that the JKM website be updated to address the following issues:
@@ -62,5 +62,5 @@ The website should be updated more frequently with new content.
 
 I believe that these changes will make the JKM website even more user-friendly and accessible.
 
-{% responsive_image path: assets/img/portfolio/Web-1280-1.png alt: "Low fedility design of proposed solution for JKM web portal review." %}
+{ % responsive_image path: assets/img/portfolio/Web-1280-1.png alt: "Low fedility design of proposed solution for JKM web portal review." %}
 *Low fedility design of proposed solution for JKM web portal review.*

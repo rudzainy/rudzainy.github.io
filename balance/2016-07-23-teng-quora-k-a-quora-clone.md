@@ -18,5 +18,5 @@ sitemap: true
 
 This web app was built as part of a curriculum of Full-stack Web Development Bootcamp at Next Academy.
 
-{% responsive_image path: assets/img/posts/quora-clone-commits.png alt: "Git commits."  of the project%}
+{ % responsive_image path: assets/img/posts/quora-clone-commits.png alt: "Git commits."  of the project%}
 _Git commits of the project._
