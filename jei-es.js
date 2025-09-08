@@ -76,9 +76,13 @@ document.addEventListener("DOMContentLoaded", () => {
   function randomDelay() {
     return (Math.floor(Math.random() * 5) + 3) * 1000; // ms
   }
+  // Utility: random scroll duration between 1–3s
+  function randomDuration() {
+    return (Math.floor(Math.random() * 3) + 1) * 1000; // ms
+  }
 
   // Smooth scroll to target position
-  function smoothScroll(element, target, duration = 1000) {
+  function smoothScroll(element, target, duration = randomDuration()) {
     return new Promise(resolve => {
       const start = element.scrollTop;
       const distance = target - start;
@@ -123,7 +127,8 @@ const ansArray = [
 	"true","correct","yes","right","accurate","valid",
 	"betul","sungguh","ya","benar","tepat","haah","ha'ah",
 	"yup","yups","y","t","1","em","yea",
-	"ran'galhu","rangalhu","kanaaiy","munaasibu","aan","aan'","saḩḩa","sahha"
+	"hai",
+	"ran'galhu","rangalhu","kanaaiy","munaasibu","aan","aan'","saḩḩa","sahha",
 ];
 
 let hackering = () => {
