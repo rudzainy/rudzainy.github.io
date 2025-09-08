@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Restarting Postgres for Rails on MacOS by Rudzainy Rahman</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Restarting Postgres for Rails on MacOS">
+
+		<!-- Bootstrap CSS & Icons-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+		<!-- end Bootstrap CSS & Icons -->
+		
+		<link rel="stylesheet" type="text/css" href="../si-es-es.css">
+	</head>
+	<body>
+		<!-- Top Navigation Bar -->
+		<nav class="navbar navbar-expand-lg border-bottom border-warning">
+			<div class="container">
+				<a href="/" class="navbar-brand text-primary"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a href="/work/" class="nav-link"><i class="bi bi-person-fill-gear me-2"></i>Work</a>
+						</li>
+						<li class="nav-item">
+							<a href="/life/" class="nav-link"><i class="bi bi-person-hearts me-2"></i>Life</a>
+						</li>
+						<li class="nav-item">
+							<a href="/balance/" class="nav-link"><i class="bi bi-person-lines-fill me-2"></i>Balance</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- end Top Navigation Bar -->
+
+		<!-- Main Content Section -->
+		<main class="container my-5">
+			<article class="post-content">
+				
+<p>Last night I encountered this error message while building <a href="/posts/ranting">Ranting</a>:</p>
+
+<p><code>bash
+ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.PGSQL.5432" failed: No such file or directory
+        Is the server running locally and accepting connections on that socket?
+):
+</code></p>
+
+<p>I vaguely remember encountering this error message a while back 🤔. I’m not certain what actually caused the error, however I figured restatrting Postgress would solve this. Here’s how to do it.</p>
+
+<h2 id="look-for-postgres-installation">1. Look for Postgres Installation</h2>
+
+<p>My current setup has Postgres installed with Homebrew.</p>
+
+<p><code>bash
+  $ brew list
+  ==&gt; Formulae
+  ...
+  cairo         liblqr          poppler
+  coreutils     libnghttp2      postgresql@14
+  docbook       libomp          protobuf
+  ...
+</code></p>
+
+<p>Seems that I have <code>postgresql@14</code> installed.</p>
+
+<h2 id="restart-postgres">2. Restart Postgres</h2>
+
+<p>Now, navigate to this folder:</p>
+
+<p><code>bash
+  $ cd /usr/local/var
+</code></p>
+
+<p>Look for the same Postgres installation folder as in Homebrew list above.</p>
+
+<p><code>bash
+  $ ls
+  cache		homebrew	mysql		run
+  db		log		postgresql@14
+</code></p>
+
+<p><code>cd</code> into the Postgres folder and look for a file called <code>postmaster.pid</code>.</p>
+
+<p><code>bash
+  $ cd postgresql@14
+</code></p>
+
+<p>```bash
+  $ ls
+  PG_VERSION		pg_ident.conf		pg_snapshots		pg_wal
+  base			pg_logical		pg_stat			pg_xact
+  global                pg_multixact            pg_stat_tmp             postgresql.auto.conf
+  pg_commit_ts		pg_notify		pg_subtrans		postgresql.conf
+  pg_dynshmem		pg_replslot		pg_tblspc		postmaster.opts
+  pg_hba.conf		pg_serial		pg_twophase		postmaster.pid</p>
+
+<p>```</p>
+
+<p>Found it! Next, backup the <code>postmaster.pid</code> file to another folder (eg. the Desktop folder) and restart Postgres.</p>
+
+<p><code>bash
+  $ mv postmaster.pid ~/Desktop
+</code></p>
+
+<p><code>bash
+  $ brew services restart postgresql@14
+  Stopping `postgresql@14`... (might take a while)
+  ==&gt; Successfully stopped `postgresql@14` (label: homebrew.mxcl.postgresql@14)
+  ==&gt; Successfully started `postgresql@14` (label: homebrew.mxcl.postgresql@14)
+</code></p>
+
+<h2 id="move-on-with-life">3. Move On with Life</h2>
+
+<p>Run Rails server again and that should resolve the error.</p>
+
+<p>It should be safe now to delete the <code>postmaster.pid</code> that was backed up earlier.</p>
+
+			</article>
+		</main>
+		<!-- end Main Content Section -->
+
+		<script src="../jei-es.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Regular Expressions in JavaScript by Rudzainy Rahman</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Regular Expressions in JavaScript">
+
+		<!-- Bootstrap CSS & Icons-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+		<!-- end Bootstrap CSS & Icons -->
+		
+		<link rel="stylesheet" type="text/css" href="../si-es-es.css">
+	</head>
+	<body>
+		<!-- Top Navigation Bar -->
+		<nav class="navbar navbar-expand-lg border-bottom border-warning">
+			<div class="container">
+				<a href="/" class="navbar-brand text-primary"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a href="/work/" class="nav-link"><i class="bi bi-person-fill-gear me-2"></i>Work</a>
+						</li>
+						<li class="nav-item">
+							<a href="/life/" class="nav-link"><i class="bi bi-person-hearts me-2"></i>Life</a>
+						</li>
+						<li class="nav-item">
+							<a href="/balance/" class="nav-link"><i class="bi bi-person-lines-fill me-2"></i>Balance</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- end Top Navigation Bar -->
+
+		<!-- Main Content Section -->
+		<main class="container my-5">
+			<article class="post-content">
+				
+<p>https://builtin.com/software-engineering-perspectives/javascript-regex</p>
+
+<p>I was working on a secret project ♥️ and required to extract information from the browser’s URL. 
+This is a quick guide on JavaScript regular expressions.</p>
+
+<blockquote class="prompt-info">
+  <p>Disclaimer: I have a basic understanding of RegEx and have used them before.</p>
+</blockquote>
+
+<h2 id="how-to-create-a-regular-expression-in-javascript">How to Create a Regular Expression in JavaScript</h2>
+
+<p>There are two ways to create a regular expression (RegEx) in JavaScript:
+1. RegEx Cconstructor (RegExp)
+2. RegEx Literal</p>
+
+<h2 id="regex-cconstructor-regexp">RegEx Cconstructor (RegExp)</h2>
+
+<p>Syntax: <code>new RegExp(pattern[, flags])</code></p>
+
+<p>Example:</p>
+
+<p><code>javascript
+var regexConst = new RegExp('abc');
+</code></p>
+
+<h2 id="regex-literal">RegEx Literal</h2>
+
+<p>Syntax: <code>/pattern/flags</code></p>
+
+<p>Example:</p>
+
+<p><code>javascript
+var regexLiteral = /abc/;
+</code></p>
+
+<p>Here, the flags are optional. I will explain these later in this article.</p>
+
+<p>The result is going to be a regex object.</p>
+
+<p>You can to escape the forward slash ( / ) with a backslash ( \ ) if you want to use it as a part of the regex.</p>
+
+<h2 id="regex-methods">RegEx Methods</h2>
+
+<h3 id="regexprototypetest">Regex.prototype.test()</h3>
+
+<p>This method is used to test whether a match has been found or not. It accepts a string which we have to test against a regular expression, and it returns true or false depending upon if the match is found or not.</p>
+
+<p><code>javascript
+var regex = /hello/;
+var str = 'hello world';
+var result = regex.test(str);
+console.log(result);
+// returns true
+</code></p>
+
+<h3 id="regexprototypeexec">Regex.prototype.exec()</h3>
+
+<p>This method returns an array containing all the matched groups. It accepts a string that we have to test against a regular expression.</p>
+
+<p><code>javascript
+var regex = /hello/;
+var str = 'hello world';
+var result = regex.exec(str);
+console.log(result);
+// returns [ 'hello', index: 0, input: 'hello world', groups: undefined ]
+// 'hello' -&gt; is the matched pattern.
+// index: -&gt; Is where the regular expression starts.
+// input: -&gt; Is the actual string passed.
+</code></p>
+
+<h2 id="bonus-regex-for-finding-image-file-in-vs-code">Bonus: Regex for finding image file in VS Code</h2>
+
+<p><code>
+  /^!\[.*\]\(/
+</code>
+ will search for <code>![...](</code></p>
+
+			</article>
+		</main>
+		<!-- end Main Content Section -->
+
+		<script src="../jei-es.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	</body>
+</html>
