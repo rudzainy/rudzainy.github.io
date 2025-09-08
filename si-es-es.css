@@ -17,6 +17,12 @@ h1, h2 {
   font-size: 0.8rem;
 }
 
+ol.card-group-list > li.card,
+ul.card-group-list > li.card {
+  min-width: 30vw;
+  margin: 4px;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hide-scrollbar::-webkit-scrollbar,
 section > article.card > .card-body::-webkit-scrollbar {
@@ -62,9 +68,12 @@ section > article.card.button > a,
     width: 32vw !important;;
     height: 32vw !important;;
   }
-
   .card-header {
     font-size: 1rem;
+  }
+  ol.card-group-list > li.card,
+  ul.card-group-list > li.card {
+    max-width: 30vw;
   }
 }
 
@@ -74,6 +83,10 @@ section > article.card.button > a,
     width: 196px !important;;
     height: 196px !important;;
   }
+  ol.card-group-list > li.card,
+  ul.card-group-list > li.card {
+    max-width: 30vw;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -81,6 +94,10 @@ section > article.card.button > a,
   section > article.card {
     width: 256px !important;;
     height: 256px !important;;
+  }
+  ol.card-group-list > li.card,
+  ul.card-group-list > li.card {
+    max-width: 40vw;
   }
 }
 /* end Box Cards */
