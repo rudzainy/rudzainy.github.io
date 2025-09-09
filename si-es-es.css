@@ -17,6 +17,10 @@ h1, h2 {
   font-size: 0.8rem;
 }
 
+.mt-n1 {
+  margin-top: -0.1rem !important; /* Example for negative top margin */
+}
+
 ol.card-group-list > li.card,
 ul.card-group-list > li.card {
   min-width: 30vw;
