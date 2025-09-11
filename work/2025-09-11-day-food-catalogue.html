@@ -222,9 +222,7 @@
 							<li>Keeps a human-in-the-loop for pricing and fulfilment</li>
 						</ul>
 						<figure class="mb-3">
-							<div class="ratio ratio-16x9 bg-light border d-flex align-items-center justify-content-center">
-								<span class="text-muted">Placeholder: Viber Message Mock</span>
-							</div>
+							<img src="../images/portfolio/dayfood/checkout-to-viber.png" class="figure-img img-fluid rounded mx-auto" alt="Structured message composed at checkout for one‑tap send">
 							<figcaption class="text-center fst-italic text-secondary mt-2">Structured message composed at checkout for one‑tap send</figcaption>
 						</figure>
 
@@ -270,6 +268,43 @@
 							</div>
 						</div>
 						
+						<h4 class="mt-4 text-primary"><i class="bi bi-diagram-3 me-2"></i>Architecture Diagram (Systems Design)</h4>
+						<figure class="mb-4">
+							<pre class="mermaid">
+flowchart LR
+  User["Customer (Mobile)"] --> UI["Rails + Hotwire UI"]
+  UI --> Spree["Spree Commerce Domain"]
+  Spree --> DB[("PostgreSQL")] 
+  UI -.-> Viber["Viber Deep Link\n(prefilled quote)"]
+  Viber --> Sales["Sales (Human-in-the-loop)"]
+  Sales -->|confirm| Odoo[("Odoo ERP")] 
+  Odoo -->|sync status| UI
+
+  UI --> SW["Service Worker\n(cache-first)"]
+  SW --> CDN["Static Assets"]
+							</pre>
+							<figcaption class="text-center fst-italic text-secondary mt-2">High-level system interactions across UI, commerce, Viber, and ERP</figcaption>
+						</figure>
+
+						<h4 class="mt-4 text-primary"><i class="bi bi-diagram-2 me-2"></i>Information Architecture Map</h4>
+						<figure class="mb-2">
+							<pre class="mermaid">
+flowchart TD
+  Catalog["Catalog"] --> Category["Category"]
+  Category --> Brand["Brand"]
+  Brand --> Product["Product"]
+  Product --> Line["Quote Line"]
+  Line --> Qty["Quantity"]
+  Line --> UOM["Unit of Measure (future)"]
+  Line --> Variant["Variant (future)"]
+
+  Quote["Quote Message"] --> Header["Header"]
+  Quote --> Totals["Totals"]
+  Quote --> Contact["Contact"]
+							</pre>
+							<figcaption class="text-center fst-italic text-secondary mt-2">Catalog to quote structure: from taxonomy to message schema</figcaption>
+						</figure>
+
 						<!-- Moving Forward content is presented in the dedicated section below -->
 					</div>
 				</div>
@@ -364,7 +399,7 @@
 						<div class="row g-4 my-4">
 							<div class="col-md-6">
 								<figure class="figure mb-0">
-									<img src="../images/portfolio/dayfood-search.jpg" class="figure-img img-fluid rounded shadow" alt="Day Food Catalogue Search Interface">
+									<img src="../images/portfolio/dayfood/search-and-filter.png" class="figure-img img-fluid rounded" alt="Day Food Catalogue Search Interface">
 									<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Search interface with category filtering and instant results</figcaption>
 								</figure>
 								<div class="card border-0 shadow-sm mt-3">
@@ -549,10 +584,51 @@
 		</div>
 	</div>
 	<figure class="mt-4">
-		<div class="ratio ratio-16x9 bg-light border d-flex align-items-center justify-content-center">
-			<span class="text-muted">Placeholder: Sequence Diagram — Build Quote → Compose Message → Viber → Sales → ERP</span>
-		</div>
+		<pre class="mermaid"> 
+sequenceDiagram
+  autonumber
+  participant C as Customer (Mobile)
+  participant UI as Rails + Hotwire UI
+  participant SP as Spree Commerce
+  participant DB as PostgreSQL
+  participant VB as Viber
+  participant S as Sales
+  participant OD as Odoo ERP
+
+  C->>UI: Browse & build quote
+  UI->>SP: Fetch products/brands
+  SP->>DB: Query catalog
+  DB-->>SP: Results
+  SP-->>UI: Render listings
+  C->>UI: Checkout to Viber
+  UI->>VB: Open deep link\n(prefilled quote)
+  VB->>S: Message delivered
+  S-->>C: Confirm details
+  S->>OD: Create order (planned)
+  OD-->>UI: Status sync (planned)
+  UI-->>C: Status update
+		</pre>
 		<figcaption class="text-center fst-italic text-secondary mt-2">High-level sequence across user, app, Viber, and ERP</figcaption>
+	</figure>
+
+	<figure class="mt-4">
+		<pre class="mermaid">
+sequenceDiagram
+  autonumber
+  participant C as Customer (Mobile)
+  participant UI as Rails + Hotwire UI
+  participant OS as Device OS
+  participant Store as App Store
+
+  C->>UI: Checkout to Viber
+  UI->>OS: Open Viber deep link
+  OS-->>UI: App not installed
+  UI->>Store: Redirect to Viber store page
+  Store-->>C: Prompt to install Viber
+  C-->>Store: Install Viber
+  UI-->>C: Retry checkout (suggested)
+		</pre>
+		<figcaption class="text-center fst-italic text-secondary mt-2">Fallback when Viber is not installed: open the OS app store and prompt install</figcaption>
 	</figure>
 </section>
 <!-- end Section: Appendix: Technical Notes -->
@@ -586,6 +662,11 @@
     <!-- end Footer -->
 
     <script src="../jei-es.js"></script>
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      if (window.mermaid) { mermaid.initialize({ startOnLoad: true }); }
+    </script>
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"></script>
   </body>

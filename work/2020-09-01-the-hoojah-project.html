@@ -136,6 +136,48 @@
 					</figure>
 					<p>Subjective discussions make decision-making difficult and eventually become noise. Open polls provide objective questions that deter subjective discussions.</p>
 
+					<h4 class="mt-4 text-primary"><i class="bi bi-diagram-3 me-2"></i>System Architecture</h4>
+					<p>Hoojah was built with a modern tech stack designed for scalability and real-time interactions. The architecture balances performance needs with development efficiency, allowing for rapid iteration while maintaining a responsive user experience.</p>
+					
+					<figure class="figure mb-4">
+						<div class="bg-light p-3 rounded shadow">
+							<pre class="mermaid">
+							flowchart TD
+								subgraph Client ["Client Layer"]  
+									React["React Components"] 
+									SCSS["SCSS Styling"] 
+									API["API Clients"] 
+								end
+								
+								subgraph Server ["Server Layer"]
+									Rails["Ruby on Rails"] 
+									REST["RESTful API"] 
+									Auth["Authentication"] 
+								end
+								
+								subgraph Data ["Data Layer"]
+									DB[("PostgreSQL")]
+									Redis[("Redis Cache")]
+									S3[("S3 Storage")]
+								end
+								
+								subgraph Services ["External Services"]
+									Discourse["Discourse Forum"]
+									Analytics["Analytics"]
+								end
+								
+								Client --> Server
+								Server --> Data
+								Server --> Services
+								
+								class Client,Server,Data,Services headerClass
+								classDef headerClass fill:#f8f9fa,stroke:#495057,stroke-width:1px
+								classDef default fill:#fff,stroke:#6c757d
+							</pre>
+						</div>
+						<figcaption class="figure-caption text-center"><i class="bi bi-layers me-1"></i>Hoojah's system architecture showing the client, server, data, and external service layers.</figcaption>
+					</figure>
+
 					<h4 class="mt-5 text-primary"><i class="bi bi-card-checklist me-2"></i>Rationale for a 3-Options Voting System</h4>
 					<p>One of the defining design choices in Hoojah is to <strong>restrict poll responses to three options: Agree, Neutral, and Disagree</strong>. This wasn't just a simplification—it was a deliberate strategy born from my frustration with the noise in online discussions. After observing countless debates on social media platforms, I realized that too many choices often led to decision paralysis and diluted the core issues.</p>
 
@@ -186,10 +228,37 @@
 					<h5 class="mt-4 mb-3 text-warning"><i class="bi bi-exclamation-circle me-2"></i>Considerations</h5>
 					<p>While limiting options reduces noise, it does flatten some complexity. Hoojah's design addresses this by allowing <em>supporting arguments</em> under each stance, so nuance still surfaces through text and debate. This balance was something I refined over years of iteration, learning from user feedback and my own experiences as a participant in the platform.</p>
 
-					<figure class="figure mb-4">
-						<img src="../images/portfolio/hoojah/poll-interface.png" class="figure-img img-fluid rounded shadow" alt="Hoojah's restricted 3-option poll structure">
-						<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Figure 1: Hoojah's restricted 3-option poll structure - a design choice that evolved through many late-night coding sessions.</figcaption>
-					</figure>
+					<div class="row g-4 my-4">
+						<div class="col-md-6">
+							<figure class="figure mb-4 h-100">
+								<img src="../images/portfolio/hoojah/poll-interface.png" class="figure-img img-fluid rounded shadow" alt="Hoojah's restricted 3-option poll structure">
+								<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Figure 1: Hoojah's restricted 3-option poll structure - a design choice that evolved through many late-night coding sessions.</figcaption>
+							</figure>
+						</div>
+						<div class="col-md-6">
+							<figure class="figure mb-4 h-100">
+								<div class="bg-light p-3 rounded shadow h-100">
+									<pre class="mermaid">
+									erDiagram
+										POLL ||--o{ OPTION : has
+										POLL ||--o{ ARGUMENT : contains
+										POLL ||--o{ DEBATE : hosts
+										POLL ||--o{ VOTE : receives
+										POLL ||--|| USER : created_by
+										OPTION ||--o{ VOTE : selected_in
+										OPTION ||--o{ ARGUMENT : supports
+										ARGUMENT ||--|| USER : authored_by
+										DEBATE ||--|| USER : participant_1
+										DEBATE ||--|| USER : participant_2
+										DEBATE ||--o{ DEBATE_POST : contains
+										DEBATE_POST ||--|| USER : written_by
+										VOTE ||--|| USER : cast_by
+									</pre>
+								</div>
+								<figcaption class="figure-caption text-center"><i class="bi bi-database me-1"></i>Figure 1b: Entity relationship diagram showing how polls, options, arguments, debates, and users interconnect in the Hoojah data model.</figcaption>
+							</figure>
+						</div>
+					</div>
 
 					<h4 class="mt-5 text-primary"><i class="bi bi-layout-text-sidebar-reverse me-2"></i>UI/UX Study: Solving the Convenience Problem</h4>
 					<p>One of the biggest barriers to online debate platforms is <strong>convenience</strong>—users often struggle to skim polls, understand arguments, and participate without friction. Hoojah's UI/UX design aimed to solve this through <strong>structured flows and visual hierarchy</strong>. This focus on usability came from my background in user-centered design and my personal frustration with cluttered interfaces.</p>
@@ -250,9 +319,52 @@
 							</div>
 						</div>
 						<div class="col-md-6">
-							<figure class="figure">
+							<figure class="figure mb-3">
 								<img src="../images/portfolio/hoojah/debate-view.png" class="figure-img img-fluid rounded shadow" alt="Debate mode between two participants">
-								<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Figure 4: Debate mode in action - a concept I first sketched in my notebook during a long bus ride, now fully realized.</figcaption>
+								<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Figure 4a: Debate mode in action - a concept I first sketched in my notebook during a long bus ride, now fully realized.</figcaption>
+							</figure>
+							
+							<figure class="figure mb-3">
+								<div class="bg-light p-3 rounded shadow">
+									<pre class="mermaid">
+									sequenceDiagram
+										autonumber
+										participant U1 as User 1
+										participant H as Hoojah
+										participant U2 as User 2
+										
+										U1->>H: Challenge to debate
+										H->>U2: Notify of challenge
+										U2->>H: Accept challenge
+										H->>U1: Debate initiated
+										
+										Note over U1,U2: Structured Debate Begins
+										
+										U1->>H: Opening statement
+										H->>U2: Display statement
+										U2->>H: Counter argument
+										H->>U1: Display counter
+										
+										loop Debate Exchange
+											U1->>H: Response
+											H->>U2: Display response
+											U2->>H: Response
+											H->>U1: Display response
+										end
+										
+										U1->>H: Closing statement
+										H->>U2: Display closing
+										U2->>H: Closing statement
+										H->>U1: Display closing
+										
+										Note over U1,U2: Debate Concluded
+										
+										H->>U1: Archive debate
+										H->>U2: Archive debate
+										H->>H: Make debate public
+									</pre>
+								</div>
+								<figcaption class="figure-caption text-center"><i class="bi bi-chat-square-text me-1"></i>Figure 4b: Sequence diagram showing the structured flow of a one-on-one debate in Hoojah.</figcaption>
 							</figure>
 						</div>
 					</div>
@@ -310,8 +422,41 @@
 					<p>This journey map represents the culmination of years of iteration. I remember the excitement of seeing users naturally follow this flow during our first successful beta test - it validated countless design decisions.</p>
 
 					<figure class="figure mb-4">
-						<img src="../images/portfolio/hoojah/user-journey.png" class="figure-img img-fluid rounded shadow" alt="Typical Hoojah user flow">
-						<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Figure 7: The user journey that started as a whiteboard sketch in my tiny apartment, now fully realized.</figcaption>
+						<div class="bg-light p-3 rounded shadow">
+							<pre class="mermaid">
+							flowchart TD
+								A["User Visits Hoojah"] --> B["View Poll Question"]
+								B --> C{"Choose Stance"}
+								C -->|"Agree"| D1["View Agree Arguments"]
+								C -->|"Neutral"| D2["View Neutral Arguments"]
+								C -->|"Disagree"| D3["View Disagree Arguments"]
+								D1 --> E["Read Supporting Arguments"]
+								D2 --> E
+								D3 --> E
+								E --> F{"Engage Further?"}
+								F -->|"Yes"| G["Add Supporting Argument"]
+								F -->|"No"| H["Continue Browsing"]
+								G --> I{"Start Debate?"}
+								I -->|"Yes"| J["Initiate One-on-One Debate"]
+								I -->|"No"| H
+								J --> K["Exchange Structured Arguments"]
+								K --> L["Debate Concludes"]
+								L --> M["Track via Personal Profile"]
+								style A fill:#f9f9f9,stroke:#6c757d
+								style B fill:#e3f2fd,stroke:#0d6efd
+								style C fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+								style D1 fill:#d1e7dd,stroke:#198754
+								style D2 fill:#cff4fc,stroke:#0dcaf0
+								style D3 fill:#f8d7da,stroke:#dc3545
+								style F fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+								style I fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+								style J fill:#e2e3e5,stroke:#6c757d,stroke-width:2px
+								style K fill:#e2e3e5,stroke:#6c757d
+								style L fill:#e2e3e5,stroke:#6c757d
+								style M fill:#f8f9fa,stroke:#6c757d
+							</pre>
+						</div>
+						<figcaption class="figure-caption text-center"><i class="bi bi-diagram-3 me-1"></i>Figure 7: Interactive user journey flow showing the path from viewing a poll to engaging in structured debates.</figcaption>
 					</figure>
 
 					<h4><i class="bi bi-lightbulb me-2"></i>Key Takeaways</h4>
@@ -420,5 +565,11 @@
 		<!-- Bootstrap JS -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 		<!-- end Bootstrap JS -->
+		
+		<!-- Mermaid for diagrams -->
+		<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+		<script>
+			if (window.mermaid) { mermaid.initialize({ startOnLoad: true }); }
+		</script>
 	</body>
 </html>
