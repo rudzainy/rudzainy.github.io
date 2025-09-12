@@ -143,25 +143,25 @@
 						<div class="bg-light p-3 rounded shadow">
 							<pre class="mermaid">
 							flowchart TD
-								subgraph Client ["Client Layer"]  
-									React["React Components"] 
-									SCSS["SCSS Styling"] 
-									API["API Clients"] 
+								subgraph Client["Client Layer"]
+									React["React Components"]
+									SCSS["SCSS Styling"]
+									API["API Clients"]
 								end
 								
-								subgraph Server ["Server Layer"]
-									Rails["Ruby on Rails"] 
-									REST["RESTful API"] 
-									Auth["Authentication"] 
+								subgraph Server["Server Layer"]
+									Rails["Ruby on Rails"]
+									REST["RESTful API"]
+									Auth["Authentication"]
 								end
 								
-								subgraph Data ["Data Layer"]
+								subgraph Data["Data Layer"]
 									DB[("PostgreSQL")]
 									Redis[("Redis Cache")]
 									S3[("S3 Storage")]
 								end
 								
-								subgraph Services ["External Services"]
+								subgraph Services["External Services"]
 									Discourse["Discourse Forum"]
 									Analytics["Analytics"]
 								end

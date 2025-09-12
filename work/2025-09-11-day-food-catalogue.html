@@ -50,13 +50,12 @@
 				<article class="card card-h1 border border-info">
 					<div class="card-body">
 						<h1 class="card-title text-info" style="--bs-text-opacity: .5">Day Food Catalogue</h1>
-						<p class="lead mb-0">E‑commerce Catalogue with Viber Checkout</p>
 					</div>
 				</article>
 			</section>
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
 				<article class="card">
-					<p class="card-body text-center">A mobile-first catalogue where checkout generates a quotation and opens Viber with the message auto-populated—customers tap send to order. Includes search, filter, and a quote (shopping cart). Variants & UOM and automatic order creation in Odoo are in development. PWA supports regular customers who prefer an app-like experience.</p>
+					<p class="card-body text-center">E‑commerce Catalogue with Viber Checkout</p>
 				</article>
 				<article class="card">
 					<div class="card-header">Key Features</div>
@@ -75,7 +74,7 @@
 						<ul class="mb-0">
 							<li>Ruby on Rails + Hotwire (Turbo, Stimulus)</li>
 							<li>Spree Commerce, PostgreSQL</li>
-							<li>ActiveStorage (S3 compatible)</li>
+							<li>ActiveStorage</li>
 							<li>PWA: Service Worker & caching</li>
 						</ul>
 					</div>
@@ -106,7 +105,13 @@
 				<div class="card border-0 shadow-sm mb-5">
 					<div class="card-body p-4 p-lg-5">
 						<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-book me-2 text-info"></i>Summary</h3>
-						<p class="lead mb-0">Day Food Catalogue reduces friction at checkout. Beyond standard e‑commerce capabilities—search, filter, and a quote (shopping cart)—the checkout composes a quotation and opens Viber with the message prefilled so customers can confirm in one tap. Variants & unit-of-measure and automatic order creation in Odoo are in development. A PWA layer supports regular customers who prefer an app-like experience.</p>
+						<p class="lead">Day Food Catalogue is a mobile-first catalogue where checkout generates a quotation and opens Viber with the message auto-populated. Customers just tap send to order. Includes search, filter, and a quote (shopping cart).</p>
+						<blockquote class="blockquote">
+							<p>Day Food Catalogue reduces friction at checkout!</p>
+						  </blockquote>  
+						<p class="lead">Beyond standard e‑commerce capabilities, the checkout composes a quotation and opens Viber with the message prefilled so customers can confirm in one tap.</p>
+						<p class="lead">The current version allows customers to select product without variant or unit-of-measure, so there are still a bit of friction before order is placed. Variants & unit-of-measure and automatic order creation in Odoo are in development and will be added in the next phase.</p>
+						<p class="lead">There is also a basic PWA layer that supports regular customers who prefer an app-like experience.</p>
 					</div>
 				</div>
 			</section>
@@ -117,7 +122,7 @@
 				<div class="card border-0 shadow-sm mb-5">
 					<div class="card-body p-4 p-lg-5">
 						<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-bullseye me-2 text-info"></i>1. Problem Statement & Goals</h3>
-						<p>Ordering commonly happens through Viber chats with sales. The friction is turning intent into a structured quote that sales can process quickly, on mobile, and over patchy connectivity.</p>
+						<p>Ordering commonly happens through Viber chats with sales. The friction is turning customer's intent into a structured quote that sales can process quickly. Mobile-first is a must as Viber is the primary communication channel in the Maldives.</p>
 						<div class="row g-4 mt-2">
 							<div class="col-md-6">
 								<h5 class="text-info">Goals</h5>
@@ -125,22 +130,58 @@
 									<li>One‑tap checkout that composes a structured quotation into Viber</li>
 									<li>Fast product discovery: search, filter, brand‑led browsing</li>
 									<li>Cart as quote builder (not a payment cart)</li>
+									<li>Mobile‑first design while also responsive on larger screens</li>
 								</ul>
 							</div>
 							<div class="col-md-6">
-								<h5 class="text-info">Non‑Goals (Phase 1)</h5>
+								<h5 class="text-info">Non‑Goals (Phase 2)</h5>
 								<ul>
 									<li>Payments integration</li>
-									<li>Variants & unit‑of‑measure selection (planned)</li>
-									<li>Automatic Odoo order creation (planned)</li>
+									<li>Variants & unit‑of‑measure selection</li>
+									<li>Automatic Odoo order creation</li>
 								</ul>
 							</div>
 						</div>
 						<figure class="mb-2 mt-3">
-							<div class="ratio ratio-16x9 bg-light border d-flex align-items-center justify-content-center">
-								<span class="text-muted">Placeholder: Context Map — Customer • Sales • Ops • ERP</span>
+							<div class="bg-light p-3 rounded shadow">
+								<pre class="mermaid">
+								flowchart TD
+								    subgraph Customer["Customer Domain"]
+								        C1["Small Vendors"]
+								        C2["Hotel Purchasers"]
+								        C3["Restaurant Managers"]
+								    end
+								    
+								    subgraph Sales["Sales Domain"]
+								        S1["Sales Reps"]
+								        S2["Viber Communication"]
+								        S3["Quote Processing"]
+								    end
+								    
+								    subgraph Ops["Operations Domain"]
+								        O1["Order Fulfillment"]
+								        O2["Inventory Management"]
+								        O3["Logistics"]
+								    end
+								    
+								    subgraph ERP["ERP Domain"]
+								        E1["Odoo System"]
+								        E2["Order Records"]
+								        E3["Reporting"]
+								    end
+								    
+								    Customer -->|"Browse & Build Quote"| Sales
+								    Sales -->|"Confirm Order"| Ops
+								    Sales -->|"Create Record"| ERP
+								    Ops -->|"Update Status"| ERP
+								    ERP -->|"Sync Status"| Sales
+								    Ops -->|"Deliver Products"| Customer
+								    
+								    classDef domainClass fill:#f8f9fa,stroke:#0dcaf0,stroke-width:1px
+								    class Customer,Sales,Ops,ERP domainClass
+								</pre>
 							</div>
-							<figcaption class="text-center fst-italic text-secondary mt-2">Ordering context and constraints shaping the solution</figcaption>
+							<figcaption class="text-center fst-italic text-secondary mt-2">Context Map showing relationships between Customer, Sales, Operations, and ERP domains</figcaption>
 						</figure>
 					</div>
 				</div>
@@ -185,23 +226,95 @@
 								</ul>
 							</div>
 						</div>
-						<div class="row g-4 mt-2">
-							<div class="col-md-6">
-								<figure class="mb-2">
-									<div class="ratio ratio-16x9 bg-light border d-flex align-items-center justify-content-center">
-										<span class="text-muted">Placeholder: Personas (Vendor, Purchaser, Sales)</span>
-									</div>
-									<figcaption class="text-center fst-italic text-secondary mt-2">Primary and internal user archetypes</figcaption>
-								</figure>
-							</div>
-							<div class="col-md-6">
-								<figure class="mb-2">
-									<div class="ratio ratio-16x9 bg-light border d-flex align-items-center justify-content-center">
-										<span class="text-muted">Placeholder: Journey (Discover → Quote → Confirm)</span>
-									</div>
-									<figcaption class="text-center fst-italic text-secondary mt-2">Key journey moments informing UX priorities</figcaption>
-								</figure>
-							</div>
+						<div class="mt-4">
+							<figure class="mb-2">
+								<div class="p-3">
+									<pre class="mermaid">
+									mindmap
+										root((User Types))
+											::icon(fa fa-users)
+											Primary Users
+												::icon(fa fa-store)
+												Small Vendors
+													::icon(fa fa-calendar-week)
+													Weekly Orders
+													Bi-Weekly Orders
+												Hotel Purchasers
+													::icon(fa fa-hotel)
+													Bulk Orders
+													Specific Requirements
+												Restaurant Managers
+													::icon(fa fa-utensils)
+													Frequent Orders
+													Specialty Items
+											Internal Users
+												::icon(fa fa-building)
+												Sales Reps
+													::icon(fa fa-comments)
+													Viber Communication
+													Order Confirmation
+												Operations Staff
+													::icon(fa fa-clipboard-check)
+													Order Fulfillment
+													Order Reconciliation
+									</pre>
+								</div>
+								<figcaption class="text-center fst-italic text-secondary mt-2">User types and their key characteristics</figcaption>
+							</figure>
+						</div>
+							
+						<div class="mt-4">
+							<figure class="mb-2">
+								<div class="p-3">
+									<pre class="mermaid">
+									journey
+										title User Journey
+										section Discover
+											Search by Brand: 5: Customer
+											Browse Categories: 4: Customer
+											Filter Products: 4: Customer
+										section Build Quote
+											Add Products: 5: Customer
+											Adjust Quantities: 4: Customer
+											Review Quote: 3: Customer
+										section Confirm
+											Send via Viber: 5: Customer, Sales
+											Discuss Details: 4: Customer, Sales
+											Finalize Order: 3: Sales, Ops
+									</pre>
+								</div>
+								<figcaption class="text-center fst-italic text-secondary mt-2">Customer journey with satisfaction ratings at each step</figcaption>
+							</figure>
+						</div>
+						
+						<div class="mt-4">
+							<figure class="mb-2">
+								<div class="p-3">
+									<pre class="mermaid">
+									graph LR
+									    subgraph "Key Research Insights"
+									        I1["Viber is trusted"] --> S1["Keep human-in-the-loop"];
+									        I2["Brand-focused search"] --> S2["Optimize brand filtering"];
+									        I3["Remote connectivity issues"] --> S3["Offline-friendly browsing"];
+									    end
+									    
+									    subgraph "Design Implications"
+									        S1 --> D1["Viber checkout flow"];
+									        S2 --> D2["Brand-first navigation"];
+									        S3 --> D3["PWA with caching"];
+									    end
+									    
+									    classDef insights fill:#e3f2fd,stroke:#0d6efd,stroke-width:1px;
+									    classDef solutions fill:#d1e7dd,stroke:#198754,stroke-width:1px;
+									    classDef designs fill:#fff3cd,stroke:#ffc107,stroke-width:1px;
+									    
+									    class I1,I2,I3 insights;
+									    class S1,S2,S3 solutions;
+									    class D1,D2,D3 designs;
+									</pre>
+								</div>
+								<figcaption class="text-center fst-italic text-secondary mt-2">Research insights and their impact on design decisions</figcaption>
+							</figure>
 						</div>
 					</div>
 				</div>
@@ -338,10 +451,39 @@ flowchart TD
 							</div>
 						</div>
 						<figure class="mt-3">
-							<div class="ratio ratio-16x9 bg-light border d-flex align-items-center justify-content-center">
-								<span class="text-muted">Placeholder: Wireflows (Search → Quote → Viber)</span>
+							<img src="../images/portfolio/dayfood/add-to-quote-desktop.png" alt="Add to Quote (Desktop)" class="img-fluid">
+							<figcaption class="text-center fst-italic text-secondary mt-2">Add to Quote (Desktop)</figcaption>
+						</figure>
+						
+						<div class="card border-light mb-4 mt-3">
+							<div class="card-body">
+								<h6 class="card-title">Add to Quote Flow:</h6>
+								<div class="d-flex align-items-start mb-2">
+									<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">1</div>
+									<div>Click <strong>+</strong> to add quantity of product.</div>
+								</div>
+								<div class="d-flex align-items-start mb-2">
+									<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">2</div>
+									<div>Click <strong class="text-danger">Add to Cart</strong>.</div>
+								</div>
+								<div class="d-flex align-items-start mb-2">
+									<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">3</div>
+									<div>Product is added to cart.</div>
+								</div>
+								<div class="d-flex align-items-start mb-2">
+									<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">4</div>
+									<div>Click <strong>-</strong> to reduce quantity. Click <strong class="text-danger">Remove from Cart</strong> button.</div>
+								</div>
+								<div class="d-flex align-items-start">
+									<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">5</div>
+									<div>Product is removed from cart.</div>
+								</div>
 							</div>
-							<figcaption class="text-center fst-italic text-secondary mt-2">User flows emphasize speed and clarity on mobile</figcaption>
+						</div>
+						
+						<figure class="mt-3">
+							<img src="../images/portfolio/dayfood/add-to-quote-mobile.png" alt="Add to Quote (Mobile)" class="img-fluid">
+							<figcaption class="text-center fst-italic text-secondary mt-2">Add to Quote (Mobile)</figcaption>
 						</figure>
 					</div>
 				</div>
@@ -358,11 +500,78 @@ flowchart TD
 							<li><strong>Risks</strong>: connectivity, Viber dependency, ERP timing; <strong>Mitigations</strong>: offline-first UI, fallbacks, staged integration</li>
 							<li><strong>Collaboration</strong>: weekly stakeholder reviews; sales feedback in the loop</li>
 						</ul>
-						<figure class="mb-0">
-							<div class="ratio ratio-16x9 bg-light border d-flex align-items-center justify-content-center">
-								<span class="text-muted">Placeholder: Timeline & Roadmap</span>
+						<figure class="mb-4">
+							<div class="p-3">
+								<pre class="mermaid">
+								gantt
+									title Day Food Catalogue Project Timeline
+									dateFormat  YYYY-MM-DD
+									axisFormat %b %Y
+									todayMarker stroke-width:5px,stroke:#0dcaf0,opacity:0.5
+									
+									section Phase 1: MVP
+									Discovery & Research       :done, disc, 2025-01-15, 30d
+									Design & Prototyping       :done, design, after disc, 45d
+									MVP Development            :done, dev1, after design, 60d
+									Quote-to-Viber Launch      :done, milestone, after dev1, 0d
+									
+									section Phase 2
+									Variants & UOM             :active, var, 2025-07-01, 45d
+									Odoo Integration           :odoo, after var, 60d
+									PWA Enhancements           :pwa, 2025-07-15, 90d
+									
+									section Phase 3
+									Hotwire Native Planning    :plan, 2025-10-01, 30d
+									Native App Development     :native, after plan, 90d
+									
+									section Risk Mitigation
+									Offline-first UI           :crit, risk1, 2025-03-01, 120d
+									Viber Fallbacks            :crit, risk2, 2025-04-15, 45d
+									Staged ERP Integration     :crit, risk3, 2025-08-01, 90d
+								</pre>
 							</div>
-							<figcaption class="text-center fst-italic text-secondary mt-2">Roadmap illustrating scope boundaries and decisions</figcaption>
+							<figcaption class="text-center fst-italic text-secondary mt-2">Project timeline showing phases, key milestones, and risk mitigation activities</figcaption>
+						</figure>
+						
+						<figure class="mb-0">
+							<div class="p-3">
+								<pre class="mermaid">
+								flowchart TD
+								    subgraph PM["Project Management"]
+								        Weekly["Weekly Stakeholder Reviews"]
+								        Feedback["Sales Feedback Loop"]
+								        Agile["Agile Development Cycles"]
+								    end
+								    
+								    subgraph Risks["Key Risks"]
+								        R1["Connectivity Issues"]
+								        R2["Viber Dependency"]
+								        R3["ERP Integration Timing"]
+								    end
+								    
+								    subgraph Mitigations["Risk Mitigations"]
+								        M1["Offline-first UI Design"]
+								        M2["Alternative Checkout Fallbacks"]
+								        M3["Staged Integration Approach"]
+								    end
+								    
+								    R1 --> M1
+								    R2 --> M2
+								    R3 --> M3
+								    
+								    PM --> Risks
+								    PM --> Mitigations
+								    
+								    classDef riskClass fill:#f8d7da,stroke:#dc3545,stroke-width:1px
+								    classDef mitigationClass fill:#d1e7dd,stroke:#198754,stroke-width:1px
+								    classDef pmClass fill:#e3f2fd,stroke:#0d6efd,stroke-width:1px
+								    
+								    class R1,R2,R3 riskClass
+								    class M1,M2,M3 mitigationClass
+								    class Weekly,Feedback,Agile pmClass
+								</pre>
+							</div>
+							<figcaption class="text-center fst-italic text-secondary mt-2">Project management approach with risk identification and mitigation strategies</figcaption>
 						</figure>
 					</div>
 				</div>
@@ -379,11 +588,14 @@ flowchart TD
 							<li><strong>Validation Plan</strong>: staged rollout, sales feedback loops, instrumented events</li>
 							<li><strong>Status</strong>: MVP delivering quote-to-Viber; upcoming: variants/UOM, Odoo automation</li>
 						</ul>
-						<figure>
-							<div class="ratio ratio-16x9 bg-light border d-flex align-items-center justify-content-center">
-								<span class="text-muted">Placeholder: Metrics Dashboard</span>
-							</div>
-							<figcaption class="text-center fst-italic text-secondary mt-2">Operational and UX metrics to monitor impact</figcaption>
+						
+						<div class="alert alert-success mt-3" role="alert">
+							<h5 class="alert-heading"><i class="bi bi-chat-quote me-2"></i>Early Adoption Feedback</h5>
+							<p>Although the catalogue has not been officially publicised yet, Day Food reports that customers have already been using it for product reference before walking in or contacting sales to place orders. This organic discovery and usage validates the catalogue's value as a product reference tool even before the full checkout flow is widely adopted.</p>
+						</div>
+						<figure class="mt-3">
+							<img src="../images/portfolio/dayfood/google-analytics-snapshot.png" alt="Google Analytics Snapshot" class="img-fluid">
+							<figcaption class="text-center fst-italic text-secondary mt-2">Google Analytics Snapshot</figcaption>
 						</figure>
 					</div>
 				</div>
@@ -399,7 +611,7 @@ flowchart TD
 						<div class="row g-4 my-4">
 							<div class="col-md-6">
 								<figure class="figure mb-0">
-									<img src="../images/portfolio/dayfood/search-and-filter.png" class="figure-img img-fluid rounded" alt="Day Food Catalogue Search Interface">
+									<img src="../images/portfolio/dayfood/filter-mobile.png" class="figure-img img-fluid rounded" alt="Day Food Catalogue Search Interface">
 									<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Search interface with category filtering and instant results</figcaption>
 								</figure>
 								<div class="card border-0 shadow-sm mt-3">
@@ -411,8 +623,8 @@ flowchart TD
 							</div>
 							<div class="col-md-6">
 								<figure class="figure mb-0">
-									<img src="../images/portfolio/dayfood-categories.jpg" class="figure-img img-fluid rounded shadow" alt="Product Categories">
-									<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Category-based browsing with hierarchical navigation</figcaption>
+									<img src="../images/portfolio/dayfood/search-desktop.png" class="figure-img img-fluid rounded shadow" alt="Search Interface">
+									<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Search interface with category filtering and instant results</figcaption>
 								</figure>
 								<div class="card border-0 shadow-sm mt-3">
 									<div class="card-body">
@@ -426,21 +638,89 @@ flowchart TD
 						<div class="row g-4 my-4">
 							<div class="col-md-6">
 								<figure class="figure mb-0">
-									<img src="../images/portfolio/dayfood-product.jpg" class="figure-img img-fluid rounded shadow" alt="Product Details">
-									<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Product details with image gallery and add to cart</figcaption>
+									<img src="../images/portfolio/dayfood/product-page-desktop.png" class="figure-img img-fluid rounded shadow" alt="Product Details">
+									<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Product details with largeimage and add to quote button</figcaption>
 								</figure>
 							</div>
 							<div class="col-md-6">
-								<figure class="figure mb-0">
-									<img src="../images/portfolio/dayfood-cart.jpg" class="figure-img img-fluid rounded shadow" alt="Shopping Cart">
-									<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Shopping cart with quantity management and checkout options</figcaption>
-								</figure>
 								<div class="card border-0 shadow-sm mt-3">
 									<div class="card-body">
-										<h5 class="card-title">Cart Management</h5>
+										<h5 class="card-title">Quote (Cart) Management</h5>
 										<p>Dynamic product buttons clearly state the actions that customers are about to perform. The intuitive interface allows users to add, remove, and adjust quantities with minimal effort.</p>
 									</div>
 								</div>
+							</div>
+							<div class="col-md-12">
+								<figure class="mt-3">
+									<img src="../images/portfolio/dayfood/add-to-quote-desktop.png" alt="Add to Quote (Desktop)" class="img-fluid">
+									<figcaption class="text-center fst-italic text-secondary mt-2">Add to Quote (Desktop)</figcaption>
+								</figure>
+								
+								<div class="card border-light mb-4 mt-3">
+									<div class="card-body">
+										<h6 class="card-title">Add to Quote Flow:</h6>
+										<div class="d-flex align-items-start mb-2">
+											<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">1</div>
+											<div>Click <strong>+</strong> to add quantity of product.</div>
+										</div>
+										<div class="d-flex align-items-start mb-2">
+											<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">2</div>
+											<div>Click <strong class="text-danger">Add to Cart</strong>.</div>
+										</div>
+										<div class="d-flex align-items-start mb-2">
+											<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">3</div>
+											<div>Product is added to cart.</div>
+										</div>
+										<div class="d-flex align-items-start mb-2">
+											<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">4</div>
+											<div>Click <strong>-</strong> to reduce quantity. Click <strong class="text-danger">Remove from Cart</strong> button.</div>
+										</div>
+										<div class="d-flex align-items-start">
+											<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">5</div>
+											<div>Product is removed from cart.</div>
+										</div>
+									</div>
+								</div>
+								
+								<figure class="mt-3">
+									<img src="../images/portfolio/dayfood/add-to-quote-mobile.png" alt="Add to Quote (Mobile)" class="img-fluid">
+									<figcaption class="text-center fst-italic text-secondary mt-2">Add to Quote (Mobile)</figcaption>
+								</figure>
+							</div>
+						</div>
+						<h4 class="mt-5 text-primary"><i class="bi bi-pencil me-2"></i>Sketches and Low-Fi Mockups</h4>
+						<div class="row g-4 my-4">
+							<div class="col-md-6">
+								<figure class="figure mb-0">
+									<img src="../images/portfolio/dayfood/sketches.png" class="figure-img img-fluid rounded shadow" alt="Sketches and Low-Fi Mockups">
+									<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Sketches to lay down the foundation</figcaption>
+								</figure>
+							</div>
+							<div class="col-md-6">
+								<div class="card border-0 shadow-sm mt-3">
+									<div class="card-body">
+										<h5 class="card-title">Work in progress artifacts</h5>
+										<p>These artifacts document the progress and decisions made during the project.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<figure class="figure mb-0">
+									<img src="../images/portfolio/dayfood/sketches.png" class="figure-img img-fluid rounded shadow" alt="Sketches and Low-Fi Mockups">
+									<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Sketches to lay down the foundation</figcaption>
+								</figure>
+							</div>
+							<div class="col-md-12">
+								<figure class="mt-3">
+									<img src="../images/portfolio/dayfood/lo-fi-mobile.png" alt="Low-Fi Mockup (Mobile)" class="img-fluid">
+									<figcaption class="text-center fst-italic text-secondary mt-2">Low-Fi Mockup (Mobile)</figcaption>
+								</figure>
+							</div>
+							<div class="col-md-12">
+								<figure class="mt-3">
+									<img src="../images/portfolio/dayfood/lo-fi-desktop.png" alt="Low-Fi Mockup (Desktop)" class="img-fluid">
+									<figcaption class="text-center fst-italic text-secondary mt-2">Low-Fi Mockup (Desktop)</figcaption>
+								</figure>
 							</div>
 						</div>
 					</div>
@@ -449,142 +729,183 @@ flowchart TD
 			<!-- end Section: Showcase -->
 					
 					<!-- Moving Forward Section -->
-<section class="py-5">
-	<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-arrow-up-circle me-2 text-info"></i>9. Moving Forward</h3>
-	
-	<div class="row g-4">
-		<div class="col-md-6 col-lg-3">
-			<div class="card h-100 border-0 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title mb-3">Variants & UOM</h5>
-					<ul class="mb-0">
-						<li>Select variant options in product and cart</li>
-						<li>Unit-of-measure selection impacts quantities</li>
-						<li>Accurate totals in the composed quote</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6 col-lg-3">
-			<div class="card h-100 border-0 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title mb-3">Odoo Automation</h5>
-					<ul class="mb-0">
-						<li>Create Odoo order upon Viber confirmation</li>
-						<li>Sync order status back to sales</li>
-						<li>Retry and reconciliation for failures</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6 col-lg-3">
-			<div class="card h-100 border-0 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title mb-3">PWA & Reorders</h5>
-					<ul class="mb-0">
-						<li>Offline catalog for regular buyers</li>
-						<li>Install prompt and fast launch</li>
-						<li>Quick re-order from history</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6 col-lg-3">
-			<div class="card h-100 border-0 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title mb-3">Measurement</h5>
-					<ul class="mb-0">
-						<li>Instrument events across key flows</li>
-						<li>Funnel dashboard for drop-offs</li>
-						<li>A/B experiments to refine UX</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+				<section class="py-5">
+					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-arrow-up-circle me-2 text-info"></i>9. Moving Forward</h3>
+					
+					<h4 class="mb-3 text-info">Phase 2: Core Enhancements</h4>
+					<div class="row g-4 mb-4">
+						<div class="col-md-6 col-lg-3">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-3">Variants & UOM</h5>
+									<ul class="mb-0">
+										<li>Select variant options in product and cart</li>
+										<li>Unit-of-measure selection impacts quantities</li>
+										<li>Accurate totals in the composed quote</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-3">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-3">Odoo Automation</h5>
+									<ul class="mb-0">
+										<li>Create Odoo order upon Viber confirmation</li>
+										<li>Sync order status back to sales</li>
+										<li>Retry and reconciliation for failures</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-3">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-3">PWA & Reorders</h5>
+									<ul class="mb-0">
+										<li>Offline catalog for regular buyers</li>
+										<li>Install prompt and fast launch</li>
+										<li>Quick re-order from history</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-3">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-3">Measurement</h5>
+									<ul class="mb-0">
+										<li>Instrument events across key flows</li>
+										<li>Funnel dashboard for drop-offs</li>
+										<li>A/B experiments to refine UX</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<h4 class="mb-3 text-info">Phase 3: Native App Experience</h4>
+					<div class="row g-4">
+						<div class="col-md-6 col-lg-4">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-3">Hotwire Native Integration</h5>
+									<ul class="mb-0">
+										<li>Leverage Hotwire native for iOS and Android</li>
+										<li>Reuse existing Rails + Hotwire codebase</li>
+										<li>Native UI components with web-based content</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-3">Enhanced Offline Capabilities</h5>
+									<ul class="mb-0">
+										<li>Full catalog browsing without connectivity</li>
+										<li>Queue orders for sync when online</li>
+										<li>Background synchronization of data</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-3">Native Device Features</h5>
+									<ul class="mb-0">
+										<li>Push notifications for order updates</li>
+										<li>Camera integration for product scanning</li>
+										<li>Biometric authentication for quick reordering</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 
-							<!-- Section: Appendix: Technical Notes -->
-<section class="py-4">
-	<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-tools me-2 text-info"></i>10. Appendix: Technical Notes</h3>
-	<div class="row g-4">
-		<div class="col-md-6 col-lg-4">
-			<div class="card h-100 border-0 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title mb-2">PWA & Offline</h5>
-					<ul class="mb-0">
-						<li>Service Worker with cache-first strategy for static assets</li>
-						<li>Graceful degradation for flaky connectivity</li>
-						<li>Install prompt for regular buyers</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6 col-lg-4">
-			<div class="card h-100 border-0 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title mb-2">Performance & Images</h5>
-					<ul class="mb-0">
-						<li>Responsive image variants and lazy loading</li>
-						<li>Minimal blocking JS via Hotwire (Turbo/Stimulus)</li>
-						<li>DB indexes for product and taxonomy lookups</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6 col-lg-4">
-			<div class="card h-100 border-0 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title mb-2">Security</h5>
-					<ul class="mb-0">
-						<li>CSRF protection and secure headers</li>
-						<li>Content Security Policy (CSP)</li>
-						<li>Input validation for deep-link payloads</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row g-4 mt-1">
-		<div class="col-md-6 col-lg-4">
-			<div class="card h-100 border-0 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title mb-2">Viber Deep Link</h5>
-					<ul class="mb-0">
-						<li>Encoded cart lines: product, qty, unit, brand</li>
-						<li>Fallback to copy-to-clipboard/email if Viber unavailable</li>
-						<li>Message schema aligns with sales processing</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6 col-lg-4">
-			<div class="card h-100 border-0 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title mb-2">ERP (Odoo) Integration</h5>
-					<ul class="mb-0">
-						<li>Planned: create order post Viber confirmation</li>
-						<li>Retries and reconciliation for sync failures</li>
-						<li>Status feedback loop to sales</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6 col-lg-4">
-			<div class="card h-100 border-0 shadow-sm">
-				<div class="card-body">
-					<h5 class="card-title mb-2">Observability</h5>
-					<ul class="mb-0">
-						<li>Event instrumentation on key flows</li>
-						<li>Funnel dashboards for drop-offs</li>
-						<li>Error logging for deep-link and sync operations</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<figure class="mt-4">
-		<pre class="mermaid"> 
+											<!-- Section: Appendix: Technical Notes -->
+				<section class="py-4">
+					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-tools me-2 text-info"></i>10. Appendix: Technical Notes</h3>
+					<div class="row g-4">
+						<div class="col-md-6 col-lg-4">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-2">PWA & Offline</h5>
+									<ul class="mb-0">
+										<li>Service Worker with cache-first strategy for static assets</li>
+										<li>Graceful degradation for flaky connectivity</li>
+										<li>Install prompt for regular buyers</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-2">Performance & Images</h5>
+									<ul class="mb-0">
+										<li>Responsive image variants and lazy loading</li>
+										<li>Minimal blocking JS via Hotwire (Turbo/Stimulus)</li>
+										<li>DB indexes for product and taxonomy lookups</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-2">Security</h5>
+									<ul class="mb-0">
+										<li>CSRF protection and secure headers</li>
+										<li>Content Security Policy (CSP)</li>
+										<li>Input validation for deep-link payloads</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row g-4 mt-1">
+						<div class="col-md-6 col-lg-4">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-2">Viber Deep Link</h5>
+									<ul class="mb-0">
+										<li>Encoded cart lines: product, qty, unit, brand</li>
+										<li>Fallback to copy-to-clipboard/email if Viber unavailable</li>
+										<li>Message schema aligns with sales processing</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-2">ERP (Odoo) Integration</h5>
+									<ul class="mb-0">
+										<li>Planned: create order post Viber confirmation</li>
+										<li>Retries and reconciliation for sync failures</li>
+										<li>Status feedback loop to sales</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-4">
+							<div class="card h-100 border-0 shadow-sm">
+								<div class="card-body">
+									<h5 class="card-title mb-2">Observability</h5>
+									<ul class="mb-0">
+										<li>Event instrumentation on key flows</li>
+										<li>Funnel dashboards for drop-offs</li>
+										<li>Error logging for deep-link and sync operations</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<figure class="mt-4">
+						<pre class="mermaid"> 
 sequenceDiagram
   autonumber
   participant C as Customer (Mobile)
@@ -607,12 +928,12 @@ sequenceDiagram
   S->>OD: Create order (planned)
   OD-->>UI: Status sync (planned)
   UI-->>C: Status update
-		</pre>
-		<figcaption class="text-center fst-italic text-secondary mt-2">High-level sequence across user, app, Viber, and ERP</figcaption>
-	</figure>
+						</pre>
+						<figcaption class="text-center fst-italic text-secondary mt-2">High-level sequence across user, app, Viber, and ERP</figcaption>
+					</figure>
 
-	<figure class="mt-4">
-		<pre class="mermaid">
+					<figure class="mt-4">
+						<pre class="mermaid">
 sequenceDiagram
   autonumber
   participant C as Customer (Mobile)
@@ -627,39 +948,56 @@ sequenceDiagram
   Store-->>C: Prompt to install Viber
   C-->>Store: Install Viber
   UI-->>C: Retry checkout (suggested)
-		</pre>
-		<figcaption class="text-center fst-italic text-secondary mt-2">Fallback when Viber is not installed: open the OS app store and prompt install</figcaption>
-	</figure>
-</section>
-<!-- end Section: Appendix: Technical Notes -->
+						</pre>
+						<figcaption class="text-center fst-italic text-secondary mt-2">Fallback when Viber is not installed: open the OS app store and prompt install</figcaption>
+					</figure>
+				</section>
+				<!-- end Section: Appendix: Technical Notes -->
 
-							<!-- Conclusion Section -->
-<section class="py-5">
-	<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-flag me-2 text-info"></i>Conclusion</h3>
-	<div class="row">
-		<div class="col-lg-10">
-			<p>The Day Food Catalogue demonstrates how modern web technologies can be leveraged to create a performant, accessible, and user-friendly product showcase. The combination of Ruby on Rails, Hotwire, and PostgreSQL provides a solid foundation that balances developer productivity with application performance.</p>
-		</div>
-	</div>
-</section>
+											<!-- Conclusion Section -->
+				<section class="py-5">
+					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-flag me-2 text-info"></i>Conclusion</h3>
+					<div class="row">
+						<div class="col-lg-10">
+							<p>The Day Food Catalogue demonstrates how modern web technologies can be leveraged to create a performant, accessible, and user-friendly product showcase. The combination of Ruby on Rails, Hotwire, and PostgreSQL provides a solid foundation that balances developer productivity with application performance.</p>
+						</div>
+					</div>
+				</section>
 			</main>
 			<!-- end Main Content Section -->
 
-    <!-- Footer -->
-    <footer class="bg-light py-4 mt-5 border-top">
+		<!-- Footer Section -->
+		<footer class="bg-light py-4 mt-5 border-top">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="mb-0"> 2025 Rudzainy Rahman. All rights reserved.</p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <a href="/work/" class="text-decoration-none me-3">Back to Work</a>
-            <a href="#top" class="text-decoration-none">Back to top</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- end Footer -->
+				<section class="d-flex flex-wrap justify-content-between align-items-center">
+					<div class="col-md-4 d-flex align-items-center">
+						<span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau" data-bs-toggle="modal" data-bs-target="#takdeModal">~|{·})</a> © 2025 Rudzainy Rahman</span> 
+					</div> 
+					<div class="col-md-4 d-flex justify-content-center">
+						<a href="/work/" class="text-decoration-none me-3">Back to Work</a>
+						<a href="#top" class="text-decoration-none">Back to top</a>
+					</div>
+					<ul class="nav col-md-4 justify-content-end list-unstyled d-flex"> 
+						<li class="ms-3">
+							<a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
+								<i class="bi bi-github me-2"></i><span class="visually-hidden">GitHub</span>
+							</a>
+						</li> 
+						<li class="ms-3">
+							<a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙">
+								<i class="bi bi-suit-heart-fill me-2"></i><span class="visually-hidden">Sama²</span>
+							</a>
+						</li> 
+						<li class="ms-3 mt-n1">
+							<a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
+								<i class="bi bi-cup-hot-fill me-2"></i><span class="visually-hidden">Ko-fi</span>
+							</a>
+						</li> 
+					</ul> 
+				</section>
+			</div>
+		</footer>
+		<!-- end Footer Section -->
 
     <script src="../jei-es.js"></script>
     <!-- Mermaid for diagrams -->
