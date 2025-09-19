@@ -1,8 +1,13 @@
+/* House Styles */
 h1, h2 {
   text-shadow: 2px 2px 0px #333; /* 2px horizontal, 2px vertical, 0 blur, dark gray color */
 }
 
 /* Base styles for better readability */
+:root {
+  --card-base-size: 150px;
+}
+
 body {
   line-height: 1.6;
 }
@@ -10,6 +15,8 @@ body {
 /* Improved card styling */
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: var(--card-base-size);
+  width: var(--card-base-size);
 }
 
 .card:hover {
@@ -64,25 +71,93 @@ section > article.card > .card-body {
   scrollbar-width: none;  /* Firefox */
 }
 
-section > article.card > figure,
-section > article.card > figure > img {
+.grid-container > article.card > figure,
+.grid-container > article.card > figure > img,
+section:not(.grid-container) > article.card > figure,
+section:not(.grid-container) > article.card > figure > img {
   width: 100%;
   height: 100%;
 }
 
+/* Grid Layout Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Responsive grid adjustments */
+@media (min-width: 576px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  }
+}
+
+/* Card Size Classes */
+.card-1x1 {
+  grid-column: span 1;
+  grid-row: span 1;
+  aspect-ratio: 1/1;
+  /* Base size - already set in .card */
+}
+
+.card-2x1 {
+  grid-column: span 2;
+  grid-row: span 1;
+  width: calc(var(--card-base-size) * 2 + 1rem); /* Account for gap */
+}
+
+.card-1x2 {
+  grid-column: span 1;
+  grid-row: span 2;
+  height: calc(var(--card-base-size) * 2 + 1rem); /* Account for gap */
+}
+
+.card-2x2 {
+  grid-column: span 2;
+  grid-row: span 2;
+  width: calc(var(--card-base-size) * 2 + 1rem); /* Account for gap */
+  height: calc(var(--card-base-size) * 2 + 1rem); /* Account for gap */
+}
+
 /* Box Cards */
-section > article.card {
+/* Scope card styles to grid container to avoid breaking other layouts */
+.grid-container > article.card {
   overflow: hidden;
-  width: 43vw !important;
-  height: 43vw !important;
+  width: 100% !important;
+  height: 100% !important;
   flex-shrink: 0;
 }
 
-section > article.card > .card-body {
+/* Preserve original card styles for non-grid layouts */
+section:not(.grid-container) > article.card {
+  overflow: hidden;
+  flex-shrink: 0;
+  /* Base size matches 1x1 card */
+  height: var(--card-base-size);
+  width: var(--card-base-size);
+}
+
+.grid-container > article.card > .card-body,
+section:not(.grid-container) > article.card > .card-body {
   overflow-y: scroll;
 }
 
-section > article.card.button > a,
+.grid-container > article.card.button > a,
+section:not(.grid-container) > article.card.button > a,
 .bullseye {
   display: flex;
   justify-content: center;
@@ -91,17 +166,29 @@ section > article.card.button > a,
 }
 
 
-section > article.card.card-h1,
-section > article.card.card-featured-img {
+.grid-container > article.card.card-h1,
+.grid-container > article.card.card-featured-img {
   width: 100% !important;
+}
+
+/* Special card types outside grid */
+section:not(.grid-container) > article.card.card-h1,
+section:not(.grid-container) > article.card.card-featured-img {
+  width: calc(var(--card-base-size) * 2) !important;
+}
+
+/* Allow horizontal scrolling sections to have proper card sizing */
+section.d-flex.flex-row > article.card {
+  flex: 0 0 var(--card-base-size);
+  min-width: var(--card-base-size);
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
-  section > article.card {
-    width: 32vw !important;;
-    height: 32vw !important;;
+  :root {
+    --card-base-size: 180px;
   }
+  
   .card-header {
     font-size: 1rem;
   }
@@ -113,10 +200,10 @@ section > article.card.card-featured-img {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-  section > article.card {
-    width: 196px !important;;
-    height: 196px !important;;
+  :root {
+    --card-base-size: 196px;
   }
+  
   ol.card-group-list > li.card,
   ul.card-group-list > li.card {
     max-width: 30vw;
@@ -125,22 +212,29 @@ section > article.card.card-featured-img {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-  section > article.card {
-    width: 256px !important;;
-    height: 256px !important;;
+  :root {
+    --card-base-size: 256px;
   }
+  
   ol.card-group-list > li.card,
   ul.card-group-list > li.card {
     max-width: 40vw;
   }
-  section > article.card.card-h1,
-  section > article.card.card-featured-img {
-    width: 47% !important;
+  .grid-container > article.card.card-h1,
+  .grid-container > article.card.card-featured-img {
+    width: 100% !important;
+    grid-column: span 2;
+  }
+  
+  section:not(.grid-container) > article.card.card-h1,
+  section:not(.grid-container) > article.card.card-featured-img {
+    width: 100% !important;
   }
 }
 /* end Box Cards */
 
-section > article.card > figure > img {
+.grid-container > article.card > figure > img,
+section:not(.grid-container) > article.card > figure > img {
   width: 100%;
   height: 100%;
   object-position: top;
