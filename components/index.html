@@ -46,17 +46,17 @@
 			<section class="d-flex flex-wrap flex-row gap-2 gap-sm-4">
 				<article class="card">
 					<figure>
-						<img src="images/favicons/android-chrome-512x512.png" class="card-img-top" alt="Photo of Rudzainy looking to the side.">
+						<img src="../images/favicons/android-chrome-512x512.png" class="card-img-top" alt="Photo of Rudzainy looking to the side.">
 						<figcaption class="visually-hidden">Photo of Rudzainy looking to the side.</figcaption>
 					</figure>
 				</article>
 				<article class="card border border-primary">
 					<div class="card-body">
-						<h1 class="card-title text-primary" style="--bs-text-opacity: .5"><span>my </span>Website's Components</h1>
+						<h1 class="card-title text-primary" style="--bs-text-opacity: .5"><span>my </span>Website Components</h1>
 					</div>
 				</article>
 				<article class="card">
-					<p class="card-body">Here are the components used in this website. I used this as my cheat sheet when updating this site.</p>
+					<p class="card-body">This page showcases reusable UI components, layouts, and sections used across the site. Keep things DRY by copying from here.</p>
 				</article>
 			</section>
 		</header>
@@ -65,111 +65,269 @@
 		<!-- Main Content Section -->
 		<main class="container my-5 pe-0 overflow-visible">
 
-			<!-- Section: Cards -->
-			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
-				<h3>Cards</h3>
-				<article class="card border border-info">
-					<div class="card-body">
-						<h2 class="card-title text-info" style="--bs-text-opacity: .5"><span>some of </span>Work</h2>
+			<!-- Section: How to Use this Catalog -->
+			<section class="py-3 pe-3">
+				<div class="card border-0 shadow-sm mb-4">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="bi bi-info-circle me-2 text-primary"></i>How to Use this Catalog</h3>
+						<ul class="mb-3">
+							<li><strong>Copy</strong> a snippet via the Copy HTML button, or <strong>open</strong> the snippet file to tweak.</li>
+							<li>Directory structure:</li>
+						</ul>
+						<ul class="mb-3 small">
+							<li><code>/components/</code> — this catalog page and general templates.</li>
+							<li><code>/components/cards/</code> — card variants and a cards index showcase.</li>
+							<li><code>/components/modals/</code> — modal snippets.</li>
+							<li><code>/components/grids/</code> — grid, gallery, and layout snippets.</li>
+						</ul>
+						<p class="mb-0">Images: use <code>../images/...</code> from here; snippets use root paths like <code>/images/...</code> so you can paste them anywhere.</p>
 					</div>
-				</article>
-				<article class="card">
-					<p class="card-body" id="quote-work"></p>
-				</article>
-				<article class="card button">
-					<a href="/" class=" display-6"><i class="bi bi-arrow-left me-1"></i>Back</a>
-				</article>
-				<article class="card border border-info bg-info-subtle text-info-emphasis">
-					<div class="card-header">01.09.2025</div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<h5 class="card-title">You Were My September Song</h5>
-						<a href="#" class="btn btn-outline-dark">
-							Read more
-						</a>
-					</div>
-				</article>
+				</div>
 			</section>
-			<!-- end Section: Work -->
 
-			<!-- Section: Life -->
-			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
-				<article class="card">
-					<p class="card-body" id="quote-life"></p>
-				</article>
-				<article class="card border border-success">
-					<div class="card-body">
-						<h2 class="card-title text-success" style="--bs-text-opacity: .5"><span>some of </span>Life</h2>
+			<!-- Section: Layouts & Sections -->
+			<section class="py-3 pe-3">
+				<div class="card border-0 shadow-sm mb-4">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="bi bi-window-sidebar me-2 text-primary"></i>Layouts & Sections</h3>
+						<ul class="d-flex flex-wrap card-group-list gap-2">
+							<li class="card"><section class="card-body"><h6 class="mb-2">Header: Featured + H1</h6><p class="mb-0">See example in Day Food case study using <code>.card-featured-img</code> and <code>.card-h1</code>.</p></section></li>
+							<li class="card"><section class="card-body"><h6 class="mb-2">Horizontal Card Scroller</h6><p class="mb-0">Section using <code>d-flex</code> + <code>overflow-x-scroll</code> + <code>hide-scrollbar</code> with cards.</p></section></li>
+							<li class="card"><section class="card-body"><h6 class="mb-2">Content Card Block</h6><p class="mb-0">Wrapper <code>.card.border-0.shadow-sm</code> for prose sections.</p></section></li>
+						</ul>
 					</div>
-				</article>
-				<article class="card border border-success bg-success-subtle text-success-emphasis">
-					<div class="card-header">05.09.2025</div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<h5 class="card-title">When Will My Reflection Show Who I am Inside</h5>
-						<a href="#" class="btn btn-outline-dark">
-							Read more
-						</a>
-					</div>
-				</article>
-				<article class="card border border-success bg-success-subtle text-success-emphasis">
-					<div class="card-header">01.09.2025</div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<h5 class="card-title">You Were My September Song</h5>
-						<a href="#" class="btn btn-outline-dark">
-							Read more
-						</a>
-					</div>
-				</article>
-				<article class="card border border-success bg-success-subtle text-success-emphasis">
-					<div class="card-header">01.09.2025</div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<h5 class="card-title">You Were My September Song</h5>
-						<a href="#" class="btn btn-outline-dark">
-							Read more
-						</a>
-					</div>
-				</article>
-				<article class="card border border-success bg-success-subtle text-success-emphasis">
-					<div class="card-header">01.09.2025</div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<h5 class="card-title">You Were My September Song</h5>
-						<a href="#" class="btn btn-outline-dark">
-							Read more
-						</a>
-					</div>
-				</article>
+				</div>
+				<div class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
+					<article class="card border border-primary">
+						<div class="card-body">
+							<h2 class="card-title text-primary" style="--bs-text-opacity: .5"><span>header </span>pattern</h2>
+						</div>
+					</article>
+					<article class="card card-featured-img">
+						<figure class="mb-0">
+							<img src="../images/portfolio/dayfood/featured.png" class="card-img object-fit-cover" alt="Featured image example">
+							<figcaption class="visually-hidden">Featured image example</figcaption>
+						</figure>
+					</article>
+					<article class="card card-h1 border border-primary">
+						<div class="card-body">
+							<h1 class="card-title text-primary" style="--bs-text-opacity: .5">Section H1</h1>
+						</div>
+					</article>
+					<article class="card button">
+						<a href="/" class="display-6"><i class="bi bi-arrow-left me-1"></i>Home</a>
+					</article>
+				</div>
 			</section>
-			<!-- end Section: Life -->
 
-			<!-- Section: Balance -->
-			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
-				<article class="card border border-warning">
-					<div class="card-body">
-						<h2 class="card-title text-warning" style="--bs-text-opacity: .5"><span>some of </span>Balance</h2>
+			<!-- Section: Cards Catalog -->
+			<section class="py-3 pe-3">
+				<div class="card border-0 shadow-sm mb-4">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="bi bi-collection me-2 text-info"></i>Cards</h3>
+						<p class="mb-2">See full catalog of card variants:</p>
+						<p class="mb-3 d-flex flex-wrap gap-2">
+							<a class="btn btn-outline-dark" href="./cards/">Open Cards Showcase</a>
+							<button type="button" class="btn btn-outline-primary" data-copy-url="/components/cards/_card-1x1.html" onclick="copySnippet(this)"><i class="bi bi-clipboard me-1"></i>Copy 1x1 Image Card</button>
+							<button type="button" class="btn btn-outline-primary" data-copy-url="/components/cards/_card-2x1.html" onclick="copySnippet(this)"><i class="bi bi-clipboard me-1"></i>Copy 2x1 Text Card</button>
+						</p>
 					</div>
-				</article>
-				<article class="card">
-					<p class="card-body" id="quote-balance"></p>
-				</article>
-				<article class="card border border-warning bg-warning-subtle text-warning-emphasis">
-					<div class="card-header">05.09.2025</div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<h5 class="card-title">When Will My Reflection Show Who I am Inside</h5>
-						<a href="#" class="btn btn-outline-dark">
-							Read more
-						</a>
-					</div>
-				</article>
-				<article class="card border border-warning bg-warning-subtle text-warning-emphasis">
-					<div class="card-header">01.09.2025</div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<h5 class="card-title">You Were My September Song</h5>
-						<a href="#" class="btn btn-outline-dark">
-							Read more
-						</a>
-					</div>
-				</article>
+				</div>
+				<div class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
+					<article class="card border border-info">
+						<div class="card-body">
+							<h2 class="card-title text-info" style="--bs-text-opacity: .5"><span>some of </span>Work</h2>
+						</div>
+					</article>
+					<article class="card">
+						<p class="card-body" id="quote-work">“Sample copy card”</p>
+					</article>
+					<article class="card border border-info bg-info-subtle text-info-emphasis">
+						<div class="card-header">CLIENT PROJECT</div>
+						<div class="card-body d-flex flex-column justify-content-between">
+							<h5 class="card-title"><i class="bi bi-basket me-2"></i>Project Title</h5>
+							<p class="card-text">Description text.</p>
+							<a href="#" class="btn btn-outline-dark">Read more</a>
+						</div>
+					</article>
+					<article class="card">
+						<figure class="mb-0">
+							<img src="../images/posts/yolo.gif" class="card-img object-fit-cover" alt="Image card">
+							<figcaption class="visually-hidden">Image card</figcaption>
+						</figure>
+					</article>
+				</div>
 			</section>
-			<!-- end Section: Balance -->
+
+			<!-- Section: Utility Components & Patterns -->
+			<section class="py-3 pe-3">
+				<div class="card border-0 shadow-sm mb-4">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="bi bi-tools me-2 text-primary"></i>Utility Components & Patterns</h3>
+						<p class="mb-0">Frequently reused building blocks for sections.</p>
+					</div>
+				</div>
+				<div class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
+					<!-- Button Card -->
+					<article class="card button">
+						<a href="/work/" class="display-6"><i class="bi bi-person-fill-gear me-1 text-info"></i><i class="bi bi-arrow-right me-1 text-info"></i><span class="visually-hidden">Navigate</span></a>
+					</article>
+					<!-- Quote Card -->
+					<article class="card">
+						<p class="card-body" id="quote-generic">Dynamic quote or helper text</p>
+					</article>
+					<!-- Card Group List (compact) -->
+					<article class="card border-0 shadow-sm">
+						<section class="card-body">
+							<h6 class="mb-2">Card Group List</h6>
+							<ul class="d-flex flex-wrap card-group-list mb-0">
+								<li class="card"><section class="card-body"><p class="card-text mb-0">Item A</p></section></li>
+								<li class="card"><section class="card-body"><p class="card-text mb-0">Item B</p></section></li>
+								<li class="card"><section class="card-body"><p class="card-text mb-0">Item C</p></section></li>
+							</ul>
+						</section>
+					</article>
+				</div>
+			</section>
+
+			<!-- Section: Modal Pattern (reference) -->
+			<section class="py-3 pe-3">
+				<div class="card border-0 shadow-sm mb-3">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="bi bi-sliders me-2 text-primary"></i>Modal Pattern</h3>
+						<p class="mb-2">Bootstrap modal with dark theme example used on the homepage. Keep IDs unique per page.</p>
+						<pre class="mb-0"><code>&lt;!-- Modal skeleton --&gt;
+&lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true" data-bs-theme="dark"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;...&lt;/div&gt;
+      &lt;div class="modal-body"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section: Featured + Metadata Card -->
+			<section class="py-3 pe-3">
+				<div class="card border-0 shadow-sm mb-3">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="bi bi-card-image me-2 text-primary"></i>Featured + Metadata Card</h3>
+						<p class="mb-2">Card with featured visual and compact metadata row (date, category).</p>
+						<div class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
+							<article class="card border-0 shadow-sm" style="min-width: 280px; max-width: 340px;">
+								<figure class="mb-0">
+									<img src="../images/portfolio/dayfood/featured.png" class="card-img object-fit-cover" alt="Featured visual">
+									<figcaption class="visually-hidden">Featured visual</figcaption>
+								</figure>
+								<div class="card-body">
+									<div class="d-flex align-items-center gap-2 small text-secondary mb-2">
+										<span class="badge text-bg-light border"><i class="bi bi-calendar3 me-1"></i><time datetime="2025-09-11">11 Sep 2025</time></span>
+										<span class="badge text-bg-light border"><i class="bi bi-tag me-1"></i>Case Study</span>
+									</div>
+									<h5 class="card-title mb-2">Day Food Catalogue</h5>
+									<p class="card-text mb-3">Mobile-first e‑commerce catalogue with Viber checkout and quote builder.</p>
+									<a href="/work/2025-09-11-day-food-catalogue.html" class="btn btn-outline-dark">Read case study</a>
+								</div>
+							</article>
+						</div>
+						<p class="mt-2 mb-0 d-flex flex-wrap gap-2">
+							<a href="/components/cards/_card-featured-meta.html" class="btn btn-outline-dark">Open snippet</a>
+							<button type="button" class="btn btn-outline-primary" data-copy-url="/components/cards/_card-featured-meta.html" onclick="copySnippet(this)"><i class="bi bi-clipboard me-1"></i>Copy HTML</button>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section: Gallery Grid -->
+			<section class="py-3 pe-3">
+				<div class="card border-0 shadow-sm mb-3">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="bi bi-grid-3x3-gap me-2 text-primary"></i>Gallery Grid</h3>
+						<p class="mb-2">Responsive gallery using Bootstrap grid and image cards.</p>
+						<div class="row g-3">
+							<div class="col-6 col-md-4 col-lg-3">
+								<article class="card h-100"><figure class="mb-0"><img src="../images/portfolio/dayfood/featured.png" class="card-img object-fit-cover" alt="Gallery item"></figure></article>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3">
+								<article class="card h-100"><figure class="mb-0"><img src="../images/posts/yolo.gif" class="card-img object-fit-cover" alt="Gallery item"></figure></article>
+							</div>
+							<div class="col-6 col-md-4 col-lg-3">
+								<article class="card h-100"><figure class="mb-0"><img src="../images/portfolio/dayfood/search-desktop.png" class="card-img object-fit-cover" alt="Gallery item"></figure></article>
+							</div>
+						</div>
+						<p class="mt-2 mb-0 d-flex flex-wrap gap-2">
+							<a href="/components/grids/_gallery.html" class="btn btn-outline-dark">Open snippet</a>
+							<button type="button" class="btn btn-outline-primary" data-copy-url="/components/grids/_gallery.html" onclick="copySnippet(this)"><i class="bi bi-clipboard me-1"></i>Copy HTML</button>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section: Takde Modal Snippet -->
+			<section class="py-3 pe-3">
+				<div class="card border-0 shadow-sm mb-3">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="bi bi-columns-gap me-2 text-primary"></i>Takde Modal (Snippet)</h3>
+						<p class="mb-2">Reusable modal content from homepage. Include this snippet and add a trigger button:</p>
+						<pre class="mb-2"><code>&lt;button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#takdeModal"&gt;Open The Doorway&lt;/button&gt;</code></pre>
+						<p class="mb-0 d-flex flex-wrap gap-2">
+							<a href="/components/modals/_takde.html" class="btn btn-outline-dark">Open snippet</a>
+							<button type="button" class="btn btn-outline-primary" data-copy-url="/components/modals/_takde.html" onclick="copySnippet(this)"><i class="bi bi-clipboard me-1"></i>Copy HTML</button>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section: Post/Page Template Pattern -->
+			<section class="py-3 pe-3">
+				<div class="card border-0 shadow-sm mb-3">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="bi bi-file-text me-2 text-primary"></i>Post/Page Template</h3>
+						<p class="mb-2">Reference page structure with header scroller and content cards. See full example:</p>
+						<p class="mb-0 d-flex flex-wrap gap-2">
+							<a href="/components/_post.html" class="btn btn-outline-dark">Open _post.html</a>
+							<button type="button" class="btn btn-outline-primary" data-copy-url="/components/_post.html" onclick="copySnippet(this)"><i class="bi bi-clipboard me-1"></i>Copy HTML</button>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section: Mermaid Blocks -->
+			<section class="py-3 pe-3">
+				<div class="card border-0 shadow-sm mb-3">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="bi bi-diagram-3 me-2 text-primary"></i>Mermaid Blocks</h3>
+						<p class="mb-2">Wrap Mermaid markup in <code>&lt;pre class=\"mermaid\"&gt;</code>. Rendered examples available in Day Food case study.</p>
+						<figure class="mb-3"><div class="bg-light p-3 rounded"><pre class="mermaid">flowchart TD\n  A[Start] --> B{Decision}\n  B -- Yes --> C[Do this]\n  B -- No --> D[Do that]</pre></div><figcaption class="text-secondary fst-italic mt-2">Flowchart example</figcaption></figure>
+						<figure class="mb-3"><div class="bg-light p-3 rounded"><pre class="mermaid">mindmap\n  root((User Types))\n    Primary\n      Vendors\n      Hotels\n    Internal\n      Sales\n      Ops</pre></div><figcaption class="text-secondary fst-italic mt-2">Mindmap example</figcaption></figure>
+						<figure class="mb-0"><div class="bg-light p-3 rounded"><pre class="mermaid">journey\n  title Sample Journey\n  section Discover\n    Search: 4: User\n    Filter: 3: User\n  section Act\n    Add to Cart: 5: User\n    Checkout: 4: User</pre></div><figcaption class="text-secondary fst-italic mt-2">Journey example</figcaption></figure>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section: Header & Navigation Patterns -->
+			<section class="py-3 pe-3">
+				<div class="card border-0 shadow-sm mb-3">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="bi bi-menu-button-wide me-2 text-primary"></i>Header & Navigation</h3>
+						<p class="mb-2">Bootstrap navbar skeleton used site-wide. Use contextual border colors per section.</p>
+						<pre class="mb-0"><code>&lt;nav class=\"navbar navbar-expand-lg border-bottom border-primary\"&gt;\n  &lt;div class=\"container\"&gt;\n    &lt;a href=\"/\" class=\"navbar-brand text-primary\"&gt;~|{·})&lt;/a&gt;\n    &lt;button class=\"navbar-toggler\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\"&gt;\n      &lt;span class=\"navbar-toggler-icon\"&gt;&lt;/span&gt;\n    &lt;/button&gt;\n    &lt;div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\"&gt;\n      &lt;ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\"&gt;...&lt;/ul&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/nav&gt;</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<!-- Section: Footer & Social Links -->
+			<section class="py-3 pe-3">
+				<div class="card border-0 shadow-sm mb-3">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="bi bi-link-45deg me-2 text-primary"></i>Footer & Social Links</h3>
+						<p class="mb-2">Footer structure with social icons. Copy links and tweak brand targets as needed.</p>
+						<pre class="mb-0"><code>&lt;footer class=\"container\"&gt;\n  &lt;section class=\"d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top\"&gt;\n    &lt;div class=\"col-md-4 d-flex align-items-center\"&gt;...&lt;/div&gt;\n    &lt;ul class=\"nav col-md-4 justify-content-end list-unstyled d-flex\"&gt;\n      &lt;li class=\"ms-3\"&gt;&lt;a class=\"text-dark\" href=\"https://github.com/rudzainy\"&gt;&lt;i class=\"bi bi-github me-2\"&gt;&lt;/i&gt;&lt;span class=\"visually-hidden\"&gt;GitHub&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;\n      &lt;li class=\"ms-3\"&gt;&lt;a class=\"text-dark\" href=\"https://sama2.my/si/rudzainy\"&gt;&lt;i class=\"bi bi-suit-heart-fill me-2\"&gt;&lt;/i&gt;&lt;span class=\"visually-hidden\"&gt;Sama²&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;\n      &lt;li class=\"ms-3 mt-n1\"&gt;&lt;a class=\"text-dark\" href=\"https://ko-fi.com/rudzainy\"&gt;&lt;i class=\"bi bi-cup-hot-fill me-2\"&gt;&lt;/i&gt;&lt;span class=\"visually-hidden\"&gt;Ko-fi&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/section&gt;\n&lt;/footer&gt;</code></pre>
+					</div>
+				</div>
+			</section>
 
 		</main>
 		<!-- end Main Content Section -->
@@ -179,5 +337,35 @@
 		<!-- Bootstrap JS -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 		<!-- end Bootstrap JS -->
+
+		<!-- Copy helper & live region -->
+		<div id="copy-live" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+		<script>
+		async function copySnippet(btn) {
+		  const url = btn.getAttribute('data-copy-url');
+		  const originalHtml = btn.innerHTML;
+		  try {
+		    const res = await fetch(url, { cache: 'no-cache' });
+		    if (!res.ok) throw new Error('Network response was not ok');
+		    const text = await res.text();
+		    if (navigator.clipboard && window.isSecureContext) {
+		      await navigator.clipboard.writeText(text);
+		    } else {
+		      const ta = document.createElement('textarea');
+		      ta.value = text; document.body.appendChild(ta); ta.select();
+		      document.execCommand('copy'); document.body.removeChild(ta);
+		    }
+		    document.getElementById('copy-live').textContent = 'Snippet copied to clipboard';
+		    btn.innerHTML = '<i class="bi bi-check2 me-1"></i>Copied!';
+		    btn.classList.remove('btn-outline-primary');
+		    btn.classList.add('btn-success');
+		    setTimeout(() => { btn.innerHTML = originalHtml; btn.classList.remove('btn-success'); btn.classList.add('btn-outline-primary'); }, 1500);
+		  } catch (e) {
+		    console.error(e);
+		    document.getElementById('copy-live').textContent = 'Copy failed. Opening snippet...';
+		    window.location.href = url;
+		  }
+		}
+		</script>
 	</body>
 </html>
