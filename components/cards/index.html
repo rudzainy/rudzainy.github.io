@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Components: Cards - Rudzainy Rahman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- end Bootstrap CSS & Icons -->
+
+    <link rel="stylesheet" type="text/css" href="../../si-es-es.css">
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-primary">
+      <div class="container">
+        <a href="/" title="Wow! It's a Wau!" class="navbar-brand text-primary"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/components/" class="nav-link"><i class="bi bi-ui-radios-grid me-2"></i>Components</a>
+            </li>
+            <li class="nav-item">
+              <a href="/work/" class="nav-link"><i class="bi bi-person-fill-gear me-2"></i>Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="/life/" class="nav-link"><i class="bi bi-person-hearts me-2"></i>Life</a>
+            </li>
+            <li class="nav-item">
+              <a href="/balance/" class="nav-link"><i class="bi bi-person-lines-fill me-2"></i>Balance</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end Top Navigation Bar -->
+
+    <!-- Header Section -->
+    <header class="container my-5">
+      <section class="d-flex flex-wrap flex-row gap-2 gap-sm-4">
+        <article class="card">
+          <figure>
+            <img src="../../images/favicons/android-chrome-512x512.png" class="card-img-top" alt="Wau icon">
+            <figcaption class="visually-hidden">Wau icon</figcaption>
+          </figure>
+        </article>
+        <article class="card border border-primary">
+          <div class="card-body">
+            <h1 class="card-title text-primary" style="--bs-text-opacity: .5">Cards</h1>
+          </div>
+        </article>
+        <article class="card">
+          <p class="card-body">Reusable card variants used across this site. Copy and adapt as needed.</p>
+        </article>
+        <article class="card button">
+          <a href="/components/" class="display-6"><i class="bi bi-arrow-left me-1"></i>Components Home</a>
+        </article>
+      </section>
+    </header>
+    <!-- end Header Section -->
+
+    <!-- Main Content -->
+    <main class="container my-5 pe-0 overflow-visible">
+
+      <!-- Section: 1x1 Image Card -->
+      <section class="py-3 pe-3">
+        <div class="card border-0 shadow-sm mb-3">
+          <div class="card-body p-4">
+            <h3 class="border-bottom pb-2 mb-3"><i class="bi bi-image me-2 text-primary"></i>1x1 Image Card</h3>
+            <p class="mb-0">Square image card using <code>figure</code> and <code>.card-img</code> with <code>object-fit-cover</code>.</p>
+          </div>
+        </div>
+        <div class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
+          <article class="card">
+            <figure class="mb-0">
+              <img src="../../images/posts/yolo.gif" class="card-img object-fit-cover" alt="Sample 1x1 image">
+              <figcaption class="visually-hidden">Sample 1x1 image</figcaption>
+            </figure>
+          </article>
+          <article class="card">
+            <figure class="mb-0">
+              <img src="../../images/portfolio/dayfood/featured.png" class="card-img object-fit-cover" alt="Sample 1x1 image">
+              <figcaption class="visually-hidden">Sample 1x1 image</figcaption>
+            </figure>
+          </article>
+        </div>
+        <div class="alert alert-secondary" role="alert">
+          Source: <code>components/cards/_card-1x1.html</code>
+        </div>
+      </section>
+
+      <!-- Section: 2x1 Text Card -->
+      <section class="py-3 pe-3">
+        <div class="card border-0 shadow-sm mb-3">
+          <div class="card-body p-4">
+            <h3 class="border-bottom pb-2 mb-3"><i class="bi bi-card-text me-2 text-primary"></i>2x1 Text Card</h3>
+            <p class="mb-0">Text/content card with optional header. Use contextual borders as needed.</p>
+          </div>
+        </div>
+        <div class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
+          <article class="card border border-info bg-info-subtle text-info-emphasis">
+            <div class="card-header">CLIENT PROJECT</div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title"><i class="bi bi-basket me-2"></i>Day Food Catalogue</h5>
+              <p class="card-text">E‑commerce website with checkout to Viber app.</p>
+              <a href="/work/2025-09-11-day-food-catalogue.html" class="btn btn-outline-dark">Read case study</a>
+            </div>
+          </article>
+          <article class="card border border-success bg-success-subtle text-success-emphasis">
+            <div class="card-header">MY PROJECT</div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title"><i class="bi bi-chat-text me-2"></i>Hoojah</h5>
+              <a href="/work/2020-09-01-the-hoojah-project.html" class="btn btn-outline-dark">Read more</a>
+            </div>
+          </article>
+          <article class="card border border-warning bg-warning-subtle text-warning-emphasis">
+            <div class="card-header">WORK PROJECT</div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title"><i class="bi bi-window-sidebar me-2"></i>DXC Bionix Design System</h5>
+              <a href="/work/2019-09-01-dxc-bionix-design-system.html" class="btn btn-outline-dark">Read more</a>
+            </div>
+          </article>
+        </div>
+        <div class="alert alert-secondary" role="alert">
+          Source: <code>components/cards/_card-2x1.html</code>
+        </div>
+      </section>
+
+      <!-- Section: Header + Featured pattern from case study -->
+      <section class="py-3 pe-3">
+        <div class="card border-0 shadow-sm mb-3">
+          <div class="card-body p-4">
+            <h3 class="border-bottom pb-2 mb-3"><i class="bi bi-layers me-2 text-primary"></i>Featured Image + H1 Pattern</h3>
+            <p class="mb-0">Used in case studies like Day Food. Combine <code>.card-featured-img</code> and <code>.card-h1</code>.</p>
+          </div>
+        </div>
+        <div class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
+          <article class="card card-featured-img">
+            <figure class="mb-0">
+              <img src="../../images/portfolio/dayfood/featured.png" class="card-img object-fit-cover" alt="Featured image">
+              <figcaption class="visually-hidden">Featured image</figcaption>
+            </figure>
+          </article>
+          <article class="card card-h1 border border-info">
+            <div class="card-body">
+              <h1 class="card-title text-info" style="--bs-text-opacity: .5">Day Food Catalogue</h1>
+            </div>
+          </article>
+          <article class="card">
+            <p class="card-body text-center">E‑commerce Catalogue with Viber Checkout</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section: Grid Layout System -->
+      <section class="py-3 pe-3">
+        <div class="card border-0 shadow-sm mb-3">
+          <div class="card-body p-4">
+            <h3 class="border-bottom pb-2 mb-3"><i class="bi bi-grid-3x3-gap me-2 text-primary"></i>Grid Layout System</h3>
+            <p>A responsive CSS grid system for arranging cards in various sizes while maintaining proper spacing and proportions.</p>
+            <p class="mb-0">Key features:</p>
+            <ul>
+              <li>1x1 cards are always square (aspect-ratio: 1/1)</li>
+              <li>Other card layouts (2x1, 1x2, 2x2) fill the appropriate number of grid squares plus gaps</li>
+              <li>Responsive breakpoints adjust grid size for different screen sizes</li>
+              <li>Consistent gap spacing between all grid items</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Grid Layout Example -->
+        <div class="card border-0 shadow-sm mb-3">
+          <div class="card-body p-4">
+            <h4 class="mb-3">Implementation Example</h4>
+            <pre class="bg-light p-3 rounded"><code>&lt;section class="grid-container"&gt;
+  &lt;article class="card card-1x1"&gt;...&lt;/article&gt;
+  &lt;article class="card card-2x1"&gt;...&lt;/article&gt;
+  &lt;article class="card card-1x2"&gt;...&lt;/article&gt;
+  &lt;article class="card card-2x2"&gt;...&lt;/article&gt;
+&lt;/section&gt;</code></pre>
+          </div>
+        </div>
+        
+        <!-- Visual Demo -->
+        <div class="card border-0 shadow-sm mb-3">
+          <div class="card-body p-4">
+            <h4 class="mb-3">Visual Demonstration</h4>
+            <div class="grid-container">
+              <!-- 1x1 Card -->
+              <article class="card card-1x1 border border-info bg-info-subtle text-info-emphasis">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                  <h5 class="card-title">1x1</h5>
+                  <p class="card-text">Square Card</p>
+                </div>
+              </article>
+              
+              <!-- 2x1 Card -->
+              <article class="card card-2x1 border border-success bg-success-subtle text-success-emphasis">
+                <div class="card-body d-flex flex-column justify-content-center">
+                  <h5 class="card-title">2x1</h5>
+                  <p class="card-text">Horizontal Rectangle Card</p>
+                </div>
+              </article>
+              
+              <!-- 1x2 Card -->
+              <article class="card card-1x2 border border-warning bg-warning-subtle text-warning-emphasis">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                  <h5 class="card-title">1x2</h5>
+                  <p class="card-text">Vertical Rectangle Card</p>
+                </div>
+              </article>
+              
+              <!-- 2x2 Card -->
+              <article class="card card-2x2 border border-danger bg-danger-subtle text-danger-emphasis">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                  <h5 class="card-title">2x2</h5>
+                  <p class="card-text">Large Square Card</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        
+        <!-- CSS Implementation -->
+        <div class="card border-0 shadow-sm mb-3">
+          <div class="card-body p-4">
+            <h4 class="mb-3">CSS Implementation</h4>
+            <pre class="bg-light p-3 rounded"><code>/* Grid Layout Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Responsive grid adjustments */
+@media (min-width: 576px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  }
+}
+
+/* Card Size Classes */
+.card-1x1 {
+  grid-column: span 1;
+  grid-row: span 1;
+  aspect-ratio: 1/1;
+}
+
+.card-2x1 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.card-1x2 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.card-2x2 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Scoped card styles to avoid breaking other layouts */
+.grid-container > article.card {
+  overflow: hidden;
+  width: 100% !important;
+  height: 100% !important;
+  flex-shrink: 0;
+}</code></pre>
+          </div>
+        </div>
+        
+        <!-- Usage Examples -->
+        <div class="card border-0 shadow-sm mb-3">
+          <div class="card-body p-4">
+            <h4 class="mb-3">Usage Examples</h4>
+            <p>View a complete implementation example in:</p>
+            <ul>
+              <li><code>/life/2022-03-19-happyness-unlocked.html</code> - Shows various card sizes in a grid layout</li>
+            </ul>
+            <p class="mb-0">When using the grid layout:</p>
+            <ol>
+              <li>Add the <code>.grid-container</code> class to the parent container</li>
+              <li>Add the appropriate size class (<code>card-1x1</code>, <code>card-2x1</code>, etc.) to each card</li>
+              <li>For image cards, ensure images use <code>object-fit-cover</code> for proper scaling</li>
+            </ol>
+          </div>
+        </div>
+        
+        <!-- Important Notes -->
+        <div class="card border-0 shadow-sm mb-3 border-start border-warning border-4">
+          <div class="card-body p-4">
+            <h4 class="mb-3"><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>Important Implementation Notes</h4>
+            <p>The grid layout CSS has been carefully scoped to avoid conflicts with other layouts:</p>
+            <ul>
+              <li>Card styles within grid containers use <code>.grid-container > article.card</code> selectors</li>
+              <li>Non-grid layouts use <code>section:not(.grid-container) > article.card</code> selectors</li>
+              <li>This separation ensures the grid layout doesn't break existing card layouts</li>
+            </ul>
+            <p>For non-grid cards, the following constraints are applied:</p>
+            <ul>
+              <li>Maximum height matches the size of a 1x1 card</li>
+              <li>Maximum width is 2x the width of a 1x1 card</li>
+              <li>These dimensions are responsive using CSS variables</li>
+            </ul>
+            <pre class="bg-light p-3 rounded mt-3"><code>/* CSS variables for responsive card sizing */
+:root {
+  --card-base-size: 150px; /* Mobile default */
+}
+
+@media (min-width: 576px) {
+  :root { --card-base-size: 180px; }
+}
+
+@media (min-width: 768px) {
+  :root { --card-base-size: 196px; }
+}
+
+@media (min-width: 992px) {
+  :root { --card-base-size: 256px; }
+}
+
+/* Base card sizing for all cards */
+.card {
+  height: var(--card-base-size);
+  width: var(--card-base-size);
+}
+
+/* Non-grid card sizing */
+section:not(.grid-container) > article.card {
+  height: var(--card-base-size);
+  width: var(--card-base-size);
+}
+
+/* Special card types */
+.card-2x1 {
+  width: calc(var(--card-base-size) * 2 + 1rem);
+}
+
+.card-2x2 {
+  width: calc(var(--card-base-size) * 2 + 1rem);
+  height: calc(var(--card-base-size) * 2 + 1rem);
+}</code></pre>
+            <p class="mb-0">If you experience any layout issues, check that your selectors are properly scoped.</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Section: Utility Cards -->
+      <section class="py-3 pe-3">
+        <div class="card border-0 shadow-sm mb-3">
+          <div class="card-body p-4">
+            <h3 class="border-bottom pb-2 mb-3"><i class="bi bi-collection me-2 text-primary"></i>Utility Patterns</h3>
+            <p class="mb-0">Handy patterns reused across homepage sections.</p>
+          </div>
+        </div>
+        <div class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
+          <article class="card border border-info">
+            <div class="card-body">
+              <h2 class="card-title text-info" style="--bs-text-opacity: .5"><span>some of </span>Work</h2>
+            </div>
+          </article>
+          <article class="card">
+            <p class="card-body" id="quote-work">Dynamic quote card</p>
+          </article>
+          <article class="card button">
+            <a href="/work/" class="display-6"><i class="bi bi-person-fill-gear me-1 text-info"></i><i class="bi bi-arrow-right me-1 text-info"></i><span class="visually-hidden">More of works</span></a>
+          </article>
+        </div>
+      </section>
+
+    </main>
+    <!-- end Main Content -->
+
+    <script src="../../jei-es.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

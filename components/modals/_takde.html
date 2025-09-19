@@ -1,0 +1,45 @@
+<!-- Modal: The Doorway (Takde) - reusable snippet -->
+<div class="modal fade" id="takdeModal" tabindex="-1" aria-labelledby="takdeeModalLabel" aria-hidden="true" data-bs-theme="dark">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-white" style="--bs-text-opacity: .5" id="takdeeModalLabel">The Doorway</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="box">
+        <figure class="mb-4">
+          <img src="/images/Virgo_&_Corvus.gif" class="img-fluid object-fit-cover" alt="Virgo & Corvus">
+          <figcaption class="text-center fst-italic text-secondary mt-2">Virgo & Corvus</figcaption>
+        </figure>
+        <p class="text-dark text-center">What is a four-letter word that has only one vowel in it</p>
+
+        <form action="#" onSubmit="event.preventDefault(); /* hook your handler here */">
+          <div class="mb-3">
+            <label for="answer" class="form-label">The answer</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text">💬</span>
+              <input type="text" class="form-control" placeholder="Rock? Duck? Zips? News? Yawn?" aria-label="answer" name="answer" id="answer" aria-describedby="answerHelp">
+            </div>
+            <div id="answerHelp" class="form-text">Yes, this can be pay-to-win if you want it to. Call me 🤙</div>
+          </div>
+          <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckA">
+            <label class="form-check-label" for="switchCheckA">This switch does nothing. Really.</label>
+          </div>
+          <div class="form-check form-switch mb-1">
+            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckB" checked>
+            <label class="form-check-label" for="switchCheckB">This switch also does nothing. Really.</label>
+          </div>
+          <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckC">
+            <label class="form-check-label" for="switchCheckC">This switch does nothing either. Really.</label>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-outline-secondary me-2" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Submit your answer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
