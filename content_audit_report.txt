@@ -1,0 +1,182 @@
+ruby: warning: shebang line ending with \r may cause problems
+================================================================================
+[1mCONTENT COMPARISON REPORT[0m
+================================================================================
+
+[1m[34m
+BALANCE[0m[0m
+--------------------------------------------------------------------------------
+  ⚠️  2003-08-28-family.html - [31mMAJOR difference: 14.72%[0m
+  ⚠️  2009-08-24-tm-parody-ad.html - [31mMAJOR difference: 24.02%[0m
+  ⚠️  2013-09-25-jantan.html - [31mMAJOR difference: 15.57%[0m
+  ⚠️  2015-09-25-hearts.html - [31mMAJOR difference: 18.15%[0m
+  ⚠️  2016-05-19-browsercrush-clone.html - [31mMAJOR difference: 23.31%[0m
+  ⚠️  2016-07-23-teng-quora-k-a-quora-clone.html - [31mMAJOR difference: 93.33%[0m
+  ⚡ 2016-09-01-kontact-web-crm-system.html - [33mMinor difference: 2.71%[0m
+  ⚠️  2017-07-09-self-improvement.html - [31mMAJOR difference: 15.38%[0m
+  ⚠️  2019-04-24-orang-kasar.html - [31mMAJOR difference: 64.71%[0m
+  ⚠️  2019-09-19-life.html - [31mMAJOR difference: 29.75%[0m
+  ⚠️  2019-12-30-teater-neon.html - [31mMAJOR difference: 41.11%[0m
+  ⚠️  2020-02-24-melihat.html - [31mMAJOR difference: 26.96%[0m
+  ⚠️  2020-07-11-thoughts-explosion.html - [31mMAJOR difference: 84.11%[0m
+  ⚠️  2020-09-01-not-the-stage-manager-for-sudirmania.html - [31mMAJOR difference: 30.7%[0m
+  ⚡ 2023-08-17-of-workshops.html - [33mMinor difference: 7.09%[0m
+  ⚠️  2023-11-02-16-384.html - [31mMAJOR difference: 71.11%[0m
+  ⚡ 2023-11-29-of-mlbb.html - [33mMinor difference: 1.81%[0m
+  ⚡ 2023-12-04-users-vs-corporations-in-digital-communication.html - [33mMinor difference: 7.17%[0m
+  ⚡ 2023-12-23-ranting.html - [33mMinor difference: 3.74%[0m
+  ⚡ 2023-12-25-restarting-postgres-for-rails-on-macos.html - [33mMinor difference: 3.84%[0m
+  ⚡ 2023-12-26-pape-roger.html - [33mMinor difference: 1.08%[0m
+  ⚡ 2023-12-31-current-state-of-malaysia.html - [33mMinor difference: 1.04%[0m
+  ⚡ 2024-01-01-regular-expressions-in-javascript.html - [33mMinor difference: 3.91%[0m
+  ⚡ 2024-01-09-ux-review-decathlon-sports-shop.html - [33mMinor difference: 6.9%[0m
+  ⚠️  2024-01-22-rails-7-dropdown-image.html - [31mMAJOR difference: 18.0%[0m
+  ⚡ 2024-02-25-tutorial-ruby-on-rails.html - [33mMinor difference: 5.49%[0m
+  ⚠️  2024-03-16-setup-python-3-on-macos.html - [31mMAJOR difference: 13.27%[0m
+  ⚠️  2024-03-16-tutorial-generate-qr-for-wifi.html - [31mMAJOR difference: 10.43%[0m
+  ⚡ 2024-03-23-add-diagram-on-websites-using-mermaidjs.html - [33mMinor difference: 0.14%[0m
+  ⚠️  2024-03-27-why-rigid-corporate-structure-is-bad-for-me.html - [31mMAJOR difference: 16.0%[0m
+  ⚡ 2024-04-06-reactjs-and-rails-the-hoojah.html - [33mMinor difference: 0.04%[0m
+  ⚠️  2024-04-07-uiux-design-for-agriculture.html - [31mMAJOR difference: 18.86%[0m
+  ⚡ 2024-04-19-sudirmania-call-time-message-templates.html - [33mMinor difference: 3.55%[0m
+  ⚡ 2024-04-25-rails-7-turbo-frame.html - [33mMinor difference: 2.93%[0m
+  ⚡ 2024-05-01-an-observation-on-recording-screen-and-editing-the-video-on-iphone.html - [33mMinor difference: 1.91%[0m
+  ⚠️  2024-06-16-an-answer-to-the-question-of-windows-vs-macos.html - [31mMAJOR difference: 11.83%[0m
+  ⚡ 2024-09-05-the-framework.html - [33mMinor difference: 3.39%[0m
+[1m[34m
+LIFE[0m[0m
+--------------------------------------------------------------------------------
+  ⚠️  2017-05-02-baloons-over-bagan.html - [31mMAJOR difference: 84.11%[0m
+  ⚡ 2018-02-25-snapshot_of_website.html - [33mMinor difference: 6.61%[0m
+  ⚠️  2019-06-08-railway-market.html - [31mMAJOR difference: 83.96%[0m
+  ⚠️  2021-01-03-kenapa-rudzainy-buat-hoojah.html - [31mMAJOR difference: 58.36%[0m
+  ⚠️  2022-03-19-happyness-unlocked.html - [31mMAJOR difference: 100.0%[0m
+  ⚠️  2022-09-15-maya.html - [31mMAJOR difference: 100.0%[0m
+  ⚡ 2023-09-01-let-s-work-together.html - [33mMinor difference: 2.97%[0m
+  ⚡ 2023-12-04-my-journey-as-a-mentor-at-next-academy.html - [33mMinor difference: 0.15%[0m
+  ⚡ 2023-12-04-of-maritime-academy.html - [33mMinor difference: 0.58%[0m
+  ⚠️  2024-01-03-of-books.html - [31mMAJOR difference: 79.41%[0m
+  ⚠️  2024-01-03-of-video-games.html - [31mMAJOR difference: 12.14%[0m
+  ⚡ 2024-01-06-of-javascript.html - [33mMinor difference: 0.89%[0m
+  ⚠️  2024-06-20-of-operating-systems.html - [31mMAJOR difference: 15.32%[0m
+[1m[34m
+WORK[0m[0m
+--------------------------------------------------------------------------------
+  ⚡ 2008-09-01-jkm-web-portal.html - [33mMinor difference: 5.52%[0m
+  ⚠️  2010-09-01-marliyati-froz-logo.html - [31mMAJOR difference: 16.04%[0m
+  ⚡ 2011-09-01-malaysia-maritime-association-logo-website.html - [33mMinor difference: 1.79%[0m
+  ⚡ 2012-09-01-maritime-college-corporate-branding.html - [33mMinor difference: 7.26%[0m
+  ⚡ 2017-09-01-design-review-jkm-web-portal.html - [33mMinor difference: 0.89%[0m
+  ⚡ 2017-09-01-eezeejob.html - [33mMinor difference: 5.07%[0m
+  ⚠️  2017-09-01-next-academy-learning-portal.html - [31mMAJOR difference: 11.07%[0m
+  ⚡ 2018-09-01-lkim-fish-price-app.html - [33mMinor difference: 4.01%[0m
+  ⚡ 2018-09-01-postco-email-design.html - [33mMinor difference: 3.21%[0m
+  ⚠️  2019-09-01-dxc-bionix-central.html - [31mMAJOR difference: 38.63%[0m
+  ⚠️  2019-09-01-dxc-bionix-design-system.html - [31mMAJOR difference: 99.48%[0m
+  ⚠️  2020-09-01-the-hoojah-project.html - [31mMAJOR difference: 99.42%[0m
+  ⚠️  2022-09-01-flip-down-numbers-and-characters.html - [31mMAJOR difference: 10.93%[0m
+  ⚠️  2023-05-18-slide-to-select.html - [31mMAJOR difference: 23.03%[0m
+  ⚡ 2024-02-21-how-i-build-a-dynamic-system-for-syedewa-using-notion.html - [33mMinor difference: 8.57%[0m
+  ⚡ 2024-04-05-iac-website-redesign.html - [33mMinor difference: 1.53%[0m
+  ⚡ 2024-05-26-ux-assignment-1.html - [33mMinor difference: 5.47%[0m
+  ⚡ 2025-07-26-ux-assignment-1.html - [33mMinor difference: 5.47%[0m
+  ⚠️  2025-09-11-day-food-catalogue.html - [31mMAJOR difference: 98.61%[0m
+  ⚠️  2025-09-11-website-logs.html - [33mMISSING MARKDOWN[0m
+
+================================================================================
+[1mSUMMARY[0m
+================================================================================
+
+[32m✅ Identical files: 10[0m
+[33m⚡ Minor differences (<10%): 33[0m
+[31m⚠️  Major differences (≥10%): 36[0m
+[33m📝 Missing markdown files: 1[0m
+[31m❌ Errors: 0[0m
+
+[1m[33m
+MISSING MARKDOWN FILES:[0m[0m
+  - work/2025-09-11-website-logs.html
+
+[1m[31m
+MAJOR DIFFERENCES (Need Review):[0m[0m
+  - balance/2003-08-28-family.html (14.72% difference)
+  - balance/2009-08-24-tm-parody-ad.html (24.02% difference)
+  - balance/2013-09-25-jantan.html (15.57% difference)
+  - balance/2015-09-25-hearts.html (18.15% difference)
+  - balance/2016-05-19-browsercrush-clone.html (23.31% difference)
+  - balance/2016-07-23-teng-quora-k-a-quora-clone.html (93.33% difference)
+  - balance/2017-07-09-self-improvement.html (15.38% difference)
+  - balance/2019-04-24-orang-kasar.html (64.71% difference)
+  - balance/2019-09-19-life.html (29.75% difference)
+  - balance/2019-12-30-teater-neon.html (41.11% difference)
+  - balance/2020-02-24-melihat.html (26.96% difference)
+  - balance/2020-07-11-thoughts-explosion.html (84.11% difference)
+  - balance/2020-09-01-not-the-stage-manager-for-sudirmania.html (30.7% difference)
+  - balance/2023-11-02-16-384.html (71.11% difference)
+  - balance/2024-01-22-rails-7-dropdown-image.html (18.0% difference)
+  - balance/2024-03-16-setup-python-3-on-macos.html (13.27% difference)
+  - balance/2024-03-16-tutorial-generate-qr-for-wifi.html (10.43% difference)
+  - balance/2024-03-27-why-rigid-corporate-structure-is-bad-for-me.html (16.0% difference)
+  - balance/2024-04-07-uiux-design-for-agriculture.html (18.86% difference)
+  - balance/2024-06-16-an-answer-to-the-question-of-windows-vs-macos.html (11.83% difference)
+  - life/2017-05-02-baloons-over-bagan.html (84.11% difference)
+  - life/2019-06-08-railway-market.html (83.96% difference)
+  - life/2021-01-03-kenapa-rudzainy-buat-hoojah.html (58.36% difference)
+  - life/2022-03-19-happyness-unlocked.html (100.0% difference)
+  - life/2022-09-15-maya.html (100.0% difference)
+  - life/2024-01-03-of-books.html (79.41% difference)
+  - life/2024-01-03-of-video-games.html (12.14% difference)
+  - life/2024-06-20-of-operating-systems.html (15.32% difference)
+  - work/2010-09-01-marliyati-froz-logo.html (16.04% difference)
+  - work/2017-09-01-next-academy-learning-portal.html (11.07% difference)
+  - work/2019-09-01-dxc-bionix-central.html (38.63% difference)
+  - work/2019-09-01-dxc-bionix-design-system.html (99.48% difference)
+  - work/2020-09-01-the-hoojah-project.html (99.42% difference)
+  - work/2022-09-01-flip-down-numbers-and-characters.html (10.93% difference)
+  - work/2023-05-18-slide-to-select.html (23.03% difference)
+  - work/2025-09-11-day-food-catalogue.html (98.61% difference)
+
+[1m[33m
+MINOR DIFFERENCES:[0m[0m
+  - balance/2016-09-01-kontact-web-crm-system.html (2.71% difference)
+  - balance/2023-08-17-of-workshops.html (7.09% difference)
+  - balance/2023-11-29-of-mlbb.html (1.81% difference)
+  - balance/2023-12-04-users-vs-corporations-in-digital-communication.html (7.17% difference)
+  - balance/2023-12-23-ranting.html (3.74% difference)
+  - balance/2023-12-25-restarting-postgres-for-rails-on-macos.html (3.84% difference)
+  - balance/2023-12-26-pape-roger.html (1.08% difference)
+  - balance/2023-12-31-current-state-of-malaysia.html (1.04% difference)
+  - balance/2024-01-01-regular-expressions-in-javascript.html (3.91% difference)
+  - balance/2024-01-09-ux-review-decathlon-sports-shop.html (6.9% difference)
+  - balance/2024-02-25-tutorial-ruby-on-rails.html (5.49% difference)
+  - balance/2024-03-23-add-diagram-on-websites-using-mermaidjs.html (0.14% difference)
+  - balance/2024-04-06-reactjs-and-rails-the-hoojah.html (0.04% difference)
+  - balance/2024-04-19-sudirmania-call-time-message-templates.html (3.55% difference)
+  - balance/2024-04-25-rails-7-turbo-frame.html (2.93% difference)
+  - balance/2024-05-01-an-observation-on-recording-screen-and-editing-the-video-on-iphone.html (1.91% difference)
+  - balance/2024-09-05-the-framework.html (3.39% difference)
+  - life/2018-02-25-snapshot_of_website.html (6.61% difference)
+  - life/2023-09-01-let-s-work-together.html (2.97% difference)
+  - life/2023-12-04-my-journey-as-a-mentor-at-next-academy.html (0.15% difference)
+  - life/2023-12-04-of-maritime-academy.html (0.58% difference)
+  - life/2024-01-06-of-javascript.html (0.89% difference)
+  - work/2008-09-01-jkm-web-portal.html (5.52% difference)
+  - work/2011-09-01-malaysia-maritime-association-logo-website.html (1.79% difference)
+  - work/2012-09-01-maritime-college-corporate-branding.html (7.26% difference)
+  - work/2017-09-01-design-review-jkm-web-portal.html (0.89% difference)
+  - work/2017-09-01-eezeejob.html (5.07% difference)
+  - work/2018-09-01-lkim-fish-price-app.html (4.01% difference)
+  - work/2018-09-01-postco-email-design.html (3.21% difference)
+  - work/2024-02-21-how-i-build-a-dynamic-system-for-syedewa-using-notion.html (8.57% difference)
+  - work/2024-04-05-iac-website-redesign.html (1.53% difference)
+  - work/2024-05-26-ux-assignment-1.html (5.47% difference)
+  - work/2025-07-26-ux-assignment-1.html (5.47% difference)
+
+================================================================================
+⚠️  [1m[33mATTENTION: Manual review recommended[0m[0m
+
+Action needed:
+  1. Review files with major differences
+  2. Create missing markdown files
+  3. Sync content before Jekyll migration
+================================================================================

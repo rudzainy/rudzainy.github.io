@@ -1,0 +1,64 @@
+================================================================================
+FILE: work/2010-09-01-marliyati-froz-logo.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Marliyati Froz Logo by Rudzainy Rahman
+description: Marliyati Froz Logo
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Marliyati Froz Logo
+date: 2010-09-01 10:04 +0800
+description:
+image: https://blog.rudzainy.my/blog/wp-content/uploads/2019/05/mf.jpg
+category: Work
+tags: [graphic design, logo, portfolio]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<table>
+  <tbody>
+    <tr>
+      <td>Project</td>
+      <td>Logo design</td>
+    </tr>
+    <tr>
+      <td>Responsibilities</td>
+      <td>Design</td>
+    </tr>
+    <tr>
+      <td>Technology Stack</td>
+      <td>Adobe Illustrator</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <td>Remark</td>
+      <td>The yellow logo with red background was chosen by the client.</td>
+    </tr>
+  </tbody>
+</table>
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+| Project | Logo design |
+| Responsibilities | Design |
+| Technology Stack | Adobe Illustrator |
+| Year | 2010 |
+| Remark | The yellow logo with red background was chosen by the client. |
+
+...

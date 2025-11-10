@@ -1,0 +1,48 @@
+================================================================================
+FILE: balance/2020-09-01-not-the-stage-manager-for-sudirmania.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Not The Stage Manager For Sudirmania by Rudzainy Rahman
+description: Not The Stage Manager For Sudirmania
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Not The Stage Manager For Sudirmania
+date: 2020-02-04 04:20 +0800
+description:
+image: /assets/img/posts/sudirmania-table.png
+category: Work
+tags: [project management, notion, writing]
+published: false
+sitemap: false
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<p>How I Used Notion to Manage an Indie Theatre Production</p>
+
+<p>Responsible for ensuring that all elements of the production come together seamlessly for the show.
+  - Worked closely with the director, designers, and production team during 
+    pre-production planning stage to understand the vision for the show and assist in 
+    creating a production schedule.
+  - Scheduling and running rehearsals, ensuring actors are on time and prepared, 
+    coordinating with the director to facilita
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+How I Used Notion to Manage an Indie Theatre Production
+
+Responsible for ensuring that all elements of the production come together seamlessly for the show.
+  - Worked closely with the director, designers, and production team during 
+    pre-production planning stage to understand the vision for the show and assist in 
+    creating a production schedule.
+  - Scheduling and running rehearsals, ensuring actors are on time and prepared, 
+    coordinating with the director to facilitate the creative
+...

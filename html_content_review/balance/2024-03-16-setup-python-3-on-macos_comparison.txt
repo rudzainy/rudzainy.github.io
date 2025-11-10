@@ -1,0 +1,55 @@
+================================================================================
+FILE: balance/2024-03-16-setup-python-3-on-macos.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Setup Python 3 on MacOS by Rudzainy Rahman
+description: Setup Python 3 on MacOS
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Setup Python 3 on MacOS
+date: 2024-03-16 16:20 +0800
+description:
+image:
+category: Work
+tags: [python, tutorial]
+published: false
+sitemap: false
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<h1 id="quick-guide-to-setup-python-3-on-macos-using-homebrew">Quick guide to setup Python 3 on MacOS using Homebrew</h1>
+
+<h2 id="why-homebrew">1. Why Homebrew</h2>
+
+<h2 id="section">2.</h2>
+
+<p><code>python
+pip install qrcode
+</code></p>
+
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+# Quick guide to setup Python 3 on MacOS using Homebrew
+
+## 1. Why Homebrew
+
+## 2. 
+
+```python
+pip install qrcode
+```
+
+
+...

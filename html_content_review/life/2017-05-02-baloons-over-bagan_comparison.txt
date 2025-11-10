@@ -1,0 +1,36 @@
+================================================================================
+FILE: life/2017-05-02-baloons-over-bagan.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Baloons Over Bagan by Rudzainy Rahman
+description: Baloons Over Bagan
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Baloons Over Bagan
+date: 2017-05-02 10:02 +0800
+description:
+image: /assets/img/posts/18251665_1038196522979447_6899719108229595136_n.jpeg
+category: Balance
+tags: [photo, travel]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<p><a href="https://www.instagram.com/p/BTl-A4wlZ92/" target="_blank" rel="noopener noreferrer">View on Instagram</a></p>
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+[View on Instagram](https://www.instagram.com/p/BTl-A4wlZ92/){:target="_blank"}{:rel="noopener noreferrer"}
+...

@@ -1,0 +1,70 @@
+================================================================================
+FILE: balance/2024-06-16-an-answer-to-the-question-of-windows-vs-macos.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: An Answer to the question of Windows vs MacOS by Rudzainy Rahman
+description: An Answer to the question of Windows vs MacOS
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: An Answer to the question of Windows vs MacOS
+date: 2024-06-16 15:13 +0800
+description: Evaluating Windows vs MacOS as my main OS
+image:
+category: Work
+tags: [windows, macos, ai, linux, os]
+published: true
+sitemap: true
+mermaid: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<h2 id="opening-statement">Opening Statement</h2>
+
+<p>I rely on destop operating system for work and my day-to-day tasks.</p>
+
+<h2 id="windows-and-apple-desktop-operating-system-versions-i-have-used">Windows and Apple Desktop Operating System Versions I Have Used</h2>
+
+<p>In the order of which I was introduced:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Codename</th>
+      <th>Est. Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.</td>
+
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+## Opening Statement
+
+I rely on destop operating system for work and my day-to-day tasks.
+
+## Windows and Apple Desktop Operating System Versions I Have Used
+
+In the order of which I was introduced:
+
+| No. | Name | Codename | Est. Duration
+|---|---|---|---|
+| 1. | MS-DOS 7 | | 4-5y (1995-1999)
+| 2. | Windows 95 | Chicago | 6-7y (1995-2001)
+| 3. | Windows 98 | Memphis | 2-3y (1999-2001)
+| 4. | Windows XP | Whistler | 5-6y (2001-2006)
+| 5. | OSX 10.3 | Panther | <1y (2004)
+| 6. | Windows XP x64 | 
+...

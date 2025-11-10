@@ -1,0 +1,45 @@
+================================================================================
+FILE: work/2019-09-01-dxc-bionix-design-system.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: DXC Bionix Design System by Rudzainy Rahman
+description: Our team decided to build a Bionix Design System for DXC Bionix Commercialization effort.
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: DXC Bionix Design System
+date: 2019-09-01 08:39 +0800
+description: Our team decided to build a design system for DXC Bionix Commercialization effort.
+image: https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-21-at-8.38.24-PM-2048x1124.png
+category: Work
+tags: [ui, ux, portfolio]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+					<figure class="mb-0">
+						<img src="../images/portfolio/dxc/frame_417_delay-0.1s.gif" class="card-img object-fit-cover" alt="The home page of DXC Bionix Design System.">
+						<figcaption class="visually-hidden">The home page of DXC Bionix Design System.</figcaption>
+					</figure>
+				
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+| Project | DXC Bionix Design System |
+| Responsibilities | Research, design and build. |
+| Technology Stack | Sketch, InVision Design System Manager |
+| Year | 2017-2018 |
+| Design System Link | https://dxcraas.invisionapp.com/dsm/dxc-apa/dxc-bionix?version=5bcda38e152dd5001a44ed15 |
+
+## Summary
+
+Our team was tasked with designing UI and UX for [DXC Bionix Commercialization](https://projects.invisionapp.com/boards/JK3OKW0RB5C#/6185664) effort. After gathering and studying stakeholders' requirem
+...

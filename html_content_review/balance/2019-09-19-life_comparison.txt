@@ -1,0 +1,69 @@
+================================================================================
+FILE: balance/2019-09-19-life.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Life by Rudzainy Rahman
+description: Life
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Life
+date: 2019-09-19 16:20 +0800
+description: Life lesson. 
+category: Balance
+tags: [writing]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<p>It’s very easy to say yes <br> 
+ and take actions for something that,  <br> 
+ in your heart,  <br> 
+ you truly believe is right. <br> 
+There’s zero doubt. <br> 
+No regrets.</p>
+
+<p>It’s not so easy though  <br> 
+ to say yes  <br> 
+ and choose the lesser evil  <br> 
+ between two wrongs.  <br> 
+However,   <br> 
+ deep down  <br> 
+ you believe that actions  <br> 
+ need to be taken. <br> 
+You dip your hands  <br> 
+ into the gutter.</p>
+
+<p>It has to be done. <br> 
+You take  <br> 
+ every  <br>
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+It's very easy to say yes <br /> 
+&nbsp;and take actions for something that,  <br /> 
+&nbsp;in your heart,  <br /> 
+&nbsp;you truly believe is right. <br /> 
+There's zero doubt. <br /> 
+No regrets.
+
+It's not so easy though  <br /> 
+&nbsp;to say yes  <br /> 
+&nbsp;and choose the lesser evil  <br /> 
+&nbsp;between two wrongs.  <br /> 
+However,   <br /> 
+&nbsp;deep down  <br /> 
+&nbsp;you believe that actions  <br /> 
+&nbsp;need to be taken. <br /> 
+You dip your hands  <br /> 
+&nbsp;into the gutter
+...

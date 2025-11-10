@@ -1,0 +1,53 @@
+================================================================================
+FILE: balance/2024-03-16-tutorial-generate-qr-for-wifi.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Tutorial Generate QR for Wifi by Rudzainy Rahman
+description: Tutorial Generate QR for Wifi
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Tutorial Generate QR for Wifi
+date: 2024-03-16 10:54 +0800
+description:
+image:
+category: Work
+tags: [python, tutorial]
+published: false
+sitemap: false
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<blockquote>
+  <p>Quick guide to setup Python on MacOS</p>
+</blockquote>
+
+<h2 id="install-pure-python-qr-code-generator">1. Install Pure Python QR Code Generator</h2>
+
+<p><code>python
+pip install qrcode
+</code></p>
+
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+> Quick guide to setup Python on MacOS
+
+## 1. Install Pure Python QR Code Generator
+
+```python
+pip install qrcode
+```
+
+
+...

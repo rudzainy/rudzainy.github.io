@@ -1,0 +1,33 @@
+================================================================================
+FILE: work/2025-09-11-day-food-catalogue.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Day Food Catalogue - Case Study by Rudzainy Rahman
+description: Mobile-first e‑commerce catalogue with Viber checkout (auto‑populated quote), plus search, filter, quote builder, and PWA support.
+
+⚠️  NO EXISTING MARKDOWN FILE
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+					<figure class="mb-0">
+						<img src="../images/portfolio/dayfood/featured.png" class="card-img object-fit-cover" alt="Day Food Catalogue web interface">
+						<figcaption class="visually-hidden">Day Food Catalogue web interface showing food items in a grid layout.</figcaption>
+					</figure>
+				
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+# Day Food Catalogue: Case Study
+
+## Executive Summary
+Day Food Catalogue is a Progressive Web Application (PWA) designed to showcase food products with a focus on mobile-first experience and offline capabilities. This case study covers the system architecture, information design, and user interface decisions that shaped the application.
+
+## Table of Contents
+1. [System Architecture](#system-architecture)
+2. [Information Architecture](#information-architecture)
+3. [User Interface Design](#user-in
+...

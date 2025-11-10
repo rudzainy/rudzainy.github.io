@@ -1,0 +1,64 @@
+================================================================================
+FILE: balance/2009-08-24-tm-parody-ad.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: TM Parody Ad by Rudzainy Rahman
+description: TM Parody Ad
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: TM Parody Ad
+date: 2009-08-24 15:51 +0800
+description: A parody adveritisement for TM
+image: assets/img/posts/10400376_132225319544_8304899_n.jpeg
+category: Life
+tags: [graphic design, advertisement, parody]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<table>
+  <tbody>
+    <tr>
+      <td>Project</td>
+      <td>TM Parody Advertisement</td>
+    </tr>
+    <tr>
+      <td>Technology Stack</td>
+      <td>Adobe Photoshop</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <td>Facebook</td>
+      <td><a href="https://www.facebook.com/photo/?fbid=132225319544&amp;set=a.132142194544">View in Facebook</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>{ % responsive_image path: assets/img/posts/10400376_132225319544_830
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+| Project | TM Parody Advertisement |
+| Technology Stack | Adobe Photoshop |
+| Year | 2009 |
+| Facebook | [View in Facebook](https://www.facebook.com/photo/?fbid=132225319544&set=a.132142194544) |
+
+{ % responsive_image path: assets/img/posts/10400376_132225319544_8304899_n.jpeg alt: "A parody adveritisement for TM." %}
+*A parody adveritisement for TM.*
+
+"Hubungi mereka yang tersayang dari pondok telefon TM"
+
+...

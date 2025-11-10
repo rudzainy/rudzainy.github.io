@@ -1,0 +1,54 @@
+================================================================================
+FILE: balance/2020-02-24-melihat.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Melihat by Rudzainy Rahman
+description: Melihat
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Melihat
+date: 2020-02-24 16:38 +0800
+description:
+image:
+category: Balance
+tags: [writing, puisi]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<p>Melihat dengan mata<br>
+ ada sosok, ada warna<br>
+ ialah reliti.</p>
+
+<p>Melihat dengan hati<br>
+ ada rasa, ada naluri<br>
+ ialah intepretasi.</p>
+
+<p>Lihat biar ikhlas<br>
+ tiada bias.</p>
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+Melihat dengan mata<br />
+&nbsp;ada sosok, ada warna<br />
+&nbsp;ialah reliti.
+
+Melihat dengan hati<br />
+&nbsp;ada rasa, ada naluri<br />
+&nbsp;ialah intepretasi.
+
+Lihat biar ikhlas<br />
+&nbsp;tiada bias.
+...

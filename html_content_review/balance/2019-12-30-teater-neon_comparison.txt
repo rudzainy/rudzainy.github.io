@@ -1,0 +1,64 @@
+================================================================================
+FILE: balance/2019-12-30-teater-neon.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Teater Neon by Rudzainy Rahman
+description: Teater Neon
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Teater Neon
+date: 2019-12-30 16:30 +0800
+description: 
+image:
+category: Life
+tags: [theatre, collaboration]
+published: false
+sitemap: false
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<table>
+  <tbody>
+    <tr>
+      <td>Project</td>
+      <td>Teater Neon</td>
+    </tr>
+    <tr>
+      <td>Responsibilities</td>
+      <td>Actor</td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td>Revolution Stage</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>2019</td>
+    </tr>
+    <tr>
+      <td>Instagram</td>
+      <td><a href="https://www.instagram.com/p/B6qeVwkJXku/">View in Instagram</a></td>
+    </tr>
+  </tbody>
+</table>
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+| Project | Teater Neon |
+| Responsibilities | Actor |
+| Location | Revolution Stage |
+| Year | 2019 |
+| Instagram | [View in Instagram](https://www.instagram.com/p/B6qeVwkJXku/) |
+
+...

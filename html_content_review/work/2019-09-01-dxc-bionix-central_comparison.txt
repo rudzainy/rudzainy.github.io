@@ -1,0 +1,62 @@
+================================================================================
+FILE: work/2019-09-01-dxc-bionix-central.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: DXC Bionix Central by Rudzainy Rahman
+description: DXC Bionix Central
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: DXC Bionix Central
+date: 2019-09-01 15:30 +0800
+description: Dashboard and sales page designs for DXC Bionix Central 
+image: https://blog.rudzainy.my/blog/wp-content/uploads/2023/2e2a0a175212223.64afa37f9c39d.png
+category: Work
+tags: [ui, ux, portfolio]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<table>
+  <tbody>
+    <tr>
+      <td>Project</td>
+      <td>DXC Bionix Central</td>
+    </tr>
+    <tr>
+      <td>Responsibilities</td>
+      <td>Research, design and build.</td>
+    </tr>
+    <tr>
+      <td>Technology Stack</td>
+      <td>InVision Studio</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>2017-2018</td>
+    </tr>
+    <tr>
+      <td>Behance</td>
+      <td><a href="https://www.behance.net/gallery/175212223/Bionix-Central">View in Behance</a></td>
+    </tr>
+  </tbody>
+</tabl
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+| Project | DXC Bionix Central |
+| Responsibilities | Research, design and build. |
+| Technology Stack | InVision Studio |
+| Year | 2017-2018 |
+| Behance | [View in Behance](https://www.behance.net/gallery/175212223/Bionix-Central) |
+
+...

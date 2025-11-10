@@ -1,0 +1,36 @@
+================================================================================
+FILE: life/2022-09-15-maya.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Maya by Rudzainy Rahman
+description: Maya
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Maya
+date: 2022-09-15 17:35 +0800
+description:
+image: https://blog.rudzainy.my/blog/wp-content/uploads/2023/
+category: Life
+tags: [maya]
+published: false
+sitemap: false
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<iframe width="560" height="315" src="https://www.youtube.com/embed/haeEC00aPTM?si=rGZnG8eaSZWvLI1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/haeEC00aPTM?si=rGZnG8eaSZWvLI1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+...

@@ -1,0 +1,63 @@
+================================================================================
+FILE: balance/2024-03-27-why-rigid-corporate-structure-is-bad-for-me.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Why Rigid Corporate Structure Is Bad For Me by Rudzainy Rahman
+description: Why Rigid Corporate Structure Is Bad For Me
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Why Rigid Corporate Structure Is Bad For Me
+date: 2024-03-27 12:39 +0800
+description:
+image:
+category: Balance
+tags: [writing]
+published: false
+sitemap: false
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<p>I know what you might be thinking. Hear me out.</p>
+
+<blockquote>
+  <p><b>“I’m so done with enterprise!”</b>
+<br><em>– Mufhim, 2024</em></p>
+</blockquote>
+
+<ul>
+  <li>ace</li>
+  <li>affin</li>
+  <li>dxc</li>
+  <li>uniten</li>
+  <li>ibm</li>
+</ul>
+
+<p>Non corporate has the luxury to not have to leakages because of scale.</p>
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+I know what you might be thinking. Hear me out. 
+
+
+> <b>"I'm so done with enterprise!"</b>
+> <br /><em>– Mufhim, 2024</em>
+
+- ace
+- affin
+- dxc
+- uniten
+- ibm
+
+Non corporate has the luxury to not have to leakages because of scale.
+...

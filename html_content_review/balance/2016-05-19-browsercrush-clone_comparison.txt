@@ -1,0 +1,68 @@
+================================================================================
+FILE: balance/2016-05-19-browsercrush-clone.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Browser Crush Clone by Rudzainy Rahman
+description: Browser Crush Clone
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Browser Crush Clone
+date: 2016-05-19 23:59 +0800
+description: This is a clone of Browser Crush built using Ruby, HTML, CSS and Javascript.
+image: /assets/img/posts/browsercrush_clone.png
+category: [Work]
+tags: [ruby, sinatra, javascript, portfolio]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<table>
+  <tbody>
+    <tr>
+      <td>Project</td>
+      <td>This is a clone of http://www.browsercrush.com/</td>
+    </tr>
+    <tr>
+      <td>Responsibilities</td>
+      <td>Design &amp; build</td>
+    </tr>
+    <tr>
+      <td>Technology Stack</td>
+      <td>Ruby, Sinatra, HTML, CSS, JavaScript</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>2016</td>
+    </tr>
+    <tr>
+      <td>GitHub</td>
+      <td><a href="https://github.com/rudzainy/browsercrush_clone">View Source Code</a></td>
+ 
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+| Project | This is a clone of http://www.browsercrush.com/ |
+| Responsibilities | Design & build |
+| Technology Stack | Ruby, Sinatra, HTML, CSS, JavaScript |
+| Year | 2016 | 
+| GitHub | [View Source Code](https://github.com/rudzainy/browsercrush_clone) |
+
+# Browser Crush Clone
+
+This is a clone of http://www.browsercrush.com/
+
+Built using Ruby, HTML, CSS and Javascript.
+
+{ % responsive_image path: assets/img/posts/browsercrush_clone.gif alt: "A gameplay of my Browser Crush Clone game." %}
+*A ga
+...

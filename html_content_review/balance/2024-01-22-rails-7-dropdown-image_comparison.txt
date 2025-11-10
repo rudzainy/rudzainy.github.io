@@ -1,0 +1,42 @@
+================================================================================
+FILE: balance/2024-01-22-rails-7-dropdown-image.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Rails 7 Dropdown Image by Rudzainy Rahman
+description: Rails 7 Dropdown Image
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Rails 7 Dropdown Image
+date: 2024-01-22 19:15 +0800
+description:
+image:
+category:
+tags:
+published: false
+sitemap: false
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<ol>
+  <li>User goes to show page.</li>
+  <li>User clicks edit.</li>
+  <li>
+</ol>
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+1. User goes to show page.
+2. User clicks edit.
+3. 
+...

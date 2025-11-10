@@ -1,0 +1,86 @@
+================================================================================
+FILE: life/2024-01-03-of-video-games.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: of Video Games by Rudzainy Rahman
+description: of Video Games
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: of Video Games
+date: 2024-01-03 09:09 +0800
+description:
+image:
+category: Balance
+tags: [video games]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<p>Here are games that I have invested serious time in:</p>
+
+<ol>
+  <li>Nintendo Entertainment System</li>
+</ol>
+
+<ul>
+  <li>Super Mario Bros</li>
+  <li>Zelda II: The Adventure of Link</li>
+</ul>
+
+<ol>
+  <li>Super Nintendo</li>
+</ol>
+
+<ul>
+  <li>Mighty Morphin Power Rangers: The Movie</li>
+  <li>Mighty Morphin Power Rangers: The Fighting Edition</li>
+  <li>Aladdin</li>
+  <li>International Superstar Soccer</li>
+  <li>Super Mario Bros 3</li>
+</ul>
+
+<ol>
+  <li>Windows PC games</li>
+</ol>
+
+<ul>
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+Here are games that I have invested serious time in:
+
+1. Nintendo Entertainment System
+
+- Super Mario Bros
+- Zelda II: The Adventure of Link
+
+2. Super Nintendo
+
+- Mighty Morphin Power Rangers: The Movie
+- Mighty Morphin Power Rangers: The Fighting Edition
+- Aladdin
+- International Superstar Soccer
+- Super Mario Bros 3
+
+3. Windows PC games
+
+- Batman Forever
+- Betrayal at Krondor
+- Megarace
+- Final Fantasy IV
+- Final Fantasy VII
+- Final Fantasy VIII
+- Final Fantasy IX
+- Sonic 3 & Knuckles
+- [Cryst
+...

@@ -1,0 +1,54 @@
+================================================================================
+FILE: balance/2015-09-25-hearts.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Hearts by Rudzainy Rahman
+description: Hearts
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Hearts
+date: 2015-09-25 16:44 +0800
+description:
+image:
+category: Balance
+tags: [writing]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<p>Hearts are everywhere.<br>
+They are all around us.<br>
+The one you have right now<br>
+ might not even be yours entirely.</p>
+
+<p>So go out and complete your heart.</p>
+
+<p>And at the same time<br>
+ let others look for theirs<br>
+ in yours.</p>
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+Hearts are everywhere.<br />
+They are all around us.<br />
+The one you have right now<br />
+&nbsp;might not even be yours entirely.
+
+So go out and complete your heart.
+
+And at the same time<br />
+&nbsp;let others look for theirs<br />
+&nbsp;in yours.
+...

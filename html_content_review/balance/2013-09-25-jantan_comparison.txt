@@ -1,0 +1,54 @@
+================================================================================
+FILE: balance/2013-09-25-jantan.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Jantan by Rudzainy Rahman
+description: Jantan
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Jantan
+date: 2013-09-25 16:50 +0800
+description:
+image:
+category: Balance
+tags: [writing]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<p>Jantan</p>
+
+<p>Mana malumu meminta bila bukan terpaksa?</p>
+
+<p>Mana malumu manja mengikis harta?</p>
+
+<p>Mana malumu menyuruh sedang kau<br>
+ menyilang kaki<br>
+ atas sofa depan TV<br>
+ layan United lawan Chealsea?</p>
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+Jantan
+
+Mana malumu meminta bila bukan terpaksa?
+
+Mana malumu manja mengikis harta?
+
+Mana malumu menyuruh sedang kau<br />
+&nbsp;menyilang kaki<br />
+&nbsp;atas sofa depan TV<br />
+&nbsp;layan United lawan Chealsea?
+...

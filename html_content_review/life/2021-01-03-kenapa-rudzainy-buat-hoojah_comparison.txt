@@ -1,0 +1,46 @@
+================================================================================
+FILE: life/2021-01-03-kenapa-rudzainy-buat-hoojah.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Kenapa Rudzainy Buat Hoojah by Rudzainy Rahman
+description: Kenapa Rudzainy Buat Hoojah
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Kenapa Rudzainy Buat Hoojah
+date: 2021-01-03 08:46 +0800
+description:
+image:
+category: Work
+tags: [hoojah, ruby on rails, podcast]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<iframe src="https://omny.fm/shows/rakita-my/rudzainy-rahman-pengasas-website-hoojah-my-s2ep-1/embed" width="100%" height="180" allow="autoplay; clipboard-write" frameborder="0" title="Rudzainy Rahman (Pengasas Website Hoojah.my), S2Ep. 1"></iframe>
+
+<p>Dengarkan Rudzainy Rahman bercerita sambil memberi inspirasi tentang hal-hal kariernya, cerita bagaimana bermula, kisah inspirasi, dan banyak lagi!</p>
+
+<p>Dengarkan Suara Lit di Rakita 107. 9 bersama tetamu istimewa setiap minggu.</p>
+
+<p><
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+<iframe src="https://omny.fm/shows/rakita-my/rudzainy-rahman-pengasas-website-hoojah-my-s2ep-1/embed" width="100%" height="180" allow="autoplay; clipboard-write" frameborder="0" title="Rudzainy Rahman (Pengasas Website Hoojah.my), S2Ep. 1"></iframe>
+
+Dengarkan Rudzainy Rahman bercerita sambil memberi inspirasi tentang hal-hal kariernya, cerita bagaimana bermula, kisah inspirasi, dan banyak lagi!
+
+Dengarkan Suara Lit di Rakita 107. 9 bersama tetamu istimewa setiap minggu.
+
+[Dengar temubual](https
+...

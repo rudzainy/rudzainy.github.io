@@ -1,0 +1,36 @@
+================================================================================
+FILE: life/2019-06-08-railway-market.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Railway Market by Rudzainy Rahman
+description: Railway Market
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Railway Market
+date: 2019-06-08 09:46 +0800
+description: 
+image: /assets/img/posts/61824141_149826016148969_5528520079149528867_n.jpeg
+category: Balance
+tags: [photo]
+published: true 
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<p><a href="https://www.instagram.com/p/BycRnqKJIhQ" target="_blank" rel="noopener noreferrer">View on Instagram</a></p>
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+[View on Instagram](https://www.instagram.com/p/BycRnqKJIhQ){:target="_blank"}{:rel="noopener noreferrer"}
+...

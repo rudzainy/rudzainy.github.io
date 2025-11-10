@@ -1,0 +1,67 @@
+================================================================================
+FILE: balance/2019-04-24-orang-kasar.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Orang Kasar by Rudzainy Rahman
+description: Orang Kasar
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Orang Kasar
+date: 2019-09-24 16:06 +0800
+description:
+image: https://blog.rudzainy.my/blog/wp-content/uploads/2023/70749792_10156914013949545_8267946219578327040_n.jpg
+category: Life
+tags: [theatre, collaboration]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<table>
+  <tbody>
+    <tr>
+      <td>Project</td>
+      <td>Orang Kasar Theatre Production</td>
+    </tr>
+    <tr>
+      <td>Responsibilities</td>
+      <td>Director, Producer</td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td>Revolution Stage</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>2019</td>
+    </tr>
+    <tr>
+      <td>Facebook</td>
+      <td><a href="https://www.facebook.com/photo/?fbid=10156914013944545&amp;set=a.107964264544">View in Facebook</a></td>
+    </tr>
+   
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+| Project | Orang Kasar Theatre Production |
+| Responsibilities | Director, Producer |
+| Location | Revolution Stage |
+| Year | 2019 |
+| Facebook | [View in Facebook](https://www.facebook.com/photo/?fbid=10156914013944545&set=a.107964264544) |
+| YouTube | [Watch on YouTube](https://youtu.be/kdGhbNLymY4?si=EpteGSsv9SMeq9jj) |
+
+{ % responsive_image path: assets/img/posts/70749792_10156914013949545_8267946219578327040_n.jpeg alt: "Poster Orang Kasar." %}
+*Poster Orang Kasar.*
+
+## Retrospective: 
+<i
+...

@@ -1,0 +1,38 @@
+================================================================================
+FILE: balance/2017-07-09-self-improvement.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Self Improvement by Rudzainy Rahman
+description: Self Improvement
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Self Improvement
+date: 2017-07-09 16:35 +0800
+description:
+image:
+category: Balance
+tags: [writing]
+published: true
+sitemap: true
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+				
+<p>Be selfish<br>
+for the right reasons.</p>
+
+			
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+Be selfish<br />
+for the right reasons.
+...

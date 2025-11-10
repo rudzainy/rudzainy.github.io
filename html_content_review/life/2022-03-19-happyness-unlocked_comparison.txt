@@ -1,0 +1,39 @@
+================================================================================
+FILE: life/2022-03-19-happyness-unlocked.html
+================================================================================
+
+HTML METADATA:
+--------------------------------------------------------------------------------
+title: Happyness Unlocked by Rudzainy Rahman
+description: Happyness Unlocked
+
+EXISTING MARKDOWN FRONTMATTER:
+--------------------------------------------------------------------------------
+layout: post
+title: Happyness Unlocked
+date: 2022-03-19 04:20 +0800
+description:
+image:
+category:
+tags:
+published: false
+sitemap: false
+
+
+EXTRACTED HTML CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+					<div class="card-body p-0">
+						<div id="carouselExample" class="carousel slide h-100">
+							<div class="carousel-inner h-100">
+								<div class="carousel-item active h-100">
+									<img src="../images/posts/18251665_1038196522979447_6899719108229595136_n.jpeg" class="d-block w-100 h-100 object-fit-cover" alt="Memory photo 1">
+								</div>
+								<div class="carousel-item h-100">
+									<img src="../images/posts/21296595_114167872584245_1539312520790016000_n.jpeg" class="d-bloc
+...
+
+EXISTING MARKDOWN CONTENT (first 500 chars):
+--------------------------------------------------------------------------------
+
+...
