@@ -459,6 +459,11 @@ section:not(.grid-container) > article.card.card-width-fit .card-title {
   hyphens: none;
 }
 
+/* Mobile navbar toggler styling */
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 /* Section-specific content heading colors */
 /* Life posts - green headings */
 body:has(.page-header-life) main h2,
