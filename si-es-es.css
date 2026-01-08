@@ -1,27 +1,53 @@
-/* House Styles */
-h1, h2 {
-  text-shadow: 2px 2px 0px #333; /* 2px horizontal, 2px vertical, 0 blur, dark gray color */
-}
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Unica+One&display=swap');
 
-/* Base styles for better readability */
+/* House Styles */
 :root {
   --card-base-size: 150px;
 }
 
 body {
+  font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
   line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .card-header, .page-title,
+.navbar, .breadcrumb, footer {
+  font-family: 'Unica One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h1, h2 {
+  text-shadow: 2px 2px 0px #333; /* 2px horizontal, 2px vertical, 0 blur, dark gray color */
 }
 
 /* Improved card styling */
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: var(--card-base-size);
   width: var(--card-base-size);
 }
 
-.card:hover {
+/* Clickable cards and buttons - floating effect on hover, pressed effect on active */
+.card.button,
+.btn,
+.button {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.card.button:hover,
+.btn:hover,
+.button:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card.button:active,
+.btn:active,
+.button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Improved image display */
@@ -33,19 +59,10 @@ body {
   transform: scale(1.02);
 }
 
-.btn,
-.button {
-  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
-}
 
-.btn:hover,
-.button:hover {
-  box-shadow: 0 8px 16px rgba(13, 110, 253, 0.2);
-}
-
+/* Standardized card header font size */
 .card-header {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .mt-n1 {
@@ -151,9 +168,11 @@ section:not(.grid-container) > article.card {
   width: var(--card-base-size);
 }
 
+/* Card body scroll container with fade effects */
 .grid-container > article.card > .card-body,
 section:not(.grid-container) > article.card > .card-body {
   overflow-y: scroll;
+  position: relative;
 }
 
 .grid-container > article.card.button > a,
@@ -184,14 +203,11 @@ section.d-flex.flex-row > article.card {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
   :root {
     --card-base-size: 180px;
   }
-  
-  .card-header {
-    font-size: 1rem;
-  }
+
   ol.card-group-list > li.card,
   ul.card-group-list > li.card {
     max-width: 30vw;
@@ -290,4 +306,173 @@ blockquote {
 /* Smooth scrolling for better UX */
 html {
   scroll-behavior: smooth;
+}
+
+/* Scroll Affordances - Fade edges on horizontal scroll sections */
+/* Wrapper element for scroll fade effects (doesn't scroll) */
+.scroll-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.scroll-wrapper::before,
+.scroll-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2rem;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0.95), transparent);
+}
+
+.scroll-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0.95), transparent);
+}
+
+.scroll-wrapper.show-left-fade::before {
+  opacity: 1;
+}
+
+.scroll-wrapper.show-right-fade::after {
+  opacity: 1;
+}
+
+/* Scroll Snap for horizontal sections */
+.d-flex.flex-row.overflow-x-scroll {
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.d-flex.flex-row.overflow-x-scroll > article.card {
+  scroll-snap-align: start;
+}
+
+/* Focus States for Keyboard Navigation - only for non-card elements */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--bs-primary);
+  outline-offset: 2px;
+}
+
+/* Remove focus outline from cards and their child links */
+.card:focus-within,
+.card.button:focus-within,
+.card.button > a:focus-visible,
+.card a:focus-visible {
+  outline: none;
+}
+
+/* Improved heading contrast - use with inline style override */
+.text-opacity-70 {
+  --bs-text-opacity: 0.7 !important;
+}
+
+/* Page Header Backgrounds for content pages */
+.page-header-work {
+  background-color: var(--bs-info);
+  padding-bottom: 1.5rem;
+}
+
+.page-header-life {
+  background-color: var(--bs-success);
+  padding-bottom: 1.5rem;
+}
+
+.page-header-balance {
+  background-color: var(--bs-warning);
+  padding-bottom: 1.5rem;
+}
+
+/* Page header title - large white text directly on background */
+.page-header-work .page-title,
+.page-header-life .page-title,
+.page-header-balance .page-title {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 576px) {
+  .page-header-work .page-title,
+  .page-header-life .page-title,
+  .page-header-balance .page-title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-header-work .page-title,
+  .page-header-life .page-title,
+  .page-header-balance .page-title {
+    font-size: 5rem;
+  }
+}
+
+/* Breadcrumb styling for visibility on colored backgrounds */
+.page-header-work .breadcrumb-item a,
+.page-header-work .breadcrumb-item.active,
+.page-header-life .breadcrumb-item a,
+.page-header-life .breadcrumb-item.active,
+.page-header-balance .breadcrumb-item a,
+.page-header-balance .breadcrumb-item.active {
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.page-header-work .breadcrumb-item a:hover,
+.page-header-life .breadcrumb-item a:hover,
+.page-header-balance .breadcrumb-item a:hover {
+  color: #fff;
+}
+
+/* Breadcrumb divider color */
+.page-header-work .breadcrumb-item + .breadcrumb-item::before,
+.page-header-life .breadcrumb-item + .breadcrumb-item::before,
+.page-header-balance .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Section-specific content heading colors */
+/* Life posts - green headings */
+body:has(.page-header-life) main h2,
+body:has(.page-header-life) main h3,
+body:has(.page-header-life) main h4,
+body:has(.page-header-life) main h5,
+body:has(.page-header-life) main h6 {
+  color: var(--bs-success);
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Work posts - cyan/info headings */
+body:has(.page-header-work) main h2,
+body:has(.page-header-work) main h3,
+body:has(.page-header-work) main h4,
+body:has(.page-header-work) main h5,
+body:has(.page-header-work) main h6 {
+  color: var(--bs-info);
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Balance posts - warning/amber headings */
+body:has(.page-header-balance) main h2,
+body:has(.page-header-balance) main h3,
+body:has(.page-header-balance) main h4,
+body:has(.page-header-balance) main h5,
+body:has(.page-header-balance) main h6 {
+  color: var(--bs-warning);
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
 }

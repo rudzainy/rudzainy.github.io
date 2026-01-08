@@ -53,7 +53,7 @@ if(quoteWorkCard != null) {
 
 
 let quoteLifeCard = document.getElementById("quote-life")
-if(quoteWorkCard != null) {
+if(quoteLifeCard != null) {
 	quoteLifeCard.innerText = quotesLife[Math.floor(Math.random() * quotesLife.length)]
 	setInterval(() => {
 	  quoteLifeCard.innerText = quotesLife[Math.floor(Math.random() * quotesLife.length)]
@@ -61,10 +61,10 @@ if(quoteWorkCard != null) {
 }
 
 let quoteBalanceCard = document.getElementById("quote-balance")
-if(quoteWorkCard != null) {
-	quoteBalanceCard.innerText = quotesWork[Math.floor(Math.random() * quotesWork.length)]
+if(quoteBalanceCard != null) {
+	quoteBalanceCard.innerText = quotesBalance[Math.floor(Math.random() * quotesBalance.length)]
 	setInterval(() => {
-	  quoteBalanceCard.innerText = quotesWork[Math.floor(Math.random() * quotesWork.length)]
+	  quoteBalanceCard.innerText = quotesBalance[Math.floor(Math.random() * quotesBalance.length)]
 	}, Math.floor(Math.random() * (9876 - 4567 + 1)) + 4567)
 }
 
@@ -120,6 +120,45 @@ document.addEventListener("DOMContentLoaded", () => {
     if (el.scrollHeight > el.clientHeight) {
       autoScroll(el);
     }
+  });
+});
+
+// Scroll Affordance - Show fade indicators on horizontal scroll sections
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollWrappers = document.querySelectorAll('.scroll-wrapper');
+
+  scrollWrappers.forEach(wrapper => {
+    const scrollArea = wrapper.querySelector('.overflow-x-scroll');
+    if (!scrollArea) return;
+
+    function updateFades() {
+      const scrollLeft = scrollArea.scrollLeft;
+      const scrollWidth = scrollArea.scrollWidth;
+      const clientWidth = scrollArea.clientWidth;
+
+      // Show left fade if scrolled right
+      if (scrollLeft > 10) {
+        wrapper.classList.add('show-left-fade');
+      } else {
+        wrapper.classList.remove('show-left-fade');
+      }
+
+      // Show right fade if more content to scroll
+      if (scrollLeft < scrollWidth - clientWidth - 10) {
+        wrapper.classList.add('show-right-fade');
+      } else {
+        wrapper.classList.remove('show-right-fade');
+      }
+    }
+
+    // Initial check
+    updateFades();
+
+    // Update on scroll
+    scrollArea.addEventListener('scroll', updateFades, { passive: true });
+
+    // Update on resize
+    window.addEventListener('resize', updateFades, { passive: true });
   });
 });
 
