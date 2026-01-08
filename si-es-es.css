@@ -446,6 +446,19 @@ button:focus-visible,
   color: rgba(255, 255, 255, 0.6);
 }
 
+/* Flexible width card - prevents word wrapping */
+section:not(.grid-container) > article.card.card-width-fit {
+  width: fit-content;
+  min-width: var(--card-base-size);
+  max-width: 100%;
+}
+
+section:not(.grid-container) > article.card.card-width-fit .card-title {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
 /* Section-specific content heading colors */
 /* Life posts - green headings */
 body:has(.page-header-life) main h2,
