@@ -446,14 +446,14 @@ button:focus-visible,
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Flexible width card for title/intro - prevents word wrapping */
-section:not(.grid-container) > article.card.card-title-intro {
+/* Flexible width card - prevents word wrapping */
+section:not(.grid-container) > article.card.card-width-fit {
   width: fit-content;
   min-width: var(--card-base-size);
   max-width: 100%;
 }
 
-section:not(.grid-container) > article.card.card-title-intro .card-title {
+section:not(.grid-container) > article.card.card-width-fit .card-title {
   word-break: keep-all;
   overflow-wrap: normal;
   hyphens: none;
