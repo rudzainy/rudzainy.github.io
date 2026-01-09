@@ -460,6 +460,12 @@ section:not(.grid-container) > article.card.card-width-fit .card-title {
 }
 
 /* Mobile navbar toggler styling */
+.navbar-toggler {
+  font-family: 'Unica One', sans-serif;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+}
+
 .navbar-toggler:focus {
   box-shadow: none;
 }
