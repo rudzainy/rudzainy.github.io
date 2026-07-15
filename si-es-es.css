@@ -142,6 +142,14 @@ h1, h2 {
   box-shadow: var(--shadow-active) !important;
 }
 
+/* Ensure buttons meet the 44px minimum tap target on touch devices */
+.btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Improved image display */
 .figure-img {
   transition: transform var(--motion-slow) var(--ease);
