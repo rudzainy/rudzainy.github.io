@@ -3,8 +3,8 @@ layout: post
 title: Browser Crush Clone
 date: 2016-05-19 23:59 +0800
 description: This is a clone of Browser Crush built using Ruby, HTML, CSS and Javascript.
-image: /assets/img/posts/browsercrush_clone.png
-category: [Work]
+image: /images/posts/browsercrush_clone.png
+category: Work
 tags: [ruby, sinatra, javascript, portfolio]
 published: true
 sitemap: true
@@ -22,7 +22,7 @@ This is a clone of http://www.browsercrush.com/
 
 Built using Ruby, HTML, CSS and Javascript.
 
-{ % responsive_image path: assets/img/posts/browsercrush_clone.gif alt: "A gameplay of my Browser Crush Clone game." %}
+![A gameplay of my Browser Crush Clone game.](/images/posts/browsercrush_clone.gif)
 *A gameplay of my Browser Crush Clone game.*
 
 ## Setup

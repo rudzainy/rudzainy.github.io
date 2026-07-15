@@ -3,7 +3,7 @@ layout: post
 title: Not The Stage Manager For Sudirmania
 date: 2020-02-04 04:20 +0800
 description:
-image: /assets/img/posts/sudirmania-table.png
+image: /images/posts/sudirmania-table.png
 category: Work
 tags: [project management, notion, writing]
 published: false
@@ -60,27 +60,27 @@ Responsible for ensuring that all elements of the production come together seaml
 
 ### Different Dashboard Views
 
-![Gallery View](/assets/img/posts/sudirmania-gallery.png)
+![Gallery View](/images/posts/sudirmania-gallery.png)
 
-![Table View](/assets/img/posts/sudirmania-table.png)
+![Table View](/images/posts/sudirmania-table.png)
 
-![View by Gang](/assets/img/posts/sudirmania-gang.png)
+![View by Gang](/images/posts/sudirmania-gang.png)
 
 ### Colour Coding
 
-![Scenes selection](/assets/img/posts/sudirmania-scene.png)
+![Scenes selection](/images/posts/sudirmania-scene.png)
 
-![Songs selection](/assets/img/posts/sudirmania-songs.png)
+![Songs selection](/images/posts/sudirmania-songs.png)
 
 ### Scheduling
 
-![Scene checklist](/assets/img/posts/sudirmania-practice-checklist.png)
+![Scene checklist](/images/posts/sudirmania-practice-checklist.png)
 
-![Scene checklist](/assets/img/posts/sudirmania-feb.png)
+![Scene checklist](/images/posts/sudirmania-feb.png)
 
-![Scene checklist](/assets/img/posts/sudirmania-mar.png)
+![Scene checklist](/images/posts/sudirmania-mar.png)
 
-![Scene checklist](/assets/img/posts/sudirmania-apr.png)
+![Scene checklist](/images/posts/sudirmania-apr.png)
 
 
 ### Recordings

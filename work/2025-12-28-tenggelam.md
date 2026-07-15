@@ -4,7 +4,7 @@ title: Tenggelam
 date: 2025-12-28 13:43 +0800 
 description: Cerita pendek tentang masa hadapan
 image: 
-category: Work 
+category: Work
 tags: [writing, story] 
 published: false 
 sitemap: false 
