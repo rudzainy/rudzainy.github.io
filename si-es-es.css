@@ -449,6 +449,27 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Respect users who ask for less motion — disable the lifts, zoom, timed
+   transitions, and smooth scroll. Motion tokens still drive everything, this
+   just neutralizes it under the OS preference. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .card.button:hover, .btn:hover, .button:hover,
+  .card.button:active, .btn:active, .button:active,
+  .figure-img:hover {
+    transform: none;
+  }
+}
+
 /* Scroll Affordances - Fade edges on horizontal scroll sections */
 /* Wrapper element for scroll fade effects (doesn't scroll) */
 .scroll-wrapper {
