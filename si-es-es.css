@@ -20,8 +20,8 @@
   --color-life-ink:    #196045;
   --color-balance:     #C56A12;   /* Balance — saffron  */
   --color-balance-ink: #8F4E10;
-  --color-primary:     #B02E5A;   /* Primary — batik rose */
-  --color-primary-ink: #6E1C39;
+  --color-primary:     #201A2B;   /* Primary — aubergine ink (mono; the triad carries the colour) */
+  --color-primary-ink: #100B17;
   --color-neutral:     #F6F2E9;   /* songket cream — page background */
   --color-surface:     #ffffff;   /* white cards */
   --color-ink:         #201A2B;   /* aubergine-black — body text */
@@ -49,7 +49,7 @@
   --radius-md: 8px;
 
   /* --- Elevation / shadows --------------------------------------------- */
-  --shadow-heading:     2px 2px 0 var(--color-ink);      /* poster offset on h1/h2 */
+  --shadow-heading:     2px 2px 0 rgba(32, 26, 43, 0.22); /* soft poster offset on h1/h2 */
   --shadow-title:       2px 2px 4px rgba(0, 0, 0, 0.2);  /* section page titles */
   --shadow-heading-sub: 1px 1px 0 rgba(0, 0, 0, 0.3);    /* in-post headings */
   --shadow-hover:       0 10px 20px rgba(0, 0, 0, 0.15); /* card/button lift */
@@ -68,10 +68,10 @@
   --bs-body-color: var(--color-ink);
 
   --bs-primary: var(--color-primary);
-  --bs-primary-rgb: 176, 46, 90;
+  --bs-primary-rgb: 32, 26, 43;
   --bs-primary-text-emphasis: var(--color-primary-ink);
-  --bs-primary-bg-subtle: #F6E0E8;
-  --bs-primary-border-subtle: #E5B8C7;
+  --bs-primary-bg-subtle: #EAE6DD;
+  --bs-primary-border-subtle: #CBC6BC;
 
   --bs-info: var(--color-work);          /* Work */
   --bs-info-rgb: 42, 75, 160;
@@ -93,9 +93,9 @@
 
   /* Links pick up the brand rose instead of Bootstrap blue */
   --bs-link-color: var(--color-primary);
-  --bs-link-color-rgb: 176, 46, 90;
+  --bs-link-color-rgb: 32, 26, 43;
   --bs-link-hover-color: var(--color-primary-ink);
-  --bs-link-hover-color-rgb: 110, 28, 57;
+  --bs-link-hover-color-rgb: 16, 11, 23;
 }
 
 body {

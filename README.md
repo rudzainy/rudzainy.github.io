@@ -58,7 +58,8 @@ House styles live in `si-es-es.css`, driven by **design tokens** at `:root`:
 Change a token, not a call site.
 
 Palette is **Batik**: Work `#2A4BA0` indigo, Life `#1E7A54` emerald, Balance
-`#C56A12` saffron, primary `#B02E5A` rose, on `#F6F2E9` songket cream. Category
+`#C56A12` saffron, primary `#201A2B` aubergine ink (mono — the triad carries the
+colour), on `#F6F2E9` songket cream. Category
 colours also ship a darkened `-ink` variant for heading text on light backgrounds
 (the base tones are too dark/light for both roles).
 
