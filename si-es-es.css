@@ -32,6 +32,13 @@
   --font-body: 'Crimson Text', Georgia, 'Times New Roman', serif;
   --tracking-display: 0.05em;
   --leading-body: 1.6;
+  /* Fluid type — clamp(min, preferred, max) scales smoothly across viewports
+     instead of jumping at breakpoints. */
+  --type-hero: clamp(2.5rem, 1.1rem + 6.2vw, 5rem);      /* section page titles */
+  --type-h1:   clamp(1.9rem, 1.3rem + 2.6vw, 2.75rem);
+  --type-h2:   clamp(1.55rem, 1.15rem + 1.8vw, 2.25rem);
+  --type-h3:   clamp(1.3rem, 1.1rem + 1vw, 1.6rem);
+  --type-lead: clamp(1.1rem, 1.05rem + 0.3vw, 1.25rem);
 
   /* --- Spacing --------------------------------------------------------- */
   --space-1: 0.25rem;
@@ -114,6 +121,12 @@ h1, h2, h3, h4, h5, h6, .card-header, .page-title,
 h1, h2 {
   text-shadow: var(--shadow-heading);
 }
+
+/* Fluid heading sizes (scale smoothly; no breakpoint jumps) */
+h1 { font-size: var(--type-h1); }
+h2 { font-size: var(--type-h2); }
+h3 { font-size: var(--type-h3); }
+.lead { font-size: var(--type-lead); }
 
 /* Improved card styling */
 .card {
@@ -408,20 +421,8 @@ section:not(.grid-container) > article.card > figure > img {
 
 /* Additional Responsive Improvements */
 
-/* Better typography for mobile */
+/* Mobile: tighten card padding (heading sizes are handled fluidly above) */
 @media (max-width: 576px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 1.3rem;
-  }
-  .lead {
-    font-size: 1.1rem;
-  }
   .card-body {
     padding: 1rem;
   }
@@ -569,28 +570,12 @@ button:focus-visible,
 .page-header-life .page-title,
 .page-header-balance .page-title {
   color: #fff;
-  font-size: 3rem;
+  font-size: var(--type-hero);
   font-weight: 700;
   text-shadow: var(--shadow-title);
   margin: 0;
   display: flex;
   align-items: center;
-}
-
-@media (min-width: 576px) {
-  .page-header-work .page-title,
-  .page-header-life .page-title,
-  .page-header-balance .page-title {
-    font-size: 4rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .page-header-work .page-title,
-  .page-header-life .page-title,
-  .page-header-balance .page-title {
-    font-size: 5rem;
-  }
 }
 
 /* Breadcrumb styling for visibility on colored backgrounds */
