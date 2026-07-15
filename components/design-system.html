@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Design System · Rudzainy Rahman</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- end Bootstrap CSS & Icons -->
+
+    <link rel="stylesheet" type="text/css" href="../si-es-es.css">
+
+    <style>
+      /* Style-guide chrome only — NOT part of the site's design system. */
+      .ds-section { padding: 2rem 0; border-top: 1px solid rgba(0,0,0,.08); }
+      .ds-swatch { border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-active); }
+      .ds-swatch .chip { height: 84px; }
+      .ds-swatch .meta { background: #fff; padding: .5rem .7rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .72rem; line-height: 1.4; }
+      .ds-swatch .meta .role { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .05em; font-size: .8rem; }
+      .ds-token-row { font-family: ui-monospace, monospace; font-size: .8rem; }
+      .ds-box { background: #fff; border-radius: var(--radius-md); padding: 1.25rem; height: 100%; }
+      .ds-shadow-demo { width: 100%; height: 70px; background: #fff; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-family: ui-monospace, monospace; font-size: .72rem; color: var(--color-muted); }
+      .ds-motion-demo { display: inline-flex; align-items: center; justify-content: center; width: 130px; height: 90px; }
+      code { color: var(--color-primary-ink); background: var(--bs-primary-bg-subtle); padding: .1rem .35rem; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-primary">
+      <div class="container">
+        <a href="/" title="Wow! It's a Wau!" class="navbar-brand text-primary d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a href="/work/" class="nav-link"><i class="bi bi-person-fill-gear me-2"></i>Work</a></li>
+          <li class="nav-item"><a href="/life/" class="nav-link"><i class="bi bi-person-hearts me-2"></i>Life</a></li>
+          <li class="nav-item"><a href="/balance/" class="nav-link"><i class="bi bi-person-lines-fill me-2"></i>Balance</a></li>
+          <li class="nav-item"><a href="./index.html" class="nav-link">Components</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="container my-5">
+      <h1 class="display-3">Design System</h1>
+      <p class="lead" style="max-width: 62ch;">
+        The house style for <strong>rudzainy.com</strong>, codified as design tokens in
+        <code>si-es-es.css</code>. Everything below is rendered live from those tokens —
+        change a value at <code>:root</code> and it propagates across the whole site.
+        Palette: <strong>Batik</strong> (indigo / emerald / saffron on songket cream).
+      </p>
+      <p><a href="./index.html">&larr; Back to component catalog</a></p>
+    </header>
+
+    <main class="container pb-5">
+
+      <!-- ================= PALETTE ================= -->
+      <section class="ds-section">
+        <h2>Palette</h2>
+        <p class="text-secondary" style="max-width: 60ch;">
+          Each category ships a vivid <em>base</em> (backgrounds, accents) and a darkened
+          <em>-ink</em> variant (heading text on white/cream) so contrast holds in both roles.
+          The category colours are consumed through Bootstrap utility classes in the markup,
+          so <code>:root</code> remaps <code>--bs-info/success/warning/primary</code> onto these tokens.
+        </p>
+
+        <h3 class="h5 mt-4">Category &amp; brand</h3>
+        <div class="row row-cols-2 row-cols-md-4 g-3">
+          <div class="col"><div class="ds-swatch"><div class="chip" style="background: var(--color-work)"></div><div class="meta"><div class="role" style="color: var(--color-work-ink)">Work</div>--color-work<br>#2A4BA0</div></div></div>
+          <div class="col"><div class="ds-swatch"><div class="chip" style="background: var(--color-life)"></div><div class="meta"><div class="role" style="color: var(--color-life-ink)">Life</div>--color-life<br>#1E7A54</div></div></div>
+          <div class="col"><div class="ds-swatch"><div class="chip" style="background: var(--color-balance)"></div><div class="meta"><div class="role" style="color: var(--color-balance-ink)">Balance</div>--color-balance<br>#C56A12</div></div></div>
+          <div class="col"><div class="ds-swatch"><div class="chip" style="background: var(--color-primary)"></div><div class="meta"><div class="role" style="color: var(--color-primary-ink)">Primary</div>--color-primary<br>#B02E5A</div></div></div>
+        </div>
+
+        <h3 class="h5 mt-4">Text-safe ink variants</h3>
+        <div class="row row-cols-2 row-cols-md-4 g-3">
+          <div class="col"><div class="ds-swatch"><div class="chip" style="background: var(--color-work-ink)"></div><div class="meta">--color-work-ink<br>#24408B</div></div></div>
+          <div class="col"><div class="ds-swatch"><div class="chip" style="background: var(--color-life-ink)"></div><div class="meta">--color-life-ink<br>#196045</div></div></div>
+          <div class="col"><div class="ds-swatch"><div class="chip" style="background: var(--color-balance-ink)"></div><div class="meta">--color-balance-ink<br>#8F4E10</div></div></div>
+          <div class="col"><div class="ds-swatch"><div class="chip" style="background: var(--color-primary-ink)"></div><div class="meta">--color-primary-ink<br>#6E1C39</div></div></div>
+        </div>
+
+        <h3 class="h5 mt-4">Surfaces &amp; ink</h3>
+        <div class="row row-cols-2 row-cols-md-4 g-3">
+          <div class="col"><div class="ds-swatch"><div class="chip" style="background: var(--color-neutral)"></div><div class="meta">--color-neutral<br>#F6F2E9 · page</div></div></div>
+          <div class="col"><div class="ds-swatch"><div class="chip" style="background: var(--color-surface); border: 1px solid rgba(0,0,0,.1)"></div><div class="meta">--color-surface<br>#FFFFFF · cards</div></div></div>
+          <div class="col"><div class="ds-swatch"><div class="chip" style="background: var(--color-ink)"></div><div class="meta" style="color:#fff; background: var(--color-ink)">--color-ink<br>#201A2B · text</div></div></div>
+          <div class="col"><div class="ds-swatch"><div class="chip" style="background: var(--color-muted)"></div><div class="meta" style="color:#fff; background: var(--color-muted)">--color-muted<br>#5B5566 · quotes</div></div></div>
+        </div>
+      </section>
+
+      <!-- ================= TYPOGRAPHY ================= -->
+      <section class="ds-section">
+        <h2>Typography</h2>
+        <div class="row g-4 mt-1">
+          <div class="col-md-6">
+            <div class="ds-box">
+              <div class="text-secondary ds-token-row mb-2">--font-display · Unica One</div>
+              <h1 class="mb-1">Heading One</h1>
+              <h2 class="mb-1">Heading Two</h2>
+              <h3 class="mb-1">Heading Three</h3>
+              <p class="mb-0 text-secondary">Condensed uppercase, tracking <code>--tracking-display</code> (0.05em). H1/H2 carry the poster offset <code>--shadow-heading</code>.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="ds-box">
+              <div class="text-secondary ds-token-row mb-2">--font-body · Crimson Text</div>
+              <p style="font-size: 1.15rem;">Body and quotes are set in Crimson Text, a serif, at line-height <code>--leading-body</code> (1.6). It carries long-form case studies and personal writing.</p>
+              <blockquote class="mb-0">"A quote, italic, in <code>--color-muted</code>."</blockquote>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="ds-box">
+              <div class="text-secondary ds-token-row mb-2">logo / code · monospace</div>
+              <div style="font-family: ui-monospace, monospace; font-size: 2rem; color: var(--color-primary);">~|{·})</div>
+              <p class="mb-0 text-secondary">The wau logo and inline code use the system monospace stack.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SPACING & RADIUS ================= -->
+      <section class="ds-section">
+        <h2>Spacing &amp; radius</h2>
+        <div class="row g-4">
+          <div class="col-md-7">
+            <div class="ds-box">
+              <div class="text-secondary ds-token-row mb-3">Spacing scale (rem)</div>
+              <div class="d-flex align-items-end gap-3">
+                <div class="text-center"><div style="width: var(--space-1); height: var(--space-1); background: var(--color-work);"></div><div class="ds-token-row mt-2">1<br>.25</div></div>
+                <div class="text-center"><div style="width: var(--space-2); height: var(--space-2); background: var(--color-work);"></div><div class="ds-token-row mt-2">2<br>.5</div></div>
+                <div class="text-center"><div style="width: var(--space-3); height: var(--space-3); background: var(--color-work);"></div><div class="ds-token-row mt-2">3<br>1</div></div>
+                <div class="text-center"><div style="width: var(--space-4); height: var(--space-4); background: var(--color-work);"></div><div class="ds-token-row mt-2">4<br>1.5</div></div>
+                <div class="text-center"><div style="width: var(--space-5); height: var(--space-5); background: var(--color-work);"></div><div class="ds-token-row mt-2">5<br>2</div></div>
+              </div>
+              <p class="text-secondary mt-3 mb-0"><code>--grid-gap</code> (1rem) drives the bento grid gutters and the 2×/1× card <code>calc()</code> sizing.</p>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="ds-box">
+              <div class="text-secondary ds-token-row mb-3">Radius</div>
+              <div class="d-flex gap-3">
+                <div class="text-center"><div style="width: 80px; height: 60px; background: var(--color-life); border-radius: var(--radius-sm);"></div><div class="ds-token-row mt-2">--radius-sm · 6px</div></div>
+                <div class="text-center"><div style="width: 80px; height: 60px; background: var(--color-life); border-radius: var(--radius-md);"></div><div class="ds-token-row mt-2">--radius-md · 8px</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ELEVATION ================= -->
+      <section class="ds-section">
+        <h2>Elevation &amp; shadows</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col"><div class="ds-shadow-demo" style="box-shadow: var(--shadow-hover);">--shadow-hover</div></div>
+          <div class="col"><div class="ds-shadow-demo" style="box-shadow: var(--shadow-active);">--shadow-active</div></div>
+          <div class="col"><div class="ds-shadow-demo" style="text-shadow: var(--shadow-heading); font-family: var(--font-display); font-size: 1.4rem; color: var(--color-ink);">--shadow-heading</div></div>
+        </div>
+        <p class="text-secondary mt-3 mb-0"><code>--shadow-title</code> and <code>--shadow-heading-sub</code> sit on section-page titles and in-post headings respectively.</p>
+      </section>
+
+      <!-- ================= MOTION ================= -->
+      <section class="ds-section">
+        <h2>Motion</h2>
+        <p class="text-secondary">Hover / press the buttons — lift <code>--motion-lift</code> (-5px), press <code>--motion-press</code> (2px), image zoom <code>--motion-zoom</code> (1.02), timing <code>--motion-fast</code> / <code>--motion-slow</code>.</p>
+        <div class="d-flex flex-wrap gap-3 align-items-center">
+          <button class="btn btn-primary">Primary button</button>
+          <button class="btn btn-outline-secondary button">Lift on hover</button>
+          <span class="ds-motion-demo"><img src="../images/favicons/android-chrome-192x192.png" class="figure-img" alt="Hover to zoom" style="width:80px; height:80px; border-radius: var(--radius-md);"></span>
+        </div>
+      </section>
+
+      <!-- ================= CATEGORY SYSTEM ================= -->
+      <section class="ds-section">
+        <h2>Category system</h2>
+        <p class="text-secondary" style="max-width: 60ch;">How the three sections read in context — a coloured page-header (white title) plus subtle-tinted cards. Applied via Bootstrap utilities: <code>bg-*-subtle</code>, <code>text-*-emphasis</code>, <code>border-*</code>.</p>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="rounded overflow-hidden">
+              <div class="page-header-work p-4"><span class="page-title" style="font-size:2rem;">Work</span></div>
+              <div class="card border border-info bg-info-subtle text-info-emphasis p-3" style="height:auto;width:auto;border-radius:0;">
+                <div class="card-header bg-transparent border-0 p-0">Client project</div>
+                <strong>DXC BioniX</strong>
+                <p class="mb-0 small">Design system for an enterprise platform.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="rounded overflow-hidden">
+              <div class="page-header-life p-4"><span class="page-title" style="font-size:2rem;">Life</span></div>
+              <div class="card border border-success bg-success-subtle text-success-emphasis p-3" style="height:auto;width:auto;border-radius:0;">
+                <div class="card-header bg-transparent border-0 p-0">Journal</div>
+                <strong>Of Books</strong>
+                <p class="mb-0 small">Notes on what I'm reading lately.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="rounded overflow-hidden">
+              <div class="page-header-balance p-4"><span class="page-title" style="font-size:2rem;">Balance</span></div>
+              <div class="card border border-warning bg-warning-subtle text-warning-emphasis p-3" style="height:auto;width:auto;border-radius:0;">
+                <div class="card-header bg-transparent border-0 p-0">Thoughts</div>
+                <strong>The Framework</strong>
+                <p class="mb-0 small">Thinking about digital communication.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="container py-4 border-top">
+      <span class="text-secondary">~|{·}) · design system · rudzainy.com</span>
+    </footer>
+  </body>
+</html>

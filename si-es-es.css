@@ -1,25 +1,117 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Unica+One&display=swap');
 
-/* House Styles */
+/* =========================================================================
+   DESIGN TOKENS — single source of truth for rudzainy.com
+   Palette: "Batik" (indigo / emerald / saffron on songket cream).
+   Category colours are consumed by Bootstrap utility classes in the markup
+   (text-info / bg-success / border-warning …), so the tokens below are the
+   source of truth and the Bootstrap CSS variables are remapped onto them.
+   Change a value here; it propagates everywhere. Documented in
+   components/index.html (living style guide).
+   ========================================================================= */
 :root {
-  --card-base-size: 150px;
+  /* --- Palette (source of truth) --------------------------------------- */
+  /* Each category ships a vivid `base` (backgrounds, accents) and a darkened
+     `-ink` (heading text on white/cream) so contrast holds in both roles. */
+  --color-work:        #2A4BA0;   /* Work    — indigo   */
+  --color-work-ink:    #24408B;
+  --color-life:        #1E7A54;   /* Life    — emerald  */
+  --color-life-ink:    #196045;
+  --color-balance:     #C56A12;   /* Balance — saffron  */
+  --color-balance-ink: #8F4E10;
+  --color-primary:     #B02E5A;   /* Primary — batik rose */
+  --color-primary-ink: #6E1C39;
+  --color-neutral:     #F6F2E9;   /* songket cream — page background */
+  --color-surface:     #ffffff;   /* white cards */
+  --color-ink:         #201A2B;   /* aubergine-black — body text */
+  --color-muted:       #5B5566;   /* muted text (quotes, captions) */
+
+  /* --- Typography ------------------------------------------------------ */
+  --font-display: 'Unica One', sans-serif;
+  --font-body: 'Crimson Text', Georgia, 'Times New Roman', serif;
+  --tracking-display: 0.05em;
+  --leading-body: 1.6;
+
+  /* --- Spacing --------------------------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --grid-gap: 1rem;
+
+  /* --- Sizing ---------------------------------------------------------- */
+  --card-base-size: 150px;   /* overridden responsively in media queries */
+
+  /* --- Radius ---------------------------------------------------------- */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+
+  /* --- Elevation / shadows --------------------------------------------- */
+  --shadow-heading:     2px 2px 0 var(--color-ink);      /* poster offset on h1/h2 */
+  --shadow-title:       2px 2px 4px rgba(0, 0, 0, 0.2);  /* section page titles */
+  --shadow-heading-sub: 1px 1px 0 rgba(0, 0, 0, 0.3);    /* in-post headings */
+  --shadow-hover:       0 10px 20px rgba(0, 0, 0, 0.15); /* card/button lift */
+  --shadow-active:      0 2px 4px rgba(0, 0, 0, 0.1);    /* pressed */
+
+  /* --- Motion ---------------------------------------------------------- */
+  --motion-lift: -5px;    /* hover translateY */
+  --motion-press: 2px;    /* active translateY */
+  --motion-zoom: 1.02;    /* image hover scale */
+  --motion-fast: 0.15s;
+  --motion-slow: 0.3s;
+  --ease: ease;
+
+  /* --- Bootstrap remap: utilities inherit the Batik palette ------------ */
+  --bs-body-bg: var(--color-neutral);
+  --bs-body-color: var(--color-ink);
+
+  --bs-primary: var(--color-primary);
+  --bs-primary-rgb: 176, 46, 90;
+  --bs-primary-text-emphasis: var(--color-primary-ink);
+  --bs-primary-bg-subtle: #F6E0E8;
+  --bs-primary-border-subtle: #E5B8C7;
+
+  --bs-info: var(--color-work);          /* Work */
+  --bs-info-rgb: 42, 75, 160;
+  --bs-info-text-emphasis: var(--color-work-ink);
+  --bs-info-bg-subtle: #E5E8F4;
+  --bs-info-border-subtle: #BEC7E6;
+
+  --bs-success: var(--color-life);       /* Life */
+  --bs-success-rgb: 30, 122, 84;
+  --bs-success-text-emphasis: var(--color-life-ink);
+  --bs-success-bg-subtle: #E1F0E9;
+  --bs-success-border-subtle: #BADCCB;
+
+  --bs-warning: var(--color-balance);    /* Balance */
+  --bs-warning-rgb: 197, 106, 18;
+  --bs-warning-text-emphasis: var(--color-balance-ink);
+  --bs-warning-bg-subtle: #F7E9D8;
+  --bs-warning-border-subtle: #EACDA6;
+
+  /* Links pick up the brand rose instead of Bootstrap blue */
+  --bs-link-color: var(--color-primary);
+  --bs-link-color-rgb: 176, 46, 90;
+  --bs-link-hover-color: var(--color-primary-ink);
+  --bs-link-hover-color-rgb: 110, 28, 57;
 }
 
 body {
-  font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
-  line-height: 1.6;
+  font-family: var(--font-body);
+  line-height: var(--leading-body);
 }
 
 h1, h2, h3, h4, h5, h6, .card-header, .page-title,
 .navbar, .breadcrumb, footer {
-  font-family: 'Unica One', sans-serif;
+  font-family: var(--font-display);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--tracking-display);
 }
 
 h1, h2 {
-  text-shadow: 2px 2px 0px #333; /* 2px horizontal, 2px vertical, 0 blur, dark gray color */
+  text-shadow: var(--shadow-heading);
 }
 
 /* Improved card styling */
@@ -32,31 +124,80 @@ h1, h2 {
 .card.button,
 .btn,
 .button {
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform var(--motion-fast) var(--ease), box-shadow var(--motion-fast) var(--ease);
   cursor: pointer;
 }
 
 .card.button:hover,
 .btn:hover,
 .button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(var(--motion-lift));
+  box-shadow: var(--shadow-hover) !important;
 }
 
 .card.button:active,
 .btn:active,
 .button:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(var(--motion-press));
+  box-shadow: var(--shadow-active) !important;
 }
 
 /* Improved image display */
 .figure-img {
-  transition: transform 0.3s ease;
+  transition: transform var(--motion-slow) var(--ease);
 }
 
 .figure-img:hover {
-  transform: scale(1.02);
+  transform: scale(var(--motion-zoom));
+}
+
+/* Bootstrap .btn-* colour variants read compiled component vars (--bs-btn-bg),
+   not the runtime --bs-* palette, so remap them onto the Batik tokens here.
+   (Loaded after Bootstrap; equal specificity, later wins.) */
+.btn-primary {
+  --bs-btn-bg: var(--color-primary);
+  --bs-btn-border-color: var(--color-primary);
+  --bs-btn-hover-bg: var(--color-primary-ink);
+  --bs-btn-hover-border-color: var(--color-primary-ink);
+  --bs-btn-active-bg: var(--color-primary-ink);
+  --bs-btn-active-border-color: var(--color-primary-ink);
+  --bs-btn-disabled-bg: var(--color-primary);
+  --bs-btn-disabled-border-color: var(--color-primary);
+}
+
+.btn-success {
+  --bs-btn-bg: var(--color-life);
+  --bs-btn-border-color: var(--color-life);
+  --bs-btn-hover-bg: var(--color-life-ink);
+  --bs-btn-hover-border-color: var(--color-life-ink);
+  --bs-btn-active-bg: var(--color-life-ink);
+  --bs-btn-active-border-color: var(--color-life-ink);
+  --bs-btn-disabled-bg: var(--color-life);
+  --bs-btn-disabled-border-color: var(--color-life);
+}
+
+.btn-info {
+  --bs-btn-bg: var(--color-work);
+  --bs-btn-border-color: var(--color-work);
+  --bs-btn-color: #fff;
+  --bs-btn-hover-bg: var(--color-work-ink);
+  --bs-btn-hover-border-color: var(--color-work-ink);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: var(--color-work-ink);
+  --bs-btn-active-border-color: var(--color-work-ink);
+  --bs-btn-active-color: #fff;
+}
+
+.btn-warning {
+  --bs-btn-bg: var(--color-balance);
+  --bs-btn-border-color: var(--color-balance);
+  --bs-btn-color: #fff;
+  --bs-btn-hover-bg: var(--color-balance-ink);
+  --bs-btn-hover-border-color: var(--color-balance-ink);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: var(--color-balance-ink);
+  --bs-btn-active-border-color: var(--color-balance-ink);
+  --bs-btn-active-color: #fff;
 }
 
 
@@ -72,7 +213,7 @@ h1, h2 {
 ol.card-group-list > li.card,
 ul.card-group-list > li.card {
   min-width: 30vw;
-  margin: 4px;
+  margin: var(--space-1);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -100,7 +241,7 @@ section:not(.grid-container) > article.card > figure > img {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
+  gap: var(--grid-gap);
   width: 100%;
 }
 
@@ -134,20 +275,20 @@ section:not(.grid-container) > article.card > figure > img {
 .card-2x1 {
   grid-column: span 2;
   grid-row: span 1;
-  width: calc(var(--card-base-size) * 2 + 1rem); /* Account for gap */
+  width: calc(var(--card-base-size) * 2 + var(--grid-gap)); /* Account for gap */
 }
 
 .card-1x2 {
   grid-column: span 1;
   grid-row: span 2;
-  height: calc(var(--card-base-size) * 2 + 1rem); /* Account for gap */
+  height: calc(var(--card-base-size) * 2 + var(--grid-gap)); /* Account for gap */
 }
 
 .card-2x2 {
   grid-column: span 2;
   grid-row: span 2;
-  width: calc(var(--card-base-size) * 2 + 1rem); /* Account for gap */
-  height: calc(var(--card-base-size) * 2 + 1rem); /* Account for gap */
+  width: calc(var(--card-base-size) * 2 + var(--grid-gap)); /* Account for gap */
+  height: calc(var(--card-base-size) * 2 + var(--grid-gap)); /* Account for gap */
 }
 
 /* Box Cards */
@@ -215,11 +356,11 @@ section.d-flex.flex-row > article.card {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
   :root {
     --card-base-size: 196px;
   }
-  
+
   ol.card-group-list > li.card,
   ul.card-group-list > li.card {
     max-width: 30vw;
@@ -227,11 +368,11 @@ section.d-flex.flex-row > article.card {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
   :root {
     --card-base-size: 256px;
   }
-  
+
   ol.card-group-list > li.card,
   ul.card-group-list > li.card {
     max-width: 40vw;
@@ -241,7 +382,7 @@ section.d-flex.flex-row > article.card {
     width: 100% !important;
     grid-column: span 2;
   }
-  
+
   section:not(.grid-container) > article.card.card-h1,
   section:not(.grid-container) > article.card.card-featured-img {
     width: 100% !important;
@@ -291,7 +432,7 @@ section:not(.grid-container) > article.card > figure > img {
   .figure {
     margin-bottom: 1.5rem;
   }
-  
+
   .row.g-4 {
     row-gap: 1rem !important;
   }
@@ -300,7 +441,7 @@ section:not(.grid-container) > article.card > figure > img {
 /* Improved blockquote styling */
 blockquote {
   font-style: italic;
-  color: #555;
+  color: var(--color-muted);
 }
 
 /* Smooth scrolling for better UX */
@@ -360,7 +501,7 @@ html {
 a:focus-visible,
 button:focus-visible,
 .btn:focus-visible {
-  outline: 3px solid var(--bs-primary);
+  outline: 3px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -400,7 +541,7 @@ button:focus-visible,
   color: #fff;
   font-size: 3rem;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: var(--shadow-title);
   margin: 0;
   display: flex;
   align-items: center;
@@ -477,26 +618,26 @@ body:has(.page-header-life) main h3,
 body:has(.page-header-life) main h4,
 body:has(.page-header-life) main h5,
 body:has(.page-header-life) main h6 {
-  color: var(--bs-success);
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+  color: var(--color-life-ink);
+  text-shadow: var(--shadow-heading-sub);
 }
 
-/* Work posts - cyan/info headings */
+/* Work posts - indigo headings */
 body:has(.page-header-work) main h2,
 body:has(.page-header-work) main h3,
 body:has(.page-header-work) main h4,
 body:has(.page-header-work) main h5,
 body:has(.page-header-work) main h6 {
-  color: var(--bs-info);
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+  color: var(--color-work-ink);
+  text-shadow: var(--shadow-heading-sub);
 }
 
-/* Balance posts - warning/amber headings */
+/* Balance posts - saffron headings (text-safe ink variant for contrast) */
 body:has(.page-header-balance) main h2,
 body:has(.page-header-balance) main h3,
 body:has(.page-header-balance) main h4,
 body:has(.page-header-balance) main h5,
 body:has(.page-header-balance) main h6 {
-  color: var(--bs-warning);
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+  color: var(--color-balance-ink);
+  text-shadow: var(--shadow-heading-sub);
 }
