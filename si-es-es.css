@@ -43,6 +43,7 @@
 
   /* --- Sizing ---------------------------------------------------------- */
   --card-base-size: 150px;   /* overridden responsively in media queries */
+  --measure: 36rem;          /* comfortable reading column for post prose (~70 cpl) */
 
   /* --- Radius ---------------------------------------------------------- */
   --radius-sm: 6px;
@@ -669,4 +670,56 @@ body:has(.page-header-balance) main h5,
 body:has(.page-header-balance) main h6 {
   color: var(--color-balance-ink);
   text-shadow: var(--shadow-heading-sub);
+}
+
+/* =========================================================================
+   Post reading layout
+   Markdown-converted posts pour prose straight into `main.container` (1140px),
+   which runs the measure far past readable (~140 chars/line). Cap the reading
+   column to a comfortable width and centre it. This targets only DIRECT prose
+   children of the article container, so posts that use their own row/col
+   layout (case studies like Day Food Catalogue — content lives in
+   `section.row > .col`, never a direct child of main) are left untouched.
+   ========================================================================= */
+main.container > article.post-content,
+main.container > p,
+main.container > h1,
+main.container > h2,
+main.container > h3,
+main.container > h4,
+main.container > h5,
+main.container > h6,
+main.container > ul,
+main.container > ol,
+main.container > dl,
+main.container > blockquote,
+main.container > figure,
+main.container > pre,
+main.container > table,
+main.container > hr,
+main.container > iframe {
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* The article wrapper is the reading column; its children fill it. */
+main.container > article.post-content > * {
+  max-width: 100%;
+}
+
+/* Vertical rhythm: give in-post headings room above, tighter to what follows. */
+main.container > article.post-content h2,
+main.container > article.post-content h3,
+main.container > h2,
+main.container > h3 {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+
+/* Images in the reading column stay within measure and keep their ratio. */
+main.container > article.post-content figure img,
+main.container > figure img {
+  max-width: 100%;
+  height: auto;
 }
