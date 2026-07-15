@@ -10,6 +10,8 @@ published: true
 sitemap: true
 ---
 
+<!-- owner: intentional short-form? left as-is -->
+
 | Project | TM Parody Advertisement |
 | Technology Stack | Adobe Photoshop |
 | Year | 2009 |

@@ -10,6 +10,8 @@ published: true
 sitemap: true
 ---
 
+<!-- AI-DRAFTED: review & edit -->
+
 | Project | Orang Kasar Theatre Production |
 | Responsibilities | Director, Producer |
 | Location | Revolution Stage |
@@ -19,6 +21,14 @@ sitemap: true
 
 ![Poster Orang Kasar.](/images/posts/70749792_10156914013949545_8267946219578327040_n.jpeg)
 *Poster Orang Kasar.*
+
+## About the Production 🎭
+
+**[owner: a couple of sentences on what Orang Kasar was about, and what it meant to direct and produce it]**
+
+## What I Took Away 💭
+
+**[owner: what you learned wearing both the director and producer hats — leave your own words here]**
 
 ## Retrospective: 
 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frudzainy.rahman%2Fposts%2Fpfbid0x4EnLQ2kooDHgGioU8L3ckALRzdq2uJQxePMWUtcpQ4wZ18yTsEs3t3VsPiRo3H8l&show_text=true&width=500" width="500" height="955" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>

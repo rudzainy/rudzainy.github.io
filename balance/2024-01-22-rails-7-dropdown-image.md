@@ -10,6 +10,16 @@ published: false
 sitemap: false
 ---
 
+<!-- AI-DRAFTED: review & edit -->
+
+A quick note on adding an image dropdown in Rails 7.
+
+## User Flow
+
 1. User goes to show page.
 2. User clicks edit.
-3. 
+3. **[owner: continue the flow]**
+
+## Steps
+
+**[owner: paste the actual steps / code here]**

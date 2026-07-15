@@ -10,6 +10,8 @@ published: true
 sitemap: true
 ---
 
+<!-- owner: intentional short-form? left as-is -->
+
 I needed to post an update for gugel.
 
 I noticed when recording the screen, it saves the file in `.mp4` format.
