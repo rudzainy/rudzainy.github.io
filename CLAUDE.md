@@ -25,7 +25,7 @@ There is no build step. Edit files directly and push:
 
 ```bash
 # View locally — open any HTML file in a browser, or serve the folder
-python3 -m http.server 8000
+ruby -run -e httpd . -p 8000
 
 # Deploy — push to main; GitHub Pages serves automatically
 git push origin main
