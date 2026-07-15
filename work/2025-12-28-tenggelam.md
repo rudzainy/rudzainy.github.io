@@ -1,14 +1,14 @@
---- 
-layout: post 
-title: Tenggelam 
-date: 2025-12-28 13:43 +0800 
+---
+layout: post
+title: Tenggelam
+date: 2025-12-28 13:43 +0800
 description: Cerita pendek tentang masa hadapan
-image: 
+image:
 category: Work
-tags: [writing, story] 
-published: false 
-sitemap: false 
---- 
+tags: [writing, story]
+published: false
+sitemap: false
+---
  
 The Sync Café had no name anymore. Whatever sign once hung above its door had been replaced so many times that the owners eventually stopped bothering, leaving only a faded outline where letters used to be. Regulars called it Kedai Jam—the Clock Shop—though no one remembered why.
 
