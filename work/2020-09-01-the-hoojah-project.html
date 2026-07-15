@@ -5,7 +5,7 @@
 		<title>The Hoojah Project by Rudzainy Rahman</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
+
 		<!-- Ruby on Browser --
 		< script src="https://cdn.jsdelivr.net/npm/ruby-3_2-wasm-wasi@1.0.1/dist/browser.script.iife.js"></script >
 		!-- end Ruby on Browser -->
@@ -14,7 +14,7 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 		<!-- end Bootstrap CSS & Icons -->
-		
+
 		<link rel="stylesheet" type="text/css" href="../si-es-es.css">
 	</head>
 	<body>
@@ -144,7 +144,7 @@
 
 					<h4 class="mt-4 text-primary"><i class="bi bi-diagram-3 me-2"></i>System Architecture</h4>
 					<p>Hoojah was built with a modern tech stack designed for scalability and real-time interactions. The architecture balances performance needs with development efficiency, allowing for rapid iteration while maintaining a responsive user experience.</p>
-					
+
 					<figure class="figure mb-4">
 						<div class="bg-light p-3 rounded shadow">
 							<pre class="mermaid">
@@ -154,28 +154,28 @@
 									SCSS["SCSS Styling"]
 									API["API Clients"]
 								end
-								
+
 								subgraph Server["Server Layer"]
 									Rails["Ruby on Rails"]
 									REST["RESTful API"]
 									Auth["Authentication"]
 								end
-								
+
 								subgraph Data["Data Layer"]
 									DB[("PostgreSQL")]
 									Redis[("Redis Cache")]
 									S3[("S3 Storage")]
 								end
-								
+
 								subgraph Services["External Services"]
 									Discourse["Discourse Forum"]
 									Analytics["Analytics"]
 								end
-								
+
 								Client --> Server
 								Server --> Data
 								Server --> Services
-								
+
 								class Client,Server,Data,Services headerClass
 								classDef headerClass fill:#f8f9fa,stroke:#495057,stroke-width:1px
 								classDef default fill:#fff,stroke:#6c757d
@@ -329,7 +329,7 @@
 								<img src="../images/portfolio/hoojah/debate-view.png" class="figure-img img-fluid rounded shadow" alt="Debate mode between two participants">
 								<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Figure 4a: Debate mode in action - a concept I first sketched in my notebook during a long bus ride, now fully realized.</figcaption>
 							</figure>
-							
+
 							<figure class="figure mb-3">
 								<div class="bg-light p-3 rounded shadow">
 									<pre class="mermaid">
@@ -338,33 +338,33 @@
 										participant U1 as User 1
 										participant H as Hoojah
 										participant U2 as User 2
-										
+
 										U1->>H: Challenge to debate
 										H->>U2: Notify of challenge
 										U2->>H: Accept challenge
 										H->>U1: Debate initiated
-										
+
 										Note over U1,U2: Structured Debate Begins
-										
+
 										U1->>H: Opening statement
 										H->>U2: Display statement
 										U2->>H: Counter argument
 										H->>U1: Display counter
-										
+
 										loop Debate Exchange
 											U1->>H: Response
 											H->>U2: Display response
 											U2->>H: Response
 											H->>U1: Display response
 										end
-										
+
 										U1->>H: Closing statement
 										H->>U2: Display closing
 										U2->>H: Closing statement
 										H->>U1: Display closing
-										
+
 										Note over U1,U2: Debate Concluded
-										
+
 										H->>U1: Archive debate
 										H->>U2: Archive debate
 										H->>H: Make debate public
@@ -493,7 +493,7 @@
 			</section>
 			<!-- end Section: Objectives -->
 
-						
+
 			<!-- Section: Moving Forward -->
 			<section class="row py-4">
 				<div class="col-12 col-lg-6 mx-auto mb-5">
@@ -559,39 +559,39 @@
 		<footer class="container">
 			<section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
 				<div class="col-md-4 d-flex align-items-center">
-					<span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau" data-bs-toggle="modal" data-bs-target="#takdeModal">~|{·})</a> <a href="/LICENSE"  class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span> 
-				</div> 
+					<span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau" data-bs-toggle="modal" data-bs-target="#takdeModal">~|{·})</a> <a href="/LICENSE"  class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span>
+				</div>
 				<div class="col-md-4 d-flex justify-content-center">
 					<a href="/work/" class="text-decoration-none me-3">Back to Work</a>
 					<a href="#top" class="text-decoration-none">Back to top</a>
 				</div>
-				<ul class="nav col-md-4 justify-content-end list-unstyled d-flex"> 
+				<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
 					<li class="ms-3">
 						<a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
 							<i class="bi bi-github me-2"></i><span class="visually-hidden">GitHub</span>
 						</a>
-					</li> 
+					</li>
 					<li class="ms-3">
 						<a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙">
 							<i class="bi bi-suit-heart-fill me-2"></i><span class="visually-hidden">Sama²</span>
 						</a>
-					</li> 
+					</li>
 					<li class="ms-3 mt-n1">
 						<a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
 							<i class="bi bi-cup-hot-fill me-2"></i><span class="visually-hidden">Ko-fi</span>
 						</a>
-					</li> 
-				</ul> 
+					</li>
+				</ul>
 			</section>
 		</footer>
 		<!-- end Footer Section -->
 
 		<script src="../jei-es.js"></script>
-		
+
 		<!-- Bootstrap JS -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 		<!-- end Bootstrap JS -->
-		
+
 		<!-- Mermaid for diagrams -->
 		<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 		<script>

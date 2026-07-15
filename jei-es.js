@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     while (true) {
       await new Promise(r => setTimeout(r, randomDelay()));
       await smoothScroll(element, element.scrollHeight - element.clientHeight);
-      
+
       await new Promise(r => setTimeout(r, randomDelay()));
       await smoothScroll(element, 0);
     }

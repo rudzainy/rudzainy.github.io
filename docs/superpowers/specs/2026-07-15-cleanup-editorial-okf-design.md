@@ -44,14 +44,14 @@ These are the soul of the site. The design system *codifies* them; it does
 not redesign them.
 
 - **Bento-box layout** — mixed-size cards in a grid. Kept exactly.
-- **Category colour-coding:**
-  - Work = **blue**
-  - Life = **green**
-  - Balance = **amber / yellow**
-  - plus neutral **white** cards.
-  These currently come from Bootstrap utility classes / per-page styling,
-  *not* from `si-es-es.css`. The design system consolidates them into
-  tokens (`--color-work`, `--color-life`, `--color-balance`, `--color-neutral`).
+- **Category colour-coding as a CONCEPT is invariant** (Work / Life /
+  Balance must remain visually distinguished by colour, plus neutral white
+  cards). But the **actual colour values are free to change** — the owner
+  has approved moving Work/Life/Balance *and* the primary colours to a
+  **bespoke palette off Bootstrap's defaults**. Current mapping is
+  blue/green/amber; the design system may replace these with intentional,
+  branded hues. Consolidated into tokens (`--color-work`, `--color-life`,
+  `--color-balance`, `--color-neutral`, `--color-primary`).
 - **Typography:**
   - Display / headings — **Unica One** (condensed uppercase).
   - Body / quotes — **Crimson Text** (serif).
@@ -162,7 +162,9 @@ consistency between pages, and anything not listed above.
 - `README.md` reads in the owner's voice and matches reality.
 
 ## Out of scope
-- Any change to the bento layout, category colour-coding, or fonts.
+- Any change to the bento layout or the *concept* of category colour-coding
+  (the specific colour values may change to a bespoke palette); any change
+  to the fonts.
 - Fabricating personal facts/memories in draft posts.
 - Introducing a build system / SSG.
 - Reworking the `components/` catalog beyond documenting + tokenizing it.
