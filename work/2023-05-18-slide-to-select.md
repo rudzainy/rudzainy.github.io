@@ -3,7 +3,7 @@ layout: post
 title: Slide to Select
 date: 2023-05-18 11:20 +0800
 description:
-image: /assets/img/posts/slide-to-select.png
+image: /images/posts/slide-to-select.png
 category: Work
 tags: [ux]
 published: false
@@ -19,7 +19,7 @@ sitemap: false
 
 ## The Problem
 
-![Slide to select](/assets/img/posts/tap-to-select.png)
+![Slide to select](/images/posts/tap-to-select.png)
 
 - objects moving too fast
 - too may taps
@@ -30,7 +30,7 @@ sitemap: false
 
 ## Tinder Swipe!
 
-![Slide to select](/assets/img/posts/slide-to-select.gif)
+![Slide to select](/images/posts/slide-to-select.gif)
 
 - can remove send button
 - slider control to allow unselect

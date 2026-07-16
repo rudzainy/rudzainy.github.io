@@ -3,7 +3,7 @@ layout: post
 title: Snapshot of Website
 date: 2018-02-25 00:00 +0800
 description: Old version of rudzainy.com
-image: assets/img/posts/web-archive-org_web_20180225222417_http___rudzainy.com_.png
+image: /images/posts/web-archive-org_web_20180225222417_http___rudzainy.com_.png
 category: Work
 tags: [html, cs, javascript, website]
 published: true
@@ -18,5 +18,5 @@ sitemap: true
 
 Old design of rudzainy.com built with HTML, CSS and JavaScript.
 
-{ % responsive_image path: assets/img/posts/rudzainy_dot_com_old.gif alt: "Old design of rudzainy.com built with HTML, CSS and JavaScript." %}
+![Old design of rudzainy.com built with HTML, CSS and JavaScript.](/images/posts/rudzainy_dot_com_old.gif)
 *Old design of rudzainy.com built with HTML, CSS and JavaScript.*

@@ -2,7 +2,7 @@
 layout: post
 title: of Video Games
 date: 2024-01-03 09:09 +0800
-description:
+description: A personal catalogue of video games that Rudzainy Rahman has invested serious time in — from the NES to Nintendo Switch.
 image:
 category: Balance
 tags: [video games]

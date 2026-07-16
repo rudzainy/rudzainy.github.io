@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     while (true) {
       await new Promise(r => setTimeout(r, randomDelay()));
       await smoothScroll(element, element.scrollHeight - element.clientHeight);
-      
+
       await new Promise(r => setTimeout(r, randomDelay()));
       await smoothScroll(element, 0);
     }
@@ -181,3 +181,21 @@ let hackering = () => {
     box.innerHTML = "Congrtulations code breaker person! 👀<br />Here are some goodies for you:<br /><ol><li><a href='/docs/'>Some documents</a></li><li>...</li><li>Unlisted YouTube videos:<ul><li><a href='https://youtu.be/haeEC00aPTM'>Maya x Rudzainy Solemnization</a></li><li><a href='https://youtu.be/VVevtD-_F8Y'>Test link</a></li></ul></li><li><a href='https://rudzainy.blogspot.com/'>Old blog</a></li></ol><br /><h2>Thinking of a name for this section 🤔</h2><ul><li><a href='/components/index.html'>Components</a></li><li><a href='https://rudzainy.github.io'>rudzainy.github.io</a></li><li>3</li><li>4</li></ul>";
   };
 };
+
+// SmartImage: swap failed images for the songket-stripe placeholder
+(function () {
+  function toPlaceholder(img) {
+    var frame = img.closest('.smart-image');
+    if (!frame) return;
+    var label = img.getAttribute('data-fallback') || img.getAttribute('alt') || 'image';
+    frame.classList.add('smart-image-placeholder');
+    frame.setAttribute('role', 'img');
+    frame.setAttribute('aria-label', label);
+    frame.innerHTML = '<span class="label"></span>';
+    frame.querySelector('.label').textContent = label;
+  }
+  document.addEventListener('error', function (e) {
+    var t = e.target;
+    if (t && t.tagName === 'IMG' && t.closest('.smart-image')) toPlaceholder(t);
+  }, true); // capture: image error events don't bubble
+})();

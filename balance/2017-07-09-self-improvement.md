@@ -10,5 +10,7 @@ published: true
 sitemap: true
 ---
 
+<!-- owner: intentional short-form? left as-is -->
+
 Be selfish<br />
 for the right reasons.

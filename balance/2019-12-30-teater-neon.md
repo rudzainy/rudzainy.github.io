@@ -10,8 +10,18 @@ published: false
 sitemap: false
 ---
 
+<!-- AI-DRAFTED: review & edit -->
+
 | Project | Teater Neon |
 | Responsibilities | Actor |
 | Location | Revolution Stage |
 | Year | 2019 |
 | Instagram | [View in Instagram](https://www.instagram.com/p/B6qeVwkJXku/) |
+
+## About the Production 🎭
+
+**[owner: a line or two on Teater Neon and the character/role you played]**
+
+## Notes from the Stage 💭
+
+**[owner: what stepping in as an actor here was like for you — your words]**

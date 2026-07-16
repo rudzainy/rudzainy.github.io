@@ -1,3 +1,15 @@
+---
+layout: post
+title: Day Food Catalogue
+date: 2025-09-11 09:00 +0800
+description: A case study on Day Food Catalogue — a mobile-first, offline-capable PWA for showcasing food products.
+image: /images/portfolio/dayfood/featured.png
+category: Work
+tags: [ui, ux, pwa, case study]
+published: true
+sitemap: true
+---
+
 # Day Food Catalogue: Case Study
 
 ## Executive Summary

@@ -1,397 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Day Food Catalogue - Case Study by Rudzainy Rahman</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Mobile-first e‑commerce catalogue with Viber checkout (auto‑populated quote), plus search, filter, quote builder, and PWA support.">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Day Food Catalogue by Rudzainy Rahman</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mobile-first e‑commerce catalogue with Viber checkout (auto‑populated quote), plus search, filter, quote builder, and PWA support.">
 
-		<!-- Bootstrap CSS & Icons-->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-		<!-- end Bootstrap CSS & Icons -->
-		
-		<link rel="stylesheet" type="text/css" href="../si-es-es.css">
-	</head>
-	<body>
-		<!-- Top Navigation Bar -->
-		<nav class="navbar navbar-expand-lg border-bottom border-info">
-			<div class="container">
-				<a href="/" title="Wow! It's a Wau!" class="navbar-brand text-info d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
-				<button class="navbar-toggler border-0 text-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		      ~|{·})
-		    </button>
-		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-						<li class="nav-item">
-							<a href="/work/" class="nav-link"><i class="bi bi-person-fill-gear me-2"></i>Work</a>
-						</li>
-						<li class="nav-item">
-							<a href="/life/" class="nav-link"><i class="bi bi-person-hearts me-2"></i>Life</a>
-						</li>
-						<li class="nav-item">
-							<a href="/balance/" class="nav-link"><i class="bi bi-person-lines-fill me-2"></i>Balance</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<!-- end Top Navigation Bar -->
+    <!-- Bootstrap CSS & Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+    <!-- end Bootstrap CSS & Icons -->
 
-		<!-- Page Header with Background -->
-		<div class="page-header-work">
-		<!-- Breadcrumb -->
-		<nav aria-label="breadcrumb" class="container pt-3">
-			<ol class="breadcrumb mb-0">
-				<li class="breadcrumb-item"><a href="/" class="text-dark">Home</a></li>
-				<li class="breadcrumb-item"><a href="/work/" class="text-dark">Work</a></li>
-				<li class="breadcrumb-item active text-dark" aria-current="page">Day Food Catalogue</li>
-			</ol>
-		</nav>
-		<!-- end Breadcrumb -->
+    <link rel="stylesheet" type="text/css" href="../si-es-es.css">
+  </head>
+  <body data-category="work">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-info">
+      <div class="container">
+        <a href="/" title="Wow! It's a Wau!" class="navbar-brand text-info d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+        <button class="navbar-toggler border-0 text-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          ~|{·})
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/work/" class="nav-link"><i class="icon-pencil-ruler me-2"></i>Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="/life/" class="nav-link"><i class="icon-sun me-2"></i>Life</a>
+            </li>
+            <li class="nav-item">
+              <a href="/balance/" class="nav-link"><i class="icon-mountain me-2"></i>Balance</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end Top Navigation Bar -->
 
-		<!-- Header Section -->
-		<header class="container mt-4">
-			<section class="d-flex flex-wrap flex-row align-items-center gap-3 gap-lg-5">
-				<article class="card card-featured-img">
-					<figure class="mb-0">
-						<img src="../images/portfolio/dayfood/featured.png" class="card-img object-fit-cover" alt="Day Food Catalogue web interface" loading="eager">
-						<figcaption class="visually-hidden">Day Food Catalogue web interface showing food items in a grid layout.</figcaption>
-					</figure>
-				</article>
-				<h1 class="page-title">Day Food Catalogue</h1>
-			</section>
-			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
-				<article class="card">
-					<p class="card-body text-center">E‑commerce Catalogue with Viber Checkout</p>
-				</article>
-				<article class="card">
-					<div class="card-header">Key Features</div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<ul class="mb-0">
-							<li>Checkout to Viber with auto-populated quote</li>
-							<li>Search and filter across products</li>
-							<li>Quote (shopping cart) workflow</li>
-							<li>PWA install and offline basics</li>
-						</ul>
-					</div>
-				</article>
-				<article class="card">
-					<div class="card-header"><pre class="text-uppercase">Project Info</pre></div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<h6>Project Owners</h6>
-						<ul class="mb-0">
-							<li><a href="https://dayfoodinvestments.com" target="_blank">Day Food Investments</a></li>
-							<li>Kintsugi Design</li>
-						</ul>
-						<h6>Technology Stack</h6>
-						<ul class="mb-0">
-							<li>Ruby on Rails + Hotwire (Turbo, Stimulus, Native)</li>
-							<li>Solidus Commerce</li>
-						</ul>
-					</div>
-				</article>
-				<article class="card">
-					<div class="card-header">Year</div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<p class="card-text">2024 - 2025</p>
-					</div>
-				</article>
-				<article class="card">
-					<div class="card-header"><i class="bi bi-clock me-1"></i>Read Time</div>
-					<div class="card-body d-flex flex-column justify-content-center">
-						<p class="card-text text-center mb-0"><strong>12-15 min</strong></p>
-					</div>
-				</article>
-				<article class="card">
-					<div class="card-header">Project Links</div>
-					<div class="card-body d-flex flex-column gap-2">
-						<a href="https://dayfood.mv" class="btn btn-outline-primary" target="_blank">
-							<i class="bi bi-box-arrow-up-right me-2"></i>Visit dayfood.mv
-						</a>
-					</div>
-				</article>
-			</section>
-		</header>
-		<!-- end Header Section -->
-		</div>
-		<!-- end Page Header with Background -->
+    <!-- Page Header Band (solid category colour) -->
+    <div class="page-header-work" style="padding-bottom:0">
+      <div style="max-width:1140px;margin:0 auto;padding:20px 24px 0">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0" style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/work/">Work</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Day Food Catalogue</li>
+          </ol>
+        </nav>
+        <!-- end Breadcrumb -->
 
-		<!-- Main Content Section -->
-		<main class="container my-5">
+        <!-- Hero: kicker + title + standfirst + featured image -->
+        <div class="header-hero-grid" style="display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center;padding:36px 0 44px">
+          <div>
+            <p style="margin:0 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px;color:rgba(255,255,255,0.75)">Case study · 2024–2025</p>
+            <h1 class="page-title" style="display:block;font-size:clamp(2.5rem,1.1rem + 4.5vw,4.5rem);line-height:1.05;text-wrap:balance">Day Food Catalogue</h1>
+            <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:54ch">A mobile-first e‑commerce catalogue for Day Food's customers in the Maldives, where Viber Pay is the most convenient payment method. Checkout composes a quotation and opens Viber with the message auto‑populated — customers just tap send.</p>
+          </div>
+          <figure style="margin:0;background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-hover)">
+            <img src="../images/portfolio/dayfood/featured.png" alt="Day Food Catalogue web interface showing food items in a grid layout" loading="lazy" style="width:100%;display:block;object-fit:cover;object-position:top;max-height:280px">
+            <figcaption style="padding:8px 14px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--color-muted);border-top:1px solid rgba(0,0,0,0.1)">Day Food · food items in a grid layout</figcaption>
+          </figure>
+        </div>
 
-			<!-- Section: Summary -->
-			<section class="row py-4">
-				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-book me-2 text-info"></i>Summary</h3>
-					<p class="lead">Day Food Catalogue is a mobile-first catalogue focusing on the needs of Day Food's customers in the Maldives where Viber Pay is the most convenient payment method.</p>
-					<p>Checkout generates a quotation and opens Viber with the message auto-populated. Customers just tap send to order. Includes search, filter, and a quote (shopping cart).</p>
-					<blockquote class="blockquote">
-						<p>Day Food Catalogue reduces friction at checkout!</p>
-					</blockquote>  
-					<p>Beyond standard e‑commerce capabilities, the checkout composes a quotation and opens Viber with the message prefilled so customers can confirm in one tap.</p>
-					<p>The current version allows customers to select product without variant or unit-of-measure, so there are still a bit of friction before order is placed. Variants & unit-of-measure and automatic order creation in Odoo are in development and will be added in the next phase.</p>
-					<p>There is also a basic PWA layer that supports regular customers who prefer an app-like experience.</p>
-				</div>
-			</section>
-			<!-- end Section: Summary -->
+        <!-- Featured meta strip (overlaps the band) -->
+        <div class="header-meta-strip" style="background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);box-shadow:var(--shadow-active);display:grid;grid-template-columns:repeat(4,1fr);position:relative;transform:translateY(56px);margin-top:-56px">
+          <div style="padding:16px 20px">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Project owners</div>
+            <p style="margin:0"><a href="https://dayfoodinvestments.com" target="_blank" rel="noopener">Day Food Investments</a>, Kintsugi Design</p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Technology stack</div>
+            <p style="margin:0">Ruby on Rails + Hotwire (Turbo, Stimulus, Native), Solidus Commerce</p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Year</div>
+            <p style="margin:0"><time datetime="2024">2024</time>–<time datetime="2025">2025</time></p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Project links</div>
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+              <span class="meta-link text-muted"><i class="icon-external-link" aria-hidden="true"></i>dayfood.mv &mdash; link no longer works</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Page Header Band -->
 
-			<!-- Section: Problem Statement & Goals -->
-			<section class="row py-4">
-				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-bullseye me-2 text-info"></i>1. Problem Statement & Goals</h3>
-					<p>Ordering commonly happens through Viber chats with sales. The friction is turning customer's intent into a structured quote that sales can process quickly. Mobile-first is a must as Viber is the primary communication channel in the Maldives.</p>
-					<div class="row g-4 mt-2">
-						<div class="col-md-6">
-							<h5 class="text-info">Goals</h5>
-							<ul>
-								<li>One‑tap checkout that composes a structured quotation into Viber</li>
-								<li>Fast product discovery: search, filter, brand‑led browsing</li>
-								<li>Cart as quote builder (not a payment cart)</li>
-								<li>Mobile‑first design while also responsive on larger screens</li>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<h5 class="text-info">Non‑Goals (Phase 2)</h5>
-							<ul>
-								<li>Payments integration</li>
-								<li>Variants & unit‑of‑measure selection</li>
-								<li>Automatic Odoo order creation</li>
-							</ul>
-						</div>
-					</div>
-						<figure class="mb-2 mt-3">
-							<div class="bg-light p-3 rounded shadow">
-								<pre class="mermaid">
-								flowchart TD
-								    subgraph Customer["Customer Domain"]
-								        C1["Small Vendors"]
-								        C2["Hotel Purchasers"]
-								        C3["Restaurant Managers"]
-								    end
-								    
-								    subgraph Sales["Sales Domain"]
-								        S1["Sales Reps"]
-								        S2["Viber Communication"]
-								        S3["Quote Processing"]
-								    end
-								    
-								    subgraph Ops["Operations Domain"]
-								        O1["Order Fulfillment"]
-								        O2["Inventory Management"]
-								        O3["Logistics"]
-								    end
-								    
-								    subgraph ERP["ERP Domain"]
-								        E1["Odoo System"]
-								        E2["Order Records"]
-								        E3["Reporting"]
-								    end
-								    
-								    Customer -->|"Browse & Build Quote"| Sales
-								    Sales -->|"Confirm Order"| Ops
-								    Sales -->|"Create Record"| ERP
-								    Ops -->|"Update Status"| ERP
-								    ERP -->|"Sync Status"| Sales
-								    Ops -->|"Deliver Products"| Customer
-								    
-								    classDef domainClass fill:#f8f9fa,stroke:#0dcaf0,stroke-width:1px
-								    class Customer,Sales,Ops,ERP domainClass
-								</pre>
-							</div>
-							<figcaption class="text-center fst-italic text-secondary mt-2">Context Map showing relationships between Customer, Sales, Operations, and ERP domains</figcaption>
-						</figure>
-					</div>
-				</div>
-			</section>
-			<!-- end Section: Problem Statement & Goals -->
+    <!-- Main Content Section -->
+    <main style="max-width:1140px;margin:0 auto;padding:104px 24px 32px">
+      <article style="max-width:var(--measure);margin:0 auto">
 
-			<!-- Section: Background -->
-			<section class="row py-4">
-				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-people-fill me-2 text-info"></i>2. Background</h3>
-					<p>Day Food Maldives serves customers across more than 200 islands with varying connectivity. Sales conversations commonly happen on Viber, a channel customers already trust. The product needed to work well on mobile, support quick discovery, and streamline the handoff from deciding to actually placing an order.</p>
-				</div>
-			</section>
-			<!-- end Section: Background -->
+        <h2 style="display:flex;align-items:center;gap:12px;margin:0 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-book-open" aria-hidden="true" style="font-size:0.8em"></i>Summary</h2>
+        <p class="lead">Day Food Catalogue is a mobile-first catalogue focusing on the needs of Day Food's customers in the Maldives where Viber Pay is the most convenient payment method.</p>
+        <p>Checkout generates a quotation and opens Viber with the message auto-populated. Customers just tap send to order. Includes search, filter, and a quote (shopping cart).</p>
+        <blockquote class="blockquote">
+          <p>Day Food Catalogue reduces friction at checkout!</p>
+        </blockquote>
+        <p>Beyond standard e‑commerce capabilities, the checkout composes a quotation and opens Viber with the message prefilled so customers can confirm in one tap.</p>
+        <p>The current version allows customers to select product without variant or unit-of-measure, so there are still a bit of friction before order is placed. Variants &amp; unit-of-measure and automatic order creation in Odoo are in development and will be added in the next phase.</p>
+        <p>There is also a basic PWA layer that supports regular customers who prefer an app-like experience.</p>
+        <h3 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">Key Features</h3>
+        <ul>
+          <li>Checkout to Viber with auto-populated quote</li>
+          <li>Search and filter across products</li>
+          <li>Quote (shopping cart) workflow</li>
+          <li>PWA install and offline basics</li>
+        </ul>
+        <p><strong><i class="icon-clock me-1" aria-hidden="true"></i>Read time:</strong> 12-15 min. This is an E‑commerce Catalogue with Viber Checkout, built during 2024–2025 with Project Owners Day Food Investments and Kintsugi Design. Project links: <span class="text-muted">dayfood.mv &mdash; link no longer works</span>.</p>
+      </article>
 
-			<!-- Section: User Research -->
-			<section class="row py-4">
-				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-people me-2 text-info"></i>3. User Research</h3>
-					<p>The Day Food team shared valuable insights from their customer interactions. Vendors, hotel purchasers, and restaurant managers all need to browse products efficiently and place orders through Viber. The design needed to accommodate both regular customers who know exactly what they want and new customers who need to explore the catalog.</p>
-					<div class="row g-4 mt-2">
-						<div class="col-md-6">
-							<h5 class="text-info">Key User Types</h5>
-							<ul>
-								<li>Small vendors making weekly/bi‑weekly orders</li>
-								<li>Hotel purchasers with bulk orders</li>
-								<li>Restaurant managers with frequent orders</li>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<h5 class="text-info">Internal Users</h5>
-							<ul>
-								<li>Sales reps confirming orders via Viber</li>
-								<li>Ops staff fulfilling and reconciling orders</li>
-							</ul>
-						</div>
-					</div>
-						<div class="mt-4">
-							<figure class="mb-2">
-								<div class="p-3">
-									<pre class="mermaid">
-									mindmap
-										root((User Types))
-											::icon(fa fa-users)
-											Primary Users
-												::icon(fa fa-store)
-												Small Vendors
-													::icon(fa fa-calendar-week)
-													Weekly Orders
-													Bi-Weekly Orders
-												Hotel Purchasers
-													::icon(fa fa-hotel)
-													Bulk Orders
-													Specific Requirements
-												Restaurant Managers
-													::icon(fa fa-utensils)
-													Frequent Orders
-													Specialty Items
-											Internal Users
-												::icon(fa fa-building)
-												Sales Reps
-													::icon(fa fa-comments)
-													Viber Communication
-													Order Confirmation
-												Operations Staff
-													::icon(fa fa-clipboard-check)
-													Order Fulfillment
-													Order Reconciliation
-									</pre>
-								</div>
-								<figcaption class="text-center fst-italic text-secondary mt-2">User types and their key characteristics</figcaption>
-							</figure>
-						</div>
-							
-						<div class="mt-4">
-							<figure class="mb-2">
-								<div class="p-3">
-									<pre class="mermaid">
-									journey
-										title User Journey
-										section Discover
-											Search by Brand: 5: Customer
-											Browse Categories: 4: Customer
-											Filter Products: 4: Customer
-										section Build Quote
-											Add Products: 5: Customer
-											Adjust Quantities: 4: Customer
-											Review Quote: 3: Customer
-										section Confirm
-											Send via Viber: 5: Customer, Sales
-											Discuss Details: 4: Customer, Sales
-											Finalize Order: 3: Sales, Ops
-									</pre>
-								</div>
-								<figcaption class="text-center fst-italic text-secondary mt-2">Customer journey with satisfaction ratings at each step</figcaption>
-							</figure>
-						</div>
-						
-						<div class="mt-4">
-							<figure class="mb-2">
-								<div class="p-3">
-									<pre class="mermaid">
-									graph LR
-									    subgraph "Key Research Insights"
-									        I1["Viber is trusted"] --> S1["Keep human-in-the-loop"];
-									        I2["Brand-focused search"] --> S2["Optimize brand filtering"];
-									        I3["Remote connectivity issues"] --> S3["Offline-friendly browsing"];
-									    end
-									    
-									    subgraph "Design Implications"
-									        S1 --> D1["Viber checkout flow"];
-									        S2 --> D2["Brand-first navigation"];
-									        S3 --> D3["PWA with caching"];
-									    end
-									    
-									    classDef insights fill:#e3f2fd,stroke:#0d6efd,stroke-width:1px;
-									    classDef solutions fill:#d1e7dd,stroke:#198754,stroke-width:1px;
-									    classDef designs fill:#fff3cd,stroke:#ffc107,stroke-width:1px;
-									    
-									    class I1,I2,I3 insights;
-									    class S1,S2,S3 solutions;
-									    class D1,D2,D3 designs;
-									</pre>
-								</div>
-								<figcaption class="text-center fst-italic text-secondary mt-2">Research insights and their impact on design decisions</figcaption>
-							</figure>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end Section: Users & Research -->
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-target" aria-hidden="true" style="font-size:0.8em"></i>1. Problem Statement &amp; Goals</h2>
+        <p>Ordering commonly happens through Viber chats with sales. The friction is turning customer's intent into a structured quote that sales can process quickly. Mobile-first is a must as Viber is the primary communication channel in the Maldives.</p>
+        <div class="row g-4 mt-2">
+          <div class="col-md-6">
+            <h5 style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">Goals</h5>
+            <ul>
+              <li>One‑tap checkout that composes a structured quotation into Viber</li>
+              <li>Fast product discovery: search, filter, brand‑led browsing</li>
+              <li>Cart as quote builder (not a payment cart)</li>
+              <li>Mobile‑first design while also responsive on larger screens</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5 style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">Non‑Goals (Phase 2)</h5>
+            <ul>
+              <li>Payments integration</li>
+              <li>Variants &amp; unit‑of‑measure selection</li>
+              <li>Automatic Odoo order creation</li>
+            </ul>
+          </div>
+        </div>
+      </article>
 
-			<!-- Section: Proposed Solution -->
-			<section class="row py-4">
-				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-lightbulb me-2 text-info"></i>4. Proposed Solution</h3>
+      <!-- Figure: context map -->
+      <div class="post-figure">
+        <figure>
+          <div class="bg-light p-3 rounded shadow">
+            <pre class="mermaid">
+            flowchart TD
+                subgraph Customer["Customer Domain"]
+                    C1["Small Vendors"]
+                    C2["Hotel Purchasers"]
+                    C3["Restaurant Managers"]
+                end
 
-					<h4 class="mt-2 text-info"><i class="bi bi-chat-dots me-2"></i>Checkout to Viber</h4>
-					<p>The checkout composes a structured quotation and opens Viber with the message prefilled to Day Food's hotline. Customers review and tap send—minimizing onboarding and matching existing sales workflows.</p>
-					<ul>
-						<li>Zero learning curve; leverages familiar messaging</li>
-						<li>Resilient to intermittent connectivity</li>
-						<li>Keeps a human-in-the-loop for pricing and fulfilment</li>
-					</ul>
-					<figure class="mb-3">
-						<img src="../images/portfolio/dayfood/checkout-to-viber.png" class="figure-img img-fluid rounded mx-auto" alt="Structured message composed at checkout for one‑tap send" loading="lazy">
-						<figcaption class="text-center fst-italic text-secondary mt-2">Structured message composed at checkout for one‑tap send</figcaption>
-					</figure>
+                subgraph Sales["Sales Domain"]
+                    S1["Sales Reps"]
+                    S2["Viber Communication"]
+                    S3["Quote Processing"]
+                end
 
-						<h4 class="mt-4 text-info"><i class="bi bi-gear me-2"></i>Systems Design</h4>
-					<ul class="mb-4">
-						<li>Rails + Hotwire front-end on Spree Commerce domain</li>
-						<li>PostgreSQL as system of record</li>
-						<li>Viber deep link with encoded cart lines and customer info</li>
-						<li>PWA service worker for cache-first assets</li>
-					</ul>
-					<h4 class="mt-4 text-info"><i class="bi bi-diagram-3 me-2"></i>Information Design</h4>
-					<ul class="mb-4">
-						<li>Catalog hierarchy: Category → Brand → Product</li>
-						<li>Search by product and brand with filters</li>
-						<li>Quote schema: header → lines → totals → contact</li>
-						<li>Future: variants & UOM enrich line items</li>
-					</ul>
+                subgraph Ops["Operations Domain"]
+                    O1["Order Fulfillment"]
+                    O2["Inventory Management"]
+                    O3["Logistics"]
+                end
 
-					<h4 class="mt-4 text-info"><i class="bi bi-layout-text-window me-2"></i>UX Patterns</h4>
-					<ul class="mb-4">
-						<li>Sticky header with search and cart</li>
-						<li>Infinite scroll for product browsing</li>
-						<li>Quick add from catalog and product detail</li>
-						<li>Slide‑in cart review before checkout</li>
-					</ul>
-					<h4 class="mt-4 text-info"><i class="bi bi-diagram-3 me-2"></i>Architecture Diagram</h4>
-					<figure class="mb-4">
-							<pre class="mermaid">
+                subgraph ERP["ERP Domain"]
+                    E1["Odoo System"]
+                    E2["Order Records"]
+                    E3["Reporting"]
+                end
+
+                Customer -->|"Browse & Build Quote"| Sales
+                Sales -->|"Confirm Order"| Ops
+                Sales -->|"Create Record"| ERP
+                Ops -->|"Update Status"| ERP
+                ERP -->|"Sync Status"| Sales
+                Ops -->|"Deliver Products"| Customer
+
+                classDef domainClass fill:#f8f9fa,stroke:#0dcaf0,stroke-width:1px
+                class Customer,Sales,Ops,ERP domainClass
+            </pre>
+          </div>
+          <figcaption>Context Map showing relationships between Customer, Sales, Operations, and ERP domains</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-users" aria-hidden="true" style="font-size:0.8em"></i>2. Background</h2>
+        <p>Day Food Maldives serves customers across more than 200 islands with varying connectivity. Sales conversations commonly happen on Viber, a channel customers already trust. The product needed to work well on mobile, support quick discovery, and streamline the handoff from deciding to actually placing an order.</p>
+      </article>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-users" aria-hidden="true" style="font-size:0.8em"></i>3. User Research</h2>
+        <p>The Day Food team shared valuable insights from their customer interactions. Vendors, hotel purchasers, and restaurant managers all need to browse products efficiently and place orders through Viber. The design needed to accommodate both regular customers who know exactly what they want and new customers who need to explore the catalog.</p>
+        <div class="row g-4 mt-2">
+          <div class="col-md-6">
+            <h5 style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">Key User Types</h5>
+            <ul>
+              <li>Small vendors making weekly/bi‑weekly orders</li>
+              <li>Hotel purchasers with bulk orders</li>
+              <li>Restaurant managers with frequent orders</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5 style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">Internal Users</h5>
+            <ul>
+              <li>Sales reps confirming orders via Viber</li>
+              <li>Ops staff fulfilling and reconciling orders</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Figure: user types mindmap -->
+      <div class="post-figure">
+        <figure>
+          <div class="p-3">
+            <pre class="mermaid">
+            mindmap
+              root((User Types))
+                ::icon(fa fa-users)
+                Primary Users
+                  ::icon(fa fa-store)
+                  Small Vendors
+                    ::icon(fa fa-calendar-week)
+                    Weekly Orders
+                    Bi-Weekly Orders
+                  Hotel Purchasers
+                    ::icon(fa fa-hotel)
+                    Bulk Orders
+                    Specific Requirements
+                  Restaurant Managers
+                    ::icon(fa fa-utensils)
+                    Frequent Orders
+                    Specialty Items
+                Internal Users
+                  ::icon(fa fa-building)
+                  Sales Reps
+                    ::icon(fa fa-comments)
+                    Viber Communication
+                    Order Confirmation
+                  Operations Staff
+                    ::icon(fa fa-clipboard-check)
+                    Order Fulfillment
+                    Order Reconciliation
+            </pre>
+          </div>
+          <figcaption>User types and their key characteristics</figcaption>
+        </figure>
+      </div>
+
+      <!-- Figure: user journey -->
+      <div class="post-figure">
+        <figure>
+          <div class="p-3">
+            <pre class="mermaid">
+            journey
+              title User Journey
+              section Discover
+                Search by Brand: 5: Customer
+                Browse Categories: 4: Customer
+                Filter Products: 4: Customer
+              section Build Quote
+                Add Products: 5: Customer
+                Adjust Quantities: 4: Customer
+                Review Quote: 3: Customer
+              section Confirm
+                Send via Viber: 5: Customer, Sales
+                Discuss Details: 4: Customer, Sales
+                Finalize Order: 3: Sales, Ops
+            </pre>
+          </div>
+          <figcaption>Customer journey with satisfaction ratings at each step</figcaption>
+        </figure>
+      </div>
+
+      <!-- Figure: research insights -->
+      <div class="post-figure">
+        <figure>
+          <div class="p-3">
+            <pre class="mermaid">
+            graph LR
+                subgraph "Key Research Insights"
+                    I1["Viber is trusted"] --> S1["Keep human-in-the-loop"];
+                    I2["Brand-focused search"] --> S2["Optimize brand filtering"];
+                    I3["Remote connectivity issues"] --> S3["Offline-friendly browsing"];
+                end
+
+                subgraph "Design Implications"
+                    S1 --> D1["Viber checkout flow"];
+                    S2 --> D2["Brand-first navigation"];
+                    S3 --> D3["PWA with caching"];
+                end
+
+                classDef insights fill:#e3f2fd,stroke:#0d6efd,stroke-width:1px;
+                classDef solutions fill:#d1e7dd,stroke:#198754,stroke-width:1px;
+                classDef designs fill:#fff3cd,stroke:#ffc107,stroke-width:1px;
+
+                class I1,I2,I3 insights;
+                class S1,S2,S3 solutions;
+                class D1,D2,D3 designs;
+            </pre>
+          </div>
+          <figcaption>Research insights and their impact on design decisions</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-lightbulb" aria-hidden="true" style="font-size:0.8em"></i>4. Proposed Solution</h2>
+
+        <h3 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-message-circle me-2" aria-hidden="true"></i>Checkout to Viber</h3>
+        <p>The checkout composes a structured quotation and opens Viber with the message prefilled to Day Food's hotline. Customers review and tap send—minimizing onboarding and matching existing sales workflows.</p>
+        <ul>
+          <li>Zero learning curve; leverages familiar messaging</li>
+          <li>Resilient to intermittent connectivity</li>
+          <li>Keeps a human-in-the-loop for pricing and fulfilment</li>
+        </ul>
+      </article>
+
+      <!-- Figure: checkout to viber -->
+      <div class="post-figure">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/dayfood/checkout-to-viber.png" alt="Structured message composed at checkout for one‑tap send" loading="lazy" data-fallback="Checkout to Viber"></span>
+          <figcaption>Structured message composed at checkout for one‑tap send</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-settings me-2" aria-hidden="true"></i>Systems Design</h3>
+        <ul class="mb-4">
+          <li>Rails + Hotwire front-end on Spree Commerce domain</li>
+          <li>PostgreSQL as system of record</li>
+          <li>Viber deep link with encoded cart lines and customer info</li>
+          <li>PWA service worker for cache-first assets</li>
+        </ul>
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-workflow me-2" aria-hidden="true"></i>Information Design</h3>
+        <ul class="mb-4">
+          <li>Catalog hierarchy: Category → Brand → Product</li>
+          <li>Search by product and brand with filters</li>
+          <li>Quote schema: header → lines → totals → contact</li>
+          <li>Future: variants &amp; UOM enrich line items</li>
+        </ul>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-panel-top me-2" aria-hidden="true"></i>UX Patterns</h3>
+        <ul class="mb-4">
+          <li>Sticky header with search and cart</li>
+          <li>Infinite scroll for product browsing</li>
+          <li>Quick add from catalog and product detail</li>
+          <li>Slide‑in cart review before checkout</li>
+        </ul>
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-workflow me-2" aria-hidden="true"></i>Architecture Diagram</h3>
+      </article>
+
+      <!-- Figure: architecture diagram -->
+      <div class="post-figure">
+        <figure>
+          <pre class="mermaid">
 flowchart LR
   User["Customer (Mobile)"] --> UI["Rails + Hotwire UI"]
   UI --> Spree["Spree Commerce Domain"]
-  Spree --> DB[("PostgreSQL")] 
+  Spree --> DB[("PostgreSQL")]
   UI -.-> Viber["Viber Deep Link\n(prefilled quote)"]
   Viber --> Sales["Sales (Human-in-the-loop)"]
-  Sales -->|confirm| Odoo[("Odoo ERP")] 
+  Sales -->|confirm| Odoo[("Odoo ERP")]
   Odoo -->|sync status| UI
 
   UI --> SW["Service Worker\n(cache-first)"]
   SW --> CDN["Static Assets"]
-							</pre>
-							<figcaption class="text-center fst-italic text-secondary mt-2">High-level system interactions across UI, commerce, Viber, and ERP</figcaption>
-						</figure>
+          </pre>
+          <figcaption>High-level system interactions across UI, commerce, Viber, and ERP</figcaption>
+        </figure>
+      </div>
 
-						<h4 class="mt-4 text-primary"><i class="bi bi-diagram-2 me-2"></i>Information Architecture Map</h4>
-						<figure class="mb-2">
-							<pre class="mermaid">
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-workflow me-2" aria-hidden="true"></i>Information Architecture Map</h3>
+      </article>
+
+      <!-- Figure: IA map -->
+      <div class="post-figure">
+        <figure>
+          <pre class="mermaid">
 flowchart TD
   Catalog["Catalog"] --> Category["Category"]
   Category --> Brand["Brand"]
@@ -404,494 +389,528 @@ flowchart TD
   Quote["Quote Message"] --> Header["Header"]
   Quote --> Totals["Totals"]
   Quote --> Contact["Contact"]
-							</pre>
-							<figcaption class="text-center fst-italic text-secondary mt-2">Catalog to quote structure: from taxonomy to message schema</figcaption>
-						</figure>
+          </pre>
+          <figcaption>Catalog to quote structure: from taxonomy to message schema</figcaption>
+        </figure>
+      </div>
 
-						<!-- Moving Forward content is presented in the dedicated section below -->
-					</div>
-				</div>
-			</section>
-			<!-- end Section: Proposed Solution -->
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-workflow" aria-hidden="true" style="font-size:0.8em"></i>5. Experience Flows</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h5 style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">Search &amp; Filter</h5>
+            <ul>
+              <li>Typeahead by product and brand</li>
+              <li>Category filters reduce scanning</li>
+            </ul>
+            <h5 class="mt-3" style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">Build Quote</h5>
+            <ul>
+              <li>Adjust quantities in-line on card or detail</li>
+              <li>Cart summarizes lines for review</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5 style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">Checkout to Viber</h5>
+            <ul>
+              <li>Compose message → open Viber → one-tap send</li>
+              <li>Fallbacks: copy-to-clipboard/email if Viber unavailable</li>
+            </ul>
+          </div>
+        </div>
+      </article>
 
-			<!-- Section: Experience Flows -->
-			<section class="row py-4">
-				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-diagram-3 me-2 text-info"></i>5. Experience Flows</h3>
-					<div class="row g-4">
-						<div class="col-md-6">
-							<h5 class="text-info">Search & Filter</h5>
-							<ul>
-								<li>Typeahead by product and brand</li>
-								<li>Category filters reduce scanning</li>
-							</ul>
-							<h5 class="text-info mt-3">Build Quote</h5>
-							<ul>
-								<li>Adjust quantities in-line on card or detail</li>
-								<li>Cart summarizes lines for review</li>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<h5 class="text-info">Checkout to Viber</h5>
-							<ul>
-								<li>Compose message → open Viber → one-tap send</li>
-								<li>Fallbacks: copy-to-clipboard/email if Viber unavailable</li>
-							</ul>
-						</div>
-					</div>
-					<figure class="mt-3">
-						<img src="../images/portfolio/dayfood/add-to-quote-desktop.png" alt="Add to Quote (Desktop)" class="img-fluid" loading="lazy">
-						<figcaption class="text-center fst-italic text-secondary mt-2">Add to Quote (Desktop)</figcaption>
-					</figure>
-				</div>
-			</section>
-			<!-- end Section: Experience Flows -->
+      <!-- Figure: add to quote desktop -->
+      <div class="post-figure">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/dayfood/add-to-quote-desktop.png" alt="Add to Quote (Desktop)" loading="lazy" data-fallback="Add to Quote (Desktop)"></span>
+          <figcaption>Add to Quote (Desktop)</figcaption>
+        </figure>
+      </div>
 
-			<!-- Section: Delivery & Project Management -->
-			<section class="row py-4">
-				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-kanban me-2 text-info"></i>6. Delivery & Project Management</h3>
-					<ul class="mb-3">
-						<li><strong>Phases</strong>: Discovery → MVP (quote-to-Viber) → Variants/UOM → Odoo order automation</li>
-						<li><strong>Risks</strong>: connectivity, Viber dependency, ERP timing; <strong>Mitigations</strong>: offline-first UI, fallbacks, staged integration</li>
-						<li><strong>Collaboration</strong>: weekly stakeholder reviews; sales feedback in the loop</li>
-					</ul>
-					<figure class="mb-4">
-						<div class="p-3">
-							<pre class="mermaid">
-							gantt
-								title Day Food Catalogue Project Timeline
-								dateFormat  YYYY-MM-DD
-								axisFormat %b %Y
-								todayMarker stroke-width:5px,stroke:#0dcaf0,opacity:0.5
-								
-								section Phase 1: MVP
-								Discovery & Research       :done, disc, 2025-01-15, 30d
-								Design & Prototyping       :done, design, after disc, 45d
-								MVP Development            :done, dev1, after design, 60d
-								Quote-to-Viber Launch      :done, milestone, after dev1, 0d
-								
-								section Phase 2
-								Variants & UOM             :active, var, 2025-07-01, 45d
-								Odoo Integration           :odoo, after var, 60d
-								PWA Enhancements           :pwa, 2025-07-15, 90d
-								
-								section Phase 3
-								Hotwire Native Planning    :plan, 2025-10-01, 30d
-								Native App Development     :native, after plan, 90d
-								
-								section Risk Mitigation
-								Offline-first UI           :crit, risk1, 2025-03-01, 120d
-								Viber Fallbacks            :crit, risk2, 2025-04-15, 45d
-								Staged ERP Integration     :crit, risk3, 2025-08-01, 90d
-							</pre>
-						</div>
-						<figcaption class="text-center fst-italic text-secondary mt-2">Project timeline showing phases, key milestones, and risk mitigation activities</figcaption>
-					</figure>
-					
-					<figure class="mb-0">
-						<div class="p-3">
-							<pre class="mermaid">
-							flowchart TD
-							    subgraph PM["Project Management"]
-							        Weekly["Weekly Stakeholder Reviews"]
-							        Feedback["Sales Feedback Loop"]
-							        Agile["Agile Development Cycles"]
-							    end
-							    
-							    subgraph Risks["Key Risks"]
-							        R1["Connectivity Issues"]
-							        R2["Viber Dependency"]
-							        R3["ERP Integration Timing"]
-							    end
-							    
-							    subgraph Mitigations["Risk Mitigations"]
-							        M1["Offline-first UI Design"]
-							        M2["Alternative Checkout Fallbacks"]
-							        M3["Staged Integration Approach"]
-							    end
-								    
-								    R1 --> M1
-								    R2 --> M2
-								    R3 --> M3
-								    
-								    PM --> Risks
-								    PM --> Mitigations
-								    
-								    classDef riskClass fill:#f8d7da,stroke:#dc3545,stroke-width:1px
-								    classDef mitigationClass fill:#d1e7dd,stroke:#198754,stroke-width:1px
-								    classDef pmClass fill:#e3f2fd,stroke:#0d6efd,stroke-width:1px
-								    
-								    class R1,R2,R3 riskClass
-								    class M1,M2,M3 mitigationClass
-								    class Weekly,Feedback,Agile pmClass
-								</pre>
-							</div>
-							<figcaption class="text-center fst-italic text-secondary mt-2">Project management approach with risk identification and mitigation strategies</figcaption>
-						</figure>
-					</div>
-				</div>
-			</section>
-			<!-- end Section: Delivery & Project Management -->
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-square-kanban" aria-hidden="true" style="font-size:0.8em"></i>6. Delivery &amp; Project Management</h2>
+        <ul class="mb-3">
+          <li><strong>Phases</strong>: Discovery → MVP (quote-to-Viber) → Variants/UOM → Odoo order automation</li>
+          <li><strong>Risks</strong>: connectivity, Viber dependency, ERP timing; <strong>Mitigations</strong>: offline-first UI, fallbacks, staged integration</li>
+          <li><strong>Collaboration</strong>: weekly stakeholder reviews; sales feedback in the loop</li>
+        </ul>
+      </article>
 
-			<!-- Section: Outcomes & Validation -->
-			<section class="row py-4">
-				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-graph-up-arrow me-2 text-info"></i>7. Outcomes & Validation</h3>
-					<ul>
-						<li><strong>Metrics</strong>: time-to-order, quote completion rate, Viber checkout adoption</li>
-						<li><strong>Validation Plan</strong>: staged rollout, sales feedback loops, instrumented events</li>
-						<li><strong>Status</strong>: MVP delivering quote-to-Viber; upcoming: variants/UOM, Odoo automation</li>
-					</ul>
-					
-					<div class="alert alert-success mt-3" role="alert">
-						<h5 class="alert-heading"><i class="bi bi-chat-quote me-2"></i>Early Adoption Feedback</h5>
-						<p>Although the catalogue has not been officially publicised yet, Day Food reports that customers have already been using it for product reference before walking in or contacting sales to place orders. This organic discovery and usage validates the catalogue's value as a product reference tool even before the full checkout flow is widely adopted.</p>
-					</div>
-					<figure class="mt-3">
-						<img src="../images/portfolio/dayfood/google-analytics-snapshot.png" alt="Google Analytics Snapshot" class="img-fluid" loading="lazy">
-						<figcaption class="text-center fst-italic text-secondary mt-2">Google Analytics Snapshot</figcaption>
-					</figure>
-				</div>
-			</section>
-			<!-- end Section: Outcomes & Validation -->
+      <!-- Figure: gantt timeline -->
+      <div class="post-figure">
+        <figure>
+          <div class="p-3">
+            <pre class="mermaid">
+            gantt
+              title Day Food Catalogue Project Timeline
+              dateFormat  YYYY-MM-DD
+              axisFormat %b %Y
+              todayMarker stroke-width:5px,stroke:#0dcaf0,opacity:0.5
 
-			<!-- Section: Showcase -->
-			<section class="row py-4">
-				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-display me-2 text-info"></i>8. Showcase</h3>
-					<h4 class="mt-4 text-info"><i class="bi bi-search me-2"></i>Search and Filter Experience</h4>
-					<div class="row g-4 my-4">
-						<div class="col-md-6">
-							<figure class="figure mb-0">
-								<img src="../images/portfolio/dayfood/filter-mobile.png" class="figure-img img-fluid rounded" alt="Day Food Catalogue Search Interface" loading="lazy">
-								<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Search interface with category filtering</figcaption>
-							</figure>
-						</div>
-						<div class="col-md-6">
-							<figure class="figure mb-0">
-								<img src="../images/portfolio/dayfood/search-desktop.png" class="figure-img img-fluid rounded shadow" alt="Search Interface" loading="lazy">
-								<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Search with instant results</figcaption>
-							</figure>
-						</div>
-					</div>
-					
-					<div class="row g-4 my-4">
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title">Search Functionality</h5>
-									<p>Customers can search by brand and/or product name to quickly find matches. The search system includes fuzzy matching to handle common spelling variations and typos.</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title">Category Navigation</h5>
-									<p>Pre-defined product categories help customers find options or related products quickly. The hierarchical structure allows for intuitive navigation through 12 main categories and over 40 subcategories.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<h4 class="mt-5 text-info"><i class="bi bi-cart me-2"></i>Product Management & Checkout</h4>
-					<figure class="figure mb-4">
-						<img src="../images/portfolio/dayfood/product-page-desktop.png" class="figure-img img-fluid rounded shadow" alt="Product Details" loading="lazy">
-						<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Product details with large image and add to quote button</figcaption>
-					</figure>
-					
-					<div class="card border-0 shadow-sm mb-4">
-						<div class="card-body">
-							<h5 class="card-title">Quote (Cart) Management</h5>
-							<p>Dynamic product buttons clearly state the actions that customers are about to perform. The intuitive interface allows users to add, remove, and adjust quantities with minimal effort.</p>
-						</div>
-					</div>
-					
-					<figure class="mb-4">
-						<img src="../images/portfolio/dayfood/add-to-quote-desktop.png" alt="Add to Quote (Desktop)" class="img-fluid" loading="lazy">
-						<figcaption class="text-center fst-italic text-secondary mt-2">Add to Quote (Desktop)</figcaption>
-					</figure>
-					<div class="card border-light mb-4 mt-3">
-						<div class="card-body">
-							<h6 class="card-title">Add to Quote Flow:</h6>
-							<div class="d-flex align-items-start mb-2">
-								<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">1</div>
-								<div>Click <strong>+</strong> to add quantity of product.</div>
-							</div>
-							<div class="d-flex align-items-start mb-2">
-								<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">2</div>
-								<div>Click <strong>Add to Quote</strong> to add product to cart.</div>
-							</div>
-							<div class="d-flex align-items-start mb-2">
-								<div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">3</div>
-								<div>Click <strong>Checkout to Viber</strong> to complete order.</div>
-							</div>
-						</div>
-					</div>
-					
-					<figure class="mb-4">
-						<img src="../images/portfolio/dayfood/add-to-quote-mobile.png" alt="Add to Quote (Mobile)" class="img-fluid" loading="lazy">
-						<figcaption class="text-center fst-italic text-secondary mt-2">Add to Quote (Mobile)</figcaption>
-					</figure>
-					<h4 class="mt-5 text-info"><i class="bi bi-pencil me-2"></i>Sketches and Low-Fi Mockups</h4>
-					<div class="row g-4 my-4">
-						<div class="col-md-6">
-							<figure class="figure mb-0">
-								<img src="../images/portfolio/dayfood/sketches.png" class="figure-img img-fluid rounded shadow" alt="Sketches and Low-Fi Mockups" loading="lazy">
-								<figcaption class="figure-caption text-center mt-2"><i class="bi bi-image me-1"></i>Sketches to lay down the foundation</figcaption>
-							</figure>
-						</div>
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title">Work in progress artifacts</h5>
-									<p>These artifacts document the progress and decisions made during the project.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<figure class="mb-4">
-						<img src="../images/portfolio/dayfood/lo-fi-mobile.png" alt="Low-Fi Mockup (Mobile)" class="img-fluid" loading="lazy">
-						<figcaption class="text-center fst-italic text-secondary mt-2">Low-Fi Mockup (Mobile)</figcaption>
-					</figure>
-					
-					<figure class="mb-4">
-						<img src="../images/portfolio/dayfood/lo-fi-desktop.png" alt="Low-Fi Mockup (Desktop)" class="img-fluid" loading="lazy">
-						<figcaption class="text-center fst-italic text-secondary mt-2">Low-Fi Mockup (Desktop)</figcaption>
-					</figure>
-				</div>
-			</section>
-			<!-- end Section: Showcase -->
-					
-			<!-- Moving Forward Section -->
-			<section class="row py-4">
-				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-arrow-up-circle me-2 text-info"></i>9. Moving Forward</h3>
-					
-					<h4 class="mb-3 text-info">Phase 2: Core Enhancements</h4>
-					<div class="row g-4 mb-4">
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title mb-3">Variants & UOM</h5>
-									<ul class="mb-0">
-										<li>Select variant options in product and cart</li>
-										<li>Unit-of-measure selection impacts quantities</li>
-										<li>Accurate totals in the composed quote</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title mb-3">Odoo Automation</h5>
-									<ul class="mb-0">
-										<li>Create Odoo order upon Viber confirmation</li>
-										<li>Sync order status back to sales</li>
-										<li>Retry and reconciliation for failures</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title mb-3">PWA & Reorders</h5>
-									<ul class="mb-0">
-										<li>Full offline product browsing</li>
-										<li>Save and reuse previous orders</li>
-										<li>Improved app-like experience</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title mb-3">Native App Planning</h5>
-									<ul class="mb-0">
-										<li>Evaluate Hotwire Native approach</li>
-										<li>Push notifications for order updates</li>
-										<li>Offline-first architecture</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+              section Phase 1: MVP
+              Discovery & Research       :done, disc, 2025-01-15, 30d
+              Design & Prototyping       :done, design, after disc, 45d
+              MVP Development            :done, dev1, after design, 60d
+              Quote-to-Viber Launch      :done, milestone, after dev1, 0d
 
-							<!-- Section: Appendix: Technical Notes -->
-			<section class="row py-4">
-				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-tools me-2 text-info"></i>10. Appendix: Technical Notes</h3>
-					<div class="row g-4">
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title mb-2">PWA & Offline</h5>
-									<ul class="mb-0">
-										<li>Service Worker with cache-first strategy for static assets</li>
-										<li>Graceful degradation for flaky connectivity</li>
-										<li>Install prompt for regular buyers</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title mb-2">Performance & Images</h5>
-									<ul class="mb-0">
-										<li>Responsive image variants and lazy loading</li>
-										<li>Minimal blocking JS via Hotwire (Turbo/Stimulus)</li>
-										<li>DB indexes for product and taxonomy lookups</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title mb-2">Security</h5>
-									<ul class="mb-0">
-										<li>CSRF protection and secure headers</li>
-										<li>Content Security Policy (CSP)</li>
-										<li>Input validation for deep-link payloads</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					<div class="row g-4 mt-3">
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title mb-2">Viber Deep Link</h5>
-									<ul class="mb-0">
-										<li>Encoded cart lines: product, qty, unit, brand</li>
-										<li>Fallback to copy-to-clipboard/email if Viber unavailable</li>
-										<li>Message schema aligns with sales processing</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title mb-2">Tech Stack</h5>
-									<ul class="mb-0">
-										<li>Ruby on Rails 7 with Hotwire</li>
-										<li>PostgreSQL for persistence</li>
-										<li>Spree Commerce for catalog management</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row g-4 mt-3">
-						<div class="col-md-6">
-							<div class="card h-100 border-0 shadow-sm">
-								<div class="card-body">
-									<h5 class="card-title mb-2">Deployment</h5>
-									<ul class="mb-0">
-										<li>Containerized with Docker</li>
-										<li>CI/CD pipeline with GitHub Actions</li>
-										<li>Hosted on Digital Ocean with CDN</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					<figure class="mt-4">
-						<pre class="mermaid">
-			sequenceDiagram
-			  autonumber
-			  participant C as Customer (Mobile)
-			  participant UI as Rails + Hotwire UI
-			  participant SP as Spree Commerce
-			  participant DB as PostgreSQL
-			  participant VB as Viber
-			  participant S as Sales
-			  participant OD as Odoo ERP
-			  
-			  C->>UI: Browse catalog
-			  UI->>SP: Get products
-			  SP->>DB: Query products
-			  DB-->>SP: Return products
-			  SP-->>UI: Products data
-			  UI-->>C: Display products
-			  
-			  C->>UI: Add to quote
-			  UI->>UI: Update cart
-			  C->>UI: Checkout to Viber
-			  UI->>VB: Open Viber with quote
-			  VB->>S: Send quote message
-			  VB->>S: Message delivered
-			  S-->>C: Confirm details
-			  S->>OD: Create order (planned)
-			  OD-->>UI: Status sync (planned)
-			  UI-->>C: Status update
-						</pre>
-						<figcaption class="text-center fst-italic text-secondary mt-2">High-level sequence across user, app, Viber, and ERP</figcaption>
-					</figure>
+              section Phase 2
+              Variants & UOM             :active, var, 2025-07-01, 45d
+              Odoo Integration           :odoo, after var, 60d
+              PWA Enhancements           :pwa, 2025-07-15, 90d
 
-					<div class="alert alert-info mt-4" role="alert">
-						<h5 class="alert-heading"><i class="bi bi-info-circle me-2"></i>Integration Architecture</h5>
-						<p>The sequence diagram above illustrates the core flow from browsing to order placement. The architecture is designed to be resilient to connectivity issues while maintaining a human-in-the-loop for order confirmation and pricing.</p>
-					</div>
-				</div>
-			</section>
-			<!-- Conclusion Section -->
-			<section class="row py-4">
-				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-flag me-2 text-info"></i>Conclusion</h3>
-					<p>The Day Food Catalogue demonstrates how modern web technologies can be leveraged to create a performant, accessible, and user-friendly product showcase. The combination of Ruby on Rails, Hotwire, and PostgreSQL provides a solid foundation that balances developer productivity with application performance.</p>
-				</div>
-			</section>
-			<!-- end Conclusion Section -->
-			</main>
-			<!-- end Main Content Section -->
+              section Phase 3
+              Hotwire Native Planning    :plan, 2025-10-01, 30d
+              Native App Development     :native, after plan, 90d
 
-		<!-- Footer Section -->
-		<footer class="container">
-			<section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-				<div class="col-md-4 d-flex align-items-center">
-					<span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau" data-bs-toggle="modal" data-bs-target="#takdeModal">~|{·})</a> <a href="/LICENSE"  class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span> 
-				</div> 
-				<div class="col-md-4 d-flex justify-content-center">
-					<a href="/work/" class="text-decoration-none me-3">Back to Work</a>
-					<a href="#top" class="text-decoration-none">Back to top</a>
-				</div>
-				<ul class="nav col-md-4 justify-content-end list-unstyled d-flex"> 
-					<li class="ms-3">
-						<a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
-							<i class="bi bi-github me-2"></i><span class="visually-hidden">GitHub</span>
-						</a>
-					</li> 
-					<li class="ms-3">
-						<a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙">
-							<i class="bi bi-suit-heart-fill me-2"></i><span class="visually-hidden">Sama²</span>
-						</a>
-					</li> 
-					<li class="ms-3 mt-n1">
-						<a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
-							<i class="bi bi-cup-hot-fill me-2"></i><span class="visually-hidden">Ko-fi</span>
-						</a>
-					</li> 
-				</ul> 
-			</section>
-		</footer>
-		<!-- end Footer Section -->
+              section Risk Mitigation
+              Offline-first UI           :crit, risk1, 2025-03-01, 120d
+              Viber Fallbacks            :crit, risk2, 2025-04-15, 45d
+              Staged ERP Integration     :crit, risk3, 2025-08-01, 90d
+            </pre>
+          </div>
+          <figcaption>Project timeline showing phases, key milestones, and risk mitigation activities</figcaption>
+        </figure>
+      </div>
+
+      <!-- Figure: PM approach -->
+      <div class="post-figure">
+        <figure>
+          <div class="p-3">
+            <pre class="mermaid">
+            flowchart TD
+                subgraph PM["Project Management"]
+                    Weekly["Weekly Stakeholder Reviews"]
+                    Feedback["Sales Feedback Loop"]
+                    Agile["Agile Development Cycles"]
+                end
+
+                subgraph Risks["Key Risks"]
+                    R1["Connectivity Issues"]
+                    R2["Viber Dependency"]
+                    R3["ERP Integration Timing"]
+                end
+
+                subgraph Mitigations["Risk Mitigations"]
+                    M1["Offline-first UI Design"]
+                    M2["Alternative Checkout Fallbacks"]
+                    M3["Staged Integration Approach"]
+                end
+
+                R1 --> M1
+                R2 --> M2
+                R3 --> M3
+
+                PM --> Risks
+                PM --> Mitigations
+
+                classDef riskClass fill:#f8d7da,stroke:#dc3545,stroke-width:1px
+                classDef mitigationClass fill:#d1e7dd,stroke:#198754,stroke-width:1px
+                classDef pmClass fill:#e3f2fd,stroke:#0d6efd,stroke-width:1px
+
+                class R1,R2,R3 riskClass
+                class M1,M2,M3 mitigationClass
+                class Weekly,Feedback,Agile pmClass
+            </pre>
+          </div>
+          <figcaption>Project management approach with risk identification and mitigation strategies</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-trending-up" aria-hidden="true" style="font-size:0.8em"></i>7. Outcomes &amp; Validation</h2>
+        <ul>
+          <li><strong>Metrics</strong>: time-to-order, quote completion rate, Viber checkout adoption</li>
+          <li><strong>Validation Plan</strong>: staged rollout, sales feedback loops, instrumented events</li>
+          <li><strong>Status</strong>: MVP delivering quote-to-Viber; upcoming: variants/UOM, Odoo automation</li>
+        </ul>
+      </article>
+
+      <!-- Early adoption callout -->
+      <div class="post-callout is-tip">
+        <aside>
+          <div class="callout-header"><i class="icon-message-square-quote" aria-hidden="true"></i>Early Adoption Feedback</div>
+          <p class="callout-body">Although the catalogue has not been officially publicised yet, Day Food reports that customers have already been using it for product reference before walking in or contacting sales to place orders. This organic discovery and usage validates the catalogue's value as a product reference tool even before the full checkout flow is widely adopted.</p>
+        </aside>
+      </div>
+
+      <!-- Figure: analytics snapshot -->
+      <div class="post-figure">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/dayfood/google-analytics-snapshot.png" alt="Google Analytics Snapshot" loading="lazy" data-fallback="Google Analytics Snapshot"></span>
+          <figcaption>Google Analytics Snapshot</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-monitor" aria-hidden="true" style="font-size:0.8em"></i>8. Showcase</h2>
+        <h3 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-search me-2" aria-hidden="true"></i>Search and Filter Experience</h3>
+      </article>
+
+      <!-- Search & filter gallery -->
+      <div class="post-gallery">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/dayfood/filter-mobile.png" alt="Day Food Catalogue Search Interface" loading="lazy" data-fallback="Search interface"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Search interface with category filtering</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/dayfood/search-desktop.png" alt="Search Interface" loading="lazy" data-fallback="Search with instant results"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Search with instant results</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="post-gallery">
+        <div class="gallery-grid">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h4 class="card-title">Search Functionality</h4>
+              <p>Customers can search by brand and/or product name to quickly find matches. The search system includes fuzzy matching to handle common spelling variations and typos.</p>
+            </div>
+          </div>
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h4 class="card-title">Category Navigation</h4>
+              <p>Pre-defined product categories help customers find options or related products quickly. The hierarchical structure allows for intuitive navigation through 12 main categories and over 40 subcategories.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-shopping-cart me-2" aria-hidden="true"></i>Product Management &amp; Checkout</h3>
+      </article>
+
+      <!-- Figure: product details -->
+      <div class="post-figure">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/dayfood/product-page-desktop.png" alt="Product Details" loading="lazy" data-fallback="Product details"></span>
+          <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Product details with large image and add to quote button</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <div class="card border-0 shadow-sm mb-4">
+          <div class="card-body">
+            <h4 class="card-title">Quote (Cart) Management</h4>
+            <p>Dynamic product buttons clearly state the actions that customers are about to perform. The intuitive interface allows users to add, remove, and adjust quantities with minimal effort.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Figure: add to quote desktop (2) -->
+      <div class="post-figure">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/dayfood/add-to-quote-desktop.png" alt="Add to Quote (Desktop)" loading="lazy" data-fallback="Add to Quote (Desktop)"></span>
+          <figcaption>Add to Quote (Desktop)</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <div class="card border-light mb-4 mt-3">
+          <div class="card-body">
+            <h6 class="card-title">Add to Quote Flow:</h6>
+            <div class="d-flex align-items-start mb-2">
+              <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">1</div>
+              <div>Click <strong>+</strong> to add quantity of product.</div>
+            </div>
+            <div class="d-flex align-items-start mb-2">
+              <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">2</div>
+              <div>Click <strong>Add to Quote</strong> to add product to cart.</div>
+            </div>
+            <div class="d-flex align-items-start mb-2">
+              <div class="bg-info text-white rounded-circle d-flex align-items-center justify-content-center me-2" style="width: 28px; height: 28px; min-width: 28px;">3</div>
+              <div>Click <strong>Checkout to Viber</strong> to complete order.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Figure: add to quote mobile -->
+      <div class="post-figure">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/dayfood/add-to-quote-mobile.png" alt="Add to Quote (Mobile)" loading="lazy" data-fallback="Add to Quote (Mobile)"></span>
+          <figcaption>Add to Quote (Mobile)</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-pencil me-2" aria-hidden="true"></i>Sketches and Low-Fi Mockups</h3>
+      </article>
+
+      <!-- Sketches gallery -->
+      <div class="post-gallery">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/dayfood/sketches.png" alt="Sketches and Low-Fi Mockups" loading="lazy" data-fallback="Sketches"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Sketches to lay down the foundation</figcaption>
+          </figure>
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h4 class="card-title">Work in progress artifacts</h4>
+              <p>These artifacts document the progress and decisions made during the project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Figure: lo-fi mobile -->
+      <div class="post-figure">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/dayfood/lo-fi-mobile.png" alt="Low-Fi Mockup (Mobile)" loading="lazy" data-fallback="Low-Fi Mockup (Mobile)"></span>
+          <figcaption>Low-Fi Mockup (Mobile)</figcaption>
+        </figure>
+      </div>
+
+      <!-- Figure: lo-fi desktop -->
+      <div class="post-figure">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/dayfood/lo-fi-desktop.png" alt="Low-Fi Mockup (Desktop)" loading="lazy" data-fallback="Low-Fi Mockup (Desktop)"></span>
+          <figcaption>Low-Fi Mockup (Desktop)</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-arrow-up-circle" aria-hidden="true" style="font-size:0.8em"></i>9. Moving Forward</h2>
+        <h3 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">Phase 2: Core Enhancements</h3>
+        <div class="row g-4 mb-4">
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Variants &amp; UOM</h5>
+                <ul class="mb-0">
+                  <li>Select variant options in product and cart</li>
+                  <li>Unit-of-measure selection impacts quantities</li>
+                  <li>Accurate totals in the composed quote</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Odoo Automation</h5>
+                <ul class="mb-0">
+                  <li>Create Odoo order upon Viber confirmation</li>
+                  <li>Sync order status back to sales</li>
+                  <li>Retry and reconciliation for failures</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-3">PWA &amp; Reorders</h5>
+                <ul class="mb-0">
+                  <li>Full offline product browsing</li>
+                  <li>Save and reuse previous orders</li>
+                  <li>Improved app-like experience</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Native App Planning</h5>
+                <ul class="mb-0">
+                  <li>Evaluate Hotwire Native approach</li>
+                  <li>Push notifications for order updates</li>
+                  <li>Offline-first architecture</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-wrench" aria-hidden="true" style="font-size:0.8em"></i>10. Appendix: Technical Notes</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-2">PWA &amp; Offline</h5>
+                <ul class="mb-0">
+                  <li>Service Worker with cache-first strategy for static assets</li>
+                  <li>Graceful degradation for flaky connectivity</li>
+                  <li>Install prompt for regular buyers</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-2">Performance &amp; Images</h5>
+                <ul class="mb-0">
+                  <li>Responsive image variants and lazy loading</li>
+                  <li>Minimal blocking JS via Hotwire (Turbo/Stimulus)</li>
+                  <li>DB indexes for product and taxonomy lookups</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-2">Security</h5>
+                <ul class="mb-0">
+                  <li>CSRF protection and secure headers</li>
+                  <li>Content Security Policy (CSP)</li>
+                  <li>Input validation for deep-link payloads</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-2">Viber Deep Link</h5>
+                <ul class="mb-0">
+                  <li>Encoded cart lines: product, qty, unit, brand</li>
+                  <li>Fallback to copy-to-clipboard/email if Viber unavailable</li>
+                  <li>Message schema aligns with sales processing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-2">Tech Stack</h5>
+                <ul class="mb-0">
+                  <li>Ruby on Rails 7 with Hotwire</li>
+                  <li>PostgreSQL for persistence</li>
+                  <li>Spree Commerce for catalog management</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title mb-2">Deployment</h5>
+                <ul class="mb-0">
+                  <li>Containerized with Docker</li>
+                  <li>CI/CD pipeline with GitHub Actions</li>
+                  <li>Hosted on Digital Ocean with CDN</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Figure: sequence diagram -->
+      <div class="post-figure">
+        <figure>
+          <pre class="mermaid">
+sequenceDiagram
+  autonumber
+  participant C as Customer (Mobile)
+  participant UI as Rails + Hotwire UI
+  participant SP as Spree Commerce
+  participant DB as PostgreSQL
+  participant VB as Viber
+  participant S as Sales
+  participant OD as Odoo ERP
+
+  C->>UI: Browse catalog
+  UI->>SP: Get products
+  SP->>DB: Query products
+  DB-->>SP: Return products
+  SP-->>UI: Products data
+  UI-->>C: Display products
+
+  C->>UI: Add to quote
+  UI->>UI: Update cart
+  C->>UI: Checkout to Viber
+  UI->>VB: Open Viber with quote
+  VB->>S: Send quote message
+  VB->>S: Message delivered
+  S-->>C: Confirm details
+  S->>OD: Create order (planned)
+  OD-->>UI: Status sync (planned)
+  UI-->>C: Status update
+          </pre>
+          <figcaption>High-level sequence across user, app, Viber, and ERP</figcaption>
+        </figure>
+      </div>
+
+      <!-- Integration architecture callout -->
+      <div class="post-callout is-note">
+        <aside>
+          <div class="callout-header"><i class="icon-info" aria-hidden="true"></i>Integration Architecture</div>
+          <p class="callout-body">The sequence diagram above illustrates the core flow from browsing to order placement. The architecture is designed to be resilient to connectivity issues while maintaining a human-in-the-loop for order confirmation and pricing.</p>
+        </aside>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-flag" aria-hidden="true" style="font-size:0.8em"></i>Conclusion</h2>
+        <p>The Day Food Catalogue demonstrates how modern web technologies can be leveraged to create a performant, accessible, and user-friendly product showcase. The combination of Ruby on Rails, Hotwire, and PostgreSQL provides a solid foundation that balances developer productivity with application performance.</p>
+
+        <!-- Prev / Next -->
+        <div class="post-nav">
+          <nav aria-label="More work">
+            <a href="/work/" class="nav-card is-prev">
+              <span class="nav-dir"><i class="icon-arrow-left" aria-hidden="true"></i>Back</span>
+              <span class="nav-title">All Work</span>
+              <span class="nav-date">The full portfolio</span>
+            </a>
+            <a href="/work/2020-09-01-the-hoojah-project.html" class="nav-card is-next">
+              <span class="nav-dir">More<i class="icon-arrow-right" aria-hidden="true"></i></span>
+              <span class="nav-title">The Hoojah Project</span>
+              <span class="nav-date"><time datetime="2020-09-01">2013–2019</time></span>
+            </a>
+          </nav>
+        </div>
+      </article>
+    </main>
+    <!-- end Main Content Section -->
+
+    <!-- Footer Section -->
+    <footer class="container">
+      <section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau" data-bs-toggle="modal" data-bs-target="#takdeModal">~|{·})</a> <a href="/LICENSE"  class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <a href="/work/" class="text-decoration-none me-3">Back to Work</a>
+          <a href="#top" class="text-decoration-none">Back to top</a>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
+              <i class="brand-icon brand-github me-2"></i><span class="visually-hidden">GitHub</span>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙">
+              <i class="icon-heart me-2"></i><span class="visually-hidden">Sama²</span>
+            </a>
+          </li>
+          <li class="ms-3 mt-n1">
+            <a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
+              <i class="icon-coffee me-2"></i><span class="visually-hidden">Ko-fi</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <!-- end Footer Section -->
 
     <script src="../jei-es.js"></script>
+
     <!-- Mermaid for diagrams -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <script>
       if (window.mermaid) { mermaid.initialize({ startOnLoad: true }); }
     </script>
-    <!-- Bootstrap JS Bundle with Popper -->
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- end Bootstrap JS -->
   </body>
 </html>

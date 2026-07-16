@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Rudzainy Rahman's Post Section Patterns</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Bootstrap CSS & Icons-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+		<!-- end Bootstrap CSS & Icons -->
+
+		<link rel="stylesheet" type="text/css" href="../../si-es-es.css">
+	</head>
+	<body>
+		<!-- Top Navigation Bar -->
+		<nav class="navbar navbar-expand-lg border-bottom border-primary">
+			<div class="container">
+				<a href="/" title="Wow! It's a Wau!" class="navbar-brand text-primary d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+				<button class="navbar-toggler border-0 text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      ~|{·})
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a href="/work/" class="nav-link"><i class="icon-pencil-ruler me-2"></i>Work</a>
+						</li>
+						<li class="nav-item">
+							<a href="/life/" class="nav-link"><i class="icon-sun me-2"></i>Life</a>
+						</li>
+						<li class="nav-item">
+							<a href="/balance/" class="nav-link"><i class="icon-mountain me-2"></i>Balance</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- end Top Navigation Bar -->
+
+		<!-- Header Section -->
+		<header class="container my-5">
+			<section class="d-flex flex-wrap flex-row gap-2 gap-sm-4">
+				<article class="card border border-primary">
+					<div class="card-body">
+						<h1 class="card-title text-primary" style="--bs-text-opacity: .5"><span>post </span>Section Patterns</h1>
+					</div>
+				</article>
+				<article class="card">
+					<p class="card-body">Twelve in-post section patterns ported from the Batik design system into <code>si-es-es.css</code>. Each block re-tints per category.</p>
+				</article>
+				<article class="card button border border-primary bg-primary-subtle text-primary-emphasis">
+					<a href="/components/" class="card-body text-decoration-none text-primary-emphasis">
+						<span class="card-header bg-transparent border-0 p-0"><i class="icon-arrow-left me-1"></i>Back</span>
+						<strong class="d-block">Components Home &rarr;</strong>
+						<span class="small">The full component catalog.</span>
+					</a>
+				</article>
+			</section>
+		</header>
+		<!-- end Header Section -->
+
+		<!-- Main Content Section -->
+		<main class="container my-5">
+
+			<!-- How to use -->
+			<section class="py-3">
+				<div class="card border-0 shadow-sm mb-4">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="icon-info me-2 text-primary"></i>How to Use these Patterns</h3>
+						<ul class="mb-3">
+							<li>Wrap a run of post sections in an element with <code>data-category="work|life|balance"</code>. The <code>--cat-*</code> tokens cascade down and re-tint every block below.</li>
+							<li>Each pattern is a single class on the section wrapper (e.g. <code>.post-figure</code>). The wrapper caps to the 1140px column and pads it; inner elements set their own measures.</li>
+							<li>Glyphs use Lucide <code>icon-*</code>; brand marks use Simple Icons <code>brand-*</code>.</li>
+						</ul>
+						<p class="mb-0">The specimens below run in a <code>data-category="work"</code> wrapper, with one <code>data-category="balance"</code> block near the end to show category theming.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- ==================================================================
+			     SPECIMENS — themed "work" (indigo)
+			     ================================================================== -->
+			<div data-category="work">
+
+				<!-- 1. Figure -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-image me-2 text-primary"></i>Figure <code class="small text-secondary">.post-figure</code></h3>
+					<div class="post-figure">
+						<figure>
+							<div class="smart-image smart-image-placeholder"><span class="label">portfolio · featured shot</span></div>
+							<figcaption>Finished UI of the Day Food catalogue home page.</figcaption>
+						</figure>
+					</div>
+					<p class="text-secondary fst-italic small">Captioned image — centred, breaks out to 56rem, italic caption capped to 42rem.</p>
+				</section>
+
+				<!-- 2. Gallery -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-layout-grid me-2 text-primary"></i>Image Gallery <code class="small text-secondary">.post-gallery</code></h3>
+					<div class="post-gallery">
+						<div class="gallery-grid">
+							<figure>
+								<div class="smart-image smart-image-placeholder"><span class="label">drop screenshot · home page</span></div>
+								<figcaption>Home page</figcaption>
+							</figure>
+							<figure>
+								<div class="smart-image smart-image-placeholder"><span class="label">drop screenshot · product listing</span></div>
+								<figcaption>Product listing</figcaption>
+							</figure>
+							<figure>
+								<div class="smart-image smart-image-placeholder"><span class="label">drop screenshot · product detail</span></div>
+								<figcaption>Product detail</figcaption>
+							</figure>
+							<figure>
+								<div class="smart-image smart-image-placeholder"><span class="label">drop screenshot · mobile view</span></div>
+								<figcaption>Mobile view</figcaption>
+							</figure>
+						</div>
+					</div>
+					<p class="text-secondary fst-italic small">Screenshot grid — column count via <code>--gallery-cols</code> (default 2).</p>
+				</section>
+
+				<!-- 3. Before / After -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-columns-2 me-2 text-primary"></i>Before / After <code class="small text-secondary">.post-before-after</code></h3>
+					<div class="post-before-after">
+						<div class="before-after-grid">
+							<figure>
+								<div class="ba-label is-before"><i class="icon-history" aria-hidden="true"></i>Before</div>
+								<div class="smart-image smart-image-placeholder"><span class="label">drop 'before' screenshot</span></div>
+								<figcaption>An old version of the web portal.</figcaption>
+							</figure>
+							<figure>
+								<div class="ba-label is-after"><i class="icon-sparkles" aria-hidden="true"></i>After</div>
+								<div class="smart-image smart-image-placeholder"><span class="label">drop 'after' screenshot</span></div>
+								<figcaption>Proposed solution, low-fidelity.</figcaption>
+							</figure>
+						</div>
+					</div>
+					<p class="text-secondary fst-italic small">Labelled comparison pair — "Before" muted, "After" in the category ink.</p>
+				</section>
+
+				<!-- 4. Pull quote -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-quote me-2 text-primary"></i>Pull Quote <code class="small text-secondary">.post-pull-quote</code></h3>
+					<div class="post-pull-quote">
+						<aside>
+							<p class="pq-quote">“If you get tired, learn to rest, not to quit.”</p>
+							<p class="pq-attribution">— Banksy</p>
+						</aside>
+					</div>
+					<p class="text-secondary fst-italic small">Big category-coloured serif quote with hairline rules and em-dash attribution.</p>
+				</section>
+
+				<!-- 5. Callout (all three variants) -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-info me-2 text-primary"></i>Callout <code class="small text-secondary">.post-callout .is-note / .is-warning / .is-tip</code></h3>
+					<div class="post-callout is-note">
+						<aside>
+							<div class="callout-header"><i class="icon-info" aria-hidden="true"></i>Note</div>
+							<p class="callout-body">This is a note. It follows the category tint, so it re-colours with the surrounding <code>data-category</code>.</p>
+						</aside>
+					</div>
+					<div class="post-callout is-warning">
+						<aside>
+							<div class="callout-header"><i class="icon-alert-triangle" aria-hidden="true"></i>Warning</div>
+							<p class="callout-body">Pardon the mess — this post is still being moved over from the old blog, so some images may be missing for now. Thx bye 🚜💨</p>
+						</aside>
+					</div>
+					<div class="post-callout is-tip">
+						<aside>
+							<div class="callout-header"><i class="icon-lightbulb" aria-hidden="true"></i>Tip</div>
+							<p class="callout-body">A tip box in emerald — good for a quick aside the reader shouldn't miss.</p>
+						</aside>
+					</div>
+					<p class="text-secondary fst-italic small">Note / warning / tip in the site's construction-notice voice; the modifier swaps icon, label and tint.</p>
+				</section>
+
+				<!-- 6. Meta table -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-table me-2 text-primary"></i>Meta Table <code class="small text-secondary">.post-meta-table</code></h3>
+					<div class="post-meta-table">
+						<dl>
+							<div class="meta-row">
+								<dt>Client</dt>
+								<dd>Jabatan Kebajikan Masyarakat (JKM)</dd>
+							</div>
+							<div class="meta-row">
+								<dt>Responsibilities</dt>
+								<dd>Research, design and build</dd>
+							</div>
+							<div class="meta-row">
+								<dt>Technology stack</dt>
+								<dd>HTML, SCSS, Adobe XD, Ruby on Rails</dd>
+							</div>
+							<div class="meta-row">
+								<dt>Year</dt>
+								<dd><time datetime="2017">2017</time></dd>
+							</div>
+							<div class="meta-row">
+								<dt>External links</dt>
+								<dd class="meta-links">
+									<a href="https://www.behance.net/gallery/175210039/Case-Study-JKM" class="meta-link"><i class="brand-icon brand-behance" aria-hidden="true"></i>View in Behance</a>
+									<a href="https://github.com/rudzainy" class="meta-link"><i class="brand-icon brand-github" aria-hidden="true"></i>Visit at GitHub</a>
+								</dd>
+							</div>
+						</dl>
+					</div>
+					<p class="text-secondary fst-italic small">Project fact sheet — bordered definition list with aubergine outline link buttons.</p>
+				</section>
+
+				<!-- 7. Embed -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-square-play me-2 text-primary"></i>Embed <code class="small text-secondary">.post-embed</code></h3>
+					<div class="post-embed">
+						<figure>
+							<div class="embed-header">
+								<span class="embed-source">Behance</span>
+								<a href="https://www.behance.net/gallery/175206951/Hoojah" class="embed-link">behance.net/gallery/175206951/Hoojah</a>
+								<a href="https://www.behance.net/gallery/175206951/Hoojah" class="embed-open"><i class="icon-external-link" aria-hidden="true"></i><span class="visually-hidden">Open Hoojah on Behance</span></a>
+							</div>
+							<div class="embed-frame">
+								<iframe src="https://www.behance.net/embed/project/175206951?ilo0=1" title="Hoojah project on Behance" loading="lazy" allowfullscreen="allowfullscreen"></iframe>
+							</div>
+							<figcaption class="visually-hidden">Embedded Behance presentation of the Hoojah project.</figcaption>
+						</figure>
+					</div>
+					<p class="text-secondary fst-italic small">Iframe in a card with a category source tag and a truncated mono display link.</p>
+				</section>
+
+				<!-- 8. Code -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-code me-2 text-primary"></i>Code Block <code class="small text-secondary">.post-code</code></h3>
+					<div class="post-code">
+						<div class="code-block">
+							<div class="code-header">
+								<span class="code-file">jei-es.js</span>
+								<span class="code-lang">JavaScript</span>
+							</div>
+							<pre><code>const quoteCards = document.querySelectorAll('.rotating-quote');
+quoteCards.forEach((card) => {
+  const delay = 4500 + Math.random() * 5400; // 4.5–9.9s, so cards drift apart
+  setInterval(() => showNextQuote(card), delay);
+});</code></pre>
+						</div>
+					</div>
+					<p class="text-secondary fst-italic small">Dark aubergine code block — mono filename header, category-tinted language tag.</p>
+				</section>
+
+				<!-- 9. Steps -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-list-ordered me-2 text-primary"></i>Process Steps <code class="small text-secondary">.post-steps</code></h3>
+					<div class="post-steps">
+						<div class="steps-rail">
+							<ol>
+								<li>
+									<div class="step-num">1</div>
+									<div>
+										<h3>Research</h3>
+										<p>Sat with the existing portal and listed everything that made it hard to use — navigation depth, dated visuals, no mobile support.</p>
+									</div>
+								</li>
+								<li>
+									<div class="step-num">2</div>
+									<div>
+										<h3>Sketch</h3>
+										<p>Pencil-and-paper sketches of the proposed structure, tested against the three most common user tasks.</p>
+									</div>
+								</li>
+								<li>
+									<div class="step-num">3</div>
+									<div>
+										<h3>Design</h3>
+										<p>Low-fidelity screens in grayscale first, colour later — so the structure gets argued about before the paint does.</p>
+									</div>
+								</li>
+							</ol>
+						</div>
+					</div>
+					<p class="text-secondary fst-italic small">Numbered vertical timeline — category number chips on a connecting rail.</p>
+				</section>
+
+				<!-- 10. Stats -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-bar-chart-3 me-2 text-primary"></i>Stats Row <code class="small text-secondary">.post-stats</code></h3>
+					<div class="post-stats">
+						<div class="stats-strip">
+							<div class="stat">
+								<div class="stat-num">6</div>
+								<div class="stat-label">User interviews</div>
+							</div>
+							<div class="stat">
+								<div class="stat-num">3</div>
+								<div class="stat-label">Design iterations</div>
+							</div>
+							<div class="stat">
+								<div class="stat-num">40%</div>
+								<div class="stat-label">Fewer clicks to task</div>
+							</div>
+							<div class="stat">
+								<div class="stat-num">2</div>
+								<div class="stat-label">Weeks to launch</div>
+							</div>
+						</div>
+					</div>
+					<p class="text-secondary fst-italic small">Row of big poster-shadow numbers with uppercase labels in a divided card strip.</p>
+				</section>
+
+				<!-- 11. Prev / Next -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-arrow-left-right me-2 text-primary"></i>Prev / Next <code class="small text-secondary">.post-nav</code></h3>
+					<div class="post-nav">
+						<nav aria-label="Post navigation">
+							<a href="#" class="nav-card is-prev">
+								<span class="nav-dir"><i class="icon-arrow-left" aria-hidden="true"></i>Previous</span>
+								<span class="nav-title">Hearts</span>
+								<span class="nav-date"><time datetime="2015-09-25">25.09.2015</time></span>
+							</a>
+							<a href="#" class="nav-card is-next">
+								<span class="nav-dir">Next<i class="icon-arrow-right" aria-hidden="true"></i></span>
+								<span class="nav-title">The Framework</span>
+								<span class="nav-date"><time datetime="2024-09-05">05.09.2024</time></span>
+							</a>
+						</nav>
+					</div>
+					<p class="text-secondary fst-italic small">End-of-post navigation — two hover-lift cards linking to the previous and next post.</p>
+				</section>
+
+				<!-- 12. Related strip -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-layout-grid me-2 text-primary"></i>Related Strip <code class="small text-secondary">.post-related</code></h3>
+					<div class="post-related">
+						<h2><span class="lead-in">more of</span> <span class="subject">Work</span></h2>
+						<div class="scroll-wrapper">
+							<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
+								<article class="card border border-info bg-info-subtle text-info-emphasis card-2x1">
+									<div class="card-header">CLIENT PROJECT</div>
+									<div class="card-body d-flex flex-column justify-content-between">
+										<h5 class="card-title">JKM Web Portal</h5>
+										<p class="card-text mb-0">Design review of the welfare department's web portal.</p>
+									</div>
+								</article>
+								<article class="card border border-info bg-info-subtle text-info-emphasis card-2x1">
+									<div class="card-header">MY PROJECT</div>
+									<div class="card-body d-flex flex-column justify-content-between">
+										<h5 class="card-title">The Hoojah Project</h5>
+										<p class="card-text mb-0">Online poll and debating platform for Malaysia.</p>
+									</div>
+								</article>
+								<article class="card border border-info bg-info-subtle text-info-emphasis card-2x1">
+									<div class="card-header">11.09.2025</div>
+									<div class="card-body d-flex flex-column justify-content-between">
+										<h5 class="card-title">Day Food Catalogue</h5>
+										<p class="card-text mb-0">A food catalogue for the office pantry crowd.</p>
+									</div>
+								</article>
+								<article class="card button border border-info bg-info-subtle text-info-emphasis">
+									<a href="/work/" class="display-6"><i class="icon-pencil-ruler me-1 text-info"></i><i class="icon-arrow-right text-info"></i><span class="visually-hidden">More of Work</span></a>
+								</article>
+							</section>
+						</div>
+					</div>
+					<p class="text-secondary fst-italic small">"More of X" heading over the site's existing horizontal card scroller, ending in the arrow button card.</p>
+				</section>
+
+			</div>
+			<!-- end work-themed specimens -->
+
+			<!-- ==================================================================
+			     CATEGORY THEMING — the same patterns retinted "balance" (saffron)
+			     ================================================================== -->
+			<section class="py-3">
+				<div class="card border-0 shadow-sm my-4">
+					<div class="card-body p-4">
+						<h3 class="border-bottom pb-2 mb-3"><i class="icon-mountain me-2 text-warning"></i>Category Theming</h3>
+						<p class="mb-0">The identical markup below sits in a <code>data-category="balance"</code> wrapper. Every <code>--cat-*</code> token flips to saffron with no per-block changes.</p>
+					</div>
+				</div>
+			</section>
+
+			<div data-category="balance">
+				<!-- Steps, retinted -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-list-ordered me-2 text-warning"></i>Process Steps <code class="small text-secondary">.post-steps</code> — balance</h3>
+					<div class="post-steps">
+						<div class="steps-rail">
+							<ol>
+								<li>
+									<div class="step-num">1</div>
+									<div>
+										<h3>Wake</h3>
+										<p>Up before the heat, water first, then a slow walk to shake the sleep off.</p>
+									</div>
+								</li>
+								<li>
+									<div class="step-num">2</div>
+									<div>
+										<h3>Move</h3>
+										<p>A climb or a long ride — something that makes the day's worries feel small.</p>
+									</div>
+								</li>
+								<li>
+									<div class="step-num">3</div>
+									<div>
+										<h3>Rest</h3>
+										<p>Tea, a book, no screens. Learn to rest, not to quit.</p>
+									</div>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<!-- Pull quote, retinted -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-quote me-2 text-warning"></i>Pull Quote <code class="small text-secondary">.post-pull-quote</code> — balance</h3>
+					<div class="post-pull-quote">
+						<aside>
+							<p class="pq-quote">“The mountain teaches patience the way nothing else can.”</p>
+							<p class="pq-attribution">— A note to self</p>
+						</aside>
+					</div>
+				</section>
+
+				<!-- Stats, retinted -->
+				<section class="py-3">
+					<h3 class="border-bottom pb-2 mb-3"><i class="icon-bar-chart-3 me-2 text-warning"></i>Stats Row <code class="small text-secondary">.post-stats</code> — balance</h3>
+					<div class="post-stats">
+						<div class="stats-strip">
+							<div class="stat">
+								<div class="stat-num">7</div>
+								<div class="stat-label">Summits this year</div>
+							</div>
+							<div class="stat">
+								<div class="stat-num">42</div>
+								<div class="stat-label">Kilometres walked</div>
+							</div>
+							<div class="stat">
+								<div class="stat-num">3</div>
+								<div class="stat-label">Books finished</div>
+							</div>
+							<div class="stat">
+								<div class="stat-num">0</div>
+								<div class="stat-label">Regrets</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!-- end balance-themed specimens -->
+
+		</main>
+		<!-- end Main Content Section -->
+
+		<!-- Footer Section -->
+		<footer class="container">
+			<section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+				<div class="col-md-4 d-flex align-items-center">
+					<span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau" data-bs-toggle="modal" data-bs-target="#takdeModal">~|{·})</a> <a href="/LICENSE"  class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span>
+				</div>
+				<div class="col-md-4 d-flex justify-content-center">
+					<a href="/components/" class="text-decoration-none me-3">Components Home</a>
+					<a href="#top" class="text-decoration-none">Back to top</a>
+				</div>
+				<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+					<li class="ms-3">
+						<a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
+							<i class="brand-icon brand-github me-2"></i><span class="visually-hidden">GitHub</span>
+						</a>
+					</li>
+					<li class="ms-3">
+						<a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙">
+							<i class="icon-heart me-2"></i><span class="visually-hidden">Sama²</span>
+						</a>
+					</li>
+					<li class="ms-3 mt-n1">
+						<a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
+							<i class="icon-coffee me-2"></i><span class="visually-hidden">Ko-fi</span>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</footer>
+		<!-- end Footer Section -->
+
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+		<!-- end Bootstrap JS -->
+	</body>
+</html>

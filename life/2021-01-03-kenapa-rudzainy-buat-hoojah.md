@@ -2,7 +2,7 @@
 layout: post
 title: Kenapa Rudzainy Buat Hoojah
 date: 2021-01-03 08:46 +0800
-description:
+description: Rudzainy Rahman bercerita tentang perjalanan membina Hoojah.my — dalam temubual podcast Rakita 107.9.
 image:
 category: Work
 tags: [hoojah, ruby on rails, podcast]

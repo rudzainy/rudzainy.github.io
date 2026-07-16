@@ -1,3 +1,19 @@
+---
+layout: post
+title: Interview Questions and Answers
+date: 2025-09-10 09:00 +0800
+description:
+image:
+category: Work
+tags: [notes]
+published: false
+sitemap: false
+---
+
+<!-- owner: this looks like private job-application prep (recruiter URLs +
+     personal answers), not a portfolio post. Left unpublished — decide
+     whether it belongs in the repo at all. -->
+
 https://appetiser.recruitee.com/o/product-designer-uiux-2/c/new?source=Jora
 
 https://appetiser.recruitee.com/o/product-designer-uiux-2
