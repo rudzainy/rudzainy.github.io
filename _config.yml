@@ -1,0 +1,11 @@
+# GitHub Pages runs Jekyll by default. This site is hand-written static HTML
+# served directly (the .html files are the site; the .md files are unbuilt
+# legacy sources). Jekyll still processes every .md via jekyll-optional-front-matter,
+# so exclude the internal docs whose prose (e.g. the literal "{% ... %}" when
+# describing the legacy sources) would otherwise break the Liquid parser — and
+# which are not meant to be published pages anyway.
+exclude:
+  - CLAUDE.md
+  - README.md
+  - EDITORIAL-GAP-REPORT.md
+  - docs/superpowers
