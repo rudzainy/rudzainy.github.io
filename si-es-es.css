@@ -721,3 +721,21 @@ body:has(.page-header-balance) main {
   font-size: var(--type-read);
   line-height: 1.72;
 }
+
+/* Brand icons — Simple Icons (simpleicons.org) wired as CSS masks so they
+   inherit `currentColor` and scale with font-size, like the Lucide font.
+   Lucide dropped brand marks and Bootstrap Icons is retired, so these carry
+   github / behance / youtube / x. Usage: <i class="brand-icon brand-github">. */
+.brand-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  background-color: currentColor;
+  -webkit-mask: var(--si) center / contain no-repeat;
+  mask: var(--si) center / contain no-repeat;
+}
+.brand-github  { --si: url(https://cdn.simpleicons.org/github); }
+.brand-behance { --si: url(https://cdn.simpleicons.org/behance); }
+.brand-youtube { --si: url(https://cdn.simpleicons.org/youtube); }
+.brand-x       { --si: url(https://cdn.simpleicons.org/x); }

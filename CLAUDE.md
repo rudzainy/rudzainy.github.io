@@ -15,7 +15,8 @@ under `/work/`, `/life/`, and `/balance/`.
 - **HTML5** — semantic markup, no templating. What you edit is what ships.
 - **Bootstrap 5.3.8** — CDN-hosted for layout and responsive design.
 - **Lucide** (lucide-static font, CDN) — primary icon library (`icon-*` classes). Category glyphs: Work `icon-pencil-ruler`, Life `icon-sun`, Balance `icon-mountain`.
-- **Bootstrap Icons 1.13.1** — CDN, kept only for glyphs Lucide lacks: brand marks (`bi bi-github/youtube/twitter/behance`) and numbered-step circles (`bi bi-1-circle`…).
+- **Simple Icons** (simpleicons.org) — brand marks only, wired as CSS masks so they inherit `currentColor` + font-size: `<i class="brand-icon brand-github">` (also `brand-behance`, `brand-youtube`, `brand-x`). Classes defined in `si-es-es.css`.
+- **Bootstrap Icons** — fully retired (was the legacy icon set; all `bi-*` migrated to Lucide/Simple Icons).
 - **Custom CSS** — `si-es-es.css` for house styles (design tokens, card hover
   effects, shadows, transitions).
 - **Vanilla JavaScript** — `jei-es.js` for quote randomization on section pages.
