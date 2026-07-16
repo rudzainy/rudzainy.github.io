@@ -13,6 +13,7 @@
 		<!-- Bootstrap CSS & Icons-->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
 		<!-- end Bootstrap CSS & Icons -->
 
 		<link rel="stylesheet" type="text/css" href="../si-es-es.css">
@@ -28,13 +29,13 @@
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a href="/work/" class="nav-link"><i class="bi bi-person-fill-gear me-2"></i>Work</a>
+							<a href="/work/" class="nav-link"><i class="icon-pencil-ruler me-2"></i>Work</a>
 						</li>
 						<li class="nav-item">
-							<a href="/life/" class="nav-link"><i class="bi bi-person-hearts me-2"></i>Life</a>
+							<a href="/life/" class="nav-link"><i class="icon-sun me-2"></i>Life</a>
 						</li>
 						<li class="nav-item">
-							<a href="/balance/" class="nav-link"><i class="bi bi-person-lines-fill me-2"></i>Balance</a>
+							<a href="/balance/" class="nav-link"><i class="icon-mountain me-2"></i>Balance</a>
 						</li>
 					</ul>
 				</div>
@@ -124,7 +125,7 @@
 			<!-- Section: Summary -->
 			<section class="row py-4">
 				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-book me-2 text-primary"></i>Summary</h3>
+					<h3 class="border-bottom pb-3 mb-4"><i class="icon-book-open me-2 text-primary"></i>Summary</h3>
 					<p class="lead mb-0">Hoojah is a polling platform that focuses on the arguments and debates behind the votes. It's a platform for meaningful discussions, where users can vote on polls, add arguments, and engage in one-on-one debates. The main challenge was to design a platform that encourages meaningful discussions rather than just collecting votes. We needed to create a user experience that makes it easy for users to express their opinions and engage in debates. This project taught me the value of constraint-driven design—by limiting poll options to just three choices, I discovered how constraints can actually enhance clarity and user engagement. As someone who values thoughtful discourse, I created this platform to address the noise and polarization I often saw in online discussions.</p>
 				</div>
 			</section>
@@ -133,16 +134,16 @@
 			<!-- Section: Background -->
 			<section class="row py-4">
 				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-people-fill me-2 text-primary"></i>1. Background</h3>
-					<h4 class="mt-4 text-primary"><i class="bi bi-chat-dots me-2"></i>The Inefficiency of Online Discussion Platforms</h4>
+					<h3 class="border-bottom pb-3 mb-4"><i class="icon-users me-2 text-primary"></i>1. Background</h3>
+					<h4 class="mt-4 text-primary"><i class="icon-message-circle me-2"></i>The Inefficiency of Online Discussion Platforms</h4>
 					<p>Today Malaysians use social media platforms and online forums to discuss important matters. However, it's hard to track specific topics as different groups discuss the same topics separately, failing to provide structural opinions and results. As someone who values thoughtful discourse, I found this fragmentation particularly frustrating when trying to follow important discussions.</p>
 					<figure class="figure mb-4">
 						<img src="../images/portfolio/hoojah/Home-User.png" class="figure-img img-fluid rounded shadow" alt="Home page showing timeline view of recently updated polls">
-						<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Home page showing timeline view of recently updated polls. Desktop users see additional information in sidebars.</figcaption>
+						<figcaption class="figure-caption text-center"><i class="icon-image me-1"></i>Home page showing timeline view of recently updated polls. Desktop users see additional information in sidebars.</figcaption>
 					</figure>
 					<p>Subjective discussions make decision-making difficult and eventually become noise. Open polls provide objective questions that deter subjective discussions.</p>
 
-					<h4 class="mt-4 text-primary"><i class="bi bi-diagram-3 me-2"></i>System Architecture</h4>
+					<h4 class="mt-4 text-primary"><i class="icon-workflow me-2"></i>System Architecture</h4>
 					<p>Hoojah was built with a modern tech stack designed for scalability and real-time interactions. The architecture balances performance needs with development efficiency, allowing for rapid iteration while maintaining a responsive user experience.</p>
 
 					<figure class="figure mb-4">
@@ -181,18 +182,18 @@
 								classDef default fill:#fff,stroke:#6c757d
 							</pre>
 						</div>
-						<figcaption class="figure-caption text-center"><i class="bi bi-layers me-1"></i>Hoojah's system architecture showing the client, server, data, and external service layers.</figcaption>
+						<figcaption class="figure-caption text-center"><i class="icon-layers me-1"></i>Hoojah's system architecture showing the client, server, data, and external service layers.</figcaption>
 					</figure>
 
-					<h4 class="mt-5 text-primary"><i class="bi bi-card-checklist me-2"></i>Rationale for a 3-Options Voting System</h4>
+					<h4 class="mt-5 text-primary"><i class="icon-clipboard-list me-2"></i>Rationale for a 3-Options Voting System</h4>
 					<p>One of the defining design choices in Hoojah is to <strong>restrict poll responses to three options: Agree, Neutral, and Disagree</strong>. This wasn't just a simplification—it was a deliberate strategy born from my frustration with the noise in online discussions. After observing countless debates on social media platforms, I realized that too many choices often led to decision paralysis and diluted the core issues.</p>
 
-					<h5 class="mt-4 mb-3 text-success"><i class="bi bi-stars me-2"></i>Benefits</h5>
+					<h5 class="mt-4 mb-3 text-success"><i class="icon-sparkles me-2"></i>Benefits</h5>
 					<div class="row g-4 my-4">
 						<div class="col-md-6">
 							<div class="card h-100 border-0 shadow-sm">
 								<div class="card-body">
-									<h6 class="card-title"><i class="bi bi-eye-fill me-2"></i>Clarity & Interpretability</h6>
+									<h6 class="card-title"><i class="icon-eye me-2"></i>Clarity & Interpretability</h6>
 									<p class="card-text">Results are easy to understand at a glance. Users immediately see how the community leans: for, against, or neutral. This simplicity was something I craved as both a developer and a user of online platforms.</p>
 								</div>
 							</div>
@@ -200,7 +201,7 @@
 						<div class="col-md-6">
 							<div class="card h-100 border-0 shadow-sm">
 								<div class="card-body">
-									<h6 class="card-title"><i class="bi bi-door-open me-2"></i>Lower Barrier to Entry</h6>
+									<h6 class="card-title"><i class="icon-door-open me-2"></i>Lower Barrier to Entry</h6>
 									<p class="card-text">Many people hesitate to join polls with too many nuanced options. Three simple choices feel intuitive, encouraging wider participation. I saw this firsthand when testing early versions with friends - they were more willing to engage when the choices were clear-cut.</p>
 								</div>
 							</div>
@@ -208,7 +209,7 @@
 						<div class="col-md-6">
 							<div class="card h-100 border-0 shadow-sm">
 								<div class="card-body">
-									<h6 class="card-title"><i class="bi bi-lightning-fill me-2"></i>Reduced Decision Fatigue</h6>
+									<h6 class="card-title"><i class="icon-zap me-2"></i>Reduced Decision Fatigue</h6>
 									<p class="card-text">Users don't waste time splitting hairs between "slightly agree" vs "mostly agree." This makes contributing fast and lightweight. As someone who values efficient communication, this was a core principle I wanted to embody in Hoojah.</p>
 								</div>
 							</div>
@@ -216,7 +217,7 @@
 						<div class="col-md-6">
 							<div class="card h-100 border-0 shadow-sm">
 								<div class="card-body">
-									<h6 class="card-title"><i class="bi bi-diagram-3 me-2"></i>Natural Grouping for Arguments</h6>
+									<h6 class="card-title"><i class="icon-workflow me-2"></i>Natural Grouping for Arguments</h6>
 									<p class="card-text">Supporting arguments automatically fall under one of three categories. This helps discussions stay structured and prevents option overload. During development, this structure became my north star for organizing content.</p>
 								</div>
 							</div>
@@ -224,21 +225,21 @@
 						<div class="col-md-6">
 							<div class="card h-100 border-0 shadow-sm">
 								<div class="card-body">
-									<h6 class="card-title"><i class="bi bi-balance me-2"></i>Balanced Representation</h6>
+									<h6 class="card-title"><i class="icon-scale me-2"></i>Balanced Representation</h6>
 									<p class="card-text">Including a "Neutral" choice avoids false polarization and captures the voices of those who are undecided or nuanced. This was particularly important to me as it reflects my belief that not every issue has just two sides.</p>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<h5 class="mt-4 mb-3 text-warning"><i class="bi bi-exclamation-circle me-2"></i>Considerations</h5>
+					<h5 class="mt-4 mb-3 text-warning"><i class="icon-circle-alert me-2"></i>Considerations</h5>
 					<p>While limiting options reduces noise, it does flatten some complexity. Hoojah's design addresses this by allowing <em>supporting arguments</em> under each stance, so nuance still surfaces through text and debate. This balance was something I refined over years of iteration, learning from user feedback and my own experiences as a participant in the platform.</p>
 
 					<div class="row g-4 my-4">
 						<div class="col-lg-6">
 							<figure class="figure mb-4 h-100">
 								<img src="../images/portfolio/hoojah/poll-interface.png" class="figure-img img-fluid rounded shadow" alt="Hoojah's restricted 3-option poll structure">
-								<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Figure 1: Hoojah's restricted 3-option poll structure - a design choice that evolved through many late-night coding sessions.</figcaption>
+								<figcaption class="figure-caption text-center"><i class="icon-image me-1"></i>Figure 1: Hoojah's restricted 3-option poll structure - a design choice that evolved through many late-night coding sessions.</figcaption>
 							</figure>
 						</div>
 						<div class="col-lg-6">
@@ -261,12 +262,12 @@
 										VOTE ||--|| USER : cast_by
 									</pre>
 								</div>
-								<figcaption class="figure-caption text-center"><i class="bi bi-database me-1"></i>Figure 1b: Entity relationship diagram showing how polls, options, arguments, debates, and users interconnect in the Hoojah data model.</figcaption>
+								<figcaption class="figure-caption text-center"><i class="icon-database me-1"></i>Figure 1b: Entity relationship diagram showing how polls, options, arguments, debates, and users interconnect in the Hoojah data model.</figcaption>
 							</figure>
 						</div>
 					</div>
 
-					<h4 class="mt-5 text-primary"><i class="bi bi-layout-text-sidebar-reverse me-2"></i>UI/UX Study: Solving the Convenience Problem</h4>
+					<h4 class="mt-5 text-primary"><i class="icon-panel-right me-2"></i>UI/UX Study: Solving the Convenience Problem</h4>
 					<p>One of the biggest barriers to online debate platforms is <strong>convenience</strong>—users often struggle to skim polls, understand arguments, and participate without friction. Hoojah's UI/UX design aimed to solve this through <strong>structured flows and visual hierarchy</strong>. This focus on usability came from my background in user-centered design and my personal frustration with cluttered interfaces.</p>
 
 					<div class="row g-4 my-4">
@@ -285,7 +286,7 @@
 						<div class="col-md-6">
 							<figure class="figure">
 								<img src="../images/portfolio/hoojah/poll-first-layout.png" class="figure-img img-fluid rounded shadow" alt="Poll positioned at the top for immediate engagement">
-								<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Figure 2: The poll-first layout - a solution I'm particularly proud of as it significantly reduced bounce rates during our tests.</figcaption>
+								<figcaption class="figure-caption text-center"><i class="icon-image me-1"></i>Figure 2: The poll-first layout - a solution I'm particularly proud of as it significantly reduced bounce rates during our tests.</figcaption>
 							</figure>
 						</div>
 					</div>
@@ -306,7 +307,7 @@
 						<div class="col-md-6">
 							<figure class="figure">
 								<img src="../images/portfolio/hoojah/grouped-arguments.png" class="figure-img img-fluid rounded shadow" alt="Supporting arguments clustered under each stance">
-								<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Figure 3: Grouped arguments interface - a feature that emerged from countless user testing sessions in coffee shops around Kuala Lumpur.</figcaption>
+								<figcaption class="figure-caption text-center"><i class="icon-image me-1"></i>Figure 3: Grouped arguments interface - a feature that emerged from countless user testing sessions in coffee shops around Kuala Lumpur.</figcaption>
 							</figure>
 						</div>
 					</div>
@@ -327,7 +328,7 @@
 						<div class="col-md-6">
 							<figure class="figure mb-3">
 								<img src="../images/portfolio/hoojah/debate-view.png" class="figure-img img-fluid rounded shadow" alt="Debate mode between two participants">
-								<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Figure 4a: Debate mode in action - a concept I first sketched in my notebook during a long bus ride, now fully realized.</figcaption>
+								<figcaption class="figure-caption text-center"><i class="icon-image me-1"></i>Figure 4a: Debate mode in action - a concept I first sketched in my notebook during a long bus ride, now fully realized.</figcaption>
 							</figure>
 
 							<figure class="figure mb-3">
@@ -370,7 +371,7 @@
 										H->>H: Make debate public
 									</pre>
 								</div>
-								<figcaption class="figure-caption text-center"><i class="bi bi-chat-square-text me-1"></i>Figure 4b: Sequence diagram showing the structured flow of a one-on-one debate in Hoojah.</figcaption>
+								<figcaption class="figure-caption text-center"><i class="icon-message-square me-1"></i>Figure 4b: Sequence diagram showing the structured flow of a one-on-one debate in Hoojah.</figcaption>
 							</figure>
 						</div>
 					</div>
@@ -391,7 +392,7 @@
 						<div class="col-md-6">
 							<figure class="figure">
 								<img src="../images/portfolio/hoojah/cta-buttons.png" class="figure-img img-fluid rounded shadow" alt="Streamlined actions guiding users to contribute">
-								<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Figure 5: Streamlined CTAs - an interface refinement that took nearly six months to perfect but dramatically increased user engagement.</figcaption>
+								<figcaption class="figure-caption text-center"><i class="icon-image me-1"></i>Figure 5: Streamlined CTAs - an interface refinement that took nearly six months to perfect but dramatically increased user engagement.</figcaption>
 							</figure>
 						</div>
 					</div>
@@ -412,12 +413,12 @@
 						<div class="col-md-6">
 							<figure class="figure">
 								<img src="../images/portfolio/hoojah/responsive-design.png" class="figure-img img-fluid rounded shadow" alt="Responsive design across devices">
-								<figcaption class="figure-caption text-center"><i class="bi bi-image me-1"></i>Figure 6: Responsive design - a testament to the hundreds of hours I spent testing on every device I could borrow or buy.</figcaption>
+								<figcaption class="figure-caption text-center"><i class="icon-image me-1"></i>Figure 6: Responsive design - a testament to the hundreds of hours I spent testing on every device I could borrow or buy.</figcaption>
 							</figure>
 						</div>
 					</div>
 
-					<h4><i class="bi bi-signpost-2 me-2"></i>User Journey Snapshot</h4>
+					<h4><i class="icon-signpost me-2"></i>User Journey Snapshot</h4>
 					<ol>
 						<li><strong>See poll at a glance</strong> → choose Agree / Neutral / Disagree.</li>
 						<li><strong>Read grouped arguments</strong> under the chosen stance.</li>
@@ -462,10 +463,10 @@
 								style M fill:#f8f9fa,stroke:#6c757d
 							</pre>
 						</div>
-						<figcaption class="figure-caption text-center"><i class="bi bi-diagram-3 me-1"></i>Figure 7: Interactive user journey flow showing the path from viewing a poll to engaging in structured debates.</figcaption>
+						<figcaption class="figure-caption text-center"><i class="icon-workflow me-1"></i>Figure 7: Interactive user journey flow showing the path from viewing a poll to engaging in structured debates.</figcaption>
 					</figure>
 
-					<h4><i class="bi bi-lightbulb me-2"></i>Key Takeaways</h4>
+					<h4><i class="icon-lightbulb me-2"></i>Key Takeaways</h4>
 					<ul>
 						<li>Restricting to three voting options balances simplicity with expressive debate - a lesson in constraint breeding creativity.</li>
 						<li>Convenience is achieved by prioritizing readability, structured flows, and responsive design - principles that have become central to my design philosophy.</li>
@@ -479,7 +480,7 @@
 			<!-- Section: Objectives -->
 			<section class="row py-4">
 				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-target me-2 text-primary"></i>2. Hoojah's Objectives</h3>
+					<h3 class="border-bottom pb-3 mb-4"><i class="icon-target me-2 text-primary"></i>2. Hoojah's Objectives</h3>
 					<ol>
 						<li>Create a platform for structured objective discussions where arguments are tied to polls with three options: agree, neutral, or disagree.</li>
 						<li>Encourage users to respond objectively to promote quality discussions and ethical online engagement.</li>
@@ -487,7 +488,7 @@
 					</ol>
 					<figure class="mb-4">
 						<img src="../images/portfolio/hoojah/Poll-Show-User.png" class="img-fluid rounded shadow" alt="Poll page showing user interactions">
-						<figcaption class="text-center fst-italic text-secondary mt-2"><i class="bi bi-image me-1"></i>A poll page showing three main interactions: voting, adding arguments, and one-on-one debates.</figcaption>
+						<figcaption class="text-center fst-italic text-secondary mt-2"><i class="icon-image me-1"></i>A poll page showing three main interactions: voting, adding arguments, and one-on-one debates.</figcaption>
 					</figure>
 				</div>
 			</section>
@@ -497,10 +498,10 @@
 			<!-- Section: Moving Forward -->
 			<section class="row py-4">
 				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-arrow-right-circle me-2 text-primary"></i>3. Moving Forward</h3>
+					<h3 class="border-bottom pb-3 mb-4"><i class="icon-arrow-right-circle me-2 text-primary"></i>3. Moving Forward</h3>
 					<p>The domain hoojah.my has been taken down, but Hoojah remains alive without recent updates. The next milestone is to convert features into plugins for Discourse or WordPress. The countless hours spent refining this UI taught me patience and the importance of iterative design based on real user feedback—a lesson I carry into every project I undertake.</p>
 					<section class="card border-0 shadow-sm">
-						<h4 class="card-header"><i class="bi bi-link-45deg me-2"></i>External Resources</h4>
+						<h4 class="card-header"><i class="icon-link me-2"></i>External Resources</h4>
 						<ul class="list-group list-group-flush">
 							<li class="list-group-item">
 								<a href="https://youtu.be/1GEy17NS7H4" class="btn btn-outline-dark w-100">
@@ -526,27 +527,27 @@
 			<!-- Section: Showcase -->
 			<section class="row py-4">
 				<div class="col-12 col-lg-6 mx-auto mb-5">
-					<h3 class="border-bottom pb-3 mb-4"><i class="bi bi-image me-2 text-primary"></i>4. Showcase</h3>
+					<h3 class="border-bottom pb-3 mb-4"><i class="icon-image me-2 text-primary"></i>4. Showcase</h3>
 					<div class="d-flex flex-wrap gap-3">
 						<figure class="mb-4" style="min-width: 300px; flex: 1">
 							<img src="../images/portfolio/hoojah/Debate-Show-Ended.png" class="img-fluid rounded shadow" alt="One-on-one debate page">
-							<figcaption class="text-center fst-italic text-secondary mt-2"><i class="bi bi-image me-1"></i>Debate page showing engagement between two public figures</figcaption>
+							<figcaption class="text-center fst-italic text-secondary mt-2"><i class="icon-image me-1"></i>Debate page showing engagement between two public figures</figcaption>
 						</figure>
 						<figure class="mb-4" style="min-width: 300px; flex: 1">
 							<img src="../images/portfolio/hoojah/Business-Search.png" class="img-fluid rounded shadow" alt="Analytics page">
-							<figcaption class="text-center fst-italic text-secondary mt-2"><i class="bi bi-image me-1"></i>Analytics page for business users</figcaption>
+							<figcaption class="text-center fst-italic text-secondary mt-2"><i class="icon-image me-1"></i>Analytics page for business users</figcaption>
 						</figure>
 						<figure class="mb-4" style="min-width: 300px; flex: 1">
 							<img src="../images/portfolio/hoojah/Log-In.png" class="img-fluid rounded shadow" alt="Login page">
-							<figcaption class="text-center fst-italic text-secondary mt-2"><i class="bi bi-image me-1"></i>Combined login/signup page with mobile optimization</figcaption>
+							<figcaption class="text-center fst-italic text-secondary mt-2"><i class="icon-image me-1"></i>Combined login/signup page with mobile optimization</figcaption>
 						</figure>
 						<figure class="mb-4" style="min-width: 300px; flex: 1">
 							<img src="../images/portfolio/hoojah/Poll-New.png" class="img-fluid rounded shadow" alt="Poll creation">
-							<figcaption class="text-center fst-italic text-secondary mt-2"><i class="bi bi-image me-1"></i>Poll creation interface with customization options</figcaption>
+							<figcaption class="text-center fst-italic text-secondary mt-2"><i class="icon-image me-1"></i>Poll creation interface with customization options</figcaption>
 						</figure>
 						<figure class="mb-4" style="min-width: 300px; flex: 1">
 							<img src="../images/portfolio/hoojah/User-Show-Polls.png" class="img-fluid rounded shadow" alt="User profile with badges">
-							<figcaption class="text-center fst-italic text-secondary mt-2"><i class="bi bi-image me-1"></i>User profile with achievement badges</figcaption>
+							<figcaption class="text-center fst-italic text-secondary mt-2"><i class="icon-image me-1"></i>User profile with achievement badges</figcaption>
 						</figure>
 					</div>
 				</div>
@@ -573,12 +574,12 @@
 					</li>
 					<li class="ms-3">
 						<a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙">
-							<i class="bi bi-suit-heart-fill me-2"></i><span class="visually-hidden">Sama²</span>
+							<i class="icon-heart me-2"></i><span class="visually-hidden">Sama²</span>
 						</a>
 					</li>
 					<li class="ms-3 mt-n1">
 						<a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
-							<i class="bi bi-cup-hot-fill me-2"></i><span class="visually-hidden">Ko-fi</span>
+							<i class="icon-coffee me-2"></i><span class="visually-hidden">Ko-fi</span>
 						</a>
 					</li>
 				</ul>
