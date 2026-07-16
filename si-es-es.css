@@ -50,7 +50,8 @@
 
   /* --- Sizing ---------------------------------------------------------- */
   --card-base-size: 150px;   /* overridden responsively in media queries */
-  --measure: 36rem;          /* comfortable reading column for post prose (~70 cpl) */
+  --measure: 42rem;          /* comfortable reading column for post prose (~70 cpl at 19px) */
+  --type-read: clamp(1.0625rem, 1rem + 0.35vw, 1.1875rem); /* post reading text ~17->19px */
 
   /* --- Radius ---------------------------------------------------------- */
   --radius-sm: 6px;
@@ -707,4 +708,16 @@ main.container > article.post-content figure img,
 main.container > figure img {
   max-width: 100%;
   height: auto;
+}
+
+/* Post pages: larger, more readable long-form body text.
+   Scoped to pages that have a coloured post header (`.page-header-*`), so the
+   homepage bento (also inside `main.container`, with fixed-height cards) is
+   untouched. Headings keep their own fluid sizes; this sets the inherited
+   reading size for prose, list items, leads, and card text. */
+body:has(.page-header-work) main,
+body:has(.page-header-life) main,
+body:has(.page-header-balance) main {
+  font-size: var(--type-read);
+  line-height: 1.72;
 }
