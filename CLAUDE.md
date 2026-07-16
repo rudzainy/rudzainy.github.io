@@ -5,10 +5,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 This is a hand-crafted static personal portfolio website hosted on GitHub Pages
-at **rudzainy.com**. GitHub Pages serves the raw `.html` files directly — there
-is **no build system, no static site generator, no Jekyll pipeline** (no
-`_config.yml`, no `Gemfile`). `index.html` links straight to the served pages
-under `/work/`, `/life/`, and `/balance/`.
+at **rudzainy.com**. The hand-written `.html` files **are** the site — you edit
+them directly and they ship as-is; `index.html` links straight to the pages under
+`/work/`, `/life/`, and `/balance/`.
+
+**Deployment reality (important):** GitHub Pages still runs **Jekyll** by default
+(there is no way to fully disable it here — `.nojekyll` is ignored by the
+Actions-based `pages-build-deployment`). A minimal `_config.yml` exists whose
+only job is an `exclude:` list for internal docs (`CLAUDE.md`, `README.md`,
+`EDITORIAL-GAP-REPORT.md`, `docs/superpowers`) — those are not published and,
+crucially, are kept away from Jekyll's Liquid parser. Jekyll renders every other
+`.md` via `jekyll-optional-front-matter`, so **never put a literal `{%`/`{{`
+Liquid sequence in any published `.md`** (even inside backticks or prose) — it
+will break the whole Pages build. If you must show one, wrap it in
+`{% raw %}…{% endraw %}` or exclude the file in `_config.yml`. There is no
+`Gemfile`; the `.html`/`.css`/`.js` are copied through untouched.
 
 ## Technology Stack
 
