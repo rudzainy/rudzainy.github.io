@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Add Diagram on Websites using MermaidJS by Rudzainy Rahman</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quick guide to setup and configure MermaidJS for websites.">
+
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+    <!-- end Bootstrap CSS & Icons -->
+
+    <link rel="stylesheet" type="text/css" href="../si-es-es.css">
+  </head>
+  <body data-category="balance">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-warning">
+      <div class="container">
+        <a href="/" title="Wow! It's a Wau!" class="navbar-brand text-warning d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+        <button class="navbar-toggler border-0 text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          ~|{·})
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/work/" class="nav-link"><i class="icon-pencil-ruler me-2"></i>Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="/life/" class="nav-link"><i class="icon-sun me-2"></i>Life</a>
+            </li>
+            <li class="nav-item">
+              <a href="/balance/" class="nav-link"><i class="icon-mountain me-2"></i>Balance</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end Top Navigation Bar -->
+
+    <!-- Page Header -->
+    <div class="page-header-balance">
+      <nav aria-label="breadcrumb" class="container pt-3">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/balance/">Balance</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Add Diagram on Websites using MermaidJS</li>
+        </ol>
+      </nav>
+      <header class="container mt-3">
+        <p class="mb-2" style="font-family:'Unica One',sans-serif;text-transform:uppercase;letter-spacing:0.05em;font-size:14px;color:rgba(255,255,255,0.75)"><time datetime="2024-03-23">23.03.2024</time> &middot; Tutorial</p>
+        <h1 class="page-title">Add Diagram on Websites using MermaidJS</h1>
+      </header>
+    </div>
+    <!-- end Page Header -->
+
+    <!-- Main Content Section -->
+    <main class="container my-5">
+      <article class="post-content">
+
+        <p><em>Quick guide to setup and configure MermaidJS for websites.</em></p>
+
+        <h2>This code&hellip;</h2>
+
+        <p>Write your Mermaid diagram source inside a fenced block. The code below is the raw init config and sequence diagram that drives the example:</p>
+
+        <div class="post-code">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-file">sequence.md</span>
+              <span class="code-lang">Mermaid</span>
+            </div>
+            <pre><code>%%{
+    init: {
+        'theme': 'base',
+        'wrap': true,
+        'fontSize': 10,
+        'themeVariables': {
+            'darkMode': false,
+            'primaryColor': '#6CA142',
+            'primaryTextColor': '#E8F0E0',
+            'primaryBorderColor': '#245228',
+            'lineColor': '#F8B229',
+            'secondaryColor': '#006100',
+            'tertiaryColor': '#fff',
+            'signalColor': '#E8F0E0'
+        }
+    }
+}%%
+
+sequenceDiagram
+    Donor-&gt;&gt;Project Coordinator: 1. Donor makes inquiry regarding the Masjid project.
+    Project Coordinator-&gt;&gt;Donor: 2. Provides information regarding options available for Masjids to donor.
+    Donor-&gt;&gt;Project Coordinator: 3. Donor learns and decide country and size of the Masjid they would prefer.
+    Project Coordinator-&gt;&gt;Donor: 4. When the donor decides, a written agreement is made &amp; payment is finalized.
+    Donor-&gt;&gt;Project Coordinator: 5. Donor signs the agreement and pays in full or as 3 phases.
+    Project Coordinator-&gt;&gt;Partner Side: 6. Then Geo Location is requested.
+    Partner Side-&gt;&gt;Project Coordinator: 7. Location is provided.
+    Project Coordinator-&gt;&gt;Donor: 8. Banners &amp; posters are made &amp; shared with donors.
+    Donor-&gt;&gt;Project Coordinator: 9. Banners &amp; posters are approved.
+    Project Coordinator-&gt;&gt;Partner Side: 10. Masjid is given for construction along with approved banners.
+    Partner Side-&gt;&gt;Project Coordinator: 11. Construction updates are shared.
+    Project Coordinator-&gt;&gt;Donor: 12. Updates &amp; completion photos are shared to donors.
+    Donor-&gt;&gt;Project Coordinator: 13. The Masjid Project is completed &amp; final media is received.
+    Partner Side-&gt;&gt;Project Coordinator: 14. Payment is requested for the Masjid.
+    Project Coordinator-&gt;&gt;Finance Dept.: 15. Payment request is crosschecked with data.
+    Finance Dept.-&gt;&gt;Partner Side: 16. Payment is processed and sent to partner.</code></pre>
+          </div>
+        </div>
+
+        <h2>&hellip;will generate this chart.</h2>
+
+        <p>When MermaidJS is loaded on the page, the block below renders as a live interactive diagram. The fenced <code>mermaid</code> class triggers automatic rendering by the Mermaid script.</p>
+
+        <div class="post-code">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-file">index.html &mdash; rendered mermaid block</span>
+              <span class="code-lang">HTML</span>
+            </div>
+            <pre><code>&lt;pre class="mermaid"&gt;
+%%{
+    init: {
+        'theme': 'base',
+        'wrap': true,
+        'fontSize': 10,
+        'darkMode': false,
+        'themeVariables': {
+            'primaryColor': '#6CA142',
+            'primaryTextColor': '#E8F0E0',
+            'primaryBorderColor': '#245228',
+            'lineColor': '#F8B229',
+            'secondaryColor': '#006100',
+            'tertiaryColor': '#fff',
+            'signalColor': '#E8F0E0'
+        }
+    }
+}%%
+
+sequenceDiagram
+    Donor-&gt;&gt;Project Coordinator: 1. Donor makes inquiry regarding the Masjid project.
+    Project Coordinator-&gt;&gt;Donor: 2. Provides information regarding options available for Masjids to donor.
+    Donor-&gt;&gt;Project Coordinator: 3. Donor learns and decide country and size of the Masjid they would prefer.
+    Project Coordinator-&gt;&gt;Donor: 4. When the donor decides, a written agreement is made &amp; payment is finalized.
+    Donor-&gt;&gt;Project Coordinator: 5. Donor signs the agreement and pays in full or as 3 phases.
+    Project Coordinator-&gt;&gt;Partner Side: 6. Then Geo Location is requested.
+    Partner Side-&gt;&gt;Project Coordinator: 7. Location is provided.
+    Project Coordinator-&gt;&gt;Donor: 8. Banners &amp; posters are made &amp; shared with donors.
+    Donor-&gt;&gt;Project Coordinator: 9. Banners &amp; posters are approved.
+    Project Coordinator-&gt;&gt;Partner Side: 10. Masjid is given for construction along with approved banners.
+    Partner Side-&gt;&gt;Project Coordinator: 11. Construction updates are shared.
+    Project Coordinator-&gt;&gt;Donor: 12. Updates &amp; completion photos are shared to donors.
+    Donor-&gt;&gt;Project Coordinator: 13. The Masjid Project is completed &amp; final media is received.
+    Partner Side-&gt;&gt;Project Coordinator: 14. Payment is requested for the Masjid.
+    Project Coordinator-&gt;&gt;Finance Dept.: 15. Payment request is crosschecked with data.
+    Finance Dept.-&gt;&gt;Partner Side: 16. Payment is processed and sent to partner.
+&lt;/pre&gt;</code></pre>
+          </div>
+        </div>
+
+        <p>To wire up MermaidJS, add the CDN script to your page&rsquo;s <code>&lt;head&gt;</code> or just before <code>&lt;/body&gt;</code>:</p>
+
+        <div class="post-code">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-file">index.html</span>
+              <span class="code-lang">HTML</span>
+            </div>
+            <pre><code>&lt;script type="module"&gt;
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+&lt;/script&gt;</code></pre>
+          </div>
+        </div>
+
+      </article>
+    </main>
+    <!-- end Main Content Section -->
+
+    <!-- Footer Section -->
+    <footer class="container">
+      <section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau" data-bs-toggle="modal" data-bs-target="#takdeModal">~|{·})</a> <a href="/LICENSE" class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <a href="/balance/" class="text-decoration-none me-3">Back to Balance</a>
+          <a href="#top" class="text-decoration-none">Back to top</a>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
+              <i class="brand-icon brand-github me-2"></i><span class="visually-hidden">GitHub</span>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama&#xB2;" target="_blank" title="View my Sama&#xB2; profile, and create your own!">
+              <i class="icon-heart me-2"></i><span class="visually-hidden">Sama&#xB2;</span>
+            </a>
+          </li>
+          <li class="ms-3 mt-n1">
+            <a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi?">
+              <i class="icon-coffee me-2"></i><span class="visually-hidden">Ko-fi</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <!-- end Footer Section -->
+
+    <script src="../jei-es.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -19,7 +19,34 @@ under `/work/`, `/life/`, and `/balance/`.
 - **Bootstrap Icons** — fully retired (was the legacy icon set; all `bi-*` migrated to Lucide/Simple Icons).
 - **Custom CSS** — `si-es-es.css` for house styles (design tokens, card hover
   effects, shadows, transitions).
-- **Vanilla JavaScript** — `jei-es.js` for quote randomization on section pages.
+- **Vanilla JavaScript** — `jei-es.js` for quote randomization on section pages
+  and the SmartImage `onerror` fallback swap.
+
+### Batik Design System additions (July 2026 handoff)
+
+Ported from the `Batik Design System` handoff into the no-build site as plain
+Bootstrap + `si-es-es.css` classes (never React/JSX):
+
+- **Post-body section library** — 12 reusable classes in `si-es-es.css`:
+  `.post-figure`, `.post-gallery` (`--gallery-cols`), `.post-before-after`,
+  `.post-pull-quote`, `.post-callout` (`.is-note/.is-warning/.is-tip`),
+  `.post-meta-table`, `.post-embed`, `.post-code`, `.post-steps`, `.post-stats`,
+  `.post-nav` (prev/next), `.post-related`. Documented/specimened in
+  `components/posts/index.html`.
+- **`data-category` hook** — set `data-category="work|life|balance"` on `<body>`
+  (or any ancestor) to make `.post-*` blocks re-tint via the inherited
+  `--cat-base/-ink/-subtle/-border` vars.
+- **Dot backgrounds** — `.bg-dots-work/life/balance` (pale category dots on a
+  subtle tint). Used only on section-index header bands and subtle-tint zones —
+  **not** on the vivid category header bands (those stay flat) and not on the
+  cream body. Tokens: `--bg-dot-size`, `--bg-dot-tile`, `--bg-dots-*`.
+- **SmartImage** — `.smart-image` frame + `.smart-image-placeholder` (45°
+  songket stripe). Real image: `<span class="smart-image is-zoom"><img … data-fallback="label"></span>`;
+  a failed/missing image is swapped to the striped placeholder by `jei-es.js`.
+- **Page templates** — case-study (Work) and journal-post (Life/Balance) layouts
+  live as hand-written HTML; exemplars: `work/2020-09-01-the-hoojah-project.html`
+  (case study), `balance/2024-05-09-how-to-validate-an-email-address-in-rails.html`
+  (journal). Rollout to all posts is a later pass.
 
 ## Development Workflow
 
