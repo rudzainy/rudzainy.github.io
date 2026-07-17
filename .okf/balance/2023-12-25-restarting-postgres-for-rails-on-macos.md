@@ -2,7 +2,7 @@
 type: Dev Note
 title: Restarting Postgres for Rails on MacOS
 description: How to resolve ActiveRecord ConnectionNotEstablished error by restarting Postgres for Rails.
-resource: https://rudzainy.com/balance/2023-12-25-restarting-postgres-for-rails-on-macos.html
+resource: https://rudzainy.github.io/balance/2023-12-25-restarting-postgres-for-rails-on-macos.html
 tags: [rails, postgres, error]
 timestamp: 2023-12-25T08:46:00+08:00
 category: Work
@@ -26,5 +26,5 @@ How to resolve ActiveRecord ConnectionNotEstablished error by restarting Postgre
 
 # Source
 
-- Live post: [Restarting Postgres for Rails on MacOS](https://rudzainy.com/balance/2023-12-25-restarting-postgres-for-rails-on-macos.html)
+- Live post: [Restarting Postgres for Rails on MacOS](https://rudzainy.github.io/balance/2023-12-25-restarting-postgres-for-rails-on-macos.html)
 - Legacy source: `balance/2023-12-25-restarting-postgres-for-rails-on-macos.md`

@@ -1,7 +1,7 @@
 ---
 type: Theatre
 title: Orang Kasar
-resource: https://rudzainy.com/balance/2019-04-24-orang-kasar.html
+resource: https://rudzainy.github.io/balance/2019-04-24-orang-kasar.html
 tags: [theatre, collaboration]
 timestamp: 2019-09-24T16:06:00+08:00
 category: Life
@@ -23,5 +23,5 @@ A theatre in the Life section of rudzainy.com.
 
 # Source
 
-- Live post: [Orang Kasar](https://rudzainy.com/balance/2019-04-24-orang-kasar.html)
+- Live post: [Orang Kasar](https://rudzainy.github.io/balance/2019-04-24-orang-kasar.html)
 - Legacy source: `balance/2019-04-24-orang-kasar.md`

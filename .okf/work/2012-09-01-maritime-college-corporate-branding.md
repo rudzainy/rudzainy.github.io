@@ -1,7 +1,7 @@
 ---
 type: Portfolio Project
 title: Maritime College Corporate Branding
-resource: https://rudzainy.com/work/2012-09-01-maritime-college-corporate-branding.html
+resource: https://rudzainy.github.io/work/2012-09-01-maritime-college-corporate-branding.html
 tags: [graphic design, logo, branding, portfolio]
 timestamp: 2012-09-01T10:15:00+08:00
 category: Work
@@ -23,5 +23,5 @@ A portfolio project in the Work section of rudzainy.com.
 
 # Source
 
-- Live post: [Maritime College Corporate Branding](https://rudzainy.com/work/2012-09-01-maritime-college-corporate-branding.html)
+- Live post: [Maritime College Corporate Branding](https://rudzainy.github.io/work/2012-09-01-maritime-college-corporate-branding.html)
 - Legacy source: `work/2012-09-01-maritime-college-corporate-branding.md`

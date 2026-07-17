@@ -2,7 +2,7 @@
 type: Dev Note
 title: An Answer to the question of Windows vs MacOS
 description: Evaluating Windows vs MacOS as my main OS
-resource: https://rudzainy.com/balance/2024-06-16-an-answer-to-the-question-of-windows-vs-macos.html
+resource: https://rudzainy.github.io/balance/2024-06-16-an-answer-to-the-question-of-windows-vs-macos.html
 tags: [windows, macos, ai, linux, os]
 timestamp: 2024-06-16T15:13:00+08:00
 category: Work
@@ -26,5 +26,5 @@ Evaluating Windows vs MacOS as my main OS
 
 # Source
 
-- Live post: [An Answer to the question of Windows vs MacOS](https://rudzainy.com/balance/2024-06-16-an-answer-to-the-question-of-windows-vs-macos.html)
+- Live post: [An Answer to the question of Windows vs MacOS](https://rudzainy.github.io/balance/2024-06-16-an-answer-to-the-question-of-windows-vs-macos.html)
 - Legacy source: `balance/2024-06-16-an-answer-to-the-question-of-windows-vs-macos.md`

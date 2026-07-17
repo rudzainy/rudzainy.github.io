@@ -1,7 +1,7 @@
 ---
 type: Portfolio Project
 title: Malaysia Maritime Association Logo & Website
-resource: https://rudzainy.com/work/2011-09-01-malaysia-maritime-association-logo-website.html
+resource: https://rudzainy.github.io/work/2011-09-01-malaysia-maritime-association-logo-website.html
 tags: [joomla, web design, logo, ai, fullstack, portfolio]
 timestamp: 2011-09-01T10:08:00+08:00
 category: Work
@@ -25,5 +25,5 @@ A portfolio project in the Work section of rudzainy.com.
 
 # Source
 
-- Live post: [Malaysia Maritime Association Logo & Website](https://rudzainy.com/work/2011-09-01-malaysia-maritime-association-logo-website.html)
+- Live post: [Malaysia Maritime Association Logo & Website](https://rudzainy.github.io/work/2011-09-01-malaysia-maritime-association-logo-website.html)
 - Legacy source: `work/2011-09-01-malaysia-maritime-association-logo-website.md`

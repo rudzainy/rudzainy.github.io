@@ -1,7 +1,7 @@
 ---
 type: Podcast
 title: Kenapa Rudzainy Buat Hoojah
-resource: https://rudzainy.com/life/2021-01-03-kenapa-rudzainy-buat-hoojah.html
+resource: https://rudzainy.github.io/life/2021-01-03-kenapa-rudzainy-buat-hoojah.html
 tags: [hoojah, ruby on rails, podcast]
 timestamp: 2021-01-03T08:46:00+08:00
 category: Work
@@ -23,5 +23,5 @@ A podcast in the Work section of rudzainy.com.
 
 # Source
 
-- Live post: [Kenapa Rudzainy Buat Hoojah](https://rudzainy.com/life/2021-01-03-kenapa-rudzainy-buat-hoojah.html)
+- Live post: [Kenapa Rudzainy Buat Hoojah](https://rudzainy.github.io/life/2021-01-03-kenapa-rudzainy-buat-hoojah.html)
 - Legacy source: `life/2021-01-03-kenapa-rudzainy-buat-hoojah.md`

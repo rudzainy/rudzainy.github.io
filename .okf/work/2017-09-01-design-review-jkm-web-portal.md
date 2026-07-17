@@ -1,7 +1,7 @@
 ---
 type: Portfolio Project
 title: 'Design Review: JKM Web Portal'
-resource: https://rudzainy.com/work/2017-09-01-design-review-jkm-web-portal.html
+resource: https://rudzainy.github.io/work/2017-09-01-design-review-jkm-web-portal.html
 tags: [ui, ux, html, css, portfolio]
 timestamp: 2017-09-01T11:27:00+08:00
 category: Work
@@ -22,5 +22,5 @@ A portfolio project in the Work section of rudzainy.com.
 
 # Source
 
-- Live post: ['Design Review: JKM Web Portal'](https://rudzainy.com/work/2017-09-01-design-review-jkm-web-portal.html)
+- Live post: ['Design Review: JKM Web Portal'](https://rudzainy.github.io/work/2017-09-01-design-review-jkm-web-portal.html)
 - Legacy source: `work/2017-09-01-design-review-jkm-web-portal.md`

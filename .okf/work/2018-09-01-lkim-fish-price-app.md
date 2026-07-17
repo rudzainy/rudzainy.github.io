@@ -2,7 +2,7 @@
 type: Portfolio Project
 title: LKIM Fish Price App
 description: Mobile app for Lembaga Kemajuan Ikan Malaysia
-resource: https://rudzainy.com/work/2018-09-01-lkim-fish-price-app.html
+resource: https://rudzainy.github.io/work/2018-09-01-lkim-fish-price-app.html
 tags: [react native, ui, ux, collaboration, portfolio]
 timestamp: 2018-09-01T08:30:00+08:00
 category: Work
@@ -23,5 +23,5 @@ Mobile app for Lembaga Kemajuan Ikan Malaysia
 
 # Source
 
-- Live post: [LKIM Fish Price App](https://rudzainy.com/work/2018-09-01-lkim-fish-price-app.html)
+- Live post: [LKIM Fish Price App](https://rudzainy.github.io/work/2018-09-01-lkim-fish-price-app.html)
 - Legacy source: `work/2018-09-01-lkim-fish-price-app.md`

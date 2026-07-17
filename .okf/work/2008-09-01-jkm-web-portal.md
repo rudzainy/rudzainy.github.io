@@ -1,7 +1,7 @@
 ---
 type: Portfolio Project
 title: JKM Web Portal
-resource: https://rudzainy.com/work/2008-09-01-jkm-web-portal.html
+resource: https://rudzainy.github.io/work/2008-09-01-jkm-web-portal.html
 tags: [web]
 timestamp: 2008-09-01T15:25:00+08:00
 category: Work
@@ -25,5 +25,5 @@ A portfolio project in the Work section of rudzainy.com.
 
 # Source
 
-- Live post: [JKM Web Portal](https://rudzainy.com/work/2008-09-01-jkm-web-portal.html)
+- Live post: [JKM Web Portal](https://rudzainy.github.io/work/2008-09-01-jkm-web-portal.html)
 - Legacy source: `work/2008-09-01-jkm-web-portal.md`

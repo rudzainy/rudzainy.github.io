@@ -1,7 +1,7 @@
 ---
 type: Reflection
 title: of Video Games
-resource: https://rudzainy.com/life/2024-01-03-of-video-games.html
+resource: https://rudzainy.github.io/life/2024-01-03-of-video-games.html
 tags: [video games]
 timestamp: 2024-01-03T09:09:00+08:00
 category: Balance
@@ -16,5 +16,5 @@ A reflection in the Balance section of rudzainy.com.
 
 # Source
 
-- Live post: [of Video Games](https://rudzainy.com/life/2024-01-03-of-video-games.html)
+- Live post: [of Video Games](https://rudzainy.github.io/life/2024-01-03-of-video-games.html)
 - Legacy source: `life/2024-01-03-of-video-games.md`

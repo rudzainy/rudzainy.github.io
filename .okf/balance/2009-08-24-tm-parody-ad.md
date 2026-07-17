@@ -2,7 +2,7 @@
 type: Portfolio Project
 title: TM Parody Ad
 description: A parody adveritisement for TM
-resource: https://rudzainy.com/balance/2009-08-24-tm-parody-ad.html
+resource: https://rudzainy.github.io/balance/2009-08-24-tm-parody-ad.html
 tags: [graphic design, advertisement, parody]
 timestamp: 2009-08-24T15:51:00+08:00
 category: Life
@@ -22,5 +22,5 @@ A parody adveritisement for TM
 
 # Source
 
-- Live post: [TM Parody Ad](https://rudzainy.com/balance/2009-08-24-tm-parody-ad.html)
+- Live post: [TM Parody Ad](https://rudzainy.github.io/balance/2009-08-24-tm-parody-ad.html)
 - Legacy source: `balance/2009-08-24-tm-parody-ad.md`

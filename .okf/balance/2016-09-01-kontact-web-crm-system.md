@@ -1,7 +1,7 @@
 ---
 type: Dev Note
 title: Kontact Web CRM System
-resource: https://rudzainy.com/balance/2016-09-01-kontact-web-crm-system.html
+resource: https://rudzainy.github.io/balance/2016-09-01-kontact-web-crm-system.html
 tags: [web, html, css, javascript, reactjs, ruby on rails]
 timestamp: 2016-09-01T10:22:00+08:00
 category: Work
@@ -25,5 +25,5 @@ A dev note in the Work section of rudzainy.com.
 
 # Source
 
-- Live post: [Kontact Web CRM System](https://rudzainy.com/balance/2016-09-01-kontact-web-crm-system.html)
+- Live post: [Kontact Web CRM System](https://rudzainy.github.io/balance/2016-09-01-kontact-web-crm-system.html)
 - Legacy source: `balance/2016-09-01-kontact-web-crm-system.md`

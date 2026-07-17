@@ -1,7 +1,7 @@
 ---
 type: Travel Log
 title: Baloons Over Bagan
-resource: https://rudzainy.com/life/2017-05-02-baloons-over-bagan.html
+resource: https://rudzainy.github.io/life/2017-05-02-baloons-over-bagan.html
 tags: [photo, travel]
 timestamp: 2017-05-02T10:02:00+08:00
 category: Balance
@@ -21,5 +21,5 @@ A travel log in the Balance section of rudzainy.com.
 
 # Source
 
-- Live post: [Baloons Over Bagan](https://rudzainy.com/life/2017-05-02-baloons-over-bagan.html)
+- Live post: [Baloons Over Bagan](https://rudzainy.github.io/life/2017-05-02-baloons-over-bagan.html)
 - Legacy source: `life/2017-05-02-baloons-over-bagan.md`

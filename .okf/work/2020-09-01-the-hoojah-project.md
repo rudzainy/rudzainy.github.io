@@ -2,7 +2,7 @@
 type: Portfolio Project
 title: The Hoojah Project
 description: Hoojah is an online poll & debating site for Malaysia. It’s a pet project that I started working in 2013. People can go to the platform, create polls and vote for other polls. They can also engage with other users through one-on-one debate.
-resource: https://rudzainy.com/work/2020-09-01-the-hoojah-project.html
+resource: https://rudzainy.github.io/work/2020-09-01-the-hoojah-project.html
 tags: [hoojah, ruby on rails, portfolio, reactjs]
 timestamp: 2020-09-01T14:35:00+08:00
 category: Work
@@ -25,5 +25,5 @@ Hoojah is an online poll & debating site for Malaysia. It’s a pet project that
 
 # Source
 
-- Live post: [The Hoojah Project](https://rudzainy.com/work/2020-09-01-the-hoojah-project.html)
+- Live post: [The Hoojah Project](https://rudzainy.github.io/work/2020-09-01-the-hoojah-project.html)
 - Legacy source: `work/2020-09-01-the-hoojah-project.md`

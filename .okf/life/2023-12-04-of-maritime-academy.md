@@ -2,7 +2,7 @@
 type: Portfolio Project
 title: of Maritime Academy
 description: Building a Maritime Academy - A Journey of Growth and Development
-resource: https://rudzainy.com/life/2023-12-04-of-maritime-academy.html
+resource: https://rudzainy.github.io/life/2023-12-04-of-maritime-academy.html
 tags: [writing, project management, ai, maritime, portfolio]
 timestamp: 2023-12-04T07:15:00+08:00
 category: Balance
@@ -26,5 +26,5 @@ Building a Maritime Academy - A Journey of Growth and Development
 
 # Source
 
-- Live post: [of Maritime Academy](https://rudzainy.com/life/2023-12-04-of-maritime-academy.html)
+- Live post: [of Maritime Academy](https://rudzainy.github.io/life/2023-12-04-of-maritime-academy.html)
 - Legacy source: `life/2023-12-04-of-maritime-academy.md`

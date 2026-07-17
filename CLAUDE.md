@@ -5,9 +5,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 This is a hand-crafted static personal portfolio website hosted on GitHub Pages
-at **rudzainy.com**. The hand-written `.html` files **are** the site — you edit
-them directly and they ship as-is; `index.html` links straight to the pages under
-`/work/`, `/life/`, and `/balance/`.
+at **rudzainy.github.io** (served from the default domain; the `rudzainy.com`
+domain is no longer used for this site and there is no `CNAME`). The hand-written
+`.html` files **are** the site — you edit them directly and they ship as-is;
+`index.html` links straight to the pages under `/work/`, `/life/`, and
+`/balance/`.
 
 **Deployment reality (important):** GitHub Pages still runs **Jekyll** by default
 (there is no way to fully disable it here — `.nojekyll` is ignored by the
@@ -113,7 +115,7 @@ _YYYY-MM-DD-slug-title.md     # LEGACY Jekyll source — NOT built, NOT served
 | `index.html` | Homepage — bento-box grid of Work / Life / Balance cards |
 | `si-es-es.css` | Custom styles + design tokens (see below) |
 | `jei-es.js` | Quote randomizer for the section cards |
-| `CNAME` | Custom domain (rudzainy.com) |
+| `_config.yml` | Jekyll `exclude:` list only (keeps internal docs out of the Pages build) |
 | `components/index.html` | Component reference / living style guide |
 | `.okf/` | Open Knowledge Format bundle built from the cleaned content |
 

@@ -1,7 +1,7 @@
 ---
 type: Reflection
 title: Railway Market
-resource: https://rudzainy.com/life/2019-06-08-railway-market.html
+resource: https://rudzainy.github.io/life/2019-06-08-railway-market.html
 tags: [photo]
 timestamp: 2019-06-08T09:46:00+08:00
 category: Balance
@@ -21,5 +21,5 @@ A reflection in the Balance section of rudzainy.com.
 
 # Source
 
-- Live post: [Railway Market](https://rudzainy.com/life/2019-06-08-railway-market.html)
+- Live post: [Railway Market](https://rudzainy.github.io/life/2019-06-08-railway-market.html)
 - Legacy source: `life/2019-06-08-railway-market.md`

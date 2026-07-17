@@ -2,7 +2,7 @@
 type: Dev Note
 title: of JavaScript
 description: A story of Rudzainy's journey learning JavaScript
-resource: https://rudzainy.com/life/2024-01-06-of-javascript.html
+resource: https://rudzainy.github.io/life/2024-01-06-of-javascript.html
 tags: [javascript, hci]
 timestamp: 2024-01-06T08:48:00+08:00
 category: Life
@@ -24,5 +24,5 @@ A story of Rudzainy's journey learning JavaScript
 
 # Source
 
-- Live post: [of JavaScript](https://rudzainy.com/life/2024-01-06-of-javascript.html)
+- Live post: [of JavaScript](https://rudzainy.github.io/life/2024-01-06-of-javascript.html)
 - Legacy source: `life/2024-01-06-of-javascript.md`

@@ -1,8 +1,9 @@
-# rudzainy.com
+# rudzainy.github.io
 
-Personal portfolio at **[rudzainy.com](https://rudzainy.com)**. Hand-written
-static HTML on GitHub Pages. No build system, no SSG — the `.html` files in the
-repo are exactly what ships.
+Personal portfolio at **[rudzainy.github.io](https://rudzainy.github.io)**.
+Hand-written static HTML on GitHub Pages. No build system, no SSG — the `.html`
+files in the repo are exactly what ships. (The `rudzainy.com` domain is no longer
+used for this site.)
 
 ## Run locally
 

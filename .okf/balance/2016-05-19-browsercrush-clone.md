@@ -2,7 +2,7 @@
 type: Portfolio Project
 title: Browser Crush Clone
 description: This is a clone of Browser Crush built using Ruby, HTML, CSS and Javascript.
-resource: https://rudzainy.com/balance/2016-05-19-browsercrush-clone.html
+resource: https://rudzainy.github.io/balance/2016-05-19-browsercrush-clone.html
 tags: [ruby, sinatra, javascript, portfolio]
 timestamp: 2016-05-19T23:59:00+08:00
 category: Work
@@ -26,5 +26,5 @@ This is a clone of Browser Crush built using Ruby, HTML, CSS and Javascript.
 
 # Source
 
-- Live post: [Browser Crush Clone](https://rudzainy.com/balance/2016-05-19-browsercrush-clone.html)
+- Live post: [Browser Crush Clone](https://rudzainy.github.io/balance/2016-05-19-browsercrush-clone.html)
 - Legacy source: `balance/2016-05-19-browsercrush-clone.md`

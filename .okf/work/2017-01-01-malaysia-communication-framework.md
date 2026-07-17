@@ -2,7 +2,7 @@
 type: Essay
 title: Malaysia Communication Framework
 description: A blueprint, outlining strategies and initiatives to foster better understanding, empathy, and collaboration among individuals from diverse backgrounds within Malaysia.
-resource: https://rudzainy.com/work/2017-01-01-malaysia-communication-framework.html
+resource: https://rudzainy.github.io/work/2017-01-01-malaysia-communication-framework.html
 tags: [writing, ai]
 timestamp: 2017-01-01T04:20:00+08:00
 category: Balance
@@ -25,5 +25,5 @@ A blueprint, outlining strategies and initiatives to foster better understanding
 
 # Source
 
-- Live post: [Malaysia Communication Framework](https://rudzainy.com/work/2017-01-01-malaysia-communication-framework.html)
+- Live post: [Malaysia Communication Framework](https://rudzainy.github.io/work/2017-01-01-malaysia-communication-framework.html)
 - Legacy source: `work/2017-01-01-malaysia-communication-framework.md`

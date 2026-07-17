@@ -1,7 +1,7 @@
 ---
 type: Portfolio Project
 title: Marliyati Froz Logo
-resource: https://rudzainy.com/work/2010-09-01-marliyati-froz-logo.html
+resource: https://rudzainy.github.io/work/2010-09-01-marliyati-froz-logo.html
 tags: [graphic design, logo, portfolio]
 timestamp: 2010-09-01T10:04:00+08:00
 category: Work
@@ -23,5 +23,5 @@ A portfolio project in the Work section of rudzainy.com.
 
 # Source
 
-- Live post: [Marliyati Froz Logo](https://rudzainy.com/work/2010-09-01-marliyati-froz-logo.html)
+- Live post: [Marliyati Froz Logo](https://rudzainy.github.io/work/2010-09-01-marliyati-froz-logo.html)
 - Legacy source: `work/2010-09-01-marliyati-froz-logo.md`

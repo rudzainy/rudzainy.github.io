@@ -2,7 +2,7 @@
 type: Portfolio Project
 title: Let's work together!
 description: Whether you're looking for a collaborator who can breathe life into your digital vision, or simply someone who'll bring a spark of creativity to your team, here are 7 reasons why working with me might just be the perfect fit.
-resource: https://rudzainy.com/life/2023-09-01-let-s-work-together.html
+resource: https://rudzainy.github.io/life/2023-09-01-let-s-work-together.html
 tags: [collaboration]
 timestamp: 2023-09-01T17:25:00+08:00
 category: Work
@@ -23,5 +23,5 @@ Whether you're looking for a collaborator who can breathe life into your digital
 
 # Source
 
-- Live post: [Let's work together!](https://rudzainy.com/life/2023-09-01-let-s-work-together.html)
+- Live post: [Let's work together!](https://rudzainy.github.io/life/2023-09-01-let-s-work-together.html)
 - Legacy source: `life/2023-09-01-let-s-work-together.md`

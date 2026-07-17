@@ -1,7 +1,7 @@
 ---
 type: Portfolio Project
 title: Altfa Solution Logo
-resource: https://rudzainy.com/work/2009-08-06-altfa-solution-logo.html
+resource: https://rudzainy.github.io/work/2009-08-06-altfa-solution-logo.html
 tags: [logo]
 timestamp: 2009-08-06T11:52:00+08:00
 category: Work
@@ -22,5 +22,5 @@ A portfolio project in the Work section of rudzainy.com.
 
 # Source
 
-- Live post: [Altfa Solution Logo](https://rudzainy.com/work/2009-08-06-altfa-solution-logo.html)
+- Live post: [Altfa Solution Logo](https://rudzainy.github.io/work/2009-08-06-altfa-solution-logo.html)
 - Legacy source: `work/2009-08-06-altfa-solution-logo.md`

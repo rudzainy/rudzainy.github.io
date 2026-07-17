@@ -2,7 +2,7 @@
 type: Portfolio Project
 title: UX Assignment 1
 description: Retrospective of UX interview assignment.
-resource: https://rudzainy.com/work/2025-07-26-ux-assignment-1.html
+resource: https://rudzainy.github.io/work/2025-07-26-ux-assignment-1.html
 tags: [ui, ux, assignment, web, figma, wordpress]
 timestamp: 2024-05-26T08:49:00+08:00
 category: Work
@@ -26,5 +26,5 @@ Retrospective of UX interview assignment.
 
 # Source
 
-- Live post: [UX Assignment 1](https://rudzainy.com/work/2025-07-26-ux-assignment-1.html)
+- Live post: [UX Assignment 1](https://rudzainy.github.io/work/2025-07-26-ux-assignment-1.html)
 - Legacy source: `work/2025-07-26-ux-assignment-1.md`

@@ -1,7 +1,7 @@
 ---
 type: Essay
 title: Self Improvement
-resource: https://rudzainy.com/balance/2017-07-09-self-improvement.html
+resource: https://rudzainy.github.io/balance/2017-07-09-self-improvement.html
 tags: [writing]
 timestamp: 2017-07-09T16:35:00+08:00
 category: Balance
@@ -16,5 +16,5 @@ A essay in the Balance section of rudzainy.com.
 
 # Source
 
-- Live post: [Self Improvement](https://rudzainy.com/balance/2017-07-09-self-improvement.html)
+- Live post: [Self Improvement](https://rudzainy.github.io/balance/2017-07-09-self-improvement.html)
 - Legacy source: `balance/2017-07-09-self-improvement.md`

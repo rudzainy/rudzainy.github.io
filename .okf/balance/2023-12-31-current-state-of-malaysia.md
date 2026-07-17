@@ -1,7 +1,7 @@
 ---
 type: Dev Note
 title: Current State of Malaysia
-resource: https://rudzainy.com/balance/2023-12-31-current-state-of-malaysia.html
+resource: https://rudzainy.github.io/balance/2023-12-31-current-state-of-malaysia.html
 tags: [ruby, gag]
 timestamp: 2022-05-18T09:44:00+08:00
 category: Life
@@ -22,5 +22,5 @@ A dev note in the Life section of rudzainy.com.
 
 # Source
 
-- Live post: [Current State of Malaysia](https://rudzainy.com/balance/2023-12-31-current-state-of-malaysia.html)
+- Live post: [Current State of Malaysia](https://rudzainy.github.io/balance/2023-12-31-current-state-of-malaysia.html)
 - Legacy source: `balance/2023-12-31-current-state-of-malaysia.md`

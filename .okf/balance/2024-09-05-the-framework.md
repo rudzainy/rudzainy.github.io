@@ -2,7 +2,7 @@
 type: Portfolio Project
 title: The Framework
 description: A modular, privacy-focused digital framework built on open-source tools, designed to support secure messaging, analytics, and community interactions. Emphasizing flexibility, scalability, and empowering community-driven growth and innovation.
-resource: https://rudzainy.com/balance/2024-09-05-the-framework.html
+resource: https://rudzainy.github.io/balance/2024-09-05-the-framework.html
 tags: [rails, framework, open source, malaysia, ranting, gugel, portfolio]
 timestamp: 2024-09-01T23:54:00+21:17
 category: Work
@@ -26,5 +26,5 @@ A modular, privacy-focused digital framework built on open-source tools, designe
 
 # Source
 
-- Live post: [The Framework](https://rudzainy.com/balance/2024-09-05-the-framework.html)
+- Live post: [The Framework](https://rudzainy.github.io/balance/2024-09-05-the-framework.html)
 - Legacy source: `balance/2024-09-05-the-framework.md`

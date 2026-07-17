@@ -2,7 +2,7 @@
 type: Dev Note
 title: Snapshot of Website
 description: Old version of rudzainy.com
-resource: https://rudzainy.com/life/2018-02-25-snapshot_of_website.html
+resource: https://rudzainy.github.io/life/2018-02-25-snapshot_of_website.html
 tags: [html, cs, javascript, website]
 timestamp: 2018-02-25T00:00:00+08:00
 category: Work
@@ -26,5 +26,5 @@ Old version of rudzainy.com
 
 # Source
 
-- Live post: [Snapshot of Website](https://rudzainy.com/life/2018-02-25-snapshot_of_website.html)
+- Live post: [Snapshot of Website](https://rudzainy.github.io/life/2018-02-25-snapshot_of_website.html)
 - Legacy source: `life/2018-02-25-snapshot_of_website.md`

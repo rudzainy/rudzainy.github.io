@@ -1,7 +1,7 @@
 ---
 type: Essay
 title: Users vs Corporations in Digital Communication
-resource: https://rudzainy.com/balance/2023-12-04-users-vs-corporations-in-digital-communication.html
+resource: https://rudzainy.github.io/balance/2023-12-04-users-vs-corporations-in-digital-communication.html
 tags: [writing, ai]
 timestamp: 2023-12-04T07:21:00+08:00
 category: Balance
@@ -24,5 +24,5 @@ A essay in the Balance section of rudzainy.com.
 
 # Source
 
-- Live post: [Users vs Corporations in Digital Communication](https://rudzainy.com/balance/2023-12-04-users-vs-corporations-in-digital-communication.html)
+- Live post: [Users vs Corporations in Digital Communication](https://rudzainy.github.io/balance/2023-12-04-users-vs-corporations-in-digital-communication.html)
 - Legacy source: `balance/2023-12-04-users-vs-corporations-in-digital-communication.md`

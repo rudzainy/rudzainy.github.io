@@ -2,7 +2,7 @@
 type: Portfolio Project
 title: "Teng-Quora-K: A Quora Clone"
 description: An exercise of building a Quora clone using Ruby's Sinatra framework.
-resource: https://rudzainy.com/balance/2016-07-23-teng-quora-k-a-quora-clone.html
+resource: https://rudzainy.github.io/balance/2016-07-23-teng-quora-k-a-quora-clone.html
 tags: [ruby, sinatra, html, css, portfolio]
 timestamp: 2016-07-23T16:33:00+08:00
 category: Work
@@ -26,5 +26,5 @@ An exercise of building a Quora clone using Ruby's Sinatra framework.
 
 # Source
 
-- Live post: ["Teng-Quora-K: A Quora Clone"](https://rudzainy.com/balance/2016-07-23-teng-quora-k-a-quora-clone.html)
+- Live post: ["Teng-Quora-K: A Quora Clone"](https://rudzainy.github.io/balance/2016-07-23-teng-quora-k-a-quora-clone.html)
 - Legacy source: `balance/2016-07-23-teng-quora-k-a-quora-clone.md`

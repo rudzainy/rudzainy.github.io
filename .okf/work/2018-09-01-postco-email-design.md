@@ -1,7 +1,7 @@
 ---
 type: Portfolio Project
 title: PostCo Email Design
-resource: https://rudzainy.com/work/2018-09-01-postco-email-design.html
+resource: https://rudzainy.github.io/work/2018-09-01-postco-email-design.html
 tags: [design, portfolio]
 timestamp: 2018-09-01T10:46:00+08:00
 category: Work
@@ -21,5 +21,5 @@ A portfolio project in the Work section of rudzainy.com.
 
 # Source
 
-- Live post: [PostCo Email Design](https://rudzainy.com/work/2018-09-01-postco-email-design.html)
+- Live post: [PostCo Email Design](https://rudzainy.github.io/work/2018-09-01-postco-email-design.html)
 - Legacy source: `work/2018-09-01-postco-email-design.md`

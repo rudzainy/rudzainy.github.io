@@ -2,7 +2,7 @@
 type: Theatre
 title: SudirMANIA Call Time Message Templates
 description: The templates that I used to broadcast out the daily call times to the rest of the production team.
-resource: https://rudzainy.com/balance/2024-04-19-sudirmania-call-time-message-templates.html
+resource: https://rudzainy.github.io/balance/2024-04-19-sudirmania-call-time-message-templates.html
 tags: [theatre, writing]
 timestamp: 2024-04-19T05:30:00+08:00
 category: Work
@@ -22,5 +22,5 @@ The templates that I used to broadcast out the daily call times to the rest of t
 
 # Source
 
-- Live post: [SudirMANIA Call Time Message Templates](https://rudzainy.com/balance/2024-04-19-sudirmania-call-time-message-templates.html)
+- Live post: [SudirMANIA Call Time Message Templates](https://rudzainy.github.io/balance/2024-04-19-sudirmania-call-time-message-templates.html)
 - Legacy source: `balance/2024-04-19-sudirmania-call-time-message-templates.md`

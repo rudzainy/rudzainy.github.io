@@ -2,7 +2,7 @@
 type: Portfolio Project
 title: Next Academy Learning Portal
 description: Student learning portal for Next Academy
-resource: https://rudzainy.com/work/2017-09-01-next-academy-learning-portal.html
+resource: https://rudzainy.github.io/work/2017-09-01-next-academy-learning-portal.html
 tags: [ui, ux, rails, reactjs, portfolio]
 timestamp: 2017-09-01T11:22:00+08:00
 category: Work
@@ -26,5 +26,5 @@ Student learning portal for Next Academy
 
 # Source
 
-- Live post: [Next Academy Learning Portal](https://rudzainy.com/work/2017-09-01-next-academy-learning-portal.html)
+- Live post: [Next Academy Learning Portal](https://rudzainy.github.io/work/2017-09-01-next-academy-learning-portal.html)
 - Legacy source: `work/2017-09-01-next-academy-learning-portal.md`
