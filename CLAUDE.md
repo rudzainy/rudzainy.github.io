@@ -5,8 +5,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 This is a hand-crafted static personal portfolio website hosted on GitHub Pages
-at **rudzainy.github.io** (served from the default domain; the `rudzainy.com`
-domain is no longer used for this site and there is no `CNAME`). The hand-written
+at **rudzainy.github.io** (served from the default domain; there is no `CNAME`).
+The brand/planned custom domain is **rudzainy.my** (to be purchased — when it goes
+live, add a `CNAME` with `rudzainy.my` and set it in Pages Settings); `rudzainy.com`
+is retired and no longer points here. The hand-written
 `.html` files **are** the site — you edit them directly and they ship as-is;
 `index.html` links straight to the pages under `/work/`, `/life/`, and
 `/balance/`.

@@ -2,8 +2,8 @@
 
 Personal portfolio at **[rudzainy.github.io](https://rudzainy.github.io)**.
 Hand-written static HTML on GitHub Pages. No build system, no SSG — the `.html`
-files in the repo are exactly what ships. (The `rudzainy.com` domain is no longer
-used for this site.)
+files in the repo are exactly what ships. (Brand/planned domain: **rudzainy.my**,
+not yet live; `rudzainy.com` is retired and no longer points here.)
 
 ## Run locally
 
