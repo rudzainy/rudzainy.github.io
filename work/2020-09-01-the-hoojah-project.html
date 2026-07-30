@@ -56,7 +56,7 @@
           <div>
             <p style="margin:0 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px;color:rgba(255,255,255,0.75)">My project · 2013–2019</p>
             <h1 class="page-title" style="display:block;font-size:clamp(2.5rem,1.1rem + 4.5vw,4.5rem);line-height:1.05;text-wrap:balance"><span>the </span>Hoojah Project</h1>
-            <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:54ch">Hoojah is an online poll &amp; debating site for Malaysia. It's a pet project that I started working on in 2013. People can go to the platform, create polls and vote for other polls — and also engage other users through one-on-one debate.</p>
+            <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:54ch">Hoojah is an online poll &amp; debating site for Malaysia. It's a pet project that I started working on in 2013. People can go to the platform, create polls and vote for other polls, and also take each other on in one-on-one debates.</p>
           </div>
           <figure style="margin:0;background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-hover)">
             <img src="../images/portfolio/hoojah/thumbnail-hoojah.jpg" alt="A snapshot of the Hoojah user interface" loading="lazy" style="width:100%;display:block;object-fit:cover;object-position:top;max-height:280px">
@@ -95,13 +95,13 @@
       <article style="max-width:var(--measure);margin:0 auto">
 
         <h2 style="display:flex;align-items:center;gap:12px;margin:0 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-book-open" aria-hidden="true" style="font-size:0.8em"></i>Summary</h2>
-        <p class="lead">Hoojah is a polling platform that focuses on the arguments and debates behind the votes. It's a platform for meaningful discussions, where users can vote on polls, add arguments, and engage in one-on-one debates. The main challenge was to design a platform that encourages meaningful discussions rather than just collecting votes. We needed to create a user experience that makes it easy for users to express their opinions and engage in debates. This project taught me the value of constraint-driven design—by limiting poll options to just three choices, I discovered how constraints can actually enhance clarity and user engagement. As someone who values thoughtful discourse, I created this platform to address the noise and polarization I often saw in online discussions.</p>
+        <p class="lead">Hoojah is a polling platform, but the votes aren't really the point. The arguments behind them are. You vote on a poll, back your stance with arguments, and if you want, take someone on in a one-on-one debate. The hard part was never collecting votes, it was getting people to actually discuss things instead of shouting past each other. So I kept the voting dead simple and put all the weight on the arguments. Capping each poll at three options started as a way to cut noise, and it turned out the constraint made everything clearer. I built Hoojah because I was tired of how messy and polarised online discussions had become.</p>
       </article>
 
       <article style="max-width:var(--measure);margin:0 auto">
         <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-users" aria-hidden="true" style="font-size:0.8em"></i>1. Background</h2>
         <h3 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-message-circle me-2" aria-hidden="true"></i>The Inefficiency of Online Discussion Platforms</h3>
-        <p>Today Malaysians use social media platforms and online forums to discuss important matters. However, it's hard to track specific topics as different groups discuss the same topics separately, failing to provide structural opinions and results. As someone who values thoughtful discourse, I found this fragmentation particularly frustrating when trying to follow important discussions.</p>
+        <p>Today Malaysians use social media platforms and online forums to discuss important matters. The trouble is it's hard to track anything: different groups talk about the same topic in their own corners, so you never get a clear, structured read on what people actually think. Trying to follow an important discussion across all of that always frustrated me.</p>
       </article>
 
       <!-- Figure: Home page timeline -->
@@ -116,7 +116,7 @@
         <p>Subjective discussions make decision-making difficult and eventually become noise. Open polls provide objective questions that deter subjective discussions.</p>
 
         <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-workflow me-2" aria-hidden="true"></i>System Architecture</h3>
-        <p>Hoojah was built with a modern tech stack designed for scalability and real-time interactions. The architecture balances performance needs with development efficiency, allowing for rapid iteration while maintaining a responsive user experience.</p>
+        <p>Hoojah runs on a fairly standard modern stack: React on the front, Ruby on Rails at the back, Discourse handling the forum side, all wrapped in Docker. Nothing exotic. Just tools I could move quickly with while keeping the thing responsive.</p>
       </article>
 
       <!-- Figure: system architecture diagram -->
@@ -163,7 +163,7 @@
 
       <article style="max-width:var(--measure);margin:0 auto">
         <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-clipboard-list me-2" aria-hidden="true"></i>Rationale for a 3-Options Voting System</h3>
-        <p>One of the defining design choices in Hoojah is to <strong>restrict poll responses to three options: Agree, Neutral, and Disagree</strong>. This wasn't just a simplification—it was a deliberate strategy born from my frustration with the noise in online discussions. After observing countless debates on social media platforms, I realized that too many choices often led to decision paralysis and diluted the core issues.</p>
+        <p>One of the defining design choices in Hoojah is to <strong>restrict poll responses to three options: Agree, Neutral, and Disagree</strong>. That was deliberate, not lazy. After sitting through enough arguments online, I noticed that too many choices just made people freeze up, and the actual issue got lost in the middle.</p>
 
         <h4 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-sparkles me-2" aria-hidden="true"></i>Benefits</h4>
         <div class="row g-4 my-4">
@@ -171,7 +171,7 @@
             <div class="card h-100 border-0 shadow-sm">
               <div class="card-body">
                 <h6 class="card-title"><i class="icon-eye me-2" aria-hidden="true"></i>Clarity &amp; Interpretability</h6>
-                <p class="card-text">Results are easy to understand at a glance. Users immediately see how the community leans: for, against, or neutral. This simplicity was something I craved as both a developer and a user of online platforms.</p>
+                <p class="card-text">Results are easy to read at a glance. You immediately see how the community leans: for, against, or neutral. That's the kind of simplicity I always wanted as a user myself.</p>
               </div>
             </div>
           </div>
@@ -179,7 +179,7 @@
             <div class="card h-100 border-0 shadow-sm">
               <div class="card-body">
                 <h6 class="card-title"><i class="icon-door-open me-2" aria-hidden="true"></i>Lower Barrier to Entry</h6>
-                <p class="card-text">Many people hesitate to join polls with too many nuanced options. Three simple choices feel intuitive, encouraging wider participation. I saw this firsthand when testing early versions with friends - they were more willing to engage when the choices were clear-cut.</p>
+                <p class="card-text">Many people hesitate to join polls with too many nuanced options. Three simple choices feel intuitive, so more people take part. When I tried early versions on friends, they were happier to jump in once the choices were clear-cut.</p>
               </div>
             </div>
           </div>
@@ -187,7 +187,7 @@
             <div class="card h-100 border-0 shadow-sm">
               <div class="card-body">
                 <h6 class="card-title"><i class="icon-zap me-2" aria-hidden="true"></i>Reduced Decision Fatigue</h6>
-                <p class="card-text">Users don't waste time splitting hairs between "slightly agree" vs "mostly agree." This makes contributing fast and lightweight. As someone who values efficient communication, this was a core principle I wanted to embody in Hoojah.</p>
+                <p class="card-text">Nobody wastes time splitting hairs between "slightly agree" and "mostly agree." Contributing stays fast and lightweight, which was the whole idea.</p>
               </div>
             </div>
           </div>
@@ -195,7 +195,7 @@
             <div class="card h-100 border-0 shadow-sm">
               <div class="card-body">
                 <h6 class="card-title"><i class="icon-workflow me-2" aria-hidden="true"></i>Natural Grouping for Arguments</h6>
-                <p class="card-text">Supporting arguments automatically fall under one of three categories. This helps discussions stay structured and prevents option overload. During development, this structure became my north star for organizing content.</p>
+                <p class="card-text">Supporting arguments automatically fall under one of three categories. That keeps discussions structured and stops the options from sprawling.</p>
               </div>
             </div>
           </div>
@@ -203,14 +203,14 @@
             <div class="card h-100 border-0 shadow-sm">
               <div class="card-body">
                 <h6 class="card-title"><i class="icon-scale me-2" aria-hidden="true"></i>Balanced Representation</h6>
-                <p class="card-text">Including a "Neutral" choice avoids false polarization and captures the voices of those who are undecided or nuanced. This was particularly important to me as it reflects my belief that not every issue has just two sides.</p>
+                <p class="card-text">A "Neutral" choice avoids false polarisation and captures the people who are undecided or genuinely on the fence. Not every issue has only two sides.</p>
               </div>
             </div>
           </div>
         </div>
 
         <h4 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-circle-alert me-2" aria-hidden="true"></i>Considerations</h4>
-        <p>While limiting options reduces noise, it does flatten some complexity. Hoojah's design addresses this by allowing <em>supporting arguments</em> under each stance, so nuance still surfaces through text and debate. This balance was something I refined over years of iteration, learning from user feedback and my own experiences as a participant in the platform.</p>
+        <p>Limiting the options does flatten some of the nuance, no way around that. Hoojah gets it back by letting people attach <em>supporting arguments</em> under each stance, so the detail still comes through in the text and the debate. Getting that balance right took years of tweaking.</p>
       </article>
 
       <!-- Figure pair: 3-option poll structure + ER diagram -->
@@ -218,7 +218,7 @@
         <div class="gallery-grid">
           <figure>
             <span class="smart-image is-zoom"><img src="../images/portfolio/hoojah/poll-interface.png" alt="Hoojah's restricted 3-option poll structure" loading="lazy" data-fallback="3-option poll structure"></span>
-            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 1: Hoojah's restricted 3-option poll structure - a design choice that evolved through many late-night coding sessions.</figcaption>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 1: Hoojah's restricted 3-option poll structure.</figcaption>
           </figure>
           <figure>
             <div class="bg-light p-3 rounded shadow h-100">
@@ -246,7 +246,7 @@
 
       <article style="max-width:var(--measure);margin:0 auto">
         <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-panel-right me-2" aria-hidden="true"></i>UI/UX Study: Solving the Convenience Problem</h3>
-        <p>One of the biggest barriers to online debate platforms is <strong>convenience</strong>—users often struggle to skim polls, understand arguments, and participate without friction. Hoojah's UI/UX design aimed to solve this through <strong>structured flows and visual hierarchy</strong>. This focus on usability came from my background in user-centered design and my personal frustration with cluttered interfaces.</p>
+        <p>One of the biggest barriers to online debate platforms is plain <strong>convenience</strong>. People struggle to skim polls, follow arguments, and join in without friction. Hoojah tries to fix that with <strong>structured flows and a clear visual hierarchy</strong>. I care about this stuff. Cluttered interfaces have always annoyed me.</p>
       </article>
 
       <!-- 1. Poll-First Experience -->
@@ -259,12 +259,12 @@
                 <li><strong>Problem:</strong> Users want to see the poll outcome quickly without scrolling through long threads.</li>
                 <li><strong>Solution:</strong> The poll sits at the top of the page, followed immediately by grouped arguments. This lets users vote, then dive deeper if they choose.</li>
               </ul>
-              <p>➡ <em>Design pattern: "Decision at the top, discussion below." This philosophy guided many of my design choices and became a mantra during development.</em></p>
+              <p>➡ <em>Design pattern: "Decision at the top, discussion below."</em></p>
             </div>
           </div>
           <figure>
             <span class="smart-image is-zoom"><img src="../images/portfolio/hoojah/poll-first-layout.png" alt="Poll positioned at the top for immediate engagement" loading="lazy" data-fallback="Poll-first layout"></span>
-            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 2: The poll-first layout - a solution I'm particularly proud of as it significantly reduced bounce rates during our tests.</figcaption>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 2: The poll-first layout, poll up top, discussion right underneath.</figcaption>
           </figure>
         </div>
       </div>
@@ -279,12 +279,12 @@
                 <li><strong>Problem:</strong> Long, mixed comment threads are hard to follow.</li>
                 <li><strong>Solution:</strong> Arguments are grouped under the option they support (Agree / Neutral / Disagree). Users skim within the stance they care about.</li>
               </ul>
-              <p>➡ <em>Design pattern: "Categorical clustering" for quick scanning. This organization method was inspired by my academic background in information architecture.</em></p>
+              <p>➡ <em>Design pattern: "Categorical clustering" for quick scanning.</em></p>
             </div>
           </div>
           <figure>
             <span class="smart-image is-zoom"><img src="../images/portfolio/hoojah/grouped-arguments.png" alt="Supporting arguments clustered under each stance" loading="lazy" data-fallback="Grouped arguments"></span>
-            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 3: Grouped arguments interface - a feature that emerged from countless user testing sessions in coffee shops around Kuala Lumpur.</figcaption>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 3: Grouped arguments interface, sorted under Agree / Neutral / Disagree.</figcaption>
           </figure>
         </div>
       </div>
@@ -299,13 +299,13 @@
                 <li><strong>Problem:</strong> Open comment sections often devolve into noise and trolling.</li>
                 <li><strong>Solution:</strong> Hoojah introduced <strong>debate view</strong>, where two users exchange structured arguments. This reduces clutter and highlights meaningful back-and-forth.</li>
               </ul>
-              <p>➡ <em>Design pattern: "Focused debate lens" to isolate quality interactions. This feature was particularly challenging to implement but became one of the most praised aspects of the platform.</em></p>
+              <p>➡ <em>Design pattern: "Focused debate lens" to isolate quality interactions.</em></p>
             </div>
           </div>
           <div>
             <figure style="margin:0 0 16px">
               <span class="smart-image is-zoom"><img src="../images/portfolio/hoojah/debate-view.png" alt="Debate mode between two participants" loading="lazy" data-fallback="Debate mode"></span>
-              <figcaption style="margin:8px 0 0;text-align:center;font-style:italic;font-size:0.9em;color:var(--color-muted)"><i class="icon-image me-1" aria-hidden="true"></i>Figure 4a: Debate mode in action - a concept I first sketched in my notebook during a long bus ride, now fully realized.</figcaption>
+              <figcaption style="margin:8px 0 0;text-align:center;font-style:italic;font-size:0.9em;color:var(--color-muted)"><i class="icon-image me-1" aria-hidden="true"></i>Figure 4a: Debate mode in action.</figcaption>
             </figure>
             <figure style="margin:0">
               <div class="bg-light p-3 rounded shadow">
@@ -363,12 +363,12 @@
                 <li><strong>Problem:</strong> Many platforms hide contribution behind too many steps.</li>
                 <li><strong>Solution:</strong> Clear calls-to-action: <em>vote in one tap, add a supporting argument in two, start a debate in three</em>. Minimal cognitive load.</li>
               </ul>
-              <p>➡ <em>Design pattern: "Progressive participation" where each step feels natural. This approach reflects my belief that technology should adapt to humans, not the other way around.</em></p>
+              <p>➡ <em>Design pattern: "Progressive participation" where each step feels natural.</em></p>
             </div>
           </div>
           <figure>
             <span class="smart-image is-zoom"><img src="../images/portfolio/hoojah/cta-buttons.png" alt="Streamlined actions guiding users to contribute" loading="lazy" data-fallback="Streamlined CTAs"></span>
-            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 5: Streamlined CTAs - an interface refinement that took nearly six months to perfect but dramatically increased user engagement.</figcaption>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 5: Streamlined CTAs, vote in one tap, add an argument in two, start a debate in three.</figcaption>
           </figure>
         </div>
       </div>
@@ -383,12 +383,12 @@
                 <li><strong>Problem:</strong> Debate platforms often break on smaller screens.</li>
                 <li><strong>Solution:</strong> On desktop, sidebars show trending arguments and user profiles. On mobile, non-essential elements collapse, leaving poll + arguments as the core flow.</li>
               </ul>
-              <p>➡ <em>Design pattern: "Responsive hierarchy" that prioritizes core actions. This solution was born from my own frustration with trying to debate on mobile devices while commuting.</em></p>
+              <p>➡ <em>Design pattern: "Responsive hierarchy" that prioritises core actions.</em></p>
             </div>
           </div>
           <figure>
             <span class="smart-image is-zoom"><img src="../images/portfolio/hoojah/responsive-design.png" alt="Responsive design across devices" loading="lazy" data-fallback="Responsive design"></span>
-            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 6: Responsive design - a testament to the hundreds of hours I spent testing on every device I could borrow or buy.</figcaption>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 6: Responsive design across phone and desktop.</figcaption>
           </figure>
         </div>
       </div>
@@ -402,7 +402,7 @@
           <li><strong>Escalate to debate</strong> if deeper engagement is needed.</li>
           <li><strong>Track contributions</strong> through personal profile and timelines.</li>
         </ol>
-        <p>This journey map represents the culmination of years of iteration. I remember the excitement of seeing users naturally follow this flow during our first successful beta test - it validated countless design decisions.</p>
+        <p>This flow is what all the iteration eventually settled into. Watching the first beta users move through it more or less the way I'd hoped was a good day.</p>
       </article>
 
       <!-- Figure: user journey flow -->
@@ -449,11 +449,11 @@
       <article style="max-width:var(--measure);margin:0 auto">
         <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-lightbulb me-2" aria-hidden="true"></i>Key Takeaways</h3>
         <ul>
-          <li>Restricting to three voting options balances simplicity with expressive debate - a lesson in constraint breeding creativity.</li>
-          <li>Convenience is achieved by prioritizing readability, structured flows, and responsive design - principles that have become central to my design philosophy.</li>
-          <li>Hoojah reduces friction by guiding users smoothly from <strong>poll → arguments → debate</strong>, ensuring every stage is intuitive. Building this platform taught me more about human-computer interaction than any course or book ever could.</li>
+          <li>Restricting to three voting options balances simplicity with room for real debate. Constraints can be a feature, not a compromise.</li>
+          <li>Convenience comes from readability, structured flows, and a responsive layout, roughly in that order.</li>
+          <li>Hoojah keeps friction low by walking people from <strong>poll → arguments → debate</strong>, one step at a time. I learned more about how people actually use software from building this than from anything I read.</li>
         </ul>
-        <p>Looking back on the Hoojah journey, I'm struck by how much I grew as both a designer and developer. What began as a side project became a masterclass in user-centered design, teaching me to listen, iterate, and above all, solve real problems for real people.</p>
+        <p>Looking back, Hoojah is where I actually grew up as a designer and developer. It started as a side project and ended up teaching me to listen, ship, tweak, and keep solving the real problem instead of the fun one.</p>
       </article>
 
       <article style="max-width:var(--measure);margin:0 auto">
@@ -475,7 +475,7 @@
 
       <article style="max-width:var(--measure);margin:0 auto">
         <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-arrow-right-circle" aria-hidden="true" style="font-size:0.8em"></i>3. Moving Forward</h2>
-        <p>The domain hoojah.my has been taken down, but Hoojah remains alive without recent updates. The next milestone is to convert features into plugins for Discourse or WordPress. The countless hours spent refining this UI taught me patience and the importance of iterative design based on real user feedback—a lesson I carry into every project I undertake.</p>
+        <p>The domain hoojah.my has been taken down, but Hoojah is still alive, just without recent updates. The next milestone is to turn its features into plugins for Discourse or WordPress. All those hours spent tuning the UI taught me patience, and to keep iterating on real feedback instead of my own assumptions. I carry that into every project now.</p>
       </article>
 
       <!-- External resources callout -->
