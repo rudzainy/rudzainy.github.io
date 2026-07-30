@@ -1,5 +1,14 @@
 # Voice Lint Report + Action Plan (2026-07-30)
 
+> **STATUS UPDATE (same day):** Tiers A, B, and C are all DONE (commit
+> `dfd8917`). Re-voiced `users-vs-corporations` and
+> `malaysia-communication-framework` (byline/"I envision" confirmed the substance
+> was the owner's), de-glossed `dxc-bionix-design-system`, and drafted all 10
+> owner TODOs on `dxc-bionix-central` as `DRAFT for owner review` comments
+> (kept in comments, not shipped, awaiting the owner's real facts). Also fixed
+> the wrong `ka7Sk0` Bootstrap hash on the two Tier-A files. Only the 3 confirmed
+> false positives remain flagged, left alone on purpose. Nothing pushed.
+
 Ran the `/write-like-me` Lint job across all **53 served** `.html` posts
 (`work/` 20, `life/` 10, `balance/` 23). The 29 `_`-prefixed `.html` files are
 **not served** (Jekyll skips leading-underscore files), so they were excluded.
