@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Résumé — Mohd Rudzainy bin Abdul Rahman</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Résumé of Mohd Rudzainy bin Abdul Rahman — UI/UX designer & full-stack developer in Kuala Lumpur, Malaysia. 15+ years across design, web development and education.">
+
+    <!-- Bootstrap CSS & Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+    <!-- end Bootstrap CSS & Icons -->
+
+    <link rel="stylesheet" type="text/css" href="si-es-es.css">
+
+    <!-- Résumé-specific layout: a responsive two-column timeline built on the
+         Batik design tokens. Header/nav/footer/post-stats are reused as-is. -->
+    <style>
+      .rz-wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+      /* --- Header hero (sits on the indigo page-header-work band) --------- */
+      .rz-hero { display: grid; grid-template-columns: 160px 1fr; gap: 32px; align-items: center; padding: 26px 0 40px; }
+      .rz-hero-photo img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(255,255,255,0.5); box-shadow: var(--shadow-title); }
+      .rz-hero-text .page-title { display: block; font-size: clamp(2.1rem, 1.1rem + 3.4vw, 3.4rem); line-height: 1.05; text-wrap: balance; margin: 0; }
+      .rz-tagline { font-style: italic; font-size: var(--type-lead); color: rgba(255,255,255,0.92); margin: 12px 0 18px; max-width: 48ch; }
+      .rz-contact { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 18px; font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); font-size: 13px; }
+      .rz-contact a, .rz-contact span { display: inline-flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; }
+      .rz-contact a:hover { text-decoration: underline; }
+      .rz-contact i { font-size: 1.05rem; opacity: 0.85; }
+      .rz-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+      .rz-download { background: #fff; color: var(--color-work-ink); border: 0; font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); }
+      .rz-socials { display: flex; align-items: center; gap: 16px; font-size: 1.2rem; }
+      .rz-socials a { color: #fff; }
+      .rz-socials a:hover { opacity: 0.8; }
+
+      /* --- Section scaffolding ------------------------------------------- */
+      .rz-section { padding: 44px 0; }
+      .rz-section + .rz-section { border-top: 1px solid var(--cat-border); }
+      .rz-section-head { display: flex; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 2px solid var(--cat-base); margin-bottom: 26px; }
+      .rz-section-head i { font-size: 1.55rem; color: var(--cat-base); }
+      .rz-section-head h2 { margin: 0; font-size: var(--type-h2); color: var(--cat-ink); text-shadow: none; }
+      .rz-sub { font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); color: var(--color-muted); font-size: 14px; margin: 34px 0 6px; }
+      .rz-sub:first-of-type { margin-top: 0; }
+
+      /* --- Timeline entry (date rail + role body) ------------------------ */
+      .rz-entry { display: grid; grid-template-columns: 190px 1fr; gap: 28px; padding: 22px 0; }
+      .rz-entry + .rz-entry { border-top: 1px solid var(--cat-border); }
+      .rz-when { font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); }
+      .rz-when .rz-date { font-size: 15px; color: var(--cat-ink); }
+      .rz-when .rz-dur { display: block; margin-top: 4px; font-size: 12px; color: var(--color-muted); }
+      .rz-when .rz-tag { display: inline-block; margin-top: 8px; padding: 2px 9px; border: 1px solid var(--cat-border); border-radius: 4px; font-size: 11px; color: var(--color-muted); }
+      .rz-role h3 { margin: 0 0 2px; font-size: var(--type-h3); color: var(--color-ink); text-shadow: none; }
+      .rz-org { font-weight: 600; color: var(--cat-ink); margin: 0 0 10px; }
+      .rz-role p { margin: 0 0 8px; }
+      .rz-role ul { margin: 8px 0 0; padding-left: 1.1rem; }
+      .rz-role ul ul { margin: 6px 0 0; }
+      .rz-role li { margin-bottom: 6px; }
+      .rz-role a { color: var(--cat-ink); }
+
+      /* --- Skills groups ------------------------------------------------- */
+      .rz-skill-block + .rz-skill-block { margin-top: 20px; }
+      .rz-skill-block h3 { margin: 0 0 4px; font-size: var(--type-h3); color: var(--color-ink); text-shadow: none; }
+      .rz-skill-block p { margin: 0 0 6px; }
+      .rz-tools { color: var(--color-muted); font-size: 0.95em; }
+      .rz-tools strong { color: var(--cat-ink); font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); font-size: 0.8em; }
+
+      /* --- Stats strip mobile reflow (post-stats is fixed at 4 cols) ----- */
+      .rz-stats .stats-strip { margin-bottom: 8px; }
+      @media (max-width: 640px) {
+        .rz-stats .stats-strip { grid-template-columns: repeat(2, 1fr); }
+        .rz-stats .stat { border-left: 1px solid rgba(0,0,0,0.1); border-top: 1px solid rgba(0,0,0,0.1); }
+        .rz-stats .stat:nth-child(1), .rz-stats .stat:nth-child(2) { border-top: 0; }
+        .rz-stats .stat:nth-child(odd) { border-left: 0; }
+      }
+
+      /* --- References cards ---------------------------------------------- */
+      .rz-refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+      .rz-ref { background: var(--color-surface); border: 1px solid rgba(0,0,0,0.15); border-radius: var(--radius-sm); padding: 18px 20px; }
+      .rz-ref h3 { margin: 0 0 4px; font-size: 1.15rem; text-shadow: none; }
+      .rz-ref .rz-ref-role { color: var(--cat-ink); font-weight: 600; margin: 0 0 8px; }
+      .rz-ref p { margin: 0; }
+      .rz-refs-note { margin: 18px 0 0; color: var(--color-muted); font-style: italic; }
+
+      /* --- Mobile: collapse the date rail into an inline strip ----------- */
+      @media (max-width: 640px) {
+        .rz-hero { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 20px; }
+        .rz-tagline { margin-left: auto; margin-right: auto; }
+        .rz-contact, .rz-actions { justify-content: center; }
+        .rz-entry { grid-template-columns: 1fr; gap: 8px; }
+        .rz-when { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+        .rz-when .rz-dur, .rz-when .rz-tag { margin-top: 0; }
+      }
+
+      /* --- Print: a clean one-off if someone hits Cmd/Ctrl-P ------------- */
+      @media print {
+        .navbar, footer, .rz-actions, .rz-download, .rz-socials { display: none !important; }
+        .page-header-work { background: #fff !important; }
+        .page-header-work .page-title, .rz-tagline, .rz-contact,
+        .rz-contact a, .rz-contact span { color: var(--color-ink) !important; text-shadow: none !important; }
+        .rz-entry { break-inside: avoid; }
+      }
+    </style>
+  </head>
+  <body data-category="work">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-info">
+      <div class="container">
+        <a href="/" title="Wow! It's a Wau!" class="navbar-brand text-info d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{&middot;})</a>
+        <button class="navbar-toggler border-0 text-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          ~|{&middot;})
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/work/" class="nav-link"><i class="icon-pencil-ruler me-2"></i>Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="/life/" class="nav-link"><i class="icon-sun me-2"></i>Life</a>
+            </li>
+            <li class="nav-item">
+              <a href="/balance/" class="nav-link"><i class="icon-mountain me-2"></i>Balance</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end Top Navigation Bar -->
+
+    <!-- Header band (solid Work indigo) -->
+    <div class="page-header-work" id="top" style="padding-bottom:0">
+      <div class="rz-wrap" style="padding-top:20px">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0" style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Résumé</li>
+          </ol>
+        </nav>
+        <!-- end Breadcrumb -->
+
+        <div class="rz-hero">
+          <div class="rz-hero-photo">
+            <img src="images/avatar.png" alt="Portrait of Mohd Rudzainy bin Abdul Rahman">
+          </div>
+          <div class="rz-hero-text">
+            <h1 class="page-title">Mohd Rudzainy<br>bin Abdul Rahman</h1>
+            <p class="rz-tagline">&ldquo;Solving real world problems using data, technology and empathy.&rdquo;</p>
+
+            <div class="rz-contact">
+              <a href="tel:+60138010985"><i class="icon-phone"></i>+60 13 801 0985</a>
+              <a href="mailto:rudzainy@gmail.com"><i class="icon-mail"></i>rudzainy@gmail.com</a>
+              <a href="https://rudzainy.github.io"><i class="icon-globe"></i>rudzainy.github.io</a>
+              <span><i class="icon-map-pin"></i>Kuala Lumpur, Malaysia</span>
+            </div>
+
+            <div class="rz-actions">
+              <button type="button" class="btn rz-download" onclick="window.print()">
+                <i class="icon-printer me-2"></i>Save as PDF
+              </button>
+              <div class="rz-socials">
+                <a href="https://github.com/rudzainy" target="_blank" aria-label="GitHub" title="GitHub"><i class="brand-icon brand-github"></i></a>
+                <a href="https://twitter.com/rudzainy" target="_blank" aria-label="Twitter" title="Twitter"><i class="brand-icon brand-x"></i></a>
+                <a href="https://www.behance.net/rudzainy" target="_blank" aria-label="Behance" title="Behance"><i class="brand-icon brand-behance"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Header band -->
+
+    <!-- Main Content -->
+    <main class="rz-wrap">
+
+      <!-- SKILLS -->
+      <section class="rz-section" aria-labelledby="skills-head">
+        <div class="rz-section-head">
+          <i class="icon-sparkles"></i>
+          <h2 id="skills-head">Skills</h2>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when"><span class="rz-date">Core</span></div>
+          <div class="rz-role">
+            <div class="rz-skill-block">
+              <h3>Human-Computer Interface &amp; User Experience Design</h3>
+              <p>Requirement gathering, research, wireframing, interaction &amp; interface design, prototyping, user journey, user testing.</p>
+              <p class="rz-tools"><strong>Tools:</strong> Figma, Adobe XD, Invision, Sketch, Adobe Illustrator, Adobe Photoshop.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when"><span class="rz-date">Supporting</span></div>
+          <div class="rz-role">
+            <div class="rz-skill-block">
+              <h3>Web &amp; Mobile Development</h3>
+              <p>Frontend &amp; full stack web app, hybrid native mobile app.</p>
+              <p class="rz-tools"><strong>Tools:</strong> HTML, CSS (Bootstrap), Ruby (Ruby on Rails, Jekyll, Discourse), JavaScript (StimulusJS, ReactJS, NextJS, ExpressJS), Wordpress.</p>
+            </div>
+            <div class="rz-skill-block">
+              <h3>Information Technology &amp; Multimedia</h3>
+              <p>Internet &amp; digital technology, text, image, audio, video &amp; animation.</p>
+              <p class="rz-tools"><strong>Tools:</strong> Adobe suites, mobile photography.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="rz-section" aria-labelledby="exp-head">
+        <div class="rz-section-head">
+          <i class="icon-briefcase"></i>
+          <h2 id="exp-head">Experience</h2>
+        </div>
+
+        <p class="lead" style="margin-bottom:20px">15+ years of professional working experience and counting! 💪</p>
+
+        <div class="rz-stats post-stats" style="margin-bottom:6px">
+          <div class="stats-strip">
+            <div class="stat">
+              <div class="stat-num">7y 3m</div>
+              <div class="stat-label">IT &amp; Web Dev</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">6y 8m</div>
+              <div class="stat-label">Education</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">5y 6m</div>
+              <div class="stat-label">Enterprise</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">4y 10m</div>
+              <div class="stat-label">SME / Startup</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="rz-sub">Employment</p>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Jun 2024 – Nov 2024</span>
+            <span class="rz-dur">6 months</span>
+            <span class="rz-tag">Full-time contract</span>
+          </div>
+          <div class="rz-role">
+            <h3>Digital Product Owner</h3>
+            <p class="rz-org">Maxis Broadband · Kuala Lumpur, Malaysia</p>
+            <p>Short term position to relieve a staff member who was going on maternity leave.</p>
+            <ul>
+              <li>Develop and maintain a product roadmap for Q3 and Q4 2024.</li>
+              <li>Collaborate with various stakeholders to gather requirements and ensure alignment with business goals.</li>
+              <li>Create, maintain, and prioritize the product backlog to ensure that the development team is always working on the most valuable tasks.</li>
+              <li>Write user stories, acceptance criteria, and requirements.</li>
+              <li>Work closely with the QA testers, UX/UI designers and development team to clarify requirements and remove obstacles to ensure timely delivery of features.</li>
+              <li>Conduct user research, gather feedback and iterate on designs before development begins.</li>
+              <li>Analyze product performance using analytics tools and data to make informed decisions about product enhancements and features.</li>
+              <li>Collaborate with business teams to develop and execute go-to-market strategies for new product launches.</li>
+              <li>Work to resolve customer issues and ensure a high level of customer satisfaction.</li>
+              <li>Regularly update stakeholders on product progress, upcoming features, and any challenges faced.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Aug 2022 – Dec 2023</span>
+            <span class="rz-dur">1 year 4 months</span>
+            <span class="rz-tag">Term hire</span>
+          </div>
+          <div class="rz-role">
+            <h3>Platform Designer</h3>
+            <p class="rz-org">Ace Resource Advisory Services · Kuala Lumpur, Malaysia</p>
+            <p>Work in a UX team of 6 designers which supports multiple business groups under one holding corporation.</p>
+            <ul>
+              <li>Assigned to a business group specialising in palm oil production.</li>
+              <li>Participated in requirement gathering workshops for 4 different projects.</li>
+              <li>Delivered 4 Figma prototypes for projects:
+                <ul>
+                  <li>Proof of concept mobile &amp; web app for grading fresh fruit bunch.</li>
+                  <li>Web &amp; mobile app for monitoring tree health using multispectral imaging.</li>
+                  <li>Web &amp; mobile app for palm oil seed production.</li>
+                  <li>Web &amp; mobile app for R&amp;D activities.</li>
+                </ul>
+              </li>
+              <li>Left early from my 2-year contract to find a more flexible working environment.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Jan 2021 – Mar 2021</span>
+            <span class="rz-dur">3 months</span>
+          </div>
+          <div class="rz-role">
+            <h3>UI/UX Developer</h3>
+            <p class="rz-org">Affin Bank · Kuala Lumpur, Malaysia</p>
+            <p>Plan and manage Affin Group web consolidation project.</p>
+            <ul>
+              <li>Managed a junior UX designer who was handling multiple projects.</li>
+              <li>Planned and executed UX workshops for all stakeholder levels for the digitalisation of Affin Bank&rsquo;s services.</li>
+              <li>Participate and provide feedback for vendor&rsquo;s solution presentations.</li>
+              <li>Decided not to proceed after probation due to work culture mismatch.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Jul 2020 – Aug 2020</span>
+            <span class="rz-dur">2 months</span>
+          </div>
+          <div class="rz-role">
+            <h3>Senior Frontend Engineer</h3>
+            <p class="rz-org">Kaodim · Selangor, Malaysia</p>
+            <p>Maintain and build new features in the existing system.</p>
+            <ul>
+              <li>Technology stack: Ruby on Rails, ReactJS, SCSS.</li>
+              <li>Decided to leave to take care of my then sick father.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Jun 2019 – Feb 2020</span>
+            <span class="rz-dur">9 months</span>
+          </div>
+          <div class="rz-role">
+            <h3>UI/UX Designer</h3>
+            <p class="rz-org">Rev Asia · Selangor, Malaysia</p>
+            <p>Redesign says.com from the ground up.</p>
+            <ul>
+              <li>UX research on how to optimise reader&rsquo;s and writer&rsquo;s experiences for news portals.</li>
+              <li>Revamp says.com UI.</li>
+              <li>Research on optimising workflow for the tech team across multiple news portals.</li>
+              <li>Left after being called back by the UI/UX team in DXC Technology. Unfortunately the pandemic situation then has caused all new hirings to be frozen.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">May 2018 – May 2019</span>
+            <span class="rz-dur">1 year 1 month</span>
+          </div>
+          <div class="rz-role">
+            <h3>UI/UX Designer</h3>
+            <p class="rz-org">DXC Technology · Selangor, Malaysia</p>
+            <ul>
+              <li>Reports directly to the Director of Engineering / Automation.</li>
+              <li>Design UI/UX for SAAS-like applications based on user stories provided by BAs.</li>
+              <li>Design and build concepts for marketing pages.</li>
+              <li>Get feedback from stakeholders from different regions of the world.</li>
+              <li>Left due to contract not getting renewed due to internal restructuring.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Oct 2017 – Mar 2018</span>
+            <span class="rz-dur">6 months</span>
+          </div>
+          <div class="rz-role">
+            <h3>IT Manager (acting Chief Technical Officer)</h3>
+            <p class="rz-org">Pacific Trustees Berhad · Kuala Lumpur, Malaysia</p>
+            <p>Temporary position to help a friend manage a job listing app that I built for his company.</p>
+            <ul>
+              <li>Manage the IT department for the group of companies which includes one senior and one junior IT executive.</li>
+              <li>Managed business disaster recovery plan.</li>
+              <li>Liaise with service providers and present solutions directly to the Board of Directors.</li>
+              <li>Successfully planned and executed a disaster recovery drill.</li>
+              <li>Worked with other departments on IT related matters.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Oct 2015 – Oct 2017</span>
+            <span class="rz-dur">2 years 1 month</span>
+          </div>
+          <div class="rz-role">
+            <h3>Front End Web Developer / Programming Bootcamp Mentor</h3>
+            <p class="rz-org">NEXT Academy · Kuala Lumpur, Malaysia</p>
+            <p><strong>Mentor:</strong></p>
+            <ul>
+              <li>Mentor students for a 9-week bootcamp.</li>
+              <li>Topics covered in the boot camp includes Ruby, ActiveRecord, Basic HTML &amp; CSS, Basic JavaScript, Sinatra framework and Ruby on Rails framework.</li>
+              <li>Have mentored a total of 14 intakes.</li>
+              <li>Main tasks was to assist students with their assignments throughout the 9-weeks bootcamp as well as giving lectures, doing class revisions, reviewing student assessments and other classroom related tasks.</li>
+              <li>Assist other departments on company activities such as live events and other marketing programmes.</li>
+            </ul>
+            <p style="margin-top:12px"><strong>Front End Web Developer:</strong></p>
+            <ul>
+              <li>Develop and maintain in-house web applications for Next Academy.</li>
+              <li>Daily tasks include building new features, review pull requests and bug fixes.</li>
+              <li>Take away from the experience: Working in a team to build and maintain a Ruby on Rails apps, ReactJS framework, building and working with various APIs.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Aug 2012 – Jul 2014</span>
+            <span class="rz-dur">2 years</span>
+          </div>
+          <div class="rz-role">
+            <h3>Lecturer for Diploma &amp; Foundation</h3>
+            <p class="rz-org">Universiti Tenaga Nasional · Selangor, Malaysia</p>
+            <ul>
+              <li>Lecturing for diploma and foundation classes.</li>
+              <li>Course subjects include Introduction to C Programming, Web Programming, Introduction to Computer, Basic Computing Skills, and Multimedia subjects.</li>
+              <li>Develop a new diploma programme in multimedia for accreditation submission.</li>
+              <li>Supervise and coordinate student activities as well as university programs.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Dec 2009 – Jul 2012</span>
+            <span class="rz-dur">2 years 7 months</span>
+          </div>
+          <div class="rz-role">
+            <h3>HRA / Business Development Executive</h3>
+            <p class="rz-org">Malaysia Maritime Association · Selangor, Malaysia</p>
+            <ul>
+              <li>Worked in a project management team to build a maritime academy in Seri Manjung, Perak and in Rawang, Selangor from the ground up.</li>
+              <li>Coordinate with property developers and the Fire and Rescue Department (Bomba) to secure premises for leasing and obtain safety certifications necessary for operating a learning centre with accommodation.</li>
+              <li>Assisted in the development of syllabus for a basic seamanship programme.</li>
+              <li>Liaise with officials from the Marine Department of Malaysia for accreditations, reporting and other official businesses.</li>
+              <li>Manage day-to-day operations of the academy.</li>
+              <li>Plan, supervise and coordinate student activities.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Sep 2009 – Dec 2009</span>
+            <span class="rz-dur">4 months</span>
+            <span class="rz-tag">Part-time contract</span>
+          </div>
+          <div class="rz-role">
+            <h3>L1 Technical Helpdesk Specialist</h3>
+            <p class="rz-org">Jones Lang LaSalle Technology Service Center · Selangor, Malaysia</p>
+            <ul>
+              <li>Main role was to be the first point of contact for users experiencing technical issues, including software, hardware, network, or system-related problems.</li>
+              <li>Supported mainly India and Australia users, as well as users from Singapore, New Zealand and Hong Kong.</li>
+              <li>Diagnose and resolve technical issues which involved guiding users through step-by-step solutions over the phone, using remote desktop tools to access their systems, or escalating issues to higher-level support teams when necessary.</li>
+              <li>Document all technical support interactions, including the nature of the issue, troubleshooting steps taken, and resolutions provided.</li>
+              <li>Resigned from the role to join a project management opportunity.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Aug 2008 – Aug 2009</span>
+            <span class="rz-dur">1 year 1 month</span>
+          </div>
+          <div class="rz-role">
+            <h3>Web / Graphic Designer</h3>
+            <p class="rz-org">Teras Solutions Sdn Bhd · Selangor, Malaysia</p>
+            <ul>
+              <li>Rebranding the company&rsquo;s corporate image.</li>
+              <li>Involved in most of the company&rsquo;s web portal projects as the lead designer.</li>
+              <li>Involved in conducting and facilitating training on web design using Joomla! 1.5.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Aug 2007 – Dec 2007</span>
+            <span class="rz-dur">5 months</span>
+          </div>
+          <div class="rz-role">
+            <h3>Web Designer (Practical Training)</h3>
+            <p class="rz-org">MSC Management Services Sdn Bhd · Selangor, Malaysia</p>
+            <p>Involved exclusively in the design phase for the development of Seri Malaysia Hotels web portal. The site has since been revamped.</p>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Jan 2005 – Mar 2005</span>
+            <span class="rz-dur">3 months</span>
+          </div>
+          <div class="rz-role">
+            <h3>General Factory Worker</h3>
+            <p class="rz-org">Asahi Kosai · Selangor, Malaysia</p>
+            <p>Worked part time at a factory while waiting for my STPM result.</p>
+            <p><em>Key takeaway:</em> Learned the principle of Kaizen.</p>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Jan 2003 – Mar 2003</span>
+            <span class="rz-dur">3 months</span>
+          </div>
+          <div class="rz-role">
+            <h3>Crew</h3>
+            <p class="rz-org">McDonald&rsquo;s (Golden Arches Sdn Bhd) · Selangor, Malaysia</p>
+            <p>Worked part time as floor and kitchen crew while waiting for my SPM result.</p>
+            <p><em>Key takeaway:</em> &ldquo;Clean as you go&rdquo;.</p>
+          </div>
+        </div>
+
+        <p class="rz-sub">Others</p>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Sep 2015 – present</span>
+          </div>
+          <div class="rz-role">
+            <h3>Freelance Digital &amp; Multimedia Consultant</h3>
+            <p class="rz-org">rudzainy.my · Malaysia</p>
+            <p>Providing a comprehensive range of services tailored to meet the diverse needs of clients across various industries.</p>
+            <ul>
+              <li>Services spans digital marketing strategies, multimedia content creation, graphic design, video production, and website development.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Mar 2023 – present</span>
+          </div>
+          <div class="rz-role">
+            <h3>Full Stack Developer &amp; Product Designer</h3>
+            <p class="rz-org">Gugel.my (Software as a Service) · Malaysia</p>
+            <p>Plan, design and build a link management app.</p>
+            <ul>
+              <li>Tech stack: Ruby on Rails 7, Bootstrap 5.</li>
+              <li>Archived repo: <a href="https://github.com/rudzainy" target="_blank">GitHub</a>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Sep 2013 – Feb 2021</span>
+          </div>
+          <div class="rz-role">
+            <h3>Full Stack Developer &amp; Product Designer</h3>
+            <p class="rz-org">Hoojah.my (Software as a Service) · Malaysia</p>
+            <p>Plan, design and build a debating app.</p>
+            <ul>
+              <li>Tech stack: Ruby on Rails 6, ReactJS, Bootstrap 4.</li>
+              <li>The project has been archived.</li>
+              <li>Writeup: <a href="https://www.behance.net/gallery/175206951/Hoojah" target="_blank">behance.net/gallery/175206951/Hoojah</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Nov 2018 – Mar 2019</span>
+          </div>
+          <div class="rz-role">
+            <h3>Stage Manager</h3>
+            <p class="rz-org">SudirMANIA (Indie Musical Theatre Production) · Selangor, Malaysia</p>
+            <p>Responsible for ensuring that all elements of the production come together seamlessly for the show.</p>
+            <ul>
+              <li>Worked closely with the director, designers, and production team during pre-production planning stage to understand the vision for the show and assist in creating a production schedule.</li>
+              <li>Scheduling and running rehearsals, ensuring actors are on time and prepared, coordinating with the director to facilitate the creative process, and keeping detailed notes on blocking, cues, and technical requirements.</li>
+              <li>Served as a central point of communication between all members of the production team, including designers, crew, and performers.</li>
+              <li>Keeping accurate records of all aspects of the production, including rehearsal schedules, blocking diagrams, and technical cue sheets.</li>
+              <li>Resigned from position mid-production due to constraints during the pandemic.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Aug 2018 – Oct 2018</span>
+          </div>
+          <div class="rz-role">
+            <h3>Director, Co-Writer &amp; Producer</h3>
+            <p class="rz-org">Orang Kasar (Indie Theatre Production) · Selangor, Malaysia</p>
+            <p>Directed, co-write and produced an indie theatre play for directing class at Revolution Stage.</p>
+            <ul>
+              <li>&ldquo;Orang Kasar&rdquo; is an adaptation of a play written by Anton Chekov (The Bear).</li>
+              <li>The production ran for 5 days with a total of 7 shows.</li>
+              <li>Directed 2 main cast and 3 supporting cast members.</li>
+              <li>Involved in the end-to-end production process.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Apr 2017 – Jun 2017</span>
+          </div>
+          <div class="rz-role">
+            <h3>Volunteer Teacher</h3>
+            <p class="rz-org">Fugeeschool · Selangor, Malaysia</p>
+            <p>Volunteered to teach Introduction to the Internet and the basics of how websites work.</p>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when">
+            <span class="rz-date">Sep 2005 – Aug 2015</span>
+          </div>
+          <div class="rz-role">
+            <h3>Freelance Designer &amp; Digital Print Management Consultant</h3>
+            <p class="rz-org">Trimedian Enterprise · Selangor, Malaysia</p>
+            <p>Design and manage digital designs for web and print.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="rz-section" aria-labelledby="edu-head">
+        <div class="rz-section-head">
+          <i class="icon-graduation-cap"></i>
+          <h2 id="edu-head">Education</h2>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when"><span class="rz-date">2005 – 2009</span></div>
+          <div class="rz-role">
+            <h3>Bc. (Hons) Information Technology (Multimedia Studies)</h3>
+            <p class="rz-org">Universiti Kebangsaan Malaysia (UKM)</p>
+          </div>
+        </div>
+
+        <div class="rz-entry">
+          <div class="rz-when"><span class="rz-date">2015</span></div>
+          <div class="rz-role">
+            <h3>Full Stack Ruby on Rails Web Development Bootcamp</h3>
+            <p class="rz-org">Next Academy</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- REFERENCES -->
+      <section class="rz-section" aria-labelledby="ref-head">
+        <div class="rz-section-head">
+          <i class="icon-users"></i>
+          <h2 id="ref-head">References</h2>
+        </div>
+
+        <div class="rz-refs">
+          <div class="rz-ref">
+            <h3>Vigneswaren Krishnamoorthy</h3>
+            <p class="rz-ref-role">Head of Data Science &amp; AI, Ace Resources Advisory Services · Kuala Lumpur</p>
+            <p>Worked closely together in multiple projects at Ace Resources Advisory Services.</p>
+          </div>
+          <div class="rz-ref">
+            <h3>Mufhim Anees</h3>
+            <p class="rz-ref-role">UX Manager, Dell · Cyberjaya</p>
+            <p>Worked together at DXC Technology and other side projects after that.</p>
+          </div>
+          <div class="rz-ref">
+            <h3>Muhammad Faris Roslan</h3>
+            <p class="rz-ref-role">Senior Ruby on Rails Developer · Selangor</p>
+            <p>Worked together at Next Academy and other side projects after that.</p>
+          </div>
+          <div class="rz-ref">
+            <h3>Muhammad Amir Zaidi</h3>
+            <p class="rz-ref-role">Senior UX Designer, Ace Resources Advisory Services · Kuala Lumpur</p>
+            <p>Worked together at Ace Resources Advisory Services.</p>
+          </div>
+        </div>
+        <p class="rz-refs-note">Full contact details for referees are available on request.</p>
+      </section>
+
+    </main>
+    <!-- end Main Content -->
+
+    <!-- Footer Section -->
+    <footer class="container">
+      <section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau">~|{&middot;})</a> <a href="/LICENSE" class="text-decoration-none link-dark">&copy;</a> Rudzainy Rahman since 1985</span>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <a href="/" class="text-decoration-none me-3">Back to Home</a>
+          <a href="#top" class="text-decoration-none">Back to top</a>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
+              <i class="brand-icon brand-github me-2"></i><span class="visually-hidden">GitHub</span>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙">
+              <i class="icon-heart me-2"></i><span class="visually-hidden">Sama²</span>
+            </a>
+          </li>
+          <li class="ms-3 mt-n1">
+            <a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
+              <i class="icon-coffee me-2"></i><span class="visually-hidden">Ko-fi</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <!-- end Footer Section -->
+
+    <script src="jei-es.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- end Bootstrap JS -->
+  </body>
+</html>
