@@ -1,6 +1,6 @@
 # Work
 
-Portfolio pieces — design, branding, UX and development work (2008–2025).
+Portfolio pieces — design, branding, UX and development work (2008–2026).
 
 ## Creative Writing
 
@@ -34,3 +34,4 @@ Portfolio pieces — design, branding, UX and development work (2008–2025).
 * [UX Assignment 1](2025-07-26-ux-assignment-1.md) - Retrospective of UX interview assignment.
 * [Interview Questions and Answers](2025-09-10-interview-questions-and-answers.md) - Portfolio Project (Work)
 * [Day Food Catalogue](2025-09-11-day-food-catalogue.md) - A case study on Day Food Catalogue — a mobile-first, offline-capable PWA for showcasing food products.
+* [DiveOS](2026-08-11-diveos.md) - A white-label dive-shop platform for Maldivian dive operators, forked out of one dive centre's internal Rails app and generalised into multi-tenant SaaS.
