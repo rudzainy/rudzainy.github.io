@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>DiveOS by Rudzainy Rahman</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DiveOS is a white-label booking and operations platform for Maldivian dive shops, hard-forked from Arena Dive Club's internal app and rebuilt as multi-tenant Rails 8. A case study on running it and on building it.">
+
+    <!-- Bootstrap CSS & Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+    <!-- end Bootstrap CSS & Icons -->
+
+    <link rel="stylesheet" type="text/css" href="../si-es-es.css">
+  </head>
+  <body data-category="work">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-info">
+      <div class="container">
+        <a href="/" title="Wow! It's a Wau!" class="navbar-brand text-info d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+        <button class="navbar-toggler border-0 text-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          ~|{·})
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/work/" class="nav-link"><i class="icon-pencil-ruler me-2"></i>Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="/life/" class="nav-link"><i class="icon-sun me-2"></i>Life</a>
+            </li>
+            <li class="nav-item">
+              <a href="/balance/" class="nav-link"><i class="icon-mountain me-2"></i>Balance</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end Top Navigation Bar -->
+
+    <!-- Page Header Band (solid category colour) -->
+    <div class="page-header-work" style="padding-bottom:0">
+      <div style="max-width:1140px;margin:0 auto;padding:20px 24px 0">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0" style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/work/">Work</a></li>
+            <li class="breadcrumb-item active" aria-current="page">DiveOS</li>
+          </ol>
+        </nav>
+        <!-- end Breadcrumb -->
+
+        <!-- Hero: kicker + title + standfirst + featured image -->
+        <div class="header-hero-grid" style="display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center;padding:36px 0 44px">
+          <div>
+            <p style="margin:0 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px;color:rgba(255,255,255,0.75)">Case study · 2025–2026</p>
+            <h1 class="page-title" style="display:block;font-size:clamp(2.5rem,1.1rem + 4.5vw,4.5rem);line-height:1.05;text-wrap:balance">DiveOS</h1>
+            <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:54ch">A white-label booking and operations platform for dive shops in the Maldives. It started life as Arena Dive Club's internal app, then I hard-forked it and rebuilt it to serve many shops at once. It is in closed beta at version 0.19.2.2, and Arena is still the primary tenant.</p>
+          </div>
+          <figure style="margin:0;background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-hover)">
+            <img src="../images/portfolio/diveos/featured.png" alt="DiveOS trip detail page showing vessel, date and capacity, a five-step planning rail, and a conditions card" loading="lazy" style="width:100%;display:block;object-fit:cover;object-position:top;max-height:280px">
+            <figcaption style="padding:8px 14px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--color-muted);border-top:1px solid rgba(0,0,0,0.1)">DiveOS · trip detail, plan to dispatch</figcaption>
+          </figure>
+        </div>
+
+        <!-- Featured meta strip (overlaps the band) -->
+        <div class="header-meta-strip" style="background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);box-shadow:var(--shadow-active);display:grid;grid-template-columns:repeat(4,1fr);position:relative;transform:translateY(56px);margin-top:-56px">
+          <div style="padding:16px 20px">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Project</div>
+            <p style="margin:0">DiveOS, with Arena Dive Club as the primary tenant</p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Technology stack</div>
+            <p style="margin:0">Ruby on Rails 8 + Bullet Train + Hotwire, PostgreSQL, Sidekiq, Tailwind</p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Year</div>
+            <p style="margin:0"><time datetime="2025">2025</time>–<time datetime="2026">2026</time></p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Project links</div>
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+              <span class="meta-link text-muted"><i class="icon-lock" aria-hidden="true"></i>Private repository, self-hosted GitLab</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Page Header Band -->
+
+    <!-- Main Content Section -->
+    <main style="max-width:1140px;margin:0 auto;padding:104px 24px 32px">
+      <article style="max-width:var(--measure);margin:0 auto">
+
+        <h2 style="display:flex;align-items:center;gap:12px;margin:0 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-book-open" aria-hidden="true" style="font-size:0.8em"></i>Summary</h2>
+        <p class="lead">DiveOS is the software a dive shop runs its day on. Bookings come in from a public storefront, get planned into trips, get boats and guides and gear attached, produce waivers and manifests, and end as an invoice. It's white-label, so each operator gets its own domain and its own accent colour, and it's in closed beta at version 0.19.2.2.</p>
+        <p>It didn't start that way. It started as Arena HQ, the internal app I built for one dive centre in the Maldives, Arena Dive Club. DiveOS is a hard fork of that app, reworked so a single deployment can serve many shops without any of them seeing each other.</p>
+        <p>The stack is deliberately plain: Ruby 3.4.7, Rails 8.0.4, Bullet Train 1.38.0, PostgreSQL, Sidekiq 8.0.9, Tailwind 3.4.17, Turbo 8 and Stimulus 3.2 over esbuild 0.27 and Propshaft. Devise for accounts, CanCanCan for permissions, Doorkeeper for the API, Prawn for PDFs, Avo for the platform back office. No Webpack. No React and no Vue. No ViewComponent in the app code.</p>
+      </article>
+
+      <!-- Stats -->
+      <div class="post-stats">
+        <div class="stats-strip">
+          <div class="stat">
+            <div class="stat-num">532</div>
+            <div class="stat-label">Database migrations</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">713</div>
+            <div class="stat-label">Test files</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">139</div>
+            <div class="stat-label">Stimulus controllers</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">79</div>
+            <div class="stat-label">Releases in the changelog</div>
+          </div>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-users" aria-hidden="true" style="font-size:0.8em"></i>1. It Started as One Dive Shop's App</h2>
+        <p>Arena HQ was written for one shop, which means it was written with one shop's assumptions baked into everything. There is one price list. There is one set of boats. There is one logo. Nothing in the code has to ask whose data this is, because there is only ever one answer.</p>
+        <p>Turning that into a product is mostly the work of removing that answer. Every query has to know which shop it belongs to. Every page has to know which shop the visitor arrived at. Every email, invoice and PDF has to carry the right name. And the platform needs a floor above the shops: a place where I can see all the operators, suspend one, or step into one to reproduce a bug.</p>
+      </article>
+
+      <!-- Gallery: platform floor -->
+      <div class="post-gallery">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/tenant-portal.png" alt="Platform tenant list showing every dive operator on DiveOS" loading="lazy" data-fallback="Tenant list"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The platform floor: every operator on DiveOS in one list</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/tenant-detail.png" alt="Tenant detail page with suspend, impersonate, outlets and sync secret" loading="lazy" data-fallback="Tenant detail"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Tenant detail: suspend, impersonate, outlets, sync secret</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-git-branch me-2" aria-hidden="true"></i>The Fork Was Not a Clean Cut</h3>
+        <p>This is the part I'd want to read if someone else had written it, so here it is. The first commit that carries the DiveOS name is dated 2026-05-16. Version 0.1.0.0, the entry the milestone log calls the genesis of DiveOS, lands on 2026-05-21. That is the neat version.</p>
+        <p>The messy version is that Arena HQ kept shipping to production the whole time. A real dive centre was taking real bookings out of the app I was forking, so the fork was never allowed to be a fork in the clean sense. It was two lines of work running side by side, one of which couldn't be paused.</p>
+        <p>You can read that off the repository. There are exactly three git tags in the whole project, and none of them mark a release: <code>pre-arena-sync-2026-06-09</code>, <code>sync-complete-2026-06-12</code> and <code>backup/pre-sync-local-2026-06-22</code>. They are safety markers, dropped before and after the risky bits of catching up with production. The 0.16.0.0 milestone on 2026-06-12 is titled as catching up to the production tip, and it records the DiveOS branch standing 481 commits ahead of the arena-hq base it forked from.</p>
+        <p>The rename came later still. ArenaHq became DiveOS across the code on 2026-07-29 and 2026-07-30, and I wrote it up as a dated rename audit that bucketed every remaining occurrence rather than pretending a search-and-replace had covered it.</p>
+      </article>
+
+      <!-- Callout: fork residue -->
+      <div class="post-callout is-note">
+        <aside>
+          <div class="callout-header"><i class="icon-info" aria-hidden="true"></i>What the fork left behind</div>
+          <p class="callout-body">The default development database is still called <code>arena_hq</code>. The Postgres service in CI is still <code>arena_hq_test</code>. Line 1 of <code>CHANGELOG.md</code> still says "Bullet Train Starter Repository Changelog". None of it breaks anything, which is exactly why it's still there.</p>
+        </aside>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p>The commit count needs a caveat rather than a boast. The repository's total is inherited from the Bullet Train starter repo, whose first commit is from 2016 and whose own authors and dependency bots sit in the top ten contributors. Counting those as mine would be nonsense. The number I'm willing to stand behind is roughly 4,100 commits on this codebase since April 2026, across everyone who has worked on it.</p>
+      </article>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-square-kanban" aria-hidden="true" style="font-size:0.8em"></i>2. Running It</h2>
+        <p>It's a small team, so process here is not ceremony for a big organisation. It's a filing habit, so that whoever picks a thread up in three weeks, usually me, can find out what past me was thinking without reading the diff.</p>
+        <p>The shape is spec, then plan, then build, then gate. Under <code>docs/superpowers/</code> there are 70 dated design specs and 66 dated plans, all named <code>YYYY-MM-DD-slug</code>, and they pair up: a spec argues what should happen, the plan next to it says how, in order. Another 30 completed plan artifacts have been moved into <code>docs/archive/</code> once their work landed. There is a <code>backlog/</code> and a <code>handovers/</code> folder alongside them.</p>
+      </article>
+
+      <!-- Steps: the cycle -->
+      <div class="post-steps">
+        <div class="steps-rail">
+          <ol>
+            <li>
+              <div class="step-num">1</div>
+              <div>
+                <h3>Spec</h3>
+                <p>A dated document that argues the problem and the shape of the answer. Written before any code, so the argument can be lost on paper instead of in a branch.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">2</div>
+              <div>
+                <h3>Plan</h3>
+                <p>The same date, the same slug, the ordered steps. It is the thing I actually work from, and the thing I re-read when I come back cold.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">3</div>
+              <div>
+                <h3>Build</h3>
+                <p>Small merge requests against the plan. When the plan turns out to be wrong, the plan gets edited, not quietly abandoned.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">4</div>
+              <div>
+                <h3>Gate</h3>
+                <p>A test, a lint rule or a baseline snapshot that stops the same mistake coming back. If a fix cannot be gated, it is not really finished.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-file-text me-2" aria-hidden="true"></i>The Changelog Is Written as Prose</h3>
+        <p>There are 79 versioned entries in <code>CHANGELOG.md</code> and not one of them is a bullet dump of commit subjects. Each entry has a headline that names the user-visible symptom, then explains the cause, then the fix. The most recent one is version 0.19.2.2, dated 2026-08-10, headlined "Trip-equipment checkbox felt laggy to toggle".</p>
+        <p>Writing them this way is slower, and I'd do it again. A symptom-first headline is searchable by the thing a person actually remembers.</p>
+        <p>The same instinct runs through <code>TODOS.md</code>, which is 2,329 lines with completion dates and RESOLVED markers rather than deletions, so the file is a record and not just a queue. It carries non-engineering items too. One of them is simply a note to validate MVR demand during the first three conversations with paying tenants, which is a product question sitting in the same list as the code.</p>
+        <p>Documentation drifts, so there is a test for that as well. A docs-drift test enforces an eight-file allowlist for markdown at the repository root and pins the README badges to <code>.ruby-version</code>, <code>.nvmrc</code>, <code>Gemfile.lock</code> and <code>VERSION</code>. Its own comment records why it exists: the old README advertised Node 19 for weeks while <code>.nvmrc</code> said 22.</p>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-arrow-up-circle me-2" aria-hidden="true"></i>Gates That Only Tighten</h3>
+        <p>I did the same thing three separate times before I noticed it was a pattern. StandardRB in CI lints only the files a merge request changed. The config comment explains the reasoning plainly: a repo-wide run reports 628 pre-existing offences, and a job that is red on day one is a job everyone learns to ignore. The design-system analyser works off a baseline snapshot, and only offences whose key is missing from the snapshot fail the build. The design-system maturity file tracks a debt counter per component family that has to drain to zero before that family reaches the top rung.</p>
+        <blockquote class="blockquote">
+          <p>A job that is red on day one is a job everyone learns to ignore.</p>
+        </blockquote>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-alert-triangle me-2" aria-hidden="true"></i>CI Arrived Late</h3>
+        <p>The test stage did not land until 2026-07-31, about two and a half months after the fork. Before that, verification was something I did locally.</p>
+        <p>The header comment on the pipeline says what it cost. Until that stage existed, nothing ran the suite on a merge request, and that is how a regression that denied every user the ability to create a dive trip shipped and then sat on main across several merge requests. Creating a trip is the central action in the product. It was broken, and the tests that would have caught it were sitting on my laptop.</p>
+        <p>It shipped as <code>allow_failure</code> while main still carried 12 failing tests, then was tightened once a full run came back green.</p>
+      </article>
+
+      <!-- Callout: CI caveat -->
+      <div class="post-callout is-warning">
+        <aside>
+          <div class="callout-header"><i class="icon-alert-triangle" aria-hidden="true"></i>The gate exists, the runner does not yet</div>
+          <p class="callout-body">I'd like to write that the suite now runs on every merge request, and that's not true yet. The CI comments admit that no <code>ci</code>-tagged Docker runner is registered, so the jobs can sit pending. The honest version is that the gate is written and wired, and registering the runner is the last missing piece. The "6,827 tests, 0 failures" figure that appears in the CI config is a comment in that file, not a run anyone did today.</p>
+        </aside>
+      </div>
+
+      <!-- Figure: QA dashboard -->
+      <div class="post-figure">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/qa-dashboard.png" alt="In-app QA coverage dashboard" loading="lazy" data-fallback="QA dashboard"></span>
+          <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The QA coverage dashboard lives inside the app, next to the thing it measures</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p>For scale: 713 test files, 80 of them system tests driving a real browser, plus 23 separate lint gates. The QA corpus itself lives in the database with an Open Knowledge Format projection on disk, and I'm not going to quote a case count here, because the two sources disagree and I haven't sat down to reconcile them.</p>
+      </article>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-workflow" aria-hidden="true" style="font-size:0.8em"></i>3. How It Is Put Together</h2>
+        <p>The controllers are split by who is asking, not by what the feature is called. There are four namespaces and each one has a different answer to the question "how do I know you are allowed to see this".</p>
+        <ul>
+          <li><strong><code>Public::</code></strong> is for people who are not logged in at all. Identity is an unguessable token in the URL. Eight controllers.</li>
+          <li><strong><code>Account::</code></strong> is signed-in staff of exactly one shop, and every record is loaded through that shop. One hundred and six controllers, the bulk of the app.</li>
+          <li><strong><code>Api::V1::</code></strong> is machine clients, authorised through Doorkeeper. Thirty-eight controllers.</li>
+          <li><strong><code>Admin::</code></strong> is me and platform staff, above all the shops. Twelve controllers.</li>
+        </ul>
+        <p>Splitting this way means the security question is answered once per namespace instead of once per action. <code>config/routes.rb</code> is 890 lines, ordered by namespace.</p>
+        <p>The public routes are declared with <code>format: false</code>, so a <code>.json</code> suffix cannot slip past the rate-limit throttles, whose path patterns are anchored at the end.</p>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-globe me-2" aria-hidden="true"></i>One Variable Everything Reads</h3>
+        <p><code>TenantResolver</code> is a Rack middleware wired in at <code>config/application.rb:89</code>. It runs before Rails routing does anything, reads the hostname, works out which shop that hostname belongs to, and parks the answer in <code>Current.team</code>. Everything downstream reads that one variable.</p>
+        <p>Resolution goes in order: an exact custom-domain match first, then a <code>slug.diveos.mv</code> subdomain, then a fallback to the primary team. That last hop is convenient and it is also the dangerous one, so the middleware records which route it took in <code>Current.tenant_resolved_via</code>. The unauthenticated public API can then refuse to serve anything that arrived by the fallback, which means a crafted Host header cannot be used to read the primary tenant's data.</p>
+      </article>
+
+      <!-- Figure: request path -->
+      <div class="post-figure">
+        <figure>
+          <div class="bg-light p-3 rounded shadow">
+            <pre class="mermaid">
+            flowchart TD
+                Req["Incoming request"] --> TR["TenantResolver (Rack middleware)"]
+                TR -->|"1. exact custom domain"| Cur["Current.team + Current.tenant_resolved_via"]
+                TR -->|"2. slug.diveos.mv subdomain"| Cur
+                TR -->|"3. primary team fallback"| Cur
+                Cur --> Router["Rails routing"]
+                Router --> Pub["Public: token in the URL"]
+                Router --> Acc["Account: signed-in shop staff"]
+                Router --> Api["Api V1: Doorkeeper OAuth"]
+                Router --> Adm["Admin: platform staff"]
+
+                classDef edgeClass fill:#f8f9fa,stroke:#0dcaf0,stroke-width:1px
+                class Req,TR,Cur,Router edgeClass
+            </pre>
+          </div>
+          <figcaption><i class="icon-layers me-1" aria-hidden="true"></i>The hostname is resolved to a tenant before Rails routing runs, and how it resolved is remembered</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p>Custom domains only start routing after verification. <code>DomainVerificationJob</code> watches DNS and TLS state and moves a status enum along, from <code>pending_dns</code> to <code>pending_cert</code> to <code>active</code>, or to <code>failed</code>. It holds no infrastructure credential of any kind. A human still registers the domain with the proxy in between, and the job just observes until reality catches up, up to 60 attempts two minutes apart. Giving a background job the keys to the edge proxy would have been less typing and a much worse idea.</p>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-shield me-2" aria-hidden="true"></i>Permissions Are Rows, Not Constants</h3>
+        <p>Roles live in a table, not in the code. The <code>Role</code> model is around 600 lines covering nine labelled permission groups across 70 model names, with cycle detection so an inherited role cannot loop back on itself. A shop owner can therefore invent a role I never anticipated without waiting for a deploy.</p>
+        <p>Underneath, <code>account_load_and_authorize_resource</code> appears 82 times across the controllers. That matters more than it sounds: it means no controller is hand-writing <code>where(team_id: ...)</code>, and tenant scoping is not a thing anyone has to remember. There is also a drift-guard test that fails if a team-owned association appears in neither the write-blocked list nor the allowlist, which forces a deliberate decision every time a new model joins the app.</p>
+        <p>Bullet Train's <code>super_scaffold</code> generator splices code into existing files by looking for literal emoji marker comments. There are 1,442 of them across 363 files. Tidy one away and nothing breaks today; the generator quietly does the wrong thing weeks later.</p>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-monitor me-2" aria-hidden="true"></i>Hotwire Instead of a Single-Page App</h3>
+        <p>The front end is Tailwind and esbuild. No Webpack. The only exotic bit is a small hand-written esbuild plugin that expands glob imports, because esbuild has no equivalent of <code>require.context</code> and the alternative was maintaining an import list by hand.</p>
+        <p>There is no client-side framework. The front end is 901 ERB templates, two-thirds of them partials, with 139 Stimulus controllers doing the interactive parts and sixteen Turbo Stream templates handling the server-driven updates. That works out to 261 <code>data-controller</code> attachments across the views.</p>
+        <p>The Stimulus controllers cluster where you would expect: wizards, the public booking funnel, dive operations, gear, finance and point of sale, design-system primitives, waivers and signature capture, and the integrations. There is a custom Turbo Stream action in there that lets a server response close the layout's side drawer, so the closing logic exists once instead of in every form that lives in the drawer.</p>
+        <p>The component layer is partials, CSS classes and Stimulus. That is it. Ten named pattern partials in <code>app/views/shared/patterns/</code> carry the recurring compositions. I keep expecting to regret not having a component framework and I haven't yet.</p>
+      </article>
+
+      <!-- Gallery: booking pipeline -->
+      <div class="post-gallery">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/bookings-kanban.png" alt="Booking pipeline shown as an annotated kanban board" loading="lazy" data-fallback="Booking pipeline"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The booking pipeline as a board, dragged between columns</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/booking-detail.png" alt="Full booking detail page" loading="lazy" data-fallback="Booking detail"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>A booking, opened out: divers, dates, equipment, money</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-smartphone me-2" aria-hidden="true"></i>The Booking Funnel</h3>
+        <p>The public booking wizard is the one screen a customer of a customer will ever see, so it gets more care than anything else. It is Stimulus-driven rather than a multi-request wizard, it works on a 390px phone, and the running total updates per diver as options change. The waiver flow next to it is the one built on wicked.</p>
+        <p>The earliest bookable date used to be computed in the browser. A customer in a far-away timezone would open the form and be offered a floor a day off from what the shop in the Maldives believed, because <code>new Date()</code> answers the question the client asks, not the question the shop asks. It is computed server-side in the shop's time zone now.</p>
+      </article>
+
+      <!-- Gallery: mobile wizard -->
+      <div class="post-gallery" style="--gallery-cols:3">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/wizard-step1-mobile.png" alt="Booking wizard step one on a phone" loading="lazy" data-fallback="Wizard step 1"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Step one on a phone</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/wizard-datepane-mobile.png" alt="Booking wizard in-card date picker on a phone" loading="lazy" data-fallback="Wizard date picker"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The date picker opens in the card, not over it</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/wizard-package-mobile.png" alt="Booking wizard showing a per-diver running total on a phone" loading="lazy" data-fallback="Wizard running total"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>A running total, per diver</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Figure: public booking form -->
+      <div class="post-figure">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/public-booking-form.png" alt="The public storefront booking form on a tenant's own domain" loading="lazy" data-fallback="Public booking form"></span>
+          <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The same form on the shop's own domain, in the shop's own accent colour</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-lightbulb" aria-hidden="true" style="font-size:0.8em"></i>4. The Design System</h2>
+        <p>It starts with a manifest. <code>design-system-registry.yml</code> is 229 lines describing what should exist: 18 component families, 17 of which have a canonical primitive. The eighteenth was links, and the file named its own gap out loud, in capitals: no link class, no helper, every link in the app hand-styled. That entry is now out of date, which is the point of writing it down. There is a <code>.dv-link</code> class and a <code>dv_link_to</code> helper, and links is one of the families that has since been gated.</p>
+        <p>The registry also carries a machine-readable defect ledger with four buckets, including raw Tailwind utilities leaking through and duplicate CSS definitions.</p>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-trending-up me-2" aria-hidden="true"></i>A Four-Rung Ladder Per Family</h3>
+        <p><code>design-system-maturity.yml</code> is 325 lines and gives every component family a ladder to climb. Rung one: a canonical class exists. Rung two: variants and states are documented. Rung three: it is demonstrated in the in-app showcase. Rung four: a gate test enforces it, so it cannot silently rot.</p>
+        <p>The maturity file is the wider register of the two: 30 families tracked here against the registry's 18 primitives. Eight are fully gated at rung four, three are partial, and 30 call sites of migration debt remain. Those numbers drive a dashboard inside the app.</p>
+        <p>One entry records a decision not to gate at all. A hard gate on cards is not feasible, because structural panels, chart panels and kanban panels all share the same chrome, and any rule strict enough to catch a bad card would flag three legitimate things. That refusal is written down next to the rules that shipped.</p>
+      </article>
+
+      <!-- Gallery: consistent surfaces -->
+      <div class="post-gallery">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/day-plan.png" alt="The day plan hub showing the day's trips and assignments" loading="lazy" data-fallback="Day plan"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The day plan hub</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/fitting-room.png" alt="Fitting Room screen with gear allocated per diver" loading="lazy" data-fallback="Fitting Room"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Fitting Room, gear allocated per diver</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-search-code me-2" aria-hidden="true"></i>Hallmark, and Why It Needed an AST</h3>
+        <p>Hallmark is the static-analysis engine that checks the code agrees with all of that. It is written inside the repo, 2,486 lines with 1,656 lines of its own tests. Five adapters read ERB, CSS, JavaScript, Ruby helpers and HTML, and feed seven rules.</p>
+        <p>Six of the rules are the sort of thing you would expect. Raw palette utilities. A naked hex value anywhere outside the token file. Any reintroduction of a <code>dark:</code> variant. Type sizes that are off the scale. Static inline styles on properties the tokens are supposed to govern. Data tables that are not wrapped in the blessed wrapper.</p>
+        <p>The seventh is the interesting one: lookalike detection. It catches markup that has been hand-styled to imitate a component the design system already provides. The comment in the source explains why an AST was necessary. A line-based regex cannot see these, because the tell is not any single utility, it is a co-occurrence of several, often split across lines or hidden in one branch of a ternary.</p>
+        <p>Tuning it was most of the work. Plain uppercase table headers were the main false positive, fixed by excluding <code>th</code> and <code>thead</code>. An early card signature that matched a single node was rejected as too generic, because about 37 files use the same rounded box legitimately; the rule now fingerprints the composition of a wrapper together with its children instead.</p>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-list-checks me-2" aria-hidden="true"></i>The Baseline Is the Ratchet Again</h3>
+        <p>The baseline snapshot declared 279 accepted offences on the day it was taken. A read-only run while I was writing this reported 262, with zero new drift. Seventeen fixed, nothing added.</p>
+        <p>A baseline key is the file plus the rule plus a token signature, and deliberately not the line number. Line numbers churn every time anything above the offence is edited, and a baseline keyed on them would go stale within a day and start failing for reasons nobody caused.</p>
+        <p>There is no dedicated CI job for any of it. The gate is a Minitest test that rides along with <code>bin/rails test</code>, so it runs everywhere the suite runs and needed no CI configuration to exist. Given how late CI arrived, that was lucky.</p>
+        <p>The engine that hallmark replaced is still there: the old line-regex gate, 2,383 lines of it, kept alongside a parity harness that reports true positives the new engine missed, false positives it dropped, and catches only the AST version finds. A strangler-fig migration written down as a strangler-fig migration, so nobody has to guess whether the old file is dead yet.</p>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-package me-2" aria-hidden="true"></i>Extracting It, and the Failure That Created</h3>
+        <p>The system has since been pulled out into a shared Rails engine gem, consumed by two products. Extraction creates a new failure mode, and there is a gate test that names it: a local rule silently redefining one the gem already owns. That's not hypothetical. One class shadowed the gem's version for four releases with no error, no failing test and no visual clue that anything was wrong.</p>
+        <p>A diff at the level of class names claimed 40 duplicates between the app and the gem, and the obvious conclusion was to delete two stylesheets. A second diff at the level of rules showed those files share zero rules with the gem. They happened to use the same class names for different declarations. Deleting them would have destroyed about 1,500 lines of working CSS. I'd been diffing at the wrong unit, and the unit decided the answer.</p>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-palette me-2" aria-hidden="true"></i>What Tenants Can and Cannot Change</h3>
+        <p>A tenant can override exactly one variable: the accent colour. Everything else is fixed. A cancelled trip is the same red at every shop on the platform, which means I can support a screenshot from any tenant without first asking what they've done to their palette.</p>
+        <p>The design document's rule for that accent is rejection below 3:1 against the canvas. What ships today is not the rejection but a repair: the accent gets darkened in steps, up to twelve of them, until white button text on it clears 4.5:1. The funnel's primary buttons are the reason for the stricter number, and the validation that would refuse a colour outright is still sitting in the doc rather than in the model.</p>
+        <p>Status is never carried by colour alone. Every status is an icon plus text, tested at 4.5:1 and against three colour-blindness simulations. On a boat, in the sun, on someone's cracked phone, colour is not a channel you can rely on.</p>
+        <p>The design document also carries 13 anti-slop hard rules, which are as much about my own defaults as anyone else's: no purple gradients, no three-column grids of icons in circles, no centered hero. The banned-word list is separate, five more rules that apply only to marketing copy on the storefront.</p>
+        <p>Building everything on CSS custom properties means email cannot come along. Mail clients do not support custom properties, so the mailer has its own PostCSS and Tailwind configuration that flattens every token to its literal value at build time. Two CSS builds, two outputs, two watchers in the development Procfile.</p>
+      </article>
+
+      <!-- Figure: waiver record -->
+      <div class="post-figure">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/waiver-review.png" alt="A submitted waiver record showing status, certification, signature and signed-at timestamp" loading="lazy" data-fallback="Waiver record"></span>
+          <figcaption><i class="icon-image me-1" aria-hidden="true"></i>A submitted waiver. Status is an icon and a word, never just a colour, and the diver's contact details are masked on the page itself</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-wrench" aria-hidden="true" style="font-size:0.8em"></i>5. Five Problems Worth Writing Down</h2>
+        <p>These are the ones where the obvious solution was wrong, and the wrongness wouldn't have announced itself.</p>
+
+        <h3 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">1. Trial mail containment</h3>
+        <p>A trial workspace is a real tenant in every respect except one: who it is allowed to contact. Without an interceptor, a prospect poking around the product could send booking confirmations, waiver links and invoices to real strangers, from a shop that will be deleted in 37 days. The interception is opt-in by construction, and that was the hard part to accept, because the naive rule reads so much better: if the team is on trial, redirect all mail. That rule would also have swallowed platform alerts and delivered them to the prospect, and nothing anywhere would have raised an error. Opt-in has a cost, so the cost got its own gate: every mailer action must be explicitly declared as either tenant mail or a listed platform mailer.</p>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">2. Trial signup is two-stage on purpose</h3>
+        <p>No tenant exists until the confirmation link in the email is clicked. If a tenant were created on form submission, every unverified bot post would mint a full organization, a team and a seeded catalog of courses and equipment. A pending signup is one cheap row instead. Bot defences are a honeypot field and a minimum fill time, and a rejection returns the same success interstitial a real person sees, because telling a bot precisely why it failed is free tuning data for the bot.</p>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">3. Bank of Maldives webhooks resolve the tenant before verifying the signature</h3>
+        <p>Every instinct says verify first, then look things up. It does not work here. The bank signs with the merchant's key and posts to one fixed URL with no tenant anywhere in the host, so there is nothing to verify against until you know whose payment this is. The tenant is resolved first, then the signature is checked with that tenant's key. The alternative would be checking every tenant's webhook against one global key, which defeats the point of per-merchant keys entirely. Resolution is a database id match against our own stored transaction id, not trust in anything the payload claims, and there is replay protection set at twice the gateway's own timestamp tolerance.</p>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">4. PDFs that are byte-identical twice</h3>
+        <p>Prawn stamps no timestamp unless you ask it to, so the shared report layout sets creation and modification dates to a fixed injectable value and embeds no external fonts, using Prawn's built-in Helvetica. Two renders of the same input then produce byte-identical output, which means the PDF can be asserted in a test like any other string.</p>
+
+        <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">5. The Dockerfile's font packages have an incident behind them</h3>
+        <p>Prawn's built-in Helvetica only knows Windows-1252, so an invoice for a guest whose name is not spelled in Latin characters returned a 500 on download. Noto and DejaVu are installed in the image for that reason and no other. <code>git</code> is in there for a different reason: a vendored path gem re-evaluates a gemspec that shells out to git, and without it Rails does not boot at all. Both lines look like clutter until you know, which is why both have a comment.</p>
+      </article>
+
+      <!-- Gallery: invoices -->
+      <div class="post-gallery">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/invoice-multi-line.png" alt="Multi-line invoice including a card surcharge" loading="lazy" data-fallback="Multi-line invoice"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>A multi-line invoice with a card surcharge</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/invoice-paid.png" alt="An invoice marked paid" loading="lazy" data-fallback="Invoice paid"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The same document once it is settled</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Gallery: paper the boat needs -->
+      <div class="post-gallery">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/box-manifest.png" alt="Printable box manifest listing gear per box" loading="lazy" data-fallback="Box manifest"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The box manifest gets printed and goes on the boat</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/waiver-medical.png" alt="Waiver wizard showing the medical questionnaire step" loading="lazy" data-fallback="Waiver medical step"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The medical questionnaire, filled in before anyone gets wet</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Figure: trial signup -->
+      <div class="post-figure">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/diveos/trial-signup.png" alt="The public self-serve trial signup form" loading="lazy" data-fallback="Trial signup"></span>
+          <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The self-serve trial form. Nothing exists in the database as a tenant until the confirmation link is clicked</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-arrow-up-circle" aria-hidden="true" style="font-size:0.8em"></i>6. What Is Not Settled</h2>
+        <p>The deploy story is mid-migration, and the documentation is behind the pipeline. The README still describes Coolify, and CLAUDE.md manages to describe both: Coolify in its second paragraph, Kamal 2 in detail forty lines further down. The CI pipeline actually runs Kamal 2 to a self-managed VPS behind kamal-proxy, and <code>config/deploy.yml</code> is among the more recently touched files in the repository. The word "kamal" appears zero times in the README. There is an open branch to fix the docs and it hasn't been merged.</p>
+        <p>Looking at the whole arc, it goes Heroku template, then Render, then Coolify, then Kamal on hardware I control. Each hop removed a hosted layer. I didn't plan that as a direction and I'm fairly sure it is one.</p>
+        <p>Eighteen inherited GitHub Actions workflows are still sitting in the repository, pointing at the GitHub mirror that is being retired. TODOS.md carries an open decision to port them or delete them, and it's been open a while.</p>
+        <p>Thirty call sites of design-system debt are still waiting to be migrated, and the registry file that records the component families is two months stale against the maturity file next to it.</p>
+        <p>DiveOS is private, proprietary and in closed beta. There is no public repository to link and no public URL to send you to. Arena Dive Club is still the primary tenant, and the product is still being shaped by what one real dive centre needs on a real morning with a boat leaving at seven.</p>
+
+        <!-- Prev / Next -->
+        <div class="post-nav">
+          <nav aria-label="More work">
+            <a href="/work/" class="nav-card is-prev">
+              <span class="nav-dir"><i class="icon-arrow-left" aria-hidden="true"></i>Back</span>
+              <span class="nav-title">All Work</span>
+              <span class="nav-date">The full portfolio</span>
+            </a>
+            <a href="/work/2025-09-11-day-food-catalogue.html" class="nav-card is-next">
+              <span class="nav-dir">More<i class="icon-arrow-right" aria-hidden="true"></i></span>
+              <span class="nav-title">Day Food Catalogue</span>
+              <span class="nav-date"><time datetime="2025-09-11">11.09.2025</time></span>
+            </a>
+          </nav>
+        </div>
+      </article>
+    </main>
+    <!-- end Main Content Section -->
+
+    <!-- Footer Section -->
+    <footer class="container">
+      <section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau" data-bs-toggle="modal" data-bs-target="#takdeModal">~|{·})</a> <a href="/LICENSE"  class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <a href="/work/" class="text-decoration-none me-3">Back to Work</a>
+          <a href="#top" class="text-decoration-none">Back to top</a>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
+              <i class="brand-icon brand-github me-2"></i><span class="visually-hidden">GitHub</span>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙">
+              <i class="icon-heart me-2"></i><span class="visually-hidden">Sama²</span>
+            </a>
+          </li>
+          <li class="ms-3 mt-n1">
+            <a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
+              <i class="icon-coffee me-2"></i><span class="visually-hidden">Ko-fi</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <!-- end Footer Section -->
+
+    <script src="../jei-es.js"></script>
+
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      if (window.mermaid) { mermaid.initialize({ startOnLoad: true }); }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- end Bootstrap JS -->
+  </body>
+</html>

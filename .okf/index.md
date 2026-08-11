@@ -11,7 +11,7 @@ links to the live page where published, and cross-links related work by shared t
 
 # Sections
 
-* [Work](work/) - Portfolio pieces — design, branding, UX and development work (2008–2025). (24 concepts)
+* [Work](work/) - Portfolio pieces — design, branding, UX and development work (2008–2026). (25 concepts)
 * [Life](life/) - Personal and lifestyle notes — travel, reading, reflections. (16 concepts)
 * [Balance](balance/) - Thoughts, reflections, creative writing, and dev notes. (42 concepts)
 
@@ -24,4 +24,4 @@ Cross-links cluster related work. A few threads worth following:
 * **Maritime** — the recurring maritime-industry branding and web work.
 * **Sudirmania** — the theatre production and its tooling/logistics.
 
-*82 concepts total. Generated 2026-07-16.*
+*83 concepts total. Generated 2026-07-16.*
