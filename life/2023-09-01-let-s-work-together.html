@@ -26,7 +26,6 @@
 			.lwt-prose { max-width: var(--measure); }
 			.lwt-prose > p { margin-bottom: var(--space-3); }
 			#lwt h2 { margin-bottom: var(--space-3); }
-			#lwt h2 .lead-in { color: var(--color-muted); text-shadow: none; }
 			.lwt-caption { margin: 10px auto 0; max-width: 42rem; text-align: center;
 				font-style: italic; font-size: 0.95em; color: var(--color-muted); }
 
@@ -192,8 +191,7 @@
 				background-color: var(--cat-base); background-image: var(--bg-dots-img-life);
 				background-size: var(--bg-dot-tile) var(--bg-dot-tile);
 				background-repeat: repeat; color: #fff; }
-			#lwt .lwt-contact h2 { color: #fff; text-shadow: var(--shadow-title); margin-top: 0; }
-			#lwt .lwt-contact h2 .lead-in { color: rgba(255,255,255,0.7); text-shadow: none; }
+			#lwt .lwt-contact h2 { color: #fff; text-shadow: var(--shadow-title); }
 			.lwt-contact p { max-width: 42rem; color: rgba(255,255,255,0.92); }
 			.lwt-contact-signoff { margin: 1.25rem 0 0; font-family: var(--font-display);
 				text-transform: uppercase; letter-spacing: var(--tracking-display); }
@@ -307,7 +305,10 @@
 
 			<!-- 8 reasons -->
 			<section id="reasons" class="container lwt-section">
-				<h2><span class="lead-in">eight reasons to</span> Work with me</h2>
+				<div class="post-section-head" aria-hidden="true">
+					<span class="head-tab"><i class="icon-list-checks"></i><span>01 &middot; eight reasons to</span></span>
+				</div>
+				<h2>Work with me</h2>
 				<div class="lwt-prose"><p>Each one comes with something you can actually go and read.</p></div>
 				<div class="lwt-bento">
 					<article class="lwt-reason">
@@ -380,7 +381,10 @@
 			<!-- How I work -->
 			<section id="how">
 				<div class="container lwt-section">
-					<h2><span class="lead-in">so, </span>How I work</h2>
+					<div class="post-section-head" aria-hidden="true">
+						<span class="head-tab"><i class="icon-workflow"></i><span>02 &middot; so,</span></span>
+					</div>
+					<h2>How I work</h2>
 					<div class="lwt-prose">
 						<p>Nothing exotic. Listen first, sketch early, test before anyone writes production code, and because I can build it too, the loop between design and shipped software is short.</p>
 					</div>
@@ -407,7 +411,10 @@ flowchart LR
 			<!-- Track record -->
 			<section id="track-record">
 				<div class="container lwt-section">
-					<h2><span class="lead-in">fifteen years of </span>Track record</h2>
+					<div class="post-section-head" aria-hidden="true">
+						<span class="head-tab"><i class="icon-trending-up"></i><span>03 &middot; fifteen years of</span></span>
+					</div>
+					<h2>Track record</h2>
 					<div class="lwt-prose">
 						<p>Six industries, in roughly this order. Every jump taught me a vocabulary I still use.</p>
 					</div>
@@ -465,7 +472,10 @@ timeline
 			<!-- Stack -->
 			<section id="stack">
 				<div class="container lwt-section">
-					<h2><span class="lead-in">what's in the </span>Stack</h2>
+					<div class="post-section-head" aria-hidden="true">
+						<span class="head-tab"><i class="icon-layers"></i><span>04 &middot; what's in the</span></span>
+					</div>
+					<h2>Stack</h2>
 					<div class="lwt-prose">
 						<p>One core discipline, two supporting ones. The supporting skills are why I rarely need to hand a problem to someone else.</p>
 					</div>
@@ -514,7 +524,10 @@ flowchart LR
 			<!-- The facts -->
 			<section id="facts">
 				<div class="container lwt-section">
-					<h2><span class="lead-in">just </span>The facts</h2>
+					<div class="post-section-head" aria-hidden="true">
+						<span class="head-tab"><i class="icon-clipboard-list"></i><span>05 &middot; just</span></span>
+					</div>
+					<h2>The facts</h2>
 				</div>
 				<div class="post-meta-table">
 					<dl>
@@ -603,7 +616,10 @@ flowchart LR
 			<!-- Contact -->
 			<section id="contact" class="lwt-contact">
 				<div class="container">
-					<h2><span class="lead-in">so, </span>Let's chat</h2>
+					<div class="post-section-head is-inverse" aria-hidden="true">
+						<span class="head-tab"><i class="icon-message-square"></i><span>06 &middot; so,</span></span>
+					</div>
+					<h2>Let's chat</h2>
 					<p>If you're searching for a collaborator who is passionate, experienced and loves to push the boundaries, I'm eager to hear about your project and see how my diverse skillset and infectious enthusiasm can help you achieve your goals!</p>
 					<div class="lwt-cta-row">
 						<a class="lwt-btn lwt-btn-light" href="https://rudzainy.com/si/rudzainy/borak" target="_blank" rel="noopener"><i class="icon-message-square" aria-hidden="true"></i>Borak with me</a>

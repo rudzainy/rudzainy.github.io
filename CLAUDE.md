@@ -42,12 +42,39 @@ will break the whole Pages build. If you must show one, wrap it in
 Ported from the `Batik Design System` handoff into the no-build site as plain
 Bootstrap + `si-es-es.css` classes (never React/JSX):
 
-- **Post-body section library** — 12 reusable classes in `si-es-es.css`:
+- **Post-body section library** — 13 reusable classes in `si-es-es.css`:
   `.post-figure`, `.post-gallery` (`--gallery-cols`), `.post-before-after`,
   `.post-pull-quote`, `.post-callout` (`.is-note/.is-warning/.is-tip`),
   `.post-meta-table`, `.post-embed`, `.post-code`, `.post-steps`, `.post-stats`,
   `.post-nav` (prev/next), `.post-related`. Documented/specimened in
-  `components/posts/index.html`.
+  `components/posts/index.html`. Plus `.post-section-head` (below), specimened
+  in `components/design-system.html`.
+- **`.post-section-head` — in-post section opener ("rule tab", design 2B).**
+  A solid category tab sitting on a 2px rule, so the line opens the section
+  instead of closing the last one. Contract is **two sibling elements**, with
+  nothing between them (the CSS uses `+`):
+  ```html
+  <div class="post-section-head" aria-hidden="true">
+    <span class="head-tab"><i class="icon-book-open"></i><span>01 &middot; a pet project</span></span>
+  </div>
+  <h2 id="keep-existing-anchor">Summary</h2>
+  ```
+  The h2 stays a **sibling, not a child**, so `id=` anchors and heading order
+  are untouched; it takes no class and no inline style. The tab carries a
+  zero-padded number, one Lucide `icon-*` naming the section's subject, and an
+  optional lowercase kicker after `&middot;`. Kicker-or-not is decided **per
+  post, never mixed inside one**. Modifiers: `.is-first` (drops the top margin
+  on a case study's first section), `.is-inverse` (white tab + white rule for a
+  head on a dark category ground). Rolled out across all 21 h2-bearing posts;
+  see `docs/superpowers/plans/section-header-2b-plan.md`.
+- **`--cat-*` bridge.** `--cat-base/-ink/-subtle/-border` used to exist only
+  under `[data-category]`, which 11 h2-bearing posts never set, so `.post-*`
+  blocks rendered colourless there. `si-es-es.css` now also derives them from
+  `body:has(.page-header-work|life|balance)`, which every served post carries.
+  An inner `[data-category]` wrapper still wins by proximity, so nested
+  overrides (e.g. a `work`-tinted `.post-related` inside a `life` post) behave
+  as before. **Prefer adding nothing:** a new post gets its category colour for
+  free from its `.page-header-*` class.
 - **`data-category` hook** — set `data-category="work|life|balance"` on `<body>`
   (or any ancestor) to make `.post-*` blocks re-tint via the inherited
   `--cat-base/-ink/-subtle/-border` vars.

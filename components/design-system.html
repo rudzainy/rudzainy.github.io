@@ -207,6 +207,90 @@
         </div>
       </section>
 
+      <!-- ================= SECTION HEADER ================= -->
+      <section class="ds-section">
+        <h2>Section header</h2>
+        <p class="text-secondary" style="max-width: 60ch;">
+          The in-post section opener: a solid category tab sitting on a 2px rule, like a
+          file divider, so the line <em>opens</em> the section instead of closing the last
+          one. Classes: <code>.post-section-head</code> + <code>.head-tab</code>, modifiers
+          <code>.is-first</code> and <code>.is-inverse</code>.
+        </p>
+
+        <div class="card border-0 shadow-sm my-4">
+          <div class="card-body p-4">
+            <h3 class="border-bottom pb-2 mb-3"><i class="icon-info me-2 text-primary"></i>How to Use this Pattern</h3>
+            <ul class="mb-3">
+              <li>Two <strong>sibling</strong> elements: <code>div.post-section-head</code> immediately followed by the <code>&lt;h2&gt;</code> it introduces. Nothing may sit between them; the CSS uses <code>+</code>.</li>
+              <li>The wrapper carries <code>aria-hidden="true"</code>: the tab is decorative garnish, and the h2 alone carries the section's accessible name and keeps its existing <code>id=</code> anchor. The h2 itself gains no class.</li>
+              <li>The tab holds a zero-padded number, one Lucide <code>icon-*</code> glyph naming the section's subject, and an optional lowercase kicker after <code>&amp;middot;</code>. Kicker or no-kicker is decided per post, never mixed inside one.</li>
+              <li>Colour rides the inherited <code>--cat-*</code> tokens: a <code>data-category</code> wrapper, or the <code>.page-header-*</code> bridge that every served post already carries.</li>
+              <li><code>.is-first</code> drops the top margin on the first section of a case study. <code>.is-inverse</code> flips the tab to white-on-ink for the one head that sits on a dark category ground.</li>
+            </ul>
+            <p class="mb-0">The three forms below are shown twice, once in a <code>data-category="work"</code> wrapper and once in <code>data-category="life"</code>, so the tab, rule and heading re-tint with no per-block changes.</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="ds-box" data-category="work">
+              <div class="text-secondary ds-token-row mb-3">data-category="work"</div>
+
+              <div class="text-secondary ds-token-row">1 · number + icon + kicker <span class="text-body-tertiary">(with .is-first)</span></div>
+              <div class="post-section-head is-first" aria-hidden="true">
+                <span class="head-tab"><i class="icon-flask-conical"></i><span>07 &middot; before it ships</span></span>
+              </div>
+              <h2 id="ds-head-work-kicker">What I'd test before shipping any of it</h2>
+
+              <div class="text-secondary ds-token-row mt-4">2 · number + icon</div>
+              <div class="post-section-head is-first" aria-hidden="true">
+                <span class="head-tab"><i class="icon-users"></i><span>03</span></span>
+              </div>
+              <h2 id="ds-head-work-plain">Background</h2>
+
+              <div class="text-secondary ds-token-row mt-4">3 · .is-inverse, on a <code>--cat-base</code> ground</div>
+              <div class="mt-2 p-4" style="background: var(--cat-base); border-radius: var(--radius-md);">
+                <div class="post-section-head is-inverse is-first" aria-hidden="true">
+                  <span class="head-tab"><i class="icon-message-square"></i><span>06 &middot; so,</span></span>
+                </div>
+                <h2>Let's chat</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="ds-box" data-category="life">
+              <div class="text-secondary ds-token-row mb-3">data-category="life"</div>
+
+              <div class="text-secondary ds-token-row">1 · number + icon + kicker <span class="text-body-tertiary">(with .is-first)</span></div>
+              <div class="post-section-head is-first" aria-hidden="true">
+                <span class="head-tab"><i class="icon-book-open"></i><span>01 &middot; where it starts</span></span>
+              </div>
+              <h2 id="ds-head-life-kicker">Prologue</h2>
+
+              <div class="text-secondary ds-token-row mt-4">2 · number + icon</div>
+              <div class="post-section-head is-first" aria-hidden="true">
+                <span class="head-tab"><i class="icon-gamepad-2"></i><span>04</span></span>
+              </div>
+              <h2 id="ds-head-life-plain">Windows PC games</h2>
+
+              <div class="text-secondary ds-token-row mt-4">3 · .is-inverse, on a <code>--cat-base</code> ground</div>
+              <div class="mt-2 p-4" style="background: var(--cat-base); border-radius: var(--radius-md);">
+                <div class="post-section-head is-inverse is-first" aria-hidden="true">
+                  <span class="head-tab"><i class="icon-flag"></i><span>08 &middot; and that's that</span></span>
+                </div>
+                <h2>Epilogue</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-secondary fst-italic small mt-3 mb-0">
+          The wrapper is a <code>div</code>, never a heading, so heading order is untouched.
+          Its rule spans whatever column the pair sits in: the reading measure inside a post,
+          the container column on the landing page.
+        </p>
+      </section>
+
     </main>
 
     <footer class="container py-4 border-top">

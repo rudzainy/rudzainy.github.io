@@ -70,7 +70,10 @@ ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.
 
 <p>I vaguely remember encountering this error message a while back 🤔. I’m not certain what actually caused the error, however I figured restatrting Postgress would solve this. Here’s how to do it.</p>
 
-<h2 id="look-for-postgres-installation">1. Look for Postgres Installation</h2>
+<div class="post-section-head" aria-hidden="true">
+  <span class="head-tab"><i class="icon-search"></i><span>01</span></span>
+</div>
+<h2 id="look-for-postgres-installation">Look for Postgres Installation</h2>
 
 <p>My current setup has Postgres installed with Homebrew.</p>
 
@@ -86,7 +89,10 @@ ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.
 
 <p>Seems that I have <code>postgresql@14</code> installed.</p>
 
-<h2 id="restart-postgres">2. Restart Postgres</h2>
+<div class="post-section-head" aria-hidden="true">
+  <span class="head-tab"><i class="icon-refresh-cw"></i><span>02</span></span>
+</div>
+<h2 id="restart-postgres">Restart Postgres</h2>
 
 <p>Now, navigate to this folder:</p>
 
@@ -132,7 +138,10 @@ ActiveRecord::ConnectionNotEstablished (connection to server on socket "/tmp/.s.
   ==&gt; Successfully started `postgresql@14` (label: homebrew.mxcl.postgresql@14)
 </code></p>
 
-<h2 id="move-on-with-life">3. Move On with Life</h2>
+<div class="post-section-head" aria-hidden="true">
+  <span class="head-tab"><i class="icon-circle-check"></i><span>03</span></span>
+</div>
+<h2 id="move-on-with-life">Move On with Life</h2>
 
 <p>Run Rails server again and that should resolve the error.</p>
 

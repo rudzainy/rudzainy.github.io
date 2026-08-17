@@ -94,7 +94,10 @@
     <main style="max-width:1140px;margin:0 auto;padding:104px 24px 32px">
       <article style="max-width:var(--measure);margin:0 auto">
 
-        <h2 style="display:flex;align-items:center;gap:12px;margin:0 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-book-open" aria-hidden="true" style="font-size:0.8em"></i>Summary</h2>
+        <div class="post-section-head is-first" aria-hidden="true">
+          <span class="head-tab"><i class="icon-book-open"></i><span>01 &middot; the short version</span></span>
+        </div>
+        <h2>Summary</h2>
         <p class="lead">DiveOS is the software a dive shop runs its day on. Bookings come in from a public storefront, get planned into trips, get boats and guides and gear attached, produce waivers and manifests, and end as an invoice. It's white-label, so each operator gets its own domain and its own accent colour, and it's in closed beta at version 0.19.2.2.</p>
         <p>It didn't start that way. It started as Arena HQ, the internal app I built for one dive centre in the Maldives, Arena Dive Club. DiveOS is a hard fork of that app, reworked so a single deployment can serve many shops without any of them seeing each other.</p>
         <p>The stack is deliberately plain: Ruby 3.4.7, Rails 8.0.4, Bullet Train 1.38.0, PostgreSQL, Sidekiq 8.0.9, Tailwind 3.4.17, Turbo 8 and Stimulus 3.2 over esbuild 0.27 and Propshaft. Devise for accounts, CanCanCan for permissions, Doorkeeper for the API, Prawn for PDFs, Avo for the platform back office. No Webpack. No React and no Vue. No ViewComponent in the app code.</p>
@@ -123,7 +126,10 @@
       </div>
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-users" aria-hidden="true" style="font-size:0.8em"></i>1. It Started as One Dive Shop's App</h2>
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-users"></i><span>02 &middot; arena hq, before</span></span>
+        </div>
+        <h2>It Started as One Dive Shop's App</h2>
         <p>Arena HQ was written for one shop, which means it was written with one shop's assumptions baked into everything. There is one price list. There is one set of boats. There is one logo. Nothing in the code has to ask whose data this is, because there is only ever one answer.</p>
         <p>Turning that into a product is mostly the work of removing that answer. Every query has to know which shop it belongs to. Every page has to know which shop the visitor arrived at. Every email, invoice and PDF has to carry the right name. And the platform needs a floor above the shops: a place where I can see all the operators, suspend one, or step into one to reproduce a bug.</p>
       </article>
@@ -163,7 +169,10 @@
       </article>
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-square-kanban" aria-hidden="true" style="font-size:0.8em"></i>2. Running It</h2>
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-square-kanban"></i><span>03 &middot; spec, plan, build</span></span>
+        </div>
+        <h2>Running It</h2>
         <p>It's a small team, so process here is not ceremony for a big organisation. It's a filing habit, so that whoever picks a thread up in three weeks, usually me, can find out what past me was thinking without reading the diff.</p>
         <p>The shape is spec, then plan, then build, then gate. Under <code>docs/superpowers/</code> there are 70 dated design specs and 66 dated plans, all named <code>YYYY-MM-DD-slug</code>, and they pair up: a spec argues what should happen, the plan next to it says how, in order. Another 30 completed plan artifacts have been moved into <code>docs/archive/</code> once their work landed. There is a <code>backlog/</code> and a <code>handovers/</code> folder alongside them.</p>
       </article>
@@ -244,7 +253,10 @@
       </article>
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-workflow" aria-hidden="true" style="font-size:0.8em"></i>3. How It Is Put Together</h2>
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-workflow"></i><span>04 &middot; four namespaces</span></span>
+        </div>
+        <h2>How It Is Put Together</h2>
         <p>The controllers are split by who is asking, not by what the feature is called. There are four namespaces and each one has a different answer to the question "how do I know you are allowed to see this".</p>
         <ul>
           <li><strong><code>Public::</code></strong> is for people who are not logged in at all. Identity is an unguessable token in the URL. Eight controllers.</li>
@@ -346,7 +358,10 @@
       </div>
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-lightbulb" aria-hidden="true" style="font-size:0.8em"></i>4. The Design System</h2>
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-lightbulb"></i><span>05 &middot; one yml manifest</span></span>
+        </div>
+        <h2>The Design System</h2>
         <p>It starts with a manifest. <code>design-system-registry.yml</code> is 229 lines describing what should exist: 18 component families, 17 of which have a canonical primitive. The eighteenth was links, and the file named its own gap out loud, in capitals: no link class, no helper, every link in the app hand-styled. That entry is now out of date, which is the point of writing it down. There is a <code>.dv-link</code> class and a <code>dv_link_to</code> helper, and links is one of the families that has since been gated.</p>
         <p>The registry also carries a machine-readable defect ledger with four buckets, including raw Tailwind utilities leaking through and duplicate CSS definitions.</p>
 
@@ -404,7 +419,10 @@
       </div>
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-wrench" aria-hidden="true" style="font-size:0.8em"></i>5. Five Problems Worth Writing Down</h2>
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-wrench"></i><span>06 &middot; obvious was wrong</span></span>
+        </div>
+        <h2>Five Problems Worth Writing Down</h2>
         <p>These are the ones where the obvious solution was wrong, and the wrongness wouldn't have announced itself.</p>
 
         <h3 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)">1. Trial mail containment</h3>
@@ -460,7 +478,10 @@
       </div>
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 4px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-arrow-up-circle" aria-hidden="true" style="font-size:0.8em"></i>6. What Is Not Settled</h2>
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-arrow-up-circle"></i><span>07 &middot; still mid-migration</span></span>
+        </div>
+        <h2>What Is Not Settled</h2>
         <p>The deploy story is mid-migration, and the documentation is behind the pipeline. The README still describes Coolify, and CLAUDE.md manages to describe both: Coolify in its second paragraph, Kamal 2 in detail forty lines further down. The CI pipeline actually runs Kamal 2 to a self-managed VPS behind kamal-proxy, and <code>config/deploy.yml</code> is among the more recently touched files in the repository. The word "kamal" appears zero times in the README. There is an open branch to fix the docs and it hasn't been merged.</p>
         <p>Looking at the whole arc, it goes Heroku template, then Render, then Coolify, then Kamal on hardware I control. Each hop removed a hosted layer. I didn't plan that as a direction and I'm fairly sure it is one.</p>
         <p>Eighteen inherited GitHub Actions workflows are still sitting in the repository, pointing at the GitHub mirror that is being retired. TODOS.md carries an open decision to port them or delete them, and it's been open a while.</p>
