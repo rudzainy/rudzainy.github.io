@@ -35,4 +35,4 @@ Portfolio pieces — design, branding, UX and development work (2008–2026).
 * [Interview Questions and Answers](2025-09-10-interview-questions-and-answers.md) - Portfolio Project (Work)
 * [Day Food Catalogue](2025-09-11-day-food-catalogue.md) - A case study on Day Food Catalogue — a mobile-first, offline-capable PWA for showcasing food products.
 * [DiveOS](2026-08-11-diveos.md) - A white-label dive-shop platform for Maldivian dive operators, forked out of one dive centre's internal Rails app and generalised into multi-tenant SaaS.
-* [Rombak LYN Forum](2026-08-12-rombak-lyn.md) - An unsolicited concept redesign of Malaysia's biggest forum, collapsing nine categories into three lanes and putting moderation in the open.
+* [Rombak LYN Forum](2026-08-12-rombak-lyn-forum.md) - An unsolicited concept redesign of Malaysia's biggest forum, collapsing nine categories into three lanes and putting moderation in the open.

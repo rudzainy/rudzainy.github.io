@@ -2,7 +2,7 @@
 type: Portfolio Project
 title: Rombak LYN Forum
 description: An unsolicited concept redesign of Malaysia's biggest forum, collapsing nine categories into three lanes and putting moderation in the open.
-resource: https://rudzainy.github.io/work/2026-08-12-rombak-lyn.html
+resource: https://rudzainy.github.io/work/2026-08-12-rombak-lyn-forum.html
 tags: [ux, ui, information architecture, concept study, forum, moderation, case study]
 timestamp: 2026-08-12T09:00:00+08:00
 category: Work
@@ -25,5 +25,5 @@ Seven hi-fi screens are drawn as live HTML inside the post: forum index (desktop
 
 # Source
 
-- Live post: [Rombak LYN Forum](https://rudzainy.github.io/work/2026-08-12-rombak-lyn.html)
+- Live post: [Rombak LYN Forum](https://rudzainy.github.io/work/2026-08-12-rombak-lyn-forum.html)
 - Legacy source: none, this post was written directly as HTML.
