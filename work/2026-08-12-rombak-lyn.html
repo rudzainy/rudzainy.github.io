@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Rombak LYN by Rudzainy Rahman</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An unsolicited concept redesign of Malaysia's biggest forum: nine categories collapse into three lanes, the thread list carries signal instead of counters, and moderation becomes something you can see and appeal.">
+
+    <!-- Bootstrap CSS & Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+    <!-- end Bootstrap CSS & Icons -->
+
+    <link rel="stylesheet" type="text/css" href="../si-es-es.css">
+
+    <style>
+      /* Mockup frames. The screens below are live HTML, not screenshots. The type
+         inside them is a UI sans on purpose, so the portfolio's serif voice stays
+         outside the frame. */
+      .mock { font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 1.5; color: var(--color-ink); }
+      .mock-row { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+      .mock-phone { width: 390px; flex: 0 1 390px; max-width: 100%; background: var(--color-surface); border: 1px solid rgba(0,0,0,0.175); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-hover); }
+      .mock-window { background: var(--color-surface); border: 1px solid rgba(0,0,0,0.175); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-hover); }
+      .mock-chrome { display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #EAE6DD; border-bottom: 1px solid rgba(0,0,0,0.1); }
+      .mock-dot { width: 9px; height: 9px; border-radius: 50%; background: #CBC6BC; }
+      .mock-status { display: flex; justify-content: space-between; padding: 7px 16px; font-size: 11px; color: var(--color-muted); }
+      .mock-row-pad { padding: 11px 14px; }
+      .mock-excerpt { color: var(--color-muted); font-size: 12px; margin-top: 4px; font-style: italic; }
+      .mock-ann { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: var(--cat-base); color: #fff; font-size: 11px; }
+      .mock-ann.is-sm { width: 16px; height: 16px; font-size: 10px; }
+      .mock-ann.is-warn { background: #8F4E10; }
+      .mock-ann.is-ok { background: var(--color-life); }
+      .mock-tag { border-radius: 4px; padding: 1px 7px; font-size: 11px; }
+
+      /* Annotation cards under each figure */
+      .screen-notes { max-width: 66rem; margin: 16px auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+      .screen-notes > div { background: var(--color-surface); border: 1px solid rgba(0,0,0,0.175); border-radius: var(--radius-sm); padding: 14px 16px; font-size: 0.95em; }
+      .screen-notes strong { color: var(--cat-ink); }
+
+      /* Generic full-bleed card grids used for stats, problems and lanes */
+      .card-grid { max-width: 56rem; margin: 0 auto; display: grid; gap: 16px; }
+      .card-grid > div { background: var(--color-surface); border: 1px solid rgba(0,0,0,0.175); border-radius: var(--radius-sm); padding: 16px 20px; }
+      .card-grid .kicker { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); font-size: 13px; color: var(--cat-ink); margin-bottom: 8px; }
+      .card-grid .big-num { font-family: var(--font-display); font-size: 2rem; line-height: 1.1; color: var(--cat-ink); }
+      .card-grid .cost { margin: 0; font-size: 0.9em; color: var(--color-muted); font-style: italic; }
+
+      /* The four self-imposed rules */
+      .rule-list { max-width: var(--measure); margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+      .rule-list > div { display: grid; grid-template-columns: 40px 1fr; gap: 18px; }
+      .rule-list .rule-num { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: var(--cat-base); color: #fff; border-radius: var(--radius-sm); font-family: var(--font-display); font-size: 18px; }
+      .rule-list p { margin: 6px 0 0; }
+
+      /* Narrow screens: the two-column IA comparison stacks rather than
+         squeezing nine category names into ~170px. */
+      @media (max-width: 767.98px) {
+        .post-before-after .before-after-grid { grid-template-columns: 1fr; gap: 24px; }
+      }
+
+      /* Case-study header, narrow screens: the hero and meta strip both stack. */
+      @media (max-width: 991.98px) {
+        .header-hero-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+        .header-meta-strip { grid-template-columns: 1fr !important; }
+        .header-meta-strip > div { border-left: 0 !important; }
+        .header-meta-strip > div + div { border-top: 1px solid rgba(0,0,0,0.1); }
+      }
+    </style>
+  </head>
+  <body data-category="work">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-info">
+      <div class="container">
+        <a href="/" title="Wow! It's a Wau!" class="navbar-brand text-info d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+        <button class="navbar-toggler border-0 text-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          ~|{·})
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/work/" class="nav-link"><i class="icon-pencil-ruler me-2"></i>Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="/life/" class="nav-link"><i class="icon-sun me-2"></i>Life</a>
+            </li>
+            <li class="nav-item">
+              <a href="/balance/" class="nav-link"><i class="icon-mountain me-2"></i>Balance</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end Top Navigation Bar -->
+
+    <!-- Page Header Band (solid category colour) -->
+    <div class="page-header-work" style="padding-bottom:0">
+      <div style="max-width:1140px;margin:0 auto;padding:20px 24px 0">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0" style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/work/">Work</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Rombak LYN</li>
+          </ol>
+        </nav>
+        <!-- end Breadcrumb -->
+
+        <!-- Hero: kicker + title + standfirst + one-line thesis -->
+        <div class="header-hero-grid" style="display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center;padding:36px 0 44px">
+          <div>
+            <p style="margin:0 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px;color:rgba(255,255,255,0.75)">My project · Concept study · 12.08.2026</p>
+            <h1 class="page-title" style="display:block;font-size:clamp(2.5rem,1.1rem + 4.5vw,4.5rem);line-height:1.05;text-wrap:balance">Rombak LYN</h1>
+            <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:56ch">An unsolicited redesign of Malaysia's biggest forum. 81 million posts and 944,000 members live on an interface built for a 1024×768 monitor, and this is my attempt at moving the furniture without chasing the regulars out of the house.</p>
+          </div>
+          <aside style="background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-sm);box-shadow:var(--shadow-hover);padding:18px 20px">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:8px">The one-line thesis</div>
+            <p style="margin:0;font-size:1.05rem">The forum's problem is not that it looks old. It's that <strong>everything is equally loud</strong>, so the smartest thread and the dumbest one arrive at your eyes with identical weight.</p>
+          </aside>
+        </div>
+
+        <!-- Featured meta strip (overlaps the band) -->
+        <div class="header-meta-strip" style="background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);box-shadow:var(--shadow-active);display:grid;grid-template-columns:1fr 1.1fr 1.2fr 0.9fr 1.4fr;position:relative;transform:translateY(56px);margin-top:-56px">
+          <div style="padding:16px 20px">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Role</div>
+            <p style="margin:0">Everything: research, IA, UI</p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Method</div>
+            <p style="margin:0">Heuristic audit, IA restructure, hi-fi screens</p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Scope</div>
+            <p style="margin:0">7 screens, mobile + desktop, one moderation system</p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Timebox</div>
+            <p style="margin:0">A few weekends</p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Disclaimer</div>
+            <p style="margin:0;font-size:0.95em">Not affiliated with Lowyat.NET. No original screens are reproduced here, every pixel below is my own proposal. 🤙</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Page Header Band -->
+
+    <!-- Main Content Section -->
+    <main style="max-width:1140px;margin:0 auto;padding:104px 24px 32px">
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-book-open" aria-hidden="true" style="font-size:0.8em"></i>Summary</h2>
+        <p>I've been reading this forum since I was a teenager looking up motherboard prices. It is still, in 2026, where you go when you want a Malaysian who actually knows the answer, about a warranty, a landlord, a broken Astro box, a used lens. That accumulated knowledge is the asset. The interface is the tax you pay to reach it.</p>
+        <p>So I gave myself three constraints: <strong>fix the mobile experience</strong>, <strong>fix navigation and density</strong>, and <strong>make moderation and thread quality visible</strong>, without turning the place into a soft, airy social app. The regulars didn't stay 20 years because it was pretty. They stayed because it is fast, dense, and honest.</p>
+        <p>The result: nine top-level categories collapse into <strong>three lanes</strong>, the thread list starts carrying <strong>signal instead of counters</strong>, and every moderation action becomes something you can see and appeal. Density stays high, it just gets ranked.</p>
+
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-history" aria-hidden="true" style="font-size:0.8em"></i>1. Background</h2>
+        <h3 style="margin:var(--space-4) 0 10px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h3)">A national archive that looks like a mailing list</h3>
+        <p>The board runs the classic 2000s forum pattern: category → subforum → paginated thread list → paginated posts. It has survived Facebook groups, WhatsApp, Reddit and TikTok, which tells you the content is worth the friction. But the friction is real, and it lands hardest on phones, where most of the traffic now is.</p>
+      </article>
+
+      <!-- The size of the thing -->
+      <div class="card-grid" style="margin-bottom:24px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))">
+        <div>
+          <div class="big-num">81M+</div>
+          <p style="margin:4px 0 0;font-size:0.95em">posts on the board, two decades of answers nobody has indexed properly</p>
+        </div>
+        <div>
+          <div class="big-num">944K</div>
+          <p style="margin:4px 0 0;font-size:0.95em">registered members, a large share of them dormant lurkers who still read daily</p>
+        </div>
+        <div>
+          <div class="big-num">9</div>
+          <p style="margin:4px 0 0;font-size:0.95em">top-level categories, over a hundred subforums beneath them</p>
+        </div>
+        <div>
+          <div class="big-num">3</div>
+          <p style="margin:4px 0 0;font-size:0.95em">taps minimum to reach a thread from the index, five if you want the newest post</p>
+        </div>
+      </div>
+
+      <!-- Callout: the audience -->
+      <div class="post-callout is-note">
+        <aside>
+          <div class="callout-header"><i class="icon-users" aria-hidden="true"></i>Who I'm designing for</div>
+          <p class="callout-body">Loyal to a fault. High trust in the platform itself, people still meet strangers in a mall car park because a forum profile said the seller was okay. And genuinely clever: engineers, mechanics, accountants, doctors, all answering for free. Any redesign that treats them like new users of a social app will be rejected within a week. <em>Kena reject terus.</em></p>
+        </aside>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-triangle-alert" aria-hidden="true" style="font-size:0.8em"></i>2. What's Actually Broken</h2>
+        <p>I ran a plain heuristic pass on my own phone over two weeks of normal reading. No lab, no participants, just notes every time I got annoyed. Three clusters came out of it, and they map exactly onto what I set out to fix.</p>
+      </article>
+
+      <div class="card-grid" style="margin-top:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+        <div style="border-color:var(--cat-border)">
+          <div class="kicker"><i class="icon-smartphone" aria-hidden="true"></i>Problem 01 · Mobile</div>
+          <p style="margin:0 0 10px;font-size:0.98em">A desktop table squeezed onto a 390px screen. Pagination controls smaller than a fingertip. Reply is a round trip to another page. Reading a 400-page thread means guessing which page number you left off at.</p>
+          <p class="cost">Cost: the phone majority reads but rarely posts.</p>
+        </div>
+        <div style="border-color:var(--cat-border)">
+          <div class="kicker"><i class="icon-layout-list" aria-hidden="true"></i>Problem 02 · Density &amp; nav</div>
+          <p style="margin:0 0 10px;font-size:0.98em">Density itself is fine, the ranking is missing. Every row shows the same four counters, none of which tell you whether the thread is worth opening. Getting between two subforums means going back to the top of the tree.</p>
+          <p class="cost">Cost: people camp in one subforum and never see the rest.</p>
+        </div>
+        <div style="border-color:var(--cat-border)">
+          <div class="kicker"><i class="icon-shield" aria-hidden="true"></i>Problem 03 · Quality &amp; moderation</div>
+          <p style="margin:0 0 10px;font-size:0.98em">Moderation is invisible until it lands on you. Rules live in a sticky post nobody reads, removals appear as gaps, and a thread's health is something you infer from the tone of the last three pages.</p>
+          <p class="cost">Cost: mods look arbitrary, and good threads rot unnoticed.</p>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-compass" aria-hidden="true" style="font-size:0.8em"></i>3. Four Rules I Gave Myself</h2>
+      </article>
+
+      <div class="rule-list">
+        <div>
+          <div class="rule-num">1</div>
+          <p><strong>Rank density, don't remove it.</strong> A screen may stay full. It may not stay flat.</p>
+        </div>
+        <div>
+          <div class="rule-num">2</div>
+          <p><strong>Every number must change a decision.</strong> If a counter doesn't help you decide whether to tap, it goes.</p>
+        </div>
+        <div>
+          <div class="rule-num">3</div>
+          <p><strong>Moderation in the open.</strong> Removals, locks and warnings are shown, explained, and appealable, in place.</p>
+        </div>
+        <div>
+          <div class="rule-num">4</div>
+          <p><strong>Reward the veterans, don't gate the newcomers.</strong> Twenty years of post history should buy visible standing, not private privilege.</p>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-git-fork" aria-hidden="true" style="font-size:0.8em"></i>4. IA: Nine Categories Become Three Lanes</h2>
+        <p>The nine top-level categories are a filing cabinet, not a mental model. In practice people come for one of three reasons: to <strong>solve something technical</strong>, to <strong>talk to Malaysians</strong>, or to <strong>buy and sell</strong>. So the top level becomes three lanes, colour-coded, and every subforum keeps its name one level down. Nothing is deleted, the tree is re-parented.</p>
+      </article>
+
+      <div class="post-before-after" style="margin-top:24px">
+        <div class="before-after-grid">
+          <figure>
+            <div class="ba-label is-before"><i class="icon-folder-tree" aria-hidden="true"></i>Today · 9 categories</div>
+            <div style="background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-sm);padding:18px 20px">
+              <ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:0.95em;color:var(--color-muted)">
+                <li>Front Desk</li>
+                <li>Computers</li>
+                <li>Special Interest</li>
+                <li>Roundtable Discussions</li>
+                <li>Entertainment</li>
+                <li>Lifestyle</li>
+                <li>Community Projects</li>
+                <li>Classifieds</li>
+                <li>Trade Zone</li>
+              </ul>
+              <p style="margin:14px 0 0;font-size:0.9em;font-style:italic;color:var(--color-muted)">Index → category → subforum → thread → page N.</p>
+            </div>
+          </figure>
+          <figure>
+            <div class="ba-label is-after"><i class="icon-layers" aria-hidden="true"></i>Proposed · 3 lanes</div>
+            <div style="background:var(--color-surface);border:1px solid var(--cat-border);border-radius:var(--radius-sm);padding:18px 20px">
+              <div style="display:flex;flex-direction:column;gap:12px">
+                <div style="display:grid;grid-template-columns:12px 1fr;gap:10px;align-items:start">
+                  <span style="width:12px;height:12px;border-radius:50%;background:#2A4BA0;margin-top:6px"></span>
+                  <div><strong>Tech</strong><div style="font-size:0.9em;color:var(--color-muted)">Computers, mobile, networking, cars, DIY, anything with a right answer</div></div>
+                </div>
+                <div style="display:grid;grid-template-columns:12px 1fr;gap:10px;align-items:start">
+                  <span style="width:12px;height:12px;border-radius:50%;background:#1E7A54;margin-top:6px"></span>
+                  <div><strong>Talk</strong><div style="font-size:0.9em;color:var(--color-muted)">Kopitiam, Roundtable, Lifestyle, Entertainment, anything with an opinion</div></div>
+                </div>
+                <div style="display:grid;grid-template-columns:12px 1fr;gap:10px;align-items:start">
+                  <span style="width:12px;height:12px;border-radius:50%;background:#C56A12;margin-top:6px"></span>
+                  <div><strong>Trade</strong><div style="font-size:0.9em;color:var(--color-muted)">Trade Zone, Classifieds, Garage Sales, anything with a price</div></div>
+                </div>
+              </div>
+              <p style="margin:14px 0 0;font-size:0.9em;font-style:italic;color:var(--color-muted)">Lane → thread. Section is a filter, not a floor.</p>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p style="margin-top:20px">The three lanes need different rules, and that's the point. Trade needs identity and trust. Talk needs moderation. Tech needs archival search. One generic forum shell has been serving all three badly for twenty years.</p>
+
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-layout-dashboard" aria-hidden="true" style="font-size:0.8em"></i>5. The Screens</h2>
+        <p>Seven screens, drawn at both ends: the phone first, then the desktop that power users actually keep open all day. The mockups below are live HTML, not images, and the type inside them is a UI sans on purpose, so you can tell my portfolio's voice apart from the product's.</p>
+
+        <h3 style="margin:44px 0 10px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h3)">5.1 Forum index, desktop</h3>
+        <p>The index stops being a directory of boards and becomes a feed of live conversation, with the board directory available as a filter rail. Three lanes across the top, one row per thread, and the right rail carries the two things regulars check anyway: what's moving, and what the mods just did.</p>
+      </article>
+
+      <!-- Screen 5.1: index, desktop -->
+      <div class="post-figure" style="margin-top:20px">
+        <figure style="max-width:72rem">
+          <div class="mock-window">
+            <div class="mock-chrome">
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span style="margin-left:10px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--color-muted)">forum · desktop</span>
+            </div>
+            <div style="overflow-x:auto">
+              <div class="mock" style="min-width:940px">
+                <div style="display:flex;align-items:center;gap:16px;padding:10px 18px;border-bottom:1px solid rgba(0,0,0,0.1)">
+                  <span style="font-family:var(--font-display);letter-spacing:0.12em;font-size:18px">FORUM</span>
+                  <div style="flex:1;display:flex;align-items:center;gap:8px;background:var(--color-neutral);border:1px solid rgba(0,0,0,0.12);border-radius:var(--radius-sm);padding:7px 12px;color:var(--color-muted)"><i class="icon-search" aria-hidden="true" style="font-size:14px"></i>Search 81 million posts, try "celcom 5g coverage kajang"</div>
+                  <span style="display:inline-flex;align-items:center;gap:6px;background:#2A4BA0;color:#fff;border-radius:var(--radius-sm);padding:8px 14px"><i class="icon-plus" aria-hidden="true" style="font-size:14px"></i>New thread</span>
+                  <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--color-ink);color:#fff;font-size:12px">RZ</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:6px;padding:8px 18px;border-bottom:1px solid rgba(0,0,0,0.1)">
+                  <span style="display:inline-flex;align-items:center;gap:7px;padding:6px 14px;border-radius:var(--radius-sm);background:#2A4BA0;color:#fff"><span style="width:7px;height:7px;border-radius:50%;background:#fff"></span>Tech</span>
+                  <span style="display:inline-flex;align-items:center;gap:7px;padding:6px 14px;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.12);color:var(--color-muted)"><span style="width:7px;height:7px;border-radius:50%;background:#1E7A54"></span>Talk</span>
+                  <span style="display:inline-flex;align-items:center;gap:7px;padding:6px 14px;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.12);color:var(--color-muted)"><span style="width:7px;height:7px;border-radius:50%;background:#C56A12"></span>Trade</span>
+                  <span style="width:1px;height:22px;background:rgba(0,0,0,0.1);margin:0 8px"></span>
+                  <span style="color:var(--color-muted)">Following</span>
+                  <span style="margin-left:auto;display:inline-flex;align-items:center;gap:10px;color:var(--color-muted)"><i class="icon-rows-3" aria-hidden="true"></i>Density<span style="display:inline-flex;border:1px solid rgba(0,0,0,0.12);border-radius:var(--radius-sm);overflow:hidden"><span style="padding:4px 10px;background:var(--color-ink);color:#fff">Compact</span><span style="padding:4px 10px">Comfy</span></span></span>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 280px">
+                  <div style="border-right:1px solid rgba(0,0,0,0.1)">
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 18px;background:var(--color-neutral);border-bottom:1px solid rgba(0,0,0,0.08);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-muted)"><span>Live in Tech</span><span>Sorted by activity · 14 new since 08:40</span></div>
+                    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:12px;padding:11px 18px;border-bottom:1px solid rgba(0,0,0,0.07);align-items:start">
+                      <span style="width:8px;height:8px;border-radius:50%;background:#2A4BA0;margin-top:6px"></span>
+                      <div>
+                        <div style="font-weight:600;display:flex;align-items:center;gap:8px;flex-wrap:wrap">TIME fibre 500Mbps down to 40 in Puchong since Tuesday<span class="mock-ann">1</span></div>
+                        <div style="color:var(--color-muted);font-size:11.5px;margin-top:3px">Broadband &amp; ISP · 214 replies · 9 unread · last by <strong style="color:var(--cat-ink)">tuanfaiz</strong> 4 min ago</div>
+                        <div class="mock-excerpt">"Ticket escalated, they admitted node congestion in Bandar Puteri…"</div>
+                      </div>
+                      <div style="text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:4px">
+                        <span class="mock-tag" style="background:#E5E8F4;color:#24408B">9 new</span>
+                        <span style="color:var(--color-muted);font-size:11px">🔥 hot</span>
+                      </div>
+                    </div>
+                    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:12px;padding:11px 18px;border-bottom:1px solid rgba(0,0,0,0.07);align-items:start">
+                      <span style="width:8px;height:8px;border-radius:50%;background:#2A4BA0;margin-top:6px"></span>
+                      <div>
+                        <div style="font-weight:600;display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span class="mock-tag" style="background:#E1F0E9;color:#196045">Solved</span>Proton X50 head unit keeps rebooting, fixed with a 2A fuse</div>
+                        <div style="color:var(--color-muted);font-size:11.5px;margin-top:3px">Automotive · 63 replies · read · last by <strong style="color:var(--cat-ink)">wanmokhtar</strong> 22 min ago</div>
+                        <div class="mock-excerpt">"Marked as the answer by OP, full steps in post #41."</div>
+                      </div>
+                      <div style="text-align:right;color:var(--color-muted);font-size:11px">4 helpful</div>
+                    </div>
+                    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:12px;padding:11px 18px;border-bottom:1px solid rgba(0,0,0,0.07);align-items:start">
+                      <span style="width:8px;height:8px;border-radius:50%;background:#C56A12;margin-top:6px"></span>
+                      <div>
+                        <div style="font-weight:600;display:flex;align-items:center;gap:8px;flex-wrap:wrap">WTS: Fujifilm X-T30 II + 27mm f/2.8 · RM2,450<span class="mock-tag" style="display:inline-flex;align-items:center;gap:4px;background:#E1F0E9;color:#196045"><i class="icon-badge-check" aria-hidden="true" style="font-size:11px"></i>Verified seller</span></div>
+                        <div style="color:var(--color-muted);font-size:11.5px;margin-top:3px">Trade Zone · Cameras · 42 completed deals · Cyberjaya · 1 h ago</div>
+                        <div class="mock-excerpt">"Warranty till 03.2027, meetup Puchong / Cyberjaya only."</div>
+                      </div>
+                      <div style="text-align:right;color:var(--color-muted);font-size:11px">3 watching</div>
+                    </div>
+                    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:12px;padding:11px 18px;border-bottom:1px solid rgba(0,0,0,0.07);align-items:start">
+                      <span style="width:8px;height:8px;border-radius:50%;background:#1E7A54;margin-top:6px"></span>
+                      <div>
+                        <div style="font-weight:600;display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span class="mock-tag" style="background:#F7E9D8;color:#8F4E10">Heated</span>Kenapa harga barang naik tapi gaji tak naik?</div>
+                        <div style="color:var(--color-muted);font-size:11.5px;margin-top:3px">Kopitiam · 1,284 replies · 96 unread · slowed to 1 post/min</div>
+                        <div class="mock-excerpt">Thread health 61% · 6 posts removed today · 2 members in cooldown</div>
+                      </div>
+                      <div style="text-align:right;color:var(--color-muted);font-size:11px">96 new</div>
+                    </div>
+                    <div style="display:grid;grid-template-columns:auto 1fr auto;gap:12px;padding:11px 18px;align-items:start">
+                      <span style="width:8px;height:8px;border-radius:50%;background:#2A4BA0;margin-top:6px"></span>
+                      <div>
+                        <div style="font-weight:600">Anyone still using the old Maxis fibre router as AP? Config inside</div>
+                        <div style="color:var(--color-muted);font-size:11.5px;margin-top:3px">Networking · 88 replies · read · last by <strong style="color:var(--cat-ink)">hafizmz</strong> 2 h ago</div>
+                        <div class="mock-excerpt">"Bridge mode + VLAN 500. Screenshots in post #12."</div>
+                      </div>
+                      <div style="text-align:right;color:var(--color-muted);font-size:11px">12 helpful</div>
+                    </div>
+                  </div>
+                  <div style="padding:14px 16px;display:flex;flex-direction:column;gap:14px;background:#FBF9F4">
+                    <div style="border:1px solid rgba(0,0,0,0.12);border-radius:var(--radius-sm);background:var(--color-surface);overflow:hidden">
+                      <div style="padding:8px 12px;border-bottom:1px solid rgba(0,0,0,0.08);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-muted);display:flex;align-items:center;gap:6px">Your sections<span class="mock-ann">2</span></div>
+                      <div style="padding:10px 12px;display:flex;flex-direction:column;gap:8px;font-size:12px">
+                        <span style="display:flex;justify-content:space-between"><span>Broadband &amp; ISP</span><span style="color:var(--color-muted)">9</span></span>
+                        <span style="display:flex;justify-content:space-between"><span>Kopitiam</span><span style="color:var(--color-muted)">96</span></span>
+                        <span style="display:flex;justify-content:space-between"><span>Trade Zone · Cameras</span><span style="color:var(--color-muted)">4</span></span>
+                        <span style="color:var(--cat-ink)">Edit sections →</span>
+                      </div>
+                    </div>
+                    <div style="border:1px solid #EACDA6;border-radius:var(--radius-sm);background:#F7E9D8;overflow:hidden">
+                      <div style="padding:8px 12px;border-bottom:1px solid #EACDA6;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8F4E10;display:flex;align-items:center;gap:6px"><i class="icon-gavel" aria-hidden="true"></i>Mod log · today<span class="mock-ann is-warn">3</span></div>
+                      <div style="padding:10px 12px;display:flex;flex-direction:column;gap:8px;font-size:12px;color:var(--color-muted)">
+                        <span><strong style="color:var(--color-ink)">6 posts removed</strong> in Kopitiam, personal attacks</span>
+                        <span><strong style="color:var(--color-ink)">1 thread locked</strong> in Trade Zone, unverified seller</span>
+                        <span><strong style="color:var(--color-ink)">2 appeals</strong> upheld this week</span>
+                        <span style="color:#8F4E10">Read the full log →</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption>Index, desktop. Same information per screen as today, reordered so the first glance answers "is anything worth my time right now?"</figcaption>
+        </figure>
+      </div>
+      <div class="screen-notes">
+        <div><strong>1 · One line of live context.</strong> The last post's first clause beats "214 replies" for deciding whether to open a thread.</div>
+        <div><strong>2 · The board tree becomes a personal rail.</strong> Subforums still exist, they just stop being the front door.</div>
+        <div><strong>3 · The mod log is public and on the homepage.</strong> Enforcement seen daily reads as fairness, not surveillance.</div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:56px 0 10px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h3)">5.2 Index &amp; thread list, mobile</h3>
+        <p>On the phone the same rows lose one meta line and gain a tap target. Lanes become a top pill row, sections become a filter sheet, and posting moves to a persistent bottom bar. The single biggest reason mobile lurkers don't reply is that replying is buried.</p>
+      </article>
+
+      <!-- Screen 5.2: index and list, mobile -->
+      <div class="post-figure" style="margin-top:20px">
+        <figure style="max-width:66rem">
+          <div class="mock-row">
+
+            <div class="mock mock-phone">
+              <div class="mock-status"><span>9:41</span><span>LTE · 87%</span></div>
+              <div style="display:flex;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid rgba(0,0,0,0.08)">
+                <span style="font-family:var(--font-display);letter-spacing:0.12em;font-size:17px">FORUM</span>
+                <div style="flex:1;display:flex;align-items:center;gap:6px;background:var(--color-neutral);border:1px solid rgba(0,0,0,0.1);border-radius:var(--radius-sm);padding:7px 10px;color:var(--color-muted);font-size:12px"><i class="icon-search" aria-hidden="true" style="font-size:13px"></i>Search</div>
+                <i class="icon-bell" aria-hidden="true" style="font-size:18px;color:var(--color-muted)"></i>
+              </div>
+              <div style="display:flex;gap:8px;padding:10px 14px;border-bottom:1px solid rgba(0,0,0,0.08);overflow-x:auto">
+                <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:var(--radius-sm);background:#2A4BA0;color:#fff;white-space:nowrap;font-size:12px">Tech</span>
+                <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.12);white-space:nowrap;font-size:12px"><span style="width:6px;height:6px;border-radius:50%;background:#1E7A54"></span>Talk</span>
+                <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.12);white-space:nowrap;font-size:12px"><span style="width:6px;height:6px;border-radius:50%;background:#C56A12"></span>Trade</span>
+                <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.12);white-space:nowrap;font-size:12px">Following</span>
+              </div>
+              <div class="mock-row-pad" style="border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="font-weight:600;line-height:1.35">TIME fibre 500Mbps down to 40 in Puchong since Tuesday</div>
+                <div style="display:flex;align-items:center;gap:8px;margin-top:5px;color:var(--color-muted);font-size:11.5px"><span class="mock-tag" style="background:#E5E8F4;color:#24408B">9 new</span>Broadband · 214 replies · 4 min</div>
+              </div>
+              <div class="mock-row-pad" style="border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="font-weight:600;line-height:1.35"><span class="mock-tag" style="background:#E1F0E9;color:#196045;margin-right:6px">Solved</span>Proton X50 head unit keeps rebooting, fixed with a 2A fuse</div>
+                <div style="color:var(--color-muted);font-size:11.5px;margin-top:5px">Automotive · 63 replies · 22 min</div>
+              </div>
+              <div class="mock-row-pad" style="border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="font-weight:600;line-height:1.35"><span class="mock-tag" style="background:#F7E9D8;color:#8F4E10;margin-right:6px">Heated</span>Kenapa harga barang naik tapi gaji tak naik?</div>
+                <div style="color:var(--color-muted);font-size:11.5px;margin-top:5px">Kopitiam · 1,284 replies · health 61%</div>
+              </div>
+              <div class="mock-row-pad" style="border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="font-weight:600;line-height:1.35">WTS: Fujifilm X-T30 II + 27mm f/2.8 · RM2,450</div>
+                <div style="display:flex;align-items:center;gap:8px;margin-top:5px;color:var(--color-muted);font-size:11.5px"><span class="mock-tag" style="display:inline-flex;align-items:center;gap:3px;background:#E1F0E9;color:#196045"><i class="icon-badge-check" aria-hidden="true" style="font-size:10px"></i>Verified</span>Cyberjaya · 42 deals</div>
+              </div>
+              <div class="mock-row-pad" style="border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="font-weight:600;line-height:1.35">Anyone still using the old Maxis fibre router as AP?</div>
+                <div style="color:var(--color-muted);font-size:11.5px;margin-top:5px">Networking · 88 replies · 2 h</div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(0,0,0,0.1);background:#FBF9F4;text-align:center;font-size:10px;color:var(--color-muted)">
+                <span style="padding:9px 0;color:#2A4BA0"><i class="icon-layers" aria-hidden="true" style="display:block;font-size:19px;margin-bottom:3px"></i>Lanes</span>
+                <span style="padding:9px 0"><i class="icon-search" aria-hidden="true" style="display:block;font-size:19px;margin-bottom:3px"></i>Search</span>
+                <span style="padding:9px 0"><i class="icon-square-pen" aria-hidden="true" style="display:block;font-size:19px;margin-bottom:3px"></i>Post</span>
+                <span style="padding:9px 0"><i class="icon-inbox" aria-hidden="true" style="display:block;font-size:19px;margin-bottom:3px"></i>Inbox</span>
+                <span style="padding:9px 0"><i class="icon-user" aria-hidden="true" style="display:block;font-size:19px;margin-bottom:3px"></i>Me</span>
+              </div>
+            </div>
+
+            <div class="mock mock-phone">
+              <div class="mock-status"><span>9:41</span><span>LTE · 87%</span></div>
+              <div style="display:flex;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid rgba(0,0,0,0.08)">
+                <i class="icon-arrow-left" aria-hidden="true" style="font-size:18px"></i>
+                <div style="flex:1"><div style="font-weight:600">Broadband &amp; ISP</div><div style="font-size:11px;color:var(--color-muted)">Tech lane · 12,400 threads</div></div>
+                <i class="icon-bell-plus" aria-hidden="true" style="font-size:18px;color:var(--color-muted)"></i>
+              </div>
+              <div style="display:flex;gap:8px;padding:10px 14px;border-bottom:1px solid rgba(0,0,0,0.08);overflow-x:auto;font-size:12px">
+                <span style="padding:6px 12px;border-radius:var(--radius-sm);background:var(--color-ink);color:#fff;white-space:nowrap">Latest</span>
+                <span style="padding:6px 12px;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.12);white-space:nowrap">Unanswered</span>
+                <span style="padding:6px 12px;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.12);white-space:nowrap">Solved</span>
+                <span style="padding:6px 12px;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.12);white-space:nowrap">My state</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;padding:8px 14px;background:#E5E8F4;color:#24408B;font-size:12px;border-bottom:1px solid rgba(0,0,0,0.06)"><i class="icon-pin" aria-hidden="true" style="font-size:13px"></i>Pinned: read this before posting an outage, the checklist that gets it fixed</div>
+              <div class="mock-row-pad" style="border-bottom:1px solid rgba(0,0,0,0.07);background:#FBF9F4">
+                <div style="font-weight:600;line-height:1.35">TIME fibre 500Mbps down to 40 in Puchong since Tuesday</div>
+                <div style="display:flex;align-items:center;gap:8px;margin-top:5px;color:var(--color-muted);font-size:11.5px"><span class="mock-tag" style="background:#E5E8F4;color:#24408B">9 new</span>214 replies · 38 members</div>
+                <div class="mock-excerpt">"Ticket escalated, they admitted node congestion…"</div>
+                <div style="margin-top:8px"><span style="display:inline-flex;align-items:center;gap:6px;border:1px solid #2A4BA0;color:#24408B;border-radius:var(--radius-sm);padding:7px 12px;font-size:12px"><i class="icon-corner-down-right" aria-hidden="true" style="font-size:12px"></i>Jump to first unread<span class="mock-ann is-sm">1</span></span></div>
+              </div>
+              <div class="mock-row-pad" style="border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="font-weight:600;line-height:1.35">Unifi 800Mbps promo, worth switching from 300?</div>
+                <div style="color:var(--color-muted);font-size:11.5px;margin-top:5px">31 replies · 3 h · <span style="color:#196045">answered by a verified installer</span></div>
+              </div>
+              <div class="mock-row-pad" style="border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="font-weight:600;line-height:1.35"><span class="mock-tag" style="background:#EAE6DD;color:#5B5566;margin-right:6px">Locked</span>Free VPN untuk bypass, thread closed, see rules</div>
+                <div style="color:var(--color-muted);font-size:11.5px;margin-top:5px">Locked 11.08.2026 · reason shown inside · appeal open</div>
+              </div>
+              <div class="mock-row-pad" style="border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="font-weight:600;line-height:1.35">Anyone on Maxis Fibre in Setapak? Latency spikes at night</div>
+                <div style="color:var(--color-muted);font-size:11.5px;margin-top:5px">7 replies · unanswered · 5 h</div>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;background:#FBF9F4;border-top:1px solid rgba(0,0,0,0.08);font-size:12px;color:var(--color-muted)"><span>Showing newest first</span><span style="display:inline-flex;align-items:center;gap:6px;background:#2A4BA0;color:#fff;border-radius:var(--radius-sm);padding:9px 14px"><i class="icon-square-pen" aria-hidden="true" style="font-size:13px"></i>Ask this section</span></div>
+            </div>
+
+          </div>
+          <figcaption>Left: the lane feed. Right: a section, with filters where pagination used to be.</figcaption>
+        </figure>
+      </div>
+      <div class="screen-notes">
+        <div><strong>1 · "Jump to first unread" replaces page numbers.</strong> Nobody remembers they were on page 37. The system does.</div>
+        <div><strong>Locked threads stay visible</strong> with the reason and an appeal link attached, instead of vanishing.</div>
+        <div><strong>"Ask this section"</strong> sits at the bottom of the list, the moment intent is highest, not hidden in a header.</div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:56px 0 10px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h3)">5.3 Thread view &amp; reply</h3>
+        <p>The hardest screen. A thread here can be 1,284 replies long and still contain three facts worth knowing. So the thread opens with a <strong>settled summary</strong>, community-written, mod-edited, versioned, and a health strip that says out loud what moderation has been doing. Replying happens in a sheet on top of the thread, never on another page.</p>
+      </article>
+
+      <!-- Screen 5.3: thread view and reply sheet -->
+      <div class="post-figure" style="margin-top:20px">
+        <figure style="max-width:66rem">
+          <div class="mock-row">
+
+            <div class="mock mock-phone">
+              <div class="mock-status"><span>9:41</span><span>LTE · 87%</span></div>
+              <div style="display:flex;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid rgba(0,0,0,0.08)">
+                <i class="icon-arrow-left" aria-hidden="true" style="font-size:18px"></i>
+                <div style="flex:1;min-width:0"><div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">TIME fibre 500Mbps down to 40 in Puchong</div><div style="font-size:11px;color:var(--color-muted)">post 206 of 214 · Broadband &amp; ISP</div></div>
+                <i class="icon-ellipsis-vertical" aria-hidden="true" style="font-size:18px;color:var(--color-muted)"></i>
+              </div>
+              <div style="height:3px;background:#EAE6DD"><div style="width:72%;height:3px;background:#2A4BA0"></div></div>
+              <div style="margin:12px 14px;border:1px solid #BEC7E6;background:#E5E8F4;border-radius:var(--radius-sm);overflow:hidden">
+                <div style="display:flex;align-items:center;gap:7px;padding:8px 12px;border-bottom:1px solid #BEC7E6;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#24408B"><i class="icon-list-checks" aria-hidden="true" style="font-size:13px"></i>What's settled so far<span class="mock-ann is-sm">1</span></div>
+                <ul style="margin:0;padding:10px 14px 10px 28px;font-size:12px;line-height:1.5;color:var(--color-ink)">
+                  <li>Node congestion confirmed by TIME on 09.08, Bandar Puteri area.</li>
+                  <li>Speedtest to the local server is not affected, use an overseas server.</li>
+                  <li>Escalation template that worked is in post #41.</li>
+                </ul>
+                <div style="padding:8px 12px;border-top:1px solid #BEC7E6;font-size:11px;color:#24408B;display:flex;justify-content:space-between"><span>Edited by 3 members · v4</span><span>History →</span></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin:0 14px 12px;padding:8px 12px;border:1px solid #EACDA6;background:#F7E9D8;border-radius:var(--radius-sm);font-size:11.5px;color:#8F4E10"><i class="icon-activity" aria-hidden="true" style="font-size:13px"></i>Thread health 88% · 1 post removed (off-topic) · rules for this section<span class="mock-ann is-sm is-warn">2</span></div>
+              <div style="padding:12px 14px;border-top:1px solid rgba(0,0,0,0.07)">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+                  <span style="display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#2A4BA0;color:#fff;font-size:11px">TF</span>
+                  <div style="flex:1"><div style="font-weight:600;display:flex;align-items:center;gap:6px;flex-wrap:wrap">tuanfaiz<span class="mock-tag" style="background:#E5E8F4;color:#24408B;font-size:10px">AHLI LAMA · 2007</span></div><div style="font-size:11px;color:var(--color-muted)">#206 · 4 min ago · 8,412 posts</div></div>
+                </div>
+                <div style="border-left:3px solid #CBC6BC;padding:4px 10px;margin-bottom:8px;font-size:12px;color:var(--color-muted);background:#FBF9F4;border-radius:0 4px 4px 0">wan_ariff wrote: "still 40Mbps here also…" <span style="color:#24408B">show</span></div>
+                <p style="margin:0 0 10px;line-height:1.5">Ticket escalated to their NOC. They admitted node congestion in Bandar Puteri and gave a fix window of 14 days. Template I used is in <span style="color:#24408B">#41</span>, attach your speedtest at 3 different hours, that's what stopped the auto-close.</p>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;font-size:11.5px">
+                  <span style="display:inline-flex;align-items:center;gap:5px;border:1px solid #1E7A54;color:#196045;border-radius:var(--radius-sm);padding:6px 11px"><i class="icon-thumbs-up" aria-hidden="true" style="font-size:12px"></i>Helpful · 24</span>
+                  <span style="display:inline-flex;align-items:center;gap:5px;border:1px solid rgba(0,0,0,0.12);color:var(--color-muted);border-radius:var(--radius-sm);padding:6px 11px"><i class="icon-link" aria-hidden="true" style="font-size:12px"></i>Source</span>
+                  <span style="display:inline-flex;align-items:center;gap:5px;border:1px solid rgba(0,0,0,0.12);color:var(--color-muted);border-radius:var(--radius-sm);padding:6px 11px"><i class="icon-quote" aria-hidden="true" style="font-size:12px"></i>Quote</span>
+                  <span style="display:inline-flex;align-items:center;gap:5px;border:1px solid rgba(0,0,0,0.12);color:var(--color-muted);border-radius:var(--radius-sm);padding:6px 11px"><i class="icon-flag" aria-hidden="true" style="font-size:12px"></i>Report</span>
+                </div>
+              </div>
+              <div style="padding:12px 14px;border-top:1px solid rgba(0,0,0,0.07);background:#FBF9F4">
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:11.5px;color:var(--color-muted)"><i class="icon-eye-off" aria-hidden="true" style="font-size:13px"></i>1 post removed here, <span style="color:#8F4E10">off-topic, by mod hafiz · 11.08.2026</span> · <span style="text-decoration:underline">why?</span></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-top:1px solid rgba(0,0,0,0.1)">
+                <div style="flex:1;background:var(--color-neutral);border:1px solid rgba(0,0,0,0.12);border-radius:var(--radius-sm);padding:10px 12px;color:var(--color-muted);font-size:12px">Reply to this thread…</div>
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:var(--radius-sm);background:#2A4BA0;color:#fff"><i class="icon-arrow-up" aria-hidden="true" style="font-size:17px"></i></span>
+              </div>
+            </div>
+
+            <div class="mock mock-phone">
+              <div class="mock-status"><span>9:41</span><span>LTE · 87%</span></div>
+              <div style="padding:10px 14px;color:var(--color-muted);font-size:12px;border-bottom:1px solid rgba(0,0,0,0.06)">…thread continues behind</div>
+              <div style="height:120px;background:repeating-linear-gradient(0deg,#FBF9F4 0 26px,#fff 26px 27px)"></div>
+              <div style="border-top:1px solid rgba(0,0,0,0.12);box-shadow:0 -10px 20px rgba(0,0,0,0.06);border-radius:10px 10px 0 0">
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid rgba(0,0,0,0.08)"><span style="font-weight:600">Reply</span><span style="color:var(--color-muted);font-size:12px">Draft saved</span></div>
+                <div style="margin:10px 14px;border-left:3px solid #CBC6BC;padding:4px 10px;font-size:12px;color:var(--color-muted);background:#FBF9F4;border-radius:0 4px 4px 0;display:flex;justify-content:space-between"><span>Replying to tuanfaiz #206</span><span>✕</span></div>
+                <div style="margin:0 14px;border:1px solid rgba(0,0,0,0.12);border-radius:var(--radius-sm);min-height:96px;padding:10px 12px;font-size:13px;line-height:1.5">Same here in Bandar Puteri. Attaching my three speedtests, 3pm, 9pm, 1am.<span style="display:inline-block;width:1px;height:15px;background:#2A4BA0;vertical-align:-3px;margin-left:1px"></span></div>
+                <div style="display:flex;gap:14px;padding:10px 16px;color:var(--color-muted);font-size:16px">
+                  <i class="icon-bold" aria-hidden="true"></i><i class="icon-italic" aria-hidden="true"></i><i class="icon-link" aria-hidden="true"></i><i class="icon-image" aria-hidden="true"></i><i class="icon-code" aria-hidden="true"></i><i class="icon-at-sign" aria-hidden="true"></i>
+                </div>
+                <div style="margin:0 14px 12px;border:1px solid #BEC7E6;background:#E5E8F4;border-radius:var(--radius-sm);padding:10px 12px;font-size:11.5px;color:#24408B;display:flex;gap:8px;align-items:flex-start"><i class="icon-lightbulb" aria-hidden="true" style="font-size:14px;margin-top:1px"></i><span>Three people already posted speedtests. Adding yours to the <strong>settled summary</strong> helps more than a new reply, do that instead?<span class="mock-ann is-sm" style="margin-left:6px">3</span></span></div>
+                <div style="display:flex;gap:10px;padding:0 14px 14px">
+                  <span style="flex:1;text-align:center;border:1px solid rgba(0,0,0,0.15);border-radius:var(--radius-sm);padding:11px 0;font-size:13px">Add to summary</span>
+                  <span style="flex:1;text-align:center;background:#2A4BA0;color:#fff;border-radius:var(--radius-sm);padding:11px 0;font-size:13px">Post reply</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <figcaption>Thread view with the settled summary and health strip, reply as a sheet with a gentle "does this need to be a post?" nudge.</figcaption>
+        </figure>
+      </div>
+      <div class="screen-notes">
+        <div><strong>1 · The summary is a wiki, not an AI verdict.</strong> Members write it, mods edit it, everyone can read the diff. Twenty years of goodwill says they'll do it well.</div>
+        <div><strong>2 · Health strip over hidden enforcement.</strong> A removed post leaves a labelled gap with the reason and the mod's name.</div>
+        <div><strong>3 · Redirect, don't block.</strong> The nudge offers a better place for the contribution, and "Post reply" is still right there.</div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:56px 0 10px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h3)">5.4 Search that admits the archive exists</h3>
+        <p>Twenty years of answers are unreachable because search returns posts, not conclusions. So results group by thread, surface the accepted answer first, and let you filter by the things people actually qualify on: lane, section, year, whether it was solved, whether the author is a verified seller.</p>
+      </article>
+
+      <!-- Screen 5.4: search -->
+      <div class="post-figure" style="margin-top:20px">
+        <figure style="max-width:66rem">
+          <div class="mock-row" style="align-items:flex-start">
+            <div class="mock mock-phone">
+              <div class="mock-status"><span>9:41</span><span>LTE · 87%</span></div>
+              <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid rgba(0,0,0,0.08)">
+                <div style="flex:1;display:flex;align-items:center;gap:8px;background:var(--color-neutral);border:1px solid rgba(0,0,0,0.12);border-radius:var(--radius-sm);padding:9px 12px"><i class="icon-search" aria-hidden="true" style="font-size:14px;color:var(--color-muted)"></i>time fibre slow puchong</div>
+                <span style="color:#24408B;font-size:12px">Cancel</span>
+              </div>
+              <div style="display:flex;gap:8px;padding:10px 14px;overflow-x:auto;font-size:12px;border-bottom:1px solid rgba(0,0,0,0.08)">
+                <span style="padding:6px 12px;border-radius:var(--radius-sm);background:#2A4BA0;color:#fff;white-space:nowrap">Tech</span>
+                <span style="padding:6px 12px;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.12);white-space:nowrap">Solved only</span>
+                <span style="padding:6px 12px;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.12);white-space:nowrap">Since 2024</span>
+                <span style="padding:6px 12px;border-radius:var(--radius-sm);border:1px solid rgba(0,0,0,0.12);white-space:nowrap">Klang Valley</span>
+              </div>
+              <div style="padding:12px 14px;border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:#196045;margin-bottom:4px"><i class="icon-check-check" aria-hidden="true" style="font-size:12px"></i>ACCEPTED ANSWER · 2025<span class="mock-ann is-sm is-ok">1</span></div>
+                <div style="font-weight:600;line-height:1.35">"Node congestion, escalate with 3 speedtests", the template that works</div>
+                <div style="color:var(--color-muted);font-size:11.5px;margin-top:4px">Broadband &amp; ISP · in a 214-reply thread · 61 helpful</div>
+              </div>
+              <div style="padding:12px 14px;border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="font-weight:600;line-height:1.35">TIME fibre 500Mbps down to 40 in Puchong since Tuesday</div>
+                <div style="color:var(--color-muted);font-size:11.5px;margin-top:4px">Live now · 214 replies · 9 unread</div>
+                <div style="color:var(--color-muted);font-size:12px;margin-top:4px;font-style:italic">3 matching posts inside · <span style="color:#24408B">show</span></div>
+              </div>
+              <div style="padding:12px 14px;border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="font-weight:600;line-height:1.35">Puchong fibre outage megathread (2023)</div>
+                <div style="color:var(--color-muted);font-size:11.5px;margin-top:4px">Archived · 1,902 replies · closed 2024</div>
+              </div>
+              <div style="padding:12px 14px;color:var(--color-muted);font-size:12px;background:#FBF9F4">Nothing fits? <span style="color:#24408B">Ask in Broadband &amp; ISP</span>, your search becomes the draft title.</div>
+            </div>
+            <div style="flex:1 1 260px;min-width:260px;max-width:340px;background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-sm);padding:18px 20px">
+              <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:13px;color:var(--cat-ink);margin-bottom:10px">Why this ordering</div>
+              <p style="margin:0 0 12px;font-size:0.95em">A forum search that returns 4,000 posts sorted by date is a punishment. Sorting by <em>resolution</em> first assumes what people want: the answer, then the live thread, then the archive.</p>
+              <p style="margin:0;font-size:0.95em">The last row matters most. A failed search is the best possible moment to start a new thread, pre-titled with what you were looking for.</p>
+            </div>
+          </div>
+          <figcaption>Search results grouped by thread, accepted answers hoisted to the top.</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:56px 0 10px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h3)">5.5 Trade Zone: listing + seller</h3>
+        <p>Trade is where the trust the community already has gets converted into money, and where it gets burnt. The listing separates <strong>the item</strong> from <strong>the person</strong>, and gives the person a record that took years to build and one bad deal to dent.</p>
+      </article>
+
+      <!-- Screen 5.5: trade zone listing and seller profile -->
+      <div class="post-figure" style="margin-top:20px">
+        <figure style="max-width:66rem">
+          <div class="mock-row">
+
+            <div class="mock mock-phone">
+              <div class="mock-status"><span>9:41</span><span>LTE · 87%</span></div>
+              <div style="display:flex;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid rgba(0,0,0,0.08)"><i class="icon-arrow-left" aria-hidden="true" style="font-size:18px"></i><div style="flex:1;font-weight:600">Trade Zone · Cameras</div><i class="icon-bookmark" aria-hidden="true" style="font-size:17px;color:var(--color-muted)"></i></div>
+              <div class="smart-image smart-image-placeholder" style="border-radius:0;aspect-ratio:4/3"><span class="label">drop photo · camera listing</span></div>
+              <div style="padding:12px 14px">
+                <div style="font-weight:600;font-size:15px;line-height:1.3">Fujifilm X-T30 II + XF 27mm f/2.8 WR</div>
+                <div style="font-family:var(--font-display);font-size:24px;color:#8F4E10;margin:6px 0 8px">RM 2,450</div>
+                <div style="display:flex;gap:6px;flex-wrap:wrap;font-size:11.5px;color:var(--color-muted)">
+                  <span style="border:1px solid rgba(0,0,0,0.12);border-radius:var(--radius-sm);padding:4px 9px">Like new</span>
+                  <span style="border:1px solid rgba(0,0,0,0.12);border-radius:var(--radius-sm);padding:4px 9px">Warranty till 03.2027</span>
+                  <span style="border:1px solid rgba(0,0,0,0.12);border-radius:var(--radius-sm);padding:4px 9px">Box + 2 batteries</span>
+                  <span style="border:1px solid rgba(0,0,0,0.12);border-radius:var(--radius-sm);padding:4px 9px">Meetup: Puchong / Cyberjaya</span>
+                </div>
+              </div>
+              <div style="margin:0 14px 12px;border:1px solid #BADCCB;background:#E1F0E9;border-radius:var(--radius-sm);overflow:hidden">
+                <div style="display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid #BADCCB">
+                  <span style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#1E7A54;color:#fff;font-size:12px">AZ</span>
+                  <div style="flex:1"><div style="font-weight:600;display:flex;align-items:center;gap:6px">azmi_photo<i class="icon-badge-check" aria-hidden="true" style="font-size:13px;color:#196045"></i></div><div style="font-size:11px;color:#196045">Member since 12.03.2009 · ID verified</div></div>
+                  <span class="mock-ann is-ok">1</span>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr 1fr;text-align:center;font-size:11px;color:#196045">
+                  <div style="padding:9px 4px"><div style="font-family:var(--font-display);font-size:18px;color:var(--color-ink)">42</div>completed deals</div>
+                  <div style="padding:9px 4px;border-left:1px solid #BADCCB"><div style="font-family:var(--font-display);font-size:18px;color:var(--color-ink)">0</div>disputes</div>
+                  <div style="padding:9px 4px;border-left:1px solid #BADCCB"><div style="font-family:var(--font-display);font-size:18px;color:var(--color-ink)">17y</div>on the forum</div>
+                </div>
+              </div>
+              <div style="margin:0 14px 12px;display:flex;gap:8px;align-items:flex-start;border:1px solid #EACDA6;background:#F7E9D8;border-radius:var(--radius-sm);padding:10px 12px;font-size:11.5px;color:#8F4E10"><i class="icon-shield-alert" aria-hidden="true" style="font-size:14px;margin-top:1px"></i><span>Deal in person, inspect first, never pay a deposit to hold an item. Reported scams in this section: <strong>3 this month</strong>.<span class="mock-ann is-sm is-warn" style="margin-left:6px">2</span></span></div>
+              <div style="display:flex;gap:10px;padding:0 14px 14px">
+                <span style="flex:1;text-align:center;border:1px solid rgba(0,0,0,0.15);border-radius:var(--radius-sm);padding:12px 0">Ask publicly</span>
+                <span style="flex:1;text-align:center;background:#C56A12;color:#fff;border-radius:var(--radius-sm);padding:12px 0">Message seller</span>
+              </div>
+            </div>
+
+            <div class="mock mock-phone">
+              <div class="mock-status"><span>9:41</span><span>LTE · 87%</span></div>
+              <div style="display:flex;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid rgba(0,0,0,0.08)"><i class="icon-arrow-left" aria-hidden="true" style="font-size:18px"></i><div style="flex:1;font-weight:600">azmi_photo</div><i class="icon-flag" aria-hidden="true" style="font-size:16px;color:var(--color-muted)"></i></div>
+              <div style="padding:14px;display:flex;gap:12px;align-items:center;border-bottom:1px solid rgba(0,0,0,0.07)">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:#1E7A54;color:#fff;font-size:16px">AZ</span>
+                <div>
+                  <div style="font-weight:600;font-size:15px;display:flex;align-items:center;gap:6px">azmi_photo<i class="icon-badge-check" aria-hidden="true" style="font-size:14px;color:#196045"></i></div>
+                  <div style="font-size:11.5px;color:var(--color-muted)">Joined 12.03.2009 · 6,204 posts · Cyberjaya</div>
+                  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;font-size:10.5px">
+                    <span style="background:#E5E8F4;color:#24408B;border-radius:4px;padding:2px 7px">AHLI LAMA</span>
+                    <span style="background:#E1F0E9;color:#196045;border-radius:4px;padding:2px 7px">ID VERIFIED</span>
+                    <span style="background:#F7E9D8;color:#8F4E10;border-radius:4px;padding:2px 7px">TOP SELLER '25</span>
+                  </div>
+                </div>
+              </div>
+              <div style="padding:12px 14px;border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-muted);margin-bottom:8px">Known for<span class="mock-ann is-sm" style="margin-left:6px">3</span></div>
+                <div style="display:flex;gap:6px;flex-wrap:wrap;font-size:11.5px">
+                  <span style="border:1px solid #BEC7E6;color:#24408B;border-radius:var(--radius-sm);padding:4px 9px">Fujifilm bodies · 312 helpful</span>
+                  <span style="border:1px solid #BEC7E6;color:#24408B;border-radius:var(--radius-sm);padding:4px 9px">Lens repair KL · 88</span>
+                  <span style="border:1px solid #EACDA6;color:#8F4E10;border-radius:var(--radius-sm);padding:4px 9px">Trade Zone · 42 deals</span>
+                </div>
+              </div>
+              <div style="padding:12px 14px;border-bottom:1px solid rgba(0,0,0,0.07)">
+                <div style="font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-muted);margin-bottom:8px">Deal record</div>
+                <div style="display:flex;flex-direction:column;gap:8px;font-size:12px">
+                  <div style="display:flex;justify-content:space-between"><span>Completed &amp; vouched</span><span style="color:#196045">42</span></div>
+                  <div style="display:flex;justify-content:space-between"><span>Disputes opened</span><span>0</span></div>
+                  <div style="display:flex;justify-content:space-between"><span>Median reply time</span><span style="color:var(--color-muted)">18 min</span></div>
+                  <div style="height:8px;border-radius:4px;background:#E1F0E9;overflow:hidden"><div style="width:96%;height:8px;background:#1E7A54"></div></div>
+                  <div style="font-size:11px;color:var(--color-muted)">96% of counterparties would deal again (39 of 41 responded)</div>
+                </div>
+              </div>
+              <div style="padding:12px 14px">
+                <div style="font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-muted);margin-bottom:8px">Moderation record<span class="mock-ann is-sm is-warn" style="margin-left:6px">4</span></div>
+                <div style="font-size:12px;color:var(--color-muted);line-height:1.5">1 post removed in 17 years (duplicate listing, 2021). No suspensions. <span style="color:#24408B">What we show and why →</span></div>
+              </div>
+            </div>
+
+          </div>
+          <figcaption>Listing and seller profile. The trust panel is the product, the photo is just the bait.</figcaption>
+        </figure>
+      </div>
+      <div class="screen-notes">
+        <div><strong>1 · Trust before price.</strong> The seller block sits above the fold with numbers that can't be faked in a week.</div>
+        <div><strong>2 · Say the scam rate out loud.</strong> Hiding it protects nobody, publishing it makes the safe behaviour the obvious one.</div>
+        <div><strong>3 · "Known for" is earned reputation,</strong> computed from where a member's posts were marked helpful, not a badge someone bought.</div>
+        <div><strong>4 · Your own moderation record is public to you and summarised to others.</strong> Same rule for everyone, mods included.</div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h2 style="display:flex;align-items:center;gap:12px;margin:64px 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-scale" aria-hidden="true" style="font-size:0.8em"></i>6. The Quality System Behind the Screens</h2>
+        <p>Every quality feature above runs on one small model, deliberately without a downvote. Downvotes on a forum this old become factional weapons within a month. Instead, three signals: one positive, one evidentiary, one protective, and every one of them is attributable.</p>
+      </article>
+
+      <div class="card-grid" style="margin-top:20px;margin-bottom:20px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+        <div style="border-color:#BADCCB">
+          <div class="kicker" style="color:#196045"><i class="icon-thumbs-up" aria-hidden="true"></i>Helpful</div>
+          <p style="margin:0;font-size:0.95em">Feeds "Known for" and sorts long threads. Weighted by the giver's own standing so ten new accounts can't manufacture an expert.</p>
+        </div>
+        <div style="border-color:#BEC7E6">
+          <div class="kicker"><i class="icon-link" aria-hidden="true"></i>Source</div>
+          <p style="margin:0;font-size:0.95em">Attaches a receipt to a claim: a price list, a spec sheet, a screenshot. Threads with sources rank higher in search.</p>
+        </div>
+        <div style="border-color:#EACDA6">
+          <div class="kicker" style="color:#8F4E10"><i class="icon-flag" aria-hidden="true"></i>Report</div>
+          <p style="margin:0;font-size:0.95em">Goes to a queue with a visible SLA. The reporter sees the outcome. Bad-faith reporting costs you standing too.</p>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <h3 style="margin:var(--space-5) 0 10px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h3)">Slow mode instead of the lock</h3>
+        <p>A heated Kopitiam thread today has two states: open, or locked and dead. I'd add a middle one, <strong>slow mode</strong>, one post per member per minute, applied automatically when report rate spikes, announced in the thread with the reason. Most flare-ups burn out in twenty minutes. Locking a 1,200-reply thread to solve twenty minutes is a bad trade.</p>
+
+        <h3 style="margin:var(--space-5) 0 10px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h3)">Veterans get tools, not immunity</h3>
+        <p>Long-standing members with clean records can mark an accepted answer, edit the settled summary, and second a report. Real leverage over quality. What they don't get is a different rulebook. The status is visible, the powers are listed publicly, and both are revocable.</p>
+
+        <h2 style="display:flex;align-items:center;gap:12px;margin:var(--space-5) 0 12px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.1);font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h2)"><i class="icon-flask-conical" aria-hidden="true" style="font-size:0.8em"></i>7. What I'd Test Before Shipping Any of It</h2>
+        <p>This is a concept study, so the honest part of it is the list of things I don't know. If someone handed me the real forum tomorrow, this is the order I'd find out in:</p>
+        <ol style="padding-left:22px;display:flex;flex-direction:column;gap:10px">
+          <li><strong>Does the three-lane model survive contact with regulars?</strong> A card sort with 12 long-time members, half of them Trade Zone people. If Kopitiam refuses to be "Talk", the lane names are wrong, not the members.</li>
+          <li><strong>Does the settled summary get written, or rot?</strong> Ship it in three sections for a month. If fewer than one thread in ten gets a summary, the feature is a fantasy and the thread view goes back to plain.</li>
+          <li><strong>Does "Helpful" get gamed?</strong> Watch the weighting for a quarter before letting it feed search ranking.</li>
+          <li><strong>Does public moderation reduce appeals, or invite arguments?</strong> Measure appeal volume and mod burnout. This is the change most likely to backfire.</li>
+          <li><strong>Does density-by-default hold?</strong> Compact is the default here. If new members bounce, the toggle's default flips by account age instead of a global decision.</li>
+        </ol>
+      </article>
+
+      <!-- Takeaways -->
+      <div class="post-callout is-note" style="margin-top:28px">
+        <aside>
+          <div class="callout-header"><i class="icon-key-round" aria-hidden="true"></i>Takeaways</div>
+          <ul style="margin:0;padding:14px 18px 16px 34px;display:flex;flex-direction:column;gap:8px">
+            <li>Legacy communities don't need less information, they need <strong>ranked</strong> information. I kept the density and changed the order.</li>
+            <li>The most valuable thing this forum owns is <strong>trust between strangers</strong>. Every screen I drew either shows that trust or protects it.</li>
+            <li>Moderation is a design surface, not an admin feature. Made visible, it becomes the community's evidence that the place is fair.</li>
+            <li>Redesigning something loved is mostly restraint. The temptation is to make it look like a modern app, the job is to make twenty years of knowledge easier to reach. <em>Jangan rosakkan apa yang orang dah sayang.</em> 🤙</li>
+          </ul>
+        </aside>
+      </div>
+
+      <!-- Prev / Next -->
+      <div class="post-nav">
+        <nav aria-label="More work">
+          <a href="/work/" class="nav-card is-prev">
+            <span class="nav-dir"><i class="icon-arrow-left" aria-hidden="true"></i>Back</span>
+            <span class="nav-title">All Work</span>
+            <span class="nav-date">The full portfolio</span>
+          </a>
+          <a href="/work/2020-09-01-the-hoojah-project.html" class="nav-card is-next">
+            <span class="nav-dir">Next<i class="icon-arrow-right" aria-hidden="true"></i></span>
+            <span class="nav-title">The Hoojah Project</span>
+            <span class="nav-date"><time datetime="2019">2013–2019</time></span>
+          </a>
+        </nav>
+      </div>
+    </main>
+    <!-- end Main Content Section -->
+
+    <!-- Footer Section -->
+    <footer class="container">
+      <section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau">~|{·})</a> <a href="/LICENSE"  class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <a href="/work/" class="text-decoration-none me-3">Back to Work</a>
+          <a href="#top" class="text-decoration-none">Back to top</a>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
+              <i class="brand-icon brand-github me-2"></i><span class="visually-hidden">GitHub</span>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙">
+              <i class="icon-heart me-2"></i><span class="visually-hidden">Sama²</span>
+            </a>
+          </li>
+          <li class="ms-3 mt-n1">
+            <a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
+              <i class="icon-coffee me-2"></i><span class="visually-hidden">Ko-fi</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <!-- end Footer Section -->
+
+    <script src="../jei-es.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- end Bootstrap JS -->
+  </body>
+</html>
