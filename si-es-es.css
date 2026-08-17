@@ -904,3 +904,71 @@ body:has(.page-header-balance) main {
 @media (prefers-reduced-motion: reduce) {
   .post-nav .nav-card:hover, .post-nav .nav-card:active { transform: none; }
 }
+
+/* === Section header 2B: "Rule tab" =======================================
+   The hairline promoted: a solid category tab sits on a 2px rule like a file
+   divider, so the line opens the section instead of closing the last one.
+   Contract: <div class="post-section-head"><span class="head-tab">…</span></div>
+   immediately followed by the <h2> it introduces. Colour rides the inherited
+   --cat-* vars; the bridge below guarantees they exist on every post page.
+   Specimen: components/design-system.html. */
+
+/* --cat-* bridge. The category vars at :768-771 only exist under
+   [data-category], which 11 h2-bearing posts never set; .page-header-* IS on
+   every served post. Derive the vars from it so no .post-* block is ever
+   colourless. An inner [data-category] wrapper still overrides by proximity. */
+body:has(.page-header-work)    { --cat-base: var(--color-work);    --cat-ink: var(--color-work-ink);    --cat-subtle: #E5E8F4; --cat-border: #BEC7E6; }
+body:has(.page-header-life)    { --cat-base: var(--color-life);    --cat-ink: var(--color-life-ink);    --cat-subtle: #E1F0E9; --cat-border: #BADCCB; }
+body:has(.page-header-balance) { --cat-base: var(--color-balance); --cat-ink: var(--color-balance-ink); --cat-subtle: #F7E9D8; --cat-border: #EACDA6; }
+
+/* Tab + rule. Flex (not inline) so no baseline gap opens between the tab and
+   the rule it sits on. Spans its container: the reading column. */
+.post-section-head {
+  display: flex;
+  align-items: flex-end;
+  margin: var(--space-5) 0 0;
+  border-bottom: 2px solid var(--cat-base, var(--color-primary));
+}
+.post-section-head.is-first { margin-top: 0; }
+.post-section-head .head-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  max-width: 100%;
+  padding: 6px 14px 5px;
+  background: var(--cat-base, var(--color-primary));
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  font-size: 13px;
+  line-height: 1.3;
+  color: #fff;
+}
+.post-section-head .head-tab i { font-size: 14px; }
+
+/* The h2 the head introduces. Geometry only: colour and --shadow-heading-sub
+   already come from body:has(.page-header-*) main h2 (si-es-es.css:639-668).
+   The doubled selector (0,3,3) outruns the reading-rhythm margins at :707-713
+   (0,2,3) without !important. */
+.post-section-head + h2,
+main.container > article.post-content .post-section-head + h2 {
+  margin: 18px 0 var(--space-2);
+  max-width: 26ch;
+  font-weight: 400;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+/* Colour for pages without a .page-header-* band (the component specimens):
+   same values the post-page rules resolve to, keyed off [data-category]. */
+[data-category] .post-section-head + h2 {
+  color: var(--cat-ink);
+  text-shadow: var(--shadow-heading-sub);
+}
+
+/* Inverse: for the one head on a dark category ground (landing-page contact
+   band). Tab flips to white-on-ink, rule goes white, h2 goes white. */
+.post-section-head.is-inverse { border-bottom-color: #fff; }
+.post-section-head.is-inverse .head-tab { background: #fff; color: var(--cat-ink, var(--color-ink)); }
+.post-section-head.is-inverse + h2 { color: #fff; text-shadow: var(--shadow-heading-sub); }
