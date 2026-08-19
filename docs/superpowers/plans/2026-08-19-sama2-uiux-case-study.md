@@ -21,6 +21,36 @@ Both are mechanical consequences of the site moving since the spec was approved.
 
 ---
 
+## Verified corrections (Task 2 result, 2026-08-19)
+
+Task 2 ran and its findings supersede any figure written earlier in this plan or in the spec. Findings note: `scratchpad/sama2-verified-facts.md`.
+
+**Corrected values — use these, not the spec's:**
+
+| Claim | Spec/research said | Verified |
+|---|---|---|
+| Neumorphism lifespan | six weeks | **49 days, exactly 7 weeks** (`9ce05deb` 2026-06-27 → `ace512b0` 2026-08-15) |
+| Total commits | ~4,052 | **4,054** |
+| Commits since Sama² began | ~1,750 | **1,759** (1,610 Rudzainy / 149 agent) |
+| Locale files | ms 39, zh-CN 5, ta 5 | **en 70 · ms 39 · en-MY 26 · zh-CN 5 · ta 5**; en-MY is a real third tier, not a stub |
+| Baselines | 138 | **110 screen + 28 mail = 138** |
+
+**Framing errors to avoid:**
+
+1. **Do not write that most of the app is un-skinned.** One `default_skin` declaration covers all 65 account controllers, so the entire logged-in app is skinned. The correct framing: one line skinned the whole authenticated app, with the public marketing surface, all four games, the Bento profiles and Devise auth **deliberately carved out**. Section 5's "two looks" point stands on those carve-outs.
+2. **Do not write that no specified font ever loaded.** JetBrains Mono did ship, on 2026-07-11. The airtight claim is narrower and still good: **DM Sans and Nunito never loaded a byte** (zero `font-family` rules in `neumorphism.css`; Tailwind overrode `mono` only; `sans` stayed the theme gem's `Inter var`).
+3. **Date-scope the CDN claim.** Inter came from `https://rsms.me/inter/inter.css` for the neu layer's life, 2026-06-27 to 2026-08-13, when it was self-hosted. It is false to say the fonts partial was absent at the layer's last commit.
+4. **Neumorphism first landed 2026-04-27** (`e68710e3`), two months before the Phase-0 programme. The seven-week figure is the programme; the idea ran 110 days end to end. Say which one is meant.
+5. Print `~69` pages for the scaffold-box eject, with the tilde. The source says approximately.
+
+**The quotation.** Verified verbatim at `docs/design/sama2-paper/readme.md:31-38`:
+
+> Pure neumorphism relies on low-contrast, blurred, same-color-on-same-color shadows and removes clear edges — which is directly hostile to low-vision and low-confidence users.
+
+It contains an em-dash. It is a **citation of an existing document, not authored copy**, so it is reproduced verbatim inside a `<blockquote>` and the no-em-dash rule does not apply to it. This is the *only* place an em-dash may appear in the file. The em-dash gates in Tasks 3 and 4 are adjusted accordingly: exactly one hit, inside the blockquote.
+
+---
+
 ## File structure
 
 | File | Disposition | Responsibility |
