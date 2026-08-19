@@ -433,7 +433,11 @@ Four `.stat` blocks, values from Task 3 Step 5.
 
 - [ ] **Step 5: Place the before/after comparison**
 
-In section 3, after the argument is made. Use `.post-before-after`, which is the library's own comparison component, and give it the theme-kit pair (the design-system specimen shows every component at once, so it is the clearest comparator). Every image uses the SmartImage frame so a missing file degrades to the songket placeholder:
+In section 3, after the argument is made. Use `.post-before-after`, the library's comparison component, and give it the **dashboard** pair (`dashboard-neumorph-desktop.png` as the before, `dashboard-paper-desktop.png` as the after).
+
+**Do not use the theme-kit pair here.** That page is Paper's own specimen: under the neumorph cookie it still reads "Paper Theme Kit" and its body copy still describes drawn edges, so presenting it as a "before" would be misleading. It never existed in that form during the neumorphic era. The theme-kit pair belongs in **section 4** instead, as the proof of the skin thesis: identical markup, re-valued tokens, captioned to say exactly that. Its token swatch rows are the clearest single illustration in the set, because under Paper the four surface tokens are visibly distinct warm whites in bordered boxes, and under neumorph they nearly vanish into the panel.
+
+Every image uses the SmartImage frame so a missing file degrades to the songket placeholder:
 
 ```html
 <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/theme_kit-neumorph-desktop.png" alt="The Sama² component specimen under the neumorphic skin: cool blue-grey surfaces with cards the same tone as the page" loading="lazy" data-fallback="Neumorphic theme kit"></span>
