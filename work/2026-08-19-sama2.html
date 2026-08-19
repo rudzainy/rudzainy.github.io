@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Sama² by Rudzainy Rahman</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A shared organiser for Malaysian families, and the seven weeks I spent building a neumorphic design system before deleting it and shipping Sama² Paper in its place.">
+
+    <!-- Bootstrap CSS & Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+    <!-- end Bootstrap CSS & Icons -->
+
+    <link rel="stylesheet" type="text/css" href="../si-es-es.css">
+
+    <style>
+      /* Narrow screens: the before/after pair stacks rather than squeezing two
+         desktop screenshots into ~170px each. */
+      @media (max-width: 767.98px) {
+        .post-before-after .before-after-grid { grid-template-columns: 1fr; gap: 24px; }
+      }
+
+      /* Case-study header, narrow screens: the hero and meta strip both stack. */
+      @media (max-width: 991.98px) {
+        .header-hero-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+        .header-meta-strip { grid-template-columns: 1fr !important; }
+        .header-meta-strip > div { border-left: 0 !important; }
+        .header-meta-strip > div + div { border-top: 1px solid rgba(0,0,0,0.1); }
+      }
+    </style>
+  </head>
+  <body data-category="work">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-info">
+      <div class="container">
+        <a href="/" title="Wow! It's a Wau!" class="navbar-brand text-info d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+        <button class="navbar-toggler border-0 text-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          ~|{·})
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/work/" class="nav-link"><i class="icon-pencil-ruler me-2"></i>Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="/life/" class="nav-link"><i class="icon-sun me-2"></i>Life</a>
+            </li>
+            <li class="nav-item">
+              <a href="/balance/" class="nav-link"><i class="icon-mountain me-2"></i>Balance</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end Top Navigation Bar -->
+
+    <!-- Page Header Band (solid category colour) -->
+    <div class="page-header-work" style="padding-bottom:0">
+      <div style="max-width:1140px;margin:0 auto;padding:20px 24px 0">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0" style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/work/">Work</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Sama²</li>
+          </ol>
+        </nav>
+        <!-- end Breadcrumb -->
+
+        <!-- Hero: kicker + title + standfirst + one-line thesis -->
+        <div class="header-hero-grid" style="display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center;padding:36px 0 44px">
+          <div>
+            <p style="margin:0 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px;color:rgba(255,255,255,0.75)">Case study · 2025–2026</p>
+            <h1 class="page-title" style="display:block;font-size:clamp(2.5rem,1.1rem + 4.5vw,4.5rem);line-height:1.05;text-wrap:balance">Sama²</h1>
+            <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:56ch">Sama² is a shared organiser for Malaysian families, built at Nasi Forge PLT on Rails 8 and Bullet Train. It lives at sama2.my. Around the organiser there is a games hub, and a set of Bento-style public profiles that a person can hang on their own domain.</p>
+          </div>
+          <aside style="background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-sm);box-shadow:var(--shadow-hover);padding:18px 20px">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:8px">The one-line thesis</div>
+            <p style="margin:0;font-size:1.05rem">The reason was that neumorphism was <strong>actively bad for the people Sama² is for</strong>.</p>
+          </aside>
+        </div>
+
+        <!-- Featured meta strip (overlaps the band) -->
+        <div class="header-meta-strip" style="background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);box-shadow:var(--shadow-active);display:grid;grid-template-columns:repeat(4,1fr);position:relative;transform:translateY(56px);margin-top:-56px">
+          <div style="padding:16px 20px">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Project</div>
+            <p style="margin:0">Sama², by Nasi Forge PLT</p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Technology stack</div>
+            <p style="margin:0">Ruby on Rails 8 + Bullet Train + Hotwire, Tailwind 3, esbuild</p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Year</div>
+            <p style="margin:0"><time datetime="2025">2025</time>–<time datetime="2026">2026</time></p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Project links</div>
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+              <a href="https://sama2.my" target="_blank" rel="noopener" class="meta-link"><i class="icon-external-link" aria-hidden="true"></i>sama2.my</a>
+              <span class="meta-link text-muted"><i class="icon-lock" aria-hidden="true"></i>Private repository</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Page Header Band -->
+
+    <!-- Main Content Section -->
+    <main style="max-width:1140px;margin:0 auto;padding:104px 24px 32px">
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p>The part worth writing up is not a feature. In late June 2026 I planned a whole visual identity for the app, neumorphic, soft, pillowy, the kind of thing that looks lovely in a screenshot. Seven weeks later I deleted it and shipped a different design system in its place, called Sama² Paper. The reason was that neumorphism was actively bad for the people Sama² is for. The interesting part is what the reversal cost, which was not what I expected, and what it taught me about where a visual language actually lives in a codebase.</p>
+      </article>
+
+      <!-- The shape of the repo, and of the reversal -->
+      <div class="post-stats">
+        <div class="stats-strip">
+          <div class="stat">
+            <div class="stat-num">1,759</div>
+            <div class="stat-label">Commits since Sama² began (13 August 2025)</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">595</div>
+            <div class="stat-label">Commits in the busiest month, May 2026</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">49</div>
+            <div class="stat-label">Days the neumorphic design system lived, exactly seven weeks</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">625</div>
+            <div class="stat-label">ERB files the visual language actually lived in</div>
+          </div>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <div class="post-section-head is-first" aria-hidden="true">
+          <span class="head-tab"><i class="icon-users"></i><span>01 &middot; who it's for</span></span>
+        </div>
+        <h2>What Sama² Is, and Who It's For</h2>
+        <p>Three surfaces, and they do not behave the same way.</p>
+        <p>The first is the logged-in app: the organiser proper, where a family keeps its tasks, its money, its bookings. This is the thing people sign in to on a Tuesday night. The second is a games hub. The third is the Bento profile, a public page you can put on your own domain, which is the one part of the design I have never once wanted to change.</p>
+      </article>
+
+      <div class="post-figure" style="margin-top:24px">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/tasks-paper-desktop.png" alt="The tasks screen in Paper, a list of household tasks in outlined white rows on cream, with checkboxes and status labels reading at full contrast." loading="lazy" data-fallback="Tasks in Paper"></span>
+          <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The organiser proper. Tasks, on the screen a family actually opens on a Tuesday night.</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p style="margin-top:20px">Who it is for matters more than any of that, and it is the sentence every decision below hangs off. Sama² is built for people who are not digital natives. Low end of digital adoption. The parent who has one app they trust and did not choose it. The relative who taps something, nothing visibly happens, and quietly concludes they broke it. Not the user you design for when you are picking a design language off a mood board.</p>
+        <p>If you hold that audience in your head, a lot of aesthetic questions stop being questions. Can this person see the edge of the button? Can they tell the button apart from the card it sits on? Is the tap target big enough for a thumb that is not steady? Those are the only three questions that ever really mattered here, and it still took me two design systems to start answering them properly.</p>
+
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-workflow"></i><span>02 &middot; inherit, delete</span></span>
+        </div>
+        <h2>The First Year: Inherit, Patch, Delete</h2>
+        <p>A caveat before any number, because otherwise the numbers lie.</p>
+        <p>The repository reports 4,054 commits and a first commit dated 15 November 2016, authored by Andrew Culver. That is Bullet Train's own history, inherited whole when I started from the framework. It is not Sama². Sama²'s first commit is <code>7edff0f5</code>, 13 August 2025, and its subject line is "Run configuration script." Since that commit there have been 1,759, of which 1,610 are mine and 149 were authored by an agent. The repo looks ten years old and it is one.</p>
+        <p>The inheritance is not just a footnote on a commit graph, it is the reason the frontend of this app was never really designed. Tailwind was adopted upstream in 2020. Turbolinks was replaced by Turbo in 2021. Webpacker was replaced by esbuild in 2022. Every one of those was settled years before Sama² existed. I made no greenfield frontend decisions at all. The frontend arrived already decided, and the only moves available to me were on top of it.</p>
+        <p>So the first year has a rhythm to it: build something bespoke, live with it, then delete it in favour of what the framework already did. I built a bespoke mobile navigation on 21 September 2025 and deleted it on 27 December 2025, going back to the Bullet Train default. I wrote a six-step wizard, 513 lines of it, and on 25 May 2026 replaced the whole thing with a single-sheet form. May 2026 is also the busiest month in the repo's history at 595 commits, which tells you roughly what that period felt like.</p>
+        <p>The one visual idea that survives all of it is the Bento profile. It has gone through every later redesign untouched. I do not have a tidy theory for why that one held and the rest did not, beyond the obvious: it was the only piece I designed for a specific person looking at a specific page, rather than for the app as a system.</p>
+
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-lightbulb"></i><span>03 &middot; the argument</span></span>
+        </div>
+        <h2>Neumorphism, and the Argument That Killed It</h2>
+        <p>The neumorphic layer was the first whole-app identity I planned before building it. There was a Phase 0 plan document and a specialist review. Plan commit 27 June 2026, deletion merge 15 August 2026: 49 days, exactly seven weeks. (The idea itself had landed earlier, on 27 April 2026, so end to end the neumorphic look lived 110 days. The seven weeks is the formal programme.)</p>
+        <p>Here is the tell I should have read at the time. From the very beginning, the neumorphic implementation kept a hairline border on every surface. Pure neumorphism does not have borders. That is the whole point of it, shape emerges from shadow alone. I put borders on anyway, on day one, because without them nothing had enough contrast to be legible. I had already diagnosed the problem. I just filed it as a tweak instead of as a verdict.</p>
+        <p>The verdict got written down properly in the Paper design docs, blunter than I would have put it about my own work:</p>
+        <blockquote class="blockquote">
+          <p>Pure neumorphism relies on low-contrast, blurred, same-color-on-same-color shadows and removes clear edges — which is directly hostile to low-vision and low-confidence users.</p>
+        </blockquote>
+        <p>Directly hostile. To exactly the users Sama² exists for. Once that sentence is on the page there is nothing left to argue about.</p>
+      </article>
+
+      <div class="post-before-after" style="margin-top:24px">
+        <div class="before-after-grid">
+          <figure>
+            <div class="ba-label is-before"><i class="icon-history" aria-hidden="true"></i>Before · Neumorph</div>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/dashboard-neumorph-desktop.png" alt="The same dashboard in the neumorphic skin, blue-grey throughout, its cards raised off the page by soft shadow rather than by any visible edge." loading="lazy" data-fallback="Dashboard, neumorph"></span>
+            <figcaption>Shape carried entirely by shadow, and a hairline border I had to add anyway.</figcaption>
+          </figure>
+          <figure>
+            <div class="ba-label is-after"><i class="icon-sparkles" aria-hidden="true"></i>After · Paper</div>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/dashboard-paper-desktop.png" alt="The Sama² family dashboard in Paper on desktop, a cream canvas with white summary cards, dark outlined edges and high-contrast text and headings." loading="lazy" data-fallback="Dashboard, Paper"></span>
+            <figcaption>The same dashboard once the edge stopped being implied and started being drawn.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Honesty note on the comparison above -->
+      <div class="post-callout is-note" style="margin-top:24px">
+        <aside>
+          <div class="callout-header"><i class="icon-info" aria-hidden="true"></i>Same design, not the same bytes</div>
+          <p class="callout-body">A note on the before-and-after images above: they are a reconstruction, not an archive. Both were captured at the same commit by flipping a cookie to switch skins, which means the "before" shots render 48px touch targets where the neumorphic era actually shipped 44px, and self-hosted Inter where the era pulled Inter from a CDN. Same design, not the same bytes. I would rather say that here than let you assume these are period screenshots.</p>
+        </aside>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p style="margin-top:20px">There is a second finding from that era that I keep turning over, because it says something about how design systems actually fail. The neumorphic design document specified three typefaces: DM Sans for UI, Nunito for display, JetBrains Mono for mono. JetBrains Mono did ship, on 11 July 2026, for small mono labels. DM Sans and Nunito never loaded a single byte. Not once, not anywhere. <code>neumorphism.css</code> declares zero <code>font-family</code> rules. The Tailwind config overrides <code>mono</code> and only <code>mono</code>, so <code>sans</code> quietly stayed whatever the theme gem said it was, which was Inter. And for the entire life of the layer, 27 June to 13 August 2026, that Inter was being pulled from <code>rsms.me</code>, a CDN belonging to someone else, until I self-hosted it right at the end.</p>
+        <p>So the era had a documented typographic identity it never rendered, and an undocumented one it rendered on every page, fetched from a domain I do not own. Nobody noticed because nobody was looking at the fonts. Everybody was looking at the shadows.</p>
+
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-layers"></i><span>04 &middot; one line back</span></span>
+        </div>
+        <h2>Paper, and Why the Reversal Was Cheap</h2>
+        <p>Sama² Paper makes three choices, and all three fall straight out of who it's for.</p>
+        <p>Edges do the structural work. Where neumorphism asked a blurred shadow to imply where a card ends, Paper draws the line. If you need to know where the button is, the button has an outline. That is not a style preference, it is the correction.</p>
+      </article>
+
+      <div class="post-figure" style="margin-top:24px">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/money-paper-desktop.png" alt="The money screen in Paper, showing figures and entries laid out in bordered white panels against the cream page." loading="lazy" data-fallback="Money in Paper"></span>
+          <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Money in Paper. Every panel has a drawn edge, so nothing depends on you seeing a shadow.</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p style="margin-top:20px">The typeface is Atkinson Hyperlegible, designed by the Braille Institute specifically so that characters that usually blur into each other stay distinguishable for low-vision readers. It is self-hosted, and the reason is worth stating because it is not aesthetic: the service worker skips cross-origin requests, so a font served from a CDN could never enter the offline cache. A CDN font is a font that vanishes the moment the connection does. Given the audience, that was not a trade I was willing to make twice.</p>
+        <p>And every tappable target has a floor of 48px. Thumbs, not cursors.</p>
+      </article>
+
+      <div class="post-figure" style="margin-top:24px">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/dashboard-paper-mobile.png" alt="The Paper dashboard on a phone. The desktop card grid stacked into a single column, each card full width with generous tap spacing between controls." loading="lazy" data-fallback="Dashboard on mobile"></span>
+          <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The same dashboard on a phone, where the 48px floor is the whole argument.</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p style="margin-top:20px">The reason I could throw away seven weeks of work without it being a disaster is the mechanism underneath. Every design language in the app is a skin, scoped under a <code>data-skin</code> attribute on <code>&lt;body&gt;</code>. That means switching the app's entire look is a declaration, and rolling it back is the same declaration with a different string. One <code>default_skin</code> line on the account application controller covers all 65 controllers under it, so the whole logged-in app got reskinned by editing one line. The public marketing pages, all four games, the Bento profiles and the Devise auth screens are deliberately carved out and stay undeclared.</p>
+      </article>
+
+      <div class="post-figure" style="margin-top:24px">
+        <figure>
+          <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/public-landing-desktop.png" alt="The public sama2.my landing page, the marketing surface deliberately carved out of the skin system and styled on its own terms." loading="lazy" data-fallback="Public landing"></span>
+          <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The public landing page, one of the surfaces that never declares a skin at all.</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p style="margin-top:20px">There was one more lever like that. Changing a single wrapper class on the ejected scaffold-box partial reskinned about 69 index and show pages with zero per-view edits, because nearly every scaffolded resource in a Bullet Train app renders through that one box.</p>
+      </article>
+
+      <div class="post-gallery" style="margin-top:24px">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/theme_kit-neumorph-desktop.png" alt="The same theme kit in the neumorphic skin. A cool blue-grey page where each specimen card is filled the same tone as the background and separated only by a soft pillowed shadow." loading="lazy" data-fallback="Theme kit, neumorph"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Paper's own specimen page, rendered under the neumorphic skin. It still says Paper, because only the tokens changed.</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/theme_kit-paper-desktop.png" alt="Sama² Paper theme kit on desktop. A cream page showing white specimen cards for colour, type and controls, every card and button outlined with a crisp drawn border." loading="lazy" data-fallback="Theme kit, Paper"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The same specimen page under Paper. Identical markup, re-valued.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p style="margin-top:20px">And now the honest part, which is the thing I actually want anyone reading this to take away. Replacing the visual design was roughly 10% of the work. The neumorphic classes were the visible tip. The real visual language of the app was never in a stylesheet at all. It was approximately 7,700 Tailwind colour utilities spread across 625 ERB files. That is what a design language looks like when it lives in your markup instead of in your tokens, and it is why "just change the theme" was a sentence I had no business saying out loud.</p>
+
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-arrow-up-circle"></i><span>05 &middot; two looks</span></span>
+        </div>
+        <h2>Where It Stands</h2>
+        <p>It is not finished, and pretending otherwise would be the wrong ending.</p>
+        <p>The app genuinely has two looks right now. The games and the Bento profiles are still un-skinned, on purpose, but on purpose is not the same as resolved. Move between the organiser and a game and you can see the seam.</p>
+      </article>
+
+      <div class="post-gallery" style="margin-top:24px">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/games-hub-desktop.png" alt="The Sama² games hub, still carrying its own un-skinned look rather than Paper's cream and drawn edges, with the four games presented as entry tiles." loading="lazy" data-fallback="Games hub"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The games hub, carved out on purpose and still wearing its own look.</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/bento-profile-desktop.png" alt="A public Bento-style Sama² profile. A grid of mixed-size tiles on a single page, the one part of the design that has survived every redesign." loading="lazy" data-fallback="Bento profile"></span>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The Bento profile, the other carve-out, and the one piece I have never wanted to change.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p style="margin-top:20px">The typography has a gap I have not closed either. Sama² ships five locales, and the file counts show what that really means: 70 files for <code>en</code>, 39 for <code>ms</code>, 26 for <code>en-MY</code>, 5 for <code>zh-CN</code>, 5 for <code>ta</code>. Atkinson Hyperlegible is Latin-only. So a Chinese or Tamil reader falls back to the system stack and gets none of the character-disambiguation reasoning that made me choose the typeface. The argument that killed neumorphism does not yet reach every reader in the app.</p>
+        <p>And there is a smaller thing that I like, because it is the kind of conflict you only find by shipping. An old <code>touch_optimizations.css</code> pins touch targets at 44px. Paper's floor is 48px. Two rules, both written by me, both defensible, disagreeing about how big a button should be.</p>
+        <p>That last one is the whole project in miniature. You do not discover that a design system is hostile to your users by looking at it. You discover it by building it, shipping it, and then reading your own hairline borders back to yourself as evidence.</p>
+      </article>
+
+      <!-- Prev / Next -->
+      <div class="post-nav">
+        <nav aria-label="More work">
+          <a href="/work/" class="nav-card is-prev">
+            <span class="nav-dir"><i class="icon-arrow-left" aria-hidden="true"></i>Back</span>
+            <span class="nav-title">All Work</span>
+            <span class="nav-date">The full portfolio</span>
+          </a>
+          <a href="/work/2026-08-12-rombak-lyn-forum.html" class="nav-card is-next">
+            <span class="nav-dir">More<i class="icon-arrow-right" aria-hidden="true"></i></span>
+            <span class="nav-title">Rombak LYN Forum</span>
+            <span class="nav-date"><time datetime="2026-08-12">12.08.2026</time></span>
+          </a>
+        </nav>
+      </div>
+    </main>
+    <!-- end Main Content Section -->
+
+    <!-- Footer Section -->
+    <footer class="container">
+      <section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau">~|{·})</a> <a href="/LICENSE"  class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <a href="/work/" class="text-decoration-none me-3">Back to Work</a>
+          <a href="#top" class="text-decoration-none">Back to top</a>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
+              <i class="brand-icon brand-github me-2"></i><span class="visually-hidden">GitHub</span>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙">
+              <i class="icon-heart me-2"></i><span class="visually-hidden">Sama²</span>
+            </a>
+          </li>
+          <li class="ms-3 mt-n1">
+            <a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
+              <i class="icon-coffee me-2"></i><span class="visually-hidden">Ko-fi</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <!-- end Footer Section -->
+
+    <script src="../jei-es.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- end Bootstrap JS -->
+  </body>
+</html>
