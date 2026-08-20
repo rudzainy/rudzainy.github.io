@@ -774,6 +774,11 @@ body:has(.page-header-balance) main {
 .smart-image { display:block; width:100%; overflow:hidden; border-radius:var(--radius-md); border:1px solid var(--color-neutral); background:var(--color-surface); box-sizing:border-box; }
 .smart-image img { display:block; width:100%; object-fit:cover; object-position:top; transition:transform var(--motion-slow) var(--ease); }
 .smart-image.is-zoom:hover img { transform:scale(var(--motion-zoom)); }
+/* .is-natural: never upscale past 1:1. For shots narrower than the frame
+   (phone captures, tall narrow pages) the frame shrinks to the image and
+   centres, instead of blowing a 390px screenshot up to 896px of mush. */
+.smart-image.is-natural { width:fit-content; max-width:100%; margin-inline:auto; }
+.smart-image.is-natural img { width:auto; max-width:100%; height:auto; object-fit:contain; }
 .smart-image-placeholder { display:flex; align-items:center; justify-content:center; aspect-ratio:16/10; border-style:dashed;
   background:repeating-linear-gradient(45deg,#EFE9DB 0 10px,#F6F2E9 10px 20px); }
 .smart-image-placeholder .label { font-family:var(--font-mono, ui-monospace,SFMono-Regular,Menlo,monospace); font-size:.78rem; color:var(--color-muted);
@@ -882,6 +887,14 @@ body:has(.page-header-balance) main {
 .post-stats .stat + .stat { border-left: 1px solid rgba(0,0,0,0.1); }
 .post-stats .stat-num { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 1.5rem + 2vw, 3rem); line-height: 1.1; color: var(--cat-ink); text-shadow: 2px 2px 0 rgba(32,26,43,0.22); }
 .post-stats .stat-label { margin-top: 6px; font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); font-size: 12px; color: var(--color-muted); }
+/* Four hard columns leave ~80px a cell on a phone, so a single long label
+   pushes the strip past the viewport. Fold to two columns instead. */
+@media (max-width: 767.98px) {
+  .post-stats .stats-strip { grid-template-columns: repeat(2, 1fr); }
+  .post-stats .stat + .stat { border-left: 0; }
+  .post-stats .stat:nth-child(even) { border-left: 1px solid rgba(0,0,0,0.1); }
+  .post-stats .stat:nth-child(n+3) { border-top: 1px solid rgba(0,0,0,0.1); }
+}
 
 /* 11. Prev / Next — two hover-lift cards ending the post. */
 .post-nav nav { max-width: 46rem; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }

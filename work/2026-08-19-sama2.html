@@ -88,8 +88,8 @@
             <p style="margin:0">Sama², by Nasi Forge PLT</p>
           </div>
           <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
-            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Technology stack</div>
-            <p style="margin:0">Ruby on Rails 8 + Bullet Train + Hotwire, Tailwind 3, esbuild</p>
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Role</div>
+            <p style="margin:0">UI/UX design, design system, and the frontend build</p>
           </div>
           <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
             <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Year</div>
@@ -111,27 +111,27 @@
     <main style="max-width:1140px;margin:0 auto;padding:104px 24px 32px">
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <p>The part worth writing up is not a feature. In late June 2026 I planned a whole visual identity for the app, neumorphic, soft, pillowy, the kind of thing that looks lovely in a screenshot. Seven weeks later I deleted it and shipped a different design system in its place, called Sama² Paper. The reason was that neumorphism was actively bad for the people Sama² is for. The interesting part is what the reversal cost, which was not what I expected, and what it taught me about where a visual language actually lives in a codebase.</p>
+        <p>The part worth writing up is not a feature. In late June 2026 I planned a whole visual identity for the app, neumorphic, soft, pillowy, the kind of thing that looks lovely in a screenshot. Seven weeks later I deleted it and shipped a different design system in its place, called Sama² Paper. The reason was that neumorphism was actively bad for the people Sama² is for. The interesting part is what the reversal cost, which was not what I expected, and what it taught me about where a visual language actually lives.</p>
       </article>
 
-      <!-- The shape of the repo, and of the reversal -->
+      <!-- The shape of the reversal -->
       <div class="post-stats">
         <div class="stats-strip">
-          <div class="stat">
-            <div class="stat-num">1,759</div>
-            <div class="stat-label">Commits since Sama² began (13 August 2025)</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">595</div>
-            <div class="stat-label">Commits in the busiest month, May 2026</div>
-          </div>
           <div class="stat">
             <div class="stat-num">49</div>
             <div class="stat-label">Days the neumorphic design system lived, exactly seven weeks</div>
           </div>
           <div class="stat">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Surfaces in the app, and only one of them got reskinned</div>
+          </div>
+          <div class="stat">
             <div class="stat-num">625</div>
-            <div class="stat-label">ERB files the visual language actually lived in</div>
+            <div class="stat-label">Screens the visual language turned out to be scattered across</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">48px</div>
+            <div class="stat-label">The floor under every tappable target in the replacement</div>
           </div>
         </div>
       </div>
@@ -157,24 +157,23 @@
         <p>If you hold that audience in your head, a lot of aesthetic questions stop being questions. Can this person see the edge of the button? Can they tell the button apart from the card it sits on? Is the tap target big enough for a thumb that is not steady? Those are the only three questions that ever really mattered here, and it still took me two design systems to start answering them properly.</p>
 
         <div class="post-section-head" aria-hidden="true">
-          <span class="head-tab"><i class="icon-workflow"></i><span>02 &middot; inherit, delete</span></span>
+          <span class="head-tab"><i class="icon-workflow"></i><span>02 &middot; inherited</span></span>
         </div>
-        <h2>The First Year: Inherit, Patch, Delete</h2>
-        <p>A caveat before any number, because otherwise the numbers lie.</p>
-        <p>The repository reports 4,054 commits and a first commit dated 15 November 2016, authored by Andrew Culver. That is Bullet Train's own history, inherited whole when I started from the framework. It is not Sama². Sama²'s first commit is <code>7edff0f5</code>, 13 August 2025, and its subject line is "Run configuration script." Since that commit there have been 1,759, of which 1,610 are mine and 149 were authored by an agent. The repo looks ten years old and it is one.</p>
-        <p>The inheritance is not just a footnote on a commit graph, it is the reason the frontend of this app was never really designed. Tailwind was adopted upstream in 2020. Turbolinks was replaced by Turbo in 2021. Webpacker was replaced by esbuild in 2022. Every one of those was settled years before Sama² existed. I made no greenfield frontend decisions at all. The frontend arrived already decided, and the only moves available to me were on top of it.</p>
-        <p>So the first year has a rhythm to it: build something bespoke, live with it, then delete it in favour of what the framework already did. I built a bespoke mobile navigation on 21 September 2025 and deleted it on 27 December 2025, going back to the Bullet Train default. I wrote a six-step wizard, 513 lines of it, and on 25 May 2026 replaced the whole thing with a single-sheet form. May 2026 is also the busiest month in the repo's history at 595 commits, which tells you roughly what that period felt like.</p>
+        <h2>The First Year: A Frontend I Inherited</h2>
+        <p>Sama² started in August 2025, and its frontend is older than the app.</p>
+        <p>I built on Bullet Train, which is a Rails framework that arrives with its interface already decided: the styling system, the page transitions, the component conventions, the shape of every scaffolded screen. Those calls were settled years before Sama² existed, by people I have never met. I made no greenfield frontend decisions at all. Everything I designed was a layer sitting on top of somebody else's, and that constraint is the honest starting condition for the whole case study.</p>
+        <p>So the first year has a rhythm to it: design something bespoke, live with it, then delete it in favour of what the framework already did. I built a bespoke mobile navigation in September 2025 and pulled it out that December, back to the default. I designed a six-step onboarding wizard and, in May 2026, replaced the whole thing with a single page. The wizard is the one I would have defended hardest, and it was still wrong: six screens and a row of progress dots, put in front of a parent who only wanted to add their family. One page, every field visible at once, and no sense of a journey you might fail halfway through.</p>
         <p>The one visual idea that survives all of it is the Bento profile. It has gone through every later redesign untouched. I do not have a tidy theory for why that one held and the rest did not, beyond the obvious: it was the only piece I designed for a specific person looking at a specific page, rather than for the app as a system.</p>
 
         <div class="post-section-head" aria-hidden="true">
           <span class="head-tab"><i class="icon-lightbulb"></i><span>03 &middot; the argument</span></span>
         </div>
         <h2>Neumorphism, and the Argument That Killed It</h2>
-        <p>The neumorphic layer was the first whole-app identity I planned before building it. There was a Phase 0 plan document and a specialist review. Plan commit 27 June 2026, deletion merge 15 August 2026: 49 days, exactly seven weeks. (The idea itself had landed earlier, on 27 April 2026, so end to end the neumorphic look lived 110 days. The seven weeks is the formal programme.)</p>
+        <p>The neumorphic layer was the first whole-app identity I planned before building it. There was a proper plan document and a specialist review to go with it. Planned 27 June 2026, deleted 15 August 2026: 49 days, exactly seven weeks. (The idea itself had landed earlier, in April, so end to end the neumorphic look lived 110 days. The seven weeks is the formal programme.)</p>
         <p>Here is the tell I should have read at the time. From the very beginning, the neumorphic implementation kept a hairline border on every surface. Pure neumorphism does not have borders. That is the whole point of it, shape emerges from shadow alone. I put borders on anyway, on day one, because without them nothing had enough contrast to be legible. I had already diagnosed the problem. I just filed it as a tweak instead of as a verdict.</p>
         <p>The verdict got written down properly in the Paper design docs, blunter than I would have put it about my own work:</p>
         <blockquote class="blockquote">
-          <p>Pure neumorphism relies on low-contrast, blurred, same-color-on-same-color shadows and removes clear edges — which is directly hostile to low-vision and low-confidence users.</p>
+          <p>Pure neumorphism relies on low-contrast, blurred, same-color-on-same-color shadows and removes clear edges, which is directly hostile to low-vision and low-confidence users.</p>
         </blockquote>
         <p>Directly hostile. To exactly the users Sama² exists for. Once that sentence is on the page there is nothing left to argue about.</p>
       </article>
@@ -197,17 +196,14 @@
       <!-- Honesty note on the comparison above -->
       <div class="post-callout is-note" style="margin-top:24px">
         <aside>
-          <div class="callout-header"><i class="icon-info" aria-hidden="true"></i>Same design, not the same bytes</div>
-          <p class="callout-body">A note on the before-and-after images above: they are a reconstruction, not an archive. Both were captured at the same commit by flipping a cookie to switch skins, which means the "before" shots render 48px touch targets where the neumorphic era actually shipped 44px, and self-hosted Inter where the era pulled Inter from a CDN. Same design, not the same bytes. I would rather say that here than let you assume these are period screenshots.</p>
+          <div class="callout-header"><i class="icon-info" aria-hidden="true"></i>Restaged, not archived</div>
+          <p class="callout-body">A note on the pair above: it is a reconstruction, not period screenshots. Both were captured on today's build by flipping the app between the two skins, so the neumorphic side is rendering the current 48px tap targets rather than the 44px it actually shipped with. The design is the design, the details are today's. I would rather say that here than let you assume these came out of the archive.</p>
         </aside>
       </div>
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <p style="margin-top:20px">There is a second finding from that era that I keep turning over, because it says something about how design systems actually fail. The neumorphic design document specified three typefaces: DM Sans for UI, Nunito for display, JetBrains Mono for mono. JetBrains Mono did ship, on 11 July 2026, for small mono labels. DM Sans and Nunito never loaded a single byte. Not once, not anywhere. <code>neumorphism.css</code> declares zero <code>font-family</code> rules. The Tailwind config overrides <code>mono</code> and only <code>mono</code>, so <code>sans</code> quietly stayed whatever the theme gem said it was, which was Inter. And for the entire life of the layer, 27 June to 13 August 2026, that Inter was being pulled from <code>rsms.me</code>, a CDN belonging to someone else, until I self-hosted it right at the end.</p>
-        <p>So the era had a documented typographic identity it never rendered, and an undocumented one it rendered on every page, fetched from a domain I do not own. Nobody noticed because nobody was looking at the fonts. Everybody was looking at the shadows.</p>
-
         <div class="post-section-head" aria-hidden="true">
-          <span class="head-tab"><i class="icon-layers"></i><span>04 &middot; one line back</span></span>
+          <span class="head-tab"><i class="icon-layers"></i><span>04 &middot; one switch</span></span>
         </div>
         <h2>Paper, and Why the Reversal Was Cheap</h2>
         <p>Sama² Paper makes three choices, and all three fall straight out of who it's for.</p>
@@ -222,30 +218,30 @@
       </div>
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <p style="margin-top:20px">The typeface is Atkinson Hyperlegible, designed by the Braille Institute specifically so that characters that usually blur into each other stay distinguishable for low-vision readers. It is self-hosted, and the reason is worth stating because it is not aesthetic: the service worker skips cross-origin requests, so a font served from a CDN could never enter the offline cache. A CDN font is a font that vanishes the moment the connection does. Given the audience, that was not a trade I was willing to make twice.</p>
+        <p style="margin-top:20px">The typeface is Atkinson Hyperlegible, drawn by the Braille Institute specifically so that characters which usually blur into each other stay distinguishable for low-vision readers. Sama² serves it from its own domain, and the reason is not aesthetic: the app has to keep working when the signal drops, and a font borrowed from somebody else's server is a font that disappears the moment the connection does. A legible typeface that only shows up on good coverage is not a legible typeface.</p>
         <p>And every tappable target has a floor of 48px. Thumbs, not cursors.</p>
       </article>
 
       <div class="post-figure" style="margin-top:24px">
         <figure>
-          <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/dashboard-paper-mobile.png" alt="The Sama² dashboard at 390 pixels wide in the Paper skin, cards stacked into one column above a bottom tab bar for Home, Projects, Inbox and Me." loading="lazy" data-fallback="Dashboard on mobile"></span>
+          <span class="smart-image is-zoom is-natural"><img src="../images/portfolio/sama2/dashboard-paper-mobile.png" alt="The Sama² dashboard at 390 pixels wide in the Paper skin, cards stacked into one column above a bottom tab bar for Home, Projects, Inbox and Me." loading="lazy" data-fallback="Dashboard on mobile"></span>
           <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The same dashboard on a phone, where the 48px floor is the whole argument.</figcaption>
         </figure>
       </div>
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <p style="margin-top:20px">The reason I could throw away seven weeks of work without it being a disaster is the mechanism underneath. Every design language in the app is a skin, scoped under a <code>data-skin</code> attribute on <code>&lt;body&gt;</code>. That means switching the app's entire look is a declaration, and rolling it back is the same declaration with a different string. One <code>default_skin</code> line on the account application controller covers all 65 controllers under it, so the whole logged-in app got reskinned by editing one line. The public marketing pages, all four games, the Bento profiles and the Devise auth screens are deliberately carved out and stay undeclared.</p>
+        <p style="margin-top:20px">The reason I could throw away seven weeks of work without it being a disaster is the way the design system is wired. A look in Sama² is a skin: a named set of tokens the app is told to wear, declared in one place rather than painted onto each screen. Dressing the entire logged-in app in Paper was one declaration, and putting neumorphism back would have been the same declaration with a different name. The public marketing pages, all four games, the Bento profiles and the sign-in screens are deliberately carved out and wear no skin at all.</p>
       </article>
 
       <div class="post-figure" style="margin-top:24px">
         <figure>
-          <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/public-landing-desktop.png" alt="The public sama2.my landing page, the marketing surface deliberately carved out of the skin system and styled on its own terms." loading="lazy" data-fallback="Public landing"></span>
+          <span class="smart-image is-zoom is-natural"><img src="../images/portfolio/sama2/public-landing-desktop.png" alt="The public sama2.my landing page, the marketing surface deliberately carved out of the skin system and styled on its own terms." loading="lazy" data-fallback="Public landing"></span>
           <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The public landing page, one of the surfaces that never declares a skin at all.</figcaption>
         </figure>
       </div>
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <p style="margin-top:20px">There was one more lever like that. Changing a single wrapper class on the ejected scaffold-box partial reskinned about 69 index and show pages with zero per-view edits, because nearly every scaffolded resource in a Bullet Train app renders through that one box.</p>
+        <p style="margin-top:20px">There was one more lever like that. Nearly every list-and-detail screen in the app is drawn inside one shared frame, so restyling that single frame restyled about 69 screens at once, without opening any of them.</p>
       </article>
 
       <div class="post-gallery" style="margin-top:24px">
@@ -256,13 +252,13 @@
           </figure>
           <figure>
             <span class="smart-image is-zoom"><img src="../images/portfolio/sama2/theme_kit-paper-desktop.png" alt="Sama² Paper theme kit on desktop. A cream page showing white specimen cards for colour, type and controls, every card and button outlined with a crisp drawn border." loading="lazy" data-fallback="Theme kit, Paper"></span>
-            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The same specimen page under Paper. Identical markup, re-valued.</figcaption>
+            <figcaption><i class="icon-image me-1" aria-hidden="true"></i>The same specimen page under Paper. Not one component redrawn, only re-valued.</figcaption>
           </figure>
         </div>
       </div>
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <p style="margin-top:20px">And now the honest part, which is the thing I actually want anyone reading this to take away. Replacing the visual design was roughly 10% of the work. The neumorphic classes were the visible tip. The real visual language of the app was never in a stylesheet at all. It was approximately 7,700 Tailwind colour utilities spread across 625 ERB files. That is what a design language looks like when it lives in your markup instead of in your tokens, and it is why "just change the theme" was a sentence I had no business saying out loud.</p>
+        <p style="margin-top:20px">And now the honest part, which is the thing I actually want anyone reading this to take away. Swapping the named design system was roughly 10% of the work. It was the visible tip. The real visual language of the app was never gathered in one place at all: it was around 7,700 hard-coded colour decisions spread across 625 screens, made one screen at a time over a year, each of them perfectly reasonable on the day. That is what a design language looks like when it lives in the screens instead of in the tokens, and it is why "just change the theme" was a sentence I had no business saying out loud.</p>
 
         <div class="post-section-head" aria-hidden="true">
           <span class="head-tab"><i class="icon-arrow-up-circle"></i><span>05 &middot; two looks</span></span>
@@ -286,8 +282,8 @@
       </div>
 
       <article style="max-width:var(--measure);margin:0 auto">
-        <p style="margin-top:20px">The typography has a gap I have not closed either. Sama² ships five locales, and the file counts show what that really means: 70 files for <code>en</code>, 39 for <code>ms</code>, 26 for <code>en-MY</code>, 5 for <code>zh-CN</code>, 5 for <code>ta</code>. Atkinson Hyperlegible is Latin-only. So a Chinese or Tamil reader falls back to the system stack and gets none of the character-disambiguation reasoning that made me choose the typeface. The argument that killed neumorphism does not yet reach every reader in the app.</p>
-        <p>And there is a smaller thing that I like, because it is the kind of conflict you only find by shipping. An old <code>touch_optimizations.css</code> pins touch targets at 44px. Paper's floor is 48px. Two rules, both written by me, both defensible, disagreeing about how big a button should be.</p>
+        <p style="margin-top:20px">The typography has a gap I have not closed either. Sama² ships in five locales: English, Malay, Malaysian English, Chinese and Tamil. The Malay and English translations are close to complete, the Chinese and Tamil ones are barely started, and Atkinson Hyperlegible is Latin-only regardless. So a Chinese or Tamil reader falls back to whatever their device happens to have, and gets none of the character-disambiguation reasoning that made me pick the typeface in the first place. The argument that killed neumorphism does not yet reach every reader in the app.</p>
+        <p>And there is a smaller thing that I like, because it is the kind of conflict you only find by shipping. An older set of touch rules, written by me, pins tap targets at 44px. Paper's floor is 48px. Two rules, both mine, both defensible, quietly disagreeing about how big a button should be.</p>
         <p>That last one is the whole project in miniature. You do not discover that a design system is hostile to your users by looking at it. You discover it by building it, shipping it, and then reading your own hairline borders back to yourself as evidence.</p>
       </article>
 
