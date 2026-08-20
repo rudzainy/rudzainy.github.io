@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Unica+One&display=swap');
 
 /* =========================================================================
-   DESIGN TOKENS — single source of truth for rudzainy.my
+   DESIGN TOKENS — single source of truth for rudzainy.com
    Palette: "Batik" (indigo / emerald / saffron on songket cream).
    Category colours are consumed by Bootstrap utility classes in the markup
    (text-info / bg-success / border-warning …), so the tokens below are the

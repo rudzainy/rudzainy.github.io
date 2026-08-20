@@ -1,9 +1,9 @@
 # rudzainy.github.io
 
-Personal portfolio at **[rudzainy.github.io](https://rudzainy.github.io)**.
-Hand-written static HTML on GitHub Pages. No build system, no SSG — the `.html`
-files in the repo are exactly what ships. (Brand/planned domain: **rudzainy.my**,
-not yet live; `rudzainy.com` is retired and no longer points here.)
+Personal portfolio at **[rudzainy.com](https://rudzainy.com)**, served from this
+repo via GitHub Pages (`CNAME` at the root). Hand-written static HTML. No build
+system, no SSG — the `.html` files in the repo are exactly what ships.
+`rudzainy.github.io` still resolves and redirects to the custom domain.
 
 ## Run locally
 
