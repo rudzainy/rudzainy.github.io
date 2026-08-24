@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Building RevoTickets by Rudzainy Rahman</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS & Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+    <!-- end Bootstrap CSS & Icons -->
+
+    <link rel="stylesheet" type="text/css" href="../si-es-es.css">
+  </head>
+  <body data-category="work">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-info">
+      <div class="container">
+        <a href="/" title="Wow! It's a Wau!" class="navbar-brand text-info d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+        <button class="navbar-toggler border-0 text-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          ~|{·})
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/work/" class="nav-link"><i class="icon-pencil-ruler me-2"></i>Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="/life/" class="nav-link"><i class="icon-sun me-2"></i>Life</a>
+            </li>
+            <li class="nav-item">
+              <a href="/balance/" class="nav-link"><i class="icon-mountain me-2"></i>Balance</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end Top Navigation Bar -->
+
+    <!-- Page Header Band (solid category colour) -->
+    <div class="page-header-work" style="padding-bottom:0">
+      <div style="max-width:1140px;margin:0 auto;padding:20px 24px 0">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0" style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/work/">Work</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Building RevoTickets</li>
+          </ol>
+        </nav>
+        <!-- end Breadcrumb -->
+
+        <!-- Hero: kicker + title + standfirst + featured image -->
+        <div class="header-hero-grid" style="display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center;padding:36px 0 44px">
+          <div>
+            <p style="margin:0 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px;color:rgba(255,255,255,0.75)">RevoTickets, for Revolution Stage &middot; 2025&ndash;2026 &middot; the build</p>
+            <h1 class="page-title" style="display:block;font-size:clamp(2.5rem,1.1rem + 4.5vw,4.5rem);line-height:1.05;text-wrap:balance"><span>building </span>RevoTickets</h1>
+            <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:54ch">RevoTickets is the event-ticketing platform I build for Revolution Stage, a Malaysian live-events company. This is the project-management side of it: how a small, AI-augmented team shipped a real seat-selling product in waves, the timeline it actually took, and what got cut to make a launch date. The three posts before this one dug into single hard problems. This one steps back and looks at the whole thing.</p>
+          </div>
+          <figure style="margin:0;background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-hover)">
+            <span class="smart-image is-zoom" style="display:block"><img src="../images/portfolio/revotickets/home-desktop.png" alt="The RevoTickets storefront home page" loading="lazy" data-fallback="RevoTickets storefront" style="width:100%;display:block;object-fit:cover;object-position:top;max-height:280px"></span>
+            <figcaption style="padding:8px 14px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--color-muted);border-top:1px solid rgba(0,0,0,0.1)">RevoTickets &middot; storefront</figcaption>
+          </figure>
+        </div>
+
+        <!-- Featured meta strip (overlaps the band) -->
+        <div class="header-meta-strip" style="background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);box-shadow:var(--shadow-active);display:grid;grid-template-columns:repeat(4,1fr);position:relative;transform:translateY(56px);margin-top:-56px">
+          <div style="padding:16px 20px">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Responsibilities</div>
+            <p style="margin:0">Product, delivery, full-stack build</p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Technology stack</div>
+            <p style="margin:0">Rails 8, Bullet Train, Hotwire, PostgreSQL, Solid Queue, ToyyibPay</p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Year</div>
+            <p style="margin:0"><time datetime="2025">2025</time>&ndash;<time datetime="2026">2026</time></p>
+          </div>
+          <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+            <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Status</div>
+            <p style="margin:0">Pre-launch, GA target Sep 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Page Header Band -->
+
+    <!-- Main Content Section -->
+    <main style="max-width:1140px;margin:0 auto;padding:104px 24px 32px">
+      <article style="max-width:var(--measure);margin:0 auto">
+        <div class="post-section-head is-first" aria-hidden="true">
+          <span class="head-tab"><i class="icon-book-open"></i><span>01 &middot; the setup</span></span>
+        </div>
+        <h2>Summary</h2>
+        <p class="lead">Revolution Stage puts on live theatre and music in Malaysia, and they needed a way to sell reserved seats for their own shows without handing a cut and their audience data to a third-party platform. RevoTickets is that: a bilingual (English and Malay) storefront that sells numbered seats, takes payment through the local bank rails, and hands over a scannable entry pass. I own the product and the build. The interesting part, for a project-management write-up, is that this got built the way a much larger team would build it, by one to two people leaning hard on AI, and the discipline that made that possible is worth more than any single feature.</p>
+        <p>Here is what it looks like today, on a laptop and on a phone.</p>
+      </article>
+
+      <!-- Snapshot: storefront desktop + mobile -->
+      <div class="post-gallery">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/revotickets/home-desktop.png" alt="RevoTickets storefront on desktop" loading="lazy" data-fallback="Storefront on desktop"></span>
+            <figcaption><i class="icon-monitor me-1" aria-hidden="true"></i>Storefront, desktop. The poster-led, near-black canvas is deliberate: event artwork is the hero.</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/revotickets/home-mobile.png" alt="RevoTickets storefront on mobile" loading="lazy" data-fallback="Storefront on mobile"></span>
+            <figcaption><i class="icon-smartphone me-1" aria-hidden="true"></i>Same page, phone. Most buyers arrive on a phone from a WhatsApp link, so this is the real front door.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-target"></i><span>02 &middot; what it had to do</span></span>
+        </div>
+        <h2>What it had to do</h2>
+        <p>A ticketing platform sounds like a solved problem until you write down the list. Model a real hall, seat by seat. Show it to a buyer who is choosing where to sit, and keep that map honest while other people are grabbing seats at the same second. Take money through FPX, which is how Malaysians actually pay online, and survive that gateway going quiet mid-transaction. Issue a wallet pass. Let door staff check people in from a phone. Do all of it in two languages, and do it as a proper multi-tenant system so more than one organiser can run on it later.</p>
+        <p>None of those are hard on their own. The job was getting all of them to stand up together and stay standing while the requirements kept moving. The event page below is the middle of the funnel: pick a show, read the synopsis, go choose seats.</p>
+      </article>
+
+      <!-- Snapshot: event page desktop + mobile -->
+      <div class="post-gallery">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/revotickets/event-desktop.png" alt="A RevoTickets event page on desktop" loading="lazy" data-fallback="Event page on desktop"></span>
+            <figcaption><i class="icon-monitor me-1" aria-hidden="true"></i>An event page on desktop: poster, synopsis, and the list of dated shows to pick from.</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/revotickets/event-mobile.png" alt="A RevoTickets event page on mobile" loading="lazy" data-fallback="Event page on mobile"></span>
+            <figcaption><i class="icon-smartphone me-1" aria-hidden="true"></i>The same event on a phone, single column, poster first.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-layers"></i><span>03 &middot; how it got built</span></span>
+        </div>
+        <h2>Shipped in waves, behind a gate</h2>
+        <p>The method that made a small team move like a big one was boring and strict: break the work into small waves, plan each wave in writing before touching code, review it, and then lock the result behind an automated gate so it could never regress. Every wave left the product shippable. Nothing sat half-finished on a branch for a month.</p>
+      </article>
+
+      <!-- Process steps -->
+      <div class="post-steps">
+        <div class="steps-rail">
+          <ol>
+            <li>
+              <div class="step-num">1</div>
+              <div>
+                <h3>Plan in writing</h3>
+                <p>Each wave started as a short plan document: what it delivers, what it explicitly does not, and how to tell it worked. Deciding scope on paper is cheaper than deciding it in code.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">2</div>
+              <div>
+                <h3>Review before building</h3>
+                <p>Plans got a review pass, sometimes from a second opinion, before implementation. More than one design decision got reversed at this stage, which is exactly where you want to reverse it.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">3</div>
+              <div>
+                <h3>Build the wave</h3>
+                <p>Implement the slice, keep the app shippable at the end of it. A wave that leaves the product broken is not a wave, it is a debt.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">4</div>
+              <div>
+                <h3>Ratchet the gate</h3>
+                <p>Lock the win behind an automated check that fails the build on a regression. The design system, for instance, is enforced by a test that rejects a stray colour or an off-scale spacing value. You only have to win each fight once.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-calendar-clock"></i><span>04 &middot; the timeline</span></span>
+        </div>
+        <h2>The timeline it actually took</h2>
+        <p>The heavy building happened across 2026, in overlapping tracks rather than a tidy single file. Language coverage and a framework upgrade came first, then the seat-map foundation and the design-system re-skin ran alongside the venue and booking work, and the public storefront got its own revamp near the end. The chart below is the shape of it.</p>
+      </article>
+
+      <!-- Gantt: the build timeline -->
+      <div class="post-figure">
+        <figure>
+          <div class="bg-light p-3 rounded shadow">
+            <pre class="mermaid">
+            gantt
+              title RevoTickets, the 2026 build
+              dateFormat YYYY-MM-DD
+              axisFormat %b
+              section Foundations
+                Bahasa Malaysia coverage        :2026-05-15, 12d
+                Bullet Train 1.44 upgrade        :2026-05-17, 6d
+              section Seat map
+                Seat-map foundation (Plans A-E)  :2026-07-08, 10d
+                Hall builder                     :2026-07-20, 33d
+              section Design system
+                Foundation + ratcheting gate     :2026-07-03, 12d
+                Primitives and waves             :2026-07-15, 32d
+              section Venues and bookings
+                Bookings wave (PR A-C)           :2026-07-03, 20d
+                Venue-streamline (Waves 0-3)     :2026-07-22, 12d
+              section Storefront
+                Public marketing revamp          :2026-08-13, 12d
+              section Launch
+                GA hardening (M1)                :2026-08-25, 24d
+            </pre>
+          </div>
+          <figcaption><i class="icon-gantt-chart me-1" aria-hidden="true"></i>The 2026 build, in overlapping tracks. July was the peak: a single week hit 134 commits, and the month as a whole ran past 350.</figcaption>
+        </figure>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p>A fair caveat on the numbers, because the Work section is for honest facts and not sales copy: the repository was started from a Bullet Train template years earlier, so a raw commit count includes inherited history and overstates the bespoke work. The delivery <em>intensity</em> is real though, and the peak-week figure is the part I would stand behind: 134 commits in seven days is what a deadline looks like.</p>
+      </article>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-armchair"></i><span>05 &middot; a build inside the build</span></span>
+        </div>
+        <h2>The seat map, a project of its own</h2>
+        <p>The single biggest line item was the seat map, and it earned that. It is not one screen, it is a builder for staff to lay out a hall, a preview, a live buyer view, and the engine that draws them all from the same source. It went through its own set of plans (seat identity, a serializer, real-time updates, roles, then a cutover) before it was trustworthy. If you want the gory detail of how a right-to-left row keeps its aisle in place, that is the first post in this series. Here is the buyer's-eye result, on both screens.</p>
+      </article>
+
+      <!-- Snapshot: seat map desktop + mobile -->
+      <div class="post-gallery">
+        <div class="gallery-grid">
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/revotickets/seatmap-desktop.png" alt="The RevoTickets seat map on desktop" loading="lazy" data-fallback="Seat map on desktop"></span>
+            <figcaption><i class="icon-monitor me-1" aria-hidden="true"></i>The seat map on desktop: colour-coded availability, aisles, a stage, and live status over a socket.</figcaption>
+          </figure>
+          <figure>
+            <span class="smart-image is-zoom"><img src="../images/portfolio/revotickets/seatmap-mobile.png" alt="The RevoTickets seat map on mobile" loading="lazy" data-fallback="Seat map on mobile"></span>
+            <figcaption><i class="icon-smartphone me-1" aria-hidden="true"></i>The same map on a phone, with pan-and-zoom controls, because most seats are picked on a small screen.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-bar-chart-3"></i><span>06 &middot; the scale</span></span>
+        </div>
+        <h2>What is under the hood</h2>
+        <p>For a sense of the surface area one or two people were keeping in the air, here is the count as it stood mid-year. An independent bottom-up estimate put a from-scratch rebuild of this at roughly 1,700 hours of work.</p>
+      </article>
+
+      <!-- Stats -->
+      <div class="post-stats">
+        <div class="stats-strip">
+          <div class="stat">
+            <div class="stat-num">34</div>
+            <div class="stat-label">Domain models</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">61</div>
+            <div class="stat-label">Database tables</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">215</div>
+            <div class="stat-label">Migrations</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">~14.3k</div>
+            <div class="stat-label">Lines of Ruby</div>
+          </div>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <p>Ninety-six controllers, seventeen background jobs, a fistful of service objects, thirty Stimulus controllers on the front. It is not a small app pretending to be big. It is a real one that a small team kept honest with tests and gates.</p>
+      </article>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-scissors"></i><span>07 &middot; cutting to ship</span></span>
+        </div>
+        <h2>What got cut, and why that mattered</h2>
+        <p>The most useful project-management work on RevoTickets was deciding what not to build. A launch date only exists if you are willing to move things off the near list, and we moved plenty. The organiser analytics dashboard, the people merge-and-invite flows, and the in-app help centre were all split out of the design-system re-skin so it could actually finish, rather than sprawling until it never did. A planned move to self-hosted infrastructure got deferred whole, with only the one piece that a nearer feature needed pulled forward. The hall builder shipped English-only on purpose, because translating an internal staff tool that only a handful of people use was not worth holding a launch for.</p>
+        <p>Every one of those was written down as a decision with a reason, not lost in a backlog. That is the difference between deferring something and dropping it.</p>
+      </article>
+
+      <div class="post-pull-quote">
+        <aside>
+          <p class="pq-quote">A launch date only exists if you are willing to move things off the near list. The hard project-management work is deciding what not to build.</p>
+        </aside>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-flag"></i><span>08 &middot; the road to launch</span></span>
+        </div>
+        <h2>The road ahead</h2>
+        <p>RevoTickets is pre-launch as I write this, and it is not vapour: it has already sold real seats to real Revolution Stage shows through the checkout described in these posts. The plan from here is staged, roughly six milestones over two years, each one a fundable chunk rather than a wishlist. The near one is the only one with a date I would defend.</p>
+      </article>
+
+      <!-- Roadmap milestones -->
+      <div class="post-steps">
+        <div class="steps-rail">
+          <ol>
+            <li>
+              <div class="step-num">1</div>
+              <div>
+                <h3>Public launch (GA) &middot; target Sep 2026</h3>
+                <p>The money path hardened, payment reconciliation automated, an accessibility pass, load testing, and launch operations. Most of this milestone is making the payment side boringly reliable.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">2</div>
+              <div>
+                <h3>Organiser self-serve &middot; late 2026</h3>
+                <p>An analytics dashboard, settlement and payout statements, and the people invite-and-merge flows that were deferred out of the launch.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">3</div>
+              <div>
+                <h3>Infrastructure and scale &middot; early 2027</h3>
+                <p>The deferred move to self-hosted infrastructure, monitoring and backups, tighter security headers. Housekeeping that buys headroom.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">4</div>
+              <div>
+                <h3>Promoter platform &middot; mid 2027</h3>
+                <p>Multi-tenant white-labelling for other promoters, plus a discovery and marketplace portal so events are findable, not just linkable.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">5</div>
+              <div>
+                <h3>Mobile and offline &middot; late 2027</h3>
+                <p>An installable app, a sturdier offline check-in scanner for the door, and wallet-pass polish.</p>
+              </div>
+            </li>
+            <li>
+              <div class="step-num">6</div>
+              <div>
+                <h3>Marketplace and regional &middot; 2028</h3>
+                <p>Recommendations, an additional payment gateway for cards and international buyers, and a partner API.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-lightbulb"></i><span>09 &middot; what I took from it</span></span>
+        </div>
+        <h2>What I took from it</h2>
+        <ul>
+          <li>Waves beat sprints of heroics. Small, shippable slices behind an automated gate let a tiny team move fast without leaving a mess to trip over later.</li>
+          <li>Write the decision down. "We are deferring X because Y" in a plan file is worth ten times the same thought lost in a chat, because future-you argues with the reason, not the vibe.</li>
+          <li>A launch date is a scope decision, not a calendar one. The near milestone shipped because things were taken off it, on purpose, with reasons.</li>
+          <li>Be honest about the numbers. Inherited history inflates a commit count, an internal tool can stay one-language, and a plan is not a promise. Saying so costs nothing and buys trust.</li>
+        </ul>
+        <p>If the single-problem deep dives are more your thing, the three posts below pull apart the seat map, the payment path, and the seat-selling race one at a time.</p>
+      </article>
+
+      <!-- Related: the engineering deep dives -->
+      <div class="post-related">
+        <h2><span class="lead-in">the</span> <span class="subject">RevoTickets deep dives</span></h2>
+        <div class="scroll-wrapper">
+          <section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
+            <article class="card border border-info bg-info-subtle text-info-emphasis card-2x1">
+              <div class="card-header">22.08.2026</div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h5 class="card-title">The Aisle That Moves</h5>
+                <p class="card-text">The seat-map engine, and the right-to-left row that has to mirror without moving its aisle.</p>
+                <a href="/work/2026-08-22-revotickets-the-aisle-that-moves.html" class="btn btn-outline-dark">Read more</a>
+              </div>
+            </article>
+            <article class="card border border-info bg-info-subtle text-info-emphasis card-2x1">
+              <div class="card-header">23.08.2026</div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h5 class="card-title">Money Out, No Ticket</h5>
+                <p class="card-text">Deciding whether a customer really paid, without trusting the gateway that says they did.</p>
+                <a href="/work/2026-08-23-revotickets-money-out-no-ticket.html" class="btn btn-outline-dark">Read more</a>
+              </div>
+            </article>
+            <article class="card border border-info bg-info-subtle text-info-emphasis card-2x1">
+              <div class="card-header">24.08.2026</div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h5 class="card-title">Two People, One Seat</h5>
+                <p class="card-text">Never selling the same seat twice, across a booking that leaves for the bank and comes back.</p>
+                <a href="/work/2026-08-24-revotickets-two-people-one-seat.html" class="btn btn-outline-dark">Read more</a>
+              </div>
+            </article>
+            <article class="card button border border-info bg-info-subtle text-info-emphasis">
+              <a href="/work/" class="display-6"><i class="icon-pencil-ruler me-1 text-info"></i><i class="icon-arrow-right text-info"></i><span class="visually-hidden">More of Work</span></a>
+            </article>
+          </section>
+        </div>
+      </div>
+
+      <article style="max-width:var(--measure);margin:0 auto">
+        <!-- Prev / Next -->
+        <div class="post-nav">
+          <nav aria-label="More work">
+            <a href="/work/" class="nav-card is-prev">
+              <span class="nav-dir"><i class="icon-arrow-left" aria-hidden="true"></i>Back</span>
+              <span class="nav-title">All Work</span>
+              <span class="nav-date">The full portfolio</span>
+            </a>
+            <a href="/work/2026-08-22-revotickets-the-aisle-that-moves.html" class="nav-card is-next">
+              <span class="nav-dir">Deep dive<i class="icon-arrow-right" aria-hidden="true"></i></span>
+              <span class="nav-title">The Aisle That Moves</span>
+              <span class="nav-date"><time datetime="2026-08-22">2026</time></span>
+            </a>
+          </nav>
+        </div>
+      </article>
+    </main>
+    <!-- end Main Content Section -->
+
+    <!-- Footer Section -->
+    <footer class="container">
+      <section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau" data-bs-toggle="modal" data-bs-target="#takdeModal">~|{·})</a> <a href="/LICENSE"  class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <a href="/work/" class="text-decoration-none me-3">Back to Work</a>
+          <a href="#top" class="text-decoration-none">Back to top</a>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
+              <i class="brand-icon brand-github me-2"></i><span class="visually-hidden">GitHub</span>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙">
+              <i class="icon-heart me-2"></i><span class="visually-hidden">Sama²</span>
+            </a>
+          </li>
+          <li class="ms-3 mt-n1">
+            <a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
+              <i class="icon-coffee me-2"></i><span class="visually-hidden">Ko-fi</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <!-- end Footer Section -->
+
+    <script src="../jei-es.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- end Bootstrap JS -->
+
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+      if (window.mermaid) { mermaid.initialize({ startOnLoad: true }); }
+    </script>
+  </body>
+</html>
