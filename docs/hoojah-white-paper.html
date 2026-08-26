@@ -1,0 +1,163 @@
+<title>Hoojah White Paper</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Unica+One&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+  :root{
+    --ink:#1a1a1a; --muted:#555; --paper:#fdfbf7; --rule:#e4ddcf;
+    --indigo:#2e2a6e; --emerald:#1f6f5c; --saffron:#c8891d;
+    --accent:var(--indigo); --link:#2e2a6e; --measure:44rem;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Crimson Text",Georgia,"Times New Roman",serif;
+    font-size:19px; line-height:1.62; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--measure); margin:0 auto; padding:4rem 1.5rem 6rem;}
+  .doc-kicker{
+    font-family:"Unica One",Arial,sans-serif; letter-spacing:.14em;
+    text-transform:uppercase; font-size:.82rem; color:var(--accent);
+    border-bottom:2px solid var(--accent); padding-bottom:.5rem; margin-bottom:1.4rem;
+  }
+  h1{
+    font-family:"Unica One",Arial,sans-serif; font-weight:400; line-height:1.08;
+    font-size:2.7rem; letter-spacing:.01em; margin:.2rem 0 .6rem;
+  }
+  .subtitle{font-size:1.15rem; color:var(--muted); font-style:italic; margin:0 0 1.2rem;}
+  .byline{font-size:.95rem; color:var(--muted); margin-bottom:2.5rem;}
+  .byline .status{
+    display:inline-block; font-family:"Unica One",Arial,sans-serif; letter-spacing:.08em;
+    text-transform:uppercase; font-size:.72rem; color:var(--saffron);
+    border:1px solid var(--saffron); border-radius:3px; padding:.15rem .5rem; margin-left:.4rem;
+  }
+  h2{
+    font-family:"Unica One",Arial,sans-serif; font-weight:400; font-size:1.7rem;
+    letter-spacing:.01em; margin:2.8rem 0 .4rem; padding-top:1.2rem;
+    border-top:2px solid var(--rule);
+  }
+  h3{font-family:"Unica One",Arial,sans-serif; font-weight:400; font-size:1.28rem; margin:1.8rem 0 .3rem; color:#333;}
+  h4{font-size:1.05rem; font-weight:700; margin:1.3rem 0 .2rem;}
+  p{margin:0 0 1rem;}
+  a{color:var(--link); text-decoration:none; border-bottom:1px solid rgba(46,42,110,.3);}
+  a:hover{border-bottom-color:var(--link);}
+  .abstract{
+    background:#f5f1e8; border-left:3px solid var(--emerald);
+    padding:1.2rem 1.4rem; margin:1.5rem 0 2rem; font-size:.98rem;
+  }
+  .abstract h2{border:0; margin:0 0 .4rem; padding:0; font-size:1.1rem; color:var(--emerald);}
+  blockquote{
+    margin:1.4rem 0; padding:.4rem 0 .4rem 1.3rem; border-left:3px solid var(--saffron);
+    font-style:italic; color:#403c33;
+  }
+  sup.cite{font-family:Arial,sans-serif; font-style:normal;}
+  sup.cite a{border:0; color:var(--emerald); font-weight:700; font-size:.72em;}
+  table{border-collapse:collapse; width:100%; margin:1.5rem 0; font-size:.9rem; font-family:Arial,Helvetica,sans-serif;}
+  caption{caption-side:top; text-align:left; font-style:italic; color:var(--muted); font-size:.85rem; margin-bottom:.5rem;}
+  th,td{border:1px solid var(--rule); padding:.5rem .7rem; text-align:left; vertical-align:top;}
+  th{background:#efeadd; font-weight:700;}
+  .fig{margin:1.8rem 0; padding:1.2rem; background:#f5f1e8; border:1px solid var(--rule); border-radius:4px;}
+  .fig .cap{font-size:.85rem; color:var(--muted); font-style:italic; margin-top:.6rem;}
+  ol.refs{font-family:Arial,Helvetica,sans-serif; font-size:.86rem; line-height:1.5; padding-left:1.6rem;}
+  ol.refs li{margin-bottom:.7rem; padding-left:.3rem;}
+  ol.refs li a{word-break:break-word;}
+  hr.sec{border:0; border-top:2px solid var(--rule); margin:2.5rem 0;}
+  .toc{background:#f5f1e8; border:1px solid var(--rule); border-radius:4px; padding:1.1rem 1.4rem 1.1rem 2.6rem; margin:2rem 0; font-family:Arial,sans-serif; font-size:.9rem;}
+  .toc-title{font-family:"Unica One",sans-serif; letter-spacing:.1em; text-transform:uppercase; font-size:.8rem; color:var(--muted); margin:0 0 .5rem -1.2rem; list-style:none;}
+  @media (max-width:640px){ body{font-size:17px;} h1{font-size:2.1rem;} .wrap{padding:2.5rem 1.1rem 4rem;} }
+  @media print{
+    body{background:#fff; font-size:11pt;}
+    .wrap{max-width:none; padding:0;}
+    h2{break-after:avoid;} table,blockquote,.fig{break-inside:avoid;}
+    a{color:#000; border:0;} sup.cite a{color:#000;}
+  }
+</style>
+<div class="wrap">
+<p class="doc-kicker">Hoojah · White Paper</p>
+<h1>Hoojah: Structured Debate as Infrastructure</h1>
+<p class="subtitle">A White Paper</p>
+<p class="byline">Rudzainy Rahman · rudzainy.com<span class="status">Working paper · 2026</span></p>
+<h2>1. Executive Summary</h2>
+<p>Most of what we call online discussion runs on machinery built for the wrong goal. Mainstream feeds are tuned to maximise attention, and attention is cheapest to buy with outrage, novelty, and heat. The predictable result is a public square where the loudest claim wins, the earliest vote drags the rest along, and a rude reply can change what you believe about a fact before you have finished reading it. These are not accidents of human nature. They are outcomes of design.</p>
+<p>Hoojah is a working platform engineered for the opposite outcome. It is built on three signature mechanics. First, three-stance voting behind a secret ballot: you take an explicit position on a claim (agree, neutral, or disagree) rather than firing off a reaction, and nobody, not even the claim's author, can ever see who voted which way; the per-stance split, an aggregate that names no one, stays hidden until enough votes exist to protect each voter. Second, vote-to-respond: you cannot reply to a claim you have not taken a stance on, so commitment comes before contestation. Third, structured one-on-one debates: disagreement can escalate into a bounded, turn-based exchange with named phases, and once it concludes, spectators who watched it cast a single verdict on who argued better.</p>
+<p>This is not a concept deck. The platform is live, deployed, and tested. The described machine runs in production on a Rails 8.1 monolith, with a test suite of 536 passing examples, zero failures, and zero static-analysis security findings. This paper lays out the problem Hoojah answers, the design that answers it, exactly what is built today, and what the same design logic puts on the roadmap next.</p>
+<h2>2. The Problem: Discourse Designed to Fail</h2>
+<p>If you have ever watched a promising online conversation curdle into a shouting match, it is tempting to blame the people. The more useful explanation is the machinery. The pathologies of online argument are, to a striking degree, engineered outcomes of platforms optimised for engagement. Change the design and you change the outcome. Four findings make the case.</p>
+<p><strong>Falsehood and outrage travel faster than truth.</strong> A large 2018 study in <em>Science</em> traced the spread of true and false news on Twitter and found that falsehood diffused significantly farther, faster, and deeper than the truth, largely carried by humans rather than bots, because false stories were more novel and provoked stronger emotional reactions <sup class="cite"><a href="#ref-1">[1]</a></sup>. That emotional edge is measurable. Analysis of moralised political content found that each moral-emotional word added to a message raised its diffusion by roughly twenty percent, and that this contagion stayed mostly inside ideological in-groups <sup class="cite"><a href="#ref-2">[2]</a></sup>. A feed that ranks by engagement is, in effect, ranking by whatever spreads, and what spreads is novelty and moral heat. The everyday symptom is familiar: the angriest quote-tweet outruns the careful correction every time.</p>
+<p><strong>Visible early votes herd the later ones.</strong> When a platform shows you a running score, it is not neutrally measuring opinion, it is shaping it. A randomised experiment on a news-aggregation site found that a single early up-vote, applied at random, raised the probability of later positive votes by about thirty-two percent and inflated final ratings by roughly twenty-five percent <sup class="cite"><a href="#ref-3">[3]</a></sup>. The scoreboard distorts the very opinion it claims to report. You see that a comment already has two hundred likes and you nudge toward agreement before you have judged it on the merits.</p>
+<p><strong>Tone poisons perception of content.</strong> It is not only what people say, but how nastily they say it. In a controlled experiment nicknamed "the nasty effect," readers shown an identical article about a technology story formed more polarised views of the technology itself when the comments beneath it were uncivil rather than civil <sup class="cite"><a href="#ref-4">[4]</a></sup>. The rudeness of a reply changed what readers concluded about the facts. On an engagement feed, where uncivil replies are exactly the ones that surface, this effect runs continuously in the background.</p>
+<p><strong>Anonymity plus zero structure disinhibits the worst behaviour.</strong> The "online disinhibition effect" identifies a cluster of factors (dissociative anonymity, invisibility, asynchronous exchange, and more) that loosen the restraints people carry offline and license them to act out <sup class="cite"><a href="#ref-5">[5]</a></sup>. Anonymity is not inherently toxic. But anonymity poured into a structureless comment box, with no cost to a drive-by insult and no format to hold anyone to, reliably produces the behaviour we all recognise.</p>
+<p>Read together, these are not laws of the internet. They are levers. Virality, vote visibility, reply tone, and the interaction between anonymity and structure are all design parameters, and a platform can set them differently. That is the thesis Hoojah is built to test.</p>
+<h2>3. Origins and Vision</h2>
+<p>Hoojah began with a civic instinct: <em>Malaysian data for Malaysians</em>. The founding idea was that a public reasons better when it can see its own mind, and that the record of how a society argues (what it claims, contests, and concludes) is a form of civic infrastructure worth building deliberately rather than renting from platforms optimised elsewhere. Debate, in this view, is not entertainment. It is how a public thinks out loud and discovers what it actually holds. Early framing placed the project against the broader arrival of social networking and the open question of whether we were ready for it <sup class="cite"><a href="#ref-6">[6]</a></sup>.</p>
+<p>That origin still supplies the motivation, but it no longer describes the product. The vision today is broader and more concrete: discourse infrastructure. Not a place to broadcast, but a machine that makes structured, accountable argument the path of least resistance. The rest of this paper is about that machine: how it is designed, what runs today, and what ships next.</p>
+<h2>4. The Hoojah Model</h2>
+<p>Hoojah's design is a point-by-point answer to the pathologies of Section 2. Each mechanic exists to defuse a specific failure mode. Here is the model, part by part.</p>
+<p><strong>Claims and stances.</strong> The atom of Hoojah is a <em>hujah</em>: a claim, stated plainly. When you encounter one, you do not "like" it or fire off an emoji. You take an explicit position, agree, neutral, or disagree, and only then is your voice counted. Reducing a reaction to a considered stance is not a new idea; it has real research pedigree. ConsiderIt, a deployed public-deliberation system, structured opinion around pro and con points that people create, adopt, and weigh, and demonstrated that interface design shapes how people deliberate rather than merely hosting what they would have done anyway <sup class="cite"><a href="#ref-7">[7]</a></sup>. Hoojah takes the same lesson: make the first act a position, not an outburst.</p>
+<p><strong>Vote-to-respond.</strong> This is the mechanic that surprises people. On Hoojah you cannot reply to a claim you have not voted on. The reply gate is enforced in the authorization layer, not just the interface, and requires that you have already taken a stance on the parent claim before it will let you post a response. The effect is to abolish the drive-by pile-on. Contestation costs a commitment: to argue against a claim, you must first go on record about where you stand. This single rule filters out the reflexive dunk, the reply written to perform for an audience rather than to engage the claim.</p>
+<p><strong>The secret ballot.</strong> Votes on Hoojah are anonymous by construction, and the anonymity is enforced in code, not promised in a policy page. The split is deliberate: arguments are signed, so you own what you say and can be held to it, while votes are secret, so nobody can be identified by how they voted. There is no vote serializer anywhere in the system; a vote is never rendered to anyone as belonging to a named person. When you cast your first vote on a claim, the notification the author receives deliberately carries no voter identity, so the author cannot learn who voted or how. And the per-stance breakdown (how many agreed versus disagreed) is suppressed until a claim has gathered at least five total votes, at which point revealing the split no longer fingerprints any individual. That suppression applies to everyone, including the claim's own author, who is treated as just another observer. This directly answers the herding evidence <sup class="cite"><a href="#ref-3">[3]</a></sup>: if early tallies are hidden, an early vote cannot stampede the later ones. One further option gives a vote weight without breaking anonymity: a <em>conviction</em> vote permanently locks your stance. You can no longer change it. It is belief with a cost, recorded only as an aggregate count, never as an attributable act.</p>
+<div class="fig">The vote lifecycle. A reader takes a stance (agree / neutral / disagree). The stance updates only the anonymous per-claim tallies; no per-voter record is ever exposed. Below five total votes, only the total is shown and the per-stance split stays hidden, even from the author. At or above five, the split becomes visible. A conviction vote locks the stance permanently and increments an aggregate count only.<span class="cap">Figure 1</span></div>
+<p><strong>One-on-one debates.</strong> When disagreement is worth pursuing, it can escalate out of the comment thread into a bounded, formal debate. One person challenges another; the opponent accepts or declines. If accepted, the two argue in strict alternating turns through named phases: an opening statement, counter-arguments, responses, and a closing statement. There is a cap on the number of rounds, with a single mutual extension available only at the closing boundary, and a debate that goes idle for seven days concludes automatically. This structure is the anti-derailment device. A ten-month ethnographic study of Kialo, a structured pro-and-con debate platform, found that adversarial values were a recurring source of conflict and argued for using interface design to foreground positions and manage that conflict <sup class="cite"><a href="#ref-8">[8]</a></sup>. More broadly, the deliberative quality of an online forum is a product of design and choice, not a fixed property of the technology <sup class="cite"><a href="#ref-9">[9]</a></sup>. Hoojah's turn structure is that choice made deliberately: you cannot interrupt, cannot dogpile, and cannot flood. You take your turn, then you wait for theirs.</p>
+<div class="fig">The debate state machine. <code>pending</code> (challenge issued) → <code>accepted</code> opens an <code>active</code> debate, or <code>declined</code> ends it. In <code>active</code>, turns alternate through phases opening → counter-argument → response → closing, capped at the round limit (with one optional mutual extension). The debate reaches <code>concluded</code> when the closing turn is posted, when either participant ends it, or when seven idle days trigger automatic conclusion.<span class="cap">Figure 2</span></div>
+<p><strong>Spectator verdicts and a non-viral feed.</strong> A debate does not end in a mob verdict as it unfolds. Only after it concludes do non-participants who could see it cast a verdict: challenger, opponent, or draw, one immutable vote each. Ties, including a debate nobody judged, resolve to a draw; only a clear plurality crowns a winner. And the surface that surfaces claims is not an outrage engine. Hoojah's trending ranking scores a claim by its total activity divided by a time-decay factor (the same gravity idea behind Hacker News), so recent, broadly engaged claims rise and old ones sink, without ranking on the emotional intensity that engagement feeds reward. The feed measures interest, not fury.</p>
+<h2>5. What's Built Today</h2>
+<p>Everything described in Section 4 runs in production. This is the current, shipped inventory, not a wishlist.</p>
+<p>The full claim loop is live: post a claim, take a stance, and argue in stance-grouped reply threads, all with the vote-to-respond gate enforced. One-on-one debates are live end to end, including real-time turn delivery: when your opponent posts, the transcript updates over an authorized WebSocket channel without a page refresh. Spectator verdicts are live, with the draw-on-tie resolution computed on read. The social layer is built too: a follow graph with private accounts and follow-requests (following a private account creates a request the owner approves), bidirectional blocking that is enforced in the authorization layer so a block hides content both ways, a flag-and-moderation queue with dismiss, remove, and warn actions for moderators, earned badges, @mentions and hashtags, the trending feed, and a privacy-gated personal analytics dashboard.</p>
+<p>The engineering posture behind that inventory is conservative on purpose. Hoojah is a server-rendered Rails 8.1 monolith using Hotwire (Turbo and Stimulus) with no separate JavaScript front-end framework. Authorization is per-action and deny-by-default: every controller action must explicitly authorize its request, and the base policy refuses anything not expressly permitted, so a forgotten check fails closed rather than open. The test suite reports 536 passing examples with zero failures and zero pending, the static-analysis security scanner (Brakeman) reports zero findings, the dependency audit is clean, and continuous integration plus automatic deployment are wired in.</p>
+<p>One piece deserves a direct word, because it is where policy meets code. Earlier in the project, the notification sent when someone first voted on a claim carried the voter's identity, which meant a claim's author could in principle de-anonymise their first voter. That vector has been closed. The current code sends the first-vote notification with no voter identity attached, the API has no path to reveal it, and a one-off backfill migration scrubbed the identity from every historical vote notification already in the database. Alongside it, the five-vote suppression threshold on per-stance tallies is built and applied uniformly, author included. The secret ballot on Hoojah is enforced in code, and pinned by tests that fail if a future change tries to reintroduce the identity link. It is not a promise in a privacy statement.</p>
+<h2>6. The Roadmap</h2>
+<p>The same design logic that produced the platform points at what comes next. Everything in this section is proposed and on the roadmap, not shipped. It is grouped by theme rather than by sprint, and it carries no dates, only sequencing rationale.</p>
+<p><strong>Trust and identity.</strong> The largest planned addition is identity verification, which is significant enough to warrant its own future specification. Alongside it are the remaining privacy residuals from the secret-ballot work. Some aggregate counts are still exposed unfiltered in places (for example certain per-user vote totals), and one further secret-ballot hardening decision has been settled but not yet implemented. These are known, tracked, and low-severity given the core de-anonymisation vector is already closed, but they are on the list.</p>
+<p><strong>Depth of debate.</strong> A debate-won badge and milestone badges are proposed but blocked on first finalising how the verdict tally crowns a winner, so the badge cannot be awarded against a moving definition. Bookmarks and saves, so a reader can keep a claim or debate to return to, are proposed and not yet built.</p>
+<p><strong>Insight.</strong> The analytics dashboard today reports current state. Proposed next are trends over time, computed by a nightly background rollup job rather than on every page load, plus reach and impression metrics and follower-growth charts. These are deferred deliberately: they were gated on settling the vote-notification privacy question first, which has now been resolved, clearing the way.</p>
+<p><strong>Platform.</strong> Two structural items sit underneath the features. The first is tidying how vote data is stored: today the same agree/neutral/disagree fact is recorded in a few different places and formats, and the plan is to keep just one clean copy of it (while still preserving the historical record of how a voter's stance changed over time, which has research value of its own) so the different copies can no longer drift apart. The second is making the app's public API enforce exactly the same privacy and blocking rules the website already does, so nothing leaks through the programmatic door that the web interface closes. Native mobile clients come last, and deliberately so: shipping native apps locks the API in place, and it would be a mistake to lock it before the data tidy-up and the privacy parity above are done. Order matters more than speed here.</p>
+<h2>7. Why This Design Should Work</h2>
+<p>The argument of this paper is a loop, and here it closes: every pathology from Section 2 has a mechanic aimed at it.</p>
+<table>
+<thead>
+<tr>
+<th>Pathology (Section 2)</th>
+<th>Hoojah's answer (Sections 4-6)</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Falsehood and outrage outrun truth in viral feeds <sup class="cite"><a href="#ref-1">[1]</a>, <a href="#ref-2">[2]</a></sup></td>
+<td>Trending ranks total activity with time-decay gravity, not emotional intensity</td>
+<td>Built</td>
+</tr>
+<tr>
+<td>Visible early votes herd later ones <sup class="cite"><a href="#ref-3">[3]</a></sup></td>
+<td>Secret ballot; per-stance tallies suppressed below five votes, author included</td>
+<td>Built</td>
+</tr>
+<tr>
+<td>Uncivil tone poisons perception of content <sup class="cite"><a href="#ref-4">[4]</a></sup></td>
+<td>Structured turn-based debate; no interrupting, dogpiling, or flooding</td>
+<td>Built</td>
+</tr>
+<tr>
+<td>Anonymity plus zero structure disinhibits behaviour <sup class="cite"><a href="#ref-5">[5]</a></sup></td>
+<td>Secret ballot anonymises the vote while arguments stay signed and accountable; the vote-to-respond gate supplies the missing structure</td>
+<td>Built</td>
+</tr>
+</tbody>
+</table>
+<p>Behind the table is a research bet worth stating plainly. Conversations that go bad tend to announce it early: pragmatic signals in the opening exchanges of a discussion predict whether it will later derail <sup class="cite"><a href="#ref-10">[10]</a></sup>. If failure is decided at the start, then the highest-leverage place to intervene is the start. That is exactly where Hoojah's structure bites: stance before reply, a formal opening statement, named phases with turns. The format fixes the opening conditions rather than moderating the wreckage afterward.</p>
+<p>Two objections are fair, and worth meeting head-on. <em>Structure kills the fun.</em> It removes a particular kind of fun, the drive-by dunk and the pile-on, and that is the point; what it protects is the fun of actually winning an argument in front of people who watched it. <em>Nobody accepts friction.</em> The friction is deliberate. Vote-to-respond and turn limits trade reach for quality: fewer, more committed contributions instead of many disposable ones. Hoojah is a bet that a smaller volume of accountable argument is worth more than an unlimited volume of reaction, to the people having it and to anyone trying to learn what a public actually thinks.</p>
+<h2>8. Conclusion and Invitation</h2>
+<p>Online discussion is not broken because people are broken. It is broken because the machinery rewards the wrong things. Hoojah is a working attempt to build the machinery differently: claims taken seriously, votes cast in secret, replies that cost a commitment, and disagreements that resolve in structured debate judged by the people who watched. It runs today, and its roadmap follows the same logic that built it.</p>
+<p>If you are a reader, come take a stance. If you are someone who loves to argue well, come debate. If you are a founder, a product person, or a builder who thinks the public square deserves better infrastructure, come collaborate, and if the mission resonates, support it. For the full scholarly treatment of the ideas sketched here, two companion research papers develop the deliberation theory and the computational-argumentation design in depth. This white paper is the invitation; those are the argument in full.</p>
+<h2>References</h2>
+<ol class="refs">
+<li id="ref-1">Vosoughi, S., Roy, D., &amp; Aral, S. (2018). The spread of true and false news online. <em>Science</em>, 359(6380), 1146–1151. DOI: <a href="https://doi.org/10.1126/science.aap9559">10.1126/science.aap9559</a>.</li>
+<li id="ref-2">Brady, W. J., Wills, J. A., Jost, J. T., Tucker, J. A., &amp; Van Bavel, J. J. (2017). Emotion shapes the diffusion of moralized content in social networks. <em>Proceedings of the National Academy of Sciences (PNAS)</em>, 114(28), 7313–7318. DOI: <a href="https://doi.org/10.1073/pnas.1618923114">10.1073/pnas.1618923114</a>.</li>
+<li id="ref-3">Muchnik, L., Aral, S., &amp; Taylor, S. J. (2013). Social Influence Bias: A Randomized Experiment. <em>Science</em>, 341(6146), 647–651. DOI: <a href="https://doi.org/10.1126/science.1240466">10.1126/science.1240466</a>.</li>
+<li id="ref-4">Anderson, A. A., Brossard, D., Scheufele, D. A., Xenos, M. A., &amp; Ladwig, P. (2014). The "Nasty Effect:" Online Incivility and Risk Perceptions of Emerging Technologies. <em>Journal of Computer-Mediated Communication</em>, 19(3), 373–387. DOI: <a href="https://doi.org/10.1111/jcc4.12009">10.1111/jcc4.12009</a>.</li>
+<li id="ref-5">Suler, J. (2004). The Online Disinhibition Effect. <em>CyberPsychology &amp; Behavior</em>, 7(3), 321–326. DOI: <a href="https://doi.org/10.1089/1094931041291295">10.1089/1094931041291295</a>.</li>
+<li id="ref-6">Jaakkola, H., Linna, P., Henno, J., &amp; Mäkelä, J. (2011). "(Social) networking is coming – are we ready?" In <em>MIPRO 2011, 34th International Convention on Information and Communication Technology, Electronics and Microelectronics</em>, Opatija, Croatia. IEEE. (Page range varies by index: the seed brief lists pp. 1133–1139; some catalogue records list pp. 170–176.)</li>
+<li id="ref-7">Kriplean, Travis, Morgan, Jonathan, Freelon, Deen, Borning, Alan &amp; Bennett, Lance (2012). "Supporting Reflective Public Thought with ConsiderIt." In <em>Proceedings of the ACM 2012 Conference on Computer Supported Cooperative Work (CSCW '12)</em>, 265–274. Seattle, WA. DOI: <a href="https://doi.org/10.1145/2145204.2145249">10.1145/2145204.2145249</a>.</li>
+<li id="ref-8">Beck, J., Neupane, B., &amp; Carroll, J. M. (2019). Managing conflict in online debate communities. <em>First Monday</em>, 24(7). DOI: <a href="https://doi.org/10.5210/fm.v24i7.9585">10.5210/fm.v24i7.9585</a>.</li>
+<li id="ref-9">Wright, Scott &amp; Street, John (2007). "Democracy, deliberation and design: the case of online discussion forums." <em>New Media &amp; Society</em> 9(5), 849–869. DOI: <a href="https://doi.org/10.1177/1461444807081230">10.1177/1461444807081230</a>.</li>
+<li id="ref-10">Zhang, Justine, Chang, Jonathan P., Danescu-Niculescu-Mizil, Cristian, Dixon, Lucas, Hua, Yiqing, Taraborelli, Dario &amp; Thain, Nithum (2018). "Conversations Gone Awry: Detecting Early Signs of Conversational Failure." In <em>Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018, Vol. 1: Long Papers)</em>, 1350–1361. Melbourne, Australia. DOI: <a href="https://doi.org/10.18653/v1/P18-1125">10.18653/v1/P18-1125</a>.</li>
+</ol>
+</div>

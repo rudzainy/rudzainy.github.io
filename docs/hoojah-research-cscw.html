@@ -1,0 +1,429 @@
+<title>Hoojah: Social Computing &amp; CSCW</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Unica+One&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+  :root{
+    --ink:#1a1a1a; --muted:#555; --paper:#fdfbf7; --rule:#e4ddcf;
+    --indigo:#2e2a6e; --emerald:#1f6f5c; --saffron:#c8891d;
+    --accent:var(--indigo); --link:#2e2a6e; --measure:44rem;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Crimson Text",Georgia,"Times New Roman",serif;
+    font-size:19px; line-height:1.62; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--measure); margin:0 auto; padding:4rem 1.5rem 6rem;}
+  .doc-kicker{
+    font-family:"Unica One",Arial,sans-serif; letter-spacing:.14em;
+    text-transform:uppercase; font-size:.82rem; color:var(--accent);
+    border-bottom:2px solid var(--accent); padding-bottom:.5rem; margin-bottom:1.4rem;
+  }
+  h1{
+    font-family:"Unica One",Arial,sans-serif; font-weight:400; line-height:1.08;
+    font-size:2.7rem; letter-spacing:.01em; margin:.2rem 0 .6rem;
+  }
+  .subtitle{font-size:1.15rem; color:var(--muted); font-style:italic; margin:0 0 1.2rem;}
+  .byline{font-size:.95rem; color:var(--muted); margin-bottom:2.5rem;}
+  .byline .status{
+    display:inline-block; font-family:"Unica One",Arial,sans-serif; letter-spacing:.08em;
+    text-transform:uppercase; font-size:.72rem; color:var(--saffron);
+    border:1px solid var(--saffron); border-radius:3px; padding:.15rem .5rem; margin-left:.4rem;
+  }
+  h2{
+    font-family:"Unica One",Arial,sans-serif; font-weight:400; font-size:1.7rem;
+    letter-spacing:.01em; margin:2.8rem 0 .4rem; padding-top:1.2rem;
+    border-top:2px solid var(--rule);
+  }
+  h3{font-family:"Unica One",Arial,sans-serif; font-weight:400; font-size:1.28rem; margin:1.8rem 0 .3rem; color:#333;}
+  h4{font-size:1.05rem; font-weight:700; margin:1.3rem 0 .2rem;}
+  p{margin:0 0 1rem;}
+  a{color:var(--link); text-decoration:none; border-bottom:1px solid rgba(46,42,110,.3);}
+  a:hover{border-bottom-color:var(--link);}
+  .abstract{
+    background:#f5f1e8; border-left:3px solid var(--emerald);
+    padding:1.2rem 1.4rem; margin:1.5rem 0 2rem; font-size:.98rem;
+  }
+  .abstract h2{border:0; margin:0 0 .4rem; padding:0; font-size:1.1rem; color:var(--emerald);}
+  blockquote{
+    margin:1.4rem 0; padding:.4rem 0 .4rem 1.3rem; border-left:3px solid var(--saffron);
+    font-style:italic; color:#403c33;
+  }
+  sup.cite{font-family:Arial,sans-serif; font-style:normal;}
+  sup.cite a{border:0; color:var(--emerald); font-weight:700; font-size:.72em;}
+  table{border-collapse:collapse; width:100%; margin:1.5rem 0; font-size:.9rem; font-family:Arial,Helvetica,sans-serif;}
+  caption{caption-side:top; text-align:left; font-style:italic; color:var(--muted); font-size:.85rem; margin-bottom:.5rem;}
+  th,td{border:1px solid var(--rule); padding:.5rem .7rem; text-align:left; vertical-align:top;}
+  th{background:#efeadd; font-weight:700;}
+  .fig{margin:1.8rem 0; padding:1.2rem; background:#f5f1e8; border:1px solid var(--rule); border-radius:4px;}
+  .fig .cap{font-size:.85rem; color:var(--muted); font-style:italic; margin-top:.6rem;}
+  ol.refs{font-family:Arial,Helvetica,sans-serif; font-size:.86rem; line-height:1.5; padding-left:1.6rem;}
+  ol.refs li{margin-bottom:.7rem; padding-left:.3rem;}
+  ol.refs li a{word-break:break-word;}
+  hr.sec{border:0; border-top:2px solid var(--rule); margin:2.5rem 0;}
+  .toc{background:#f5f1e8; border:1px solid var(--rule); border-radius:4px; padding:1.1rem 1.4rem 1.1rem 2.6rem; margin:2rem 0; font-family:Arial,sans-serif; font-size:.9rem;}
+  .toc-title{font-family:"Unica One",sans-serif; letter-spacing:.1em; text-transform:uppercase; font-size:.8rem; color:var(--muted); margin:0 0 .5rem -1.2rem; list-style:none;}
+  @media (max-width:640px){ body{font-size:17px;} h1{font-size:2.1rem;} .wrap{padding:2.5rem 1.1rem 4rem;} }
+  @media print{
+    body{background:#fff; font-size:11pt;}
+    .wrap{max-width:none; padding:0;}
+    h2{break-after:avoid;} table,blockquote,.fig{break-inside:avoid;}
+    a{color:#000; border:0;} sup.cite a{color:#000;}
+  }
+</style>
+<div class="wrap">
+<p class="doc-kicker">Hoojah · Master Research</p>
+<h1>Friction as a Feature: The Social-Computing Design of Hoojah, a Structured One-on-One Debate Platform</h1>
+<p class="byline">Rudzainy Rahman · rudzainy.com<span class="status">Working paper · 2026</span></p>
+<div class="abstract">
+<h2>Abstract</h2>
+<p>The pathologies that afflict large-scale online discussion, including incivility that contaminates the reception of otherwise sound content, herding on visible scores, the diffusion advantage that outrage and falsehood enjoy, and a dependence on reactive human moderation whose burden a growing platform cannot count on scaling with it, are not accidents of human nature meeting a neutral medium. They are consequences of specific interaction-design choices: an unconditional reply box, always-visible tallies, feed ranking tuned for velocity, and anonymity applied as a single indiscriminate dial. This paper presents the design rationale of Hoojah, a deployed structured-debate platform that inverts those choices through five coordinated levers: commitment before reply (a vote is required to argue), identity for arguments but anonymity for votes, a bounded dyadic debate with named phases and enforced turn-taking, an audience cast as jury rather than amplifier, and moderation encoded into structure and price rather than applied reactively after harm. We organize these mechanisms under two principles, selective translucence (making conduct and stakes visible where accountability helps and opaque where visibility distorts) and priced participation (graduated friction that selects for invested participants). We locate Hoojah in the structured-discussion design space through explicit comparison with four precedent systems, ConsiderIt, Reflect, Kialo, and the MIT Deliberatorium, and argue that all four structure content while none structures the encounter itself. We distinguish what is built, including a hardened secret ballot with k-anonymized tally suppression and subscribe-time channel authorization, from what is proposed, and we set out an evaluation plan grounded in discourse-quality coding. The contribution is a design rationale, a comparative analysis, and a built-versus-proposed ledger for treating friction as a first-class design material.</p>
+</div>
+<h2>1. Introduction: Discourse Failure as an Interaction-Design Artifact</h2>
+<p>The dominant venues for public discussion at internet scale were not engineered to produce good discussion. They were engineered to maximize engagement, and the two objectives diverge sharply once a platform grows past the size at which participants can see and be seen by one another. The divergence is now well documented. False news online spreads farther, faster, deeper, and more broadly than the truth, an advantage driven not by automated accounts but by human beings responding to novelty and emotional arousal <sup class="cite"><a href="#ref-1">[1]</a></sup>. Moralized and emotional language is itself a diffusion accelerant: each additional moral-emotional word in a message raises its retransmission by roughly twenty percent, and the contagion stays largely bounded within ideological in-groups, so the very features that make content travel also deepen the walls of the echo chamber <sup class="cite"><a href="#ref-2">[2]</a></sup>. When a platform then renders its social proof visible, it compounds the problem, because judgment herds: a single early positive rating raises the probability of subsequent positive ratings by about a third and inflates the final aggregate opinion by roughly a quarter <sup class="cite"><a href="#ref-3">[3]</a></sup>. Visibility, virality, and social influence are not separate failures. They are a single reinforcing loop that a diffusion-optimized feed installs by default.</p>
+<p>The reply box is where this loop poisons perception most directly. In the experiment that named the effect, exposure to uncivil comments beneath an otherwise identical article polarized readers' interpretation of the article's underlying subject: incivility in the discussion did not merely make the discussion unpleasant, it changed how the content itself was understood <sup class="cite"><a href="#ref-4">[4]</a></sup>. This is the observation on which the present paper turns. If the design of the comment surface, and not only the topic under discussion, shapes how content is received, then reducing incivility and derailment is not a matter of hygiene to be delegated to downstream moderation. It is a first-order interaction-design goal, on the same footing as latency or accessibility.</p>
+<p>The premise that discussion quality is a product of design rather than a fixed property of the technology has a name in the online-deliberation literature. Wright and Street argue that the deliberative quality of an online forum is a consequence of design and choice, so that different affordances yield different communities from the same population <sup class="cite"><a href="#ref-5">[5]</a></sup>. Recast in the vocabulary of computer-supported cooperative work, this is a claim about affordances and their behavioral consequences: the architecture of participation is the independent variable, and the character of the resulting community is the dependent one. The failures catalogued above are therefore not indictments of the users who produce them. They are the predictable output of a particular set of affordances, and a different set can be expected to produce a different output.</p>
+<p>Hoojah is a deployed system built on exactly that wager. It is a structured-debate platform on which a claim (a <em>hujah</em>) is posted, other users vote a three-way stance on it, and only those who have voted may argue; from the arguments, a challenger may escalate a disagreement into a bounded one-on-one debate with named phases and strictly alternating turns, which concluded, is judged by an audience that casts an immutable verdict. Every one of these mechanisms is an inversion of a design choice implicated above. Where the mainstream feed grants an unconditional reply, Hoojah prices the reply behind a committed stance. Where the mainstream feed renders social proof continuously, Hoojah anonymizes votes and suppresses tallies below a threshold. Where the mainstream feed treats the audience as an amplification engine, Hoojah treats it as a jury. And where the mainstream platform moderates reactively at growing human cost, Hoojah encodes moderation into structure and into price so that human moderation is a backstop rather than the system's load-bearing floor.</p>
+<p>This paper makes three contributions. First (C1), it presents the design rationale of a deployed structured-debate system with the precision the mechanisms warrant, distinguishing throughout what is present and working in the source tree from what is named only in a roadmap. Second (C2), it offers a four-system comparative analysis, positioning Hoojah against ConsiderIt <sup class="cite"><a href="#ref-6">[6]</a></sup>, Reflect <sup class="cite"><a href="#ref-7">[7]</a></sup>, Kialo as studied ethnographically by Beck and colleagues <sup class="cite"><a href="#ref-8">[8]</a></sup>, and the MIT Deliberatorium <sup class="cite"><a href="#ref-9">[9]</a></sup> along shared design dimensions, and it argues that these systems collectively structure the content of discussion while leaving the structure of the encounter untouched, an opening Hoojah claims. Third (C3), it provides a candid built-versus-proposed ledger and an evaluation plan, so that the systems contribution (what is deployed) is never confused with the design intent (what is roadmapped).</p>
+<p>The argument proceeds as follows. Section 3 reviews the evidence and distills it into five design levers. Section 4 conducts the comparative analysis. Section 5 consolidates the levers into two organizing principles, selective translucence and priced participation. Section 6 presents the Hoojah system mechanism by mechanism, tagging each as built or proposed and justifying it against the principles. Section 7 is the honest ledger. Section 8 sets out how the framework's central claim could be tested and what Hoojah teaches CSCW regardless of the outcome. Sections 9 and 10 scope the limitations and conclude.</p>
+<h2>2. Literature Review: From Documented Failures to Design Levers</h2>
+<p>The evidence that motivates Hoojah divides naturally into five clusters, and each cluster terminates in a specific design lever. The levers are the analytical currency of the paper; they recur in the comparative analysis of Section 4, in the framework of Section 5, and in the mechanism-by-mechanism account of Section 6. We take the clusters in turn.</p>
+<h3>2.1 Incivility, toxicity, and conversational derailment</h3>
+<p>The foundational finding is that incivility is not confined in its effects to the uncivil exchange. Anderson and colleagues showed experimentally that uncivil comments beneath a science article shifted readers' risk perceptions of the technology the article described, polarizing interpretation of the content itself even when the article was held constant <sup class="cite"><a href="#ref-4">[4]</a></sup>. Incivility, in other words, is contagious across the boundary between the discussion and its subject, which is why a platform cannot treat it as a merely local nuisance.</p>
+<p>How common, and how patterned, is it? Coe, Kenski, and Rains conducted a census of more than six thousand newspaper-website comments and found incivility both frequent and strongly context-driven, varying with topic and with the sources a discussion invoked. Their most consequential result for design is a population effect: frequent, invested commenters were, on average, more civil than one-time participants <sup class="cite"><a href="#ref-10">[10]</a></sup>. Incivility is disproportionately the behavior of the transient and the disengaged, which suggests that a system able to cultivate repeat, invested participation could lower incivility not by policing speech but by changing who does the speaking, and under what conditions.</p>
+<p>The behaviors that populate unstructured threads have themselves been typologized. Lukyanova's study of nearly five thousand commentators across Russian news outlets identifies a repertoire of communication strategies, including self-presentation, irony, the expert pose, the insult, and error-indication, and connects them to echo-chamber dynamics and trolling <sup class="cite"><a href="#ref-11">[11]</a></sup>. This repertoire is precisely what an unstructured reply box elicits and rewards, and it forms the behavioral baseline against which a structured debate surface is meant to re-channel participation.</p>
+<p>Critically, derailment is not random. Zhang and colleagues demonstrated that early pragmatic signals in a conversation, present in its opening exchanges, predict whether it will later turn awry, so that failure is legible before it fully manifests <sup class="cite"><a href="#ref-12">[12]</a></sup>. Chang and Danescu-Niculescu-Mizil extended this from prediction to live forecasting, modeling derailment as an emergent property that can be tracked as a conversation unfolds, turn by turn <sup class="cite"><a href="#ref-13">[13]</a></sup>. Together these results carry a sharp design implication: the moment of maximal leverage is the opening, and the useful intervention is one that shapes how an exchange begins and unfolds, not one that arrives after it has already collapsed.</p>
+<p>A necessary caveat guards against overcorrection. Papacharissi distinguishes civility from politeness and shows that robust, even heated, disagreement can be entirely healthy for democratic discussion; the pathology is incivility, understood as disrespect for the collective and for interlocutors' standing, not passion or vigor as such <sup class="cite"><a href="#ref-14">[14]</a></sup>. A design that suppressed heat along with incivility would trade one failure for another. The goal is structured contestation that licenses vigorous disagreement while denying incivility its footing.</p>
+<p><strong>Lever L1: structure the opening and the participants; do not merely mop up afterward.</strong> Because incivility contaminates content reception <sup class="cite"><a href="#ref-4">[4]</a></sup>, is concentrated among the transient rather than the invested <sup class="cite"><a href="#ref-10">[10]</a></sup>, and is forecastable from the opening onward <sup class="cite"><a href="#ref-12">[12]</a>, <a href="#ref-13">[13]</a></sup>, the highest-leverage intervention shapes who participates and how an exchange begins, while preserving room for vigorous disagreement <sup class="cite"><a href="#ref-14">[14]</a></sup>.</p>
+<h3>2.2 Moderation and behavior regulation</h3>
+<p>If structure is the front line, moderation is the backstop, and the design question is how much weight to place on each. Grimmelmann's analysis of moderation supplies the vocabulary. He identifies a small set of moderation verbs, including exclusion (deciding who may participate), pricing (imposing costs on participation), organizing (shaping how contributions are arranged and surfaced), and norm-setting (articulating and reinforcing standards), and frames the moderator's task as balancing the twin failures of chaos and sterility <sup class="cite"><a href="#ref-15">[15]</a></sup>. The verbs matter because they are not all reactive. Exclusion, pricing, and organizing can be built into the structure of a system in advance; only after-the-fact norm enforcement need be human and case-by-case.</p>
+<p>Kiesler, Kraut, Resnick, and Kittur assemble the evidence-based design claims for regulating behavior in online communities, covering norm-setting, gatekeeping at entry, and graduated sanctioning, and they treat these as design levers whose effects are empirically grounded rather than matters of taste <sup class="cite"><a href="#ref-16">[16]</a></sup>. Gatekeeping in particular is a structural intervention: a cost or condition imposed before a contribution is possible, which is the pricing verb operationalized at the threshold of participation.</p>
+<p>The alternative to structural regulation is human labor, and that labor is a finite and burnout-prone resource. Seering and colleagues interviewed fifty-six volunteer moderators across Twitch, Reddit, and Facebook and developed a model of how moderator roles shape prosocial community development <sup class="cite"><a href="#ref-17">[17]</a></sup>. Their work makes vivid both the value and the cost of human moderation: moderators are community-builders and role models, not merely censors, but they are also a finite and burnout-prone resource whose supply does not automatically grow with a platform's population. A design that leans entirely on reactive human moderation is a design whose safety degrades as it succeeds.</p>
+<p><strong>Lever L2: encode moderation into structure and into price, so that human moderation is the backstop rather than the system.</strong> Grimmelmann's exclusion, pricing, and organizing verbs <sup class="cite"><a href="#ref-15">[15]</a></sup> and Kiesler and colleagues' gatekeeping <sup class="cite"><a href="#ref-16">[16]</a></sup> can be built into affordances in advance, reserving scarce human labor <sup class="cite"><a href="#ref-17">[17]</a></sup> for the residual cases that structure cannot pre-empt.</p>
+<h3>2.3 Feed dynamics and social influence</h3>
+<p>The third cluster explains why the default feed behaves as it does. Vosoughi, Roy, and Aral established that falsehood enjoys a structural diffusion advantage over truth, spreading farther and faster because it is more novel and provokes stronger emotional responses; the advantage is a property of what humans choose to spread, not of bots <sup class="cite"><a href="#ref-1">[1]</a></sup>. Brady and colleagues identified the linguistic mechanism, showing that moral-emotional content diffuses disproportionately and that the diffusion is largely intra-ideological, so that an engagement-optimized ranking system amplifies moral outrage and reinforces the boundaries of the in-group in a single motion <sup class="cite"><a href="#ref-2">[2]</a></sup>. Muchnik, Aral, and Taylor closed the loop with a randomized experiment on visible ratings, demonstrating that a single manipulated early upvote produces herding, raising later positive votes by roughly a third and inflating final aggregate ratings by roughly a quarter <sup class="cite"><a href="#ref-3">[3]</a></sup>.</p>
+<p>The three findings compose into one lesson. When visibility (who and what is seen) is coupled to virality (what spreads) and social proof (what others have already endorsed) is displayed continuously, the system manufactures cascades that track emotional arousal and prior consensus rather than merit. Decoupling these is therefore a design objective in its own right.</p>
+<p><strong>Lever L3: decouple visibility from virality, and withhold or delay social proof.</strong> Because diffusion advantages falsehood and outrage <sup class="cite"><a href="#ref-1">[1]</a>, <a href="#ref-2">[2]</a></sup> and visible early tallies herd subsequent judgment <sup class="cite"><a href="#ref-3">[3]</a></sup>, a system should rank on something other than velocity and should not display vote counts in a way that lets consensus manufacture itself.</p>
+<h3>2.4 Anonymity, identity, and disinhibition</h3>
+<p>Suler's account of the online disinhibition effect enumerates the factors through which reduced accountability loosens conduct, among them dissociative anonymity (the separation of online action from offline identity), invisibility, asynchronicity, and the sense that the exchange is happening in a space apart <sup class="cite"><a href="#ref-18">[18]</a></sup>. The naive reading of Suler is that anonymity is uniformly corrosive and identity uniformly civilizing, so that a platform faces a single dial to set. That reading is too coarse. The factors Suler names attach to distinct affordances, which means anonymity is not one dial but several, and they can be set independently.</p>
+<p>The design insight that follows is the one Hoojah exploits most distinctively: a system can anonymize <em>judgment</em> while attributing <em>speech</em>. A vote can be cast into a secret ballot, protected from the disinhibition and herding that attach to visible, attributable endorsement, while an argument can be posted under a durable identity that carries accountability for what is said. The two are different acts with different failure modes, and a single anonymity policy for both is a category error.</p>
+<p><strong>Lever L4: split the anonymity dial.</strong> Following Suler <sup class="cite"><a href="#ref-18">[18]</a></sup>, anonymize the vote (where attribution invites herding and retaliation) and attribute the argument (where accountability improves conduct), rather than applying one anonymity setting to the whole system.</p>
+<h3>2.5 Social translucence</h3>
+<p>The fifth cluster supplies the master frame. Erickson and Kellogg's theory of social translucence proposes that systems supporting social processes should make socially salient information perceptible, and they organize the approach around a triad: visibility (making activity perceptible), awareness (participants' knowledge of that activity), and accountability (the responsibility that visibility induces) <sup class="cite"><a href="#ref-19">[19]</a></sup>. Their canonical intuition is the glass door: because you can see someone approaching on the other side, you do not fling it open into their face, and the door's translucence, not a rule or a monitor, produces the considerate behavior. Made mutually visible to one another, participants self-regulate.</p>
+<p>The move this paper makes is to read Erickson and Kellogg <em>selectively</em>. Their triad presumes that more visibility yields more accountability yields better behavior, and for conduct that is true. But Section 2.3 established a domain where visibility does the opposite: displayed vote tallies do not induce accountability, they induce herding <sup class="cite"><a href="#ref-3">[3]</a></sup>. Social translucence and social influence bias therefore point in opposite directions depending on <em>what</em> is made visible. Conduct visible is civilizing; consensus visible is distorting. The design principle is not to maximize translucence but to place it selectively.</p>
+<p><strong>Lever L5: make conduct and stakes visible where accountability helps (debates, verdicts, identities of speakers), and opaque where visibility distorts (ballots, running tallies).</strong> This selective application of Erickson and Kellogg's triad <sup class="cite"><a href="#ref-19">[19]</a></sup> is the paper's master frame: Hoojah as an exercise in <em>selective</em> translucence.</p>
+<h2>3. Comparative Systems Analysis: ConsiderIt, Reflect, Kialo, Deliberatorium</h2>
+<p>Hoojah is not the first system to structure online discussion, and its contribution is legible only against the systems that precede it. This section positions Hoojah relative to four influential precedents along five shared dimensions: the unit of structure (what the system arranges), stance capture (how a participant's position is recorded), who talks to whom (the interaction topology), the audience's role, and the adoption or energy model (what it costs to participate and to sustain the system). The section is the hinge of the paper, moving from problem to solution by asking, of each precedent, what it solved and what it left open.</p>
+<h3>3.1 ConsiderIt</h3>
+<p>ConsiderIt, deployed by Kriplean and colleagues, structures <em>opinion formation</em>. A user considering a proposition builds a personal pro/con list by creating points and, crucially, by adopting points that others have already written; the interface surfaces the points that people across the spectrum find compelling, so that the act of forming a position becomes an act of engaging with the other side's best reasons <sup class="cite"><a href="#ref-6">[6]</a></sup>. The unit of structure is the pro/con point; stance is captured as an aggregate position on a proposition, backed by the adopted points; the topology is one-to-many and asynchronous, with no direct address between named individuals; the audience is a diffuse public whose adoptions aggregate into the display; and the energy model is civic-deployment participation, which is real but limited and episodic, tied to particular consultations. ConsiderIt is direct evidence that interface design shapes deliberative behavior, and its point-adoption mechanism is the closest precedent for the idea that a system can make engaging with opposing reasons a structured, first-class act. What ConsiderIt does not offer is a contest: no two participants are set opposite one another to argue a disagreement to a conclusion before an audience. It structures the individual's reflection, not the encounter between two people.</p>
+<h3>3.2 Reflect</h3>
+<p>Reflect, also from Kriplean and colleagues, structures <em>listening</em>. It attaches to each comment a restatement space in which a reader summarizes the point before responding, and the original author can confirm whether the restatement is accurate; the affordance promotes active listening and makes the listener's understanding visible and correctable <sup class="cite"><a href="#ref-7">[7]</a></sup>. The unit of structure here is the individual comment plus its restatement; stance is not captured as such; the topology is per-comment and dyadic in a narrow sense (a responder restating one author); the audience is incidental; and the energy model is a lightweight micro-affordance bolted onto an existing comment system rather than a venue in its own right. Reflect's contribution is a proof that a small, well-placed prompt can change the quality of engagement by forcing acknowledgment before rebuttal. It is, however, a micro-affordance and not a venue: it improves the atom of a comment thread without giving the exchange a shape, a beginning, or an end. Hoojah's design territory of a steelman or acknowledgment turn, in which a debater restates the opponent's position before rebutting it, is precisely the ground Reflect motivates; that affordance is author-proposed (<code>[proposed here]</code>, not on the platform's roadmap; see Sections 6 and 7), and Reflect is the precedent that recommends it.</p>
+<h3>3.3 Kialo</h3>
+<p>Kialo hosts pro/con argument <em>trees</em> at scale, and Beck, Neupane, and Carroll studied it over a ten-month virtual ethnography of its debate communities <sup class="cite"><a href="#ref-8">[8]</a></sup>. The unit of structure is the argument node within a branching tree of claims and counter-claims; stance is captured by where in the pro/con tree a contribution attaches; the topology is many-to-many and asynchronous, with contributions accreting onto a shared structure; the audience participates by reading and by adding to the tree; and the energy model relies on communities of volunteer contributors sustaining the tree. Beck and colleagues' central finding is directly germane to Hoojah: adversarial values were a recurring source of conflict within these ostensibly rational debate communities, and the authors propose that interfaces should foreground positions to help manage that conflict. That finding reads as a design brief. If a platform's users are going to bring adversarial energy regardless, the interface should make positions legible and central rather than burying them, so that disagreement is channeled through visible stance rather than erupting as interpersonal friction. Hoojah's stance-first surface, in which the three-way vote precedes and organizes all argument, is a direct response to that brief. What Kialo's tree does not do is bound the encounter: the tree grows without a fixed set of contestants, without turns, and without a terminating judgment.</p>
+<h3>3.4 Deliberatorium</h3>
+<p>Klein's MIT Deliberatorium tackles <em>scale</em> head-on, combining argument mapping with attention-mediation metrics so that mass deliberation, potentially thousands of participants, remains tractable rather than collapsing into the incoherence of a flat comment thread <sup class="cite"><a href="#ref-9">[9]</a></sup>. The unit of structure is the formal argument map (issues, ideas, pro and con arguments) governed by rules that keep the map well-formed; stance is captured through the map's structure; the topology is many-to-many and mediated, with attention metrics steering participants toward the places their input is most needed; the audience is the deliberating crowd itself; and the energy model is the demanding one, requiring high authoring discipline and, characteristically, expert or trained moderators to keep contributions properly mapped. The Deliberatorium is the strongest precedent for the proposition that structure plus surfacing is a mechanism for <em>scaling</em> deliberation rather than merely hosting it. Its cost is exactly its authoring burden: the formalism that makes the map coherent also raises the price of contributing and leans on expert mediation, which bounds who will participate.</p>
+<h3>3.5 Synthesis</h3>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>ConsiderIt <sup class="cite"><a href="#ref-6">[6]</a></sup></th>
+<th>Reflect <sup class="cite"><a href="#ref-7">[7]</a></sup></th>
+<th>Kialo <sup class="cite"><a href="#ref-8">[8]</a></sup></th>
+<th>Deliberatorium <sup class="cite"><a href="#ref-9">[9]</a></sup></th>
+<th>Hoojah</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit of structure</td>
+<td>Pro/con point (created and adopted)</td>
+<td>Comment plus restatement</td>
+<td>Argument node in a pro/con tree</td>
+<td>Formal argument map</td>
+<td>The claim and the bounded debate</td>
+</tr>
+<tr>
+<td>Stance capture</td>
+<td>Aggregate position from adopted points</td>
+<td>None explicit</td>
+<td>Position by attachment in tree</td>
+<td>Position by map structure</td>
+<td>Native three-way vote, required before arguing <code>[built]</code></td>
+</tr>
+<tr>
+<td>Who talks to whom</td>
+<td>One-to-many, asynchronous, no direct address</td>
+<td>Responder restates one author</td>
+<td>Many-to-many onto shared tree</td>
+<td>Many-to-many, attention-mediated</td>
+<td>Two named contestants, alternating turns <code>[built]</code></td>
+</tr>
+<tr>
+<td>Audience role</td>
+<td>Diffuse public; adoptions aggregate</td>
+<td>Incidental</td>
+<td>Reader and co-author of tree</td>
+<td>The deliberating crowd</td>
+<td>Jury casting one immutable verdict <code>[built]</code></td>
+</tr>
+<tr>
+<td>Adoption / energy model</td>
+<td>Civic deployment, episodic</td>
+<td>Lightweight micro-affordance</td>
+<td>Volunteer community sustains tree</td>
+<td>High authoring cost, expert-mediated</td>
+<td>Priced participation; consent-gated dyads <code>[built]</code></td>
+</tr>
+</tbody>
+</table>
+<p>The synthesis is the crux of the comparison. All four precedents structure the <em>content</em> of discussion: ConsiderIt structures the points that compose an opinion, Reflect structures the restatement of a point, Kialo structures the tree of claims, and the Deliberatorium structures the argument map. None of them structures the <em>encounter</em>. In each, the interaction topology is either one-to-many or many-to-many, contributions accrete onto a shared artifact, and there is no bounded, terminating contest between two named individuals with an audience empowered to render judgment. This is the opening Hoojah claims. Its distinctive move is to make the bounded dyadic debate, complete with consent to participate, named phases, enforced alternation, a round limit, and an audience verdict, a first-class object of the system, a contest rather than a corpus. Two secondary distinctions follow from the same design center. First, Hoojah captures stance <em>natively</em> through a required three-way vote, rather than inferring it from adopted points, deriving it from tree position, or requiring it to be hand-authored into a formal map; the position is a datum the user supplies directly and cheaply, and it gates everything downstream. Second, Hoojah answers Beck and colleagues' foreground-positions brief <sup class="cite"><a href="#ref-8">[8]</a></sup> not as an afterthought but as its opening surface: you see the stance distribution and must take a stance before you may argue. Where the precedents ask how to arrange what people say, Hoojah asks how to structure the act of two people disagreeing in front of others, and builds the system around that object.</p>
+<h2>4. Design Framework: Selective Translucence and Priced Participation</h2>
+<p>The five levers of Section 2 consolidate into two organizing principles, and the rest of the paper is an application of them. The first principle governs <em>what is visible to whom</em>; the second governs <em>what it costs to act</em>. Together they constitute the framework, and Section 6 applies the framework mechanism by mechanism.</p>
+<h3>4.1 Principle P1: Selective translucence</h3>
+<p>Selective translucence is the disciplined, per-surface application of Erickson and Kellogg's visibility-awareness-accountability triad <sup class="cite"><a href="#ref-19">[19]</a></sup>, informed by the recognition from Section 2.3 that translucence civilizes conduct but distorts judgment. The principle is operationalized as a grid: for every surface in the system, decide whether the socially salient information should be visible and attributed or opaque and anonymized, and place it accordingly.</p>
+<p>Arguments and debate conduct sit at the visible, attributed end. When a user posts an argument or takes a turn in a debate, the contribution carries their identity and is legible to others, so that Erickson and Kellogg's accountability operates exactly as intended: because your reasoning is seen and attributed to you, you reason more carefully (L4's attributed-speech half, L5's conduct-visible half). Ballots sit at the opaque, anonymized end. A vote is never attributed to its caster, and per-stance tallies are suppressed below a threshold, because here visibility would herd rather than civilize (L3, L4's anonymized-judgment half, L5's consensus-opaque half). Moderation actions occupy a deliberate middle: their <em>effects</em> are visible (a removed contribution is gone, a warned author is notified) while the moderation <em>queue and process</em> are staff-only, so that norms are seen to be enforced without turning enforcement itself into a spectacle or a target. Selective translucence is thus not a single setting but a mapping, surface by surface, from the question "does visibility here help or distort?" to the answer "attribute it" or "anonymize it."</p>
+<h3>4.2 Principle P2: Priced participation</h3>
+<p>Priced participation is the deliberate imposition of graduated costs on acts of participation, combining Grimmelmann's pricing verb <sup class="cite"><a href="#ref-15">[15]</a></sup> with Kiesler and colleagues' gatekeeping <sup class="cite"><a href="#ref-16">[16]</a></sup>, in order to select for the invested participants whom Coe and colleagues found to be more civil <sup class="cite"><a href="#ref-10">[10]</a></sup>. The costs are not obstacles for their own sake; each is a gate calibrated to admit committed participation and to filter reactive participation, and each is placed at the point where the corresponding failure would otherwise enter.</p>
+<p>The graduated costs are five. Vote-to-respond requires a user to commit a stance before they may argue, pricing the reply behind an act of position-taking (L1, L2). Challenge-and-accept consent requires that a debate begin only when both parties agree to it, pricing the encounter behind mutual willingness (L1). Turn-taking requires participants to alternate, pricing each contribution behind the discipline of waiting one's turn (L1). Round caps bound the total cost and terminate the exchange, preventing the war of attrition (L1). Conviction-locking lets a voter convert a stance into a permanent, unchangeable commitment, the strongest price a participant can pay and a signal of genuine investment (L4). Each of these is friction, and friction is the mechanism by which the population self-selects toward the invested end that Coe and colleagues identified <sup class="cite"><a href="#ref-10">[10]</a></sup>.</p>
+<h3>4.3 The framework's testable claim</h3>
+<p>The two principles combine into a single empirical proposition, which Section 8 elaborates into an evaluation plan. <strong>The claim is that selective translucence plus graduated participation pricing yields higher-quality sustained discussion than open threads, without a proportional increase in moderator labor.</strong> The two halves are separable and separately falsifiable. The quality half predicts that debates conducted under selective translucence and pricing will score higher on established discourse-quality measures than matched flat threads. The labor half predicts that because moderation is largely encoded into structure and price (P2, L2), the human-moderation load will grow sublinearly with participation. This half is stated as a design hypothesis, not as a settled contrast against a known reactive baseline: Seering and colleagues characterize reactive human moderation as a finite, burnout-prone resource whose supply does not automatically grow with a platform's population <sup class="cite"><a href="#ref-17">[17]</a></sup>, but they do not measure how moderation labor scales against participation, and we know of no source that establishes that growth curve. A study testing the labor half would therefore have to measure its own reactive baseline rather than borrow a documented one. A design that improved quality only by spending unlimited moderator labor would refute the framework as decisively as one that reduced labor by degrading quality. The framework's wager is that structure buys both.</p>
+<h2>5. The Hoojah System: Design and Rationale</h2>
+<p>This section is the systems core. It presents Hoojah's mechanisms with the precision the CSCW venue expects, drawing every mechanic from the source tree, and it justifies each mechanism against the principles (P1, P2) and levers (L1 through L5) established above. Following the framing discipline of the paper, every mechanism is tagged <code>[built]</code> (present and working in the source), <code>[proposed]</code> (named in the platform's roadmap and not yet in code), or <code>[proposed here]</code> (an author-proposed, research-motivated design idea this paper advances, on neither the roadmap nor in code). The third tag is kept distinct on purpose: two affordances this paper suggests, the acknowledgment/steelman turn and the live derailment nudge, are our own design proposals rather than commitments the platform has recorded, and conflating them with roadmapped work would overstate the roadmap. The account proceeds in six sub-beats.</p>
+<h3>5.1 Stance-first threads</h3>
+<p><code>[built]</code> The atomic object in Hoojah is the <em>hujah</em>, a claim posted by a user, implemented as a self-referential tree in which a top-level claim has no parent and every argument is a child node. On encountering a claim, a user may cast one of three votes drawn from a closed stance domain, <code>agree</code>, <code>neutral</code>, or <code>disagree</code>, stored as integers one, two, and three respectively. This three-way stance is native and required, and it is the pivot of the whole design. Replies are gated on it: the authorization policy for creating a reply requires that the responder has already voted on the parent claim, a rule enforced at the policy layer rather than merely suggested in the interface (the "vote-to-respond gate"). Concretely, creating a reply requires that the parent is visible to the user, that neither party has blocked the other, and that the parent has been voted on by the user; absent a recorded vote, the reply is refused authorization. Replies, once permitted, are grouped and filterable by the stance of their authors, so a reader can see the agreeing arguments, the disagreeing arguments, and the neutral arguments as distinct clusters.</p>
+<p>This sub-beat implements two things at once. It operationalizes lever L1 (structure the participants and the opening) by ensuring that everyone who argues has first committed a position, converting the reply from a costless reflex into an act that follows a stance; and it is the priced-participation principle P2 at its lightest and most frequent, the entry-level gate through which all argument passes. It is also the concrete answer to Beck and colleagues' foreground-positions brief <sup class="cite"><a href="#ref-8">[8]</a></sup>: rather than letting adversarial energy erupt interpersonally, the interface makes stance the first-class, visible organizer of the discussion, so that a reader engages arguments <em>as</em> pro, con, or neutral positions. The stance-grouped display is the foregrounding those authors called for, built into the reading surface.</p>
+<h3>5.2 Anonymity split and k-anonymity</h3>
+<p><code>[built]</code> Hoojah splits the anonymity dial exactly as lever L4 prescribes, and it is worth being precise about the mechanics because the secret ballot is the platform's most consequential privacy property. Votes are anonymized in several mutually reinforcing ways. There is no vote serializer in the system; a vote is never rendered into the API, and the only stance a user can ever read back is their own. Tallies are denormalized onto counter columns on the claim (agree, neutral, disagree, and a conviction aggregate) and are incremented and decremented directly, so that no query ever needs to join the votes table to display a count, and the identity of a voter is structurally absent from every count path.</p>
+<p>The most important hardening concerns notifications. When a first vote is cast, the system creates a <code>new_vote</code> notification addressed to the claim's owner, and that notification deliberately carries <em>no</em> subject-user identifier. This is the resolved form of what was once a genuine de-anonymization vector. An earlier version of the code attached the voter's identity to that notification, which would have let a claim's owner learn, through the notification serializer, who had first voted on their claim and when. That vector is now closed: the notification is created without a subject-user, the serializer emits a username only when a subject-user is present (and so emits none here), and a one-off backfill migration nulled the subject-user on all pre-existing <code>new_vote</code> rows, so the historical records were cleaned as well as the code path. The result is that the API never hands a claim's owner the identity of who voted. (This is the load-bearing correction to the platform's own stale roadmap prose, which is treated as history in Section 6: the code, not the roadmap, is authoritative, and the code closed the vector.)</p>
+<p>On top of anonymity, Hoojah applies k-anonymity to the tallies themselves. A claim's per-stance breakdown is visible only when its total vote count reaches a threshold, <code>VOTE_BREAKDOWN_MIN</code>, which is set equal to the analytics anonymity parameter K, whose value is five, from a single source so the two cannot drift. Below five total votes, the ballot-counts method returns the total count but nil for each per-stance figure; at or above five, the full breakdown is shown. The suppression is applied uniformly, and pointedly it is applied <em>to the author as well</em>, on the principle that with respect to the secret ballot the author is just another observer and must not be given a privileged view that could de-anonymize a small electorate. Conviction, the locked-in vote, is likewise kept only as an anonymous aggregate count, never as an attributable weight.</p>
+<p>This sub-beat is the direct answer to two of the literature's findings. It answers Muchnik and colleagues' herding result <sup class="cite"><a href="#ref-3">[3]</a></sup> by withholding the fine-grained, early social proof that manufactures cascades: below the threshold there is no per-stance signal to herd on, and no vote is ever attributable to a nameable other whose endorsement could be followed. And it answers Suler's disinhibition analysis <sup class="cite"><a href="#ref-18">[18]</a></sup> by realizing the dial-split concretely: judgment is anonymized (the vote, the secret ballot) while speech remains attributed (arguments carry identity, per Section 5.1). Under principle P1, ballots sit firmly at the opaque end of the selective-translucence grid.</p>
+<p>Residual gaps are marked honestly. <code>[proposed]</code> Certain aggregate count columns remain unfiltered in places (a serializer's vote-count field and some remaining count columns), a tracked class of leak not yet closed; and a secret-ballot design decision recorded as "Slice 13, option C" has been decided but not implemented. These do not reopen the notification vector, which is closed, but they are the frontier of the secret-ballot work and are logged as such in Section 6.</p>
+<h3>5.3 The debate object</h3>
+<p><code>[built]</code> The debate is Hoojah's signature object and the mechanism that structures the <em>encounter</em> rather than the content. It is kept deliberately outside the claim tree, so that a debate carries none of the feed, vote, slug, or flag entanglements of a claim, and its lifecycle is a small state machine with four states: pending, active, concluded, and declined.</p>
+<p>A debate begins as a challenge anchored to a specific argument: one user challenges another over a claim, and the two parties hold differing stances (the challenger's and opponent's stances are validated to differ; the model rejects only identical stances, not stances that fail to be strict opposites, so an agree-versus-neutral pairing is permitted as well as agree-versus-disagree), so a debate is by construction a disagreement. The challenge is <em>consensual</em>. It sits pending until the opponent accepts or declines; only on acceptance does it become active, at which point the challenger's opening argument, supplied at challenge time, is posted atomically as the first turn. This is lever L1 and principle P2 in their strongest form: an encounter exists only when both parties have consented to it, which prices the debate behind mutual willingness and forecloses the ambush.</p>
+<p>Once active, the debate enforces strict alternation at the authorization layer. This is the security invariant the source calls "C1," and it is worth stating precisely because it is where structure becomes non-negotiable. The turn-creation policy authorizes a <em>turn instance</em> whose debate is active and whose current mover is the acting user; it does <em>not</em> authorize the debate as a whole. The distinction is load-bearing: authorizing the debate would collapse to a check that merely asks whether the user is signed in, which would let any signed-in user post any turn, whereas authorizing the specific turn ties permission to whose turn it actually is. Alternation is thus not a UI convention that a determined user could bypass; it is a property the server enforces on every turn, backed additionally by a unique index on the debate-and-position pair as the concurrency guard.</p>
+<p>The debate's contributions are organized into <em>named phases</em>, another instance of Grimmelmann's norm-setting verb <sup class="cite"><a href="#ref-15">[15]</a></sup> built into structure: the opening statement, the counter-argument, the response, and the closing statement, with the phase of each round derived from its position (round one is the opening, the final round is the closing, and the rounds between alternate counter-argument and response). The rounds are bounded by a limit (defaulting to four, validated within a ceiling of ten), which caps the total cost of the encounter and guarantees termination. A single consensual extension is permitted, but only at the closing-round boundary and only under a row-level lock that guards the phase-label invariant against a concurrent turn, so that the extension cannot silently relabel a closing round as something else under a reader. And if a debate simply goes idle, a scheduled job concludes any active debate whose last activity is more than seven days old, so that abandoned debates resolve rather than hanging open forever (the idle clock reads the timestamp of the last <em>turn</em>, because a turn touches the debate, so an actively argued debate is never wrongly timed out).</p>
+<p>The debate object is the encounter-structuring answer to Zhang and colleagues and to Chang and Danescu-Niculescu-Mizil <sup class="cite"><a href="#ref-12">[12]</a>, <a href="#ref-13">[13]</a></sup>. Those authors located the leverage point at the opening and along the unfolding of a conversation; the debate fixes exactly those dynamics by construction. The opening is not an unconstrained first strike but a consented, stance-assigned opening statement; the unfolding is not a free-for-all but a bounded, alternating, phase-labeled sequence with a guaranteed end. The very dynamics that predict derailment in unstructured threads are the dynamics the debate object removes from the participants' discretion. And because the format licenses vigorous, assigned opposition, it preserves the healthy heat that Papacharissi distinguishes from incivility <sup class="cite"><a href="#ref-14">[14]</a></sup>: the debate is adversarial by design, but the adversity is channeled through phases and turns rather than through disrespect.</p>
+<p><code>[proposed here]</code> The acknowledgment or steelman turn, in which a debater would be prompted to restate the opponent's position before rebutting it, is design territory this system's structure invites but has not yet built, and it is an author's proposal rather than a roadmap commitment; it is the affordance that Reflect motivates <sup class="cite"><a href="#ref-7">[7]</a></sup>, and it is logged in Section 6 among the research-motivated proposals.</p>
+<h3>5.4 Audience as jury, not amplifier</h3>
+<p><code>[built]</code> When a debate concludes, its spectators become a jury. A signed-in spectator who is not a participant may cast exactly one verdict on a concluded debate, choosing the challenger, the opponent, or a draw, and the verdict is immutable once cast. The tally is computed on read by grouping the verdicts, with no denormalized columns, and the winner is derived from it under a rule that resolves <em>any</em> tie to a draw: a side wins only on a unique maximum, and a tie for the maximum, including the degenerate case of zero verdicts or a draw plurality, yields a draw. Spectators watch the transcript of an active or concluded debate in real time over an authorization-checked channel (detailed in Section 5.6), so the audience is present during the contest but empowered only at its conclusion.</p>
+<p>This is lever L3 realized as a role reassignment. In the mainstream feed the audience is an amplification engine whose attention is the quantity being optimized; in Hoojah the audience is a jury whose judgment is the quantity being collected, and it renders that judgment only after the exchange is complete, once, and unchangeably. The verdict is a considered aggregate, not a running score that could herd the debate while it is underway (P1: the verdict is visible as an outcome, but it is not a live tally steering the contest). Consistent with the same lever, what the system surfaces as "trending" is computed not from diffusion velocity but from a gravity function over total activity within a forty-eight-hour window (a Hacker-News-style score dividing recent activity, votes plus child arguments, by an age term), so that visibility is decoupled from virality: recency and genuine engagement lift a claim, not the emotional contagion that drives sharing cascades <sup class="cite"><a href="#ref-1">[1]</a>, <a href="#ref-2">[2]</a></sup>.</p>
+<p><code>[proposed]</code> A debate-won recognition, a badge or standing conferred by winning verdicts, is roadmapped but unbuilt, blocked on finalizing how a verdict tally translates into a durable award; it is logged in Section 6.</p>
+<h3>5.5 Safety and privacy infrastructure</h3>
+<p><code>[built]</code> Hoojah's safety layer is the concrete mapping of Grimmelmann's moderation verbs <sup class="cite"><a href="#ref-15">[15]</a></sup> onto structure and policy, which is lever L2. The exclusion verb is realized as blocking: a block is bidirectional and its enforcement flows from a single memoized source of truth, the set of hidden user identifiers (the users I have blocked, unioned with the users who have blocked me). Every content filter and every relevant policy consults that set, so a block is enforced uniformly at the authorization layer rather than patched in view by view; blocking also tears down reciprocal follows in both directions. Blocks filter content for signed-in viewers (anonymous viewers see unfiltered content, since there is no account to filter for), and, consistent with the secret ballot, votes are deliberately left unfiltered by blocks because they carry no attribution and so present no vector.</p>
+<p>Private accounts and follow-requests implement graduated visibility. A follow of a private account lands in a pending state by default, so that a forgotten request is inert and never a leak, and it becomes an accepted follow only on approval; accepted-only associations are computed in one place, so counts and list pages are consistently restricted to accepted relationships. A claim's visibility layers three gates: the author's account privacy, a per-post visibility setting (public, followers-only, or private), and its moderation status. The moderation status is itself a structural exclusion: a removed claim is staff-only everywhere, the very first check in the visibility method returning false for non-moderators. The flag queue realizes the norm-setting and organizing verbs on the enforcement side: moderators can dismiss flags, remove content, or warn an author, each action leaving a notification trail so that enforcement, while conducted in a staff-only queue, has visible effects (P1's deliberate middle: effects visible, process staff-only). Mapping the verbs explicitly, exclusion is the block and the removal, organizing is the stance grouping of Section 5.1, pricing is the gates of Sections 5.1 through 5.3, and norm-setting is the phase labels and the moderation notifications.</p>
+<h3>5.6 Engineering substrate</h3>
+<p><code>[built]</code> A brief word on the substrate, for credibility rather than fetish. Hoojah is a server-rendered monolith over Hotwire (Turbo and Stimulus, no separate client framework), built on a current Rails release. Authorization is per-action and deny-by-default: an application-wide check verifies that every action was authorized, and the base policy defaults every predicate to denial, so a forgotten policy fails closed. The single real-time surface, the debate transcript, is delivered over a channel that re-checks the debate's show-policy <em>at subscribe time</em>, because the signed stream token is a durable credential and the socket must be gated independently of the page that rendered it; a tampered or unsigned stream name resolves to nothing and is rejected, and the channel always names itself so that it cannot fall back to an unauthorized default. Anonymous sockets are rejected at the connection layer. The test suite reports 536 examples passing with zero failures, static security analysis reports zero warnings, and continuous integration plus automatic deployment are in place. The point of recording this is narrow: the mechanisms above are not sketches but running code with authorization enforced structurally, which is what licenses the paper to treat them as a systems contribution rather than a proposal.</p>
+<h2>6. Built versus Proposed</h2>
+<p>The credibility of a systems contribution rests on an honest separation of what is deployed from what is intended. This section is that ledger. It first tabulates the split, then addresses a specific historiographic point about the platform's own documentation, then classifies the proposed items by which framework claim each would strengthen.</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Status</th>
+<th>Framework role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Timeline of claims with three-option voting</td>
+<td><code>[built]</code></td>
+<td>P2 (stance-first gate), L1</td>
+</tr>
+<tr>
+<td>Stance-grouped, filterable arguments</td>
+<td><code>[built]</code></td>
+<td>P1, Beck2019 foregrounding</td>
+</tr>
+<tr>
+<td>Vote-to-respond gate (policy-enforced)</td>
+<td><code>[built]</code></td>
+<td>P2, L1, L2</td>
+</tr>
+<tr>
+<td>Secret ballot: no vote serialization, own-stance-only reads</td>
+<td><code>[built]</code></td>
+<td>P1, L4</td>
+</tr>
+<tr>
+<td><code>new_vote</code> notification de-anonymization vector closed (plus backfill)</td>
+<td><code>[built]</code></td>
+<td>P1, L4</td>
+</tr>
+<tr>
+<td>K-anonymized tally suppression (K=5, author included)</td>
+<td><code>[built]</code></td>
+<td>P1, L3, L4</td>
+</tr>
+<tr>
+<td>Conviction as anonymous aggregate lock</td>
+<td><code>[built]</code></td>
+<td>P2, L4</td>
+</tr>
+<tr>
+<td>Debate object: challenge, consent, phases, alternation, round cap, extension</td>
+<td><code>[built]</code></td>
+<td>L1, P2, P1</td>
+</tr>
+<tr>
+<td>Turn-scoped authorization (the C1 invariant)</td>
+<td><code>[built]</code></td>
+<td>L1, L2</td>
+</tr>
+<tr>
+<td>Idle auto-conclusion (7-day timeout)</td>
+<td><code>[built]</code></td>
+<td>L1</td>
+</tr>
+<tr>
+<td>Spectator verdict, immutable, ties resolve to draw</td>
+<td><code>[built]</code></td>
+<td>L3, P1</td>
+</tr>
+<tr>
+<td>Real-time transcript over subscribe-time-authorized channel</td>
+<td><code>[built]</code></td>
+<td>P1, L2</td>
+</tr>
+<tr>
+<td>Trending by activity-with-gravity, 48-hour window</td>
+<td><code>[built]</code></td>
+<td>L3</td>
+</tr>
+<tr>
+<td>Bidirectional blocks, enforced in policy</td>
+<td><code>[built]</code></td>
+<td>L2</td>
+</tr>
+<tr>
+<td>Private accounts and pending-by-default follow requests</td>
+<td><code>[built]</code></td>
+<td>L2, P1</td>
+</tr>
+<tr>
+<td>Per-post visibility and moderation removal</td>
+<td><code>[built]</code></td>
+<td>L2, P1</td>
+</tr>
+<tr>
+<td>Flag queue: dismiss / remove / warn with notification trail</td>
+<td><code>[built]</code></td>
+<td>L2</td>
+</tr>
+<tr>
+<td>Event-driven badges</td>
+<td><code>[built]</code></td>
+<td>(engagement)</td>
+</tr>
+<tr>
+<td>Analytics dashboard (privacy-gated)</td>
+<td><code>[built]</code></td>
+<td>P1</td>
+</tr>
+<tr>
+<td>Acknowledgment / steelman turn prompt</td>
+<td><code>[proposed here]</code></td>
+<td>motivated by Kriplean2012b</td>
+</tr>
+<tr>
+<td>Live derailment nudge on turn streams</td>
+<td><code>[proposed here]</code></td>
+<td>motivated by Chang2019</td>
+</tr>
+<tr>
+<td>Debate-won and milestone badges</td>
+<td><code>[proposed]</code></td>
+<td>(recognition)</td>
+</tr>
+<tr>
+<td>Identity verification</td>
+<td><code>[proposed]</code></td>
+<td>L4, L2</td>
+</tr>
+<tr>
+<td>Bookmarks / save</td>
+<td><code>[proposed]</code></td>
+<td>(utility)</td>
+</tr>
+<tr>
+<td>Analytics trends / reach / impressions rollups</td>
+<td><code>[proposed]</code></td>
+<td>P1</td>
+</tr>
+<tr>
+<td>Stance-domain unification (array to scalar, then enum)</td>
+<td><code>[proposed]</code></td>
+<td>(internal)</td>
+</tr>
+<tr>
+<td>Full API visibility / block parity</td>
+<td><code>[proposed]</code></td>
+<td>L2, P1</td>
+</tr>
+<tr>
+<td>Unfiltered aggregate count-column residuals closed</td>
+<td><code>[proposed]</code></td>
+<td>P1</td>
+</tr>
+<tr>
+<td>First-vote uniqueness race fix (unique index plus rescue)</td>
+<td><code>[proposed]</code></td>
+<td>(correctness)</td>
+</tr>
+<tr>
+<td>Native clients</td>
+<td><code>[proposed]</code></td>
+<td>(reach)</td>
+</tr>
+</tbody>
+</table>
+<p>Two remarks sharpen the table. First, the historiographic note the framing rules require. The platform's own roadmap document, dated the fifth of August 2026, still describes the <code>new_vote</code> notification as carrying the voter's identity and warns that a claim's owner "already learns who first-voted on their hoojah, and when." That prose describes a prior state of the code. The shipped code closed the vector, creating the notification without a subject-user, guarding the serializer, and running a backfill migration that nulled the identifier on all historical rows. Where the roadmap prose and the source tree disagree, the source tree is authoritative, and this paper treats the vector as resolved throughout, precisely because the built artifact, not the stale document, is the systems contribution under study. The lesson generalizes: in a live system, documentation drifts behind code, and a design account must be mined from the code.</p>
+<p>Second, the proposed items sort cleanly by the framework claim each would strengthen, which is the useful way to read a roadmap. Several would strengthen <em>selective translucence</em> (P1): closing the residual unfiltered count columns and achieving full API visibility parity would extend the secret ballot's coverage to the last surfaces where a tally leaks, and the analytics rollups would have to be built to the same k-anonymity discipline as the dashboard they extend. Others would strengthen <em>priced participation</em> (P2) and its adjacent levers: identity verification would add a stronger gate at the top of the funnel (L2, L4), and the two research-motivated affordances, the acknowledgment turn motivated by Reflect <sup class="cite"><a href="#ref-7">[7]</a></sup> and the live derailment nudge motivated by Chang and Danescu-Niculescu-Mizil <sup class="cite"><a href="#ref-13">[13]</a></sup>, would deepen the structuring of the encounter itself (L1). A third group is internal correctness and reach (stance-domain unification, the first-vote uniqueness race fix, native clients) and carries no framework weight, which is exactly why it is honest to name it separately rather than dress it as design. The discipline of the ledger is that a reader can tell, at a glance, which promises would advance the thesis and which are housekeeping.</p>
+<h2>7. Discussion: Evaluation Plan and Design Implications</h2>
+<p>A design rationale earns its keep by being testable and by teaching something that outlives the particular system. This section projects the contribution forward along three threads: how the framework's central claim could be evaluated, what Hoojah teaches CSCW regardless of the outcome, and which tensions the design leaves unresolved.</p>
+<h3>7.1 An evaluation plan</h3>
+<p>The framework's testable claim (Section 4.3) is that selective translucence plus priced participation yields higher-quality sustained discussion than open threads without proportional moderator labor. That claim decomposes into a set of concrete, instrument-backed studies, and the design deliberately leaves the instrumentation hooks in place: because tallies are denormalized, verdicts are compute-on-read, and moderation actions leave a notification trail, the quantities the studies below require are already recorded by the running system rather than needing to be reconstructed after the fact.</p>
+<p>The quality half calls first for discourse-quality coding of debate transcripts against matched flat threads. The established instruments exist: the Discourse Quality Index offers a Habermas-derived, behaviorally coded measure of deliberative quality <sup class="cite"><a href="#ref-20">[20]</a></sup>, and Stromer-Galley's content-analytic coding scheme was built specifically for the discussions of online and face-to-face groups <sup class="cite"><a href="#ref-21">[21]</a></sup>. Applying both to a corpus of concluded Hoojah debates and to a matched corpus of unstructured comment threads on comparable topics would test directly whether the debate object raises measured discourse quality, and would do so with measures the field already accepts. A second study within the quality half targets the population mechanism: coding civility rates by participation depth would test whether Coe and colleagues' invested-user effect <sup class="cite"><a href="#ref-10">[10]</a></sup> holds <em>under pricing</em>, that is, whether the graduated gates do in fact concentrate participation among more civil, more invested users, which is the causal story the framework tells about why quality should rise.</p>
+<p>A third study probes the secret ballot's core promise. The k-anonymity suppression boundary at five total votes is a natural experiment in herding: comparing voting behavior just below and just above the threshold, where the per-stance breakdown flips from hidden to shown, tests whether the suppression suppresses the herding that Muchnik and colleagues demonstrated <sup class="cite"><a href="#ref-3">[3]</a></sup>. The distinctive feature of this study is its inverted logic. The framework predicts that Hoojah should <em>fail to replicate</em> the herding effect while suppression is in force, so the effect that is a positive finding in the mainstream setting is the null result that would vindicate the design here.</p>
+<p>The labor half is answered by telemetry. Instrumenting moderation load, the volume of flags, removals, and warnings per unit of participation over time, would test whether structure and price do in fact hold human-moderation labor sublinear as participation grows. Because no prior work supplies a measured reactive-moderation baseline to compare against, Seering and colleagues characterize the resource qualitatively rather than charting its growth curve <sup class="cite"><a href="#ref-17">[17]</a></sup>, the study would have to establish that baseline itself, ideally by instrumenting a matched unstructured venue alongside Hoojah rather than assuming the contrast. Finally, the live-forecasting method of Chang and Danescu-Niculescu-Mizil <sup class="cite"><a href="#ref-13">[13]</a></sup> plays a dual role in the plan: run over Hoojah's turn streams, it serves <em>as an evaluation instrument</em>, measuring whether structured debates derail less often and less severely than unstructured exchanges, and it is simultaneously the research prototype for the <code>[proposed here]</code> live derailment nudge, so that the same model that measures the problem could, if it proves accurate, drive the intervention.</p>
+<h3>7.2 Design implications for CSCW</h3>
+<p>Three implications generalize beyond Hoojah. The first is that <em>friction is a first-class design material</em>. The prevailing instinct in interaction design is to remove friction, and for transactional tasks that instinct is correct. But for discussion, the evidence assembled here suggests that well-placed friction is constitutive of quality: the vote-to-respond gate, the consent-to-debate step, and the turn-taking discipline are not costs to be apologized for but the very mechanisms that select for invested participation <sup class="cite"><a href="#ref-10">[10]</a></sup> and structure the opening that predicts success or failure <sup class="cite"><a href="#ref-12">[12]</a></sup>. CSCW has a vocabulary for lowering barriers; this work argues for a complementary vocabulary of deliberately raising the right ones.</p>
+<p>The second implication is that <em>the anonymity split is a reusable pattern</em>. Treating anonymity as a single system-wide dial is a widespread simplification, and Suler's analysis shows why it is inadequate: the disinhibition factors attach to distinct affordances <sup class="cite"><a href="#ref-18">[18]</a></sup>. Hoojah's separation of anonymized judgment from attributed speech is a concrete, transferable pattern, applicable to any system that collects both endorsements (which herd and invite retaliation when attributed) and contributions (which improve under accountability). The pattern is not "be anonymous" or "require real names" but "decide, per act, which of the two the act is."</p>
+<p>The third implication is that <em>the dyadic-contest-with-jury is an alternative primitive</em>. The structured-discussion literature has largely offered two primitives, the thread (a flat or nested sequence) and the tree (a branching argument map), and Section 3 showed that its major systems are variations on these. Hoojah contributes a third: the bounded contest between two named parties, judged by an audience. The contest primitive has properties the thread and tree lack, namely a definite set of contestants, a beginning, an end, and a terminating collective judgment, and it is offered here as an object other systems could adopt where the goal is not to accrete a corpus but to resolve a disagreement. It is worth being explicit that these three implications are independent of one another and separately portable: a system could adopt the anonymity split without the contest primitive, or embrace friction as a material while retaining a thread topology, so the contribution is less a single monolithic design than a small kit of composable moves, each traceable to a documented failure mode and each defensible on its own evidentiary footing.</p>
+<h3>7.3 Tensions</h3>
+<p>The design is not without unresolved tensions, and naming them is part of the honesty the paper aims for. The first is between consent gates and cold-start liquidity. The challenge-and-accept mechanism prices the encounter behind mutual willingness, which is exactly its virtue, but it also means a debate happens only when someone accepts, and in a young or thin community the question of <em>who accepts challenges</em> is a real liquidity problem: the same friction that guarantees consent can starve the system of the contests that are its signature object. The second tension is between selective opacity and community trust. The secret ballot and the staff-only moderation queue are opaque by design, and opacity, however well-motivated, can read as a lack of transparency to a community that wants to see how outcomes are produced; the design bets that the <em>effects</em> being visible (Section 5.5) suffices, but that bet is itself testable and could fail. The third tension is between pricing and inclusivity. Every gate that filters the reactive also risks filtering the merely busy, the less confident, or the newcomer, and a platform that prices participation must ask who is priced <em>out</em>, not only who is filtered in. This last tension is precisely the one Beck and colleagues surfaced in their ethnography of a structured-debate community, where adversarial values became a recurring source of conflict <sup class="cite"><a href="#ref-8">[8]</a></sup>: a system optimized for the invested contestant may inadvertently optimize for a particular temperament, and the inclusivity cost of that optimization is an open empirical question the evaluation plan must eventually confront.</p>
+<h2>8. Limitations</h2>
+<p>Six limitations bound the contribution, and each is paired with the evaluation step that would address it.</p>
+<p>First, this is a design rationale and a comparative analysis, not a user study. The paper offers no behavioral outcomes, and its central claim, though framed to be falsifiable, is at present argued rather than demonstrated. The remedy is the evaluation plan of Section 7.1; until that plan is executed, the framework's predictions remain predictions.</p>
+<p>Second, Hoojah is a single deployment in a Malaysian context, and the norm-transfer of its levers to other cultural settings is untested. This is both a limitation and, notably, an opportunity: nearly all of the evidence marshaled in Section 2 is drawn from United States and European settings, so a deployment outside that frame is a chance to test whether the documented pathologies and the proposed remedies generalize, rather than an assumption that they do. The comparative discourse-quality studies of Section 7.1 would provide the first evidence either way.</p>
+<p>Third, the four comparison systems were assessed from their published literature, not through head-to-head deployment. The positioning in Section 3 is therefore a literature-grounded analysis, not an experimental comparison, and it is possible that features salient in a running system are underweighted in its published account. A head-to-head study, running matched discussions across platforms, would be required to convert the comparison from analytical to empirical.</p>
+<p>Fourth, Hoojah's levers were motivated by the pathologies of large platforms but the system is deployed at boutique scale, and small-community results may not survive growth. It is genuinely unknown whether the secret ballot's herding suppression, the moderation-load economics, or the debate object's liquidity behave the same at three orders of magnitude more participants. Only a scaling study, or continued instrumentation as the community grows, can close this gap; the moderation-load telemetry of Section 7.1 is the leading indicator to watch.</p>
+<p>Fifth, the research-motivated proposed affordances, the acknowledgment turn and the live derailment nudge, are unbuilt, and their behavioral cost is unknown. A nudge that fires at the wrong moment can distract or condescend, and a mandatory restatement step adds friction whose benefit must exceed its cost; these are empirical questions that only a built-and-tested version could answer, and until then their inclusion in the roadmap is a hypothesis, not a result.</p>
+<p>Sixth, participants self-select into a debate platform, which bounds generalization in a way no internal study can fully escape. The people who join a system built around structured contest are not a random sample of discussants, and effects observed among them may reflect who chose to come as much as what the design does to them. A comparison against the unstructured-thread behavioral baseline, of the kind Lukyanova's typology of commentator strategies documents <sup class="cite"><a href="#ref-11">[11]</a></sup>, can be made observationally, but self-selection means it is a comparison across populations as well as across designs, and causal claims must be correspondingly cautious.</p>
+<h2>9. Conclusion</h2>
+<p>The pathologies of discussion at scale, the contagion of incivility, the herding on visible scores, the diffusion advantage of outrage and falsehood, the disinhibition of the anonymous, and the reactive moderation labor that a growing platform cannot count on scaling with it, are commonly narrated as facts of human nature colliding with a neutral medium. This paper has argued the opposite. They are consequences of specific interaction-design choices, and different choices yield a different community from the same people, which is the design-and-choice premise recast for CSCW <sup class="cite"><a href="#ref-5">[5]</a></sup>. Hoojah is a deployed demonstration that a coherent alternative set of choices is buildable. Under two principles, selective translucence, the disciplined placement of visibility where it civilizes and opacity where it distorts <sup class="cite"><a href="#ref-19">[19]</a></sup>, and priced participation, the graduated friction that selects for the invested, the system inverts five specific defaults: it prices the reply behind a stance, splits the anonymity dial to anonymize judgment while attributing speech, structures the encounter as a bounded dyadic debate rather than an open thread, casts the audience as jury rather than amplifier, and encodes moderation into structure and price rather than reactive labor. The comparative analysis located these moves precisely: where ConsiderIt, Reflect, Kialo, and the Deliberatorium each structure the content of discussion, Hoojah structures the encounter, culminating in the debate-with-jury as a first-class object. That object, and the framework around it, is offered to the field as a hypothesis made concrete: a testable claim, a running system, and an honest ledger of what remains to build. The invitation is to replicate it, to deploy it against the flat thread and the argument tree head-to-head, and to test whether friction, placed with intent, is indeed a feature.</p>
+<h2>References</h2>
+<ol class="refs">
+<li id="ref-1">Vosoughi, S., Roy, D., &amp; Aral, S. (2018). The spread of true and false news online. <em>Science</em>, 359(6380), 1146–1151. DOI: <a href="https://doi.org/10.1126/science.aap9559">10.1126/science.aap9559</a>.</li>
+<li id="ref-2">Brady, W. J., Wills, J. A., Jost, J. T., Tucker, J. A., &amp; Van Bavel, J. J. (2017). Emotion shapes the diffusion of moralized content in social networks. <em>Proceedings of the National Academy of Sciences (PNAS)</em>, 114(28), 7313–7318. DOI: <a href="https://doi.org/10.1073/pnas.1618923114">10.1073/pnas.1618923114</a>.</li>
+<li id="ref-3">Muchnik, L., Aral, S., &amp; Taylor, S. J. (2013). Social Influence Bias: A Randomized Experiment. <em>Science</em>, 341(6146), 647–651. DOI: <a href="https://doi.org/10.1126/science.1240466">10.1126/science.1240466</a>.</li>
+<li id="ref-4">Anderson, A. A., Brossard, D., Scheufele, D. A., Xenos, M. A., &amp; Ladwig, P. (2014). The "Nasty Effect:" Online Incivility and Risk Perceptions of Emerging Technologies. <em>Journal of Computer-Mediated Communication</em>, 19(3), 373–387. DOI: <a href="https://doi.org/10.1111/jcc4.12009">10.1111/jcc4.12009</a>.</li>
+<li id="ref-5">Wright, Scott &amp; Street, John (2007). "Democracy, deliberation and design: the case of online discussion forums." <em>New Media &amp; Society</em> 9(5), 849–869. DOI: <a href="https://doi.org/10.1177/1461444807081230">10.1177/1461444807081230</a>.</li>
+<li id="ref-6">Kriplean, Travis, Morgan, Jonathan, Freelon, Deen, Borning, Alan &amp; Bennett, Lance (2012). "Supporting Reflective Public Thought with ConsiderIt." In <em>Proceedings of the ACM 2012 Conference on Computer Supported Cooperative Work (CSCW '12)</em>, 265–274. Seattle, WA. DOI: <a href="https://doi.org/10.1145/2145204.2145249">10.1145/2145204.2145249</a>.</li>
+<li id="ref-7">Kriplean, T., Toomim, M., Morgan, J., Borning, A., &amp; Ko, A. (2012). Is this what you meant? Promoting listening on the web with Reflect. In <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI '12)</em>, 1559–1568. Austin, TX. DOI: <a href="https://doi.org/10.1145/2207676.2208621">10.1145/2207676.2208621</a>.</li>
+<li id="ref-8">Beck, J., Neupane, B., &amp; Carroll, J. M. (2019). Managing conflict in online debate communities. <em>First Monday</em>, 24(7). DOI: <a href="https://doi.org/10.5210/fm.v24i7.9585">10.5210/fm.v24i7.9585</a>.</li>
+<li id="ref-9">Klein, Mark (2012). "Enabling Large-Scale Deliberation Using Attention-Mediation Metrics." <em>Computer Supported Cooperative Work (CSCW)</em> 21(4–5), 449–473. DOI: <a href="https://doi.org/10.1007/s10606-012-9156-4">10.1007/s10606-012-9156-4</a>.</li>
+<li id="ref-10">Coe, K., Kenski, K., &amp; Rains, S. A. (2014). Online and Uncivil? Patterns and Determinants of Incivility in Newspaper Website Comments. <em>Journal of Communication</em>, 64(4), 658–679. DOI: <a href="https://doi.org/10.1111/jcom.12104">10.1111/jcom.12104</a>.</li>
+<li id="ref-11">Lukyanova, Galina V. (2020). "To Comment or Not to Comment: Communication Strategies of Social Media Commentators." In <em>2020 Communication Strategies in Digital Society Seminar (ComSDS)</em>, 141–144. St. Petersburg, Russia. IEEE. DOI: <a href="https://doi.org/10.1109/ComSDS49898.2020.9101250">10.1109/ComSDS49898.2020.9101250</a>.</li>
+<li id="ref-12">Zhang, Justine, Chang, Jonathan P., Danescu-Niculescu-Mizil, Cristian, Dixon, Lucas, Hua, Yiqing, Taraborelli, Dario &amp; Thain, Nithum (2018). "Conversations Gone Awry: Detecting Early Signs of Conversational Failure." In <em>Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (ACL 2018, Vol. 1: Long Papers)</em>, 1350–1361. Melbourne, Australia. DOI: <a href="https://doi.org/10.18653/v1/P18-1125">10.18653/v1/P18-1125</a>.</li>
+<li id="ref-13">Chang, J. P., &amp; Danescu-Niculescu-Mizil, C. (2019). Trouble on the Horizon: Forecasting the Derailment of Online Conversations as they Develop. In <em>Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP 2019)</em>, 4743–4754. Hong Kong, China. DOI: <a href="https://doi.org/10.18653/v1/D19-1481">10.18653/v1/D19-1481</a>.</li>
+<li id="ref-14">Papacharissi, Zizi (2004). "Democracy online: civility, politeness, and the democratic potential of online political discussion groups." <em>New Media &amp; Society</em> 6(2), 259–283. DOI: <a href="https://doi.org/10.1177/1461444804041444">10.1177/1461444804041444</a>.</li>
+<li id="ref-15">Grimmelmann, J. (2015). The Virtues of Moderation. <em>Yale Journal of Law &amp; Technology</em>, 17(1), 42–109.</li>
+<li id="ref-16">Kiesler, S., Kraut, R., Resnick, P., &amp; Kittur, A. (2012). Regulating Behavior in Online Communities. In R. E. Kraut &amp; P. Resnick, <em>Building Successful Online Communities: Evidence-Based Social Design</em> (Ch. 4). Cambridge, MA: MIT Press. ISBN 9780262016575.</li>
+<li id="ref-17">Seering, J., Wang, T., Yoon, J., &amp; Kaufman, G. (2019). Moderator engagement and community development in the age of algorithms. <em>New Media &amp; Society</em>, 21(7), 1417–1443. DOI: <a href="https://doi.org/10.1177/1461444818821316">10.1177/1461444818821316</a>.</li>
+<li id="ref-18">Suler, J. (2004). The Online Disinhibition Effect. <em>CyberPsychology &amp; Behavior</em>, 7(3), 321–326. DOI: <a href="https://doi.org/10.1089/1094931041291295">10.1089/1094931041291295</a>.</li>
+<li id="ref-19">Erickson, T., &amp; Kellogg, W. A. (2000). Social translucence: an approach to designing systems that support social processes. <em>ACM Transactions on Computer-Human Interaction (TOCHI)</em>, 7(1), 59–83. DOI: <a href="https://doi.org/10.1145/344949.345004">10.1145/344949.345004</a>.</li>
+<li id="ref-20">Steenbergen, Marco R., Bächtiger, André, Spörndli, Markus &amp; Steiner, Jürg (2003). "Measuring Political Deliberation: A Discourse Quality Index." <em>Comparative European Politics</em> 1(1), 21–48. DOI: <a href="https://doi.org/10.1057/palgrave.cep.6110002">10.1057/palgrave.cep.6110002</a>.</li>
+<li id="ref-21">Stromer-Galley, Jennifer (2007). "Measuring Deliberation's Content: A Coding Scheme." <em>Journal of Public Deliberation</em> 3(1), Article 12. DOI: <a href="https://doi.org/10.16997/jdd.50">10.16997/jdd.50</a>.</li>
+</ol>
+</div>
