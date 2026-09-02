@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>of Static Sites, Single Tenants and Multi Tenants by Rudzainy Rahman</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Managing a static website, a single tenant web app and a multi tenant web app are three different jobs. A build-up from the easiest to the hardest, with a detour into who should actually be holding the leash.">
+
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+    <!-- end Bootstrap CSS & Icons -->
+
+    <link rel="stylesheet" type="text/css" href="../si-es-es.css">
+  </head>
+  <body data-category="balance">
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-warning">
+      <div class="container">
+        <a href="/" title="Wow! It's a Wau!" class="navbar-brand text-warning d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+        <button class="navbar-toggler border-0 text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          ~|{·})
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="/work/" class="nav-link"><i class="icon-pencil-ruler me-2"></i>Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="/life/" class="nav-link"><i class="icon-sun me-2"></i>Life</a>
+            </li>
+            <li class="nav-item">
+              <a href="/balance/" class="nav-link"><i class="icon-mountain me-2"></i>Balance</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end Top Navigation Bar -->
+
+    <!-- Page Header -->
+    <div class="page-header-balance">
+      <nav aria-label="breadcrumb" class="container pt-3">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/balance/">Balance</a></li>
+          <li class="breadcrumb-item active" aria-current="page">of Static Sites, Single Tenants and Multi Tenants</li>
+        </ol>
+      </nav>
+      <header class="container mt-3">
+        <p class="mb-2" style="font-family:'Unica One',sans-serif;text-transform:uppercase;letter-spacing:0.05em;font-size:14px;color:rgba(255,255,255,0.75)"><time datetime="2026-09-02">02.09.2026</time> &middot; Thoughts</p>
+        <h1 class="page-title">of Static Sites, Single Tenants and Multi Tenants</h1>
+      </header>
+    </div>
+    <!-- end Page Header -->
+
+    <!-- Main Content Section -->
+    <main class="container my-5">
+      <article class="post-content">
+
+        <p>Somebody asked me recently why the &ldquo;website&rdquo; they paid for costs a few hundred ringgit a year to keep alive, while the &ldquo;website&rdquo; their friend runs needs two people and a Slack channel that never sleeps. Same word, very different animals.</p>
+
+        <p>So this is me thinking out loud. Three levels, easiest to hardest: a static website, a single tenant web app, and a multi tenant web app. At each level I&rsquo;ll ask the same two questions. What are you actually managing? And who, in the real world, ends up managing it? Because a gig worker, a 40-person SME, a large company with an IT department, and a lean startup all answer that differently. Then near the end I wander off into who should be holding the leash at the very top. Bear with me lah.</p>
+
+        <div class="post-stats">
+          <div class="stats-strip">
+            <div class="stat">
+              <div class="stat-num">0</div>
+              <div class="stat-label">Tenants in a static site</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">1</div>
+              <div class="stat-label">Tenant in a single tenant app</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">N</div>
+              <div class="stat-label">Tenants in a multi tenant app</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">3am</div>
+              <div class="stat-label">When N starts to matter</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-file-text"></i><span>01 &middot; level one</span></span>
+        </div>
+        <h2 id="static-website">Static website</h2>
+
+        <p>This site you&rsquo;re reading is a static website. There is no server-side code, no database, no login. It&rsquo;s a folder of <code>.html</code> files, one CSS file, one small JS file, and a <code>git push</code>. GitHub Pages copies the folder to the internet and that&rsquo;s the whole deployment story. Optimisation FTW! 🥳</p>
+
+        <p>What am I actually managing here?</p>
+
+        <ul>
+          <li>The domain name. Renew it, point the DNS at the right place, don&rsquo;t let it lapse and get sniped by a casino.</li>
+          <li>Who can push. One GitHub account, mine. The entire access control model is &ldquo;does Rudzainy have his laptop&rdquo;.</li>
+          <li>The content. Typos, broken links, images that go missing. That&rsquo;s the whole incident list.</li>
+        </ul>
+
+        <p>Blast radius of a mistake: a page looks wrong. Nobody&rsquo;s data leaks because there is no data. Nobody gets locked out because there are no accounts. The worst-case scenario is embarrassment, and I have plenty of that already so no big deal. 😂</p>
+
+        <p>Now the perspectives, and this is where it gets interesting to me.</p>
+
+        <div class="post-steps">
+          <div class="steps-rail">
+            <ol>
+              <li>
+                <div class="step-num"><i class="icon-user" aria-hidden="true"></i></div>
+                <div class="step-body">
+                  <h3>Gig worker / solo business owner</h3>
+                  <p>Honestly, this is the sweet spot. A one-page site, a Linktree, a WhatsApp button. The management cost is basically zero and that&rsquo;s exactly right for someone whose &ldquo;IT department&rdquo; is themselves between customers. The trap is being upsold into something dynamic they don&rsquo;t need.</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-num"><i class="icon-building-2" aria-hidden="true"></i></div>
+                <div class="step-body">
+                  <h3>Larger SME</h3>
+                  <p>Usually an agency built it, usually on WordPress, which technically stops being static the moment you install it (a database, a login page, 30 plugins, every one of them a door). They think they own a brochure. They actually own a small app with nobody watching it. Malam-malam kena hack, baru tahu.</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-num"><i class="icon-landmark" aria-hidden="true"></i></div>
+                <div class="step-body">
+                  <h3>Large company with a dedicated IT / tech department</h3>
+                  <p>The brand site sits on a proper CMS, behind a CDN, with a change approval process and a committee that argues about the hero image for three weeks. Over-engineered for a static site? Yes. But their blast radius is a press release, so the ceremony is kinda earned.</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-num"><i class="icon-zap" aria-hidden="true"></i></div>
+                <div class="step-body">
+                  <h3>Lean startup on pre-built systems</h3>
+                  <p>Webflow, Framer, a Notion page with a custom domain. Shipped over a weekend, changed daily, nobody cares about the stack. Correct move. The landing page isn&rsquo;t the product, so why spend engineering on it.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <p>Notice something: at level one, control barely needs to exist. Whoever holds the login to the host and the domain registrar has all the control there is. Remember that, because it&rsquo;s going to move.</p>
+
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-database"></i><span>02 &middot; level two</span></span>
+        </div>
+        <h2 id="single-tenant-web-app">Single tenant web app</h2>
+
+        <p>Now add a database and a login page. One customer (maybe that customer is you), one deployment, one set of data. A CRM for one company. A booking system for one clinic. A Rails app on one server that does one job for one organisation. Most of the things I&rsquo;ve built for other people live here.</p>
+
+        <p>The moment there are users, the list of things you&rsquo;re managing grows teeth:</p>
+
+        <ul>
+          <li>Accounts. Passwords, resets, that one uncle who shares his login with the whole department.</li>
+          <li>Roles. Who can see what, who can delete what. The UI hides buttons, but the server has to actually refuse.</li>
+          <li>Backups. Not &ldquo;we have backups&rdquo; but &ldquo;we have restored from a backup, on purpose, and it worked&rdquo;.</li>
+          <li>Uptime. The app is now in someone&rsquo;s daily workflow. When it&rsquo;s down, they can&rsquo;t work, and they will call.</li>
+          <li>Updates. Framework patches, dependency bumps, the database version going end-of-life on a Tuesday.</li>
+          <li>Audit trail. Who changed this record and when. Nobody asks for this until the day everybody asks for it.</li>
+        </ul>
+
+        <p>Blast radius: one organisation&rsquo;s data, one organisation&rsquo;s day. Bad, but contained. If I mess up the clinic&rsquo;s booking system, the clinic next door is fine.</p>
+
+        <div class="post-callout is-note">
+          <aside>
+            <div class="callout-header">
+              <i class="icon-info" aria-hidden="true"></i>
+              Note
+            </div>
+            <p class="callout-body">Control at this level moves <em>inside</em> the app. At level one it lived at the hosting login. Now it lives in the roles table, the permission checks, the audit log. The host can&rsquo;t protect you from your own authorisation bug.</p>
+          </aside>
+        </div>
+
+        <div class="post-steps">
+          <div class="steps-rail">
+            <ol>
+              <li>
+                <div class="step-num"><i class="icon-user" aria-hidden="true"></i></div>
+                <div class="step-body">
+                  <h3>Gig worker / solo business owner</h3>
+                  <p>Congratulations, you are now Ops-Man&trade;. Also Support-Man&trade;. The 2am alert email is yours and yours alone. Most solo folks should not be here at all; they should be renting somebody else&rsquo;s single tenant app (see level three, because that&rsquo;s what SaaS is). If you do build your own, keep it boring. Boring is what you can fix at 2am half asleep.</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-num"><i class="icon-building-2" aria-hidden="true"></i></div>
+                <div class="step-body">
+                  <h3>Larger SME</h3>
+                  <p>This is home turf for the SME. One internal system, built by a vendor or that one guy in accounts who &ldquo;knows computers&rdquo;. Works great until that one guy resigns. Bus factor of one is the SME&rsquo;s signature risk. The system isn&rsquo;t the problem; the undocumented knowledge in one head is.</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-num"><i class="icon-landmark" aria-hidden="true"></i></div>
+                <div class="step-body">
+                  <h3>Large company with a dedicated IT / tech department</h3>
+                  <p>Staging environment, change requests, an on-call rota, a security review before anything touches production. Slow, yes. Annoying, yes. I&rsquo;ve complained about rigid corporate structure before, and I stand by it. But at this level the ceremony is doing a real job: it spreads the knowledge and the responsibility across more than one person, which is precisely what the SME lacks.</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-num"><i class="icon-zap" aria-hidden="true"></i></div>
+                <div class="step-body">
+                  <h3>Lean startup on pre-built systems</h3>
+                  <p>Rails or Next on a managed host, auth from a provider, payments from Stripe, email from a service, backups a checkbox on the dashboard. They rent every piece that isn&rsquo;t the actual idea. Ops cost is a credit card. The cost shows up later as vendor lock-in, but later is a problem for a company that survived, which is the whole point.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-layers"></i><span>03 &middot; level three</span></span>
+        </div>
+        <h2 id="multi-tenant-web-app">Multi tenant web app</h2>
+
+        <p>Same app, but now many customers share one deployment and, usually, one database. Every row has a <code>tenant_id</code>. Every query must filter by it. Every single one. Forget it once, and Syarikat A sees Syarikat B&rsquo;s invoices. That&rsquo;s not a bug, that&rsquo;s a breach, and possibly a news article.</p>
+
+        <p>This is the hardest level, and not because the code is fancier. It&rsquo;s because everything you were managing at level two is now multiplied by N and shared:</p>
+
+        <ul>
+          <li>Isolation. Data, files, background jobs, caches. All of it has to be scoped to the tenant, all the time.</li>
+          <li>Noisy neighbours. One tenant runs a giant report and everybody else&rsquo;s page gets slow.</li>
+          <li>Migrations. A schema change runs for everyone at once. There is no &ldquo;let&rsquo;s try it on the small customer first&rdquo; unless you build that.</li>
+          <li>Per-tenant everything. Settings, branding, feature flags, the one customer who needs their own SSO.</li>
+          <li>Billing and plans. Which tenant gets what, and what happens on the day they stop paying.</li>
+          <li>Offboarding. A tenant leaves and wants their data exported, then deleted, and proof of the deletion. Try doing that cleanly from a shared database on a Friday.</li>
+          <li>Data residency. Some tenants will ask where the bytes physically sit. Some regulators will ask louder.</li>
+        </ul>
+
+        <p>Blast radius: everyone. One bad deploy, one leaked key, one missing <code>where tenant_id = ?</code>, and it&rsquo;s every customer at the same time. Seems like a problem too big for one man lulz.</p>
+
+        <div class="post-callout is-warning">
+          <aside>
+            <div class="callout-header">
+              <i class="icon-triangle-alert" aria-hidden="true"></i>
+              Warning
+            </div>
+            <p class="callout-body">At level three, control has to be enforced at the <em>data layer</em>, not just the UI, not just the controller. Default scopes on the ORM, row-level security in the database, tests that deliberately try to read across tenants and must fail. If tenant isolation depends on every developer remembering, it will be forgotten. Not maybe. Will.</p>
+          </aside>
+        </div>
+
+        <div class="post-steps">
+          <div class="steps-rail">
+            <ol>
+              <li>
+                <div class="step-num"><i class="icon-user" aria-hidden="true"></i></div>
+                <div class="step-body">
+                  <h3>Gig worker / solo business owner</h3>
+                  <p>Here&rsquo;s the twist: the solo person is almost never the landlord. They&rsquo;re a tenant. Their invoicing, their bookings, their shop, all live inside somebody else&rsquo;s multi tenant app. The management job flips from &ldquo;keep it running&rdquo; to &ldquo;can I get my data out, and what happens if they shut down&rdquo;. Most never ask until the shutdown email arrives.</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-num"><i class="icon-building-2" aria-hidden="true"></i></div>
+                <div class="step-body">
+                  <h3>Larger SME</h3>
+                  <p>Also mostly a tenant, but of five or ten SaaS tools that don&rsquo;t talk to each other, so the real system is a spreadsheet stitching them together. What they should be managing is contracts, exports, and access (who still has the admin login after they resigned?). What they actually manage is the monthly subscription total, and only when finance complains.</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-num"><i class="icon-landmark" aria-hidden="true"></i></div>
+                <div class="step-body">
+                  <h3>Large company with a dedicated IT / tech department</h3>
+                  <p>Two flavours. Either they build internal multi tenant platforms (one HR system serving forty subsidiaries), or they are the customer who refuses the shared version and demands a &ldquo;dedicated enterprise instance&rdquo;, which is a single tenant deployment of a multi tenant app. Ironic, but rational: they are paying to shrink the blast radius back to level two.</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-num"><i class="icon-zap" aria-hidden="true"></i></div>
+                <div class="step-body">
+                  <h3>Lean startup on pre-built systems</h3>
+                  <p>Multi tenant from day one, because that <em>is</em> the business model: one codebase, thousands of paying tenants. They lean on rented isolation: auth providers with organisation support, databases with row-level security built in, billing engines with plans and seats already modelled. Fast, and mostly safe, as long as somebody on the team actually understands what the rented pieces do and doesn&rsquo;t just wire them up and pray. 😔</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-shield-check"></i><span>04 &middot; the ladder</span></span>
+        </div>
+        <h2 id="where-control-lives">Where control lives</h2>
+
+        <p>Look back at the three levels and follow where control had to be enforced:</p>
+
+        <div class="post-meta-table">
+          <dl>
+            <div class="meta-row">
+              <dt>Static website</dt>
+              <dd>At the host and the registrar. Whoever holds the login holds everything.</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Single tenant app</dt>
+              <dd>Inside the app. Roles, permissions, audit log. The host can&rsquo;t save you from your own code.</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Multi tenant app</dt>
+              <dd>At the data layer and below. Isolation enforced by the database, not by good intentions.</dd>
+            </div>
+            <div class="meta-row">
+              <dt>Above all of them</dt>
+              <dd>Somebody outside the company. Because the company&rsquo;s incentive is to ship, not to isolate.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <p>Control keeps sinking one layer lower each time, closer to where the data actually lives, further from where the decisions get made. And every layer down, it gets harder to put in after the fact. Adding a login to a static site is a weekend. Adding proper tenant isolation to a multi tenant app that&rsquo;s been live for three years is a rewrite that nobody wants to fund.</p>
+
+        <p>So who enforces the last row of that table? The one above the company?</p>
+
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-globe"></i><span>05 &middot; a wonder</span></span>
+        </div>
+        <h2 id="mcmc-as-a-digital-government">MCMC as a digital government?</h2>
+
+        <p>Bear with me. This is the part where I wander.</p>
+
+        <p>Strip away the apps, the tenants, the frameworks, and the internet at its core is just a bridge. A way for two people to talk more efficiently and effectively than the physical world allows. It hacks the limitation that you and I have to be in the same room, or wait for a letter, or pay for a long-distance call. Everything else, the shops, the banks, the SaaS, the memes, is stuff we&rsquo;ve built on top of that one hack.</p>
+
+        <div class="post-pull-quote">
+          <aside>
+            <p class="pq-quote">&ldquo;The internet is a bridge for people to communicate. Everything else is furniture we put on the bridge.&rdquo;</p>
+          </aside>
+        </div>
+
+        <p>If that&rsquo;s true, then the bridge is public infrastructure the way roads and water are. And right now in Malaysia the body looking after that bridge is MCMC, the Malaysian Communications and Multimedia Commission. A regulator. A commission under a ministry, one portfolio among many, with a budget and a mandate that was written when &ldquo;multimedia&rdquo; still meant CD-ROMs.</p>
+
+        <p>Meanwhile the thing it regulates is the layer every single one of the four perspectives above depends on. The gig worker who is a tenant of five foreign platforms. The SME whose customer list is in a shared database in a region they can&rsquo;t name. The large company whose &ldquo;dedicated instance&rdquo; still phones home. The startup whose entire isolation story is rented from a vendor in another jurisdiction.</p>
+
+        <p>Now my hot take, kept short because that&rsquo;s the only way I know how to do these:</p>
+
+        <p>MCMC should not be a commission.<br>It should be elevated into a dedicated digital government, with the same weight as a ministry that runs roads or health.<br>Not to censor the bridge. To keep it standing, keep it fair, and make sure the people on it can get off with their belongings.</p>
+
+        <p>What that would actually enforce, following the ladder from above: data export as a right, not a feature. Deletion with proof. Tenant isolation as a requirement for anyone hosting Malaysians&rsquo; data, audited, not self-declared. A local floor for where the data of a Malaysian tenant can sit. Basically the last row of that table, with teeth. PDPA gestures at some of this. A commission can write a guideline. A government can make it the default.</p>
+
+        <p>I sketched what the stack could look like in <a href="2024-09-05-the-framework.html">The Framework</a>, and I&rsquo;ve grumbled about the power imbalance in <a href="2023-12-04-users-vs-corporations-in-digital-communication.html">Users vs Corporations</a>. This post is the missing middle bit: the infrastructure argument for why somebody above the companies has to hold the leash, because the companies&rsquo; incentive will always be to ship first and isolate later.</p>
+
+        <div class="post-callout is-tip">
+          <aside>
+            <div class="callout-header">
+              <i class="icon-lightbulb" aria-hidden="true"></i>
+              Tip
+            </div>
+            <p class="callout-body">Yes, I can already hear it: &ldquo;give a government more power over the internet, what could possibly go wrong&rdquo;. Fair. The same body that keeps the bridge standing can also decide who gets to cross. I don&rsquo;t have a clean answer for that. Maybe the answer is the same as level three: control enforced at the lowest layer, in the open, with tests anyone can run. Maybe.</p>
+          </aside>
+        </div>
+
+        <div class="post-section-head" aria-hidden="true">
+          <span class="head-tab"><i class="icon-flag"></i><span>06 &middot; yet to be concluded</span></span>
+        </div>
+        <h2 id="yet-to-be-concluded">Yet to be concluded</h2>
+
+        <p>So, three levels. Static: manage the login. Single tenant: manage the app. Multi tenant: manage the data layer, and pray your team never forgets one <code>where</code>. And above all three, a question I don&rsquo;t think we&rsquo;ve answered as a country yet.</p>
+
+        <p>I&rsquo;ll probably come back and rework the MCMC bit once I&rsquo;ve argued it with a few people. Or once someone tells me it&rsquo;s already been proposed and I just didn&rsquo;t gugel hard enough.</p>
+
+        <p>This blog post is still in progress. ^.^</p>
+
+        <div class="post-nav">
+          <nav aria-label="Post navigation">
+            <a href="2024-09-05-the-framework.html" class="nav-card is-prev">
+              <span class="nav-dir"><i class="icon-arrow-left" aria-hidden="true"></i>Previous</span>
+              <span class="nav-title">The Framework</span>
+              <span class="nav-date"><time datetime="2024-09-05">05.09.2024</time></span>
+            </a>
+          </nav>
+        </div>
+
+      </article>
+    </main>
+    <!-- end Main Content Section -->
+
+    <!-- Footer Section -->
+    <footer class="container">
+      <section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau" data-bs-toggle="modal" data-bs-target="#takdeModal">~|{·})</a> <a href="/LICENSE" class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <a href="/balance/" class="text-decoration-none me-3">Back to Balance</a>
+          <a href="#top" class="text-decoration-none">Back to top</a>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
+              <i class="brand-icon brand-github me-2"></i><span class="visually-hidden">GitHub</span>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama&#xB2;" target="_blank" title="View my Sama&#xB2; profile, and create your own!">
+              <i class="icon-heart me-2"></i><span class="visually-hidden">Sama&#xB2;</span>
+            </a>
+          </li>
+          <li class="ms-3 mt-n1">
+            <a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi?">
+              <i class="icon-coffee me-2"></i><span class="visually-hidden">Ko-fi</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <!-- end Footer Section -->
+
+    <script src="../jei-es.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
