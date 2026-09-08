@@ -5,7 +5,7 @@
 		<title>Let's work together! by Rudzainy Rahman</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="UI/UX designer who also builds in Rails. 15 years, six industries, product ownership. Open for work, KL or remote.">
+		<meta name="description" content="UI/UX designer who also builds in Rails. 15 years, seven industries, product ownership. Open for work, KL or remote.">
 
 		<!-- Bootstrap CSS & Icons-->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -123,6 +123,15 @@
 				padding: 16px; overflow-x: auto; }
 			#lwt .lwt-diagram pre.mermaid { margin: 0; text-align: center; background: none; }
 			#lwt pre.mermaid:not([data-processed]) { visibility: hidden; min-height: 140px; }
+			/* Diagram text fallback: read by crawlers, AI readers, screen readers,
+			   and openable with JS off (native <details>, no script needed). */
+			.lwt-diagram-text { max-width: 56rem; margin: 8px auto 0; }
+			.lwt-diagram-text > summary { cursor: pointer; list-style-position: outside;
+				font-family: var(--font-display); text-transform: uppercase;
+				letter-spacing: var(--tracking-display); font-size: 12px; color: var(--color-muted); }
+			.lwt-diagram-text > summary:hover { color: var(--cat-ink); }
+			.lwt-diagram-text ul, .lwt-diagram-text ol { margin: 0.6rem 0 0; padding-left: 1.25rem; }
+			.lwt-diagram-text li { margin-bottom: 0.3rem; font-size: 0.95rem; line-height: var(--leading-body); }
 
 			/* 7. Selected roles table */
 			.lwt-roles { max-width: 56rem; margin: 24px auto 0;
@@ -255,12 +264,12 @@
 				</ol>
 			</nav>
 			<header class="container mt-3 pb-2">
-				<p class="lwt-header-meta"><time datetime="2023-09-01">01.09.2023</time> &middot; Work &middot; 6 min read</p>
+				<p class="lwt-header-meta"><time datetime="2023-09-01">01.09.2023</time> &middot; updated <time datetime="2026-09-08">08.09.2026</time> &middot; Work &middot; 6 min read</p>
 				<h1 class="page-title">Let's work together!</h1>
-				<p class="lwt-subtitle">I design the thing, then I build it. Fifteen years of UI/UX, Rails and product ownership, six industries, one page.</p>
+				<p class="lwt-subtitle">I design the thing, then I build it. Fifteen years of UI/UX, Rails and product ownership, seven industries, one page.</p>
 				<div class="lwt-cta-row">
 					<a class="lwt-btn lwt-btn-ghost" href="/resume.html"><i class="icon-file-text" aria-hidden="true"></i>View my résumé</a>
-					<span class="lwt-availability">Open for work &middot; Kuala Lumpur / remote</span>
+					<span class="lwt-availability">Open for work &middot; free to interview now &middot; Kuala Lumpur / remote</span>
 				</div>
 			</header>
 		</div>
@@ -320,7 +329,7 @@
 						<header class="lwt-reason-head">02 &middot; Supporting skills</header>
 						<div class="lwt-reason-body">
 							<h3 class="lwt-reason-title"><i class="icon-code" aria-hidden="true"></i>Design + code</h3>
-							<p>Rails and React, not just Figma, now with custom AI workflows The handoff problem goes away when the designer is also the developer.</p>
+							<p>Rails and React, not just Figma, now with custom AI workflows. The handoff problem goes away when the designer is also the developer.</p>
 							<a class="lwt-read" href="/work/2020-09-01-the-hoojah-project.html"><i class="icon-arrow-right" aria-hidden="true"></i>The Hoojah project</a>
 						</div>
 					</article>
@@ -333,7 +342,7 @@
 						</div>
 					</article>
 					<article class="lwt-reason">
-						<header class="lwt-reason-head">04 &middot; Curiosity</header>
+						<header class="lwt-reason-head">04 &middot; Mindset</header>
 						<div class="lwt-reason-body">
 							<h3 class="lwt-reason-title"><i class="icon-book-open" aria-hidden="true"></i>Curiosity</h3>
 							<p>I read outside the field: geology, history, off-grid living. Odd inputs make for less generic outputs.</p>
@@ -341,7 +350,7 @@
 						</div>
 					</article>
 					<article class="lwt-reason">
-						<header class="lwt-reason-head">05 &middot; Problem solving</header>
+						<header class="lwt-reason-head">05 &middot; Approach</header>
 						<div class="lwt-reason-body">
 							<h3 class="lwt-reason-title"><i class="icon-mountain" aria-hidden="true"></i>Problem-solving</h3>
 							<p>Website revamp, app concept, interactive installation, a national communication framework. Different shapes, same job: make the vague thing concrete.</p>
@@ -349,7 +358,7 @@
 						</div>
 					</article>
 					<article class="lwt-reason">
-						<header class="lwt-reason-head">06 &middot; Teamwork</header>
+						<header class="lwt-reason-head">06 &middot; Working style</header>
 						<div class="lwt-reason-body">
 							<h3 class="lwt-reason-title"><i class="icon-message-square" aria-hidden="true"></i>Teamwork</h3>
 							<p>Mentored 14 bootcamp intakes. I'm comfortable explaining, listening, and being wrong in front of people.</p>
@@ -357,7 +366,7 @@
 						</div>
 					</article>
 					<article class="lwt-reason">
-						<header class="lwt-reason-head">07 &middot; Temperament</header>
+						<header class="lwt-reason-head">07 &middot; Character</header>
 						<div class="lwt-reason-body">
 							<h3 class="lwt-reason-title"><i class="icon-sun" aria-hidden="true"></i>Temperament</h3>
 							<p>Directed a play. Built two maritime academies from an empty building. New ground doesn't bother me.</p>
@@ -365,7 +374,7 @@
 						</div>
 					</article>
 					<article class="lwt-reason">
-						<header class="lwt-reason-head">08 &middot; Delivery</header>
+						<header class="lwt-reason-head">08 &middot; Ownership</header>
 						<div class="lwt-reason-body">
 							<h3 class="lwt-reason-title"><i class="icon-compass" aria-hidden="true"></i>Delivery</h3>
 							<p>Product-owner mindset: I write the stories, set the priorities, and keep design, QA and engineering pointed the same way.</p>
@@ -401,6 +410,18 @@ flowchart LR
   G -- "next iteration" --> B</pre>
 						</div>
 						<figcaption>The double loop: design learns from testing, product learns from shipping. Diagram drawn in <a href="/balance/2024-03-23-add-diagram-on-websites-using-mermaidjs.html">MermaidJS</a>.</figcaption>
+						<details class="lwt-diagram-text">
+							<summary>Text version of this diagram</summary>
+							<ol>
+								<li>Listen: requirement gathering.</li>
+								<li>Research users and domain.</li>
+								<li>Sketch journeys and wireframes.</li>
+								<li>Prototype in Figma.</li>
+								<li>Test with real users, then loop back to sketching with what we learned.</li>
+								<li>Build with Rails or React.</li>
+								<li>Ship, measure, report, then loop back to research for the next iteration.</li>
+							</ol>
+						</details>
 					</figure>
 				</div>
 			</section>
@@ -413,7 +434,7 @@ flowchart LR
 					</div>
 					<h2>More than fifteen years of track record</h2>
 					<div class="lwt-prose">
-						<p>Six industries, in roughly this order. Every jump taught me a vocabulary I still use.</p>
+						<p>Seven industries, in roughly this order. Every jump taught me a vocabulary I still use.</p>
 					</div>
 				</div>
 				<div class="post-figure">
@@ -430,6 +451,18 @@ timeline
   2024-now : Product ownership and freelance : Maxis Broadband, rudzainy.com</pre>
 						</div>
 						<figcaption>Read the maritime chapter in <a href="/life/2023-12-04-of-maritime-academy.html">Of Maritime Academy</a>.</figcaption>
+						<details class="lwt-diagram-text">
+							<summary>Text version of this timeline</summary>
+							<ul>
+								<li>2007–2009 &middot; Web and graphic design: Teras Solutions, MSC Management.</li>
+								<li>2009–2012 &middot; Maritime: built two academies from the ground up.</li>
+								<li>2012–2014 &middot; Education: lecturer at Universiti Tenaga Nasional.</li>
+								<li>2015–2017 &middot; Bootcamp mentor and Rails developer: NEXT Academy, 14 intakes.</li>
+								<li>2018–2020 &middot; Enterprise and media UX: DXC Technology, Rev Asia.</li>
+								<li>2021–2023 &middot; Banking and agritech UX: Affin Bank, Ace Resources.</li>
+								<li>2024–now &middot; Product ownership and freelance: Maxis Broadband, rudzainy.com.</li>
+							</ul>
+						</details>
 					</figure>
 				</div>
 				<div class="lwt-roles">
@@ -448,7 +481,7 @@ timeline
 					</div>
 					<div class="lwt-role">
 						<span class="lwt-role-year">2018 – 2019</span>
-						<div><span class="lwt-role-title">UI/UX Designer &middot; <span class="lwt-role-co">DXC Technology</span></span><span class="lwt-role-desc">Reported to the Director of Engineering. SaaS application UI, marketing-page concepts, and a design system reviewed by stakeholders across three regions.</span></div>
+						<div><span class="lwt-role-title">UI/UX Designer &middot; <span class="lwt-role-co">DXC Technology</span></span><span class="lwt-role-desc">Led the design team, reporting to the Director of Engineering. SaaS application UI, marketing-page concepts, and a design system reviewed by stakeholders across three regions.</span></div>
 					</div>
 					<div class="lwt-role">
 						<span class="lwt-role-year">2015 – 2017</span>
@@ -506,6 +539,14 @@ flowchart LR
   R --> MEDIA</pre>
 						</div>
 						<figcaption>The long version of the JavaScript half is in <a href="/life/2024-01-06-of-javascript.html">Of JavaScript</a>.</figcaption>
+						<details class="lwt-diagram-text">
+							<summary>Text version of this diagram</summary>
+							<ul>
+								<li><strong>Core &middot; HCI and UX design:</strong> requirement gathering and research; wireframes, interaction and interface design; prototyping, journeys and user testing; Figma, Adobe XD, Sketch, Illustrator.</li>
+								<li><strong>Supporting &middot; web and mobile development:</strong> Ruby on Rails, Jekyll, Discourse; ReactJS, NextJS, Stimulus, Express; HTML, CSS, Bootstrap, WordPress.</li>
+								<li><strong>Supporting &middot; IT and multimedia:</strong> text, image, audio, video, animation; Adobe suites, mobile photography.</li>
+							</ul>
+						</details>
 					</figure>
 				</div>
 			</section>
@@ -532,7 +573,7 @@ flowchart LR
 						<div class="meta-row"><dt>Based in</dt><dd>Kuala Lumpur, Malaysia &middot; happy to work remote</dd></div>
 						<div class="meta-row"><dt>Role</dt><dd>UI/UX designer &middot; product owner &middot; full-stack builder</dd></div>
 						<div class="meta-row"><dt>Education</dt><dd>BSc (Hons) Information Technology, Multimedia Studies, Universiti Kebangsaan Malaysia, 2009. Full-stack Ruby on Rails bootcamp, NEXT Academy, 2015.</dd></div>
-						<div class="meta-row"><dt>Industries</dt><dd>Education, maritime, media, insurance, banking, IT, agriculture, telco</dd></div>
+						<div class="meta-row"><dt>Industries</dt><dd>Education, maritime, media, banking, IT, agriculture, telco</dd></div>
 						<div class="meta-row"><dt>Side projects</dt><dd>Gugel.my link manager (Rails 7) &middot; hoojah.rudzainy.com debating app (Rails 6 + React) &middot; freelance since 2015</dd></div>
 						<div class="meta-row"><dt>Also</dt><dd>Theatre: stage manager, director, co-writer. Photography, climbing, riding, gliding and shield surfing 😉</dd></div>
 						<div class="meta-row"><dt>Documents</dt>
@@ -543,7 +584,7 @@ flowchart LR
 							</dd>
 						</div>
 					</dl>
-					<p class="lwt-caption">Four referees, from Ace Resources, Dell and NEXT Academy, are named in the CV, contactable on request.</p>
+					<p class="lwt-caption">Four referees, from Ace Resources, NEXT Academy and a former DXC colleague now at Dell, are named in the CV, contactable on request.</p>
 				</div>
 			</section>
 
@@ -619,9 +660,9 @@ flowchart LR
 					<h2>Let's chat</h2>
 					<p>Got a product that needs designing, building, or both? Send me a few lines about what it is and where it's stuck. I reply within two working days, usually with questions.</p>
 					<div class="lwt-cta-row">
-						<a class="lwt-btn lwt-btn-light" href="mailto:rudzainy@gmail.com"><i class="icon-mail" aria-hidden="true"></i>Email me</a> or just say hi on <a class="lwt-btn lwt-btn-light" href="https://twitter.com/rudzainy" target="_blank" rel="noopener"><i class="icon-twitter" aria-hidden="true"></i>Twitter</a> or <a class="lwt-btn lwt-btn-light" href="https://www.github.com/rudzainy/" target="_blank" rel="noopener"><i class="icon-linkedin" aria-hidden="true"></i>GitHub</a>.	
+						<a class="lwt-btn lwt-btn-light" href="mailto:rudzainy@gmail.com"><i class="icon-mail" aria-hidden="true"></i>Email me</a> or just say hi on <a class="lwt-btn lwt-btn-light" href="https://twitter.com/rudzainy" target="_blank" rel="noopener"><i class="icon-twitter" aria-hidden="true"></i>Twitter</a> or <a class="lwt-btn lwt-btn-light" href="https://www.github.com/rudzainy/" target="_blank" rel="noopener"><i class="icon-github" aria-hidden="true"></i>GitHub</a>.	
 					</div>
-					<p class="lwt-contact-signoff">Thx bye 🤙</p>
+					<p class="lwt-contact-signoff">Best regards 👍</p>
 				</div>
 			</section>
 
