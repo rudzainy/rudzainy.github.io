@@ -105,11 +105,13 @@ git push origin main
 ## Site Architecture
 
 ```
-/                       # Root pages: index.html, 404.html
-├── /work/              # Portfolio pieces (served: 20 .html, 2008–2025)
-├── /life/              # Personal/lifestyle content (served: 10 .html)
-├── /balance/           # Wellness / thoughts content (served: 23 .html)
+/                       # Root pages: index.html, 404.html, resume.html
+├── /work/              # Portfolio pieces (index.html + 26 dated posts, 2008–2025)
+├── /life/              # Personal/lifestyle content (index.html + 11 dated posts)
+├── /balance/           # Wellness / thoughts content (index.html + 25 dated posts)
 ├── /components/        # Internal component reference / living style guide
+│   ├── design-system.html  # Token + component specimens
+│   ├── /posts/         # .post-* section library specimens
 │   ├── /cards/         # Card variants (1x1, 2x2, featured, quote, etc.)
 │   ├── /grids/         # Grid layout patterns
 │   └── /modals/        # Modal component snippets
@@ -124,16 +126,19 @@ git push origin main
 Two kinds of files live side by side under `work/`, `life/`, `balance/`:
 
 ```
-YYYY-MM-DD-slug-title.html    # SERVED by GitHub Pages — this is the live page
-_YYYY-MM-DD-slug-title.md     # LEGACY Jekyll source — NOT built, NOT served
+YYYY-MM-DD-slug-title.html    # SERVED — the live page, linked from the section index
+_YYYY-MM-DD-slug-title.html   # Unlisted draft page (30 of these) — not linked from indexes
+YYYY-MM-DD-slug-title.md      # LEGACY Jekyll source — not a site page
 ```
 
 - The **`.html` files are the site.** Edit these to change what visitors see.
 - The **82 `.md` files are archival Jekyll sources** — they carry
-  `layout: post` front matter and `{% ... %}` liquid tags from a previous
-  Jekyll incarnation of the site. Nothing builds them; GitHub Pages ignores
-  them. They are kept as source material and as the richest structured input
-  for the `.okf/` knowledge bundle. Many are `published: false` drafts.
+  `layout: post` front matter and old Liquid-style tags from a previous
+  Jekyll incarnation of the site. They are not part of the hand-written site,
+  but Pages' Jekyll still parses them (see the Liquid warning above), so a
+  broken tag in one can still fail the build. They are kept as source material
+  and as the richest structured input for the `.okf/` knowledge bundle. Many
+  are `published: false` drafts.
 - Do **not** assume an `.md` and its `.html` sibling are in sync — treat the
   `.html` as authoritative for what ships, and the `.md` as historical.
 
@@ -143,7 +148,7 @@ _YYYY-MM-DD-slug-title.md     # LEGACY Jekyll source — NOT built, NOT served
 |------|---------|
 | `index.html` | Homepage — bento-box grid of Work / Life / Balance cards |
 | `si-es-es.css` | Custom styles + design tokens (see below) |
-| `jei-es.js` | Quote randomizer for the section cards |
+| `jei-es.js` | Quote randomizer, card auto-scroll with edge fades, the `hackering()` easter-egg modal, SmartImage fallback |
 | `_config.yml` | Jekyll `exclude:` list only (keeps internal docs out of the Pages build) |
 | `components/index.html` | Component reference / living style guide |
 | `.okf/` | Open Knowledge Format bundle built from the cleaned content |
@@ -176,7 +181,11 @@ spacing/shadow/radius/motion value, change the token, not the call site.
 
 `jei-es.js` holds three quote arrays (`quotesWork`, `quotesLife`,
 `quotesBalance`) that rotate a random quote every few seconds on the respective
-section cards.
+section cards. It also auto-scrolls overflowing cards (with top/bottom fade
+masks updated on resize), defines `hackering()` — the homepage easter-egg modal
+that unlocks hidden links when `#answer` matches a word in `ansArray` — and
+ends with the SmartImage `error` listener that swaps a broken `img[data-fallback]`
+for the striped placeholder. It loads as a plain script, not a module.
 
 ## EditorConfig
 
