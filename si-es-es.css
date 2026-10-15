@@ -72,6 +72,10 @@
   --motion-slow: 0.3s;
   --ease: ease;
 
+  /* --- Navbar (below lg: sticky, hides on scroll-down) ------------------ */
+  --z-navbar: 1020;            /* Bootstrap's sticky layer */
+  --scroll-offset-nav: 4.5rem; /* anchor landing room under the sticky bar */
+
   /* --- Bootstrap remap: utilities inherit the Batik palette ------------ */
   --bs-body-bg: var(--color-neutral);
   --bs-body-color: var(--color-ink);
@@ -634,6 +638,33 @@ section:not(.grid-container) > article.card.card-width-fit .card-title {
 
 .navbar-toggler:focus {
   box-shadow: none;
+}
+
+/* Below lg: keep the navbar reachable. Sticky at the top, it slides up out of
+   view on scroll-down and back on any scroll-up (state class set by
+   jei-es.js). Opaque so content doesn't show through. lg+ is unchanged. */
+@media (max-width: 991.98px) {
+  html {
+    scroll-padding-top: var(--scroll-offset-nav);
+  }
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-navbar);
+    background-color: var(--color-neutral);
+    transition: transform var(--motion-slow) var(--ease);
+  }
+
+  .navbar.is-scroll-hidden {
+    transform: translateY(-100%);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .navbar {
+      transition: none;
+    }
+  }
 }
 
 /* Section-specific content heading colors */

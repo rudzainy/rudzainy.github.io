@@ -199,3 +199,52 @@ let hackering = () => {
     if (t && t.tagName === 'IMG' && t.closest('.smart-image')) toPlaceholder(t);
   }, true); // capture: image error events don't bubble
 })();
+
+// Navbar scroll-reveal: below lg the navbar is sticky; it slides away while
+// scrolling down and returns on any upward scroll (CSS: .navbar.is-scroll-hidden)
+(function () {
+  var nav = document.querySelector('.navbar');
+  if (!nav || !window.matchMedia) return;
+
+  var HIDE_CLASS = 'is-scroll-hidden';
+  var THRESHOLD = 6; // px of travel to ignore as jitter
+  var mq = window.matchMedia('(max-width: 991.98px)');
+  var lastY = window.pageYOffset;
+  var ticking = false;
+
+  function menuOpen() {
+    return !!nav.querySelector('.navbar-collapse.show, .navbar-collapse.collapsing');
+  }
+
+  function keyboardInside() {
+    try { return nav.matches(':has(:focus-visible)'); } catch (e) { return false; }
+  }
+
+  function show() { nav.classList.remove(HIDE_CLASS); }
+
+  function update() {
+    ticking = false;
+    if (!mq.matches) { show(); return; }
+    var y = Math.max(0, window.pageYOffset);
+    if (y <= nav.offsetHeight || menuOpen() || keyboardInside()) {
+      show();
+      lastY = y;
+      return;
+    }
+    var delta = y - lastY;
+    if (Math.abs(delta) < THRESHOLD) return;
+    nav.classList.toggle(HIDE_CLASS, delta > 0);
+    lastY = y;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+  }, { passive: true });
+
+  nav.addEventListener('focusin', show);
+  nav.addEventListener('show.bs.collapse', show);
+
+  var onChange = function () { show(); lastY = window.pageYOffset; };
+  if (mq.addEventListener) mq.addEventListener('change', onChange);
+  else if (mq.addListener) mq.addListener(onChange);
+})();
