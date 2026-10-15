@@ -10,7 +10,7 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
 		<!-- end Bootstrap CSS & Icons -->
-		
+
 		<link rel="stylesheet" type="text/css" href="../si-es-es.css">
 	</head>
 	<body>
@@ -23,6 +23,9 @@
 		    </button>
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item d-lg-none">
+							<a href="/" class="nav-link"><i class="icon-house me-2"></i>Home</a>
+						</li>
 						<li class="nav-item">
 							<a href="/work/" class="nav-link"><i class="icon-pencil-ruler me-2"></i>Work</a>
 						</li>
@@ -55,161 +58,69 @@
 		</div>
 		<!-- end Page Header -->
 
-		<!-- Header Section -->
-		<header class="container my-5">
-			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
-				<article class="card">
-					<p class="card-body text-center">Development logs for this website.</p>
-				</article>
-				<article class="card">
-					<div class="card-header">TECHNOLOGY STACK</div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<p class="card-text">HTML, CSS, JS, GitHub Pages</p>
-					</div>
-				</article>
-				<article class="card">
-					<div class="card-header">LASTEST UPDATE</div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<p class="card-text">v0.1.0 10.09.2025</p>
-					</div>
-				</article>
-				<article class="card">
-					<div class="card-header">QUICK REFERENCES</div>
-					<div class="card-body d-flex flex-column justify-content-between">
-						<p class="card-text"><i class="icon-traffic-cone text-warning me-2"></i>Link might not work in the future</p>
-						<span class="btn btn-outline-dark disabled" aria-disabled="true">View the Design System</span> <small class="text-muted">(invisionapp.com &mdash; link no longer works)</small>
-					</div>
-				</article>
-			</section>
-		</header>
-		<!-- end Header Section -->
-
 		<!-- Main Content Section -->
 		<main class="container my-5">
+			<article style="max-width:var(--measure);margin:0 auto">
+				<p class="lead">Development logs for this website.</p>
 
-			<!-- Section: Logs -->
-			<section class="py-4">
-				<div class="card border-0 shadow-sm mb-5">
-					<div class="card-body p-4 p-lg-5">
-						<h3 class="border-bottom pb-3 mb-4"><i class="icon-book-open me-2 text-info"></i>Logs</h3>
-						
-            <div class="container py-2 mt-4 mb-4">
-              <div class="container py-2 mt-4 mb-4">
-                    <!-- timeline item 1 -->
-                    <div class="row">
-                        <!-- timeline item 1 left dot -->
-                        <div class="col-auto text-center flex-column d-none d-sm-flex">
-                            <div class="row h-50">
-                                <div class="col">&nbsp;</div>
-                                <div class="col">&nbsp;</div>
-                            </div>
-                            <h5 class="m-2">
-                                <span class="badge bg-primary border shadow-sm">&nbsp;</span>
-                            </h5>
-                            <div class="row h-50">
-                                <div class="col border-end border-primary">&nbsp;</div>
-                                <div class="col">&nbsp;</div>
-                            </div>
-                        </div>
-                        <!-- timeline item 1 event content -->
-                        <div class="col py-2">
-                            <div class="card shadow">
-                                <div class="card-body">
-                                    <div class="float-right text-muted">Thu 06.09.2025 10:56 PM GMT+8</div>
-                                    <h4 class="card-title">Update layout for case studies</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetus...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/row-->
-                    <!-- timeline item 2 -->
-                    <div class="row">
-                        <div class="col-auto text-center flex-column d-none d-sm-flex">
-                            <div class="row h-50">
-                                <div class="col border-end border-primary">&nbsp;</div>
-                                <div class="col">&nbsp;</div>
-                            </div>
-                            <h5 class="m-2">
-                                <span class="badge bg-primary border shadow-sm">&nbsp;</span>
-                            </h5>
-                            <div class="row h-50">
-                                <div class="col border-end border-primary">&nbsp;</div>
-                                <div class="col">&nbsp;</div>
-                            </div>
-                        </div>
-                        <div class="col py-2">
-                            <div class="card shadow">
-                                <div class="card-body">
-                                    <div class="float-right">Thu 06.09.2025 10:56 PM GMT+8</div>
-                                    <h4 class="card-title">Convert markdown to HTML</h4>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetus...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/row-->
-                    <!-- timeline item 3 -->
-                    <div class="row">
-                        <div class="col-auto text-center flex-column d-none d-sm-flex">
-                            <div class="row h-50">
-                                <div class="col border-end border-primary">&nbsp;</div>
-                                <div class="col">&nbsp;</div>
-                            </div>
-                            <h5 class="m-2">
-                                <span class="badge bg-primary border shadow-sm">&nbsp;</span>
-                            </h5>
-                            <div class="row h-50">
-                                <div class="col border-end border-primary">&nbsp;</div>
-                                <div class="col">&nbsp;</div>
-                            </div>
-                        </div>
-                        <div class="col py-2">
-                            <div class="card shadow">
-                                <div class="card-body">
-                                    <div class="float-right text-muted">Thu 06.09.2025 10:56 PM GMT+8</div>
-                                    <h4 class="card-title">Setup general layout</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetus...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/row-->
-                    <!-- timeline item 4 -->
-                    <div class="row">
-                        <div class="col-auto text-center flex-column d-none d-sm-flex">
-                            <div class="row h-50">
-                                <div class="col border-end border-primary">&nbsp;</div>
-                                <div class="col">&nbsp;</div>
-                            </div>
-                            <h5 class="m-2">
-                                <span class="badge bg-primary border shadow-sm">&nbsp;</span>
-                            </h5>
-                            <div class="row h-50">
-                                <div class="col">&nbsp;</div>
-                                <div class="col">&nbsp;</div>
-                            </div>
-                        </div>
-                        <div class="col py-2">
-                            <div class="card shadow">
-                                <div class="card-body">
-                                    <div class="float-right text-muted">Thu 06.09.2025 10:56 PM GMT+8</div>
-                                    <h4 class="card-title">Initial setup</h4>
-                                    <p>Setup base HTML + CSS + JS structure.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/row-->
-                </div>
-                <!--container-->
-            </div>
-            </div>
+				<div class="post-meta-table">
+					<dl>
+						<div class="meta-row">
+							<dt>Technology stack</dt>
+							<dd>HTML, CSS, JS, GitHub Pages</dd>
+						</div>
+						<div class="meta-row">
+							<dt>Latest update</dt>
+							<dd>v0.1.0 &middot; <time datetime="2025-09-10">10.09.2025</time></dd>
+						</div>
+						<div class="meta-row">
+							<dt>Design system</dt>
+							<dd><span class="text-muted">invisionapp.com &mdash; link no longer works</span></dd>
+						</div>
+					</dl>
+				</div>
+
+				<div class="post-section-head" aria-hidden="true">
+					<span class="head-tab"><i class="icon-book-open"></i><span>01</span></span>
+				</div>
+				<h2 id="logs">Logs</h2>
+
+				<div class="post-steps">
+					<div class="steps-rail">
+						<ol>
+							<li>
+								<div class="step-num">4</div>
+								<div>
+									<h3>Update layout for case studies</h3>
+									<p class="text-muted small mb-1"><time datetime="2025-09-06">06.09.2025</time></p>
+								</div>
+							</li>
+							<li>
+								<div class="step-num">3</div>
+								<div>
+									<h3>Convert markdown to HTML</h3>
+									<p class="text-muted small mb-1"><time datetime="2025-09-06">06.09.2025</time></p>
+								</div>
+							</li>
+							<li>
+								<div class="step-num">2</div>
+								<div>
+									<h3>Setup general layout</h3>
+									<p class="text-muted small mb-1"><time datetime="2025-09-06">06.09.2025</time></p>
+								</div>
+							</li>
+							<li>
+								<div class="step-num">1</div>
+								<div>
+									<h3>Initial setup</h3>
+									<p class="text-muted small mb-1"><time datetime="2025-09-06">06.09.2025</time></p>
+									<p>Setup base HTML + CSS + JS structure.</p>
+								</div>
+							</li>
+						</ol>
 					</div>
 				</div>
-			</section>
-			<!-- end Section: Summary -->
-
+			</article>
 		</main>
 		<!-- end Main Content Section -->
 
@@ -220,6 +131,7 @@
 					<span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau" data-bs-toggle="modal" data-bs-target="#takdeModal">~|{·})</a> <a href="/LICENSE"  class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span>
 				</div>
 				<div class="col-md-4 d-flex justify-content-center">
+					<a href="/" class="text-decoration-none me-3">Home</a>
 					<a href="/work/" class="text-decoration-none me-3">Back to Work</a>
 					<a href="#top" class="text-decoration-none">Back to top</a>
 				</div>
