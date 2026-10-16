@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Browser Crush Clone"
+title: "Browser Crush Clone by Rudzainy Rahman"
 date: 2016-05-19 23:59 +0800
 description: "Browser Crush Clone"
 category: balance

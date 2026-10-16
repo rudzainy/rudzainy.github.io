@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Let's work together!"
+title: "Let's work together! by Rudzainy Rahman"
 date: 2023-09-01 17:25 +0800
 description: "UI/UX designer who also builds in Rails. 15 years, seven industries, product ownership. Open for work, KL or remote."
 category: life

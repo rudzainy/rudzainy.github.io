@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PostCo Email Design"
+title: "PostCo Email Design by Rudzainy Rahman"
 date: 2018-09-01 10:46 +0800
 description: "PostCo Email Design"
 category: work

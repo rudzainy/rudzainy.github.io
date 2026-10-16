@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Baloons Over Bagan"
+title: "Baloons Over Bagan by Rudzainy Rahman"
 date: 2017-05-02 10:02 +0800
 description: "Baloons Over Bagan"
 category: life

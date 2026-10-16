@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Current State of Malaysia"
+title: "Current State of Malaysia by Rudzainy Rahman"
 date: 2022-05-18 09:44 +0800
 description: "Current State of Malaysia"
 category: balance

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Validate an Email Address in Rails"
+title: "How to Validate an Email Address in Rails by Rudzainy Rahman"
 date: 2024-05-09 10:50 +0800
 description: "A quick note on validating email addresses in Ruby on Rails."
 category: balance

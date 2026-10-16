@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Altfa Solution Logo"
+title: "Altfa Solution Logo by Rudzainy Rahman"
 date: 2009-08-06 11:52 +0800
 description: "Altfa Solution Logo"
 category: work

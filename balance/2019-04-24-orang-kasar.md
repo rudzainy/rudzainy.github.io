@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Orang Kasar"
+title: "Orang Kasar by Rudzainy Rahman"
 date: 2019-09-24 16:06 +0800
 description: "Orang Kasar"
 category: balance

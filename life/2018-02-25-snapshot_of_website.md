@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Snapshot of Website"
+title: "Snapshot of Website by Rudzainy Rahman"
 date: 2018-02-25 00:00 +0800
 description: "Snapshot of Website"
 category: life

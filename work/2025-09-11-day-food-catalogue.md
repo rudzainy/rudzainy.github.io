@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Day Food Catalogue"
+title: "Day Food Catalogue by Rudzainy Rahman"
 date: 2025-09-11 09:00 +0800
 description: "Mobile-first e‑commerce catalogue with Viber checkout (auto‑populated quote), plus search, filter, quote builder, and PWA support."
 category: work

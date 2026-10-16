@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JKM Web Portal"
+title: "JKM Web Portal by Rudzainy Rahman"
 date: 2008-09-01 15:25 +0800
 description: "JKM Web Portal"
 category: work

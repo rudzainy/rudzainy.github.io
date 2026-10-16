@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "of Video Games"
+title: "of Video Games by Rudzainy Rahman"
 date: 2024-01-03 09:09 +0800
 description: "A personal catalogue of video games that Rudzainy Rahman has invested serious time in, from the NES to Nintendo Switch."
 category: life

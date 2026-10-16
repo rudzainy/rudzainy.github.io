@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kenapa Rudzainy Buat Hoojah"
+title: "Kenapa Rudzainy Buat Hoojah by Rudzainy Rahman"
 date: 2021-01-03 08:46 +0800
 description: "Rudzainy Rahman bercerita tentang perjalanan membina hoojah.rudzainy.com, dalam temubual podcast Rakita 107.9."
 category: life

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LKIM Fish Price App"
+title: "LKIM Fish Price App by Rudzainy Rahman"
 date: 2018-09-01 08:30 +0800
 description: "LKIM Fish Price App"
 category: work

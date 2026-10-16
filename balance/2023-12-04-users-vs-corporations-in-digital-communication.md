@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Users vs Corporations in Digital Communication"
+title: "Users vs Corporations in Digital Communication by Rudzainy Rahman"
 date: 2023-12-04 07:21 +0800
 description: "Why users keep losing to corporations in digital communication, and probably will for a while yet."
 category: balance

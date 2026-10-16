@@ -339,13 +339,9 @@ module Migrate
     page = parse_page(path)
     notes = []
 
-    title = legacy["title"].is_a?(String) && !legacy["title"].strip.empty? ? html_escape(legacy["title"].strip) : nil
-    if title
-      notes << "title: legacy md (#{legacy['title'].strip.inspect}); served <title> was #{title_text(page.head).inspect}"
-    else
-      title = title_text(page.head).sub(/\s+\|.*\z/, "")
-      notes << "title: served <title>"
-    end
+    # The served <title> is what visitors see in the tab: keep it exactly.
+    title = title_text(page.head) or raise "#{rel(path)}: no <title>"
+    notes << "title: served <title>"
 
     desc = meta_description(page.head)
     if desc

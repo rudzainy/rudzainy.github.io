@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Marliyati Froz Logo"
+title: "Marliyati Froz Logo by Rudzainy Rahman"
 date: 2010-09-01 10:04 +0800
 description: "Marliyati Froz Logo"
 category: work

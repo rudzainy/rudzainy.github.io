@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Flip Down Numbers and Characters"
+title: "Flip Down Numbers and Characters by Rudzainy Rahman"
 date: 2022-09-01 04:20 +0800
 description: "Flip Down Numbers and Characters"
 category: work

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "of JavaScript"
+title: "of JavaScript by Rudzainy Rahman"
 date: 2024-01-06 08:48 +0800
 description: "of JavaScript"
 category: life

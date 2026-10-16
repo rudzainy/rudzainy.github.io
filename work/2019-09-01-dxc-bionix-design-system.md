@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DXC Bionix Design System"
+title: "DXC Bionix Design System by Rudzainy Rahman"
 date: 2019-09-01 08:39 +0800
 description: "Our team decided to build a Bionix Design System for DXC Bionix Commercialization effort."
 category: work

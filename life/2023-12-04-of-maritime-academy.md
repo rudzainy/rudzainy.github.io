@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "of Maritime Academy"
+title: "of Maritime Academy by Rudzainy Rahman"
 date: 2023-12-04 07:15 +0800
 description: "of Maritime Academy"
 category: life

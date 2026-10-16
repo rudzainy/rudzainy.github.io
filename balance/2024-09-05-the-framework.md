@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Framework"
+title: "The Framework by Rudzainy Rahman"
 date: 2024-09-01 23:54 +2117
 description: "The Framework"
 category: balance

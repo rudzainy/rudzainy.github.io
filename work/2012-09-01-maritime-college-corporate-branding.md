@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Maritime College Corporate Branding"
+title: "Maritime College Corporate Branding by Rudzainy Rahman"
 date: 2012-09-01 10:15 +0800
 description: "Maritime College Corporate Branding"
 category: work

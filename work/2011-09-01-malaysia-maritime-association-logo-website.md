@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Malaysia Maritime Association Logo &amp; Website"
+title: "Malaysia Maritime Association Logo &amp; Website by Rudzainy Rahman"
 date: 2011-09-01 10:08 +0800
 description: "Malaysia Maritime Association Logo &amp; Website"
 category: work

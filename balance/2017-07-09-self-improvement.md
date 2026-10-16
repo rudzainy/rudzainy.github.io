@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Self Improvement"
+title: "Self Improvement by Rudzainy Rahman"
 date: 2017-07-09 16:35 +0800
 description: "Self Improvement"
 category: balance

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An Answer to the question of Windows vs MacOS"
+title: "An Answer to the question of Windows vs MacOS by Rudzainy Rahman"
 date: 2024-06-16 15:13 +0800
 description: "An Answer to the question of Windows vs MacOS"
 category: balance

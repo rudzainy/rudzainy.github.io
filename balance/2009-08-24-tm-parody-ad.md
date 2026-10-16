@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TM Parody Ad"
+title: "TM Parody Ad by Rudzainy Rahman"
 date: 2009-08-24 15:51 +0800
 description: "TM Parody Ad"
 category: balance

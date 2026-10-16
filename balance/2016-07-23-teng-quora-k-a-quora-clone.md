@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Teng-Quora-K: A Quora Clone"
+title: "Teng-Quora-K: A Quora Clone by Rudzainy Rahman"
 date: 2016-07-23 16:33 +0800
 description: "Teng-Quora-K: A Quora Clone"
 category: balance

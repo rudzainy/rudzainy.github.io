@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "UX Assignment 1"
+title: "UX Assignment 1 by Rudzainy Rahman"
 date: 2024-05-26 08:49 +0800
 description: "UX Assignment 1"
 category: work

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Thoughts Explosion"
+title: "Thoughts Explosion by Rudzainy Rahman"
 date: 2020-07-11 19:57 +0800
 description: "Thoughts Explosion"
 category: balance

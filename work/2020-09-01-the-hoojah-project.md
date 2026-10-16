@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Hoojah Project"
+title: "The Hoojah Project by Rudzainy Rahman"
 date: 2020-09-01 14:35 +0800
 description: "Hoojah is an online poll &amp; debating site for Malaysia. It’s a pet project that I started working in 2013. People can go to the platform, create polls and vote for other polls. They can also engage with other users through one-on-one debate."
 category: work

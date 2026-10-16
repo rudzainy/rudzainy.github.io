@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Add Diagram on Websites using MermaidJS"
+title: "Add Diagram on Websites using MermaidJS by Rudzainy Rahman"
 date: 2024-03-23 08:37 +0800
 description: "Quick guide to setup and configure MermaidJS for websites."
 category: balance

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Next Academy Learning Portal"
+title: "Next Academy Learning Portal by Rudzainy Rahman"
 date: 2017-09-01 11:22 +0800
 description: "Next Academy Learning Portal"
 category: work

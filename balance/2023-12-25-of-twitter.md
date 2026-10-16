@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "of Twitter"
+title: "of Twitter by Rudzainy Rahman"
 date: 2023-12-25 19:55 +0800
 description: "of Twitter"
 category: balance

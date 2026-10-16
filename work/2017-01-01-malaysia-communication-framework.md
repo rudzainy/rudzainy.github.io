@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Malaysia Communication Framework"
+title: "Malaysia Communication Framework by Rudzainy Rahman"
 date: 2017-01-01 04:20 +0800
 description: "Malaysia Communication Framework"
 category: work

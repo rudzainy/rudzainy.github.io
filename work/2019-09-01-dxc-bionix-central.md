@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DXC Bionix Central"
+title: "DXC Bionix Central by Rudzainy Rahman"
 date: 2019-09-01 15:30 +0800
 description: "Designing the dashboard and sales pages for DXC Bionix Central — the commercial face of the Bionix platform."
 category: work

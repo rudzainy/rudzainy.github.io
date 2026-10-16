@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Design Review: JKM Web Portal"
+title: "Design Review: JKM Web Portal by Rudzainy Rahman"
 date: 2017-09-01 11:27 +0800
 description: "Design Review: JKM Web Portal"
 category: work

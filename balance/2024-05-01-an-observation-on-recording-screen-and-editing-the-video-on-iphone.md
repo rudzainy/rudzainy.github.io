@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An Observation on Recording Screen and Editing the Video on iPhone"
+title: "An Observation on Recording Screen and Editing the Video on iPhone by Rudzainy Rahman"
 date: 2024-05-01 21:28 +0800
 description: "An Observation on Recording Screen and Editing the Video on iPhone"
 category: balance

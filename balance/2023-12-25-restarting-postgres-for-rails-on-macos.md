@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Restarting Postgres for Rails on MacOS"
+title: "Restarting Postgres for Rails on MacOS by Rudzainy Rahman"
 date: 2023-12-25 08:46 +0800
 description: "Restarting Postgres for Rails on MacOS"
 category: balance
