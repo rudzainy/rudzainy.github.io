@@ -5,6 +5,7 @@
 # otherwise break the Liquid parser, and which are not meant to be published.
 title: Website of Rudzainy Rahman
 url: https://rudzainy.com
+theme: null
 description: I do UI/UX stuff. Sometimes I do Ruby on Rails stuff and theatre stuff. Also into photography, climbing, riding, gliding and shield surfing 😉
 
 exclude:
