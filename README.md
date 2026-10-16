@@ -1,55 +1,74 @@
 # rudzainy.github.io
 
-Personal portfolio at **[rudzainy.com](https://rudzainy.com)**, served from this
-repo via GitHub Pages (`CNAME` at the root). Hand-written static HTML. No build
-system, no SSG — the `.html` files in the repo are exactly what ships.
+Personal portfolio at **[rudzainy.com](https://rudzainy.com)**, built with Jekyll
+and served from this repo via GitHub Pages (`CNAME` at the root). The markup is
+hand-written; Jekyll only supplies the shared chrome (head, navbar, footer,
+scripts) through `_layouts/` and `_includes/`.
 `rudzainy.github.io` still resolves and redirects to the custom domain.
 
 ## Run locally
 
-```bash
-ruby -run -e httpd . -p 8000     # then open http://localhost:8000
-```
+Ruby 3.3.6 (pinned in `.ruby-version`) and the `github-pages` gem, so local
+builds match production.
 
-Any `.html` also opens directly in a browser.
+```bash
+bundle install                   # once
+bundle exec jekyll serve         # then open http://localhost:4000
+bundle exec jekyll build         # build to _site/ (gitignored)
+```
 
 ## Deploy
 
 ```bash
-git push origin main             # GitHub Pages serves automatically
+git push origin main             # GitHub Pages builds with Jekyll and serves
 ```
 
-Custom domain is in `CNAME`. There is no CI and no build to wait on.
+Custom domain is in `CNAME`.
 
 ## Layout
 
 ```
-/                    index.html, 404.html
+/                    index.html, 404.html, resume.html, robots.txt
+├── _layouts/        default, post, section
+├── _includes/       head, navbar, footer, scripts
 ├── work/            portfolio pieces        (Work section)
 ├── life/            personal / lifestyle    (Life section)
 ├── balance/         thoughts, dev notes,    (Balance section)
 │                    creative writing
+├── legacy/          archival .md sources with no served page (not built)
+├── tools/           one-shot post converter and helpers (not built)
 ├── components/      component catalog + design-system.html (style guide)
-├── images/          all assets — portfolio/ and posts/
+├── images/          all assets — portfolio/, posts/, favicons/
 ├── docs/            PDFs, CVs, misc reference
 └── .okf/            Open Knowledge Format bundle (one concept per post)
 ```
 
+Asset paths are root-absolute (`/images/`, `/si-es-es.css`, `/jei-es.js`).
+
 ## Content model
 
-Two kinds of files sit side by side under `work/`, `life/`, `balance/`:
+Under `work/`, `life/`, `balance/`:
 
-- **`*.html`** — the live pages. GitHub Pages serves these. Edit these to change
-  the site.
-- **`*.md`** — legacy Jekyll sources (`layout: post` front matter, old `{% %}`
-  tags). **Not built, not served.** Kept as source material and as the input for
-  the `.okf/` bundle. Don't assume an `.md` and its `.html` sibling are in sync;
-  the `.html` is authoritative for what ships.
+- **`YYYY-MM-DD-slug.md`** — the live posts. Front matter (`layout`, `title`,
+  `date`, `description`, `category`, `permalink`, and optional extras) plus the
+  original HTML body kept raw. Edit these to change the site. The `permalink`
+  is pinned to the original `.html` URL. Don't add `published: false`; it
+  removes the post from the build.
+- **`YYYY-MM-DD-slug.html`** — the superseded hand-written pages. Excluded from
+  the build in `_config.yml` because the `.md` renders to the same URL; they
+  stay in the tree until their deletion is approved.
+- **`_YYYY-MM-DD-slug.html`** — unlisted drafts. Jekyll skips them.
+- **`index.html`** — the section index, hand-written card grid on the section
+  layout.
+- **`legacy/*.md`** — archival Jekyll sources with no served page (old
+  `layout: post` front matter, old Liquid-style tags). Not built. Kept as source
+  material and as input for the `.okf/` bundle.
 
-Naming: `YYYY-MM-DD-slug.html`. Some drafts use a leading `_` on the HTML.
+Never put a literal Liquid tag in a published `.md`; it breaks the Pages build.
+Internal docs are excluded in `_config.yml` for the same reason.
 
 The three sections are colour-coded (see tokens below). The `category:` field in
-`.md` front matter is the real classification and does **not** always match the
+front matter is the real classification and does **not** always match the
 folder — don't "fix" it to match the folder.
 
 ## Design system
