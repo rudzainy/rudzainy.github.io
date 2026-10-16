@@ -16,7 +16,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - tools
-  # Legacy Jekyll sources: each .md shares its output path with the served .html
-  # sibling and would overwrite it. Liquid-unsafe JSX in the hoojah post sits here too.
-  # Removed in Task 3 once the converted files are in place.
-  - "**/*.md"
+  # Legacy .md sources with no served page (draft siblings and orphans). Kept as
+  # source material only; the Liquid-unsafe JSX in the reactjs/hoojah post sits here.
+  - legacy
+  # Superseded hand-written posts: each section/YYYY-MM-DD-slug.md now renders
+  # to the same URL (permalink pinned), so the old .html would conflict with it.
+  # They stay in the tree until the Task 6 deletion is approved.
+  - "work/[0-9]*.html"
+  - "life/[0-9]*.html"
+  - "balance/[0-9]*.html"

@@ -1,107 +1,239 @@
 ---
 layout: post
-title: An Answer to the question of Windows vs MacOS
+title: "An Answer to the question of Windows vs MacOS"
 date: 2024-06-16 15:13 +0800
-description: Evaluating Windows vs MacOS as my main OS
-image:
-category: Work
-tags: [windows, macos, ai, linux, os]
-published: true
-sitemap: true
-mermaid: true
+description: "An Answer to the question of Windows vs MacOS"
+category: balance
+permalink: /balance/2024-06-16-an-answer-to-the-question-of-windows-vs-macos.html
+tags: ["windows", "macos", "ai", "linux", "os"]
 ---
+<!-- Page Header -->
+<div class="page-header-balance">
+	<nav aria-label="breadcrumb" class="container pt-3">
+		<ol class="breadcrumb mb-0">
+			<li class="breadcrumb-item"><a href="/">Home</a></li>
+			<li class="breadcrumb-item"><a href="/balance/">Balance</a></li>
+			<li class="breadcrumb-item active" aria-current="page">An Answer to the question of Windows vs MacOS</li>
+		</ol>
+	</nav>
+	<header class="container mt-4">
+		<section class="d-flex flex-wrap flex-row align-items-center gap-3 gap-lg-5">
+		<h1 class="page-title">An Answer to the question of Windows vs MacOS</h1>
+		</section>
+	</header>
+</div>
+<!-- end Page Header -->
 
-## Opening Statement
-
-I rely on destop operating system for work and my day-to-day tasks.
-
-## Windows and Apple Desktop Operating System Versions I Have Used
-
-In the order of which I was introduced:
-
-| No. | Name | Codename | Est. Duration
-|---|---|---|---|
-| 1. | MS-DOS 7 | | 4-5y (1995-1999)
-| 2. | Windows 95 | Chicago | 6-7y (1995-2001)
-| 3. | Windows 98 | Memphis | 2-3y (1999-2001)
-| 4. | Windows XP | Whistler | 5-6y (2001-2006)
-| 5. | OSX 10.3 | Panther | <1y (2004)
-| 6. | Windows XP x64 | Anvil | 3-4y (2006-2009)
-| 7. | Windows Vista | Longhorn | <1y (2007)
-| 8. | OSX 10.5 | Leopard | <1y (2008)
-| 9. | OSX 10.6 | Snow Leopard | 4-5y (2008-2012)
-| 10. | Windows 7 | | 5-6y (2009-2014)
-| 11. | Windows 8 | | <1y (2012)
-| 12. | OSX 10.10 | Yosemite | 1y (2014)
-| 13. | OSX 10.11 | El Capitan | 1y (2015)
-| 14. | macOS 10.12 | Sierra | 1y (2016)
-| 15. | macOS 10.13 | High Sierra | 1y (2017)
-| 16. | macOS 10.14 | Mojave | 1y (2018)
-| 17. | macOS 10.15 | Catalina | 1y (2019)
-| 18. | macOS 11 | Big Sur | 1y (2020)
-| 19. | macOS 12 | Monterey| 1y (2021-2024)
-| 20. | Windows 11 | Sun Valley 2 | <1y (2024)
-
-```mermaid
-  pie 
+<!-- Main Content Section -->
+<main class="container my-5">
+	<article class="post-content">
+<div class="post-section-head" aria-hidden="true">
+  <span class="head-tab"><i class="icon-book-open"></i><span>01</span></span>
+</div>
+<h2 id="opening-statement">Opening Statement</h2>
+<p>I rely on destop operating system for work and my day-to-day tasks.</p>
+<div class="post-section-head" aria-hidden="true">
+  <span class="head-tab"><i class="icon-history"></i><span>02</span></span>
+</div>
+<h2 id="windows-and-apple-desktop-operating-system-versions-i-have-used">Windows and Apple Desktop Operating System Versions I Have Used</h2>
+<p>In the order of which I was introduced:</p>
+<table>
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Codename</th>
+      <th>Est. Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.</td>
+      <td>MS-DOS 7</td>
+      <td> </td>
+      <td>4-5y (1995-1999)</td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>Windows 95</td>
+      <td>Chicago</td>
+      <td>6-7y (1995-2001)</td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>Windows 98</td>
+      <td>Memphis</td>
+      <td>2-3y (1999-2001)</td>
+    </tr>
+    <tr>
+      <td>4.</td>
+      <td>Windows XP</td>
+      <td>Whistler</td>
+      <td>5-6y (2001-2006)</td>
+    </tr>
+    <tr>
+      <td>5.</td>
+      <td>OSX 10.3</td>
+      <td>Panther</td>
+      <td>&lt;1y (2004)</td>
+    </tr>
+    <tr>
+      <td>6.</td>
+      <td>Windows XP x64</td>
+      <td>Anvil</td>
+      <td>3-4y (2006-2009)</td>
+    </tr>
+    <tr>
+      <td>7.</td>
+      <td>Windows Vista</td>
+      <td>Longhorn</td>
+      <td>&lt;1y (2007)</td>
+    </tr>
+    <tr>
+      <td>8.</td>
+      <td>OSX 10.5</td>
+      <td>Leopard</td>
+      <td>&lt;1y (2008)</td>
+    </tr>
+    <tr>
+      <td>9.</td>
+      <td>OSX 10.6</td>
+      <td>Snow Leopard</td>
+      <td>4-5y (2008-2012)</td>
+    </tr>
+    <tr>
+      <td>10.</td>
+      <td>Windows 7</td>
+      <td> </td>
+      <td>5-6y (2009-2014)</td>
+    </tr>
+    <tr>
+      <td>11.</td>
+      <td>Windows 8</td>
+      <td> </td>
+      <td>&lt;1y (2012)</td>
+    </tr>
+    <tr>
+      <td>12.</td>
+      <td>OSX 10.10</td>
+      <td>Yosemite</td>
+      <td>1y (2014)</td>
+    </tr>
+    <tr>
+      <td>13.</td>
+      <td>OSX 10.11</td>
+      <td>El Capitan</td>
+      <td>1y (2015)</td>
+    </tr>
+    <tr>
+      <td>14.</td>
+      <td>macOS 10.12</td>
+      <td>Sierra</td>
+      <td>1y (2016)</td>
+    </tr>
+    <tr>
+      <td>15.</td>
+      <td>macOS 10.13</td>
+      <td>High Sierra</td>
+      <td>1y (2017)</td>
+    </tr>
+    <tr>
+      <td>16.</td>
+      <td>macOS 10.14</td>
+      <td>Mojave</td>
+      <td>1y (2018)</td>
+    </tr>
+    <tr>
+      <td>17.</td>
+      <td>macOS 10.15</td>
+      <td>Catalina</td>
+      <td>1y (2019)</td>
+    </tr>
+    <tr>
+      <td>18.</td>
+      <td>macOS 11</td>
+      <td>Big Sur</td>
+      <td>1y (2020)</td>
+    </tr>
+    <tr>
+      <td>19.</td>
+      <td>macOS 12</td>
+      <td>Monterey</td>
+      <td>1y (2021-2024)</td>
+    </tr>
+    <tr>
+      <td>20.</td>
+      <td>Windows 11</td>
+      <td>Sun Valley 2</td>
+      <td>&lt;1y (2024)</td>
+    </tr>
+  </tbody>
+</table>
+<p><code>mermaid
+  pie
     title Microsoft vs Apple desktop OS
     "Microsoft" : 190
     "Apple" : 170
-```
-
-The table and chart above shows that I am desktop OS agnostic. However, there are notable pros and cons of each OS that I want to highlight.
-
-Comparing the pros and cons of Windows OS and macOS over the past 20 years reveals how each system has evolved and catered to different user needs and preferences. Here's a detailed look.
-
-## Windows OS
-
-### Pros
-1. Hardware Compatibility
-2. Software Availability
-3. Customization Options
-4. Backward Compatibility
-5. Gaming
-
-### Cons
-1. Security Vulnerabilities
-2. System Stability
-3. License Costs
-
-## macOS
-
-### Pros
-1. User Experience
-2. User Interface
-3. Quality of Applications optimized for macOS
-4. Security
-5. Integration with Apple Ecosystem
-6. Stability and Performance
-
-### Cons
-1. High Initial Cost
-2. Limited Customization
-
-Limited software availability and gaming used to be an issue. However as more people develop softwares on macOS, open source support also increqsed. The Hackintosh project also open doors for hardware options.
-
-
-## Other Notable Mentions
-
-### Linux
-
-I first stumbled upon Linux sometime around the year 2000. I have tried various flavours of Linux distros, however none seems to fit my overall needs. That being said, if I have to switch to Linux for my daily driver, I bet I can survive! Tho I would prefer to use stable distros such as Ubuntu or Fedora, I am also keen to try the likes of [ElementaryOS](https://elementary.io) or [Pop!_OS](https://pop.system76.com). Or settle with Arch. 
-
-## ChromeOS
-
-This is actually the dream, minus the bloat codes from Google.
-
-## Which One Should I Choose?
-
-![Choosing an OS](https://qph.cf2.quoracdn.net/main-qimg-0d61f724390b263557ac9590afd90576-lq)
-
-According to ChatGPT:
-
-**Windows OS** has evolved to offer extensive hardware and software compatibility, making it ideal for a wide range of users, from gamers to enterprise professionals. However, it is more susceptible to security threats and system instability due to its open nature.
-
-**macOS** provides a premium, stable, and secure user experience with deep integration into the Apple ecosystem, making it a preferred choice for creative professionals and users who value seamless device interoperability. The main drawbacks are its high cost and limited hardware and software customization options.
-
-If you still can't decide, ring me up!
+</code></p>
+<p>The table and chart above shows that I am desktop OS agnostic. However, there are notable pros and cons of each OS that I want to highlight.</p>
+<p>Comparing the pros and cons of Windows OS and macOS over the past 20 years reveals how each system has evolved and catered to different user needs and preferences. Here’s a detailed look.</p>
+<div class="post-section-head" aria-hidden="true">
+  <span class="head-tab"><i class="icon-monitor"></i><span>03</span></span>
+</div>
+<h2 id="windows-os">Windows OS</h2>
+<h3 id="pros">Pros</h3>
+<ol>
+  <li>Hardware Compatibility</li>
+  <li>Software Availability</li>
+  <li>Customization Options</li>
+  <li>Backward Compatibility</li>
+  <li>Gaming</li>
+</ol>
+<h3 id="cons">Cons</h3>
+<ol>
+  <li>Security Vulnerabilities</li>
+  <li>System Stability</li>
+  <li>License Costs</li>
+</ol>
+<div class="post-section-head" aria-hidden="true">
+  <span class="head-tab"><i class="icon-laptop"></i><span>04</span></span>
+</div>
+<h2 id="macos">macOS</h2>
+<h3 id="pros-1">Pros</h3>
+<ol>
+  <li>User Experience</li>
+  <li>User Interface</li>
+  <li>Quality of Applications optimized for macOS</li>
+  <li>Security</li>
+  <li>Integration with Apple Ecosystem</li>
+  <li>Stability and Performance</li>
+</ol>
+<h3 id="cons-1">Cons</h3>
+<ol>
+  <li>High Initial Cost</li>
+  <li>Limited Customization</li>
+</ol>
+<p>Limited software availability and gaming used to be an issue. However as more people develop softwares on macOS, open source support also increqsed. The Hackintosh project also open doors for hardware options.</p>
+<div class="post-section-head" aria-hidden="true">
+  <span class="head-tab"><i class="icon-terminal"></i><span>05</span></span>
+</div>
+<h2 id="other-notable-mentions">Other Notable Mentions</h2>
+<h3 id="linux">Linux</h3>
+<p>I first stumbled upon Linux sometime around the year 2000. I have tried various flavours of Linux distros, however none seems to fit my overall needs. That being said, if I have to switch to Linux for my daily driver, I bet I can survive! Tho I would prefer to use stable distros such as Ubuntu or Fedora, I am also keen to try the likes of <a href="https://elementary.io">ElementaryOS</a> or <a href="https://pop.system76.com">Pop!_OS</a>. Or settle with Arch.</p>
+<div class="post-section-head" aria-hidden="true">
+  <span class="head-tab"><i class="icon-globe"></i><span>06</span></span>
+</div>
+<h2 id="chromeos">ChromeOS</h2>
+<p>This is actually the dream, minus the bloat codes from Google.</p>
+<div class="post-section-head" aria-hidden="true">
+  <span class="head-tab"><i class="icon-circle-help"></i><span>07</span></span>
+</div>
+<h2 id="which-one-should-i-choose">Which One Should I Choose?</h2>
+<p><img src="https://qph.cf2.quoracdn.net/main-qimg-0d61f724390b263557ac9590afd90576-lq" alt="Choosing an OS"></p>
+<p>According to ChatGPT:</p>
+<p><strong>Windows OS</strong> has evolved to offer extensive hardware and software compatibility, making it ideal for a wide range of users, from gamers to enterprise professionals. However, it is more susceptible to security threats and system instability due to its open nature.</p>
+<p><strong>macOS</strong> provides a premium, stable, and secure user experience with deep integration into the Apple ecosystem, making it a preferred choice for creative professionals and users who value smooth device interoperability. The main drawbacks are its high cost and limited hardware and software customization options.</p>
+<p>If you still can’t decide, ring me up!</p>
+	</article>
+</main>
+<!-- end Main Content Section -->

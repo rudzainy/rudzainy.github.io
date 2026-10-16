@@ -1,74 +1,130 @@
 ---
 layout: post
-title: of Video Games
+title: "of Video Games"
 date: 2024-01-03 09:09 +0800
-description: A personal catalogue of video games that Rudzainy Rahman has invested serious time in — from the NES to Nintendo Switch.
-image:
-category: Balance
-tags: [video games]
-published: true
-sitemap: true
+description: "A personal catalogue of video games that Rudzainy Rahman has invested serious time in, from the NES to Nintendo Switch."
+category: life
+permalink: /life/2024-01-03-of-video-games.html
+data_category: life
+tags: ["video games"]
 ---
+<!-- Page Header -->
+<div class="page-header-life">
+  <nav aria-label="breadcrumb" class="container pt-3">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/life/">Life</a></li>
+      <li class="breadcrumb-item active" aria-current="page">of Video Games</li>
+    </ol>
+  </nav>
+  <header class="container mt-3">
+    <p class="mb-2" style="font-family:'Unica One',sans-serif;text-transform:uppercase;letter-spacing:0.05em;font-size:14px;color:rgba(255,255,255,0.75)"><time datetime="2024-01-03">03.01.2024</time> · Life</p>
+    <h1 class="page-title">of Video Games</h1>
+  </header>
+</div>
+<!-- end Page Header -->
 
-Here are games that I have invested serious time in:
+<!-- Callout -->
+<div class="post-callout is-note">
+  <aside>
+    <div class="callout-header">
+      <i class="icon-info"></i>
+      Note
+    </div>
+    <p class="callout-body">This is a living list of games I have genuinely sunk time into. Not every game I've ever touched, just the ones that left a mark. Platforms are listed in roughly the order I encountered them.</p>
+  </aside>
+</div>
+<!-- end Callout -->
 
-1. Nintendo Entertainment System
-
-- Super Mario Bros
-- Zelda II: The Adventure of Link
-
-2. Super Nintendo
-
-- Mighty Morphin Power Rangers: The Movie
-- Mighty Morphin Power Rangers: The Fighting Edition
-- Aladdin
-- International Superstar Soccer
-- Super Mario Bros 3
-
-3. Windows PC games
-
-- Batman Forever
-- Betrayal at Krondor
-- Megarace
-- Final Fantasy IV
-- Final Fantasy VII
-- Final Fantasy VIII
-- Final Fantasy IX
-- Sonic 3 & Knuckles
-- [Crystal Calliburn](https://en.wikipedia.org/wiki/Crystal_Caliburn)
-- Need for Speed: Underground
-- Need for Speed: Underground 2
-- Need for Speed: Most Wanted
-- Ragnarok Online
-- Sim City 3000
-- Sim City 4
-- Cities Skylines
-- Star Wars Knights of the Old Republic II: The Sith Lords
-
-3. Game Boy
-
-- Pokémon Red, Yellow
-- The Legend of Zelda: A Link to the Past
-- The Legend of Zelda: Link's Awakening
-- Tetris
-- Crayon Shin Chan
-- Dragon Ball
-
-4. PlayStation Portable
-
-- Crisis Core: Final Fantasy VII
-
-5. Nintendo DS
-
-- The Legend of Zelda: Phantom Hourglass
-
-6. Nintendo Switch
-
-- The Legend of Zelda: Breath of the Wild
-
-7. Mobile games
-
-- 2048
-- I Love Coffee
-- Lara Croft Go
-- Mobile Legends: Bang Bang
+<!-- Main Content Section -->
+<main class="container my-5">
+  <article class="post-content">
+    <p>Here are games that I have invested serious time in:</p>
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-gamepad"></i><span>01</span></span>
+    </div>
+    <h2 id="nes">Nintendo Entertainment System</h2>
+    <ul>
+      <li>Super Mario Bros</li>
+      <li>Zelda II: The Adventure of Link</li>
+    </ul>
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-gamepad-2"></i><span>02</span></span>
+    </div>
+    <h2 id="snes">Super Nintendo</h2>
+    <ul>
+      <li>Mighty Morphin Power Rangers: The Movie</li>
+      <li>Mighty Morphin Power Rangers: The Fighting Edition</li>
+      <li>Aladdin</li>
+      <li>International Superstar Soccer</li>
+      <li>Super Mario Bros 3</li>
+    </ul>
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-monitor"></i><span>03</span></span>
+    </div>
+    <h2 id="pc">Windows PC games</h2>
+    <ul>
+      <li>Batman Forever</li>
+      <li>Betrayal at Krondor</li>
+      <li>Megarace</li>
+      <li>Final Fantasy IV</li>
+      <li>Final Fantasy VII</li>
+      <li>Final Fantasy VIII</li>
+      <li>Final Fantasy IX</li>
+      <li>Sonic 3 &amp; Knuckles</li>
+      <li><a href="https://en.wikipedia.org/wiki/Crystal_Caliburn">Crystal Calliburn</a></li>
+      <li>Need for Speed: Underground</li>
+      <li>Need for Speed: Underground 2</li>
+      <li>Need for Speed: Most Wanted</li>
+      <li>Ragnarok Online</li>
+      <li>Sim City 3000</li>
+      <li>Sim City 4</li>
+      <li>Cities Skylines</li>
+      <li>Star Wars Knights of the Old Republic II: The Sith Lords</li>
+    </ul>
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-tablet"></i><span>04</span></span>
+    </div>
+    <h2 id="gameboy">Game Boy</h2>
+    <ul>
+      <li>Pok&eacute;mon Red, Yellow</li>
+      <li>The Legend of Zelda: A Link to the Past</li>
+      <li>The Legend of Zelda: Link's Awakening</li>
+      <li>Tetris</li>
+      <li>Crayon Shin Chan</li>
+      <li>Dragon Ball</li>
+    </ul>
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-disc-3"></i><span>05</span></span>
+    </div>
+    <h2 id="psp">PlayStation Portable</h2>
+    <ul>
+      <li>Crisis Core: Final Fantasy VII</li>
+    </ul>
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-square-split-vertical"></i><span>06</span></span>
+    </div>
+    <h2 id="nds">Nintendo DS</h2>
+    <ul>
+      <li>The Legend of Zelda: Phantom Hourglass</li>
+    </ul>
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-toggle-right"></i><span>07</span></span>
+    </div>
+    <h2 id="switch">Nintendo Switch</h2>
+    <ul>
+      <li>The Legend of Zelda: Breath of the Wild</li>
+    </ul>
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-smartphone"></i><span>08</span></span>
+    </div>
+    <h2 id="mobile">Mobile games</h2>
+    <ul>
+      <li>2048</li>
+      <li>I Love Coffee</li>
+      <li>Lara Croft Go</li>
+      <li>Mobile Legends: Bang Bang</li>
+    </ul>
+  </article>
+</main>
+<!-- end Main Content Section -->

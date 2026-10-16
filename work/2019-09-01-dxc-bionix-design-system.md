@@ -1,151 +1,332 @@
 ---
 layout: post
-title: DXC Bionix Design System
+title: "DXC Bionix Design System"
 date: 2019-09-01 08:39 +0800
-description: Our team decided to build a design system for DXC Bionix Commercialization effort.
-image: https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-21-at-8.38.24-PM-2048x1124.png
-category: Work
-tags: [ui, ux, portfolio]
-published: true
-sitemap: true
+description: "Our team decided to build a Bionix Design System for DXC Bionix Commercialization effort."
+category: work
+permalink: /work/2019-09-01-dxc-bionix-design-system.html
+tags: ["ui", "ux", "portfolio"]
+image: "https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-21-at-8.38.24-PM-2048x1124.png"
 ---
+<!-- Page Header -->
+<div class="page-header-work">
+	<nav aria-label="breadcrumb" class="container pt-3">
+		<ol class="breadcrumb mb-0">
+			<li class="breadcrumb-item"><a href="/">Home</a></li>
+			<li class="breadcrumb-item"><a href="/work/">Work</a></li>
+			<li class="breadcrumb-item active" aria-current="page">DXC Bionix Design System</li>
+		</ol>
+	</nav>
+	<header class="container mt-4">
+		<section class="d-flex flex-wrap flex-row align-items-center gap-3 gap-lg-5">
+		<h1 class="page-title">DXC Bionix Design System</h1>
+		</section>
+	</header>
+</div>
+<!-- end Page Header -->
 
-| Project | DXC Bionix Design System |
-| Responsibilities | Research, design and build. |
-| Technology Stack | Sketch, InVision Design System Manager |
-| Year | 2017-2018 |
-| Design System Link | https://dxcraas.invisionapp.com/dsm/dxc-apa/dxc-bionix?version=5bcda38e152dd5001a44ed15 |
+<!-- Header Section -->
+<header class="container my-5">
+	<section class="d-flex flex-wrap flex-row align-items-center gap-3 gap-lg-5">
+		<article class="card card-featured-img">
+			<figure class="mb-0">
+				<img src="/images/portfolio/dxc/frame_417_delay-0.1s.gif" class="card-img object-fit-cover" alt="The home page of DXC Bionix Design System.">
+				<figcaption class="visually-hidden">The home page of DXC Bionix Design System.</figcaption>
+			</figure>
+		</article>
+	</section>
+	<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
+		<article class="card">
+			<p class="card-body text-center">Our team decided to build a design system for DXC Bionix Commercialization effort.</p>
+		</article>
+		<article class="card">
+			<div class="card-header">Responsibilities</div>
+			<div class="card-body d-flex flex-column justify-content-between">
+				<p class="card-text">Research, design and build</p>
+			</div>
+		</article>
+		<article class="card">
+			<div class="card-header">Technology Stack</div>
+			<div class="card-body d-flex flex-column justify-content-between">
+				<p class="card-text">Sketch, InVision Design System Manager</p>
+			</div>
+		</article>
+		<article class="card">
+			<div class="card-header">Year</div>
+			<div class="card-body d-flex flex-column justify-content-between">
+				<p class="card-text">2017-2018</p>
+			</div>
+		</article>
+		<article class="card">
+			<div class="card-header">External Links</div>
+			<div class="card-body d-flex flex-column justify-content-between">
+				<p class="card-text"><i class="icon-traffic-cone text-warning me-2"></i>Link might not work in the future</p>
+				<span class="btn btn-outline-dark disabled" aria-disabled="true">View the Design System</span> <small class="text-muted">(invisionapp.com &mdash; link no longer works)</small>
+			</div>
+		</article>
+	</section>
+</header>
+<!-- end Header Section -->
 
-## Summary
-
-Our team was tasked with designing UI and UX for [DXC Bionix Commercialization](https://projects.invisionapp.com/boards/JK3OKW0RB5C#/6185664) effort. After gathering and studying stakeholders' requirements, the team decided to develop a new design system using InVision Design System Manager (DSM) to align with efforts from other teams for building screens and prototypes quickly during later development and production phases.
-
-## 1. Background
-
-I was working in a 4 + 1 members team (we got one team member seconded from another team during later phases of the exercise) where the UX goal is to provide a unified user experience across all components of the DXC Bionix Commercialisation effort. Every team member participated in every step of the design system development process which includes (but not limited to) research, analyse, wire-framing, building and animating design components using Sketch and InVision Design System Manager (DSM).
-
-An important requirement is a set of user experience must be documented and aligned as a standard. Each user interaction should be aligned to a user experience and the variations of user experiences should be limited.
-
-> DXC Bionix has a brand guidelines for marketing but does not include UI guidelines for applications.
-
-> The interaction (task) accomplished by the experience.
-
-> DXC Bionix has a brand guidelines for marketing but does not include UI guidelines for applications.
-
-> The capabilities providing that experience.
-
-> The dependencies of the experience on the capability.
-
-When capturing a user experience the following items was identified:
-
-#### Goals
-> Develop a design system to utilise component based design – need to build fast and iterate quickly during development and production phase.
-
-#### Non-Goals
-> To have a comprehensive list of components – the project just started, we will build more components as needed in the future.
-
-> Re-invent the wheel – embrace open source and build on top of existing industry knowledge and best practices.
-
-## 2. Proposed Solution
-
-InVision Design System Manager
-
-![Bionix DSM](https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-23-at-9.40.20-PM-2048x1351.png)
-
-### Risks
-
-Design conflicts with DXC Bionix brand guidelines as it does not include UI guidelines for building computer softwares.
-
-InVision DSM was relatively new at the time, however it’s the most comprehensive compared to other solutions.
-
-
-### Highlighted Milestones
-
-Having direct access to PM and other stakeholders – quickly come to an agreement on scope and deliverables.
-
-Running mini Design Sprints and utilising tools such as Trello and Freehand to prioritise design and deliverables.
-
-Early discussions with our engineering team resulted in synchronised component-based development between both teams.
-
-![Task management for Bionix Design System](https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-23-at-11.47.33-PM-2048x1748.png)
-
-
-### Open Questions
-
-1. How future-proof and maintainable is this solution?
-2. Is it okay to use hacks when designing components?
-
-## 3. Outcome
-
-### What we liked
-
-#### Synchronous design system
-It is easier and faster to produce screens using reusable components. having it integrated into the ui design process helps a lot.
-
-We are able to add actual symbols and components we work with inside of Sketch directly to the Design System. There is no disconnect between the reference design and symbol we use to design. This is a so convenient and a huge timesaver! Prior to this, we were maintaining a paper document and uploading images with spec overlays. Every once in a while, updating a component required significant effort, sometimes leading to disconnects between the reference Design System and design symbols.
-
-#### Easy to maintain and evolve
-This really ties into the first point. The fact that every component update is just a click away really encourages a change in not just the way we work, but the way we think. We run a dual-track agile product design practice. Design is able to evolve existing experiences before the next round of development comes in. We are able to test out hypothesis and deploy learnings quicker.
-
-#### Applying layer styles
-Applying layer styles using DSM—by selecting desired element, then clicking the corresponding style in DSM is pretty handy compared to using the microscopic colour palette in Sketch.
-
-### Troubles we had
-
-#### Local layer styling
-Colours are not linked in the DSM library, it just applies appearance locally. If we need to make a global colour change, it becomes a laborious task. Same goes for text styles.
-
-#### Updating symbols
-Downloading a component (symbol) from DSM, manipulating it to create a new component and then uploading the new component to DSM seems to take a long time.
-
-#### Importing
-When pulling a symbol from DSM to Sketch, multiple colours are being imported, even colours that should not have any trace to the current DS. No idea where it is being used. This extends to all symbols, not just colours. We seem to have overrides left and right.
-
-#### Intermittent upload bug
-It sometimes fails to upload and ends up pulling all manner of symbols into the sketch document, making the document really bloated and impacting performance.
-
-#### Text style organisation
-Need a way to better organise text styles – maybe a way to have sub-levels for text styles. At least change the default “The quick brown fox…” text in DSM web to the text style name (like how it is in DSM Sketch plugin)
-
-#### Mismatched colours
-Colours property of some elements — such as icons, in exported mockups (either with Craft or Sketch native) is mismatched. Need to detach symbols in order for it to correctly render on InVision.
-
-#### The case of the missing font files
-Font files uploaded to DSM web keeps disappearing
-
-#### Multiple nested levels for better organisation
-Multiple nested levels would be welcome addition, but not a deal breaker.
-
-### Our workarounds
-
-> 🥳 Sketch libraries, FTW!
-
-We moved our workflow to sketch libraries, and use DSM as a reference point for developers.
-
-We used Google drive to host our library files. Sketch Cloud has syncing issues, needing to restart or re-add libraries almost every time there is an update.
-
-## 4. Showcase
-
-![Bionix Design System Guidelines](https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/743d7779593853.5cc831df5464a-1-1536x1208.gif)
-
-### Design Principles
-
-#### Informed and Evolving
-UserHuman needs are in flux. Through informed design decisions backed up by research whenever possible, design should evolve to reflect how real people use the system.
-
-#### Consistent Interactions
-All design components should be part of a cohesive unit that fosters contextual, predictable experiences.
-
-#### Purposeful Elegance
-Bionix should look and feel like a world-class experience. Every aesthetic design decision – from colour to visualisations should be elegantly designed with purpose.
-
-#### Simplified Complexity
-Do the hard work to mask and reduce the complexity for the user. Empower the user through direct and effortless experiences.
-
-> Most collaborators can’t see space, a primary reason it’s so arbitrarily applied. But now we’ve got a system: a limited number of concepts, each offering a limited range of options.
-> -Nathan Curtis
-
-![Bionix Design System Guidelines](https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-22-at-3.28.06-PM.png) 
-![Bionix Design System Guidelines](https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-22-at-2.59.24-PM-2048x1289.png) 
-![Bionix Design System Guidelines](https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-21-at-7.46.40-PM-2048x1100.png)
-![Bionix Design System Guidelines](https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-22-at-3.02.02-PM-2048x2011.png)
+<!-- Main Content Section -->
+<main class="container my-5">
+	<!-- Section: Summary -->
+	<section class="row py-4">
+		<div class="col-12 col-lg-6 mx-auto mb-5">
+			<h3 class="border-bottom pb-3 mb-4"><i class="icon-book-open me-2 text-info"></i>Summary</h3>
+			<p class="lead">The DXC Bionix Design System is a comprehensive design framework created to standardize the user experience across all DXC Bionix applications. It includes a library of reusable components, patterns, and guidelines that ensure consistency and efficiency in design and development.</p>
+			<p>The design system was built using Sketch and InVision Design System Manager (DSM), with a focus on component-based design to enable rapid development and iteration. It serves as a single source of truth for design decisions and helps to bridge the gap between design and development teams.</p>
+			<p>The project involved extensive research, analysis, and collaboration with stakeholders to ensure that the design system met the needs of both users and developers. The result is a robust framework that has significantly improved the efficiency and consistency of the DXC Bionix user experience.</p>
+		</div>
+	</section>
+	<!-- end Section: Summary -->
+	<!-- Section: Background -->
+	<section class="row py-4">
+		<div class="col-12 col-lg-6 mx-auto mb-5">
+			<h3 class="border-bottom pb-3 mb-4"><i class="icon-info me-2 text-info"></i>1. Background</h3>
+			<p>I was working in a 4 + 1 members team (we got one team member seconded from another team during later phases of the exercise) where the UX goal is to provide a unified user experience across all components of the DXC Bionix Commercialisation effort. Every team member participated in every step of the design system development process which includes (but not limited to) research, analyse, wire-framing, building and animating design components using Sketch and InVision Design System Manager (DSM). This project taught me the critical importance of standardization in large-scale design efforts. What I took from it: a design system is less about visual consistency and more about giving designers and developers a shared language.</p>
+			<p>An important requirement is a set of user experience must be documented and aligned as a standard. Each user interaction should be aligned to a user experience and the variations of user experiences should be limited.</p>
+			<div class="row g-3 mt-3">
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">DXC Bionix has a brand guidelines for marketing but does not include UI guidelines for applications.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">The interaction (task) accomplished by the experience.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">The capabilities providing that experience.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">The dependencies of the experience on the capability.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="mt-4">When capturing a user experience the following items was identified:</p>
+			<h4 class="mt-4 text-info"><i class="icon-target me-2"></i>Goals</h4>
+			<ul>
+				<li>Develop a design system to utilise component based design – need to build fast and iterate quickly during development and production phase.</li>
+			</ul>
+			<h4 class="mt-4 text-info"><i class="icon-circle-x me-2"></i>Non-Goals</h4>
+			<ul>
+				<li>To have a comprehensive list of components – the project just started, we will build more components as needed in the future.</li>
+				<li>Re-invent the wheel – embrace open source and build on top of existing industry knowledge and best practices.</li>
+			</ul>
+		</div>
+	</section>
+	<!-- end Section: Background -->
+	<!-- Section: Proposed Solution -->
+	<section class="row py-4">
+		<div class="col-12 col-lg-6 mx-auto mb-5">
+			<h3 class="border-bottom pb-3 mb-4"><i class="icon-lightbulb me-2 text-info"></i>2. Proposed Solution</h3>
+			<h4 class="mt-4 text-info"><i class="icon-layout-grid me-2"></i>InVision Design System Manager</h4>
+			<figure class="mb-4">
+				<img src="/images/portfolio/dxc/frame_417_delay-0.1s.gif" class="img-fluid" alt="The home page of DXC Bionix Design System.">
+				<figcaption class="text-center fst-italic text-secondary mt-2">The home page of DXC Bionix Design System.</figcaption>
+			</figure>
+			<h4 class="mt-4 text-info"><i class="icon-triangle-alert me-2"></i>Risks</h4>
+			<div class="row g-3 mt-3">
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">Design conflicts with DXC Bionix brand guidelines as it does not include UI guidelines for building computer softwares.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">InVision DSM was relatively new at the time, however it’s the most comprehensive compared to other solutions.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">Adoption by development teams.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">Maintaining the design system.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">Integrating with existing applications.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h4 class="mt-4 text-info"><i class="icon-flag me-2"></i>Highlighted Milestones</h4>
+			<div class="row g-3 mt-3">
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">Having direct access to PM and other stakeholders – quickly come to an agreement on scope and deliverables.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">Running mini Design Sprints and utilising tools such as Trello and Freehand to prioritise design and deliverables.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row g-3 mt-3">
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">Early discussions with our engineering team resulted in synchronised component-based development between both teams.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">Task management was handled through Trello boards, allowing for transparent progress tracking.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h4 class="mt-4 text-info"><i class="icon-circle-help me-2"></i>Open Questions</h4>
+			<div class="row g-3 mt-3">
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">1. How future-proof and maintainable is this solution?</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card h-100 border-0 shadow-sm">
+						<div class="card-body">
+							<p class="card-text">2. Is it okay to use hacks when designing components?</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+	</section>
+	<!-- end Section: Proposed Solution -->
+	<!-- Section: Outcome -->
+	<section class="row py-4">
+		<div class="col-12 col-lg-6 mx-auto mb-5">
+			<h3 class="border-bottom pb-3 mb-4"><i class="icon-circle-check me-2 text-info"></i>3. Outcome</h3>
+			<h4 class="mt-4 text-success"><i class="icon-thumbs-up me-2"></i>What we liked</h4>
+			<h5 class="mt-4 text-info">Synchronous design system</h5>
+			<p>It is easier and faster to produce screens using reusable components. having it integrated into the ui design process helps a lot.</p>
+			<p>We are able to add actual symbols and components we work with inside of Sketch directly to the Design System. There is no disconnect between the reference design and symbol we use to design. This is a so convenient and a huge timesaver! Prior to this, we were maintaining a paper document and uploading images with spec overlays. Every once in a while, updating a component required significant effort, sometimes leading to disconnects between the reference Design System and design symbols.</p>
+			<h5 class="mt-4 text-info">Easy to maintain and evolve</h5>
+			<p>This really ties into the first point. The fact that every component update is just a click away really encourages a change in not just the way we work, but the way we think. We run a dual-track agile product design practice. Design is able to evolve existing experiences before the next round of development comes in. We are able to test out hypothesis and deploy learnings quicker.</p>
+			<h5 class="mt-4 text-info">Applying layer styles</h5>
+			<p>Applying layer styles using DSM, by selecting desired element, then clicking the corresponding style in DSM is pretty handy compared to using the microscopic colour palette in Sketch.</p>
+			<h4 class="mt-5 text-danger"><i class="icon-thumbs-down me-2"></i>Troubles we had</h4>
+			<h5 class="mt-4 text-info">Local layer styling</h5>
+			<p>Colours are not linked in the DSM library, it just applies appearance locally. If we need to make a global colour change, it becomes a laborious task. Same goes for text styles.</p>
+			<h5 class="mt-4 text-info">Updating symbols</h5>
+			<p>Downloading a component (symbol) from DSM, manipulating it to create a new component and then uploading the new component to DSM seems to take a long time.</p>
+			<h5 class="mt-4 text-info">Importing</h5>
+			<p>When pulling a symbol from DSM to Sketch, multiple colours are being imported, even colours that should not have any trace to the current DS. No idea where it is being used. This extends to all symbols, not just colours. We seem to have overrides left and right.</p>
+			<h5 class="mt-4 text-info">Intermittent upload bug</h5>
+			<p>It sometimes fails to upload and ends up pulling all manner of symbols into the sketch document, making the document really bloated and impacting performance.</p>
+			<h5 class="mt-4 text-info">Text style organisation</h5>
+			<p>Need a way to better organise text styles – maybe a way to have sub-levels for text styles. At least change the default “The quick brown fox…” text in DSM web to the text style name (like how it is in DSM Sketch plugin)</p>
+			<h5 class="mt-4 text-info">Mismatched colours</h5>
+			<p>Colours property of some elements, such as icons, in exported mockups (either with Craft or Sketch native) is mismatched. Need to detach symbols in order for it to correctly render on InVision.</p>
+			<h5 class="mt-4 text-info">The case of the missing font files</h5>
+			<p>Font files uploaded to DSM web keeps disappearing</p>
+			<h5 class="mt-4 text-info">Multiple nested levels for better organisation</h5>
+			<p>Multiple nested levels would be welcome addition, but not a deal breaker.</p>
+			<h4 class="mt-5 text-warning"><i class="icon-wrench me-2"></i>Our workarounds</h4>
+			<figure class="border-start border-warning border-4 ps-3 my-4">
+			  <blockquote class="blockquote">
+			    <p>🥳 Sketch libraries, FTW!</p>
+			  </blockquote>
+			  <figcaption class="blockquote-footer">
+			    All of us lolz
+			  </figcaption>
+			</figure>
+			<p>We moved our workflow to sketch libraries, and use DSM as a reference point for developers. The collaborative nature of this project, working closely with stakeholders and developers, reminded me how much better the work gets when designers, developers, and stakeholders build it together.</p>
+			<p>We used Google drive to host our library files. Sketch Cloud has syncing issues, needing to restart or re-add libraries almost every time there is an update. Lesson learned: stay flexible. When a tool got in the way, we switched to whatever actually worked for the team.</p>
+			</div>
+	</section>
+	<!-- end Section: Outcome -->
+	<!-- Section: Showcase -->
+	<section class="row py-4">
+		<div class="col-12 col-lg-6 mx-auto mb-5">
+			<h3 class="border-bottom pb-3 mb-4"><i class="icon-monitor me-2 text-info"></i>4. Showcase</h3>
+			<figure class="mb-4">
+				<img src="/images/portfolio/dxc/bionix_design_system.gif" class="img-fluid rounded shadow" alt="Bionix Design System Guidelines.">
+				<figcaption class="text-center fst-italic text-secondary mt-2">Bionix Design System Guidelines.</figcaption>
+			</figure>
+			<h4 class="mt-5 text-info"><i class="icon-sparkles me-2"></i>Design Principles</h4>
+			<h5 class="mt-4 text-info">Informed and Evolving</h5>
+			<p>User needs are in flux. Through informed design decisions backed up by research whenever possible, design should evolve to reflect how real people use the system.</p>
+			<h5 class="mt-4 text-info">Consistent Interactions</h5>
+			<p>All design components should be part of a cohesive unit that fosters contextual, predictable experiences.</p>
+			<h5 class="mt-4 text-info">Purposeful Elegance</h5>
+			<p>Bionix should look and feel like a world-class experience. Every aesthetic design decision – from colour to visualisations should be elegantly designed with purpose.</p>
+			<h5 class="mt-4 text-info">Simplified Complexity</h5>
+			<p>Do the hard work to mask and reduce the complexity for the user. Give them direct, effortless experiences.</p>
+			<figure class="border-start border-info border-4 ps-3 my-4">
+			  <blockquote class="blockquote">
+			    <p>Most collaborators can't see space, a primary reason it's so arbitrarily applied. But now we've got a system: a limited number of concepts, each offering a limited range of options.</p>
+			  </blockquote>
+			  <figcaption class="blockquote-footer">
+			    Nathan Curtis
+			  </figcaption>
+			</figure>
+			<div class="row g-4 mt-4">
+				<div class="col-md-6">
+					<figure class="mb-4">
+						<img src="https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-22-at-3.28.06-PM.png" class="img-fluid rounded shadow" alt="Bionix Design System Guidelines">
+						<figcaption class="text-center fst-italic text-secondary mt-2">Component documentation</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-6">
+					<figure class="mb-4">
+						<img src="https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-22-at-2.59.24-PM-2048x1289.png" class="img-fluid rounded shadow" alt="Bionix Design System Guidelines">
+						<figcaption class="text-center fst-italic text-secondary mt-2">Design system color palette</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="row g-4 mt-4">
+				<div class="col-md-6">
+					<figure class="mb-4">
+						<img src="https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-21-at-7.46.40-PM-2048x1100.png" class="img-fluid rounded shadow" alt="Bionix Design System Guidelines">
+						<figcaption class="text-center fst-italic text-secondary mt-2">Component library organization</figcaption>
+					</figure>
+				</div>
+				<div class="col-md-6">
+					<figure class="mb-4">
+						<img src="https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-22-at-3.02.02-PM-2048x2011.png" class="img-fluid rounded shadow" alt="Bionix Design System Guidelines">
+						<figcaption class="text-center fst-italic text-secondary mt-2">Design system documentation</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end Section: Showcase -->
+</main>
+<!-- end Main Content Section -->

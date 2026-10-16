@@ -1,23 +1,38 @@
 ---
 layout: post
-title: Malaysia Communication Framework
+title: "Malaysia Communication Framework"
 date: 2017-01-01 04:20 +0800
-description: A blueprint, outlining strategies and initiatives to foster better understanding, empathy, and collaboration among individuals from diverse backgrounds within Malaysia.
-image:
-category: Balance
-tags: [writing, ai]
-published: true
-sitemap: true
+description: "Malaysia Communication Framework"
+category: work
+permalink: /work/2017-01-01-malaysia-communication-framework.html
+tags: ["writing", "ai"]
 ---
+<!-- Page Header -->
+<div class="page-header-work">
+	<nav aria-label="breadcrumb" class="container pt-3">
+		<ol class="breadcrumb mb-0">
+			<li class="breadcrumb-item"><a href="/">Home</a></li>
+			<li class="breadcrumb-item"><a href="/work/">Work</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Malaysia Communication Framework</li>
+		</ol>
+	</nav>
+	<header class="container mt-4">
+		<section class="d-flex flex-wrap flex-row align-items-center gap-3 gap-lg-5">
+		<h1 class="page-title">Malaysia Communication Framework</h1>
+		</section>
+	</header>
+</div>
+<!-- end Page Header -->
 
-I envision a comprehensive framework aimed at enhancing communication among Malaysians. This framework would serve as a blueprint, outlining strategies and initiatives to foster better understanding, empathy, and collaboration among individuals from diverse backgrounds within Malaysia.
-
-At its core, this framework would emphasize the importance of effective communication channels and platforms. This could involve leveraging technology to create inclusive spaces for discussion and exchange of ideas, as well as facilitating community-led initiatives that promote intercultural dialogue and cooperation.
-
-One key aspect of the framework would emphasize the importance of active listening, respectful dialogue, and open-mindedness. It would encourage Malaysians to engage in meaningful conversations that acknowledge and appreciate the rich tapestry of cultures, languages, and perspectives present in the country.
-
-Additionally, the framework would highlight the role of education in nurturing communication skills from a young age. By integrating communication-focused curricula and extracurricular activities into schools and universities, we can equip future generations with the tools they need to engage constructively with others and navigate cultural differences.
-
-Moreover, the framework would be promoting cultural sensitivity and awareness. This involves educating individuals about the traditions, customs, and beliefs of different ethnic groups in Malaysia, thereby fostering greater tolerance and acceptance.
-
-Ultimately, by implementing this framework, we can cultivate a society where communication barriers are broken down, and Malaysians feel empowered to connect with one another on a deeper level, fostering unity, harmony, and mutual respect.
+<!-- Main Content Section -->
+<main class="container my-5">
+	<article class="post-content">
+<p>I keep coming back to one idea: a proper framework for how Malaysians talk to each other. Not a policy document, more a blueprint for helping people from very different backgrounds actually understand each other, feel for each other, and work together.</p>
+<p>At its heart it's about the channels we talk through. That could mean using tech to build spaces where people can actually discuss things across divides, and backing community-run efforts that get different cultures talking.</p>
+<p>A big part of it is the boring-but-hard stuff: listening properly, disagreeing without being a jerk, staying open. I'd want Malaysians having real conversations that make room for all the different cultures, languages, and points of view we've got here.</p>
+<p>It also has to start young. If schools and universities built communication into the curriculum and the activities around it, the next lot would grow up better equipped to deal with people who aren't like them.</p>
+<p>There's a cultural literacy piece too: actually learning about the traditions, customs, and beliefs of the different groups here. You tend to be more tolerant of what you understand.</p>
+<p>The end goal is simple enough. Fewer walls between us, and Malaysians who feel like they can genuinely connect with each other. More unity, more harmony, more respect. That's the whole point.</p>
+	</article>
+</main>
+<!-- end Main Content Section -->

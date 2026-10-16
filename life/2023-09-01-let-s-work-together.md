@@ -1,49 +1,688 @@
 ---
 layout: post
-title: Let's work together!
+title: "Let's work together!"
 date: 2023-09-01 17:25 +0800
-description: Whether you're looking for a collaborator who can breathe life into your digital vision, or simply someone who'll bring a spark of creativity to your team, here are 7 reasons why working with me might just be the perfect fit.
+description: "UI/UX designer who also builds in Rails. 15 years, seven industries, product ownership. Open for work, KL or remote."
+category: life
+permalink: /life/2023-09-01-let-s-work-together.html
+data_category: life
+tags: ["collaboration"]
 image: /images/posts/profile.jpg
-category: Work
-tags: [collaboration]
-published: true
-sitemap: true
+head_extra: |2
+  <style>
+  	/* ============ Let's work together: page-scoped styles ============
+  	   Scope: .lwt-* classes + #lwt descendants. Tokens from si-es-es.css. */
+
+  	/* Anchor offset under the sticky "On this page" nav */
+  	#lwt [id] { scroll-margin-top: 64px; }
+
+  	/* Section rhythm + prose measure (main is not .container here) */
+  	.lwt-section { padding: 32px 0; }
+  	.lwt-prose { max-width: var(--measure); }
+  	.lwt-prose > p { margin-bottom: var(--space-3); }
+  	#lwt h2 { margin-bottom: var(--space-3); }
+  	.lwt-caption { margin: 10px auto 0; max-width: 42rem; text-align: center;
+  		font-style: italic; font-size: 0.95em; color: var(--color-muted); }
+
+  	/* 1. Header band additions */
+  	.lwt-header-meta { margin: 0 0 0.5rem; font-family: var(--font-display);
+  		text-transform: uppercase; letter-spacing: var(--tracking-display);
+  		font-size: 14px; color: rgba(255,255,255,0.75); }
+  	.lwt-subtitle { max-width: 42rem; margin: 0.75rem 0 0;
+  		font-size: var(--type-lead); color: rgba(255,255,255,0.92); }
+  	.lwt-cta-row { display: flex; flex-wrap: wrap; align-items: center;
+  		gap: 0.75rem; margin-top: 1.25rem; }
+
+  	/* CTA buttons (header + contact band; on-green variants) */
+  	.lwt-btn { display: inline-flex; align-items: center; gap: 0.4rem;
+  		min-height: 44px; padding: 0.375rem 1rem; border-radius: var(--radius-sm);
+  		border: 1px solid transparent; font-family: var(--font-display);
+  		text-transform: uppercase; letter-spacing: var(--tracking-display);
+  		text-decoration: none;
+  		transition: transform var(--motion-fast) var(--ease),
+  			box-shadow var(--motion-fast) var(--ease),
+  			background-color var(--motion-fast) var(--ease),
+  			color var(--motion-fast) var(--ease); }
+  	.lwt-btn:hover { transform: translateY(var(--motion-lift)); box-shadow: var(--shadow-hover); }
+  	.lwt-btn:active { transform: translateY(var(--motion-press)); box-shadow: var(--shadow-active); }
+  	.lwt-btn-light { background: #fff; border-color: #fff; color: var(--cat-ink); }
+  	.lwt-btn-light:hover { background: var(--cat-subtle); color: var(--cat-ink); }
+  	.lwt-btn-ghost { background: transparent; border-color: rgba(255,255,255,0.7); color: #fff; }
+  	.lwt-btn-ghost:hover { background: #fff; border-color: #fff; color: var(--cat-ink); }
+
+  	/* Availability pill */
+  	.lwt-availability { display: inline-flex; align-items: center; gap: 0.5rem;
+  		min-height: 36px; padding: 0.25rem 0.9rem; border-radius: 999px;
+  		border: 1px solid rgba(255,255,255,0.5); background: rgba(255,255,255,0.12);
+  		color: #fff; font-family: var(--font-display); text-transform: uppercase;
+  		letter-spacing: var(--tracking-display); font-size: 13px; }
+  	.lwt-availability::before { content: ''; width: 9px; height: 9px;
+  		border-radius: 50%; background: #8CE0B0;
+  		box-shadow: 0 0 0 3px rgba(140,224,176,0.25); }
+
+  	/* 2. Sticky TOC + progress bar */
+  	.lwt-toc { position: sticky; top: 0; z-index: 1020;
+  		background: var(--color-neutral); border-bottom: 1px solid rgba(0,0,0,0.175); }
+  	.lwt-toc-inner { display: flex; align-items: center; gap: 1.25rem;
+  		min-height: 48px; overflow-x: auto; scrollbar-width: none; }
+  	.lwt-toc-inner::-webkit-scrollbar { display: none; }
+  	.lwt-toc-label { font-family: var(--font-display); text-transform: uppercase;
+  		letter-spacing: var(--tracking-display); font-size: 12px;
+  		color: var(--color-muted); white-space: nowrap; }
+  	.lwt-toc a { font-family: var(--font-display); text-transform: uppercase;
+  		letter-spacing: var(--tracking-display); font-size: 13px;
+  		color: var(--color-ink); text-decoration: none; white-space: nowrap;
+  		padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+  	.lwt-toc a:hover { color: var(--cat-ink); border-bottom-color: var(--cat-base); }
+  	.lwt-toc-hire { margin-left: auto; color: var(--cat-ink) !important; }
+  	.lwt-progress { position: absolute; left: 0; right: 0; bottom: -1px;
+  		height: 3px; pointer-events: none; }
+  	.lwt-progress-bar { width: 0; height: 100%; background: var(--cat-base); }
+
+  	/* 5. Reasons bento */
+  	.lwt-bento { display: grid;
+  		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  		grid-auto-rows: auto; gap: var(--grid-gap); margin-top: var(--space-4); }
+  	.lwt-reason { display: flex; flex-direction: column;
+  		background: var(--color-surface); border: 1px solid rgba(0,0,0,0.175);
+  		border-radius: var(--radius-sm); overflow: hidden; }
+  	.lwt-reason-head { padding: 0.4rem 1rem; font-family: var(--font-display);
+  		text-transform: uppercase; letter-spacing: var(--tracking-display);
+  		font-size: 0.75rem; color: var(--cat-ink); background: rgba(0,0,0,0.03);
+  		border-bottom: 1px solid rgba(0,0,0,0.1); }
+  	.lwt-reason-body { flex: 1; display: flex; flex-direction: column;
+  		justify-content: space-between; gap: 0.75rem; padding: 1rem; }
+  	.lwt-reason-title { margin: 0; display: flex; align-items: center;
+  		gap: 0.5rem; font-size: 1.25rem; }
+  	.lwt-reason-body p { flex: 1; margin: 0; font-size: 1rem; line-height: var(--leading-body); }
+
+  	/* In-card read link (outline -> ink fill on hover) */
+  	.lwt-read { align-self: flex-start; display: inline-flex; align-items: center;
+  		gap: 0.4rem; min-height: 44px; padding: 0.375rem 0.75rem;
+  		border-radius: var(--radius-sm); border: 1px solid var(--color-ink);
+  		background: transparent; color: var(--color-ink);
+  		font-family: var(--font-display); text-transform: uppercase;
+  		letter-spacing: var(--tracking-display); font-size: 0.85rem;
+  		text-decoration: none;
+  		transition: transform var(--motion-fast) var(--ease),
+  			box-shadow var(--motion-fast) var(--ease),
+  			background-color var(--motion-fast) var(--ease),
+  			color var(--motion-fast) var(--ease); }
+  	.lwt-read:hover { background: var(--color-ink); color: #fff;
+  		transform: translateY(var(--motion-lift)); box-shadow: var(--shadow-hover); }
+  	.lwt-read:active { transform: translateY(var(--motion-press)); box-shadow: var(--shadow-active); }
+
+  	/* 6/7/8. Mermaid diagram frames (inside .post-figure) */
+  	#lwt .lwt-diagram { background: var(--color-surface);
+  		border: 1px solid rgba(0,0,0,0.175); border-radius: var(--radius-sm);
+  		padding: 16px; overflow-x: auto; }
+  	#lwt .lwt-diagram pre.mermaid { margin: 0; text-align: center; background: none; }
+  	#lwt pre.mermaid:not([data-processed]) { visibility: hidden; min-height: 140px; }
+  	/* Diagram text fallback: read by crawlers, AI readers, screen readers,
+  	   and openable with JS off (native <details>, no script needed). */
+  	.lwt-diagram-text { max-width: 56rem; margin: 8px auto 0; }
+  	.lwt-diagram-text > summary { cursor: pointer; list-style-position: outside;
+  		font-family: var(--font-display); text-transform: uppercase;
+  		letter-spacing: var(--tracking-display); font-size: 12px; color: var(--color-muted); }
+  	.lwt-diagram-text > summary:hover { color: var(--cat-ink); }
+  	.lwt-diagram-text ul, .lwt-diagram-text ol { margin: 0.6rem 0 0; padding-left: 1.25rem; }
+  	.lwt-diagram-text li { margin-bottom: 0.3rem; font-size: 0.95rem; line-height: var(--leading-body); }
+
+  	/* 7. Selected roles table */
+  	.lwt-roles { max-width: 56rem; margin: 24px auto 0;
+  		background: var(--color-surface); border: 1px solid rgba(0,0,0,0.175);
+  		border-radius: var(--radius-sm); overflow: hidden; }
+  	.lwt-roles-head { padding: 0.4rem 1rem; font-family: var(--font-display);
+  		text-transform: uppercase; letter-spacing: var(--tracking-display);
+  		font-size: 0.75rem; color: var(--cat-ink); background: rgba(0,0,0,0.03);
+  		border-bottom: 1px solid rgba(0,0,0,0.1); }
+  	.lwt-role { display: grid; grid-template-columns: 120px 1fr; gap: 16px;
+  		padding: 14px 18px; }
+  	.lwt-role + .lwt-role { border-top: 1px solid rgba(0,0,0,0.1); }
+  	.lwt-role-year { font-family: var(--font-display);
+  		letter-spacing: var(--tracking-display); font-size: 14px; color: var(--color-muted); }
+  	.lwt-role-title { display: block; font-family: var(--font-display);
+  		text-transform: uppercase; letter-spacing: var(--tracking-display);
+  		font-size: 1.1rem; color: var(--color-ink); }
+  	.lwt-role-co { color: var(--color-muted); }
+  	.lwt-role-desc { display: block; margin-top: 4px; font-size: 0.95em; color: var(--color-muted); }
+  	@media (max-width: 480px) { .lwt-role { grid-template-columns: 1fr; gap: 4px; } }
+
+  	/* 11. More-of-Work scroller (inside .scroll-wrapper[data-category=work]) */
+  	.lwt-scroller { gap: 1.5rem; padding: 1rem 1rem 1rem 0; }
+  	.lwt-scroller > * { scroll-snap-align: start; }
+  	.lwt-scard { flex: 0 0 auto; width: 408px; min-height: 196px;
+  		display: flex; flex-direction: column; background: var(--color-surface);
+  		border: 1px solid rgba(0,0,0,0.175); border-radius: var(--radius-sm);
+  		overflow: hidden; color: var(--color-ink); text-decoration: none;
+  		transition: transform var(--motion-fast) var(--ease),
+  			box-shadow var(--motion-fast) var(--ease); }
+  	.lwt-scard:hover { transform: translateY(var(--motion-lift)); box-shadow: var(--shadow-hover); }
+  	.lwt-scard:active { transform: translateY(var(--motion-press)); box-shadow: var(--shadow-active); }
+  	.lwt-scard-head { display: block; padding: 0.4rem 1rem;
+  		font-family: var(--font-display); text-transform: uppercase;
+  		letter-spacing: var(--tracking-display); font-size: 0.75rem;
+  		color: var(--cat-ink); background: rgba(0,0,0,0.03);
+  		border-bottom: 1px solid rgba(0,0,0,0.1); }
+  	.lwt-scard-body { flex: 1; display: flex; flex-direction: column;
+  		gap: 0.5rem; padding: 1rem; }
+  	.lwt-scard-title { display: flex; align-items: center; gap: 0.5rem;
+  		font-family: var(--font-display); text-transform: uppercase;
+  		letter-spacing: var(--tracking-display); font-size: 1.25rem;
+  		line-height: 1.2; color: var(--cat-ink); }
+  	.lwt-scard-text { flex: 1; font-size: 1rem; line-height: var(--leading-body); }
+  	.lwt-scard-read { display: block; margin-top: auto;
+  		font-family: var(--font-display); text-transform: uppercase;
+  		letter-spacing: var(--tracking-display); font-size: 12px; color: var(--color-muted); }
+  	.lwt-arrow-card { flex: 0 0 auto; width: 196px; min-height: 196px;
+  		display: flex; flex-direction: column; align-items: center;
+  		justify-content: center; gap: 0.5rem; background: var(--color-surface);
+  		border: 1px solid rgba(0,0,0,0.175); border-radius: var(--radius-sm);
+  		color: var(--cat-base); font-size: 2.5rem; text-decoration: none;
+  		transition: transform var(--motion-fast) var(--ease),
+  			box-shadow var(--motion-fast) var(--ease),
+  			background-color var(--motion-fast) var(--ease); }
+  	.lwt-arrow-card:hover { transform: translateY(var(--motion-lift));
+  		box-shadow: var(--shadow-hover); background: var(--cat-subtle); }
+  	.lwt-arrow-card:active { transform: translateY(var(--motion-press)); box-shadow: var(--shadow-active); }
+  	.lwt-arrow-card .lwt-arrow-icons { display: flex; align-items: center; gap: 0.25rem; }
+  	.lwt-arrow-label { font-family: var(--font-display); text-transform: uppercase;
+  		letter-spacing: var(--tracking-display); font-size: 13px; color: var(--cat-ink); }
+  	@media (max-width: 576px) { .lwt-scard { width: 85vw; } }
+
+  	/* 12. Contact band (mirrors .page-header-life background) */
+  	.lwt-contact { margin-top: var(--space-5); padding: var(--space-5) 0;
+  		background-color: var(--cat-base); background-image: var(--bg-dots-img-life);
+  		background-size: var(--bg-dot-tile) var(--bg-dot-tile);
+  		background-repeat: repeat; color: #fff; }
+  	#lwt .lwt-contact h2 { color: #fff; text-shadow: var(--shadow-title); }
+  	.lwt-contact p { max-width: 42rem; color: rgba(255,255,255,0.92); }
+  	.lwt-contact-signoff { margin: 1.25rem 0 0; font-family: var(--font-display);
+  		text-transform: uppercase; letter-spacing: var(--tracking-display); }
+
+  	/* 14. Filed-under chips */
+  	.lwt-filed { display: flex; flex-wrap: wrap; align-items: center;
+  		gap: 0.5rem; padding-top: 32px; padding-bottom: 32px; }
+  	.lwt-filed-label { font-family: var(--font-display); text-transform: uppercase;
+  		letter-spacing: var(--tracking-display); font-size: 12px; color: var(--color-muted); }
+  	.lwt-chip { display: inline-flex; align-items: center; min-height: 32px;
+  		padding: 0.15rem 0.8rem; border-radius: 999px;
+  		border: 1px solid var(--cat-border); background: var(--cat-subtle);
+  		color: var(--cat-ink); font-family: var(--font-display);
+  		text-transform: uppercase; letter-spacing: var(--tracking-display); font-size: 12px; }
+  	.lwt-top { margin-left: auto; display: inline-flex; align-items: center;
+  		gap: 0.3rem; color: var(--color-ink); text-decoration: none; }
+  	.lwt-top:hover { color: var(--cat-ink); }
+
+  	/* Reduced motion: kill the lifts (site rule only zeroes durations) */
+  	@media (prefers-reduced-motion: reduce) {
+  		.lwt-btn:hover, .lwt-btn:active,
+  		.lwt-read:hover, .lwt-read:active,
+  		.lwt-scard:hover, .lwt-scard:active,
+  		.lwt-arrow-card:hover, .lwt-arrow-card:active { transform: none; }
+  		.lwt-progress-bar { transition: none; }
+  	}
+  </style>
+scripts_extra: |2
+  <!-- Scroll progress bar for the sticky "On this page" nav -->
+  <script>
+  	(() => {
+  		const bar = document.querySelector('.lwt-progress-bar');
+  		if (!bar) return;
+  		let ticking = false;
+  		function update() {
+  			ticking = false;
+  			const doc = document.documentElement;
+  			const max = doc.scrollHeight - doc.clientHeight;
+  			const pct = max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0;
+  			bar.style.width = pct + '%';
+  		}
+  		function onScroll() {
+  			if (!ticking) {
+  				ticking = true;
+  				window.requestAnimationFrame(update);
+  			}
+  		}
+  		window.addEventListener('scroll', onScroll, { passive: true });
+  		window.addEventListener('resize', onScroll, { passive: true });
+  		update();
+  	})();
+  </script>
+
+  <!-- Mermaid: renders the three pre.mermaid diagrams (how / track-record / stack) -->
+  <script type="module">
+  	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  	mermaid.initialize({
+  		startOnLoad: false,
+  		securityLevel: 'loose',
+  		theme: 'base',
+  		fontFamily: "'Crimson Text', Georgia, 'Times New Roman', serif"
+  	});
+  	await mermaid.run({ querySelector: 'pre.mermaid' });
+  </script>
 ---
+<!-- Page Header -->
+<div class="page-header-life">
+	<nav aria-label="breadcrumb" class="container pt-3">
+		<ol class="breadcrumb mb-0">
+			<li class="breadcrumb-item"><a href="/">Home</a></li>
+			<li class="breadcrumb-item"><a href="/life/">Life</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Let's work together!</li>
+		</ol>
+	</nav>
+	<header class="container mt-3 pb-2">
+		<p class="lwt-header-meta"><time datetime="2023-09-01">01.09.2023</time> &middot; updated <time datetime="2026-09-08">08.09.2026</time> &middot; Work &middot; 6 min read</p>
+		<h1 class="page-title">Let's work together!</h1>
+		<p class="lwt-subtitle">I design the thing, then I build it. Fifteen years of UI/UX, Rails and product ownership, seven industries, one page.</p>
+		<div class="lwt-cta-row">
+			<a class="lwt-btn lwt-btn-ghost" href="/resume.html"><i class="icon-file-text" aria-hidden="true"></i>View my résumé</a>
+			<span class="lwt-availability">Open for work &middot; free to interview now &middot; Kuala Lumpur / remote</span>
+		</div>
+	</header>
+</div>
+<!-- end Page Header -->
 
-Hey there 👋 I'm a passionate UI/UX designer with a multifaceted background and a thirst for adventure and process optimization!
-
-I've spent the past 15 years traversing the digital landscape, working across diverse industries like education, maritime, media, insurance, IT, and even agriculture.
-
-Whether you're looking for a collaborator who can breathe life into your digital vision, or simply someone who'll bring a spark of creativity to your team, here are 7 reasons why working with me might just be the perfect fit:
-
-## 1. UI/UX Expertise 📐
-
-My core expertise lies in UI/UX design and HCI, with a proven track record of crafting user-centered experiences that are both beautiful and functional.
-
-## 2. Full-Stack Development Prowess 💻
-
-I'm not just a designer; I'm also a developer with a solid foundation in Ruby on Rails and ReactJS. This allows me to seamlessly bridge the gap between design and development, ensuring your project comes together flawlessly.
-
-## 3. Multimedia Design Master 🎮
-
-From animation and video editing to photography and sound design, I possess a diverse skillset in multimedia design, adding that extra layer of visual storytelling to your project.
-
-## 4. Ever-Curious Mind 🧠
-
-I'm a lifelong learner who's constantly seeking out new knowledge in science, digital technology, and a plethora of other fields like astrology, geology, history, philosophy, and even off-grid living. This diverse perspective fuels my creativity and helps me approach your project with a fresh and unique lens.
-
-## 5. Problem-Solving Powerhouse ⚛️
-
-I thrive on tackling complex challenges and finding innovative solutions through the power of digital technology. Whether it's a website revamp, a new app concept, or an interactive installation, I'm here to help you turn your vision into reality.
-
-## 6. Collaborative Spirit 🎯
-
-I believe in the power of collaboration and love working closely with clients, stakeholders, and team members to ensure everyone's voice is heard and the final product exceeds expectations.
-
-## 7. Adventurous Soul ✈️
-
-As an aspiring digital nomad with a passion for nature and the outdoors, I bring a sense of adventure and excitement to every project. I embrace new challenges and believe that the best solutions often come from stepping outside our comfort zones.
-
-So, if you're searching for a collaborator who is passionate, experienced, and loves to push the boundaries, let's chat! I'm eager to hear about your project and see how my diverse skillset and infectious enthusiasm can help you achieve your goals!
-
-<!-- Drafted by me and formatted using Pi AI + Bard -->
+<main id="lwt">
+	<!-- Sticky "On this page" nav + reading progress -->
+	<nav class="lwt-toc" aria-label="On this page">
+		<div class="container lwt-toc-inner">
+			<span class="lwt-toc-label">On this page</span>
+			<a href="#reasons">Highlights</a>
+			<a href="#how">Discover</a>
+			<a href="#track-record">Experiences</a>
+			<a href="#stack">Skills</a>
+			<a href="#facts">TL;DR</a>
+			<a href="#contact" class="lwt-toc-hire">Hire me <i class="icon-arrow-right" aria-hidden="true"></i></a>
+		</div>
+		<div class="lwt-progress" aria-hidden="true"><div class="lwt-progress-bar"></div></div>
+	</nav>
+	<!-- Intro -->
+	<section class="container lwt-section">
+		<div class="lwt-prose">
+			<p>Hey 👋 I'm Rudzainy. I've done UX in education, maritime, media, banking, agritech, IT and telco, as a designer, a developer, a lecturer, and once as a stage manager. Most of what I know, I learned by shipping something. Here's the evidence.</p>
+		</div>
+	</section>
+	<!-- Stats strip -->
+	<section class="post-stats">
+		<div class="stats-strip">
+			<div class="stat"><div class="stat-num">15+</div><div class="stat-label">Years working</div></div>
+			<div class="stat"><div class="stat-num">7y 3m</div><div class="stat-label">IT &amp; web development</div></div>
+			<div class="stat"><div class="stat-num">6y 8m</div><div class="stat-label">Education &amp; mentoring</div></div>
+			<div class="stat"><div class="stat-num">5y 6m</div><div class="stat-label">Enterprise environments</div></div>
+		</div>
+		<p class="lwt-caption">Cumulative years, counted from my CV. The overlaps are on purpose, most of those years wore two hats.</p>
+	</section>
+	<!-- 8 reasons -->
+	<section id="reasons" class="container lwt-section">
+		<div class="post-section-head" aria-hidden="true">
+			<span class="head-tab"><i class="icon-list-checks"></i><span>01 &middot; Highlights</span></span>
+		</div>
+		<h2>Eight reasons to work with me</h2>
+		<div class="lwt-prose"><p>Each one comes with something you can actually go and read.</p></div>
+		<div class="lwt-bento">
+			<article class="lwt-reason">
+				<header class="lwt-reason-head">01 &middot; Core skill</header>
+				<div class="lwt-reason-body">
+					<h3 class="lwt-reason-title"><i class="icon-pencil-ruler" aria-hidden="true"></i>Human-Computer Interaction Design</h3>
+					<p>Research, wireframes, prototypes, testing. More than ten years of it, from a bank to a palm-oil giant.</p>
+					<a class="lwt-read" href="/work/2019-09-01-dxc-bionix-design-system.html"><i class="icon-arrow-right" aria-hidden="true"></i>The DXC Bionix design system</a>
+				</div>
+			</article>
+			<article class="lwt-reason">
+				<header class="lwt-reason-head">02 &middot; Supporting skills</header>
+				<div class="lwt-reason-body">
+					<h3 class="lwt-reason-title"><i class="icon-code" aria-hidden="true"></i>Design + code</h3>
+					<p>Rails and React, not just Figma, now with custom AI workflows. The handoff problem goes away when the designer is also the developer.</p>
+					<a class="lwt-read" href="/work/2020-09-01-the-hoojah-project.html"><i class="icon-arrow-right" aria-hidden="true"></i>The Hoojah project</a>
+				</div>
+			</article>
+			<article class="lwt-reason">
+				<header class="lwt-reason-head">03 &middot; Qualification</header>
+				<div class="lwt-reason-body">
+					<h3 class="lwt-reason-title"><i class="icon-video" aria-hidden="true"></i>Multimedia</h3>
+					<p>Animation, video, photography, sound. Useful when the brief says "make it feel like something."</p>
+					<a class="lwt-read" href="/work/2022-09-01-flip-down-numbers-and-characters.html"><i class="icon-arrow-right" aria-hidden="true"></i>Flip-down numbers &amp; characters</a>
+				</div>
+			</article>
+			<article class="lwt-reason">
+				<header class="lwt-reason-head">04 &middot; Mindset</header>
+				<div class="lwt-reason-body">
+					<h3 class="lwt-reason-title"><i class="icon-book-open" aria-hidden="true"></i>Curiosity</h3>
+					<p>I read outside the field: geology, history, off-grid living. Odd inputs make for less generic outputs.</p>
+					<a class="lwt-read" href="/life/2024-01-03-of-books.html"><i class="icon-arrow-right" aria-hidden="true"></i>Of books</a>
+				</div>
+			</article>
+			<article class="lwt-reason">
+				<header class="lwt-reason-head">05 &middot; Approach</header>
+				<div class="lwt-reason-body">
+					<h3 class="lwt-reason-title"><i class="icon-mountain" aria-hidden="true"></i>Problem-solving</h3>
+					<p>Website revamp, app concept, interactive installation, a national communication framework. Different shapes, same job: make the vague thing concrete.</p>
+					<a class="lwt-read" href="/balance/2024-09-05-the-framework.html"><i class="icon-arrow-right" aria-hidden="true"></i>The Framework</a>
+				</div>
+			</article>
+			<article class="lwt-reason">
+				<header class="lwt-reason-head">06 &middot; Working style</header>
+				<div class="lwt-reason-body">
+					<h3 class="lwt-reason-title"><i class="icon-message-square" aria-hidden="true"></i>Teamwork</h3>
+					<p>Mentored 14 bootcamp intakes. I'm comfortable explaining, listening, and being wrong in front of people.</p>
+					<a class="lwt-read" href="/work/2017-09-01-next-academy-learning-portal.html"><i class="icon-arrow-right" aria-hidden="true"></i>Mentoring 14 bootcamp intakes</a>
+				</div>
+			</article>
+			<article class="lwt-reason">
+				<header class="lwt-reason-head">07 &middot; Character</header>
+				<div class="lwt-reason-body">
+					<h3 class="lwt-reason-title"><i class="icon-sun" aria-hidden="true"></i>Temperament</h3>
+					<p>Directed a play. Built two maritime academies from an empty building. New ground doesn't bother me.</p>
+					<a class="lwt-read" href="/balance/2019-04-24-orang-kasar.html"><i class="icon-arrow-right" aria-hidden="true"></i>Directing Orang Kasar</a>
+				</div>
+			</article>
+			<article class="lwt-reason">
+				<header class="lwt-reason-head">08 &middot; Ownership</header>
+				<div class="lwt-reason-body">
+					<h3 class="lwt-reason-title"><i class="icon-compass" aria-hidden="true"></i>Delivery</h3>
+					<p>Product-owner mindset: I write the stories, set the priorities, and keep design, QA and engineering pointed the same way.</p>
+					<a class="lwt-read" href="/work/2025-09-11-day-food-catalogue.html"><i class="icon-arrow-right" aria-hidden="true"></i>Day Food catalogue</a>
+				</div>
+			</article>
+		</div>
+	</section>
+	<!-- How I work -->
+	<section id="how">
+		<div class="container lwt-section">
+			<div class="post-section-head" aria-hidden="true">
+				<span class="head-tab"><i class="icon-workflow"></i><span>02 &middot; Discover</span></span>
+			</div>
+			<h2>How I work</h2>
+			<div class="lwt-prose">
+				<p>Listen first, sketch early, test before anyone writes production code. Because I build too, the gap between "designed" and "shipped" is usually days, not sprints.</p>
+			</div>
+		</div>
+		<div class="post-figure">
+			<figure>
+				<div class="lwt-diagram">
+					<pre class="mermaid">%%{ init: { 'theme': 'base', 'themeVariables': { 'darkMode': false, 'fontFamily': 'Crimson Text, Georgia, serif', 'fontSize': '15px', 'primaryColor': '#F6F2E9', 'primaryTextColor': '#201A2B', 'primaryBorderColor': '#201A2B', 'lineColor': '#5B5566', 'secondaryColor': '#EAE6DD', 'tertiaryColor': '#ffffff' } } }%%
+flowchart LR
+  A["Listen: requirement gathering"] --> B["Research users and domain"]
+  B --> C["Sketch journeys and wireframes"]
+  C --> D["Prototype in Figma"]
+  D --> E["Test with real users"]
+  E -- "what we learned" --> C
+  D --> F["Build with Rails or React"]
+  F --> G["Ship, measure, report"]
+  G -- "next iteration" --> B</pre>
+				</div>
+				<figcaption>The double loop: design learns from testing, product learns from shipping. Diagram drawn in <a href="/balance/2024-03-23-add-diagram-on-websites-using-mermaidjs.html">MermaidJS</a>.</figcaption>
+				<details class="lwt-diagram-text">
+					<summary>Text version of this diagram</summary>
+					<ol>
+						<li>Listen: requirement gathering.</li>
+						<li>Research users and domain.</li>
+						<li>Sketch journeys and wireframes.</li>
+						<li>Prototype in Figma.</li>
+						<li>Test with real users, then loop back to sketching with what we learned.</li>
+						<li>Build with Rails or React.</li>
+						<li>Ship, measure, report, then loop back to research for the next iteration.</li>
+					</ol>
+				</details>
+			</figure>
+		</div>
+	</section>
+	<!-- Track record -->
+	<section id="track-record">
+		<div class="container lwt-section">
+			<div class="post-section-head" aria-hidden="true">
+				<span class="head-tab"><i class="icon-trending-up"></i><span>03 &middot; Experiences</span></span>
+			</div>
+			<h2>More than fifteen years of track record</h2>
+			<div class="lwt-prose">
+				<p>Seven industries, in roughly this order. Every jump taught me a vocabulary I still use.</p>
+			</div>
+		</div>
+		<div class="post-figure">
+			<figure>
+				<div class="lwt-diagram">
+					<pre class="mermaid">%%{ init: { 'theme': 'base', 'themeVariables': { 'darkMode': false, 'fontFamily': 'Crimson Text, Georgia, serif', 'primaryColor': '#F6F2E9', 'primaryTextColor': '#201A2B', 'primaryBorderColor': '#201A2B', 'lineColor': '#5B5566', 'secondaryColor': '#EAE6DD', 'tertiaryColor': '#ffffff', 'fontSize': '15px', 'cScale0': '#E1F0E9', 'cScale1': '#E5E8F4', 'cScale2': '#F7E9D8', 'cScale3': '#E1F0E9', 'cScale4': '#E5E8F4', 'cScale5': '#F7E9D8', 'cScale6': '#E1F0E9', 'cScale7': '#E5E8F4', 'cScaleLabel0': '#201A2B', 'cScaleLabel1': '#201A2B', 'cScaleLabel2': '#201A2B', 'cScaleLabel3': '#201A2B', 'cScaleLabel4': '#201A2B', 'cScaleLabel5': '#201A2B', 'cScaleLabel6': '#201A2B', 'cScaleLabel7': '#201A2B' } } }%%
+timeline
+  2007-2009 : Web and graphic design : Teras Solutions, MSC Management
+  2009-2012 : Maritime : Built two academies from the ground up
+  2012-2014 : Education : Lecturer at Universiti Tenaga Nasional
+  2015-2017 : Bootcamp mentor and Rails developer : NEXT Academy, 14 intakes
+  2018-2020 : Enterprise and media UX : DXC Technology, Rev Asia
+  2021-2023 : Banking and agritech UX : Affin Bank, Ace Resources
+  2024-now : Product ownership and freelance : Maxis Broadband, rudzainy.com</pre>
+				</div>
+				<figcaption>Read the maritime chapter in <a href="/life/2023-12-04-of-maritime-academy.html">Of Maritime Academy</a>.</figcaption>
+				<details class="lwt-diagram-text">
+					<summary>Text version of this timeline</summary>
+					<ul>
+						<li>2007–2009 &middot; Web and graphic design: Teras Solutions, MSC Management.</li>
+						<li>2009–2012 &middot; Maritime: built two academies from the ground up.</li>
+						<li>2012–2014 &middot; Education: lecturer at Universiti Tenaga Nasional.</li>
+						<li>2015–2017 &middot; Bootcamp mentor and Rails developer: NEXT Academy, 14 intakes.</li>
+						<li>2018–2020 &middot; Enterprise and media UX: DXC Technology, Rev Asia.</li>
+						<li>2021–2023 &middot; Banking and agritech UX: Affin Bank, Ace Resources.</li>
+						<li>2024–now &middot; Product ownership and freelance: Maxis Broadband, rudzainy.com.</li>
+					</ul>
+				</details>
+			</figure>
+		</div>
+		<div class="lwt-roles">
+			<div class="lwt-roles-head">Selected roles</div>
+			<div class="lwt-role">
+				<span class="lwt-role-year">2024</span>
+				<div><span class="lwt-role-title">Digital Product Owner &middot; <span class="lwt-role-co">Maxis Broadband</span></span><span class="lwt-role-desc">Owned the Q3–Q4 roadmap and backlog, wrote the user stories, ran the research, kept QA, design and engineering pointed the same way.</span></div>
+			</div>
+			<div class="lwt-role">
+				<span class="lwt-role-year">2022 – 2023</span>
+				<div><span class="lwt-role-title">Platform Designer &middot; <span class="lwt-role-co">Ace Resources Advisory</span></span><span class="lwt-role-desc">One of six designers serving a palm-oil business group. Four requirement-gathering workshops, four shipped Figma prototypes: fruit-bunch grading, multispectral tree health, seed production, R&amp;D.</span></div>
+			</div>
+			<div class="lwt-role">
+				<span class="lwt-role-year">2019 – 2020</span>
+				<div><span class="lwt-role-title">UI/UX Designer &middot; <span class="lwt-role-co">Rev Asia</span></span><span class="lwt-role-desc">Redesigned says.com from the ground up, with reader and writer experience research across a group of news portals.</span></div>
+			</div>
+			<div class="lwt-role">
+				<span class="lwt-role-year">2018 – 2019</span>
+				<div><span class="lwt-role-title">UI/UX Designer &middot; <span class="lwt-role-co">DXC Technology</span></span><span class="lwt-role-desc">Led the design team, reporting to the Director of Engineering. SaaS application UI, marketing-page concepts, and a design system reviewed by stakeholders across three regions.</span></div>
+			</div>
+			<div class="lwt-role">
+				<span class="lwt-role-year">2015 – 2017</span>
+				<div><span class="lwt-role-title">Developer &amp; Bootcamp Mentor &middot; <span class="lwt-role-co">NEXT Academy</span></span><span class="lwt-role-desc">Fourteen intakes of a nine-week Ruby, Rails, Sinatra and JavaScript bootcamp, plus building and maintaining the in-house Rails and ReactJS apps.</span></div>
+			</div>
+			<div class="lwt-role">
+				<span class="lwt-role-year">2012 – 2014</span>
+				<div><span class="lwt-role-title">Lecturer &middot; <span class="lwt-role-co">Universiti Tenaga Nasional</span></span><span class="lwt-role-desc">C programming, web programming and multimedia for diploma and foundation classes. Wrote a new multimedia diploma programme for accreditation.</span></div>
+			</div>
+			<div class="lwt-role">
+				<span class="lwt-role-year">2009 – 2012</span>
+				<div><span class="lwt-role-title">Business Development &middot; <span class="lwt-role-co">Malaysia Maritime Association</span></span><span class="lwt-role-desc">Project team that built maritime academies in Seri Manjung and Rawang from nothing: premises, Bomba certification, syllabus, day-to-day operations.</span></div>
+			</div>
+		</div>
+		<p class="lwt-caption">Eight earlier roles (helpdesk, factory floor, McDonald's kitchen), plus theatre, freelance and side projects, live in my <a href="/resume.html">full résumé</a>.</p>
+	</section>
+	<!-- Stack -->
+	<section id="stack">
+		<div class="container lwt-section">
+			<div class="post-section-head" aria-hidden="true">
+				<span class="head-tab"><i class="icon-layers"></i><span>04 &middot; Skills</span></span>
+			</div>
+			<h2>My preferred stack</h2>
+			<div class="lwt-prose">
+				<p>One core discipline, two supporting ones. The supporting skills are why I rarely need to hand a problem to someone else.</p>
+			</div>
+		</div>
+		<div class="post-figure">
+			<figure>
+				<div class="lwt-diagram">
+					<pre class="mermaid">%%{ init: { 'theme': 'base', 'themeVariables': { 'darkMode': false, 'fontFamily': 'Crimson Text, Georgia, serif', 'primaryColor': '#F6F2E9', 'primaryTextColor': '#201A2B', 'primaryBorderColor': '#201A2B', 'lineColor': '#5B5566', 'secondaryColor': '#EAE6DD', 'tertiaryColor': '#ffffff', 'fontSize': '15px' } } }%%
+flowchart LR
+  R(("What I bring"))
+  subgraph CORE["CORE · HCI and UX design"]
+    direction TB
+    C1["Requirement gathering, research"]
+    C2["Wireframes, interaction, interface design"]
+    C3["Prototyping, journeys, user testing"]
+    C4["Figma, Adobe XD, Sketch, Illustrator"]
+  end
+  subgraph DEV["SUPPORTING · Web and mobile development"]
+    direction TB
+    S1["Ruby on Rails, Jekyll, Discourse"]
+    S2["ReactJS, NextJS, Stimulus, Express"]
+    S3["HTML, CSS, Bootstrap, Wordpress"]
+  end
+  subgraph MEDIA["SUPPORTING · IT and multimedia"]
+    direction TB
+    M1["Text, image, audio, video, animation"]
+    M2["Adobe suites, mobile photography"]
+  end
+  R --> CORE
+  R --> DEV
+  R --> MEDIA</pre>
+				</div>
+				<figcaption>The long version of the JavaScript half is in <a href="/life/2024-01-06-of-javascript.html">Of JavaScript</a>.</figcaption>
+				<details class="lwt-diagram-text">
+					<summary>Text version of this diagram</summary>
+					<ul>
+						<li><strong>Core &middot; HCI and UX design:</strong> requirement gathering and research; wireframes, interaction and interface design; prototyping, journeys and user testing; Figma, Adobe XD, Sketch, Illustrator.</li>
+						<li><strong>Supporting &middot; web and mobile development:</strong> Ruby on Rails, Jekyll, Discourse; ReactJS, NextJS, Stimulus, Express; HTML, CSS, Bootstrap, WordPress.</li>
+						<li><strong>Supporting &middot; IT and multimedia:</strong> text, image, audio, video, animation; Adobe suites, mobile photography.</li>
+					</ul>
+				</details>
+			</figure>
+		</div>
+	</section>
+	<!-- Pull quote -->
+	<div class="post-pull-quote">
+		<aside>
+			<p class="pq-quote">“Solving real world problems using data, technology and empathy.”</p>
+			<p class="pq-attribution">The line at the top of my CV, and the actual job description</p>
+		</aside>
+	</div>
+	<!-- The facts -->
+	<section id="facts">
+		<div class="container lwt-section">
+			<div class="post-section-head" aria-hidden="true">
+				<span class="head-tab"><i class="icon-clipboard-list"></i><span>05 &middot; TL;DR</span></span>
+			</div>
+			<h2>Just the facts</h2>
+		</div>
+		<div class="post-meta-table">
+			<dl>
+				<div class="meta-row"><dt>Name</dt><dd>Mohd Rudzainy bin Abdul Rahman</dd></div>
+				<div class="meta-row"><dt>Based in</dt><dd>Kuala Lumpur, Malaysia &middot; happy to work remote</dd></div>
+				<div class="meta-row"><dt>Role</dt><dd>UI/UX designer &middot; product owner &middot; full-stack builder</dd></div>
+				<div class="meta-row"><dt>Education</dt><dd>BSc (Hons) Information Technology, Multimedia Studies, Universiti Kebangsaan Malaysia, 2009. Full-stack Ruby on Rails bootcamp, NEXT Academy, 2015.</dd></div>
+				<div class="meta-row"><dt>Industries</dt><dd>Education, maritime, media, banking, IT, agriculture, telco</dd></div>
+				<div class="meta-row"><dt>Side projects</dt><dd>Gugel.my link manager (Rails 7) &middot; hoojah.rudzainy.com debating app (Rails 6 + React) &middot; freelance since 2015</dd></div>
+				<div class="meta-row"><dt>Also</dt><dd>Theatre: stage manager, director, co-writer. Photography, climbing, riding, gliding and shield surfing 😉</dd></div>
+				<div class="meta-row"><dt>Documents</dt>
+					<dd class="meta-links">
+						<a class="meta-link" href="/resume.html"><i class="icon-file-text" aria-hidden="true"></i>Résumé</a>
+						<a class="meta-link" href="/docs/Portfolio_Rudzainy_2025_L.pdf" target="_blank" rel="noopener"><i class="icon-image" aria-hidden="true"></i>Portfolio highlights</a>
+						<a class="meta-link" href="https://github.com/rudzainy" target="_blank" rel="noopener"><i class="icon-github" aria-hidden="true"></i>GitHub</a>
+					</dd>
+				</div>
+			</dl>
+			<p class="lwt-caption">Four referees, from Ace Resources, NEXT Academy and a former DXC colleague now at Dell, are named in the CV, contactable on request.</p>
+		</div>
+	</section>
+	<!-- More of Work -->
+	<section class="post-related" data-category="work">
+		<div class="container">
+			<h2><span class="lead-in">more of </span><span class="subject">Work</span></h2>
+		</div>
+		<div class="scroll-wrapper">
+			<section class="d-flex flex-row overflow-x-scroll lwt-scroller">
+				<a class="lwt-scard" href="/work/2020-09-01-the-hoojah-project.html">
+					<span class="lwt-scard-head">Case study</span>
+					<span class="lwt-scard-body">
+						<span class="lwt-scard-title"><i class="icon-message-square" aria-hidden="true"></i>The Hoojah Project</span>
+						<span class="lwt-scard-text">Eight years designing and building a debating app.</span>
+						<span class="lwt-scard-read">Read <i class="icon-arrow-right" aria-hidden="true"></i></span>
+					</span>
+				</a>
+				<a class="lwt-scard" href="/work/2019-09-01-dxc-bionix-design-system.html">
+					<span class="lwt-scard-head">Client project</span>
+					<span class="lwt-scard-body">
+						<span class="lwt-scard-title"><i class="icon-pencil-ruler" aria-hidden="true"></i>Bionix design system</span>
+						<span class="lwt-scard-text">The library behind DXC's automation platform.</span>
+						<span class="lwt-scard-read">Read <i class="icon-arrow-right" aria-hidden="true"></i></span>
+					</span>
+				</a>
+				<a class="lwt-scard" href="/work/2018-09-01-lkim-fish-price-app.html">
+					<span class="lwt-scard-head">Client project</span>
+					<span class="lwt-scard-body">
+						<span class="lwt-scard-title"><i class="icon-shopping-basket" aria-hidden="true"></i>LKIM fish price app</span>
+						<span class="lwt-scard-text">Daily market prices for fishermen and buyers.</span>
+						<span class="lwt-scard-read">Read <i class="icon-arrow-right" aria-hidden="true"></i></span>
+					</span>
+				</a>
+				<a class="lwt-scard" href="/work/2025-09-11-day-food-catalogue.html">
+					<span class="lwt-scard-head">My project</span>
+					<span class="lwt-scard-body">
+						<span class="lwt-scard-title"><i class="icon-shopping-basket" aria-hidden="true"></i>Day Food catalogue</span>
+						<span class="lwt-scard-text">A recent build, my most current sample.</span>
+						<span class="lwt-scard-read">Read <i class="icon-arrow-right" aria-hidden="true"></i></span>
+					</span>
+				</a>
+				<a class="lwt-scard" href="/balance/2023-12-04-users-vs-corporations-in-digital-communication.html">
+					<span class="lwt-scard-head">Thoughts</span>
+					<span class="lwt-scard-body">
+						<span class="lwt-scard-title"><i class="icon-mountain" aria-hidden="true"></i>Users vs corporations</span>
+						<span class="lwt-scard-text">Who are the platforms really built for?</span>
+						<span class="lwt-scard-read">Read <i class="icon-arrow-right" aria-hidden="true"></i></span>
+					</span>
+				</a>
+				<a class="lwt-scard" href="/life/2021-01-03-kenapa-rudzainy-buat-hoojah.html">
+					<span class="lwt-scard-head">Life</span>
+					<span class="lwt-scard-body">
+						<span class="lwt-scard-title"><i class="icon-sun" aria-hidden="true"></i>Kenapa Rudzainy buat Hoojah</span>
+						<span class="lwt-scard-text">The why behind Hoojah, in Malay.</span>
+						<span class="lwt-scard-read">Read <i class="icon-arrow-right" aria-hidden="true"></i></span>
+					</span>
+				</a>
+				<a class="lwt-arrow-card" href="/work/" aria-label="See all of Work">
+					<span class="lwt-arrow-icons"><i class="icon-pencil-ruler" aria-hidden="true"></i><i class="icon-arrow-right" aria-hidden="true"></i></span>
+					<span class="lwt-arrow-label">All of Work</span>
+				</a>
+			</section>
+		</div>
+	</section>
+	<!-- Contact -->
+	<section id="contact" class="lwt-contact">
+		<div class="container">
+			<div class="post-section-head is-inverse" aria-hidden="true">
+				<span class="head-tab"><i class="icon-message-square"></i><span>06 &middot; so,</span></span>
+			</div>
+			<h2>Let's chat</h2>
+			<p>Got a product that needs designing, building, or both? Send me a few lines about what it is and where it's stuck. I reply within two working days, usually with questions.</p>
+			<div class="lwt-cta-row">
+				<a class="lwt-btn lwt-btn-light" href="mailto:rudzainy@gmail.com"><i class="icon-mail" aria-hidden="true"></i>Email me</a> or just say hi on <a class="lwt-btn lwt-btn-light" href="https://twitter.com/rudzainy" target="_blank" rel="noopener"><i class="icon-twitter" aria-hidden="true"></i>Twitter</a> or <a class="lwt-btn lwt-btn-light" href="https://www.github.com/rudzainy/" target="_blank" rel="noopener"><i class="icon-github" aria-hidden="true"></i>GitHub</a>.
+			</div>
+			<p class="lwt-contact-signoff">Best regards 👍</p>
+		</div>
+	</section>
+	<!-- Previous / next -->
+	<div class="post-nav">
+		<nav>
+			<a class="nav-card" href="/life/2022-03-19-happyness-unlocked.html">
+				<span class="nav-dir"><i class="icon-arrow-left" aria-hidden="true"></i>Previously</span>
+				<span class="nav-title">Happyness, unlocked</span>
+				<span class="nav-date">19.03.2022</span>
+			</a>
+			<a class="nav-card is-next" href="/life/2023-12-04-of-maritime-academy.html">
+				<span class="nav-dir">Up next<i class="icon-arrow-right" aria-hidden="true"></i></span>
+				<span class="nav-title">Of Maritime Academy</span>
+				<span class="nav-date">04.12.2023</span>
+			</a>
+		</nav>
+	</div>
+	<!-- Filed under -->
+	<section class="container lwt-filed">
+		<span class="lwt-filed-label">Filed under</span>
+		<span class="lwt-chip">Collaboration</span>
+		<span class="lwt-chip">Resume</span>
+		<span class="lwt-chip">Hire me</span>
+		<a class="lwt-top" href="#top">Back to top <i class="icon-arrow-up" aria-hidden="true"></i></a>
+	</section>
+</main>
+<!-- end Main Content Section -->

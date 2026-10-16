@@ -1,48 +1,55 @@
 ---
 layout: post
-title: Maritime College Corporate Branding
+title: "Maritime College Corporate Branding"
 date: 2012-09-01 10:15 +0800
-description:
+description: "Maritime College Corporate Branding"
+category: work
+permalink: /work/2012-09-01-maritime-college-corporate-branding.html
+tags: ["graphic design", "logo", "branding", "portfolio"]
 image: /images/portfolio/Maritime/MARCO.jpg
-category: Work
-tags: [graphic design, logo, branding, portfolio]
-published: true
-sitemap: true
 ---
+<!-- Page Header -->
+<div class="page-header-work">
+	<nav aria-label="breadcrumb" class="container pt-3">
+		<ol class="breadcrumb mb-0">
+			<li class="breadcrumb-item"><a href="/">Home</a></li>
+			<li class="breadcrumb-item"><a href="/work/">Work</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Maritime College Corporate Branding</li>
+		</ol>
+	</nav>
+	<header class="container mt-4">
+		<section class="d-flex flex-wrap flex-row align-items-center gap-3 gap-lg-5">
+		<h1 class="page-title">Maritime College Corporate Branding</h1>
+		</section>
+	</header>
+</div>
+<!-- end Page Header -->
 
-| Project | Corporate branding |
-| Responsibilities | Design logo, business card & letterhead |
-| Technology Stack | Adobe Illustrator |
-| Year | 2012 |
-
-![Maritime College Corporate Branding](/images/portfolio/Maritime/MARCO.jpg)
-*Maritime College Corporate Branding*
-
-<!-- AI-DRAFTED: review & edit -->
-
-## Summary
-
-A corporate identity for a maritime college — the logo plus the everyday collateral a working institution needs: business cards and letterhead. The goal was a mark that read as credible and institutional while still being distinct enough to own.
-
-**[owner: which college was this for, and what's the full/official name? Keep the client name accurate.]**
-
-## 1. Background
-
-**[owner: what prompted the branding work — a new college, a rebrand, an accreditation milestone?]**
-
-**[owner: what did the client want the identity to signal? e.g. seamanship, discipline, industry ties, prestige]**
-
-## 2. Approach
-
-Everything was built in Adobe Illustrator so the mark held up cleanly across print sizes.
-
-- **Logo** — **[owner: the core idea behind the mark — any maritime motif (anchor, compass, wave, ship) and the reasoning]**
-- **Business card & letterhead** — **[owner: how the mark carried into stationery — layout, colour, any fixed elements the college required]**
-
-## 3. Outcome
-
-**[owner: how was the identity received / rolled out? where is it used today?]**
-
-## Showcase
-
-**[owner: add the business card and letterhead alongside the primary mark above, plus any lockup or colour variants]**
+<!-- Main Content Section -->
+<main class="container my-5">
+	<article class="post-content">
+<table>
+  <tbody>
+    <tr>
+      <td>Project</td>
+      <td>Corporate branding</td>
+    </tr>
+    <tr>
+      <td>Responsibilities</td>
+      <td>Design logo, business card &amp; letterhead</td>
+    </tr>
+    <tr>
+      <td>Technology Stack</td>
+      <td>Adobe Illustrator</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>2012</td>
+    </tr>
+  </tbody>
+</table>
+<p><img src="/images/portfolio/Maritime/MARCO.jpg" alt="Maritime College Corporate Branding" class="img-fluid">
+<em>Maritime College Corporate Branding</em></p>
+	</article>
+</main>
+<!-- end Main Content Section -->

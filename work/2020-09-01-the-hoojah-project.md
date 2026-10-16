@@ -1,83 +1,512 @@
 ---
 layout: post
-title: The Hoojah Project
+title: "The Hoojah Project"
 date: 2020-09-01 14:35 +0800
-description: Hoojah is an online poll & debating site for Malaysia. It’s a pet project that I started working in 2013. People can go to the platform, create polls and vote for other polls. They can also engage with other users through one-on-one debate.
+description: "Hoojah is an online poll &amp; debating site for Malaysia. It’s a pet project that I started working in 2013. People can go to the platform, create polls and vote for other polls. They can also engage with other users through one-on-one debate."
+category: work
+permalink: /work/2020-09-01-the-hoojah-project.html
+data_category: work
+tags: ["hoojah", "ruby on rails", "portfolio", "reactjs"]
 image: /images/portfolio/hoojah/thumbnail-hoojah.jpg
-category: Work
-tags: [hoojah, ruby on rails, portfolio, reactjs]
-published: true
-sitemap: true
+scripts_extra: |2
+  <!-- Mermaid for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) { mermaid.initialize({ startOnLoad: true }); }
+  </script>
 ---
+<!-- Page Header Band (solid category colour) -->
+<div class="page-header-work" style="padding-bottom:0">
+  <div style="max-width:1140px;margin:0 auto;padding:20px 24px 0">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0" style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/work/">Work</a></li>
+        <li class="breadcrumb-item active" aria-current="page">The Hoojah Project</li>
+      </ol>
+    </nav>
+    <!-- end Breadcrumb -->
+    <!-- Hero: kicker + title + standfirst + featured image -->
+    <div class="header-hero-grid" style="display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center;padding:36px 0 44px">
+      <div>
+        <p style="margin:0 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px;color:rgba(255,255,255,0.75)">My project · 2013–2019</p>
+        <h1 class="page-title" style="display:block;font-size:clamp(2.5rem,1.1rem + 4.5vw,4.5rem);line-height:1.05;text-wrap:balance"><span>the </span>Hoojah Project</h1>
+        <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:54ch">Hoojah is an online poll &amp; debating site for Malaysia. It's a pet project that I started working on in 2013. People can go to the platform, create polls and vote for other polls, and also take each other on in one-on-one debates.</p>
+      </div>
+      <figure style="margin:0;background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-hover)">
+        <img src="/images/portfolio/hoojah/thumbnail-hoojah.jpg" alt="A snapshot of the Hoojah user interface" loading="lazy" style="width:100%;display:block;object-fit:cover;object-position:top;max-height:280px">
+        <figcaption style="padding:8px 14px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--color-muted);border-top:1px solid rgba(0,0,0,0.1)">Hoojah · user interface</figcaption>
+      </figure>
+    </div>
+    <!-- Featured meta strip (overlaps the band) -->
+    <div class="header-meta-strip" style="background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);box-shadow:var(--shadow-active);display:grid;grid-template-columns:repeat(4,1fr);position:relative;transform:translateY(56px);margin-top:-56px">
+      <div style="padding:16px 20px">
+        <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Responsibilities</div>
+        <p style="margin:0">Research, design and build</p>
+      </div>
+      <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+        <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Technology stack</div>
+        <p style="margin:0">HTML, SCSS, Adobe XD, Ruby on Rails, ReactJS, Discourse, Docker</p>
+      </div>
+      <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+        <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Year</div>
+        <p style="margin:0"><time datetime="2013">2013</time>–<time datetime="2019">2019</time></p>
+      </div>
+      <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+        <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">External links</div>
+        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+          <a href="https://github.com/orgs/hoojah/repositories" target="_blank" rel="noopener" class="meta-link"><i class="brand-icon brand-github" aria-hidden="true"></i>Visit at GitHub</a>
+          <a href="https://www.behance.net/gallery/175206951/Hoojah" target="_blank" rel="noopener" class="meta-link"><i class="brand-icon brand-behance" aria-hidden="true"></i>Read UX case study</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Page Header Band -->
 
-| Project | Hoojah |
-| Responsibilities | Research, design and build |
-| Technology Stack | HTML, SCSS, Adobe XD, Ruby on Rails, ReactJS, Discourse, Docker |
-| Year | 2013-2019 |
-| Github Repo | [View in Github](https://github.com/orgs/hoojah/repositories) |
-| YouTube Videos | Pitch: [Watch video](https://www.youtube.com/watch?v=xfG58Xcgmo4) <br />[Tutorial (EN): Watch video](https://www.youtube.com/watch?v=1GEy17NS7H4) <br />[Tutorial (BM): Watch video](https://www.youtube.com/watch?v=5MBb-9cCbVs) |
-| Behance | [View in Behance](https://www.behance.net/gallery/175206951/Hoojah) |
+<!-- Main Content Section -->
+<main style="max-width:1140px;margin:0 auto;padding:104px 24px 32px">
+  <article style="max-width:var(--measure);margin:0 auto">
+    <div class="post-section-head is-first" aria-hidden="true">
+      <span class="head-tab"><i class="icon-book-open"></i><span>01 &middot; a pet project</span></span>
+    </div>
+    <h2>Summary</h2>
+    <p class="lead">Hoojah is a polling platform, but the votes aren't really the point. The arguments behind them are. You vote on a poll, back your stance with arguments, and if you want, take someone on in a one-on-one debate. The hard part was never collecting votes, it was getting people to actually discuss things instead of shouting past each other. So I kept the voting dead simple and put all the weight on the arguments. Capping each poll at three options started as a way to cut noise, and it turned out the constraint made everything clearer. I built Hoojah because I was tired of how messy and polarised online discussions had become.</p>
+  </article>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-users"></i><span>02 &middot; why it annoyed me</span></span>
+    </div>
+    <h2>Background</h2>
+    <h3 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-message-circle me-2" aria-hidden="true"></i>The Inefficiency of Online Discussion Platforms</h3>
+    <p>Today Malaysians use social media platforms and online forums to discuss important matters. The trouble is it's hard to track anything: different groups talk about the same topic in their own corners, so you never get a clear, structured read on what people actually think. Trying to follow an important discussion across all of that always frustrated me.</p>
+  </article>
+  <!-- Figure: Home page timeline -->
+  <div class="post-figure">
+    <figure>
+      <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/Home-User.png" alt="Home page showing timeline view of recently updated polls" loading="lazy" data-fallback="Hoojah home timeline"></span>
+      <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Home page showing timeline view of recently updated polls. Desktop users see additional information in sidebars.</figcaption>
+    </figure>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <p>Subjective discussions make decision-making difficult and eventually become noise. Open polls provide objective questions that deter subjective discussions.</p>
+    <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-workflow me-2" aria-hidden="true"></i>System Architecture</h3>
+    <p>Hoojah runs on a fairly standard modern stack: React on the front, Ruby on Rails at the back, Discourse handling the forum side, all wrapped in Docker. Nothing exotic. Just tools I could move quickly with while keeping the thing responsive.</p>
+  </article>
+  <!-- Figure: system architecture diagram -->
+  <div class="post-figure">
+    <figure>
+      <div class="bg-light p-3 rounded shadow">
+        <pre class="mermaid">
+            flowchart TD
+              subgraph Client["Client Layer"]
+                React["React Components"]
+                SCSS["SCSS Styling"]
+                API["API Clients"]
+              end
 
-<iframe src="https://www.behance.net/embed/project/175206951?ilo0=1" height="316" width="404" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+              subgraph Server["Server Layer"]
+                Rails["Ruby on Rails"]
+                REST["RESTful API"]
+                Auth["Authentication"]
+              end
 
-A platform for Malaysians to engage in structured objective discussions online.
+              subgraph Data["Data Layer"]
+                DB[("PostgreSQL")]
+                Redis[("Redis Cache")]
+                S3[("S3 Storage")]
+              end
 
-![Home page showing timeline view of recently updated polls. Desktop users would be able to see additional information in the left and right sidebars.](/images/posts/hoojah/Home-User.png)
-_Home page showing timeline view of recently updated polls. Desktop users would be able to see additional information in the left and right sidebars._
+              subgraph Services["External Services"]
+                Discourse["Discourse Forum"]
+                Analytics["Analytics"]
+              end
 
-### The Inefficiency of Online Discussion Platforms
+              Client --> Server
+              Server --> Data
+              Server --> Services
 
-Today Malaysians go to social media platforms and online forums to discuss things that matters to them. It’s hard to keep track of a specific topic on social media platforms because different group of people discuss the same topics separately, hence failed to provide structural opinions and results. While online forum still uses old layout.
+              class Client,Server,Data,Services headerClass
+              classDef headerClass fill:#f8f9fa,stroke:#495057,stroke-width:1px
+              classDef default fill:#fff,stroke:#6c757d
+            </pre>
+      </div>
+      <figcaption><i class="icon-layers me-1" aria-hidden="true"></i>Hoojah's system architecture showing the client, server, data, and external service layers.</figcaption>
+    </figure>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-clipboard-list me-2" aria-hidden="true"></i>Rationale for a 3-Options Voting System</h3>
+    <p>One of the defining design choices in Hoojah is to <strong>restrict poll responses to three options: Agree, Neutral, and Disagree</strong>. That was deliberate, not lazy. After sitting through enough arguments online, I noticed that too many choices just made people freeze up, and the actual issue got lost in the middle.</p>
+    <h4 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-sparkles me-2" aria-hidden="true"></i>Benefits</h4>
+    <div class="row g-4 my-4">
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title"><i class="icon-eye me-2" aria-hidden="true"></i>Clarity &amp; Interpretability</h6>
+            <p class="card-text">Results are easy to read at a glance. You immediately see how the community leans: for, against, or neutral. That's the kind of simplicity I always wanted as a user myself.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title"><i class="icon-door-open me-2" aria-hidden="true"></i>Lower Barrier to Entry</h6>
+            <p class="card-text">Many people hesitate to join polls with too many nuanced options. Three simple choices feel intuitive, so more people take part. When I tried early versions on friends, they were happier to jump in once the choices were clear-cut.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title"><i class="icon-zap me-2" aria-hidden="true"></i>Reduced Decision Fatigue</h6>
+            <p class="card-text">Nobody wastes time splitting hairs between "slightly agree" and "mostly agree." Contributing stays fast and lightweight, which was the whole idea.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title"><i class="icon-workflow me-2" aria-hidden="true"></i>Natural Grouping for Arguments</h6>
+            <p class="card-text">Supporting arguments automatically fall under one of three categories. That keeps discussions structured and stops the options from sprawling.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title"><i class="icon-scale me-2" aria-hidden="true"></i>Balanced Representation</h6>
+            <p class="card-text">A "Neutral" choice avoids false polarisation and captures the people who are undecided or genuinely on the fence. Not every issue has only two sides.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-circle-alert me-2" aria-hidden="true"></i>Considerations</h4>
+    <p>Limiting the options does flatten some of the nuance, no way around that. Hoojah gets it back by letting people attach <em>supporting arguments</em> under each stance, so the detail still comes through in the text and the debate. Getting that balance right took years of tweaking.</p>
+  </article>
+  <!-- Figure pair: 3-option poll structure + ER diagram -->
+  <div class="post-gallery">
+    <div class="gallery-grid">
+      <figure>
+        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/poll-interface.png" alt="Hoojah's restricted 3-option poll structure" loading="lazy" data-fallback="3-option poll structure"></span>
+        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 1: Hoojah's restricted 3-option poll structure.</figcaption>
+      </figure>
+      <figure>
+        <div class="bg-light p-3 rounded shadow h-100">
+          <pre class="mermaid">
+              erDiagram
+                POLL ||--o{ OPTION : has
+                POLL ||--o{ ARGUMENT : contains
+                POLL ||--o{ DEBATE : hosts
+                POLL ||--o{ VOTE : receives
+                POLL ||--|| USER : created_by
+                OPTION ||--o{ VOTE : selected_in
+                OPTION ||--o{ ARGUMENT : supports
+                ARGUMENT ||--|| USER : authored_by
+                DEBATE ||--|| USER : participant_1
+                DEBATE ||--|| USER : participant_2
+                DEBATE ||--o{ DEBATE_POST : contains
+                DEBATE_POST ||--|| USER : written_by
+                VOTE ||--|| USER : cast_by
+              </pre>
+        </div>
+        <figcaption><i class="icon-database me-1" aria-hidden="true"></i>Figure 1b: Entity relationship diagram showing how polls, options, arguments, debates, and users interconnect in the Hoojah data model.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-panel-right me-2" aria-hidden="true"></i>UI/UX Study: Solving the Convenience Problem</h3>
+    <p>One of the biggest barriers to online debate platforms is plain <strong>convenience</strong>. People struggle to skim polls, follow arguments, and join in without friction. Hoojah tries to fix that with <strong>structured flows and a clear visual hierarchy</strong>. I care about this stuff. Cluttered interfaces have always annoyed me.</p>
+  </article>
+  <!-- 1. Poll-First Experience -->
+  <div class="post-gallery">
+    <div class="gallery-grid">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title">1. Poll-First Experience</h4>
+          <ul>
+            <li><strong>Problem:</strong> Users want to see the poll outcome quickly without scrolling through long threads.</li>
+            <li><strong>Solution:</strong> The poll sits at the top of the page, followed immediately by grouped arguments. This lets users vote, then dive deeper if they choose.</li>
+          </ul>
+          <p>➡ <em>Design pattern: "Decision at the top, discussion below."</em></p>
+        </div>
+      </div>
+      <figure>
+        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/poll-first-layout.png" alt="Poll positioned at the top for immediate engagement" loading="lazy" data-fallback="Poll-first layout"></span>
+        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 2: The poll-first layout, poll up top, discussion right underneath.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <!-- 2. Grouped Arguments for Readability -->
+  <div class="post-gallery">
+    <div class="gallery-grid">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title">2. Grouped Arguments for Readability</h4>
+          <ul>
+            <li><strong>Problem:</strong> Long, mixed comment threads are hard to follow.</li>
+            <li><strong>Solution:</strong> Arguments are grouped under the option they support (Agree / Neutral / Disagree). Users skim within the stance they care about.</li>
+          </ul>
+          <p>➡ <em>Design pattern: "Categorical clustering" for quick scanning.</em></p>
+        </div>
+      </div>
+      <figure>
+        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/grouped-arguments.png" alt="Supporting arguments clustered under each stance" loading="lazy" data-fallback="Grouped arguments"></span>
+        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 3: Grouped arguments interface, sorted under Agree / Neutral / Disagree.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <!-- 3. One-on-One Debate Flow -->
+  <div class="post-gallery">
+    <div class="gallery-grid">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title">3. One-on-One Debate Flow</h4>
+          <ul>
+            <li><strong>Problem:</strong> Open comment sections often devolve into noise and trolling.</li>
+            <li><strong>Solution:</strong> Hoojah introduced <strong>debate view</strong>, where two users exchange structured arguments. This reduces clutter and highlights meaningful back-and-forth.</li>
+          </ul>
+          <p>➡ <em>Design pattern: "Focused debate lens" to isolate quality interactions.</em></p>
+        </div>
+      </div>
+      <div>
+        <figure style="margin:0 0 16px">
+          <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/debate-view.png" alt="Debate mode between two participants" loading="lazy" data-fallback="Debate mode"></span>
+          <figcaption style="margin:8px 0 0;text-align:center;font-style:italic;font-size:0.9em;color:var(--color-muted)"><i class="icon-image me-1" aria-hidden="true"></i>Figure 4a: Debate mode in action.</figcaption>
+        </figure>
+        <figure style="margin:0">
+          <div class="bg-light p-3 rounded shadow">
+            <pre class="mermaid">
+                sequenceDiagram
+                  autonumber
+                  participant U1 as User 1
+                  participant H as Hoojah
+                  participant U2 as User 2
 
-Subjective discussions make it hard for people to make decisions and eventually become noises. People need to process those discussion before come up with a point. Open polls is an objective question that could  deter the users to discuss the topic subjectively.
+                  U1->>H: Challenge to debate
+                  H->>U2: Notify of challenge
+                  U2->>H: Accept challenge
+                  H->>U1: Debate initiated
 
-And the open poll mechanism, while is created by the discussion initiator and answers are provided to respondents has limited options and could create frustration to the respondents if the answers are not based on their opinion.
-Having high engagement in the topics doesn’t mean you’re getting a lot out of it. Numbers of engagement  could be self-explanatory therefore, the outcome of the discussion is subjective.
+                  Note over U1,U2: Structured Debate Begins
 
-These platforms rarely filter out their users, so a user can register multiple accounts and manipulate the discussion.
+                  U1->>H: Opening statement
+                  H->>U2: Display statement
+                  U2->>H: Counter argument
+                  H->>U1: Display counter
 
-![User profile page showing all participated (and possibly trending or promoted) polls by the user.](/images/posts/hoojah/User-Show-Votes.png)
-_User profile page showing all participated (and possibly trending or promoted) polls by the user._
+                  loop Debate Exchange
+                    U1->>H: Response
+                    H->>U2: Display response
+                    U2->>H: Response
+                    H->>U1: Display response
+                  end
 
-### Hoojah's Objective
+                  U1->>H: Closing statement
+                  H->>U2: Display closing
+                  U2->>H: Closing statement
+                  H->>U1: Display closing
 
-1. To become a platform for Malaysians to have structured objective discussions online. Every new arguments posted will be tied to a poll which only has three options: agree, neutral or disagree.
+                  Note over U1,U2: Debate Concluded
 
-2. Encourage users to respond to other users’ arguments objectively to promote quality discussions. Thus, encourage ethical online discussion.
-
-3. Create a trustworthy space in the Internet for Malaysians by verifying user’s identity and eliminate the noises in online discussion environment.
-
-![A poll page, illustrating three main interactions a user can engage with a poll. Users can vote, add supporting arguments under each vote option independently of their personal vote, as well as engage in a one-on-one debate with another user.](/images/posts/hoojah/Poll-Show-User.png)
-_A poll page, illustrating three main interactions a user can engage with a poll. Users can vote, add supporting arguments under each vote option independently of their personal vote, as well as engage in a one-on-one debate with another user._
-
-### Moving Forward
-
-The domain hoojah.my has been taken down. However as of the time of writing this, Hoojah is still very much alive, albeit not having any update. The next milestone for Hoojah is to convert the features into plugins for Discourse or WordPress and run Hoojah on top of them. I stumbled upon Discourse while building Hoojah, and it didn't make sense for me to re-build everything from scratch anymore. WordPress is a very popular solution in Malaysia.
-
-### External Resources
-
-Hoojah Tutorial (English)
-https://youtu.be/1GEy17NS7H4
-
-Hoojah Tutorial (Bahasa Malaysia)
-https://youtu.be/5MBb-9cCbVs
-
-Hoojah Pitch (Bahasa Malaysia)
-https://www.youtube.com/watch?v=xfG58Xcgmo4 
-
-
-![A one-on-one debate page (seems to be getting good traction, probably because of the two well known public figure debating... interesting stuff).](/images/posts/hoojah/Debate-Show-Ended.png)
-_A one-on-one debate page (seems to be getting good traction, probably because of the two well known public figure debating... interesting stuff)._
-
-![Analytic page for business tier users.](/images/posts/hoojah/Business-Search.png)
-_Analytic page for business tier users._
-
-![The log in and sign up feature is combined into a single page. Log in takes priority over sign up, therefore on mobile, the sign up form would be pushed down.](/images/posts/hoojah/Log-In.png)
-_The log in and sign up feature is combined into a single page. Log in takes priority over sign up, therefore on mobile, the sign up form would be pushed down._
-
-![Registered users can create new polls with some options for customization.](/images/posts/hoojah/Poll-New.png)
-_Registered users can create new polls with some options for customization._
-
-![Alternative design of user profile page with badges. The idea for badges came from the need to group user interests together, where a badge could be affiliated with user groups, active categories or user achievements.](/images/posts/hoojah/User-Show-Polls.png)
-_Alternative design of user profile page with badges. The idea for badges came from the need to group user interests together, where a badge could be affiliated with user groups, active categories or user achievements._
-
+                  H->>U1: Archive debate
+                  H->>U2: Archive debate
+                  H->>H: Make debate public
+                </pre>
+          </div>
+          <figcaption style="margin:8px 0 0;text-align:center;font-style:italic;font-size:0.9em;color:var(--color-muted)"><i class="icon-message-square me-1" aria-hidden="true"></i>Figure 4b: Sequence diagram showing the structured flow of a one-on-one debate in Hoojah.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <!-- 4. Participation Made Simple -->
+  <div class="post-gallery">
+    <div class="gallery-grid">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title">4. Participation Made Simple</h4>
+          <ul>
+            <li><strong>Problem:</strong> Many platforms hide contribution behind too many steps.</li>
+            <li><strong>Solution:</strong> Clear calls-to-action: <em>vote in one tap, add a supporting argument in two, start a debate in three</em>. Minimal cognitive load.</li>
+          </ul>
+          <p>➡ <em>Design pattern: "Progressive participation" where each step feels natural.</em></p>
+        </div>
+      </div>
+      <figure>
+        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/cta-buttons.png" alt="Streamlined actions guiding users to contribute" loading="lazy" data-fallback="Streamlined CTAs"></span>
+        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 5: Streamlined CTAs, vote in one tap, add an argument in two, start a debate in three.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <!-- 5. Mobile vs Desktop Consistency -->
+  <div class="post-gallery">
+    <div class="gallery-grid">
+      <div class="card h-100 border-0 shadow-sm">
+        <div class="card-body">
+          <h4 class="card-title">5. Mobile vs Desktop Consistency</h4>
+          <ul>
+            <li><strong>Problem:</strong> Debate platforms often break on smaller screens.</li>
+            <li><strong>Solution:</strong> On desktop, sidebars show trending arguments and user profiles. On mobile, non-essential elements collapse, leaving poll + arguments as the core flow.</li>
+          </ul>
+          <p>➡ <em>Design pattern: "Responsive hierarchy" that prioritises core actions.</em></p>
+        </div>
+      </div>
+      <figure>
+        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/responsive-design.png" alt="Responsive design across devices" loading="lazy" data-fallback="Responsive design"></span>
+        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 6: Responsive design across phone and desktop.</figcaption>
+      </figure>
+    </div>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-signpost me-2" aria-hidden="true"></i>User Journey Snapshot</h3>
+    <ol>
+      <li><strong>See poll at a glance</strong> → choose Agree / Neutral / Disagree.</li>
+      <li><strong>Read grouped arguments</strong> under the chosen stance.</li>
+      <li><strong>Join discussion</strong> by adding a supporting argument.</li>
+      <li><strong>Escalate to debate</strong> if deeper engagement is needed.</li>
+      <li><strong>Track contributions</strong> through personal profile and timelines.</li>
+    </ol>
+    <p>This flow is what all the iteration eventually settled into. Watching the first beta users move through it more or less the way I'd hoped was a good day.</p>
+  </article>
+  <!-- Figure: user journey flow -->
+  <div class="post-figure">
+    <figure>
+      <div class="bg-light p-3 rounded shadow">
+        <pre class="mermaid">
+            flowchart TD
+              A["User Visits Hoojah"] --> B["View Poll Question"]
+              B --> C{"Choose Stance"}
+              C -->|"Agree"| D1["View Agree Arguments"]
+              C -->|"Neutral"| D2["View Neutral Arguments"]
+              C -->|"Disagree"| D3["View Disagree Arguments"]
+              D1 --> E["Read Supporting Arguments"]
+              D2 --> E
+              D3 --> E
+              E --> F{"Engage Further?"}
+              F -->|"Yes"| G["Add Supporting Argument"]
+              F -->|"No"| H["Continue Browsing"]
+              G --> I{"Start Debate?"}
+              I -->|"Yes"| J["Initiate One-on-One Debate"]
+              I -->|"No"| H
+              J --> K["Exchange Structured Arguments"]
+              K --> L["Debate Concludes"]
+              L --> M["Track via Personal Profile"]
+              style A fill:#f9f9f9,stroke:#6c757d
+              style B fill:#e3f2fd,stroke:#0d6efd
+              style C fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+              style D1 fill:#d1e7dd,stroke:#198754
+              style D2 fill:#cff4fc,stroke:#0dcaf0
+              style D3 fill:#f8d7da,stroke:#dc3545
+              style F fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+              style I fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+              style J fill:#e2e3e5,stroke:#6c757d,stroke-width:2px
+              style K fill:#e2e3e5,stroke:#6c757d
+              style L fill:#e2e3e5,stroke:#6c757d
+              style M fill:#f8f9fa,stroke:#6c757d
+            </pre>
+      </div>
+      <figcaption><i class="icon-workflow me-1" aria-hidden="true"></i>Figure 7: Interactive user journey flow showing the path from viewing a poll to engaging in structured debates.</figcaption>
+    </figure>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-lightbulb me-2" aria-hidden="true"></i>Key Takeaways</h3>
+    <ul>
+      <li>Restricting to three voting options balances simplicity with room for real debate. Constraints can be a feature, not a compromise.</li>
+      <li>Convenience comes from readability, structured flows, and a responsive layout, roughly in that order.</li>
+      <li>Hoojah keeps friction low by walking people from <strong>poll → arguments → debate</strong>, one step at a time. I learned more about how people actually use software from building this than from anything I read.</li>
+    </ul>
+    <p>Looking back, Hoojah is where I actually grew up as a designer and developer. It started as a side project and ended up teaching me to listen, ship, tweak, and keep solving the real problem instead of the fun one.</p>
+  </article>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-target"></i><span>03 &middot; what it had to do</span></span>
+    </div>
+    <h2>Hoojah's Objectives</h2>
+    <ol>
+      <li>Create a platform for structured objective discussions where arguments are tied to polls with three options: agree, neutral, or disagree.</li>
+      <li>Encourage users to respond objectively to promote quality discussions and ethical online engagement.</li>
+      <li>Establish a trustworthy space by verifying user identities to eliminate noise in online discussions.</li>
+    </ol>
+  </article>
+  <!-- Figure: poll page with three interactions -->
+  <div class="post-figure">
+    <figure>
+      <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/Poll-Show-User.png" alt="Poll page showing user interactions" loading="lazy" data-fallback="Poll page"></span>
+      <figcaption><i class="icon-image me-1" aria-hidden="true"></i>A poll page showing three main interactions: voting, adding arguments, and one-on-one debates.</figcaption>
+    </figure>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-arrow-right-circle"></i><span>04 &middot; still alive</span></span>
+    </div>
+    <h2>Moving Forward</h2>
+    <p>The old hoojah.my domain is gone, however Hoojah is very much alive and now lives at <a href="https://hoojah.rudzainy.com" target="_blank" rel="noopener">hoojah.rudzainy.com</a>. I've since rebuilt it as a live, server-rendered Rails 8.1 app on Hotwire, and the one-on-one debate feature (challenge, turn-based rounds, then a spectator verdict) is actually built now, not just a diagram in this case study. All those hours spent tuning the UI taught me patience, and to keep iterating on real feedback instead of my own assumptions. I carry that into every project now.</p>
+  </article>
+  <!-- External resources callout -->
+  <div class="post-callout is-note">
+    <aside>
+      <div class="callout-header"><i class="brand-icon brand-youtube" aria-hidden="true"></i>External Resources · YouTube Videos</div>
+      <p class="callout-body">
+        <a href="https://www.youtube.com/watch?v=xfG58Xcgmo4" target="_blank" rel="noopener">Watch pitch video</a> ·
+        <a href="https://youtu.be/1GEy17NS7H4" target="_blank" rel="noopener">Watch EN tutorial (English Tutorial)</a> ·
+        <a href="https://youtu.be/5MBb-9cCbVs" target="_blank" rel="noopener">Watch BM tutorial (BM Tutorial)</a>
+      </p>
+    </aside>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-image"></i><span>05 &middot; screens from it</span></span>
+    </div>
+    <h2>Showcase</h2>
+  </article>
+  <!-- Showcase gallery -->
+  <div class="post-gallery">
+    <div class="gallery-grid">
+      <figure>
+        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/Debate-Show-Ended.png" alt="One-on-one debate page" loading="lazy" data-fallback="Debate page"></span>
+        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Debate page showing engagement between two public figures</figcaption>
+      </figure>
+      <figure>
+        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/Business-Search.png" alt="Analytics page" loading="lazy" data-fallback="Analytics page"></span>
+        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Analytics page for business users</figcaption>
+      </figure>
+      <figure>
+        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/Log-In.png" alt="Login page" loading="lazy" data-fallback="Login page"></span>
+        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Combined login/signup page with mobile optimization</figcaption>
+      </figure>
+      <figure>
+        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/Poll-New.png" alt="Poll creation" loading="lazy" data-fallback="Poll creation"></span>
+        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Poll creation interface with customization options</figcaption>
+      </figure>
+      <figure>
+        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/User-Show-Polls.png" alt="User profile with badges" loading="lazy" data-fallback="User profile"></span>
+        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>User profile with achievement badges</figcaption>
+      </figure>
+    </div>
+  </div>
+  <!-- Write-ups callout -->
+  <div class="post-callout is-note">
+    <aside>
+      <div class="callout-header"><i class="icon-file-text" aria-hidden="true"></i>Read the thinking · write-ups</div>
+      <p class="callout-body">For years the reasoning behind Hoojah only lived in my head. I finally wrote it down properly. There's a short <a href="/docs/hoojah-white-paper.html">white paper</a> that covers the what and why without the academic weight, plus two research papers if you want the full argument: one on the <a href="/docs/hoojah-research-deliberation.html">deliberation and argumentation</a> thinking, and one on the <a href="/docs/hoojah-research-cscw.html">social-computing (CSCW) design</a>.</p>
+    </aside>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <!-- Prev / Next -->
+    <div class="post-nav">
+      <nav aria-label="More work">
+        <a href="/work/" class="nav-card is-prev">
+          <span class="nav-dir"><i class="icon-arrow-left" aria-hidden="true"></i>Back</span>
+          <span class="nav-title">All Work</span>
+          <span class="nav-date">The full portfolio</span>
+        </a>
+        <a href="/work/2019-09-01-dxc-bionix-central.html" class="nav-card is-next">
+          <span class="nav-dir">Next<i class="icon-arrow-right" aria-hidden="true"></i></span>
+          <span class="nav-title">DXC Bionix Central</span>
+          <span class="nav-date"><time datetime="2019-09-01">2019</time></span>
+        </a>
+      </nav>
+    </div>
+  </article>
+</main>
+<!-- end Main Content Section -->

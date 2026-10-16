@@ -1,61 +1,59 @@
 ---
 layout: post
-title: PostCo Email Design
+title: "PostCo Email Design"
 date: 2018-09-01 10:46 +0800
-description:
+description: "PostCo Email Design"
+category: work
+permalink: /work/2018-09-01-postco-email-design.html
+tags: ["design", "portfolio"]
 image: /images/portfolio/postco/Screenshot-2022-01-27-at-2-43-02-PM-730x1024.jpeg
-category: Work
-tags: [design, portfolio]
-published: true
-sitemap: true
 ---
+<!-- Page Header -->
+<div class="page-header-work">
+	<nav aria-label="breadcrumb" class="container pt-3">
+		<ol class="breadcrumb mb-0">
+			<li class="breadcrumb-item"><a href="/">Home</a></li>
+			<li class="breadcrumb-item"><a href="/work/">Work</a></li>
+			<li class="breadcrumb-item active" aria-current="page">PostCo Email Design</li>
+		</ol>
+	</nav>
+	<header class="container mt-4">
+		<section class="d-flex flex-wrap flex-row align-items-center gap-3 gap-lg-5">
+		<h1 class="page-title">PostCo Email Design</h1>
+		</section>
+	</header>
+</div>
+<!-- end Page Header -->
 
-| Project | Email design for PostCo |
-| Responsibilities | Design & code templates for automated system emails |
-| Technology Stack | Adobe Illustrator, HTML, CSS |
-| Year | 2018 |
-
-![Sample email design for PostCo.](/images/portfolio/postco/Users_rudzainy_Google20Drive_PostCo_Mails_postco_mail_collection_arrive.png)
-*Sample email design for PostCo.*
-
-![Another sample email design for PostCo.](/images/portfolio/postco/Users_rudzainy_Google20Drive_PostCo_Mails_postco_mail_return_returned.png)
-*Another sample email design for PostCo.*
-
-![Sketch of proposed solution for map popup.](/images/portfolio/postco/Screenshot-2022-01-27-at-2-43-02-PM-730x1024.jpeg)
-*Sketch of proposed solution for map popup.*
-
-<!-- AI-DRAFTED: review & edit -->
-
-## Summary
-
-Design and build of transactional email templates for PostCo — the automated system emails that fire off as part of the product's flow. I designed the templates and hand-coded them in HTML and CSS, with the artwork worked up in Adobe Illustrator. The samples above show a couple of the automated mails and a sketch of a proposed map-popup solution.
-
-**[owner: one line on what PostCo is — the product and who it's for]**
-
-## 1. Background
-
-**[owner: which emails were these — order arrival, returns, notifications? what triggered them in the system?]**
-
-**[owner: what was the state of PostCo's emails before this — none, plain-text, inconsistent? what was the reason to invest in them?]**
-
-## 2. Approach
-
-I designed the templates and coded them by hand so they'd render reliably across email clients.
-
-- **Design** — **[owner: what did you carry over from PostCo's brand — colours, logo, tone? any templating system for the different email types?]**
-- **Build** — hand-coded in HTML and CSS, with visuals prepared in Adobe Illustrator.
-- **Map popup** — I sketched a proposed solution for a map popup (shown above). **[owner: what was the map popup for, and did it ship?]**
-
-### Troubles we had
-
-**[owner: the classic email pain — client rendering (Outlook!), responsive layout, dark mode? anything specific worth noting]**
-
-## 3. Outcome
-
-**[owner: did these go live? any feedback, open/click improvement, or before/after worth showing?]**
-
-## Showcase
-
-The sample emails and the map-popup sketch are shown above.
-
-**[owner: add any other templates in the set — return flow, notifications — and a rendered-in-inbox shot if you have one]**
+<!-- Main Content Section -->
+<main class="container my-5">
+	<article class="post-content">
+<table>
+  <tbody>
+    <tr>
+      <td>Project</td>
+      <td>Email design for PostCo</td>
+    </tr>
+    <tr>
+      <td>Responsibilities</td>
+      <td>Design &amp; code templates for automated system emails</td>
+    </tr>
+    <tr>
+      <td>Technology Stack</td>
+      <td>Adobe Illustrator, HTML, CSS</td>
+    </tr>
+    <tr>
+      <td>Year</td>
+      <td>2018</td>
+    </tr>
+  </tbody>
+</table>
+<p><img src="/images/portfolio/postco/Users_rudzainy_Google20Drive_PostCo_Mails_postco_mail_collection_arrive.png" alt="Sample email design for PostCo." class="img-fluid">
+<em>Sample email design for PostCo.</em></p>
+<p><img src="/images/portfolio/postco/Users_rudzainy_Google20Drive_PostCo_Mails_postco_mail_return_returned.png" alt="Another sample email design for PostCo." class="img-fluid">
+<em>Another sample email design for PostCo.</em></p>
+<p><img src="/images/portfolio/postco/Screenshot-2022-01-27-at-2-43-02-PM-730x1024.jpeg" alt="Sketch of proposed solution for map popup." class="img-fluid">
+<em>Sketch of proposed solution for map popup.</em></p>
+	</article>
+</main>
+<!-- end Main Content Section -->

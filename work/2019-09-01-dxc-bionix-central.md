@@ -1,46 +1,175 @@
 ---
 layout: post
-title: DXC Bionix Central
+title: "DXC Bionix Central"
 date: 2019-09-01 15:30 +0800
-description: Designing the dashboard and sales pages for DXC Bionix Central — the commercial face of the Bionix platform.
-image: https://blog.rudzainy.my/blog/wp-content/uploads/2023/2e2a0a175212223.64afa37f9c39d.png
-category: Work
-tags: [ui, ux, portfolio]
-published: true
-sitemap: true
+description: "Designing the dashboard and sales pages for DXC Bionix Central — the commercial face of the Bionix platform."
+category: work
+permalink: /work/2019-09-01-dxc-bionix-central.html
+data_category: work
+tags: ["ui", "ux", "portfolio"]
+image: "https://blog.rudzainy.my/blog/wp-content/uploads/2023/2e2a0a175212223.64afa37f9c39d.png"
 ---
+<!-- Page Header Band (solid category colour) -->
+<div class="page-header-work" style="padding-bottom:0">
+  <div style="max-width:1140px;margin:0 auto;padding:20px 24px 0">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0" style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/work/">Work</a></li>
+        <li class="breadcrumb-item active" aria-current="page">DXC Bionix Central</li>
+      </ol>
+    </nav>
+    <!-- end Breadcrumb -->
+    <!-- Hero: kicker + title + standfirst + featured image -->
+    <div class="header-hero-grid" style="display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center;padding:36px 0 44px">
+      <div>
+        <p style="margin:0 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px;color:rgba(255,255,255,0.75)">Client project · 2017–2018</p>
+        <h1 class="page-title" style="display:block;font-size:clamp(2.5rem,1.1rem + 4.5vw,4.5rem);line-height:1.05;text-wrap:balance">DXC Bionix Central</h1>
+        <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:54ch">The commercial face of the wider Bionix effort, the dashboard and sales-facing pages where the platform's value had to be legible to buyers, not just usable by operators.</p>
+      </div>
+      <figure style="margin:0;background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-hover)">
+        <span class="smart-image smart-image-placeholder" role="img" aria-label="Bionix Central dashboard hero screen" style="border-radius:0;border:0;aspect-ratio:380/280"><span class="label">Bionix Central · dashboard</span></span>
+        <figcaption style="padding:8px 14px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--color-muted);border-top:1px solid rgba(0,0,0,0.1)">Bionix Central · dashboard</figcaption>
+      </figure>
+    </div>
+    <!-- Featured meta strip (overlaps the band) -->
+    <div class="header-meta-strip" style="background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);box-shadow:var(--shadow-active);display:grid;grid-template-columns:repeat(4,1fr);position:relative;transform:translateY(56px);margin-top:-56px">
+      <div style="padding:16px 20px">
+        <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Responsibilities</div>
+        <p style="margin:0">Research, design and build</p>
+      </div>
+      <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+        <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Technology stack</div>
+        <p style="margin:0">InVision Studio</p>
+      </div>
+      <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+        <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Year</div>
+        <p style="margin:0"><time datetime="2017">2017</time>–<time datetime="2018">2018</time></p>
+      </div>
+      <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
+        <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">External links</div>
+        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+          <a href="https://www.behance.net/gallery/175212223/Bionix-Central" target="_blank" rel="noopener" class="meta-link"><i class="brand-icon brand-behance" aria-hidden="true"></i>View on Behance</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Page Header Band -->
 
-<!-- AI-DRAFTED: review & edit -->
-
-| Project | DXC Bionix Central |
-| Responsibilities | Research, design and build. |
-| Technology Stack | InVision Studio |
-| Year | 2017-2018 |
-| Behance | [View in Behance](https://www.behance.net/gallery/175212223/Bionix-Central) |
-
-## Summary
-
-DXC Bionix Central was the commercial face of the wider Bionix effort — the place where the platform's value had to be legible to buyers, not just usable by operators. My job was to research, design and build the dashboard and sales-facing pages so a first-time visitor could grasp what Bionix did, and a returning user could get to their numbers fast. It sits right next to the [DXC Bionix Design System](/work/2019-09-01-dxc-bionix-design-system.html) work — Central is where that system got put to the test on real screens.
-
-## 1. Background
-
-Coming off the design-system work, I already had a component vocabulary to build with. The challenge for Central was less "what do the pieces look like" and more "what story does this page tell, and in what order."
-
-**[owner: what problem was Central solving that the rest of Bionix wasn't? e.g. a sales/marketing surface vs the operational tooling]**
-
-## 2. Approach
-
-I designed and prototyped in InVision Studio, leaning on the Bionix component set so Central stayed consistent with the rest of the platform.
-
-- **Dashboard** — **[owner: the key metrics / widgets that mattered most to users]**
-- **Sales pages** — **[owner: who was the audience, and what was the one action you wanted them to take?]**
-
-## 3. Outcome
-
-**[owner: how did it land? any feedback, adoption, or a before/after worth showing]**
-
-You can see the full set of screens on Behance: [Bionix Central](https://www.behance.net/gallery/175212223/Bionix-Central).
-
-## Showcase
-
-**[owner: drop in the strongest 3–4 screens here — the dashboard hero, a sales page, and any state you're proud of]**
+<!-- Main Content Section -->
+<main style="max-width:1140px;margin:0 auto;padding:104px 24px 32px">
+  <article style="max-width:var(--measure);margin:0 auto">
+    <div class="post-section-head is-first" aria-hidden="true">
+      <span class="head-tab"><i class="icon-book-open"></i><span>01 &middot; the short version</span></span>
+    </div>
+    <h2>Summary</h2>
+    <p>DXC Bionix Central was the commercial face of the wider Bionix effort, the place where the platform's value had to be legible to buyers, not just usable by operators. My job was to research, design and build the dashboard and sales-facing pages so a first-time visitor could grasp what Bionix did, and a returning user could get to their numbers fast.</p>
+    <p>It sits right next to the <a href="/work/2019-09-01-dxc-bionix-design-system.html">DXC Bionix Design System</a> work. Central is where that system got put to the test on real screens.</p>
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-users"></i><span>02 &middot; what i already had</span></span>
+    </div>
+    <h2>Background</h2>
+    <p>Coming off the design-system work, I already had a component vocabulary to build with. The challenge for Central was less "what do the pieces look like" and more "what story does this page tell, and in what order."</p>
+    <!-- DRAFT for owner review (was: what problem Central solved that the rest of Bionix didn't): Central was the one corner of Bionix built for buyers instead of operators. The rest of the platform was day-to-day operational tooling; Central's job was to make the case for it. [confirm this matches how the team framed it] -->
+    <p>In practice that meant treating Central as the layer where an operational platform had to make a commercial case for itself, without losing the clarity that operators depended on day to day.</p>
+  </article>
+  <!-- Before / after: the redesign -->
+  <div class="post-before-after">
+    <div class="before-after-grid">
+      <figure>
+        <div class="ba-label is-before"><i class="icon-history" aria-hidden="true"></i>Before</div>
+        <span class="smart-image smart-image-placeholder" role="img" aria-label="Original Bionix portal before the redesign"><span class="label">Original portal</span></span>
+        <figcaption>The portal as it stood before the redesign.<!-- DRAFT for owner review (was: pain points of the original portal): The old portal buried the numbers that mattered and leaned on inconsistent, one-off screens, so buyers struggled to see the value fast. [confirm/replace with the real pain points] --></figcaption>
+      </figure>
+      <figure>
+        <div class="ba-label is-after"><i class="icon-sparkles" aria-hidden="true"></i>After</div>
+        <span class="smart-image smart-image-placeholder" role="img" aria-label="Redesigned Bionix Central dashboard"><span class="label">Redesigned Central</span></span>
+        <figcaption>Central after the redesign, built on the Bionix component set.<!-- DRAFT for owner review (was: strongest before/after to show): Lead with the dashboard before/after; that is where the redesign reads at a glance. [confirm which pair] --></figcaption>
+      </figure>
+    </div>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-lightbulb"></i><span>03 &middot; reused the system</span></span>
+    </div>
+    <h2>Approach</h2>
+    <p>I designed and prototyped in InVision Studio, leaning on the Bionix component set so Central stayed consistent with the rest of the platform. The work broke down into a small number of deliberate moves.</p>
+  </article>
+  <!-- Steps: the approach -->
+  <div class="post-steps">
+    <div class="steps-rail">
+      <ol>
+        <li>
+          <div class="step-num">1</div>
+          <div>
+            <h3>Anchor on the component set</h3>
+            <p>Rather than inventing a new visual language, Central reused the Bionix design-system components so the commercial pages felt like part of the same product.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">2</div>
+          <div>
+            <h3>Design the dashboard</h3>
+            <p>The dashboard had to get a returning user to their numbers fast.<!-- DRAFT for owner review (was: key metrics / widgets that mattered most): The dashboard put a returning user's most-checked numbers up top. [confirm the actual widgets, e.g. usage, spend, service health, alerts] --></p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">3</div>
+          <div>
+            <h3>Shape the sales pages</h3>
+            <p>The sales-facing pages had to make a first-time visitor grasp what Bionix did.<!-- DRAFT for owner review (was: audience, and the one action): The sales pages spoke to prospective buyers meeting Bionix for the first time, with one clear next step. [confirm the action, e.g. request a demo / talk to sales] --></p>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">4</div>
+          <div>
+            <h3>Prototype and validate</h3>
+            <p>Interactive InVision prototypes carried the flows for review before anything reached build.<!-- DRAFT for owner review (was: testing or review process worth naming): Stakeholders and developers walked the InVision prototypes before anything went to build, so problems surfaced on-screen, not in code. [confirm, or drop if there was nothing formal] --></p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <div class="post-section-head" aria-hidden="true">
+      <span class="head-tab"><i class="icon-flag"></i><span>04 &middot; it's on behance</span></span>
+    </div>
+    <h2>Outcome</h2>
+    <p>The result was a commercial surface consistent with the wider Bionix platform, built entirely on its shared component set.<!-- DRAFT for owner review (was: how it landed, feedback/adoption): If there is real feedback or adoption to point to, one honest line here beats a vague claim; if not, keep the outcome modest as written. [confirm, do not invent] --></p>
+    <p>You can see the full set of screens on Behance: <a href="https://www.behance.net/gallery/175212223/Bionix-Central" target="_blank" rel="noopener">Bionix Central</a>.</p>
+  </article>
+  <!-- Showcase gallery: screens not yet captured -->
+  <div class="post-gallery">
+    <div class="gallery-grid">
+      <figure>
+        <span class="smart-image smart-image-placeholder" role="img" aria-label="Dashboard hero screen"><span class="label">Dashboard hero</span></span>
+        <figcaption>The dashboard hero.<!-- DRAFT for owner review (was: drop in strongest dashboard screen): Replace this placeholder with the real dashboard hero image once captured. [add asset] --></figcaption>
+      </figure>
+      <figure>
+        <span class="smart-image smart-image-placeholder" role="img" aria-label="Sales page screen"><span class="label">Sales page</span></span>
+        <figcaption>A sales-facing page.<!-- DRAFT for owner review (was: drop in the sales page you're proudest of): Replace with the real sales-page screen you are proudest of. [add asset] --></figcaption>
+      </figure>
+    </div>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
+    <p style="text-align:center;font-style:italic;color:var(--color-muted)">More screens live on Behance while the highlights are curated here.<!-- DRAFT for owner review (was: replace placeholders with strongest 3-4 screens): Curate three or four real screens here: dashboard hero, a sales page, and one strong state (empty, loading, or a detail view). [add assets] --></p>
+  </article>
+  <!-- Prev / Next -->
+  <div class="post-nav">
+    <nav aria-label="More work">
+      <a href="/work/" class="nav-card is-prev">
+        <span class="nav-dir"><i class="icon-arrow-left" aria-hidden="true"></i>Back</span>
+        <span class="nav-title">All Work</span>
+        <span class="nav-date">The full portfolio</span>
+      </a>
+      <a href="/work/2020-09-01-the-hoojah-project.html" class="nav-card is-next">
+        <span class="nav-dir">Next<i class="icon-arrow-right" aria-hidden="true"></i></span>
+        <span class="nav-title">The Hoojah Project</span>
+        <span class="nav-date"><time datetime="2020-09-01">2013–2019</time></span>
+      </a>
+    </nav>
+  </div>
+</main>
+<!-- end Main Content Section -->
