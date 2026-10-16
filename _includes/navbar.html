@@ -1,0 +1,28 @@
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg border-bottom border-{{ cat_color }}">
+      <div class="container">
+        <a href="/" title="Wow! It's a Wau!" class="navbar-brand text-{{ cat_color }} d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{·})</a>
+        <button class="navbar-toggler border-0 text-{{ cat_color }}" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          ~|{·})
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+{%- unless page.url == "/" or page.url == "/index.html" %}
+            <li class="nav-item d-lg-none">
+              <a href="/" class="nav-link"><i class="icon-house me-2"></i>Home</a>
+            </li>
+{%- endunless %}
+            <li class="nav-item">
+              <a href="/work/" class="nav-link{% if page.url == "/work/" %} active{% endif %}"><i class="icon-pencil-ruler me-2"></i>Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="/life/" class="nav-link{% if page.url == "/life/" %} active{% endif %}"><i class="icon-sun me-2"></i>Life</a>
+            </li>
+            <li class="nav-item">
+              <a href="/balance/" class="nav-link{% if page.url == "/balance/" %} active{% endif %}"><i class="icon-mountain me-2"></i>Balance</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end Top Navigation Bar -->

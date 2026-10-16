@@ -1,0 +1,33 @@
+    <!-- Footer Section -->
+    <footer class="container">
+      <section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau" data-bs-toggle="modal" data-bs-target="#takdeModal">~|{·})</a> <a href="/LICENSE" class="text-decoration-none link-dark">©</a> Rudzainy Rahman since 1985</span>
+        </div>
+{%- if layout.back_link and cat != "" %}
+        <div class="col-md-4 d-flex justify-content-center">
+          <a href="/" class="text-decoration-none me-3">Home</a>
+          <a href="/{{ cat }}/" class="text-decoration-none me-3">Back to {{ cat | capitalize }}</a>
+          <a href="#top" class="text-decoration-none">Back to top</a>
+        </div>
+{%- endif %}
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
+              <i class="brand-icon brand-github me-2"></i><span class="visually-hidden">GitHub</span>
+            </a>
+          </li>
+          <li class="ms-3">
+            <span class="text-muted" aria-disabled="true" title="My Sama² profile (sama2.my &mdash; link no longer works)">
+              <i class="icon-heart me-2"></i><span class="visually-hidden">Sama²</span>
+            </span>
+          </li>
+          <li class="ms-3 mt-n1">
+            <a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
+              <i class="icon-coffee me-2"></i><span class="visually-hidden">Ko-fi</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <!-- end Footer Section -->

@@ -1,11 +1,22 @@
-# GitHub Pages runs Jekyll by default. This site is hand-written static HTML
-# served directly (the .html files are the site; the .md files are unbuilt
-# legacy sources). Jekyll still processes every .md via jekyll-optional-front-matter,
-# so exclude the internal docs whose prose (e.g. the literal "{% ... %}" when
-# describing the legacy sources) would otherwise break the Liquid parser — and
-# which are not meant to be published pages anyway.
+# GitHub Pages builds this site with Jekyll (github-pages gem; see Gemfile).
+# Shared chrome lives in _layouts/ and _includes/. Jekyll processes every .md
+# via jekyll-optional-front-matter, so exclude the internal docs whose prose
+# (e.g. the literal "{% ... %}" when describing the legacy sources) would
+# otherwise break the Liquid parser, and which are not meant to be published.
+title: Website of Rudzainy Rahman
+url: https://rudzainy.com
+description: I do UI/UX stuff. Sometimes I do Ruby on Rails stuff and theatre stuff. Also into photography, climbing, riding, gliding and shield surfing 😉
+
 exclude:
   - CLAUDE.md
   - README.md
   - EDITORIAL-GAP-REPORT.md
   - docs/superpowers
+  - INDEX.md
+  - Gemfile
+  - Gemfile.lock
+  - tools
+  # Legacy Jekyll sources: each .md shares its output path with the served .html
+  # sibling and would overwrite it. Liquid-unsafe JSX in the hoojah post sits here too.
+  # Removed in Task 3 once the converted files are in place.
+  - "**/*.md"

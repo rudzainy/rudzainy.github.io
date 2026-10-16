@@ -1,0 +1,40 @@
+{%- comment -%}
+  Shared chrome for every page: head, navbar, content, footer, scripts.
+  Category comes from page.category, else the first URL segment
+  (/work/, /life/, /balance/). Anything else falls back to the neutral
+  primary colour and no category.
+{%- endcomment -%}
+{%- assign cat = page.category | default: "" | downcase -%}
+{%- if cat == "" -%}
+  {%- assign url_parts = page.url | split: "/" -%}
+  {%- assign cat = url_parts[1] | default: "" -%}
+{%- endif -%}
+{%- case cat -%}
+  {%- when "work" -%}{%- assign cat_color = "info" -%}
+  {%- when "life" -%}{%- assign cat_color = "success" -%}
+  {%- when "balance" -%}{%- assign cat_color = "warning" -%}
+  {%- else -%}{%- assign cat = "" -%}{%- assign cat_color = "primary" -%}
+{%- endcase -%}
+{%- assign body_class = layout.body_class | default: "" -%}
+{%- if page.body_class -%}
+  {%- assign body_class = body_class | append: " " | append: page.body_class | strip -%}
+{%- endif -%}
+{%- assign data_category = page.data_category -%}
+{%- if data_category == nil and layout.data_category and cat != "" -%}
+  {%- assign data_category = cat -%}
+{%- endif -%}
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+  <body{% if body_class != "" %} class="{{ body_class }}"{% endif %}{% if data_category %} data-category="{{ data_category }}"{% endif %}>
+{% include navbar.html %}
+
+{{ content }}
+{%- unless layout.footer == false %}
+
+{% include footer.html %}
+{%- endunless %}
+
+{% include scripts.html %}
+  </body>
+</html>

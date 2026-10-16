@@ -1,0 +1,20 @@
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+
+    <!-- Ruby on Browser --
+    < script src="https://cdn.jsdelivr.net/npm/ruby-3_2-wasm-wasi@1.0.1/dist/browser.script.iife.js"></script >
+    !-- end Ruby on Browser -->
+
+    <!-- Bootstrap CSS & Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+    <!-- end Bootstrap CSS & Icons -->
+
+    <link rel="stylesheet" type="text/css" href="/si-es-es.css">
+{%- if page.head_extra %}
+{{ page.head_extra }}
+{%- endif %}
+  </head>
