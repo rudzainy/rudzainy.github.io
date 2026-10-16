@@ -1,135 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Résumé: Mohd Rudzainy bin Abdul Rahman</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Résumé of Mohd Rudzainy bin Abdul Rahman, UI/UX designer & full-stack developer in Kuala Lumpur, Malaysia. 15+ years across design, web development and education.">
+---
+layout: default
+title: "Résumé: Mohd Rudzainy bin Abdul Rahman"
+description: "Résumé of Mohd Rudzainy bin Abdul Rahman, UI/UX designer & full-stack developer in Kuala Lumpur, Malaysia. 15+ years across design, web development and education."
+category: work
+data_category: work
+footer: false
+head_extra: |
+      <!-- Résumé-specific layout: a responsive two-column timeline built on the
+           Batik design tokens. Header/nav/footer/post-stats are reused as-is. -->
+      <style>
+        .rz-wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
 
-    <!-- Bootstrap CSS & Icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
-    <!-- end Bootstrap CSS & Icons -->
+        /* --- Header hero (sits on the indigo page-header-work band) --------- */
+        .rz-hero { display: grid; grid-template-columns: 160px 1fr; gap: 32px; align-items: center; padding: 26px 0 40px; }
+        .rz-hero-photo img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(255,255,255,0.5); box-shadow: var(--shadow-title); }
+        .rz-hero-text .page-title { display: block; font-size: clamp(2.1rem, 1.1rem + 3.4vw, 3.4rem); line-height: 1.05; text-wrap: balance; margin: 0; }
+        .rz-tagline { font-style: italic; font-size: var(--type-lead); color: rgba(255,255,255,0.92); margin: 12px 0 18px; max-width: 48ch; }
+        .rz-contact { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 18px; font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); font-size: 13px; }
+        .rz-contact a, .rz-contact span { display: inline-flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; }
+        .rz-contact a:hover { text-decoration: underline; }
+        .rz-contact i { font-size: 1.05rem; opacity: 0.85; }
+        .rz-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+        .rz-download { background: #fff; color: var(--color-work-ink); border: 0; font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); }
+        .rz-socials { display: flex; align-items: center; gap: 16px; font-size: 1.2rem; }
+        .rz-socials a { color: #fff; }
+        .rz-socials a:hover { opacity: 0.8; }
 
-    <link rel="stylesheet" type="text/css" href="si-es-es.css">
+        /* --- Section scaffolding ------------------------------------------- */
+        .rz-section { padding: 44px 0; }
+        .rz-section + .rz-section { border-top: 1px solid var(--cat-border); }
+        .rz-section-head { display: flex; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 2px solid var(--cat-base); margin-bottom: 26px; }
+        .rz-section-head i { font-size: 1.55rem; color: var(--cat-base); }
+        .rz-section-head h2 { margin: 0; font-size: var(--type-h2); color: var(--cat-ink); text-shadow: none; }
+        .rz-sub { font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); color: var(--color-muted); font-size: 14px; margin: 34px 0 6px; }
+        .rz-sub:first-of-type { margin-top: 0; }
 
-    <!-- Résumé-specific layout: a responsive two-column timeline built on the
-         Batik design tokens. Header/nav/footer/post-stats are reused as-is. -->
-    <style>
-      .rz-wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        /* --- Timeline entry (date rail + role body) ------------------------ */
+        .rz-entry { display: grid; grid-template-columns: 190px 1fr; gap: 28px; padding: 22px 0; }
+        .rz-entry + .rz-entry { border-top: 1px solid var(--cat-border); }
+        .rz-when { font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); }
+        .rz-when .rz-date { font-size: 15px; color: var(--cat-ink); }
+        .rz-when .rz-dur { display: block; margin-top: 4px; font-size: 12px; color: var(--color-muted); }
+        .rz-when .rz-tag { display: inline-block; margin-top: 8px; padding: 2px 9px; border: 1px solid var(--cat-border); border-radius: 4px; font-size: 11px; color: var(--color-muted); }
+        .rz-role h3 { margin: 0 0 2px; font-size: var(--type-h3); color: var(--color-ink); text-shadow: none; }
+        .rz-org { font-weight: 600; color: var(--cat-ink); margin: 0 0 10px; }
+        .rz-role p { margin: 0 0 8px; }
+        .rz-role ul { margin: 8px 0 0; padding-left: 1.1rem; }
+        .rz-role ul ul { margin: 6px 0 0; }
+        .rz-role li { margin-bottom: 6px; }
+        .rz-role a { color: var(--cat-ink); }
 
-      /* --- Header hero (sits on the indigo page-header-work band) --------- */
-      .rz-hero { display: grid; grid-template-columns: 160px 1fr; gap: 32px; align-items: center; padding: 26px 0 40px; }
-      .rz-hero-photo img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(255,255,255,0.5); box-shadow: var(--shadow-title); }
-      .rz-hero-text .page-title { display: block; font-size: clamp(2.1rem, 1.1rem + 3.4vw, 3.4rem); line-height: 1.05; text-wrap: balance; margin: 0; }
-      .rz-tagline { font-style: italic; font-size: var(--type-lead); color: rgba(255,255,255,0.92); margin: 12px 0 18px; max-width: 48ch; }
-      .rz-contact { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 18px; font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); font-size: 13px; }
-      .rz-contact a, .rz-contact span { display: inline-flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; }
-      .rz-contact a:hover { text-decoration: underline; }
-      .rz-contact i { font-size: 1.05rem; opacity: 0.85; }
-      .rz-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
-      .rz-download { background: #fff; color: var(--color-work-ink); border: 0; font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); }
-      .rz-socials { display: flex; align-items: center; gap: 16px; font-size: 1.2rem; }
-      .rz-socials a { color: #fff; }
-      .rz-socials a:hover { opacity: 0.8; }
+        /* --- Skills groups ------------------------------------------------- */
+        .rz-skill-block + .rz-skill-block { margin-top: 20px; }
+        .rz-skill-block h3 { margin: 0 0 4px; font-size: var(--type-h3); color: var(--color-ink); text-shadow: none; }
+        .rz-skill-block p { margin: 0 0 6px; }
+        .rz-tools { color: var(--color-muted); font-size: 0.95em; }
+        .rz-tools strong { color: var(--cat-ink); font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); font-size: 0.8em; }
 
-      /* --- Section scaffolding ------------------------------------------- */
-      .rz-section { padding: 44px 0; }
-      .rz-section + .rz-section { border-top: 1px solid var(--cat-border); }
-      .rz-section-head { display: flex; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 2px solid var(--cat-base); margin-bottom: 26px; }
-      .rz-section-head i { font-size: 1.55rem; color: var(--cat-base); }
-      .rz-section-head h2 { margin: 0; font-size: var(--type-h2); color: var(--cat-ink); text-shadow: none; }
-      .rz-sub { font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); color: var(--color-muted); font-size: 14px; margin: 34px 0 6px; }
-      .rz-sub:first-of-type { margin-top: 0; }
+        /* --- Stats strip mobile reflow (post-stats is fixed at 4 cols) ----- */
+        .rz-stats .stats-strip { margin-bottom: 8px; }
+        @media (max-width: 640px) {
+          .rz-stats .stats-strip { grid-template-columns: repeat(2, 1fr); }
+          .rz-stats .stat { border-left: 1px solid rgba(0,0,0,0.1); border-top: 1px solid rgba(0,0,0,0.1); }
+          .rz-stats .stat:nth-child(1), .rz-stats .stat:nth-child(2) { border-top: 0; }
+          .rz-stats .stat:nth-child(odd) { border-left: 0; }
+        }
 
-      /* --- Timeline entry (date rail + role body) ------------------------ */
-      .rz-entry { display: grid; grid-template-columns: 190px 1fr; gap: 28px; padding: 22px 0; }
-      .rz-entry + .rz-entry { border-top: 1px solid var(--cat-border); }
-      .rz-when { font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); }
-      .rz-when .rz-date { font-size: 15px; color: var(--cat-ink); }
-      .rz-when .rz-dur { display: block; margin-top: 4px; font-size: 12px; color: var(--color-muted); }
-      .rz-when .rz-tag { display: inline-block; margin-top: 8px; padding: 2px 9px; border: 1px solid var(--cat-border); border-radius: 4px; font-size: 11px; color: var(--color-muted); }
-      .rz-role h3 { margin: 0 0 2px; font-size: var(--type-h3); color: var(--color-ink); text-shadow: none; }
-      .rz-org { font-weight: 600; color: var(--cat-ink); margin: 0 0 10px; }
-      .rz-role p { margin: 0 0 8px; }
-      .rz-role ul { margin: 8px 0 0; padding-left: 1.1rem; }
-      .rz-role ul ul { margin: 6px 0 0; }
-      .rz-role li { margin-bottom: 6px; }
-      .rz-role a { color: var(--cat-ink); }
+        /* --- References cards ---------------------------------------------- */
+        .rz-refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+        .rz-ref { background: var(--color-surface); border: 1px solid rgba(0,0,0,0.15); border-radius: var(--radius-sm); padding: 18px 20px; }
+        .rz-ref h3 { margin: 0 0 4px; font-size: 1.15rem; text-shadow: none; }
+        .rz-ref .rz-ref-role { color: var(--cat-ink); font-weight: 600; margin: 0 0 8px; }
+        .rz-ref p { margin: 0; }
+        .rz-refs-note { margin: 18px 0 0; color: var(--color-muted); font-style: italic; }
 
-      /* --- Skills groups ------------------------------------------------- */
-      .rz-skill-block + .rz-skill-block { margin-top: 20px; }
-      .rz-skill-block h3 { margin: 0 0 4px; font-size: var(--type-h3); color: var(--color-ink); text-shadow: none; }
-      .rz-skill-block p { margin: 0 0 6px; }
-      .rz-tools { color: var(--color-muted); font-size: 0.95em; }
-      .rz-tools strong { color: var(--cat-ink); font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--tracking-display); font-size: 0.8em; }
+        /* --- Mobile: collapse the date rail into an inline strip ----------- */
+        @media (max-width: 640px) {
+          .rz-hero { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 20px; }
+          .rz-tagline { margin-left: auto; margin-right: auto; }
+          .rz-contact, .rz-actions { justify-content: center; }
+          .rz-entry { grid-template-columns: 1fr; gap: 8px; }
+          .rz-when { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+          .rz-when .rz-dur, .rz-when .rz-tag { margin-top: 0; }
+        }
 
-      /* --- Stats strip mobile reflow (post-stats is fixed at 4 cols) ----- */
-      .rz-stats .stats-strip { margin-bottom: 8px; }
-      @media (max-width: 640px) {
-        .rz-stats .stats-strip { grid-template-columns: repeat(2, 1fr); }
-        .rz-stats .stat { border-left: 1px solid rgba(0,0,0,0.1); border-top: 1px solid rgba(0,0,0,0.1); }
-        .rz-stats .stat:nth-child(1), .rz-stats .stat:nth-child(2) { border-top: 0; }
-        .rz-stats .stat:nth-child(odd) { border-left: 0; }
-      }
-
-      /* --- References cards ---------------------------------------------- */
-      .rz-refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-      .rz-ref { background: var(--color-surface); border: 1px solid rgba(0,0,0,0.15); border-radius: var(--radius-sm); padding: 18px 20px; }
-      .rz-ref h3 { margin: 0 0 4px; font-size: 1.15rem; text-shadow: none; }
-      .rz-ref .rz-ref-role { color: var(--cat-ink); font-weight: 600; margin: 0 0 8px; }
-      .rz-ref p { margin: 0; }
-      .rz-refs-note { margin: 18px 0 0; color: var(--color-muted); font-style: italic; }
-
-      /* --- Mobile: collapse the date rail into an inline strip ----------- */
-      @media (max-width: 640px) {
-        .rz-hero { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 20px; }
-        .rz-tagline { margin-left: auto; margin-right: auto; }
-        .rz-contact, .rz-actions { justify-content: center; }
-        .rz-entry { grid-template-columns: 1fr; gap: 8px; }
-        .rz-when { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
-        .rz-when .rz-dur, .rz-when .rz-tag { margin-top: 0; }
-      }
-
-      /* --- Print: a clean one-off if someone hits Cmd/Ctrl-P ------------- */
-      @media print {
-        .navbar, footer, .rz-actions, .rz-download, .rz-socials { display: none !important; }
-        .page-header-work { background: #fff !important; }
-        .page-header-work .page-title, .rz-tagline, .rz-contact,
-        .rz-contact a, .rz-contact span { color: var(--color-ink) !important; text-shadow: none !important; }
-        .rz-entry { break-inside: avoid; }
-      }
-    </style>
-  </head>
-  <body data-category="work">
-    <!-- Top Navigation Bar -->
-    <nav class="navbar navbar-expand-lg border-bottom border-info">
-      <div class="container">
-        <a href="/" title="Wow! It's a Wau!" class="navbar-brand text-info d-none d-lg-block"><span class="visually-hidden">Rudzainy Rahman's Website</span>~|{&middot;})</a>
-        <button class="navbar-toggler border-0 text-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          ~|{&middot;})
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item d-lg-none">
-              <a href="/" class="nav-link"><i class="icon-house me-2"></i>Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="/work/" class="nav-link"><i class="icon-pencil-ruler me-2"></i>Work</a>
-            </li>
-            <li class="nav-item">
-              <a href="/life/" class="nav-link"><i class="icon-sun me-2"></i>Life</a>
-            </li>
-            <li class="nav-item">
-              <a href="/balance/" class="nav-link"><i class="icon-mountain me-2"></i>Balance</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- end Top Navigation Bar -->
-
+        /* --- Print: a clean one-off if someone hits Cmd/Ctrl-P ------------- */
+        @media print {
+          .navbar, footer, .rz-actions, .rz-download, .rz-socials { display: none !important; }
+          .page-header-work { background: #fff !important; }
+          .page-header-work .page-title, .rz-tagline, .rz-contact,
+          .rz-contact a, .rz-contact span { color: var(--color-ink) !important; text-shadow: none !important; }
+          .rz-entry { break-inside: avoid; }
+        }
+      </style>
+---
     <!-- Header band (solid Work indigo) -->
     <div class="page-header-work" id="top" style="padding-bottom:0">
       <div class="rz-wrap" style="padding-top:20px">
@@ -691,42 +655,3 @@
 
     </main>
     <!-- end Main Content -->
-
-    <!-- Footer Section -->
-    <footer class="container">
-      <section class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-          <span class="mb-3 mb-md-0 text-dark"><a href="/" class="text-dark text-decoration-none" aria-label="wau">~|{&middot;})</a> <a href="/LICENSE" class="text-decoration-none link-dark">&copy;</a> Rudzainy Rahman since 1985</span>
-        </div>
-        <div class="col-md-4 d-flex justify-content-center">
-          <a href="/" class="text-decoration-none me-3">Back to Home</a>
-          <a href="#top" class="text-decoration-none">Back to top</a>
-        </div>
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3">
-            <a class="text-dark" href="https://github.com/rudzainy" aria-label="GitHub" target="_blank" title="View my GitHub profile">
-              <i class="brand-icon brand-github me-2"></i><span class="visually-hidden">GitHub</span>
-            </a>
-          </li>
-          <li class="ms-3">
-            <span class="text-muted" aria-disabled="true" title="My Sama² profile (sama2.my &mdash; link no longer works)">
-              <i class="icon-heart me-2"></i><span class="visually-hidden">Sama²</span>
-            </span>
-          </li>
-          <li class="ms-3 mt-n1">
-            <a class="text-dark" href="https://ko-fi.com/rudzainy" aria-label="Ko-fi" target="_blank" title="Buy me a cup of Ko-fi? 😀✨">
-              <i class="icon-coffee me-2"></i><span class="visually-hidden">Ko-fi</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-    </footer>
-    <!-- end Footer Section -->
-
-    <script src="jei-es.js"></script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <!-- end Bootstrap JS -->
-  </body>
-</html>
