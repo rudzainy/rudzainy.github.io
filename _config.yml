@@ -13,7 +13,8 @@ exclude:
   - README.md
   - EDITORIAL-GAP-REPORT.md
   - docs/superpowers
-  - INDEX.md
+  - INDEKS.md
+  - TEKNOLOGI.md
   - Gemfile
   - Gemfile.lock
   - tools

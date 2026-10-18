@@ -20,7 +20,7 @@ production (Ruby 3.3.6, pinned in `.ruby-version`). `_config.yml` holds the site
 title, URL and description plus an `exclude:` list that keeps internal docs,
 `tools/`, `legacy/` and the superseded served `.html` posts out of the build.
 The internal docs (`CLAUDE.md`, `README.md`, `EDITORIAL-GAP-REPORT.md`,
-`INDEX.md`, `docs/superpowers`) are excluded so they are not published and,
+`INDEKS.md`, `docs/superpowers`) are excluded so they are not published and,
 crucially, are kept away from Jekyll's Liquid parser. Jekyll renders every other
 `.md` (front matter, or `jekyll-optional-front-matter`), so **never put a literal
 `{%`/`{{` Liquid sequence in any published `.md`** (even inside backticks or

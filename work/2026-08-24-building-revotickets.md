@@ -11,6 +11,7 @@ scripts_extra: |2
   <script>
     if (window.mermaid) { mermaid.initialize({ startOnLoad: true }); }
   </script>
+published: false
 ---
 <!-- Page Header Band (solid category colour) -->
 <div class="page-header-work" style="padding-bottom:0">

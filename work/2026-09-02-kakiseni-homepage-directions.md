@@ -6,6 +6,7 @@ description: "Three homepage directions for Kakiseni, an arts platform whose rea
 category: work
 permalink: /work/2026-09-02-kakiseni-homepage-directions.html
 data_category: work
+published: false
 ---
 <!-- Page Header Band (solid category colour) -->
 <div class="page-header-work" style="padding-bottom:0">
