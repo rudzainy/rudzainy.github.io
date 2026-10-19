@@ -115,5 +115,5 @@ published: false
       </nav>
     </div>
   </article>
-  <p class="text-center" style="max-width:var(--measure);margin:var(--space-5) auto 0"><a class="text-dark" href="https://sama2.my/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙"><i class="icon-heart me-2"></i><span class="visually-hidden">Sama²</span></a></p>
+  <p class="text-center" style="max-width:var(--measure);margin:var(--space-5) auto 0"><a class="text-dark" href="https://sama2.nasiforge.com/si/rudzainy" aria-label="Sama²" target="_blank" title="View my Sama² profile, and create your own! 🤙"><i class="icon-heart me-2"></i><span class="visually-hidden">Sama²</span></a></p>
 </main>

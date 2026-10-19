@@ -395,7 +395,7 @@ Meta strip, four cells matching the template's markup exactly:
 - Project: `Sama², by Nasi Forge PLT`
 - Technology stack: `Ruby on Rails 8 + Bullet Train + Hotwire, Tailwind 3, esbuild`
 - Year: `<time datetime="2025">2025</time>–<time datetime="2026">2026</time>`
-- Project links: a `meta-link` anchor to `https://sama2.my` plus a muted `icon-lock` span reading `Private repository`
+- Project links: a `meta-link` anchor to `https://sama2.nasiforge.com` plus a muted `icon-lock` span reading `Private repository`
 
 - [ ] **Step 3: Write the five sections with rule-tab heads**
 
