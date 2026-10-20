@@ -321,67 +321,67 @@ scripts_extra: |2
 		<div class="lwt-prose"><p>Each one comes with something you can actually go and read.</p></div>
 		<div class="lwt-bento">
 			<article class="lwt-reason">
-				<header class="lwt-reason-head">01 &middot; Core skill</header>
+				<header class="lwt-reason-head">01 &middot; Research</header>
 				<div class="lwt-reason-body">
-					<h3 class="lwt-reason-title"><i class="icon-pencil-ruler" aria-hidden="true"></i>Human-Computer Interaction Design</h3>
-					<p>Research, wireframes, prototypes, testing. More than ten years of it, from a bank to a palm-oil giant.</p>
+					<h3 class="lwt-reason-title"><i class="icon-search" aria-hidden="true"></i>Research before assumptions</h3>
+					<p>User research, wireframes, prototypes and testing help me find the real problem before we commit to a solution.</p>
 					<a class="lwt-read" href="/work/2019-09-01-dxc-bionix-design-system.html"><i class="icon-arrow-right" aria-hidden="true"></i>The DXC Bionix design system</a>
 				</div>
 			</article>
 			<article class="lwt-reason">
-				<header class="lwt-reason-head">02 &middot; Supporting skills</header>
+				<header class="lwt-reason-head">02 &middot; Craft</header>
 				<div class="lwt-reason-body">
-					<h3 class="lwt-reason-title"><i class="icon-code" aria-hidden="true"></i>Design + code</h3>
-					<p>Rails and React, not just Figma, now with custom AI workflows. The handoff problem goes away when the designer is also the developer.</p>
+					<h3 class="lwt-reason-title"><i class="icon-code" aria-hidden="true"></i>Design that ships</h3>
+					<p>I work across Figma, Rails and React, carrying ideas from prototype into a working product and keeping the handoff gap short.</p>
 					<a class="lwt-read" href="/work/2020-09-01-the-hoojah-project.html"><i class="icon-arrow-right" aria-hidden="true"></i>The Hoojah project</a>
 				</div>
 			</article>
 			<article class="lwt-reason">
-				<header class="lwt-reason-head">03 &middot; Qualification</header>
+				<header class="lwt-reason-head">03 &middot; Range</header>
 				<div class="lwt-reason-body">
-					<h3 class="lwt-reason-title"><i class="icon-video" aria-hidden="true"></i>Multimedia</h3>
-					<p>Animation, video, photography, sound. Useful when the brief says "make it feel like something."</p>
-					<a class="lwt-read" href="/work/2022-09-01-flip-down-numbers-and-characters.html"><i class="icon-arrow-right" aria-hidden="true"></i>Flip-down numbers &amp; characters</a>
+					<h3 class="lwt-reason-title"><i class="icon-globe" aria-hidden="true"></i>I learn complex domains</h3>
+					<p>Education, maritime, media, banking, agritech, IT and telco taught me to learn a field's language before designing for it.</p>
+					<a class="lwt-read" href="/life/2023-12-04-of-maritime-academy.html"><i class="icon-arrow-right" aria-hidden="true"></i>Of Maritime Academy</a>
 				</div>
 			</article>
 			<article class="lwt-reason">
-				<header class="lwt-reason-head">04 &middot; Mindset</header>
+				<header class="lwt-reason-head">04 &middot; Problem-solving</header>
 				<div class="lwt-reason-body">
-					<h3 class="lwt-reason-title"><i class="icon-book-open" aria-hidden="true"></i>Curiosity</h3>
-					<p>I read outside the field: geology, history, off-grid living. Odd inputs make for less generic outputs.</p>
-					<a class="lwt-read" href="/life/2024-01-03-of-books.html"><i class="icon-arrow-right" aria-hidden="true"></i>Of books</a>
-				</div>
-			</article>
-			<article class="lwt-reason">
-				<header class="lwt-reason-head">05 &middot; Approach</header>
-				<div class="lwt-reason-body">
-					<h3 class="lwt-reason-title"><i class="icon-mountain" aria-hidden="true"></i>Problem-solving</h3>
-					<p>Website revamp, app concept, interactive installation, a national communication framework. Different shapes, same job: make the vague thing concrete.</p>
+					<h3 class="lwt-reason-title"><i class="icon-lightbulb" aria-hidden="true"></i>From vague brief to clear next step</h3>
+					<p>I turn fuzzy briefs into something a team can discuss, test and build, whether it's a website, an app concept or an interactive experience.</p>
 					<a class="lwt-read" href="/balance/2024-09-05-the-framework.html"><i class="icon-arrow-right" aria-hidden="true"></i>The Framework</a>
 				</div>
 			</article>
 			<article class="lwt-reason">
-				<header class="lwt-reason-head">06 &middot; Working style</header>
+				<header class="lwt-reason-head">05 &middot; Ownership</header>
 				<div class="lwt-reason-body">
-					<h3 class="lwt-reason-title"><i class="icon-message-square" aria-hidden="true"></i>Teamwork</h3>
-					<p>Mentored 14 bootcamp intakes. I'm comfortable explaining, listening, and being wrong in front of people.</p>
-					<a class="lwt-read" href="/work/2017-09-01-next-academy-learning-portal.html"><i class="icon-arrow-right" aria-hidden="true"></i>Mentoring 14 bootcamp intakes</a>
-				</div>
-			</article>
-			<article class="lwt-reason">
-				<header class="lwt-reason-head">07 &middot; Character</header>
-				<div class="lwt-reason-body">
-					<h3 class="lwt-reason-title"><i class="icon-sun" aria-hidden="true"></i>Temperament</h3>
-					<p>Directed a play. Built two maritime academies from an empty building. New ground doesn't bother me.</p>
-					<a class="lwt-read" href="/balance/2019-04-24-orang-kasar.html"><i class="icon-arrow-right" aria-hidden="true"></i>Directing Orang Kasar</a>
-				</div>
-			</article>
-			<article class="lwt-reason">
-				<header class="lwt-reason-head">08 &middot; Ownership</header>
-				<div class="lwt-reason-body">
-					<h3 class="lwt-reason-title"><i class="icon-compass" aria-hidden="true"></i>Delivery</h3>
-					<p>Product-owner mindset: I write the stories, set the priorities, and keep design, QA and engineering pointed the same way.</p>
+					<h3 class="lwt-reason-title"><i class="icon-compass" aria-hidden="true"></i>I own the outcome</h3>
+					<p>I can align priorities, stories, design, QA and engineering, then stay accountable for what reaches users.</p>
 					<a class="lwt-read" href="/work/2025-09-11-day-food-catalogue.html"><i class="icon-arrow-right" aria-hidden="true"></i>Day Food catalogue</a>
+				</div>
+			</article>
+			<article class="lwt-reason">
+				<header class="lwt-reason-head">06 &middot; Collaboration</header>
+				<div class="lwt-reason-body">
+					<h3 class="lwt-reason-title"><i class="icon-message-square" aria-hidden="true"></i>I explain, listen and learn</h3>
+					<p>After mentoring 14 bootcamp intakes, I'm comfortable sharing what I know, listening carefully and changing my mind when the evidence calls for it.</p>
+					<a class="lwt-read" href="/work/2017-09-01-next-academy-learning-portal.html"><i class="icon-arrow-right" aria-hidden="true"></i>NEXT Academy learning portal</a>
+				</div>
+			</article>
+			<article class="lwt-reason">
+				<header class="lwt-reason-head">07 &middot; Communication</header>
+				<div class="lwt-reason-body">
+					<h3 class="lwt-reason-title"><i class="icon-video" aria-hidden="true"></i>I think beyond the interface</h3>
+					<p>Animation, video, photography and sound help when a product needs to communicate a feeling, not just a function.</p>
+					<a class="lwt-read" href="/work/2022-09-01-flip-down-numbers-and-characters.html"><i class="icon-arrow-right" aria-hidden="true"></i>Flip-down numbers &amp; characters</a>
+				</div>
+			</article>
+			<article class="lwt-reason">
+				<header class="lwt-reason-head">08 &middot; Adaptability</header>
+				<div class="lwt-reason-body">
+					<h3 class="lwt-reason-title"><i class="icon-sun" aria-hidden="true"></i>Unfamiliar ground doesn't stop me</h3>
+					<p>I helped build two maritime academies from scratch, then directed a play. New territory is a reason to get curious and start.</p>
+					<a class="lwt-read" href="/balance/2019-04-24-orang-kasar.html"><i class="icon-arrow-right" aria-hidden="true"></i>Directing Orang Kasar</a>
 				</div>
 			</article>
 		</div>
