@@ -21,3 +21,16 @@ exclude:
   # Legacy .md sources with no served page (draft siblings and orphans). Kept as
   # source material only; the Liquid-unsafe JSX in the reactjs/hoojah post sits here.
   - legacy
+  # Local toolchain pin: not site content. (LICENSE stays served: the footer's
+  # copyright mark links to /LICENSE.)
+  - mise.toml
+  # A Windsurf AI-rules file parked in docs/; internal, linked from nowhere.
+  - docs/20250905_windsurf_global_rules.html
+
+# components/ is the living style guide: served, but kept out of search. Its
+# pages are standalone HTML that carry their own robots noindex meta.
+defaults:
+  - scope:
+      path: components
+    values:
+      sitemap: false
