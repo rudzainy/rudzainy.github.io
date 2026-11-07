@@ -205,7 +205,7 @@ scripts_extra: |2
               VOTE ||--|| USER : cast_by
             </pre>
       </div>
-      <figcaption><i class="icon-database me-1" aria-hidden="true"></i>Figure 1b: Entity relationship diagram showing how polls, options, arguments, debates, and users interconnect in the Hoojah data model.</figcaption>
+      <figcaption><i class="icon-database me-1" aria-hidden="true"></i>Figure 1: Entity relationship diagram showing how polls, options, arguments, debates, and users interconnect in the Hoojah data model.</figcaption>
     </figure>
   </div>
   <article style="max-width:var(--measure);margin:0 auto">
@@ -291,7 +291,7 @@ scripts_extra: |2
                   H->>H: Make debate public
                 </pre>
           </div>
-          <figcaption style="margin:8px 0 0;text-align:center;font-style:italic;font-size:0.9em;color:var(--color-muted)"><i class="icon-message-square me-1" aria-hidden="true"></i>Figure 4b: Sequence diagram showing the structured flow of a one-on-one debate in Hoojah.</figcaption>
+          <figcaption style="margin:8px 0 0;text-align:center;font-style:italic;font-size:0.9em;color:var(--color-muted)"><i class="icon-message-square me-1" aria-hidden="true"></i>Figure 2: Sequence diagram showing the structured flow of a one-on-one debate in Hoojah.</figcaption>
         </figure>
       </div>
     </div>
@@ -369,7 +369,7 @@ scripts_extra: |2
               style M fill:#f8f9fa,stroke:#6c757d
             </pre>
       </div>
-      <figcaption><i class="icon-workflow me-1" aria-hidden="true"></i>Figure 7: Interactive user journey flow showing the path from viewing a poll to engaging in structured debates.</figcaption>
+      <figcaption><i class="icon-workflow me-1" aria-hidden="true"></i>Figure 3: Interactive user journey flow showing the path from viewing a poll to engaging in structured debates.</figcaption>
     </figure>
   </div>
   <article style="max-width:var(--measure);margin:0 auto">
