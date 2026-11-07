@@ -4,6 +4,7 @@ title: "Rudzainy Rahman's Life"
 category: life
 permalink: /life/
 ---
+{%- assign live_urls = site.pages | map: "url" -%}
 		<!-- Header Section -->
 		<header class="container my-5">
 			<div class="px-4 py-4">
@@ -48,6 +49,7 @@ permalink: /life/
 		<main class="container my-5 pe-0 overflow-visible">
 
 			<!-- Section: 2026 -->
+			{%- capture year_section %}
 			<div class="scroll-wrapper">
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
 				<article class="card">
@@ -55,6 +57,8 @@ permalink: /life/
 						<h2 class="card-title text-success" style="--bs-text-opacity: .7">2026</h2>
 					</div>
 				</article>
+				{%- capture year_cards %}
+				{%- if live_urls contains "/life/2026-08-31-31-ogos-2026.html" %}
 				<article class="card border border-success text-success-emphasis">
 					<div class="card-header">31.08.2026</div>
 					<div class="card-body d-flex flex-column justify-content-between">
@@ -65,11 +69,17 @@ permalink: /life/
 						</a>
 					</div>
 				</article>
+				{%- endif %}
+				{%- endcapture %}{{ year_cards }}
 			</section>
 			</div>
+			{%- endcapture -%}
+			{%- assign year_cards = year_cards | strip -%}
+			{%- if year_cards != "" %}{{ year_section }}{% endif %}
 			<!-- end Section: 2026 -->
 
 			<!-- Section: 2025 -->
+			{%- capture year_section %}
 			<div class="scroll-wrapper">
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
 				<article class="card">
@@ -77,6 +87,7 @@ permalink: /life/
 						<h2 class="card-title text-success" style="--bs-text-opacity: .7">2025</h2>
 					</div>
 				</article>
+				{%- capture year_cards %}
 				<article class="card border border-success text-success-emphasis">
 					<div class="card-header">01.09.2025</div>
 					<div class="card-body d-flex flex-column justify-content-between">
@@ -113,11 +124,16 @@ permalink: /life/
 						<span class="btn btn-outline-dark disabled" aria-disabled="true">Read more</span>
 					</div>
 				</article>
+				{%- endcapture %}{{ year_cards }}
 			</section>
 			</div>
+			{%- endcapture -%}
+			{%- assign year_cards = year_cards | strip -%}
+			{%- if year_cards != "" %}{{ year_section }}{% endif %}
 			<!-- end Section: 2025 -->
 
 			<!-- Section: 2024 -->
+			{%- capture year_section %}
 			<div class="scroll-wrapper">
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
 				<article class="card">
@@ -125,6 +141,7 @@ permalink: /life/
 						<h2 class="card-title text-success" style="--bs-text-opacity: .7">2024</h2>
 					</div>
 				</article>
+				{%- capture year_cards %}
 				<article class="card border border-success text-success-emphasis">
 					<div class="card-header">01.09.2024</div>
 					<div class="card-body d-flex flex-column justify-content-between">
@@ -153,6 +170,7 @@ permalink: /life/
 						</a>
 					</div>
 				</article>
+				{%- if live_urls contains "/life/2024-01-06-of-javascript.html" %}
 				<article class="card">
 					<div class="card-header">06.01.2024</div>
 					<div class="card-body d-flex flex-column justify-content-between">
@@ -163,6 +181,8 @@ permalink: /life/
 						</a>
 					</div>
 				</article>
+				{%- endif %}
+				{%- if live_urls contains "/life/2024-01-03-of-video-games.html" %}
 				<article class="card">
 					<div class="card-header">03.01.2024</div>
 					<div class="card-body d-flex flex-column justify-content-between">
@@ -173,6 +193,8 @@ permalink: /life/
 						</a>
 					</div>
 				</article>
+				{%- endif %}
+				{%- if live_urls contains "/life/2024-01-03-of-books.html" %}
 				<article class="card">
 					<div class="card-header">03.01.2024</div>
 					<div class="card-body d-flex flex-column justify-content-between">
@@ -183,11 +205,17 @@ permalink: /life/
 						</a>
 					</div>
 				</article>
+				{%- endif %}
+				{%- endcapture %}{{ year_cards }}
 			</section>
 			</div>
+			{%- endcapture -%}
+			{%- assign year_cards = year_cards | strip -%}
+			{%- if year_cards != "" %}{{ year_section }}{% endif %}
 			<!-- end Section: 2024 -->
 
 <!-- Section: 2023 -->
+{%- capture year_section %}
 <div class="scroll-wrapper">
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
   <article class="card">
@@ -195,6 +223,8 @@ permalink: /life/
       <h2 class="card-title text-success" style="--bs-text-opacity: .7">2023</h2>
     </div>
   </article>
+  {%- capture year_cards %}
+{%- if live_urls contains "/life/2023-12-04-of-maritime-academy.html" %}
 <article class="card">
   <div class="card-header">04.12.2023</div>
   <div class="card-body d-flex flex-column justify-content-between">
@@ -205,6 +235,8 @@ permalink: /life/
     </a>
   </div>
 </article>
+{%- endif %}
+{%- if live_urls contains "/life/2023-09-01-let-s-work-together.html" %}
 <article class="card">
   <div class="card-header">01.09.2023</div>
   <div class="card-body d-flex flex-column justify-content-between">
@@ -215,11 +247,17 @@ permalink: /life/
     </a>
   </div>
 </article>
+{%- endif %}
+  {%- endcapture %}{{ year_cards }}
 </section>
 </div>
+{%- endcapture -%}
+{%- assign year_cards = year_cards | strip -%}
+{%- if year_cards != "" %}{{ year_section }}{% endif %}
 <!-- end Section: 2023 -->
 
 <!-- Section: 2021 -->
+{%- capture year_section %}
 <div class="scroll-wrapper">
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
   <article class="card">
@@ -227,6 +265,8 @@ permalink: /life/
       <h2 class="card-title text-success" style="--bs-text-opacity: .7">2021</h2>
     </div>
   </article>
+  {%- capture year_cards %}
+{%- if live_urls contains "/life/2021-01-03-kenapa-rudzainy-buat-hoojah.html" %}
 <article class="card">
   <div class="card-header">03.01.2021</div>
   <div class="card-body d-flex flex-column justify-content-between">
@@ -237,11 +277,17 @@ permalink: /life/
     </a>
   </div>
 </article>
+{%- endif %}
+  {%- endcapture %}{{ year_cards }}
 </section>
 </div>
+{%- endcapture -%}
+{%- assign year_cards = year_cards | strip -%}
+{%- if year_cards != "" %}{{ year_section }}{% endif %}
 <!-- end Section: 2021 -->
 
 			<!-- Section: 2020 -->
+			{%- capture year_section %}
 			<div class="scroll-wrapper">
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
 				<article class="card">
@@ -249,6 +295,7 @@ permalink: /life/
 						<h2 class="card-title text-success" style="--bs-text-opacity: .7">2020</h2>
 					</div>
 				</article>
+				{%- capture year_cards %}
 				<article class="card">
 					<div class="card-header">01.12.2020</div>
 					<div class="card-body d-flex flex-column justify-content-between">
@@ -259,11 +306,16 @@ permalink: /life/
 						</a>
 					</div>
 				</article>
+				{%- endcapture %}{{ year_cards }}
 			</section>
 			</div>
+			{%- endcapture -%}
+			{%- assign year_cards = year_cards | strip -%}
+			{%- if year_cards != "" %}{{ year_section }}{% endif %}
 			<!-- end Section: 2020 -->
 
 <!-- Section: 2019 -->
+{%- capture year_section %}
 <div class="scroll-wrapper">
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
   <article class="card">
@@ -271,6 +323,8 @@ permalink: /life/
       <h2 class="card-title text-success" style="--bs-text-opacity: .7">2019</h2>
     </div>
   </article>
+  {%- capture year_cards %}
+{%- if live_urls contains "/life/2019-06-08-railway-market.html" %}
 <article class="card">
   <div class="card-header">08.06.2019</div>
   <div class="card-body d-flex flex-column justify-content-between">
@@ -281,11 +335,17 @@ permalink: /life/
     </a>
   </div>
 </article>
+{%- endif %}
+  {%- endcapture %}{{ year_cards }}
 </section>
 </div>
+{%- endcapture -%}
+{%- assign year_cards = year_cards | strip -%}
+{%- if year_cards != "" %}{{ year_section }}{% endif %}
 <!-- end Section: 2019 -->
 
 <!-- Section: 2018 -->
+{%- capture year_section %}
 <div class="scroll-wrapper">
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
   <article class="card">
@@ -293,6 +353,8 @@ permalink: /life/
       <h2 class="card-title text-success" style="--bs-text-opacity: .7">2018</h2>
     </div>
   </article>
+  {%- capture year_cards %}
+{%- if live_urls contains "/life/2018-02-25-snapshot_of_website.html" %}
 <article class="card">
   <div class="card-header">25.02.2018</div>
   <div class="card-body d-flex flex-column justify-content-between">
@@ -303,11 +365,17 @@ permalink: /life/
     </a>
   </div>
 </article>
+{%- endif %}
+  {%- endcapture %}{{ year_cards }}
 </section>
 </div>
+{%- endcapture -%}
+{%- assign year_cards = year_cards | strip -%}
+{%- if year_cards != "" %}{{ year_section }}{% endif %}
 <!-- end Section: 2018 -->
 
 <!-- Section: 2017 -->
+{%- capture year_section %}
 <div class="scroll-wrapper">
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
   <article class="card">
@@ -315,6 +383,8 @@ permalink: /life/
       <h2 class="card-title text-success" style="--bs-text-opacity: .7">2017</h2>
     </div>
   </article>
+  {%- capture year_cards %}
+{%- if live_urls contains "/life/2017-05-02-baloons-over-bagan.html" %}
 <article class="card">
   <div class="card-header">02.05.2017</div>
   <div class="card-body d-flex flex-column justify-content-between">
@@ -325,11 +395,17 @@ permalink: /life/
     </a>
   </div>
 </article>
+{%- endif %}
+  {%- endcapture %}{{ year_cards }}
 </section>
 </div>
+{%- endcapture -%}
+{%- assign year_cards = year_cards | strip -%}
+{%- if year_cards != "" %}{{ year_section }}{% endif %}
 <!-- end Section: 2017 -->
 
 			<!-- Section: 2015 -->
+			{%- capture year_section %}
 			<div class="scroll-wrapper">
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
 				<article class="card">
@@ -337,6 +413,7 @@ permalink: /life/
 						<h2 class="card-title text-success" style="--bs-text-opacity: .7">2015</h2>
 					</div>
 				</article>
+				{%- capture year_cards %}
 				<article class="card border border-warning text-warning-emphasis">
 					<div class="card-header">01.10.2015</div>
 					<div class="card-body d-flex flex-column justify-content-between">
@@ -355,11 +432,16 @@ permalink: /life/
 						<span class="btn btn-outline-dark disabled" aria-disabled="true">Read more</span>
 					</div>
 				</article>
+				{%- endcapture %}{{ year_cards }}
 			</section>
 			</div>
+			{%- endcapture -%}
+			{%- assign year_cards = year_cards | strip -%}
+			{%- if year_cards != "" %}{{ year_section }}{% endif %}
 			<!-- end Section: 2015 -->
 
 			<!-- Section: 2009 -->
+			{%- capture year_section %}
 			<div class="scroll-wrapper">
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
 				<article class="card">
@@ -367,6 +449,7 @@ permalink: /life/
 						<h2 class="card-title text-success" style="--bs-text-opacity: .7">2009</h2>
 					</div>
 				</article>
+				{%- capture year_cards %}
 				<article class="card border border-warning text-warning-emphasis">
 					<div class="card-header">xx.xx.2009</div>
 					<div class="card-body d-flex flex-column justify-content-between">
@@ -377,11 +460,16 @@ permalink: /life/
 						</a>
 					</div>
 				</article>
+				{%- endcapture %}{{ year_cards }}
 			</section>
 			</div>
+			{%- endcapture -%}
+			{%- assign year_cards = year_cards | strip -%}
+			{%- if year_cards != "" %}{{ year_section }}{% endif %}
 			<!-- end Section: 2009 -->
 
 			<!-- Section: 1985 -->
+			{%- capture year_section %}
 			<div class="scroll-wrapper">
 			<section class="d-flex flex-row overflow-x-scroll gap-2 gap-sm-4 py-3 pe-3 hide-scrollbar">
 				<article class="card">
@@ -389,6 +477,7 @@ permalink: /life/
 						<h2 class="card-title text-success" style="--bs-text-opacity: .7">1985</h2>
 					</div>
 				</article>
+				{%- capture year_cards %}
 				<article class="card border border-warning text-warning-emphasis">
 					<div class="card-header">01.09.1985</div>
 					<div class="card-body d-flex flex-column justify-content-between">
@@ -399,8 +488,12 @@ permalink: /life/
 						</a>
 					</div>
 				</article>
+				{%- endcapture %}{{ year_cards }}
 			</section>
 			</div>
+			{%- endcapture -%}
+			{%- assign year_cards = year_cards | strip -%}
+			{%- if year_cards != "" %}{{ year_section }}{% endif %}
 			<!-- end Section: 2009 -->
 
 </main>

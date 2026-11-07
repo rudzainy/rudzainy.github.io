@@ -662,13 +662,18 @@ flowchart LR
 		</div>
 	</section>
 	<!-- Previous / next -->
+	{%- assign live_urls = site.pages | map: "url" %}
 	<div class="post-nav">
 		<nav>
+			{%- if live_urls contains "/life/2022-03-19-happyness-unlocked.html" %}
 			<a class="nav-card" href="/life/2022-03-19-happyness-unlocked.html">
 				<span class="nav-dir"><i class="icon-arrow-left" aria-hidden="true"></i>Previously</span>
 				<span class="nav-title">Happyness, unlocked</span>
 				<span class="nav-date">19.03.2022</span>
 			</a>
+			{%- else %}
+			<span></span>
+			{%- endif %}
 			<a class="nav-card is-next" href="/life/2023-12-04-of-maritime-academy.html">
 				<span class="nav-dir">Up next<i class="icon-arrow-right" aria-hidden="true"></i></span>
 				<span class="nav-title">Of Maritime Academy</span>
