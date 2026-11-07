@@ -184,41 +184,35 @@ scripts_extra: |2
     <h4 style="margin:var(--space-4,1.5rem) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-circle-alert me-2" aria-hidden="true"></i>Considerations</h4>
     <p>Limiting the options does flatten some of the nuance, no way around that. Hoojah gets it back by letting people attach <em>supporting arguments</em> under each stance, so the detail still comes through in the text and the debate. Getting that balance right took years of tweaking.</p>
   </article>
-  <!-- Figure pair: 3-option poll structure + ER diagram -->
-  <div class="post-gallery">
-    <div class="gallery-grid">
-      <figure>
-        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/poll-interface.png" alt="Hoojah's restricted 3-option poll structure" loading="lazy" data-fallback="3-option poll structure"></span>
-        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 1: Hoojah's restricted 3-option poll structure.</figcaption>
-      </figure>
-      <figure>
-        <div class="bg-light p-3 rounded shadow h-100">
-          <pre class="mermaid">
-              erDiagram
-                POLL ||--o{ OPTION : has
-                POLL ||--o{ ARGUMENT : contains
-                POLL ||--o{ DEBATE : hosts
-                POLL ||--o{ VOTE : receives
-                POLL ||--|| USER : created_by
-                OPTION ||--o{ VOTE : selected_in
-                OPTION ||--o{ ARGUMENT : supports
-                ARGUMENT ||--|| USER : authored_by
-                DEBATE ||--|| USER : participant_1
-                DEBATE ||--|| USER : participant_2
-                DEBATE ||--o{ DEBATE_POST : contains
-                DEBATE_POST ||--|| USER : written_by
-                VOTE ||--|| USER : cast_by
-              </pre>
-        </div>
-        <figcaption><i class="icon-database me-1" aria-hidden="true"></i>Figure 1b: Entity relationship diagram showing how polls, options, arguments, debates, and users interconnect in the Hoojah data model.</figcaption>
-      </figure>
-    </div>
+  <!-- Figure: ER diagram -->
+  <div class="post-figure">
+    <figure>
+      <div class="bg-light p-3 rounded shadow">
+        <pre class="mermaid">
+            erDiagram
+              POLL ||--o{ OPTION : has
+              POLL ||--o{ ARGUMENT : contains
+              POLL ||--o{ DEBATE : hosts
+              POLL ||--o{ VOTE : receives
+              POLL ||--|| USER : created_by
+              OPTION ||--o{ VOTE : selected_in
+              OPTION ||--o{ ARGUMENT : supports
+              ARGUMENT ||--|| USER : authored_by
+              DEBATE ||--|| USER : participant_1
+              DEBATE ||--|| USER : participant_2
+              DEBATE ||--o{ DEBATE_POST : contains
+              DEBATE_POST ||--|| USER : written_by
+              VOTE ||--|| USER : cast_by
+            </pre>
+      </div>
+      <figcaption><i class="icon-database me-1" aria-hidden="true"></i>Figure 1b: Entity relationship diagram showing how polls, options, arguments, debates, and users interconnect in the Hoojah data model.</figcaption>
+    </figure>
   </div>
   <article style="max-width:var(--measure);margin:0 auto">
     <h3 style="margin:var(--space-5) 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;color:var(--cat-ink)"><i class="icon-panel-right me-2" aria-hidden="true"></i>UI/UX Study: Solving the Convenience Problem</h3>
     <p>One of the biggest barriers to online debate platforms is plain <strong>convenience</strong>. People struggle to skim polls, follow arguments, and join in without friction. Hoojah tries to fix that with <strong>structured flows and a clear visual hierarchy</strong>. I care about this stuff. Cluttered interfaces have always annoyed me.</p>
   </article>
-  <!-- 1. Poll-First Experience -->
+  <!-- 1. Poll-First Experience + 2. Grouped Arguments for Readability -->
   <div class="post-gallery">
     <div class="gallery-grid">
       <div class="card h-100 border-0 shadow-sm">
@@ -231,15 +225,6 @@ scripts_extra: |2
           <p>➡ <em>Design pattern: "Decision at the top, discussion below."</em></p>
         </div>
       </div>
-      <figure>
-        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/poll-first-layout.png" alt="Poll positioned at the top for immediate engagement" loading="lazy" data-fallback="Poll-first layout"></span>
-        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 2: The poll-first layout, poll up top, discussion right underneath.</figcaption>
-      </figure>
-    </div>
-  </div>
-  <!-- 2. Grouped Arguments for Readability -->
-  <div class="post-gallery">
-    <div class="gallery-grid">
       <div class="card h-100 border-0 shadow-sm">
         <div class="card-body">
           <h4 class="card-title">2. Grouped Arguments for Readability</h4>
@@ -250,10 +235,6 @@ scripts_extra: |2
           <p>➡ <em>Design pattern: "Categorical clustering" for quick scanning.</em></p>
         </div>
       </div>
-      <figure>
-        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/grouped-arguments.png" alt="Supporting arguments clustered under each stance" loading="lazy" data-fallback="Grouped arguments"></span>
-        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 3: Grouped arguments interface, sorted under Agree / Neutral / Disagree.</figcaption>
-      </figure>
     </div>
   </div>
   <!-- 3. One-on-One Debate Flow -->
@@ -270,10 +251,6 @@ scripts_extra: |2
         </div>
       </div>
       <div>
-        <figure style="margin:0 0 16px">
-          <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/debate-view.png" alt="Debate mode between two participants" loading="lazy" data-fallback="Debate mode"></span>
-          <figcaption style="margin:8px 0 0;text-align:center;font-style:italic;font-size:0.9em;color:var(--color-muted)"><i class="icon-image me-1" aria-hidden="true"></i>Figure 4a: Debate mode in action.</figcaption>
-        </figure>
         <figure style="margin:0">
           <div class="bg-light p-3 rounded shadow">
             <pre class="mermaid">
@@ -319,7 +296,7 @@ scripts_extra: |2
       </div>
     </div>
   </div>
-  <!-- 4. Participation Made Simple -->
+  <!-- 4. Participation Made Simple + 5. Mobile vs Desktop Consistency -->
   <div class="post-gallery">
     <div class="gallery-grid">
       <div class="card h-100 border-0 shadow-sm">
@@ -332,15 +309,6 @@ scripts_extra: |2
           <p>➡ <em>Design pattern: "Progressive participation" where each step feels natural.</em></p>
         </div>
       </div>
-      <figure>
-        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/cta-buttons.png" alt="Streamlined actions guiding users to contribute" loading="lazy" data-fallback="Streamlined CTAs"></span>
-        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 5: Streamlined CTAs, vote in one tap, add an argument in two, start a debate in three.</figcaption>
-      </figure>
-    </div>
-  </div>
-  <!-- 5. Mobile vs Desktop Consistency -->
-  <div class="post-gallery">
-    <div class="gallery-grid">
       <div class="card h-100 border-0 shadow-sm">
         <div class="card-body">
           <h4 class="card-title">5. Mobile vs Desktop Consistency</h4>
@@ -351,10 +319,6 @@ scripts_extra: |2
           <p>➡ <em>Design pattern: "Responsive hierarchy" that prioritises core actions.</em></p>
         </div>
       </div>
-      <figure>
-        <span class="smart-image is-zoom"><img src="/images/portfolio/hoojah/responsive-design.png" alt="Responsive design across devices" loading="lazy" data-fallback="Responsive design"></span>
-        <figcaption><i class="icon-image me-1" aria-hidden="true"></i>Figure 6: Responsive design across phone and desktop.</figcaption>
-      </figure>
     </div>
   </div>
   <article style="max-width:var(--measure);margin:0 auto">

@@ -4,6 +4,7 @@ title: "Happyness Unlocked by Rudzainy Rahman"
 date: 2022-03-19 04:20 +0800
 description: "Happyness Unlocked"
 category: life
+published: false
 permalink: /life/2022-03-19-happyness-unlocked.html
 ---
 <!-- Page Header -->
@@ -52,13 +53,6 @@ permalink: /life/2022-03-19-happyness-unlocked.html
 					</button>
 				</div>
 			</div>
-		</article>
-		<!-- Card 2: 1x1 Image Card -->
-		<article class="card card-1x1 border border-success bg-success-subtle text-success-emphasis">
-			<figure class="mb-0 h-100">
-				<img src="/images/posts/hoojah/hoojah-1.png" class="card-img object-fit-cover h-100" alt="Happiness moment">
-				<figcaption class="visually-hidden">Happiness moment</figcaption>
-			</figure>
 		</article>
 		<!-- Card 3: 1x1 Text Card -->
 		<article class="card card-1x1 border border-info bg-info-subtle text-info-emphasis">
