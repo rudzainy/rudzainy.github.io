@@ -13,13 +13,13 @@
             </li>
 {%- endunless %}
             <li class="nav-item">
-              <a href="/work/" class="nav-link{% if page.url == "/work/" %} active{% endif %}"><i class="icon-pencil-ruler me-2"></i>Work</a>
+              <a href="/work/" class="nav-link nav-work{% if cat == "work" %} active{% endif %}"{% if page.url == "/work/" %} aria-current="page"{% endif %}><i class="icon-pencil-ruler me-2"></i>Work</a>
             </li>
             <li class="nav-item">
-              <a href="/life/" class="nav-link{% if page.url == "/life/" %} active{% endif %}"><i class="icon-sun me-2"></i>Life</a>
+              <a href="/life/" class="nav-link nav-life{% if cat == "life" %} active{% endif %}"{% if page.url == "/life/" %} aria-current="page"{% endif %}><i class="icon-sun me-2"></i>Life</a>
             </li>
             <li class="nav-item">
-              <a href="/balance/" class="nav-link{% if page.url == "/balance/" %} active{% endif %}"><i class="icon-mountain me-2"></i>Balance</a>
+              <a href="/balance/" class="nav-link nav-balance{% if cat == "balance" %} active{% endif %}"{% if page.url == "/balance/" %} aria-current="page"{% endif %}><i class="icon-mountain me-2"></i>Balance</a>
             </li>
           </ul>
         </div>

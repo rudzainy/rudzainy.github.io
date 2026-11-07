@@ -629,6 +629,24 @@ section:not(.grid-container) > article.card.card-width-fit .card-title {
   hyphens: none;
 }
 
+/* Navbar category links: each takes its category ink on hover/focus, and stays
+   lit (.active, set by the navbar include from the page's category) on its
+   section index and on every post inside it. */
+.navbar .nav-link.nav-work    { --nav-cat: var(--color-work-ink); }
+.navbar .nav-link.nav-life    { --nav-cat: var(--color-life-ink); }
+.navbar .nav-link.nav-balance { --nav-cat: var(--color-balance-ink); }
+.navbar .nav-link:is(.nav-work, .nav-life, .nav-balance) {
+  transition: color var(--motion-fast) var(--ease), box-shadow var(--motion-fast) var(--ease);
+}
+.navbar .nav-link:is(.nav-work, .nav-life, .nav-balance):is(:hover, :focus-visible, .active) {
+  color: var(--nav-cat);
+}
+@media (min-width: 992px) {
+  .navbar .nav-link:is(.nav-work, .nav-life, .nav-balance).active {
+    box-shadow: inset 0 -2px 0 var(--nav-cat);
+  }
+}
+
 /* Mobile navbar toggler styling */
 .navbar-toggler {
   font-family: 'Unica One', sans-serif;
