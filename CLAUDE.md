@@ -17,14 +17,17 @@ the shared chrome (head, navbar, footer, scripts) lives in `_includes/` and
 **Deployment reality (important):** Jekyll is the build. GitHub Pages runs it on
 push, and the `Gemfile` uses the `github-pages` gem so local builds match
 production (Ruby 3.3.6, pinned in `.ruby-version`). `_config.yml` holds the site
-title, URL and description plus an `exclude:` list that keeps internal docs,
-`tools/`, `legacy/` and the superseded served `.html` posts out of the build.
+title, URL and description, the SEO/sitemap plugins (see *SEO, sitemap and
+feed*), and an `exclude:` list that keeps internal docs, `tools/`, `legacy/`
+and local tooling files out of the build.
 The internal docs (`CLAUDE.md`, `README.md`, `EDITORIAL-GAP-REPORT.md`,
 `INDEKS.md`, `docs/superpowers`) are excluded so they are not published and,
 crucially, are kept away from Jekyll's Liquid parser. Jekyll renders every other
 `.md` (front matter, or `jekyll-optional-front-matter`), so **never put a literal
 `{%`/`{{` Liquid sequence in any published `.md`** (even inside backticks or
-prose) — it will break the whole Pages build. If you must show one, wrap it in
+prose) — it will break the whole Pages build. The only Liquid in a post is
+deliberate logic such as the `live_urls` guards (see *Publishing and
+unpublishing*). If you must show one, wrap it in
 `{% raw %}…{% endraw %}` or exclude the file in `_config.yml`. `.css`/`.js` and
 the static assets are copied through untouched.
 
@@ -33,9 +36,15 @@ the static assets are copied through untouched.
 - **Jekyll** (`github-pages` gem) — layouts and includes for the shared chrome only; post bodies stay hand-written HTML. Asset paths are root-absolute (`/images/`, `/si-es-es.css`, `/jei-es.js`), never `../`.
 - **HTML5** — semantic markup.
 - **Bootstrap 5.3.8** — CDN-hosted for layout and responsive design.
-- **Lucide** (lucide-static font, CDN) — primary icon library (`icon-*` classes). Category glyphs: Work `icon-pencil-ruler`, Life `icon-sun`, Balance `icon-mountain`.
+- **Lucide** (lucide-static font, CDN pinned to `lucide-static@1.70.0` with an SRI `integrity` hash and `crossorigin`, in `_includes/head.html` and every standalone page that loads it) — primary icon library (`icon-*` classes). Category glyphs: Work `icon-pencil-ruler`, Life `icon-sun`, Balance `icon-mountain`.
 - **Simple Icons** (simpleicons.org) — brand marks only, wired as CSS masks so they inherit `currentColor` + font-size: `<i class="brand-icon brand-github">` (also `brand-behance`, `brand-youtube`, `brand-x`). Classes defined in `si-es-es.css`.
 - **Bootstrap Icons** — fully retired (was the legacy icon set; all `bi-*` migrated to Lucide/Simple Icons).
+- **Mermaid** — loaded per post (via `head_extra`/`scripts_extra` or inline) and
+  pinned to `mermaid@10.9.8`. The `mermaid@10` inside the MermaidJS tutorial's
+  `<pre><code>` sample is prose, not a load.
+- **CDN pin rule** — every CDN URL names an exact version (`bootstrap@5.3.8`,
+  `lucide-static@1.70.0`, `mermaid@10.9.8`). Never use `@latest` or a
+  major-only range (`@10`); bump the version and the SRI hash together.
 - **Custom CSS** — `si-es-es.css` for house styles (design tokens, card hover
   effects, shadows, transitions).
 - **Vanilla JavaScript** — `jei-es.js` for quote randomization on section pages
@@ -102,27 +111,37 @@ Jekyll builds the site. Ruby is pinned to 3.3.6 by `.ruby-version`.
 bundle install                 # once, and after Gemfile changes
 bundle exec jekyll serve       # serve locally at http://localhost:4000
 bundle exec jekyll build       # build to _site/ (gitignored); should emit no warnings
+ruby tools/check-links.rb      # after every build; must report "Broken (site): 0"
 
 # Deploy — push to main; GitHub Pages builds and serves automatically
 git push origin main
 ```
 
-`tools/migrate_posts.rb` is the one-shot converter that turned the served
-`.html` posts into `.md`; it refuses to run twice. `tools/check-root.sh` is a
-helper for root pages. Both are excluded from the build.
+In the cloud container the `jekyll` binstub can be missing; build with
+`ruby -S bundle exec ruby -e 'load Gem.bin_path("jekyll","jekyll")' build`
+instead (same for `serve`).
+
+`tools/check-links.rb` walks the built `_site/` and reports every internal
+`href`/`src` that points at nothing. Run it after every build: it must report
+`Broken (site): 0` and exits 1 otherwise. Breaks seen only on `/components/`
+pages (which link to never-built `_*.html` snippets) are listed separately as
+informational. `tools/migrate_posts.rb` is the one-shot converter that turned
+the served `.html` posts into `.md`; it refuses to run twice.
+`tools/check-root.sh` is a helper for root pages. All three are excluded from
+the build.
 
 ## Site Architecture
 
 ```
-/                       # Root pages: index.html, 404.html, resume.html, robots.txt
+/                       # Root pages: index.html, 404.html, resume.html, robots.txt, feed.xml
 ├── _layouts/           # default (full page), post (adds back_link footer), section (index pages)
 ├── _includes/          # head, navbar, footer, scripts
-├── /work/              # Portfolio pieces (index.html + 26 dated posts, 2008–2025)
-├── /life/              # Personal/lifestyle content (index.html + 11 dated posts)
-├── /balance/           # Wellness / thoughts content (index.html + 25 dated posts)
+├── /work/              # Portfolio pieces (index.html + 26 dated posts, 2008–2026; 6 are `published: false`)
+├── /life/              # Personal/lifestyle content (index.html + 11 dated posts; 1 is `published: false`)
+├── /balance/           # Wellness / thoughts content (index.html + 26 dated posts)
 ├── /legacy/            # Archival .md sources with no served page (excluded from build)
-├── /tools/             # migrate_posts.rb, check-root.sh (excluded from build)
-├── /components/        # Internal component reference / living style guide
+├── /tools/             # check-links.rb, migrate_posts.rb, check-root.sh (excluded from build)
+├── /components/        # Living style guide: served, but noindex and out of the sitemap
 │   ├── design-system.html  # Token + component specimens
 │   ├── /posts/         # .post-* section library specimens
 │   ├── /cards/         # Card variants (1x1, 2x2, featured, quote, etc.)
@@ -142,7 +161,6 @@ Files under `work/`, `life/`, `balance/`:
 ```
 YYYY-MM-DD-slug-title.md        # SERVED — the live page, linked from the section index
 _YYYY-MM-DD-slug-title.html     # Unlisted draft page — Jekyll skips it (leading underscore)
-YYYY-MM-DD-slug-title.html      # SUPERSEDED hand-written page, excluded from the build
 index.html                      # Section index (section layout, hand-written card grid)
 ```
 
@@ -151,12 +169,9 @@ index.html                      # Section index (section layout, hand-written ca
   `category` (work|life|balance), `permalink` (pinned to the original `.html`
   URL so inbound links keep working), plus optional `tags`, `image`,
   `back_link`, `data_category`, `head_extra`, `scripts_extra`, `footer`. The
-  body is the original HTML kept raw. Never add `published: false`: it makes
-  the post silently disappear from the build.
-- The **`.html` files matching `work/[0-9]*.html`, `life/[0-9]*.html` and
-  `balance/[0-9]*.html`** are the old hand-written versions of the served
-  posts. They are excluded in `_config.yml` because each `.md` now renders to
-  the same URL; they stay in the tree until their deletion is approved.
+  body is the original HTML kept raw.
+- The old hand-written `YYYY-MM-DD-slug-title.html` versions of the served
+  posts were deleted (commit `6a04818`); each `.md` renders to the same URL.
 - The `_*.html` drafts are not linked from indexes and are not built.
 - **`legacy/`** holds the archival `.md` sources that have no served page
   (draft siblings and orphans; they carry old `layout: post` front matter and
@@ -166,6 +181,83 @@ index.html                      # Section index (section layout, hand-written ca
 - Section indexes, `index.html`, `resume.html` and `404.html` are Jekyll pages
   with front matter, rendered through the shared layouts.
 
+### Publishing and unpublishing
+
+To take a post down, add `published: false` to its front matter; delete the
+line (or set `true`) to bring it back. Nothing else needs touching. An
+unpublished post is not built, so it drops out of `site.pages`, the sitemap
+and `/feed.xml`, and its URL 404s.
+
+Everything that links to a post is guarded on that, so cards and links hide
+and reappear on their own. Each page that links to dated posts (`index.html`,
+the three section indexes, and any post with prev/next or related links to
+another post) computes the live URLs once at the top:
+
+```liquid
+{%- assign live_urls = site.pages | map: "url" -%}
+```
+
+and wraps every card or link in a guard on the post's **absolute permalink**
+(even where the `href` itself is relative):
+
+```liquid
+{%- if live_urls contains "/work/2026-08-19-sama2.html" %}
+  …card or link…
+{%- endif %}
+```
+
+Section indexes group cards by year. Each year is captured in `year_section`,
+with its cards captured in `year_cards`, and the section is printed only if
+`year_cards | strip` is non-empty, so a year whose posts are all unpublished
+disappears together with its year card. A guarded prev/next link that needs to
+hold its slot uses `{%- else %}<span></span>` (see
+`life/2023-09-01-let-s-work-together.md`).
+
+**Any new index card or cross-post link must use the guard.** Otherwise
+unpublishing its target leaves a broken link, which `tools/check-links.rb`
+will report. Status per post is tracked in `INDEKS.md`. Currently unpublished:
+Sama², the four RevoTickets posts, Kakiseni Homepage Directions (work) and
+Happyness Unlocked (life).
+
+### SEO, sitemap and feed
+
+- **jekyll-seo-tag** (in `plugins:`) emits the description, canonical, Open
+  Graph, Twitter and JSON-LD tags via `{% seo title=false %}` in
+  `_includes/head.html`; `title=false` keeps the hand-written `<title>`, and
+  there is no separate description meta any more. `_config.yml` sets `author`
+  as a hash (`name`, `twitter`) so `twitter:creator` is the handle, `lang: en`,
+  `locale: en_MY`, `twitter.username` and `twitter.card: summary` (the default
+  image is a square icon), `logo`, and `timezone: Asia/Kuala_Lumpur`. The
+  site-wide social image is a front-matter **default** (`image:` under
+  `defaults`, path `""`), because seo-tag only reads `page.image`; a post's
+  own `image:` wins.
+- **jekyll-sitemap** builds `/sitemap.xml` from every built page. Unpublished
+  posts are absent automatically. Kept out with `sitemap: false`: `components/`
+  (defaults), `feed.xml` (its own front matter) and the one-byte
+  `images/favicons/index.html` and `images/posts/index.html` placeholders
+  (defaults).
+- **`/feed.xml`** is a hand-rolled Atom feed (Liquid, `layout: null`), linked
+  from the head. `jekyll-feed` is not used because it only reads `_posts` and
+  these posts are pages. It takes every page in `site.pages` with a
+  work/life/balance `category` and a `date`, sorts newest first on a
+  `YYYYMMDDHHMM|url` key (front-matter dates are a mix of YAML dates and
+  strings), and keeps 20 entries.
+- **Favicons** from `/images/favicons/` (icon PNGs, `favicon.ico`,
+  apple-touch-icon, mask icon, `site.webmanifest`, `browserconfig.xml`,
+  theme colour `#201A2B`) are linked in `_includes/head.html`.
+- **`robots.txt`** allows all crawlers and carries
+  `Sitemap: https://rudzainy.com/sitemap.xml`.
+
+### Housekeeping decisions
+
+- `.idea/` is in `.gitignore` and untracked.
+- `_config.yml` also excludes `mise.toml` (local toolchain pin) and
+  `docs/20250905_windsurf_global_rules.html` (internal AI-rules file).
+- `LICENSE` stays published: the footer's copyright mark links to `/LICENSE`.
+- `components/` stays served as the living style guide but is kept out of
+  search: each page carries `<meta name="robots" content="noindex">` and the
+  folder is `sitemap: false`.
+
 ## Key Files
 
 | File | Purpose |
@@ -173,7 +265,10 @@ index.html                      # Section index (section layout, hand-written ca
 | `index.html` | Homepage — bento-box grid of Work / Life / Balance cards |
 | `si-es-es.css` | Custom styles + design tokens (see below) |
 | `jei-es.js` | Quote randomizer, card auto-scroll with edge fades, the `hackering()` easter-egg modal, SmartImage fallback |
-| `_config.yml` | Site title/URL/description and the `exclude:` list (internal docs, `tools/`, `legacy/`, superseded `.html` posts) |
+| `_config.yml` | Site title/URL/description; seo-tag settings (`author`, `lang`, `locale`, `twitter`, `logo`, `timezone`); `plugins:` (jekyll-seo-tag, jekyll-sitemap); the `exclude:` list (internal docs, `Gemfile*`, `tools/`, `legacy/`, `mise.toml`, the windsurf rules file); `defaults` (site-wide social `image`, `sitemap: false` for `components/` and placeholder pages) |
+| `feed.xml` | Hand-rolled Atom feed over `site.pages` (20 newest posts) |
+| `robots.txt` | Allows crawling; points at `/sitemap.xml` |
+| `tools/check-links.rb` | Internal broken-link checker for `_site/`; run after every build |
 | `Gemfile` / `.ruby-version` | `github-pages` gem; Ruby 3.3.6 |
 | `_layouts/`, `_includes/` | Shared page chrome |
 | `components/index.html` | Component reference / living style guide |
@@ -202,6 +297,14 @@ Bootstrap classes handle layout; `si-es-es.css` adds house style. House style is
 expressed through **design tokens** at `:root` (colours, spacing, type,
 radii, shadows, motion) so magic numbers live in one place. When changing a
 spacing/shadow/radius/motion value, change the token, not the call site.
+
+**Navbar category links.** `nav-work`, `nav-life` and `nav-balance` in
+`_includes/navbar.html` take their category ink (`--color-*-ink`, via a
+per-link `--nav-cat`) on hover and focus-visible, and are `.active` on their
+section index and on every post in that section, with a 2px underline at the
+`lg` breakpoint and up. `.active` is driven by `cat` in `_layouts/default.html`
+(the page's `category`, else the first URL segment); `aria-current="page"` is
+set only on the section index itself.
 
 ## JavaScript Notes
 

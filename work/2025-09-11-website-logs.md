@@ -55,6 +55,14 @@ permalink: /work/2025-09-11-website-logs.html
 			<div class="steps-rail">
 				<ol>
 					<li>
+						<div class="step-num">24</div>
+						<div>
+							<h3>Publishing that cleans up after itself</h3>
+							<p class="text-muted small mb-1"><time datetime="2026-11-07">07.11.2026</time></p>
+							<p>Unpublishing a post now hides its cards and links everywhere on its own, and putting it back brings them all back. Search engines are finally allowed in too, with a sitemap, a feed, proper social previews and favicons. Also cleaned out dead images and pinned the icon versions so nothing shifts under me.</p>
+						</div>
+					</li>
+					<li>
 						<div class="step-num">23</div>
 						<div>
 							<h3>Category colours in the top navbar</h3>
