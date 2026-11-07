@@ -251,7 +251,7 @@ scripts_extra: |2
 
   <!-- Mermaid: renders the three pre.mermaid diagrams (how / track-record / stack) -->
   <script type="module">
-  	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/mermaid.esm.min.mjs';
   	mermaid.initialize({
   		startOnLoad: false,
   		securityLevel: 'loose',

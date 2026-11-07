@@ -7,7 +7,7 @@ permalink: /work/2026-08-23-revotickets-money-out-no-ticket.html
 data_category: work
 scripts_extra: |2
   <!-- Mermaid for diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/mermaid.min.js"></script>
   <script>
     if (window.mermaid) { mermaid.initialize({ startOnLoad: true }); }
   </script>

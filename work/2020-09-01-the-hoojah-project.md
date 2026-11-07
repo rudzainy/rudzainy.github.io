@@ -10,7 +10,7 @@ tags: ["hoojah", "ruby on rails", "portfolio", "reactjs"]
 image: /images/portfolio/hoojah/thumbnail-hoojah.jpg
 scripts_extra: |2
   <!-- Mermaid for diagrams -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/mermaid.min.js"></script>
   <script>
     if (window.mermaid) { mermaid.initialize({ startOnLoad: true }); }
   </script>
