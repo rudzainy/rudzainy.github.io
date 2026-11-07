@@ -20,6 +20,8 @@ lang: en
 locale: en_MY
 twitter:
   username: rudzainy
+  card: summary   # the default image is a square icon
+timezone: Asia/Kuala_Lumpur
 logo: /images/favicons/android-chrome-512x512.png
 
 # Both are on the GitHub Pages plugin allowlist and ship in the github-pages gem.

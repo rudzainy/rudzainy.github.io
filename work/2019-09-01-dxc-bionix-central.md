@@ -7,7 +7,6 @@ category: work
 permalink: /work/2019-09-01-dxc-bionix-central.html
 data_category: work
 tags: ["ui", "ux", "portfolio"]
-image: "https://blog.rudzainy.my/blog/wp-content/uploads/2023/2e2a0a175212223.64afa37f9c39d.png"
 ---
 <!-- Page Header Band (solid category colour) -->
 <div class="page-header-work" style="padding-bottom:0">

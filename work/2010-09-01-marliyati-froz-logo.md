@@ -6,7 +6,7 @@ description: "Marliyati Froz Logo"
 category: work
 permalink: /work/2010-09-01-marliyati-froz-logo.html
 tags: ["graphic design", "logo", "portfolio"]
-image: "https://blog.rudzainy.my/blog/wp-content/uploads/2019/05/mf.jpg"
+image: "/images/portfolio/mf.jpg"
 ---
 <!-- Page Header -->
 <div class="page-header-work">

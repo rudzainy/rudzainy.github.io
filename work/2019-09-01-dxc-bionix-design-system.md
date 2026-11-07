@@ -6,7 +6,6 @@ description: "Our team decided to build a Bionix Design System for DXC Bionix Co
 category: work
 permalink: /work/2019-09-01-dxc-bionix-design-system.html
 tags: ["ui", "ux", "portfolio"]
-image: "https://blog.rudzainy.my/blog/wp-content/uploads/2022/06/Screenshot-2022-06-21-at-8.38.24-PM-2048x1124.png"
 ---
 <!-- Page Header -->
 <div class="page-header-work">

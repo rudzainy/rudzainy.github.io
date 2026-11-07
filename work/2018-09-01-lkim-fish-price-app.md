@@ -6,7 +6,6 @@ description: "LKIM Fish Price App"
 category: work
 permalink: /work/2018-09-01-lkim-fish-price-app.html
 tags: ["react native", "ui", "ux", "collaboration", "portfolio"]
-image: "https://blog.rudzainy.my/blog/wp-content/uploads/2022/01/Screenshot-2022-01-27-at-3.11.13-PM-1-2048x890.jpg"
 ---
 <!-- Page Header -->
 <div class="page-header-work">

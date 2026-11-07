@@ -6,7 +6,6 @@ description: "Orang Kasar"
 category: balance
 permalink: /balance/2019-04-24-orang-kasar.html
 tags: ["theatre", "collaboration"]
-image: "https://blog.rudzainy.my/blog/wp-content/uploads/2023/70749792_10156914013949545_8267946219578327040_n.jpg"
 ---
 <!-- Page Header -->
 <div class="page-header-balance">

@@ -6,7 +6,6 @@ description: "Thoughts Explosion"
 category: balance
 permalink: /balance/2020-07-11-thoughts-explosion.html
 tags: ["photo"]
-image: "https://blog.rudzainy.my/blog/wp-content/uploads/2023/B87FFB01-B568-489B-8B6A-75A632C8BD76.jpeg"
 ---
 <!-- Page Header -->
 <div class="page-header-balance">

@@ -6,7 +6,6 @@ description: "Malaysia Maritime Association Logo &amp; Website"
 category: work
 permalink: /work/2011-09-01-malaysia-maritime-association-logo-website.html
 tags: ["joomla", "web design", "logo", "ai", "fullstack", "portfolio"]
-image: "https://blog.rudzainy.my/blog/wp-content/uploads/2019/05/pemm-web-1.jpg"
 ---
 <!-- Page Header -->
 <div class="page-header-work">

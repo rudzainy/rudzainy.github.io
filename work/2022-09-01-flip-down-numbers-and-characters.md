@@ -6,7 +6,6 @@ description: "Flip Down Numbers and Characters"
 category: work
 permalink: /work/2022-09-01-flip-down-numbers-and-characters.html
 tags: ["design", "figma", "portfolio"]
-image: "https://blog.rudzainy.my/blog/wp-content/uploads/2023/flip-number-file-cover.png"
 ---
 <!-- Page Header -->
 <div class="page-header-work">
