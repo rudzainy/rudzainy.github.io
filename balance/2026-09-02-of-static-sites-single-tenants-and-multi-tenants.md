@@ -280,6 +280,11 @@ data_category: balance
           <span class="nav-title">The Framework</span>
           <span class="nav-date"><time datetime="2024-09-05">05.09.2024</time></span>
         </a>
+        <a href="2026-11-07-convenience-of-consumerism-and-capitalism.html" class="nav-card is-next">
+          <span class="nav-dir">Next<i class="icon-arrow-right" aria-hidden="true"></i></span>
+          <span class="nav-title">the Convenience of Consumerism and Capitalism</span>
+          <span class="nav-date"><time datetime="2026-11-07">07.11.2026</time></span>
+        </a>
       </nav>
     </div>
   </article>
