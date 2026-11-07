@@ -7,6 +7,12 @@ category: balance
 permalink: /balance/2024-03-23-add-diagram-on-websites-using-mermaidjs.html
 data_category: balance
 tags: ["mermaidjs", "tutorial"]
+scripts_extra: |2
+  <!-- Mermaid for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) { mermaid.initialize({ startOnLoad: true }); }
+  </script>
 ---
 <!-- Page Header -->
 <div class="page-header-balance">
@@ -125,6 +131,50 @@ sequenceDiagram
     Finance Dept.-&gt;&gt;Partner Side: 16. Payment is processed and sent to partner.
 &lt;/pre&gt;</code></pre>
       </div>
+    </div>
+    <div class="post-figure">
+      <figure>
+        <div class="bg-dark p-3 rounded shadow">
+          <pre class="mermaid">
+%%{
+    init: {
+        'theme': 'base',
+        'wrap': true,
+        'fontSize': 10,
+        'darkMode': false,
+        'themeVariables': {
+            'primaryColor': '#6CA142',
+            'primaryTextColor': '#E8F0E0',
+            'primaryBorderColor': '#245228',
+            'lineColor': '#F8B229',
+            'secondaryColor': '#006100',
+            'tertiaryColor': '#fff',
+            'signalColor': '#E8F0E0'
+        }
+    }
+}%%
+
+sequenceDiagram
+    Donor-&gt;&gt;Project Coordinator: 1. Donor makes inquiry regarding the Masjid project.
+    Project Coordinator-&gt;&gt;Donor: 2. Provides information regarding options available for Masjids to donor.
+    Donor-&gt;&gt;Project Coordinator: 3. Donor learns and decide country and size of the Masjid they would prefer.
+    Project Coordinator-&gt;&gt;Donor: 4. When the donor decides, a written agreement is made &amp; payment is finalized.
+    Donor-&gt;&gt;Project Coordinator: 5. Donor signs the agreement and pays in full or as 3 phases.
+    Project Coordinator-&gt;&gt;Partner Side: 6. Then Geo Location is requested.
+    Partner Side-&gt;&gt;Project Coordinator: 7. Location is provided.
+    Project Coordinator-&gt;&gt;Donor: 8. Banners &amp; posters are made &amp; shared with donors.
+    Donor-&gt;&gt;Project Coordinator: 9. Banners &amp; posters are approved.
+    Project Coordinator-&gt;&gt;Partner Side: 10. Masjid is given for construction along with approved banners.
+    Partner Side-&gt;&gt;Project Coordinator: 11. Construction updates are shared.
+    Project Coordinator-&gt;&gt;Donor: 12. Updates &amp; completion photos are shared to donors.
+    Donor-&gt;&gt;Project Coordinator: 13. The Masjid Project is completed &amp; final media is received.
+    Partner Side-&gt;&gt;Project Coordinator: 14. Payment is requested for the Masjid.
+    Project Coordinator-&gt;&gt;Finance Dept.: 15. Payment request is crosschecked with data.
+    Finance Dept.-&gt;&gt;Partner Side: 16. Payment is processed and sent to partner.
+</pre>
+        </div>
+        <figcaption>The diagram above, rendered live by MermaidJS.</figcaption>
+      </figure>
     </div>
     <p>To wire up MermaidJS, add the CDN script to your page&rsquo;s <code>&lt;head&gt;</code> or just before <code>&lt;/body&gt;</code>:</p>
     <div class="post-code">

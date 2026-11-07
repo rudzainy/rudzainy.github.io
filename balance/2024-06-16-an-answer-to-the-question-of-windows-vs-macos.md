@@ -6,6 +6,12 @@ description: "An Answer to the question of Windows vs MacOS"
 category: balance
 permalink: /balance/2024-06-16-an-answer-to-the-question-of-windows-vs-macos.html
 tags: ["windows", "macos", "ai", "linux", "os"]
+scripts_extra: |2
+  <!-- Mermaid for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) { mermaid.initialize({ startOnLoad: true }); }
+  </script>
 ---
 <!-- Page Header -->
 <div class="page-header-balance">
@@ -169,12 +175,18 @@ tags: ["windows", "macos", "ai", "linux", "os"]
     </tr>
   </tbody>
 </table>
-<p><code>mermaid
+<div class="post-figure">
+  <figure>
+    <div class="bg-light p-3 rounded shadow">
+      <pre class="mermaid">
   pie
     title Microsoft vs Apple desktop OS
     "Microsoft" : 190
     "Apple" : 170
-</code></p>
+</pre>
+    </div>
+  </figure>
+</div>
 <p>The table and chart above shows that I am desktop OS agnostic. However, there are notable pros and cons of each OS that I want to highlight.</p>
 <p>Comparing the pros and cons of Windows OS and macOS over the past 20 years reveals how each system has evolved and catered to different user needs and preferences. Here’s a detailed look.</p>
 <div class="post-section-head" aria-hidden="true">

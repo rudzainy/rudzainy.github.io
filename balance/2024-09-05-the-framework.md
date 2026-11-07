@@ -7,6 +7,12 @@ category: balance
 permalink: /balance/2024-09-05-the-framework.html
 tags: ["rails", "framework", "open source", "malaysia", "ranting", "gugel", "portfolio"]
 image: /images/posts/ranting/sketch.png
+scripts_extra: |2
+  <!-- Mermaid for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) { mermaid.initialize({ startOnLoad: true }); }
+  </script>
 ---
 <!-- Page Header -->
 <div class="page-header-balance">
@@ -58,7 +64,10 @@ image: /images/posts/ranting/sketch.png
 - <strong>E-Government services</strong> where Malaysians can use their unified identity to access different government portals with single sign-on.
 - <strong>Enterprise collaboration</strong>, where organizations can integrate multiple APIs for cross-departmental use.</p>
 <p><strong>BINA</strong> also ensures scalability, as more modules or external APIs can be connected without causing disruptions to existing workflows.</p>
-<p><code>mermaid
+<div class="post-figure">
+  <figure>
+    <div class="bg-light p-3 rounded shadow">
+      <pre class="mermaid">
 graph TD
     BINA --&gt; BORAK
     BINA --&gt; BIODATA
@@ -66,7 +75,10 @@ graph TD
     BINA --&gt; BANTU
     BINA --&gt; BALAI_RAYA
     BINA --&gt; External_APIs
-</code></p>
+</pre>
+    </div>
+  </figure>
+</div>
 <h4 id="borak-messaging-service"><strong>BORAK (Messaging Service)</strong></h4>
 <p><strong>BORAK</strong> is the secure communication service built on top of <strong>Signal</strong> and <strong>Telegram</strong> protocols. These platforms are known for their <strong>end-to-end encryption</strong> capabilities, ensuring that messages remain secure and private. The decision to use these open platforms allows for customization while maintaining high-security standards.</p>
 <p>Examples of potential applications:
@@ -78,20 +90,32 @@ graph TD
 <p>For example:
 - A user can log into their bank, healthcare provider, and government services with a single <strong>BIODATA</strong> account, simplifying processes while maintaining a high level of security.</p>
 <p>With <strong>SSO</strong>, businesses can reduce the risk of <strong>password fatigue</strong> and minimize security vulnerabilities caused by multiple credential sets.</p>
-<p><code>mermaid
+<div class="post-figure">
+  <figure>
+    <div class="bg-light p-3 rounded shadow">
+      <pre class="mermaid">
 graph TD
     User --&gt; BIODATA --&gt; BINA --&gt; External_Services[Third-party Websites/Services]
-</code></p>
+</pre>
+    </div>
+  </figure>
+</div>
 <h4 id="buffet-analytics-service"><strong>BUFFET (Analytics Service)</strong></h4>
 <p><strong>BUFFET</strong> offers privacy-centric analytics powered by <strong>Plausible</strong> and <strong>Matomo</strong>. Unlike traditional services like Google Analytics, <strong>BUFFET</strong> prioritizes anonymity by not tracking users via invasive cookies or IP addresses. This makes it an excellent solution for organizations that want data-driven insights without compromising user privacy.</p>
 <p>Potential applications include:
 - <strong>Online education</strong>, where educators can track student’s engagement without violating their privacy.
 - <strong>Healthcare</strong>, where hospitals can monitor user interactions on digital platforms without collecting sensitive patient information.</p>
-<p><code>mermaid
+<div class="post-figure">
+  <figure>
+    <div class="bg-light p-3 rounded shadow">
+      <pre class="mermaid">
 graph TD
     User_Activity[User Activity] --&gt;|Anonymized| BUFFET --&gt; Reports
     Reports --&gt; Analytics_Insights[Data Insights]
-</code></p>
+</pre>
+    </div>
+  </figure>
+</div>
 <h4 id="bantu-support-documentation-and-balai-raya-community-platform">
 <strong>BANTU (Support Documentation)</strong> and <strong>BALAI RAYA (Community Platform)</strong>
 </h4>
@@ -99,12 +123,18 @@ graph TD
 <p>Example use cases:
 - A small business can use <strong>BALAI RAYA</strong> to create a forum for customer engagement.
 - Local communities can interact, share resources, and troubleshoot issues together.</p>
-<p><code>mermaid
+<div class="post-figure">
+  <figure>
+    <div class="bg-light p-3 rounded shadow">
+      <pre class="mermaid">
 graph TD
     BANTU --&gt; User_Generated_FAQs[User-Generated FAQs]
     BALAI_RAYA --&gt; Business_Owners[Local Business Owners]
     BALAI_RAYA --&gt; Customer_Engagement[Customer Engagement]
-</code></p>
+</pre>
+    </div>
+  </figure>
+</div>
 <hr>
 <div class="post-section-head" aria-hidden="true">
   <span class="head-tab"><i class="icon-shield"></i><span>04</span></span>
@@ -116,13 +146,19 @@ graph TD
 - Ensuring all communications within <strong>BORAK</strong> are protected by <strong>end-to-end encryption</strong>, guaranteeing that no unauthorized entities can intercept communications.
 - Employing <strong>BUFFET</strong> analytics that anonymizes all user interactions, ensuring full compliance with privacy laws.</p>
 <p>Countries like <strong>Germany</strong> and <strong>Brazil</strong> have adopted similar privacy-first approaches by enforcing strict data localization and privacy standards. Malaysia can follow suit by building out its digital sovereignty through a system like this.</p>
-<p><code>mermaid
+<div class="post-figure">
+  <figure>
+    <div class="bg-light p-3 rounded shadow">
+      <pre class="mermaid">
 graph TD
     User_Data[User Data] --&gt;|Encrypted| BORAK
     User_Data --&gt;|Anonymized| BUFFET
     BORAK --&gt;|Encrypted| BIODATA
     BUFFET --&gt;|No Personal Data Collected| Reports
-</code></p>
+</pre>
+    </div>
+  </figure>
+</div>
 <hr>
 <div class="post-section-head" aria-hidden="true">
   <span class="head-tab"><i class="icon-tag"></i><span>05</span></span>
