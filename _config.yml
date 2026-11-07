@@ -8,6 +8,26 @@ url: https://rudzainy.com
 theme: null
 description: I do UI/UX stuff. Sometimes I do Ruby on Rails stuff and theatre stuff. Also into photography, climbing, riding, gliding and shield surfing 😉
 
+# jekyll-seo-tag reads these. `lang` is the content language; `locale` is the
+# og:locale it emits. The site-wide social image is a front-matter default
+# (below), because seo-tag only reads `image` from the page; a post that sets
+# its own `image:` wins over the default. `author` is a hash so seo-tag emits
+# twitter:creator as the handle, not the display name.
+author:
+  name: Rudzainy Rahman
+  twitter: rudzainy
+lang: en
+locale: en_MY
+twitter:
+  username: rudzainy
+logo: /images/favicons/android-chrome-512x512.png
+
+# Both are on the GitHub Pages plugin allowlist and ship in the github-pages gem.
+# jekyll-feed is not used: it only reads _posts, so /feed.xml is hand-rolled.
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 exclude:
   - CLAUDE.md
   - README.md
@@ -31,6 +51,19 @@ exclude:
 # pages are standalone HTML that carry their own robots noindex meta.
 defaults:
   - scope:
+      path: ""
+    values:
+      image: /images/favicons/android-chrome-512x512.png
+  - scope:
       path: components
+    values:
+      sitemap: false
+  # One-byte placeholder pages that only stop directory listing.
+  - scope:
+      path: images/favicons/index.html
+    values:
+      sitemap: false
+  - scope:
+      path: images/posts/index.html
     values:
       sitemap: false

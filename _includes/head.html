@@ -2,7 +2,20 @@
     <meta charset="utf-8">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ page.description | default: site.description }}">
+{% seo title=false %}
+    <link rel="alternate" type="application/atom+xml" title="Rudzainy Rahman: Work, Life, Balance" href="/feed.xml">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/images/favicons/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#201A2B">
+    <link rel="manifest" href="/images/favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#201A2B">
+    <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#201A2B">
+    <!-- end Favicons -->
 
     <!-- Ruby on Browser --
     < script src="https://cdn.jsdelivr.net/npm/ruby-3_2-wasm-wasi@1.0.1/dist/browser.script.iife.js"></script >
@@ -10,7 +23,7 @@
 
     <!-- Bootstrap CSS & Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static@1.70.0/font/lucide.css" integrity="sha384-tgj0Bgk6DdB1nAo6LrjXVnGwUvQ+OqhjlWjslMIEIuZYUCnky+eOZvE5Nr0qbklu" crossorigin="anonymous">
     <!-- end Bootstrap CSS & Icons -->
 
     <link rel="stylesheet" type="text/css" href="/si-es-es.css">
