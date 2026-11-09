@@ -279,6 +279,11 @@ Happyness Unlocked (life).
 These are the soul of the site. Codify them; do not redesign them.
 
 - **Bento-box layout** — mixed-size cards in a grid. Kept exactly.
+  Media inside bento cards (images, GIFs such as the YOLO card) is
+  **centred**: card `<img>` uses `object-fit: cover` with
+  `object-position: center` (the `article.card > figure > img` rule in
+  `si-es-es.css`). Don't top-align card media. Post screenshots in
+  `.smart-image` are the deliberate exception and stay `object-position: top`.
 - **Category colour-coding as a concept is invariant** — Work / Life / Balance
   must stay visually distinguished by colour, plus neutral white cards. The
   specific hues live in tokens (`--color-work`, `--color-life`,
