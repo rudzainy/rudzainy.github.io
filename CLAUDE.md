@@ -138,7 +138,7 @@ the build.
 ├── _includes/          # head, navbar, footer, scripts
 ├── /work/              # Portfolio pieces (index.html + 26 dated posts, 2008–2026; 6 are `published: false`)
 ├── /life/              # Personal/lifestyle content (index.html + 11 dated posts; 1 is `published: false`)
-├── /balance/           # Wellness / thoughts content (index.html + 26 dated posts)
+├── /balance/           # Wellness / thoughts content (index.html + 27 dated posts)
 ├── /legacy/            # Archival .md sources with no served page (excluded from build)
 ├── /tools/             # check-links.rb, migrate_posts.rb, check-root.sh (excluded from build)
 ├── /components/        # Living style guide: served, but noindex and out of the sitemap

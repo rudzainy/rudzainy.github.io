@@ -63,6 +63,7 @@ Inventory of every content page under `work/`, `life/` and `balance/` (section `
 
 | Title | Description | Date | Status | Category | Tags | Path |
 |---|---|---|---|---|---|---|
+| How to Use Hoojah | A first-timer's walkthrough of Hoojah, the Malaysian debate site I built: sign up, post a hoojah, vote, respond with a stance, and settle a… | 2026-11-09 | published | Balance | hoojah, tutorial, ruby on rails | [balance/2026-11-09-how-to-use-hoojah.html](balance/2026-11-09-how-to-use-hoojah.html) |
 | the Convenience of Consumerism and Capitalism | A case study of paper as a general technology: how new paper gets made out of what other industries throw away, palm oil included. Some of… | 2026-11-07 | published | Balance | — | [balance/2026-11-07-convenience-of-consumerism-and-capitalism.html](balance/2026-11-07-convenience-of-consumerism-and-capitalism.html) |
 | of Static Sites, Single Tenants and Multi Tenants | Managing a static website, a single tenant web app and a multi tenant web app are three different jobs. A build-up from the easiest to the… | 2026-09-02 | published | Balance | — | [balance/2026-09-02-of-static-sites-single-tenants-and-multi-tenants.html](balance/2026-09-02-of-static-sites-single-tenants-and-multi-tenants.html) |
 | The Framework | The Framework | 2024-09-05 | published | Balance | rails, framework, open source, malaysia, ranting, gugel, portfolio | [balance/2024-09-05-the-framework.html](balance/2024-09-05-the-framework.html) |
