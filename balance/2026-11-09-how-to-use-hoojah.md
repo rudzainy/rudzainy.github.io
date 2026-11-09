@@ -29,7 +29,7 @@ image: /images/posts/hoojah-tutorial/hoojah.webp
 <!-- Main Content Section -->
 <main class="container my-5">
   <article class="post-content">
-    <p>Hoojah has been my pet project since 2013. It has been rebuilt more times than I'd like to admit (this time on Rails 8 and Hotwire), and the latest version is live at <a href="https://hoojah.rudzainy.com" target="_blank" rel="noopener">hoojah.rudzainy.com</a>. People keep asking me &ldquo;so how does it work ah?&rdquo;, so this is the walkthrough. What to click, what happens next, and sometimes why it works that way.</p>
+    <p>Hoojah has been my pet project since 2013. It has been rebuilt more times than I'd like to admit, and the latest version is live at <a href="https://hoojah.rudzainy.com" target="_blank" rel="noopener">hoojah.rudzainy.com</a>. People keep asking me &ldquo;so how does it work ah?&rdquo;, so this is the walkthrough. What to click, what happens next, and sometimes why it works that way.</p>
     <p>The name comes from the Malay word <em>hujah</em>, meaning argument. On Hoojah, a <strong>hoojah</strong> is a claim you put out into the world. Everyone else picks a side: <strong>Agree</strong>, <strong>Neutral</strong> or <strong>Disagree</strong>. Then they back it up with responses, each one tagged with the side it's on. And when two people really cannot let it go, they can take it to a one-on-one debate, round by round, while everybody else watches and decides who won.</p>
     <p>That's the whole idea. The login page says it better than me: &ldquo;Post a hoojah. Gather votes. Settle it in a debate.&rdquo;</p>
     <p>Quick note on colours: by default Agree is teal, Neutral is orange and Disagree is violet. You'll see those three everywhere, so it helps to know them early.</p>
@@ -39,8 +39,8 @@ image: /images/posts/hoojah-tutorial/hoojah.webp
     </div>
     <h2 id="sign-up-and-sign-in">Sign up and sign in</h2>
     <p>You can read almost everything without an account. To post, vote or argue, you need one.</p>
-    <p><strong>Signing up.</strong> Go to <code>/signup</code> (or tap &ldquo;Sign up&rdquo; at the top right). Fill in your Full name, Username, Email address and Password (8 characters minimum), confirm the password, and press &ldquo;Sign up&rdquo;. Usernames take letters, numbers and underscores only. A few words like <code>login</code>, <code>admin</code> and <code>api</code> are reserved because the app uses them for its own pages. You also get a random default photo to start with, which you can change later.</p>
-    <p>Prefer not to make another password? Press &ldquo;Continue with Google&rdquo; instead. The first time you do this, Hoojah creates your account and picks a username from the part of your email before the @ (with a number tacked on if somebody already has it). If your Google email matches an account that already exists (and Google has verified that address), the two get linked.</p>
+    <p><strong>Signing up.</strong> Go to <code>/signup</code> (or tap &ldquo;Sign up&rdquo; at the top right). Fill in your Full name, Username, Email address and Password (8 characters minimum), confirm the password, and press &ldquo;Sign up&rdquo;. Usernames take letters, numbers and underscores only. You also get a random default photo to start with, which you can change later.</p>
+    <p>Prefer not to make another password? Press &ldquo;Continue with Google&rdquo; instead. The first time you do this, Hoojah creates your account and picks a username for you (you can change it later). If you already have a Hoojah account with the same email, the two get linked.</p>
     <p><strong>Signing in.</strong> At <code>/login</code> you'll find the usual email and password, &ldquo;Forgot password?&rdquo;, &ldquo;Remember me&rdquo;, &ldquo;Continue with Google&rdquo;, and &ldquo;Sign in with a passkey&rdquo;. That last button only shows up if your browser supports passkeys.</p>
     <div class="post-figure">
       <figure>
@@ -76,7 +76,7 @@ image: /images/posts/hoojah-tutorial/hoojah.webp
     </figure>
   </div>
   <article class="post-content">
-    <p><strong>Trending.</strong> On a wide screen, Trending sits in the right sidebar. On a phone it's the little flame button in the navbar, or go to <code>/trending</code>. It ranks public hoojahs with activity in the last 48 hours: votes and responses push a hoojah up, age pulls it down, and the top 10 make the list. It refreshes every 15 minutes. Honest disclosure: right now it mostly says &ldquo;Nothing trending yet.&rdquo; because, well, it's a quiet little site. Help me fix that lah. 😂</p>
+    <p><strong>Trending.</strong> On a wide screen, Trending sits in the right sidebar. On a phone it's the little flame button in the navbar, or go to <code>/trending</code>. It shows the public hoojahs getting the most votes and responses over the last couple of days. Honest disclosure: right now it mostly says &ldquo;Nothing trending yet.&rdquo; because, well, it's a quiet little site. Help me fix that lah. 😂</p>
     <p><strong>Discover.</strong> The Discover tab (<code>/search</code>) has a &ldquo;Search Hoojah&rdquo; box plus rows of trending and browse-able hashtags. Search only ever returns things you're already allowed to see, so private stuff stays private. Tap any hashtag, here or inside a hoojah, to see every hoojah tagged with it.</p>
     <div class="post-figure">
       <figure>
@@ -96,7 +96,7 @@ image: /images/posts/hoojah-tutorial/hoojah.webp
       <li><strong>Formatting.</strong> Bold, Italic and Underline. Simple je.</li>
       <li><strong>Length.</strong> A hoojah needs at least 8 characters. Not much, but &ldquo;ok&rdquo; is not a claim.</li>
       <li><strong>Add image.</strong> PNG, JPEG, GIF or WebP under 5 MB, with optional alt text up to 200 characters. Please write the alt text. Your screen reader friends will thank you.</li>
-      <li><strong>Hashtags and mentions.</strong> Type <code>#something</code> and it becomes a link to that hashtag's page. Hoojah may also show &ldquo;Suggested hashtags&rdquo; you can tap. Type <code>@username</code> and that person gets a notification that you mentioned them (once per hoojah, up to 10 people, and never someone who blocked you or whom you blocked).</li>
+      <li><strong>Hashtags and mentions.</strong> Type <code>#something</code> and it becomes a link to that hashtag's page. Hoojah may also show &ldquo;Suggested hashtags&rdquo; you can tap. Type <code>@username</code> and that person gets a notification that you mentioned them.</li>
       <li><strong>How people will weigh in.</strong> This shows the three words people vote with. After you've posted 10 regular hoojahs, you unlock custom stance labels: swap Agree / Neutral / Disagree for your own words, up to 24 characters each. Until then the three words are fixed.</li>
       <li><strong>Allow debates.</strong> A toggle in the footer, on by default. Switch it off and nobody can challenge the responses on this hoojah to a debate.</li>
     </ul>
@@ -133,7 +133,7 @@ image: /images/posts/hoojah-tutorial/hoojah.webp
     </div>
     <p><strong>Why it's a secret ballot.</strong> Nobody sees how you voted, not even the person who posted the hoojah. Two things make that work:</p>
     <ul>
-      <li>When you vote, the author gets &ldquo;You have a new vote on your hoojah&rdquo;. No name attached. The app deliberately doesn't record who triggered it.</li>
+      <li>When you vote, the author gets &ldquo;You have a new vote on your hoojah&rdquo;. No name attached, ever.</li>
       <li>The percentages only show up once a hoojah has 3 or more votes. Below that you just see &ldquo;No votes yet&rdquo; or &ldquo;2 votes&rdquo;. Same rule for the author. With only two voters, a percentage split would basically tell you who picked what, so it stays hidden until there's a small crowd to hide in.</li>
     </ul>
     <p>One more rule: you can't vote on hoojahs from someone you've blocked, or someone who blocked you.</p>
@@ -216,12 +216,11 @@ image: /images/posts/hoojah-tutorial/hoojah.webp
   </div>
   <article class="post-content">
     <p><strong>The verdict stays sealed</strong> until at least 3 spectators have voted. After that it shows the winner with a little crown and the percentage split (or &ldquo;Draw&rdquo; if it's tied), plus a line saying how many spectators decided it over how many rounds. Same logic as the vote split: no tiny crowds that give away who voted for whom.</p>
-    <p><strong>Spectators can watch live.</strong> An active debate isn't hidden. Anyone who can see both debaters and the hoojah can open it and watch the turns land in real time, no refresh needed. They just can't vote on the verdict until it's over. The debate page has the two of you side by side as Challenger and Opponent, the current round and phase, and a pulsing &ldquo;LIVE&rdquo; pill.</p>
-    <p><em>Small nerd aside:</em> the round, phase and whose turn it is aren't stored anywhere. They're worked out from the turns every time the page loads, so extending a round can never leave a stale &ldquo;Closing statement&rdquo; label lying around.</p>
+    <p><strong>Spectators can watch live.</strong> An active debate isn't hidden. Anyone who can see both debaters and the hoojah can open it and watch the turns land as they happen. They just can't vote on the verdict until it's over. The debate page has the two of you side by side as Challenger and Opponent, the current round and phase, and a pulsing &ldquo;LIVE&rdquo; pill.</p>
     <div class="post-callout is-note">
       <aside>
         <div class="callout-header"><i class="icon-info" aria-hidden="true"></i>Note</div>
-        <p class="callout-body">Debates don't hang around. If an active debate sits untouched for 7 days, Hoojah concludes it automatically during a nightly cleanup, so a no-show can't hold their opponent hostage forever.</p>
+        <p class="callout-body">Debates don't hang around. If an active debate sits untouched for 7 days, Hoojah concludes it automatically, so a no-show can't hold their opponent hostage forever.</p>
       </aside>
     </div>
     <p>Debates show up in a few places: a &ldquo;Debates&rdquo; section on the hoojah page (with how many are live and how many concluded), an &ldquo;In debate&rdquo; chip on the challenged response, a Debates tab on each profile, and a live card on the debaters' profiles while it's running.</p>
