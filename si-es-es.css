@@ -421,7 +421,7 @@ section.d-flex.flex-row > article.card {
 section:not(.grid-container) > article.card > figure > img {
   width: 100%;
   height: 100%;
-  object-position: top;
+  object-position: center;
 }
 
 /* Additional Responsive Improvements */
