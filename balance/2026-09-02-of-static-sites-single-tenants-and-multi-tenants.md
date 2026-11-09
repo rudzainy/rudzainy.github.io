@@ -28,26 +28,6 @@ data_category: balance
   <article class="post-content">
     <p>Somebody asked me recently why the &ldquo;website&rdquo; they paid for costs a few hundred ringgit a year to keep alive, while the &ldquo;website&rdquo; their friend runs needs two people and a Slack channel that never sleeps. Same word, very different animals.</p>
     <p>So this is me thinking out loud. Three levels, easiest to hardest: a static website, a single tenant web app, and a multi tenant web app. At each level I&rsquo;ll ask the same two questions. What are you actually managing? And who, in the real world, ends up managing it? Because a gig worker, a 40-person SME, a large company with an IT department, and a lean startup all answer that differently. Then near the end I wander off into who should be holding the leash at the very top. Bear with me lah.</p>
-    <div class="post-stats">
-      <div class="stats-strip">
-        <div class="stat">
-          <div class="stat-num">0</div>
-          <div class="stat-label">Tenants in a static site</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">1</div>
-          <div class="stat-label">Tenant in a single tenant app</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">N</div>
-          <div class="stat-label">Tenants in a multi tenant app</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">3am</div>
-          <div class="stat-label">When N starts to matter</div>
-        </div>
-      </div>
-    </div>
     <div class="post-section-head" aria-hidden="true">
       <span class="head-tab"><i class="icon-file-text"></i><span>01 &middot; level one</span></span>
     </div>

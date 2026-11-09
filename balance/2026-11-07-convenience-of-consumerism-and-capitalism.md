@@ -30,26 +30,6 @@ data_category: balance
     <p>Now imagine a day without paper.</p>
     <p>No receipt. No tissue. No teh tarik bungkus in a paper cup, no nasi lemak wrapped in that brown paper with the plastic-ish lining. No banknote. No IC photocopy for the bank, no borang, no surat. No box for the phone you just ordered online. No toilet roll. 😬</p>
     <p>I couldn&rsquo;t do it. I tried for about ten seconds and gave up at the toilet roll. That got me thinking about paper as a technology, and about how it got so cheap that we forget it is one.</p>
-    <div class="post-stats">
-      <div class="stats-strip">
-        <div class="stat">
-          <div class="stat-num">~2,000</div>
-          <div class="stat-label">Years paper has been around</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">~50</div>
-          <div class="stat-label">Years of screens in most homes</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">1840s</div>
-          <div class="stat-label">When wood pulp made paper cheap</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">~1/5</div>
-          <div class="stat-label">Of a palm fruit bunch left as empty bunch</div>
-        </div>
-      </div>
-    </div>
     <div class="post-section-head" aria-hidden="true">
       <span class="head-tab"><i class="icon-scroll"></i><span>01 &middot; a general technology</span></span>
     </div>
