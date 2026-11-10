@@ -434,11 +434,14 @@ section.d-flex.flex-row > article.card {
 }
 /* end Box Cards */
 
+/* Bento card media is centred by default. For media whose subject sits off
+   centre, set --media-focus inline on the <img> to move the crop's focal point,
+   e.g. style="--media-focus: 58% 50%" (the YOLO GIF on the home page). */
 .grid-container > article.card > figure > img,
 section:not(.grid-container) > article.card > figure > img {
   width: 100%;
   height: 100%;
-  object-position: center;
+  object-position: var(--media-focus, center);
 }
 
 /* Additional Responsive Improvements */

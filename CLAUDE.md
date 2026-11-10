@@ -284,6 +284,9 @@ These are the soul of the site. Codify them; do not redesign them.
   `object-position: center` (the `article.card > figure > img` rule in
   `si-es-es.css`). Don't top-align card media. Post screenshots in
   `.smart-image` are the deliberate exception and stay `object-position: top`.
+  For card media whose subject is off-centre, set `--media-focus` inline on
+  the `<img>` (e.g. `style="--media-focus: 58% 50%"`, as the YOLO GIF does) to
+  move the crop's focal point; without it the default stays `center`.
 - **Category colour-coding as a concept is invariant** — Work / Life / Balance
   must stay visually distinguished by colour, plus neutral white cards. The
   specific hues live in tokens (`--color-work`, `--color-life`,
