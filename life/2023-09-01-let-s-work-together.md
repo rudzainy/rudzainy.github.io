@@ -2,7 +2,7 @@
 layout: post
 title: "Let's work together! by Rudzainy Rahman"
 date: 2023-09-01 17:25 +0800
-description: "UI/UX designer who also builds in Rails. 15 years, seven industries, product ownership. Open for work, KL or remote."
+description: "UI/UX designer who also builds in Rails. 15 years, seven industries, product ownership."
 category: life
 permalink: /life/2023-09-01-let-s-work-together.html
 data_category: life
@@ -49,16 +49,6 @@ head_extra: |2
   	.lwt-btn-light:hover { background: var(--cat-subtle); color: var(--cat-ink); }
   	.lwt-btn-ghost { background: transparent; border-color: rgba(255,255,255,0.7); color: #fff; }
   	.lwt-btn-ghost:hover { background: #fff; border-color: #fff; color: var(--cat-ink); }
-
-  	/* Availability pill */
-  	.lwt-availability { display: inline-flex; align-items: center; gap: 0.5rem;
-  		min-height: 36px; padding: 0.25rem 0.9rem; border-radius: 999px;
-  		border: 1px solid rgba(255,255,255,0.5); background: rgba(255,255,255,0.12);
-  		color: #fff; font-family: var(--font-display); text-transform: uppercase;
-  		letter-spacing: var(--tracking-display); font-size: 13px; }
-  	.lwt-availability::before { content: ''; width: 9px; height: 9px;
-  		border-radius: 50%; background: #8CE0B0;
-  		box-shadow: 0 0 0 3px rgba(140,224,176,0.25); }
 
   	/* 2. Sticky TOC + progress bar */
   	.lwt-toc { position: sticky; top: 0; z-index: 1020;
@@ -276,7 +266,6 @@ scripts_extra: |2
 		<p class="lwt-subtitle">I design the thing, then I build it. Fifteen years of UI/UX, Rails and product ownership, seven industries, one page.</p>
 		<div class="lwt-cta-row">
 			<a class="lwt-btn lwt-btn-ghost" href="/resume.html"><i class="icon-file-text" aria-hidden="true"></i>View my résumé</a>
-			<span class="lwt-availability">Open for work &middot; free to interview now &middot; Kuala Lumpur / remote</span>
 		</div>
 	</header>
 </div>
@@ -292,7 +281,7 @@ scripts_extra: |2
 			<a href="#track-record">Experiences</a>
 			<a href="#stack">Skills</a>
 			<a href="#facts">TL;DR</a>
-			<a href="#contact" class="lwt-toc-hire">Hire me <i class="icon-arrow-right" aria-hidden="true"></i></a>
+			<a href="#contact" class="lwt-toc-hire">Get in touch <i class="icon-arrow-right" aria-hidden="true"></i></a>
 		</div>
 		<div class="lwt-progress" aria-hidden="true"><div class="lwt-progress-bar"></div></div>
 	</nav>
@@ -568,7 +557,7 @@ flowchart LR
 		<div class="post-meta-table">
 			<dl>
 				<div class="meta-row"><dt>Name</dt><dd>Mohd Rudzainy bin Abdul Rahman</dd></div>
-				<div class="meta-row"><dt>Based in</dt><dd>Kuala Lumpur, Malaysia &middot; happy to work remote</dd></div>
+				<div class="meta-row"><dt>Based in</dt><dd>Kuala Lumpur, Malaysia</dd></div>
 				<div class="meta-row"><dt>Role</dt><dd>UI/UX designer &middot; product owner &middot; full-stack builder</dd></div>
 				<div class="meta-row"><dt>Education</dt><dd>BSc (Hons) Information Technology, Multimedia Studies, Universiti Kebangsaan Malaysia, 2009. Full-stack Ruby on Rails bootcamp, NEXT Academy, 2015.</dd></div>
 				<div class="meta-row"><dt>Industries</dt><dd>Education, maritime, media, banking, IT, agriculture, telco</dd></div>
@@ -654,7 +643,7 @@ flowchart LR
 				<span class="head-tab"><i class="icon-message-square"></i><span>06 &middot; so,</span></span>
 			</div>
 			<h2>Let's chat</h2>
-			<p>Got a product that needs designing, building, or both? Send me a few lines about what it is and where it's stuck. I reply within two working days, usually with questions.</p>
+			<p>Want to talk design, Rails, or a product you're stuck on? Send me a few lines. I reply when I can, usually with questions.</p>
 			<div class="lwt-cta-row">
 				<a class="lwt-btn lwt-btn-light" href="mailto:rudzainy@gmail.com"><i class="icon-mail" aria-hidden="true"></i>Email me</a> or just say hi on <a class="lwt-btn lwt-btn-light" href="https://twitter.com/rudzainy" target="_blank" rel="noopener"><i class="icon-twitter" aria-hidden="true"></i>Twitter</a> or <a class="lwt-btn lwt-btn-light" href="https://www.github.com/rudzainy/" target="_blank" rel="noopener"><i class="icon-github" aria-hidden="true"></i>GitHub</a>.
 			</div>
@@ -686,7 +675,7 @@ flowchart LR
 		<span class="lwt-filed-label">Filed under</span>
 		<span class="lwt-chip">Collaboration</span>
 		<span class="lwt-chip">Resume</span>
-		<span class="lwt-chip">Hire me</span>
+		<span class="lwt-chip">Get in touch</span>
 		<a class="lwt-top" href="#top">Back to top <i class="icon-arrow-up" aria-hidden="true"></i></a>
 	</section>
 </main>
