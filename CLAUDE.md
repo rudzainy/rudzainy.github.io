@@ -168,8 +168,8 @@ index.html                      # Section index (section layout, hand-written ca
   Front matter keys: `layout` (post), `title`, `date`, `description`,
   `category` (work|life|balance), `permalink` (pinned to the original `.html`
   URL so inbound links keep working), plus optional `tags`, `image`,
-  `back_link`, `data_category`, `head_extra`, `scripts_extra`, `footer`. The
-  body is the original HTML kept raw.
+  `back_link`, `data_category`, `body_class`, `head_extra`, `scripts_extra`,
+  `footer`. The body is the original HTML kept raw.
 - The old hand-written `YYYY-MM-DD-slug-title.html` versions of the served
   posts were deleted (commit `6a04818`); each `.md` renders to the same URL.
 - The `_*.html` drafts are not linked from indexes and are not built.
@@ -310,6 +310,32 @@ section index and on every post in that section, with a 2px underline at the
 `lg` breakpoint and up. `.active` is driven by `cat` in `_layouts/default.html`
 (the page's `category`, else the first URL segment); `aria-current="page"` is
 set only on the section index itself.
+
+### Index pages: responsive bento
+
+The responsive rules for the homepage and the three section indexes live in
+`si-es-es.css` and are scoped to `body.home` and `body.section`. `home` comes
+from `body_class: home` in the `index.html` front matter; `section` comes from
+`_layouts/section.html`. Posts and other pages are not affected.
+
+- **xs (below 576px).** `--card-base-size` is fluid:
+  `clamp(150px, (100vw - 3.25rem)/2, 180px)`. Each horizontally scrolling card
+  row becomes a 2-row grid that flows by column. A card with a `.card-header`
+  (a post card) is 2x2 automatically, via `:has()`. Small cards pair up in a
+  column, and a lone small card spans both rows. The header card section is a
+  2-column grid, and `.card-xs-wide` makes a header card span both columns.
+  `.card-xs-wide` has no effect at any other width.
+- **576px to 1399px.** Unchanged.
+- **Large screens.** At 1400px and up cards are 280px. At 1920px and up cards
+  are 320px and the container is 1720px. At 2400px and up cards are 360px and
+  the container is 2160px.
+
+The section-index header wrapper is `px-0 px-sm-4 py-4`, so the header cards
+line up with the rows on phones.
+
+**Rule for authors:** a new index card needs no extra class. Give it a
+`.card-header` if it is a post card, and it sizes itself. Every direct child
+of a row `<section>` should be an `article.card`.
 
 ## JavaScript Notes
 
