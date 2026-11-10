@@ -50,6 +50,21 @@
 
   /* --- Sizing ---------------------------------------------------------- */
   --card-base-size: 150px;   /* overridden responsively in media queries */
+  /* Index pages (body.home / body.section) only; see "Index pages: responsive bento" */
+  --card-base-size-xs-min: 132px;  /* floor of the fluid phone size (a 320px viewport) */
+  --card-base-size-xs-max: 180px;  /* ceiling: meets the sm size at 576px */
+  --card-base-size-xxl: 280px;     /* >=1400 */
+  --card-base-size-fhd: 320px;     /* >=1920 */
+  --card-base-size-qhd: 360px;     /* >=2400 */
+  --index-container-fhd: 1720px;   /* .container max-width on index pages, >=1920 */
+  --index-container-qhd: 2160px;   /* ... >=2400 */
+  --index-gap-xs: 0.5rem;          /* phone card gap; mirrors Bootstrap .gap-2 in the markup */
+  --index-inset-xs: 3.25rem;       /* 0.75rem gutter + two gaps + a 1.5rem peek of the next card */
+  --index-card-pad-xs: 0.75rem;    /* 1x1 card body padding on phones */
+  --index-card-text-xs: 0.9375rem; /* 1x1 card body text on phones */
+  --index-card-leading-xs: 1.45;
+  --index-card-text-qhd: 1.125rem; /* card body text, >=2400 */
+  --index-card-header-qhd: 0.8125rem;
   --measure: 42rem;          /* comfortable reading column for post prose (~70 cpl at 19px) */
   --type-read: clamp(1.0625rem, 1rem + 0.35vw, 1.1875rem); /* post reading text ~17->19px */
 
@@ -1034,3 +1049,128 @@ main.container > article.post-content .post-section-head + h2 {
 .post-section-head.is-inverse { border-bottom-color: #fff; }
 .post-section-head.is-inverse .head-tab { background: #fff; color: var(--cat-ink, var(--color-ink)); }
 .post-section-head.is-inverse + h2 { color: #fff; text-shadow: var(--shadow-heading-sub); }
+
+/* === Index pages: responsive bento ========================================
+   Homepage (body.home) and the section indexes (body.section) only. Posts and
+   the component specimens reuse the same row markup and are left alone, so
+   every layout rule below is scoped with :is(body.home, body.section).
+   576px-1399px is untouched: the bento keeps its fixed --card-base-size steps.
+   ========================================================================== */
+
+/* All sizes: a button in a flex-column card body keeps its own height instead
+   of being squeezed until its label overlaps the next button. */
+.card > .card-body > .btn {
+  flex-shrink: 0;
+}
+
+/* --- Phones (<576px): fluid squares, post cards become 2x2 ---------------- */
+@media (max-width: 575.98px) {
+  /* Two squares, their gaps and a peek of the next card fill the viewport.
+     Set on body so it overrides the :root steps for everything inside. */
+  :is(body.home, body.section) {
+    --card-base-size: clamp(var(--card-base-size-xs-min), calc((100vw - var(--index-inset-xs)) / 2), var(--card-base-size-xs-max));
+    --card-size-2x: calc(var(--card-base-size) * 2 + var(--index-gap-xs));
+  }
+
+  /* Scroll rows: two rows of squares flowing in columns, still scrolling
+     sideways. (!important: Bootstrap's .d-flex is !important.) */
+  :is(body.home, body.section) main section.d-flex.flex-row.overflow-x-scroll {
+    display: grid !important;
+    grid-auto-flow: column dense;
+    grid-template-rows: repeat(2, var(--card-base-size));
+    grid-auto-columns: var(--card-base-size);
+    justify-content: start;
+    gap: var(--index-gap-xs) !important;
+  }
+
+  /* Header: a two-column grid of the same squares. */
+  :is(body.home, body.section) header section.d-flex.flex-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(2, var(--card-base-size));
+    grid-auto-rows: var(--card-base-size);
+    grid-auto-flow: row dense;
+    justify-content: start;
+    gap: var(--index-gap-xs) !important;
+  }
+
+  /* Post cards (the ones with a .card-header) are 2x2 so header, title, text
+     and buttons all fit. */
+  :is(body.home, body.section) :is(header, main) section > article.card:has(> .card-header) {
+    grid-area: span 2 / span 2;
+    width: var(--card-size-2x);
+    height: var(--card-size-2x);
+  }
+
+  /* A small card that would sit alone in its column fills it, so the row has
+     no holes: the year card that opens each section-index row, a small card
+     next to a post card at either end of a row, and a lone card. */
+  body.section main section.d-flex.flex-row.overflow-x-scroll > article.card:first-child,
+  :is(body.home, body.section) main section.d-flex.flex-row.overflow-x-scroll > article.card:has(> .card-header) + article.card:not(:has(> .card-header)):last-child,
+  :is(body.home, body.section) main section.d-flex.flex-row.overflow-x-scroll > article.card:not(:has(> .card-header)):first-child:has(+ article.card > .card-header),
+  :is(body.home, body.section) main section.d-flex.flex-row.overflow-x-scroll > article.card:not(:has(> .card-header)):only-child {
+    grid-row: span 2;
+    height: var(--card-size-2x);
+  }
+
+  /* Header extras: .card-xs-wide spans both columns; the name card stays in
+     its cell instead of growing to fit-content. */
+  :is(body.home, body.section) header section > article.card.card-xs-wide {
+    grid-column: span 2;
+    width: var(--card-size-2x);
+  }
+
+  :is(body.home, body.section) header section > article.card.card-width-fit {
+    width: var(--card-base-size);
+    min-width: 0;
+  }
+
+  /* 1x1 cards: tighter padding and slightly smaller body text so a quote
+     reads in ~130-160px. 2x2 post cards keep the normal 1rem. */
+  :is(body.home, body.section) section > article.card:not(:has(> .card-header)) > .card-body {
+    padding: var(--index-card-pad-xs);
+  }
+
+  :is(body.home, body.section) section > article.card:not(:has(> .card-header)) > p.card-body,
+  :is(body.home, body.section) section > article.card:not(:has(> .card-header)) .card-text {
+    font-size: var(--index-card-text-xs);
+    line-height: var(--index-card-leading-xs);
+  }
+}
+
+/* --- Extra-large screens: bigger squares, then a wider page --------------- */
+@media (min-width: 1400px) {
+  :is(body.home, body.section) {
+    --card-base-size: var(--card-base-size-xxl);
+  }
+}
+
+@media (min-width: 1920px) {
+  :is(body.home, body.section) {
+    --card-base-size: var(--card-base-size-fhd);
+  }
+
+  /* Navbar, header, main and footer containers alike, so their edges align. */
+  :is(body.home, body.section) .container {
+    max-width: var(--index-container-fhd);
+  }
+}
+
+@media (min-width: 2400px) {
+  :is(body.home, body.section) {
+    --card-base-size: var(--card-base-size-qhd);
+  }
+
+  :is(body.home, body.section) .container {
+    max-width: var(--index-container-qhd);
+  }
+
+  :is(body.home, body.section) section > article.card .card-text,
+  :is(body.home, body.section) section > article.card > p.card-body {
+    font-size: var(--index-card-text-qhd);
+  }
+
+  :is(body.home, body.section) section > article.card > .card-header {
+    font-size: var(--index-card-header-qhd);
+  }
+}
+/* end Index pages: responsive bento */
