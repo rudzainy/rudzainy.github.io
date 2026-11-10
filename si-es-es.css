@@ -54,8 +54,8 @@
   --card-base-size-xs-min: 132px;  /* floor of the fluid phone size (a 320px viewport) */
   --card-base-size-xs-max: 180px;  /* ceiling: meets the sm size at 576px */
   --card-base-size-xxl: 280px;     /* >=1400 */
-  --card-base-size-fhd: 320px;     /* >=1920 */
-  --card-base-size-qhd: 360px;     /* >=2400 */
+  --card-base-size-fhd: 320px;     /* >=1920: five squares fill the 1720px container exactly */
+  --card-base-size-qhd: 336px;     /* >=2400: six squares fill the 2160px container exactly */
   --index-container-fhd: 1720px;   /* .container max-width on index pages, >=1920 */
   --index-container-qhd: 2160px;   /* ... >=2400 */
   --index-gap-xs: 0.5rem;          /* phone card gap; mirrors Bootstrap .gap-2 in the markup */
@@ -63,6 +63,8 @@
   --index-card-pad-xs: 0.75rem;    /* 1x1 card body padding on phones */
   --index-card-text-xs: 0.9375rem; /* 1x1 card body text on phones */
   --index-card-leading-xs: 1.45;
+  --index-year-col-xs: 3.5rem;     /* narrow year tab that opens each section-index row on phones */
+  --index-title-scale-xs: 0.18;    /* header h1 size as a fraction of the phone square */
   --index-card-text-qhd: 1.125rem; /* card body text, >=2400 */
   --index-card-header-qhd: 0.8125rem;
   --measure: 42rem;          /* comfortable reading column for post prose (~70 cpl at 19px) */
@@ -1087,7 +1089,7 @@ main.container > article.post-content .post-section-head + h2 {
   :is(body.home, body.section) header section.d-flex.flex-wrap {
     display: grid !important;
     grid-template-columns: repeat(2, var(--card-base-size));
-    grid-auto-rows: var(--card-base-size);
+    grid-auto-rows: minmax(var(--card-base-size), auto);
     grid-auto-flow: row dense;
     justify-content: start;
     gap: var(--index-gap-xs) !important;
@@ -1112,16 +1114,53 @@ main.container > article.post-content .post-section-head + h2 {
     height: var(--card-size-2x);
   }
 
-  /* Header extras: .card-xs-wide spans both columns; the name card stays in
-     its cell instead of growing to fit-content. */
+  /* Section indexes: the year card is a narrow full-height tab with its label
+     set vertically, so the first post card gets most of the screen. */
+  body.section main section.d-flex.flex-row.overflow-x-scroll {
+    grid-template-columns: var(--index-year-col-xs);
+  }
+
+  body.section main section.d-flex.flex-row.overflow-x-scroll > article.card:first-child {
+    width: var(--index-year-col-xs);
+    min-width: 0;
+  }
+
+  body.section main section.d-flex.flex-row.overflow-x-scroll > article.card:first-child > .card-body {
+    overflow: hidden;
+    padding: var(--index-card-pad-xs) 0;
+  }
+
+  body.section main section.d-flex.flex-row.overflow-x-scroll > article.card:first-child .card-title {
+    writing-mode: vertical-rl;
+    margin: 0 auto;
+  }
+
+  /* In the header (which wraps, so rows may grow) a post card can run taller
+     than 2x2 instead of clipping its last button on the narrowest phones. */
+  :is(body.home, body.section) header section > article.card:has(> .card-header) {
+    height: auto;
+    min-height: var(--card-size-2x);
+  }
+
+  /* Header extras: .card-xs-wide spans both columns and, alone in its row,
+     grows past one square when its text needs it (the row track is
+     minmax(square, auto)), so the intro is never clipped. The name card stays
+     in its cell instead of growing to fit-content. */
   :is(body.home, body.section) header section > article.card.card-xs-wide {
     grid-column: span 2;
     width: var(--card-size-2x);
+    height: auto;
+    min-height: var(--card-base-size);
   }
 
   :is(body.home, body.section) header section > article.card.card-width-fit {
     width: var(--card-base-size);
     min-width: 0;
+  }
+
+  /* The page title scales with its square so the longest word still fits. */
+  :is(body.home, body.section) header section > article.card > .card-body > h1.card-title {
+    font-size: min(var(--type-h1), calc(var(--card-base-size) * var(--index-title-scale-xs)));
   }
 
   /* 1x1 cards: tighter padding and slightly smaller body text so a quote
@@ -1130,7 +1169,7 @@ main.container > article.post-content .post-section-head + h2 {
     padding: var(--index-card-pad-xs);
   }
 
-  :is(body.home, body.section) section > article.card:not(:has(> .card-header)) > p.card-body,
+  :is(body.home, body.section) section > article.card:not(:has(> .card-header)) > p.card-body:not(.lead),
   :is(body.home, body.section) section > article.card:not(:has(> .card-header)) .card-text {
     font-size: var(--index-card-text-xs);
     line-height: var(--index-card-leading-xs);
@@ -1165,7 +1204,7 @@ main.container > article.post-content .post-section-head + h2 {
   }
 
   :is(body.home, body.section) section > article.card .card-text,
-  :is(body.home, body.section) section > article.card > p.card-body {
+  :is(body.home, body.section) section > article.card > p.card-body:not(.lead) {
     font-size: var(--index-card-text-qhd);
   }
 

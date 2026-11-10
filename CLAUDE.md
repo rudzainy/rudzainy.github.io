@@ -319,15 +319,17 @@ from `body_class: home` in the `index.html` front matter; `section` comes from
 `_layouts/section.html`. Posts and other pages are not affected.
 
 - **xs (below 576px).** `--card-base-size` is fluid:
-  `clamp(150px, (100vw - 3.25rem)/2, 180px)`. Each horizontally scrolling card
+  `clamp(132px, (100vw - 3.25rem)/2, 180px)`. Each horizontally scrolling card
   row becomes a 2-row grid that flows by column. A card with a `.card-header`
   (a post card) is 2x2 automatically, via `:has()`. Small cards pair up in a
-  column, and a lone small card spans both rows. The header card section is a
+  column, and a lone small card spans both rows. On section indexes the year
+  card that opens each row is a narrow full-height tab with a vertical label
+  (`--index-year-col-xs`). The header card section is a
   2-column grid, and `.card-xs-wide` makes a header card span both columns.
   `.card-xs-wide` has no effect at any other width.
 - **576px to 1399px.** Unchanged.
 - **Large screens.** At 1400px and up cards are 280px. At 1920px and up cards
-  are 320px and the container is 1720px. At 2400px and up cards are 360px and
+  are 320px and the container is 1720px. At 2400px and up cards are 336px and
   the container is 2160px.
 
 The section-index header wrapper is `px-0 px-sm-4 py-4`, so the header cards
