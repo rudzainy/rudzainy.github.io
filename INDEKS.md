@@ -6,6 +6,7 @@ Inventory of every content page under `work/`, `life/` and `balance/` (section `
 
 | Title | Description | Date | Status | Category | Tags | Path |
 |---|---|---|---|---|---|---|
+| RevoTickets Organiser Onboarding | Three small production houses got stuck in the same three places while setting up RevoTickets. This is the onboarding I am designing in r… | 2026-11-22 | published | Work | — | [work/2026-11-22-revotickets-organiser-onboarding.html](work/2026-11-22-revotickets-organiser-onboarding.html) |
 | Kakiseni Homepage Directions | Three homepage directions for Kakiseni, an arts platform whose real job is getting more venues and organisers to submit their listings. No… | 2026-09-02 | unpublished | Work | — | [work/2026-09-02-kakiseni-homepage-directions.html](work/2026-09-02-kakiseni-homepage-directions.html) |
 | two people, one seat | A reserved-seat show has a fixed number of chairs, and RevoTickets sells the popular ones fast. | 2026-08-24 | unpublished | Work | — | [work/2026-08-24-revotickets-two-people-one-seat.html](work/2026-08-24-revotickets-two-people-one-seat.html) |
 | building RevoTickets | Revolution Stage puts on live theatre and music in Malaysia, and they needed a way to sell reserved seats for their own shows without handi… | 2026-08-24 | unpublished | Work | — | [work/2026-08-24-building-revotickets.html](work/2026-08-24-building-revotickets.html) |
