@@ -123,7 +123,16 @@ head_extra: |2
       <span class="head-tab"><i class="icon-list-checks"></i><span>02 &middot; design dia</span></span>
     </div>
     <h2>Design dia</h2>
-    <p>Design ni ada dua bahagian: satu start page, dan satu setup checklist yang bawa team tu sampai habis. Screens kat bawah ni HTML mockups dengan sample data. Dewan Contoh tu venue rekaan je, harga pun placeholder.</p>
+    <p>Design ni ada dua bahagian: satu start page, dan satu setup checklist yang bawa team tu sampai habis.</p>
+  </article>
+  <!-- Note on the mockups below -->
+  <div class="post-callout is-note" style="padding-top:8px;padding-bottom:20px">
+    <aside>
+      <div class="callout-header"><i class="icon-info" aria-hidden="true"></i>Sample data</div>
+      <p class="callout-body">Screens kat bawah ni HTML mockups dengan sample data. Dewan Contoh tu venue rekaan je, harga pun placeholder.</p>
+    </aside>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
     <p><strong>Start page.</strong> Dia tanya tiga soalan yang sama dengan WhatsApp call to action kat site RevoTickets: venue, tarikh, dan lebih kurang berapa seats. Dari jawapan tu, dia create event dan draft shows sekali, semua dalam satu page. Aku pernah buat perubahan macam ni kat Sama², bila aku tukar onboarding wizard enam step jadi satu page je, sebab enam screens dengan sebaris progress dots tu bagi orang satu journey yang boleh fail separuh jalan.</p>
   </article>
   <!-- Mockup: start page -->

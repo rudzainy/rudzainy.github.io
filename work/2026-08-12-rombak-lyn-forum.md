@@ -255,7 +255,16 @@ head_extra: |2
       <span class="head-tab"><i class="icon-layout-dashboard"></i><span>06 &middot; live html, not png</span></span>
     </div>
     <h2>The Screens</h2>
-    <p>Seven screens, drawn at both ends: the phone first, then the desktop that power users actually keep open all day. The mockups below are live HTML, not images, and the type inside them is a UI sans on purpose, so you can tell my portfolio's voice apart from the product's.</p>
+    <p>Seven screens, drawn at both ends: the phone first, then the desktop that power users actually keep open all day.</p>
+  </article>
+  <!-- Note on the mockups below -->
+  <div class="post-callout is-note" style="padding-top:8px;padding-bottom:20px">
+    <aside>
+      <div class="callout-header"><i class="icon-info" aria-hidden="true"></i>Live HTML</div>
+      <p class="callout-body">The mockups below are live HTML, not images, and the type inside them is a UI sans on purpose, so you can tell my portfolio's voice apart from the product's.</p>
+    </aside>
+  </div>
+  <article style="max-width:var(--measure);margin:0 auto">
     <h3 style="margin:44px 0 10px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-weight:400;font-size:var(--type-h3)">5.1 Forum index, desktop</h3>
     <p>The index stops being a directory of boards and becomes a feed of live conversation, with the board directory available as a filter rail. Three lanes across the top, one row per thread, and the right rail carries the two things regulars check anyway: what's moving, and what the mods just did.</p>
   </article>
