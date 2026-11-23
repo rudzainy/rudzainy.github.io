@@ -2,7 +2,7 @@
 layout: post
 title: "RevoTickets Organiser Onboarding by Rudzainy Rahman"
 date: 2026-11-22
-description: "Three small production houses got stuck in the same three places while setting up RevoTickets. This is the onboarding I am designing in response."
+description: "Tiga production house kecil tersangkut kat tiga tempat yang sama masa setup RevoTickets. Ni onboarding yang aku tengah design untuk settle benda tu."
 category: work
 permalink: /work/2026-11-22-revotickets-organiser-onboarding.html
 data_category: work
@@ -80,8 +80,8 @@ head_extra: |2
     <!-- Hero: kicker + title + standfirst -->
     <div style="padding:36px 0 44px">
       <p style="margin:0 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px;color:rgba(255,255,255,0.75)">UX case study · RevoTickets · 2026</p>
-      <h1 class="page-title" style="display:block;font-size:clamp(2.5rem,1.1rem + 4.5vw,4.5rem);line-height:1.05;text-wrap:balance">Designing onboarding for production houses</h1>
-      <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:54ch">Three small production houses got stuck in the same three places while setting up RevoTickets. This is the onboarding I am designing in response.</p>
+      <h1 class="page-title" style="display:block;font-size:clamp(2.5rem,1.1rem + 4.5vw,4.5rem);line-height:1.05;text-wrap:balance">Design onboarding untuk production house</h1>
+      <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:54ch">Tiga production house kecil tersangkut kat tiga tempat yang sama masa setup RevoTickets. Ni onboarding yang aku tengah design untuk settle benda tu.</p>
     </div>
     <!-- Featured meta strip (overlaps the band) -->
     <div class="header-meta-strip" style="background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);box-shadow:var(--shadow-active);display:grid;grid-template-columns:repeat(4,1fr);position:relative;transform:translateY(56px);margin-top:-56px">
@@ -100,7 +100,7 @@ head_extra: |2
       <div style="padding:16px 20px;border-left:1px solid rgba(0,0,0,0.1)">
         <div style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:12px;color:var(--cat-ink);margin-bottom:6px">Status</div>
         <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
-          <span class="meta-link text-muted"><i class="icon-compass" aria-hidden="true"></i>Design proposal, not built yet</span>
+          <span class="meta-link text-muted"><i class="icon-compass" aria-hidden="true"></i>Design proposal, belum build lagi</span>
         </div>
       </div>
     </div>
@@ -111,20 +111,20 @@ head_extra: |2
 <main style="max-width:1140px;margin:0 auto;padding:104px 24px 32px">
   <article style="max-width:var(--measure);margin:0 auto">
     <div class="post-section-head is-first" aria-hidden="true">
-      <span class="head-tab"><i class="icon-circle-help"></i><span>01 &middot; where they got stuck</span></span>
+      <span class="head-tab"><i class="icon-circle-help"></i><span>01 &middot; kat mana diorang tersangkut</span></span>
     </div>
-    <h2>Where they got stuck</h2>
-    <p class="lead">Three small indie production houses besides Revolution Stage have signed up to RevoTickets. Each of them signed up through a link I sent, explored on their own, and messaged me when they got stuck. They got stuck in the same three places: the hall builder, setting up seat categories, and not knowing what to do first, or what comes after that.</p>
-    <p>A team that signs up lands in the default onboarding of Bullet Train, the Rails framework RevoTickets is built on, and then an empty dashboard with four counts, a table of recent bookings and a New event button. Behind that button is a chain of work: a venue, a hall drawn level by level and section by section, seat categories with prices, an event page, and shows that each pick a hall and a configuration before their seats are generated. The dashboard never says which of those comes next.</p>
-    <p>The hall builder is the most demanding screen in the app. It also has English strings only, while the storefront, the organiser dashboard and check-in are all in English and Malay. Seat categories are set up in two places. You create them on the venue, then go into the hall builder, pick a category chip, switch to Paint and click seats to assign them, so the second half of the job happens inside the hall builder.</p>
+    <h2>Kat mana diorang tersangkut</h2>
+    <p class="lead">Selain Revolution Stage, ada tiga lagi production house indie kecil yang dah sign up RevoTickets. Semua sign up sendiri guna link yang aku bagi, explore sendiri, lepas tu message aku bila tersangkut. Dan diorang tersangkut kat tiga tempat yang sama: hall builder, setup seat categories, dan tak tahu nak buat apa dulu, lepas tu apa pulak.</p>
+    <p>Team yang baru sign up masuk default onboarding Bullet Train dulu (Bullet Train ni Rails framework yang RevoTickets guna), lepas tu terus ke dashboard kosong: empat counts, satu table recent bookings dan satu button New event. Kat belakang button tu ada satu chain kerja: venue, hall yang kena lukis level by level dan section by section, seat categories dengan harga, event page, dan shows yang setiap satu kena pilih hall dan configuration sebelum seats dia di-generate. Dashboard tu tak bagitahu pun mana satu kena buat dulu.</p>
+    <p>Hall builder ni screen paling berat dalam app. Strings dia pun English je, padahal storefront, organiser dashboard dan check-in semua dah ada English dan Bahasa Melayu. Seat categories pulak kena setup kat dua tempat. Mula-mula create kat venue, lepas tu masuk hall builder, pilih category chip, tukar ke Paint dan klik seats untuk assign, so separuh lagi kerja tu sebenarnya jadi dalam hall builder.</p>
   </article>
   <article style="max-width:var(--measure);margin:0 auto">
     <div class="post-section-head" aria-hidden="true">
-      <span class="head-tab"><i class="icon-list-checks"></i><span>02 &middot; the design</span></span>
+      <span class="head-tab"><i class="icon-list-checks"></i><span>02 &middot; design dia</span></span>
     </div>
-    <h2>The design</h2>
-    <p>The design has two parts: a start page, and a setup checklist that walks the team through the rest. The screens below are HTML mockups with sample data. Dewan Contoh is a made-up venue, and the prices are placeholders.</p>
-    <p><strong>The start page.</strong> It asks the three questions the WhatsApp call to action on the RevoTickets site already asks: the venue, the dates, and roughly how many seats. From the answers it creates the event and its draft shows, all on one page. I made a similar change on Sama², where I replaced a six-step onboarding wizard with a single page, because six screens and a row of progress dots gave people a journey they could fail halfway through.</p>
+    <h2>Design dia</h2>
+    <p>Design ni ada dua bahagian: satu start page, dan satu setup checklist yang bawa team tu sampai habis. Screens kat bawah ni HTML mockups dengan sample data. Dewan Contoh tu venue rekaan je, harga pun placeholder.</p>
+    <p><strong>Start page.</strong> Dia tanya tiga soalan yang sama dengan WhatsApp call to action kat site RevoTickets: venue, tarikh, dan lebih kurang berapa seats. Dari jawapan tu, dia create event dan draft shows sekali, semua dalam satu page. Aku pernah buat perubahan macam ni kat Sama², bila aku tukar onboarding wizard enam step jadi satu page je, sebab enam screens dengan sebaris progress dots tu bagi orang satu journey yang boleh fail separuh jalan.</p>
   </article>
   <!-- Mockup: start page -->
   <div class="post-figure" style="margin-top:8px">
@@ -162,11 +162,11 @@ head_extra: |2
           </div>
         </div>
       </div>
-      <figcaption>The start page. The three fields match the questions on the RevoTickets site.</figcaption>
+      <figcaption>Start page. Tiga field ni sama dengan soalan kat site RevoTickets.</figcaption>
     </figure>
   </div>
   <article style="max-width:var(--measure);margin:0 auto">
-    <p><strong>The setup checklist.</strong> After the start page, the dashboard shows the remaining steps in the order the data needs them: hall, seat categories, event page, shows, put on sale. Each step is one link, and each tick comes from the data instead of being clicked by hand. The hall step is done when the venue has a hall, seat categories when every seat has one, shows when they exist, and the last step when the event is published. Only one step is marked as next at a time, so a new team always knows what to do first and what comes after it.</p>
+    <p><strong>Setup checklist.</strong> Lepas start page, dashboard tunjuk steps yang tinggal ikut susunan yang data perlukan: hall, seat categories, event page, shows, put on sale. Setiap step satu link je, dan setiap tick datang dari data, bukan orang klik sendiri. Step hall siap bila venue dah ada hall, seat categories siap bila setiap seat dah ada category, shows siap bila shows dah wujud, dan step terakhir siap bila event dah publish. Satu masa cuma satu step je yang ditanda Next, so team baru tahu nak buat apa dulu dan apa lepas tu.</p>
   </article>
   <!-- Mockup: dashboard with setup checklist -->
   <div class="post-figure" style="margin-top:8px">
@@ -226,11 +226,11 @@ head_extra: |2
           </div>
         </div>
       </div>
-      <figcaption>The dashboard with the setup checklist. The four counts from today's dashboard sit underneath it.</figcaption>
+      <figcaption>Dashboard dengan setup checklist. Empat counts dari dashboard sekarang duduk kat bawah dia.</figcaption>
     </figure>
   </div>
   <article style="max-width:var(--measure);margin:0 auto">
-    <p><strong>The hall step.</strong> RevoTickets can already share halls between teams. An admin marks a venue as shared, and another team can browse a catalogue and clone its seat-map structure, without pricing, into their own account. In onboarding, that catalogue is the first thing the hall step offers. If the hall is there, the team clones it and moves on. If it isn't, the venue starts as free seating, which the app already supports, and the hall gets drawn properly before the next run. When the builder does become part of a team's first week, it needs its Malay translation first.</p>
+    <p><strong>Step hall.</strong> RevoTickets memang dah boleh share hall antara team. Admin tanda satu venue sebagai shared, lepas tu team lain boleh browse catalogue dan clone structure seat map dia, tanpa pricing, masuk account sendiri. Dalam onboarding, catalogue ni benda pertama yang step hall tunjuk. Kalau hall tu ada, team clone je dan terus jalan. Kalau takde, venue tu start dengan free seating dulu, yang app memang dah support, dan hall tu dilukis elok-elok sebelum run seterusnya. Kalau hall builder ni nak jadi sebahagian minggu pertama satu-satu team, dia kena ada translation Bahasa Melayu dulu lah.</p>
   </article>
   <!-- Mockup: hall step -->
   <div class="post-figure" style="margin-top:8px">
@@ -278,11 +278,11 @@ head_extra: |2
           </div>
         </div>
       </div>
-      <figcaption>The hall step. The catalogue card and the free seating line use the app's current wording.</figcaption>
+      <figcaption>Step hall. Card catalogue dan ayat free seating tu guna wording app yang ada sekarang.</figcaption>
     </figure>
   </div>
   <article style="max-width:var(--measure);margin:0 auto">
-    <p><strong>The seat categories step.</strong> Staff name each category, give it a colour and a price (the features page uses VIP, Premium and Standard as its examples), and paint seats onto it in the same view. The builder already counts what's left, from "N seats have no category" down to "Every seat has a category.", and that count becomes the step's progress bar. A cloned hall always lands on this step, because cloning leaves pricing behind, so every new team will do it. For a free-seating venue the step is shorter: a price and a capacity per category.</p>
+    <p><strong>Step seat categories.</strong> Staff bagi nama setiap category, pilih warna dan harga (features page guna VIP, Premium dan Standard sebagai contoh), dan paint seats dalam view yang sama. Builder tu memang dah kira berapa yang tinggal, dari "N seats have no category" sampai "Every seat has a category.", dan count tu lah yang jadi progress bar step ni. Hall yang di-clone confirm sampai ke step ni, sebab clone tak bawa pricing, so setiap team baru memang akan lalu step ni. Untuk venue free seating, step ni lagi pendek: harga dan capacity untuk setiap category je.</p>
   </article>
   <!-- Mockup: seat categories step -->
   <div class="post-figure" style="margin-top:8px">
@@ -336,21 +336,21 @@ head_extra: |2
           </div>
         </div>
       </div>
-      <figcaption>The seat categories step. The hint and the count are strings the hall builder already shows.</figcaption>
+      <figcaption>Step seat categories. Hint dan count tu memang strings yang hall builder dah tunjuk sekarang.</figcaption>
     </figure>
   </div>
   <article style="max-width:var(--measure);margin:0 auto">
-    <p><strong>Help on each step.</strong> An in-app help centre is still on my to-do list, so today there is no in-product help for staff at all. The hall and seat category steps each get a short explanation of what the step is for and what "done" looks like. Each step also has a "stuck? message us on WhatsApp" link, so when someone asks for help I can see which step they were on.</p>
-    <p>Everything the design uses already exists in the app: the shared catalogue, free seating, the seat-category counts, the publish toggle and the WhatsApp link. The new work is the start page, the checklist, and putting the seat-category painting into its own step.</p>
+    <p><strong>Help setiap step.</strong> In-app help centre masih dalam to-do list aku, so sekarang memang takde langsung in-product help untuk staff. Step hall dan seat categories masing-masing dapat penerangan pendek: step ni untuk apa, dan macam mana rupa "siap". Setiap step pun ada link "stuck? message us on WhatsApp", so bila orang mintak tolong, aku boleh nampak diorang tengah kat step mana.</p>
+    <p>Semua benda yang design ni guna memang dah ada dalam app: shared catalogue, free seating, seat-category counts, publish toggle dan link WhatsApp. Kerja baru dia cuma start page, checklist, dan asingkan seat-category painting jadi step sendiri.</p>
   </article>
   <article style="max-width:var(--measure);margin:0 auto">
     <div class="post-section-head" aria-hidden="true">
-      <span class="head-tab"><i class="icon-arrow-right"></i><span>03 &middot; what comes next</span></span>
+      <span class="head-tab"><i class="icon-arrow-right"></i><span>03 &middot; apa lepas ni</span></span>
     </div>
-    <h2>What comes next</h2>
-    <p>Two smaller fixes come with the design. When a new team invites people, the invite screen should describe roles as jobs the team already has. Admins handle money (bookings, coupons, marking a booking paid), editors manage events and shows, and everyone else can read. Described that way, they become the producer, the person running the event pages, and the door crew.</p>
-    <p>The second fix is copy on the public features page. It describes the settlement summary as "Gross, fees and net, with the payout schedule laid out", but the settlement tab in the app says fees, net payout and settled refunds aren't tracked yet. A production house moving off a spreadsheet will ask about money early, so that page should describe what the settlement tab actually shows today.</p>
-    <p>None of this is built yet. Until it is, new teams keep exploring on their own and messaging me, and each stuck message is worth noting against the step it came from, so the next version of this design starts from a list instead of my memory.</p>
+    <h2>Apa lepas ni</h2>
+    <p>Ada dua fix kecil yang datang sekali dengan design ni. Bila team baru invite orang, invite screen patut terangkan roles ikut kerja yang team tu memang dah ada. Admin handle duit (bookings, coupons, mark booking sebagai paid), editor manage events dan shows, yang lain boleh baca je. Kalau terang macam tu, roles tu jadi producer, orang yang jaga event pages, dan door crew.</p>
+    <p>Fix kedua ialah copy kat public features page. Page tu describe settlement summary sebagai "Gross, fees and net, with the payout schedule laid out", tapi settlement tab dalam app cakap fees, net payout dan settled refunds belum di-track lagi. Production house yang nak pindah dari spreadsheet mesti tanya pasal duit awal-awal, so page tu patut describe apa yang settlement tab betul-betul tunjuk hari ni.</p>
+    <p>Semua ni belum build lagi. Sementara tu, team baru akan terus explore sendiri dan message aku, dan setiap mesej stuck tu patut aku catat ikut step mana dia datang, so version seterusnya design ni start dari satu list, bukan dari ingatan aku je.</p>
   </article>
   <article style="max-width:var(--measure);margin:0 auto">
     <!-- Prev / Next -->
