@@ -2,7 +2,7 @@
 layout: post
 title: "RevoTickets Organiser Onboarding by Rudzainy Rahman"
 date: 2026-11-22
-description: "Tiga production house kecil tersangkut kat tiga tempat yang sama masa setup RevoTickets. Ni onboarding yang aku tengah design untuk settle benda tu."
+description: "Tiga production house kecil stuck kat tiga tempat yang sama masa setup RevoTickets. Ni onboarding yang aku tengah design untuk settle benda tu."
 category: work
 permalink: /work/2026-11-22-revotickets-organiser-onboarding.html
 data_category: work
@@ -81,7 +81,7 @@ head_extra: |2
     <div style="padding:36px 0 44px">
       <p style="margin:0 0 8px;font-family:var(--font-display);text-transform:uppercase;letter-spacing:var(--tracking-display);font-size:14px;color:rgba(255,255,255,0.75)">UX case study · RevoTickets · 2026</p>
       <h1 class="page-title" style="display:block;font-size:clamp(2.5rem,1.1rem + 4.5vw,4.5rem);line-height:1.05;text-wrap:balance">Design onboarding untuk production house</h1>
-      <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:54ch">Tiga production house kecil tersangkut kat tiga tempat yang sama masa setup RevoTickets. Ni onboarding yang aku tengah design untuk settle benda tu.</p>
+      <p style="margin:16px 0 0;font-size:var(--type-lead);color:rgba(255,255,255,0.92);max-width:54ch">Tiga production house kecil stuck kat tiga tempat yang sama masa setup RevoTickets. Ni onboarding yang aku tengah design untuk settle benda tu.</p>
     </div>
     <!-- Featured meta strip (overlaps the band) -->
     <div class="header-meta-strip" style="background:var(--color-surface);border:1px solid rgba(0,0,0,0.175);border-radius:var(--radius-md);box-shadow:var(--shadow-active);display:grid;grid-template-columns:repeat(4,1fr);position:relative;transform:translateY(56px);margin-top:-56px">
@@ -111,9 +111,9 @@ head_extra: |2
 <main style="max-width:1140px;margin:0 auto;padding:104px 24px 32px">
   <article style="max-width:var(--measure);margin:0 auto">
     <div class="post-section-head is-first" aria-hidden="true">
-      <span class="head-tab"><i class="icon-circle-help"></i><span>01 &middot; kat mana diorang tersangkut</span></span>
+      <span class="head-tab"><i class="icon-circle-help"></i><span>01 &middot; kat mana diorang stuck</span></span>
     </div>
-    <h2>Kat mana diorang tersangkut</h2>
+    <h2>Kat mana diorang stuck</h2>
     <p class="lead">Selain Revolution Stage, ada tiga lagi production house indie kecil yang dah sign up RevoTickets. Semua sign up sendiri guna link yang aku bagi, explore sendiri, lepas tu message aku bila terciduk. Dan, diorang terciduk tu kat tiga tempat yang sama: hall builder, setup seat categories, dan tak tahu nak buat apa dulu, lepas tu apa pulak.</p>
     <p>Team yang baru sign up masuk default onboarding Bullet Train dulu (Bullet Train ni Rails framework yang RevoTickets guna), lepas tu terus ke dashboard kosong: empat counts, satu table recent bookings dan satu button New event. Kat belakang button tu ada satu chain kerja: venue, hall yang kena lukis level by level dan section by section, seat categories dengan harga, event page, dan shows yang setiap satu kena pilih hall dan configuration sebelum seats dia di-generate. Dashboard tu tak bagitahu pun mana satu kena buat dulu.</p>
     <p>Hall builder ni screen paling berat dalam app. Strings dia pun English je, padahal storefront, organiser dashboard dan check-in semua dah ada English dan Bahasa Melayu. Seat categories pulak kena setup kat dua tempat. Mula-mula create kat venue, lepas tu masuk hall builder, pilih category chip, tukar ke Paint dan klik seats untuk assign, so separuh lagi kerja tu sebenarnya jadi dalam hall builder.</p>
